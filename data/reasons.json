@@ -1,0 +1,140 @@
+{
+  "title": "Reasonable Reasons for an Increase",
+  "description": "Official grounds that can support an increase; mere below-market rent is not enough.",
+  "sections": [
+    {
+      "title": "Supported grounds",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "REAS-01",
+          "label": "Annual CPI-based allowable increase",
+          "value": "1.6% effective 3/1/26-2/28/27",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S04"
+          ],
+          "notes": "Once every 12 months; license and notice.",
+          "flag_id": ""
+        },
+        {
+          "id": "REAS-02",
+          "label": "Properly banked skipped/partial increases",
+          "value": "24 full months; add percentages",
+          "status": "verified",
+          "source_ids": [
+            "S05"
+          ],
+          "notes": "No banked amount inferred here.",
+          "flag_id": ""
+        },
+        {
+          "id": "REAS-03",
+          "label": "Capital improvement petition",
+          "value": "Petition before notice; not base rent; discontinue after amortization",
+          "status": "verified",
+          "source_ids": [
+            "S09",
+            "S12"
+          ],
+          "notes": "Hardship application available.",
+          "flag_id": ""
+        },
+        {
+          "id": "REAS-04",
+          "label": "Operating & maintenance petition",
+          "value": "Up to 7% additional base rent; two-year comparison",
+          "status": "verified",
+          "source_ids": [
+            "S09",
+            "S11"
+          ],
+          "notes": "Petition before notice.",
+          "flag_id": ""
+        },
+        {
+          "id": "REAS-05",
+          "label": "Comparable-rent special circumstances",
+          "value": "Extraordinary circumstances; mere long-standing below-market rent is NOT enough",
+          "status": "verified",
+          "source_ids": [
+            "S09",
+            "S10"
+          ],
+          "notes": "One-time tenancy reset; petition before notice.",
+          "flag_id": ""
+        },
+        {
+          "id": "REAS-06",
+          "label": "Utility passthrough",
+          "value": "Dollar-for-dollar; petition/worksheet before notice; 12 months",
+          "status": "verified",
+          "source_ids": [
+            "S09",
+            "S13"
+          ],
+          "notes": "Not base rent.",
+          "flag_id": ""
+        },
+        {
+          "id": "REAS-07",
+          "label": "Section 1.21 no tenant in occupancy",
+          "value": "Petition before notice; otherwise void",
+          "status": "verified",
+          "source_ids": [
+            "S09",
+            "S14"
+          ],
+          "notes": "Not applicable if any qualifying tenant resides.",
+          "flag_id": ""
+        },
+        {
+          "id": "REAS-08",
+          "label": "Proposition I rent history / bond / water revenue bond passthroughs",
+          "value": "Rent Board petition/worksheet grounds",
+          "status": "verified",
+          "source_ids": [
+            "S09"
+          ],
+          "notes": "Follow specific form instructions.",
+          "flag_id": ""
+        },
+        {
+          "id": "REAS-09",
+          "label": "New or additional roommate",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S17",
+            "S18"
+          ],
+          "notes": "Not a lawful reason; blank and flagged.",
+          "flag_id": "T03-F04"
+        },
+        {
+          "id": "REAS-10",
+          "label": "Assumed vacancy decontrol / market-rate reset",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S15",
+            "S16",
+            "S37",
+            "S28"
+          ],
+          "notes": "Not recommended without official eligibility and legal review.",
+          "flag_id": "T03-F04"
+        }
+      ]
+    }
+  ]
+}

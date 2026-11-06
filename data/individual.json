@@ -1,0 +1,75 @@
+{
+  "title": "How Individual SF Property Owners Handle Increases",
+  "description": "Official local rules and narrow Rent Board workload evidence; no generalization claimed.",
+  "sections": [
+    {
+      "title": "Official evidence",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "IND-01",
+          "label": "Ordinary path",
+          "value": "Annual allowable increase, license, 12-month anniversary, written notice",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S35"
+          ],
+          "notes": "Same local rules apply to individual owners.",
+          "flag_id": ""
+        },
+        {
+          "id": "IND-02",
+          "label": "Formal petitions June 2024",
+          "value": "23 landlord petitions / 154 units",
+          "status": "verified",
+          "source_ids": [
+            "S29"
+          ],
+          "notes": "Narrow descriptive count.",
+          "flag_id": ""
+        },
+        {
+          "id": "IND-03",
+          "label": "Capital improvement petitions June 2024",
+          "value": "19 petitions / 148 units",
+          "status": "verified",
+          "source_ids": [
+            "S29"
+          ],
+          "notes": "Narrow descriptive count.",
+          "flag_id": ""
+        },
+        {
+          "id": "IND-04",
+          "label": "Tenant petitions / eviction notices June 2024",
+          "value": "73 tenant petitions / 73 units; 89 eviction notices",
+          "status": "verified",
+          "source_ids": [
+            "S29"
+          ],
+          "notes": "Not proof of typical practice.",
+          "flag_id": ""
+        },
+        {
+          "id": "IND-05",
+          "label": "All individual SF owners generalization",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S29"
+          ],
+          "notes": "No official source proves what all individual owners do.",
+          "flag_id": "F23"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "title": "Correct Tenant-Notice Method",
+  "description": "Conservative compliance checklist capable of tenant-lawyer review; not attorney approval.",
+  "sections": [
+    {
+      "title": "Before any increase",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CHK-01",
+          "label": "Verify coverage",
+          "value": "Check exact address in SF Planning PIM; confirm exemptions",
+          "status": "verified",
+          "source_ids": [
+            "S06",
+            "S32"
+          ],
+          "notes": "Exact address not supplied in this case.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-02",
+          "label": "Verify license",
+          "value": "Current Rent Increase License on effective date",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S08"
+          ],
+          "notes": "Tenant portal lookup.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-03",
+          "label": "Verify 12 months / anniversary",
+          "value": "At least 12 months since last increase",
+          "status": "verified",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Use rate in effect on increase date.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-04",
+          "label": "Verify banked amounts",
+          "value": "Only if >=24 full months without any increase; add percentages; no compounding/prorating",
+          "status": "verified",
+          "source_ids": [
+            "S05"
+          ],
+          "notes": "Not inferred here.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-05",
+          "label": "Written notice timing",
+          "value": "30 days; 90 days if >10% alone/combined in same year; +5 days if mailed",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S35"
+          ],
+          "notes": "827(c) longer notice controls.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-06",
+          "label": "Notice contents",
+          "value": "Dollar amount, percentage, effective date; banked portion if any",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "notes": "No rounding up.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-07",
+          "label": "Delivery",
+          "value": "Personal delivery or mail under Civil Code 827 / CCP 1013",
+          "status": "verified",
+          "source_ids": [
+            "S35"
+          ],
+          "notes": "Keep proof of service.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-08",
+          "label": "Petition grounds",
+          "value": "Petition/worksheet before notice when required",
+          "status": "verified",
+          "source_ids": [
+            "S09",
+            "S10",
+            "S11",
+            "S12",
+            "S13",
+            "S14"
+          ],
+          "notes": "Otherwise notice may be void.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-09",
+          "label": "Neutral policy",
+          "value": "Identical written neutral policy, dates, calculations and recordkeeping for each eligible unit",
+          "status": "analysis",
+          "source_ids": [
+            "S42",
+            "S38"
+          ],
+          "notes": "Document neutral eligibility reasons if only one unit is raised.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-10",
+          "label": "Legal review",
+          "value": "Capable of tenant-lawyer review; no approval claimed",
+          "status": "analysis",
+          "source_ids": [
+            "S23",
+            "S24",
+            "S25"
+          ],
+          "notes": "Free counseling is not legal advice; TRC covers eviction proceedings.",
+          "flag_id": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "title": "How Large Real Estate Corporations Handle Increases",
+  "description": "Official SEC EDGAR figures; portfolio-level evidence only, not SF-specific or a legal benchmark.",
+  "sections": [
+    {
+      "title": "SEC filing evidence",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CORP-01",
+          "label": "Independence Realty Trust Q4 2025",
+          "value": "Same-store new leases -3.7%; renewal 2.9%; blended 0.8%; occupancy 95.4%; retention 61.4%",
+          "status": "verified",
+          "source_ids": [
+            "S48"
+          ],
+          "notes": "Multifamily REIT; not SF-specific.",
+          "flag_id": ""
+        },
+        {
+          "id": "CORP-02",
+          "label": "Independence Realty Trust Q3 2025",
+          "value": "Same-store new leases -3.5%; renewal 2.6%; blended 0.1%",
+          "status": "verified",
+          "source_ids": [
+            "S48"
+          ],
+          "notes": "Not SF-specific.",
+          "flag_id": ""
+        },
+        {
+          "id": "CORP-03",
+          "label": "IRT 2025 value-add",
+          "value": "2,003 renovations; average $251/month increase over unrenovated comparables",
+          "status": "verified",
+          "source_ids": [
+            "S48"
+          ],
+          "notes": "Not SF-specific.",
+          "flag_id": ""
+        },
+        {
+          "id": "CORP-04",
+          "label": "Invitation Homes 2025 total portfolio",
+          "value": "Renewal +4.6%; new -0.8%",
+          "status": "verified",
+          "source_ids": [
+            "S49"
+          ],
+          "notes": "Single-family rental REIT; not SF-specific.",
+          "flag_id": ""
+        },
+        {
+          "id": "CORP-05",
+          "label": "Invitation Homes 2024 total portfolio",
+          "value": "Renewal +4.9%; new +1.0%",
+          "status": "verified",
+          "source_ids": [
+            "S49"
+          ],
+          "notes": "Not SF-specific.",
+          "flag_id": ""
+        },
+        {
+          "id": "CORP-06",
+          "label": "All large corporations generalization",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S48",
+            "S49"
+          ],
+          "notes": "No official source proves what all large corporations do.",
+          "flag_id": "F23"
+        }
+      ]
+    }
+  ]
+}

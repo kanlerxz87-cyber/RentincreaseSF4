@@ -1,0 +1,170 @@
+{
+  "title": "Local Law - San Francisco",
+  "description": "SF Rent Ordinance, Rent Board rules, licensing, banking and petitions.",
+  "sections": [
+    {
+      "title": "Local rules",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "LOC-01",
+          "label": "Coverage cutoff",
+          "value": "Many units built on/before June 13, 1979 have rent control and eviction protection",
+          "status": "verified",
+          "source_ids": [
+            "S06"
+          ],
+          "notes": "Verify exact address in PIM; partial exemptions exist.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-02",
+          "label": "Annual increase",
+          "value": "1.6% once every 12 months on anniversary date",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S02"
+          ],
+          "notes": "Current rate.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-03",
+          "label": "Ordinance cap",
+          "value": "60% CPI, max 7%",
+          "status": "verified",
+          "source_ids": [
+            "S21"
+          ],
+          "notes": "SF Admin Code 37.3.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-04",
+          "label": "Initial rent",
+          "value": "No limit on first rent for vacant covered unit",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S27"
+          ],
+          "notes": "Not a reset for an existing tenancy.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-05",
+          "label": "License",
+          "value": "Current Rent Increase License required before annual/banked increase",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S08"
+          ],
+          "notes": "Unlicensed increase may be null/void.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-06",
+          "label": "Housing Inventory",
+          "value": "Annual report by March 1; license auto-generated for non-owner-occupied units",
+          "status": "verified",
+          "source_ids": [
+            "S07"
+          ],
+          "notes": "No monetary penalty, but notice unenforceable without license.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-07",
+          "label": "Banking",
+          "value": "24 full months; add percentages; no compounding/prorating; license",
+          "status": "verified",
+          "source_ids": [
+            "S05"
+          ],
+          "notes": "Notice must state banked portion.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-08",
+          "label": "Additional occupants",
+          "value": "No extra rent merely because new/additional roommate moved in",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S17",
+            "S18"
+          ],
+          "notes": "Even if lease says otherwise.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-09",
+          "label": "Petition grounds",
+          "value": "Capital improvement, O&M, comparable rents, Proposition I, utility, 1.21, bond/water passthroughs",
+          "status": "verified",
+          "source_ids": [
+            "S09"
+          ],
+          "notes": "Petition/worksheet before notice.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-10",
+          "label": "Section 6.14",
+          "value": "Unlimited increase only when last original occupant vacates plus timely 6.14 notice",
+          "status": "verified",
+          "source_ids": [
+            "S15",
+            "S16"
+          ],
+          "notes": "60 days generally reasonable.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-11",
+          "label": "Costa-Hawkins local view",
+          "value": "Co-tenants not subject; qualifying post-1995 subtenant/assignee only",
+          "status": "verified",
+          "source_ids": [
+            "S15",
+            "S16"
+          ],
+          "notes": "Legal advice strongly encouraged.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-12",
+          "label": "Tenant harassment",
+          "value": "Bad-faith coercion/discrimination/privacy interference prohibited",
+          "status": "verified",
+          "source_ids": [
+            "S22"
+          ],
+          "notes": "Larson footnote conflict flagged.",
+          "flag_id": ""
+        },
+        {
+          "id": "LOC-13",
+          "label": "Tenant petition",
+          "value": "No charge, no time limit, ALJ hearing",
+          "status": "verified",
+          "source_ids": [
+            "S25",
+            "S26"
+          ],
+          "notes": "516C and 518 forms.",
+          "flag_id": ""
+        }
+      ]
+    }
+  ]
+}

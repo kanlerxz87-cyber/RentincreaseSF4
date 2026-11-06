@@ -1,0 +1,258 @@
+{
+  "title": "Full Requirements List",
+  "description": "Every active requirement, status and official source link.",
+  "sections": [
+    {
+      "title": "Requirements",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "REQ-01",
+          "label": "Executive summary",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S27",
+            "S43"
+          ],
+          "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-02",
+          "label": "Public GitHub Pages site",
+          "value": "Built at repository root",
+          "status": "verified",
+          "source_ids": [
+            "S43"
+          ],
+          "notes": "Legacy Pages source main /.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-03",
+          "label": "Collect / organize / analyze full requirements list",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S20"
+          ],
+          "notes": "This page.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-04",
+          "label": "Answer all user questions",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S27",
+            "S43"
+          ],
+          "notes": "Questions & Answers page.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-05",
+          "label": "Review repo line by line",
+          "value": "Done",
+          "status": "verified",
+          "source_ids": [
+            "S20"
+          ],
+          "notes": "REPO_REVIEW.md.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-06",
+          "label": "Verify every row against official sources",
+          "value": "Done; validation script re-checks",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S43"
+          ],
+          "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-07",
+          "label": "Provide links for manual review",
+          "value": "Every row has official links",
+          "status": "verified",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Official source(s) column.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-08",
+          "label": "Flag irregularities",
+          "value": "34 flags published",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S43"
+          ],
+          "notes": "Flagged for Review page.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-09",
+          "label": "No hallucinations / no inferred values",
+          "value": "Blank cells for unverified values",
+          "status": "verified",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Validation enforces blank + flag.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-10",
+          "label": "Personal information top priority",
+          "value": "Placeholders only; raw identifiers internal-only",
+          "status": "verified",
+          "source_ids": [
+            "S23"
+          ],
+          "notes": "Privacy scan in validation.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-11",
+          "label": "Anonymize all personal information",
+          "value": "Tenant A-F placeholders",
+          "status": "verified",
+          "source_ids": [
+            "S23"
+          ],
+          "notes": "No real names, initials, contact details or exact address.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-12",
+          "label": "Keep dates and amounts same",
+          "value": "Preserved",
+          "status": "verified",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-13",
+          "label": "Clean landing page + category subpages",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S43"
+          ],
+          "notes": "index.html and pages/.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-14",
+          "label": "Simple dashboard UI",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S43"
+          ],
+          "notes": "Cards and status badges.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-15",
+          "label": "All entries/findings in easy-read tables",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Tables on every subpage.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-16",
+          "label": "Analysis / findings",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S42"
+          ],
+          "notes": "Analysis & Findings page.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-17",
+          "label": "Clearly labeled Flagged for Review page with source links",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "pages/flagged.html.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-18",
+          "label": "Verified source-linked tables",
+          "value": "Published",
+          "status": "verified",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Sources page.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-19",
+          "label": "PR from integration branch to main",
+          "value": "Pending T05",
+          "status": "needs review",
+          "source_ids": [
+            "S43"
+          ],
+          "notes": "Recorded in COORDINATION.md after merge.",
+          "flag_id": "F19"
+        },
+        {
+          "id": "REQ-20",
+          "label": "Merged PR + successful Pages deployment",
+          "value": "Pending T05",
+          "status": "needs review",
+          "source_ids": [
+            "S43"
+          ],
+          "notes": "Recorded in COORDINATION.md after deploy.",
+          "flag_id": "F19"
+        },
+        {
+          "id": "REQ-21",
+          "label": "Conservative compliance checklist capable of tenant-lawyer review",
+          "value": "Published",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S35",
+            "S42"
+          ],
+          "notes": "No attorney approval or guarantee.",
+          "flag_id": ""
+        }
+      ]
+    }
+  ]
+}

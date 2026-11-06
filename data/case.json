@@ -1,0 +1,257 @@
+{
+  "title": "Anonymized Case Facts",
+  "description": "Owner-supplied dates and amounts preserved; personal information replaced with placeholders; official-verified values blank where unverified.",
+  "sections": [
+    {
+      "title": "Location / building",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CASE-01",
+          "label": "Neighborhood / ZIP",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S33",
+            "S34"
+          ],
+          "notes": "Owner input: Outer Sunset, San Francisco, CA 94122; official SF Planning context only, not property-specific verification.",
+          "flag_id": "T03-F03"
+        },
+        {
+          "id": "CASE-02",
+          "label": "Exact street address",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S32"
+          ],
+          "notes": "Owner input: not supplied; no exact address published.",
+          "flag_id": "T03-F01"
+        },
+        {
+          "id": "CASE-03",
+          "label": "Building year",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S06",
+            "S32"
+          ],
+          "notes": "Owner input: 1940; before June 13, 1979 cutoff but property-specific record unverified.",
+          "flag_id": "T03-F03"
+        },
+        {
+          "id": "CASE-04",
+          "label": "Rent-controlled status",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S06",
+            "S20"
+          ],
+          "notes": "Owner input: units said to be rent controlled; not official-verified.",
+          "flag_id": "F21"
+        },
+        {
+          "id": "CASE-05",
+          "label": "Rent Increase License status",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S07",
+            "S08"
+          ],
+          "notes": "Owner input: not supplied.",
+          "flag_id": "T03-F05"
+        },
+        {
+          "id": "CASE-06",
+          "label": "Prior increases / banked increases / notice history / anniversary",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "notes": "Owner input: not supplied; no banked amount inferred.",
+          "flag_id": "T03-F05"
+        }
+      ]
+    },
+    {
+      "title": "Unit 1 - anonymized",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CASE-07",
+          "label": "Last lease start",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Owner input: February 1, 2025; date unchanged.",
+          "flag_id": "T03-F01"
+        },
+        {
+          "id": "CASE-08",
+          "label": "Monthly rent at last lease start",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Owner input: $3,995; amount unchanged.",
+          "flag_id": "T03-F01"
+        },
+        {
+          "id": "CASE-09",
+          "label": "Initial lease tenants",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S17"
+          ],
+          "notes": "Published placeholders: Tenant A, Tenant B, Tenant C; no raw identifiers.",
+          "flag_id": "T03-F02"
+        },
+        {
+          "id": "CASE-10",
+          "label": "Continuing tenancy / current tenants",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S17"
+          ],
+          "notes": "Published placeholders: Tenant A, Tenant D; no inference about legal status.",
+          "flag_id": "T03-F04"
+        },
+        {
+          "id": "CASE-11",
+          "label": "Current-tenancy date",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Owner input: April 1, 2026; date unchanged.",
+          "flag_id": "T03-F01"
+        },
+        {
+          "id": "CASE-12",
+          "label": "Monthly rent on April 1, 2026",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Owner input: $3,995; amount unchanged.",
+          "flag_id": "T03-F01"
+        },
+        {
+          "id": "CASE-13",
+          "label": "Whether a new tenancy began April 1, 2026",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S16"
+          ],
+          "notes": "Owner input: not supplied; no inference.",
+          "flag_id": "T03-F04"
+        },
+        {
+          "id": "CASE-14",
+          "label": "Legal status of continuing occupant(s)",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S15",
+            "S37"
+          ],
+          "notes": "Owner input: not supplied; no inference.",
+          "flag_id": "T03-F04"
+        },
+        {
+          "id": "CASE-15",
+          "label": "Last original occupant vacated / no longer permanently resides",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S28"
+          ],
+          "notes": "Owner input: not supplied; no inference.",
+          "flag_id": "T03-F04"
+        }
+      ]
+    },
+    {
+      "title": "Unit 2 - anonymized",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CASE-16",
+          "label": "Last lease start",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Owner input: June 1, 2019; date unchanged.",
+          "flag_id": "T03-F01"
+        },
+        {
+          "id": "CASE-17",
+          "label": "Monthly rent at last lease start",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Owner input: $3,150; amount unchanged.",
+          "flag_id": "T03-F01"
+        },
+        {
+          "id": "CASE-18",
+          "label": "Tenants",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S17"
+          ],
+          "notes": "Published placeholders: Tenant E, Tenant F; no raw identifiers.",
+          "flag_id": "T03-F02"
+        },
+        {
+          "id": "CASE-19",
+          "label": "Prior increases since June 1, 2019",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S05"
+          ],
+          "notes": "Owner input: not supplied; no banked amount inferred.",
+          "flag_id": "T03-F05"
+        }
+      ]
+    }
+  ]
+}
