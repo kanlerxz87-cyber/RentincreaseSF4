@@ -219,23 +219,23 @@
         {
           "id": "REQ-19",
           "label": "PR from integration branch to main",
-          "value": "Pending T05",
+          "value": "",
           "status": "needs review",
           "source_ids": [
             "S43"
           ],
-          "notes": "Recorded in COORDINATION.md after merge.",
+          "notes": "Pending T05; PR link/merge result recorded in COORDINATION.md after merge.",
           "flag_id": "F19"
         },
         {
           "id": "REQ-20",
           "label": "Merged PR + successful Pages deployment",
-          "value": "Pending T05",
+          "value": "",
           "status": "needs review",
           "source_ids": [
             "S43"
           ],
-          "notes": "Recorded in COORDINATION.md after deploy.",
+          "notes": "Pending T05; deployment result recorded in COORDINATION.md after deploy.",
           "flag_id": "F19"
         },
         {
