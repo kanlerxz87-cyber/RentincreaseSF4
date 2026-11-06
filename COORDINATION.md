@@ -24,7 +24,7 @@ Push procedure: the first push created the remote branch; every subsequent push 
 | ID | Task | Status | Owner | File scope (exclusive) | Sources / verification performed | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
 | T01 | Coordination, repo review, privacy boundary | `done` | `arena-73f5f1a2` | `COORDINATION.md`, `.gitignore`, `REPO_REVIEW.md`, `internal/` (untracked/private only) | `git status`, `git log`, `git ls-remote`, `cat README.md`, `find`, `gh repo view`, `gh api .../pages`; line-by-line review recorded in `REPO_REVIEW.md`. | Branch constraint; Pages source is root `/`; no code/data/site at start; all case facts user-provided/unverified; raw identifiers confined to gitignored `internal/`. |
-| T02 | Official-source research and line-by-line verification ledger | `in progress` | `arena-73f5f1a2` (claimed 2026-11-06 UTC) | `SOURCES.md`, `VERIFICATION.md`, `research/sources/`, `research/verification/` | — | — |
+| T02 | Official-source research and line-by-line verification ledger | `done` | `arena-73f5f1a2` | `SOURCES.md`, `VERIFICATION.md`, `research/sources/`, `research/verification/` | 52 official sources catalogued with links; direct `fetch_page` including remaining code/PDF chunks; 68-row root ledger; 80-line exact-claim crosswalk; rate/cap/decontrol/FMR/SEC figures cross-checked. | 24 source-quality flags F01–F24; 19 blank/unverified fields; 94122 SAFMR row blank; unit facts blank; no official federal private-rent cap, attorney approval, or both-units requirement found. |
 | T03 | Anonymized case facts, calculations, flags (research copies) | `unclaimed` | — | `research/case_facts.md`, `research/calculations.md`, `research/flags.md` | — | — |
 | T04 | Final integration: shared table data, site generation, index/navigation, build + broken-link validation | `unclaimed` | — | `data/`, `scripts/`, `index.html`, `pages/`, `assets/`, `.nojekyll`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `README.md` | — | — |
 | T05 | Pull request, merge, GitHub Pages deploy confirmation, record PR/merge result | `unclaimed` | — | `COORDINATION.md` (final update only) | — | — |
@@ -35,7 +35,8 @@ Only after T01–T03 are `done`, the final integration session (this session, si
 
 ## Conflict / handoff log
 
-- 2026-11-06 UTC: no conflicts at start; remote contained only `main` at `4a404e7`. First push (`4008ae6`) created `arena/73f5f1a2-rentincreasesf4` on origin. No other sessions detected, no handoffs, no conflicting claims.
+- 2026-11-06 UTC: no conflicts at start; remote contained only `main` at `4a404e7`. First push (`4008ae6`) created `arena/73f5f1a2-rentincreasesf4` on origin.
+- 2026-11-06 UTC: T02 scope narrowed before writing research files so T03 case-fact files would not overlap. All T02 pushes completed after `git pull --rebase` with no conflicts. No other sessions, handoffs, or conflicting claims.
 
 ## Requests to other sessions
 
@@ -44,7 +45,7 @@ Only after T01–T03 are `done`, the final integration session (this session, si
 ## Sources / verification / irregularities by task
 
 - **T01 — done.** Sources: local git/gh inspection and GitHub Pages API response (2026-11-06 UTC). Verification: initial tree contained `README.md` only (line 1: `# RentincreaseSF4`); one commit; remote `main` only; Pages `status: built`, `build_type: legacy`, `source.branch: main`, `source.path: /`; repository `viewerPermission: ADMIN`. Irregularities: platform branch constraint; Pages root source; no project data; all case facts unverified; privacy boundary created with `.gitignore` and untracked `internal/tenant-identifiers.local.md`. Full detail: `REPO_REVIEW.md`.
-- **T02 — not started.**
+- **T02 — done.** Sources: 52 official sources in `SOURCES.md` (SF.gov, SF Rent Board PDFs, SF Planning, CA Legislative Information, CA CRD, HUD USER, eCFR, GovInfo, SEC EDGAR, MOHCD, GitHub Pages API). Official links appear in every row. Verification: direct `fetch_page` to each official page; long HTML/PDF/SEC files read in chunks; remaining §1947.12, §12955, §37.10B, GovInfo §3604, Rent Board minutes, AB 1482 and SF.gov "Learn about rent increases" chunks fetched; rate figures cross-checked across S01–S04; state cap across S27/S36; §6.14/Costa-Hawkins across S15/S16/S28/S37; FY2026/FY2027 FMR schedules cross-checked; SEC IRT/INVH figures read from official EDGAR text. Exact quotes and chunk numbers: `research/sources/official_sources.md`. Line-by-line claims: `VERIFICATION.md` and `research/verification/line_by_line.md`. Irregularities: 24 flags in `research/sources/irregularities.md` (F01–F24) and 19 blank/unverified fields in `research/sources/unverified.md`; all will be published on the **Flagged for Review** page in T04. No value was inferred or substituted from a nonofficial snippet.
 - **T03 — not started.**
 - **T04 — not started.**
 - **T05 — not started.**
