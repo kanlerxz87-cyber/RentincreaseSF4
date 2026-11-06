@@ -24,7 +24,7 @@ Push procedure: the first push created the remote branch; every subsequent push 
 | ID | Task | Status | Owner | File scope (exclusive) | Sources / verification performed | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
 | T01 | Coordination, repo review, privacy boundary | `done` | `arena-73f5f1a2` | `COORDINATION.md`, `.gitignore`, `REPO_REVIEW.md`, `internal/` (untracked/private only) | `git status`, `git log`, `git ls-remote`, `cat README.md`, `find`, `gh repo view`, `gh api .../pages`; line-by-line review recorded in `REPO_REVIEW.md`. | Branch constraint; Pages source is root `/`; no code/data/site at start; all case facts user-provided/unverified; raw identifiers confined to gitignored `internal/`. |
-| T02 | Official-source research and line-by-line verification ledger | `unclaimed` | — | `SOURCES.md`, `VERIFICATION.md`, `research/` | — | — |
+| T02 | Official-source research and line-by-line verification ledger | `in progress` | `arena-73f5f1a2` (claimed 2026-11-06 UTC) | `SOURCES.md`, `VERIFICATION.md`, `research/` | — | — |
 | T03 | Anonymized case facts, calculations, flags (research copies) | `unclaimed` | — | `research/case_facts.md`, `research/calculations.md`, `research/flags.md` | — | — |
 | T04 | Final integration: shared table data, site generation, index/navigation, build + broken-link validation | `unclaimed` | — | `data/`, `scripts/`, `index.html`, `pages/`, `assets/`, `.nojekyll`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `README.md` | — | — |
 | T05 | Pull request, merge, GitHub Pages deploy confirmation, record PR/merge result | `unclaimed` | — | `COORDINATION.md` (final update only) | — | — |
