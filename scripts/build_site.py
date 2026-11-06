@@ -67,7 +67,7 @@ def render_table(section, in_pages=True):
 
 def nav_html(active, in_pages):
     prefix = "" if in_pages else "pages/"
-    home = "index.html" if in_pages else "../index.html"
+    home = "../index.html" if in_pages else "index.html"
     parts = ['<div class="wrap"><a href="{}">Home</a>'.format(home)]
     for slug, title in D.NAV:
         cls = ' class="active"' if slug == active else ""

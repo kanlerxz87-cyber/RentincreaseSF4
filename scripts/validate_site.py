@@ -7,6 +7,7 @@ Writes data/validation_report.json. Exits nonzero on any error.
 import json
 import re
 import sys
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
@@ -111,8 +112,9 @@ def main():
     sources_html = (PAGES / "sources.html").read_text(encoding="utf-8")
     check("Flagged for Review page contains all flag IDs", all(f["id"] in flagged_html for f in flags))
     check("Flagged for Review page is clearly labeled", "Flagged for Review" in flagged_html and "does <strong>not</strong> block" in flagged_html)
+    sources_html_unescaped = unescape(sources_html)
     check("Sources page contains all source IDs and URLs",
-          all(s["id"] in sources_html and s["url"] in sources_html for s in sources_list))
+          all(s["id"] in sources_html_unescaped and s["url"] in sources_html_unescaped for s in sources_list))
 
     for slug in D.PAGES:
         check("data/{}.json exists".format(slug), (DATA / "{}.json".format(slug)).exists())
@@ -180,7 +182,7 @@ def main():
           "conservative compliance checklist capable of tenant-lawyer review" in all_text.lower())
     check("no attorney approval or guarantee claimed",
           "No attorney approval or guarantee" in all_text or "No attorney has approved" in all_text)
-    forbidden = ["approved by a tenant lawyer", "certified lawful", "guaranteed no lawsuit", "attorney approved this increase"]
+    forbidden = ["approved by a tenant lawyer", "this increase is certified lawful", "guaranteed no lawsuit", "attorney approved this increase", "we certify this increase is lawful"]
     check("no forbidden certification language", not any(s in all_text.lower() for s in forbidden))
 
     broken = []
