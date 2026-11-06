@@ -1,0 +1,205 @@
+{
+  "title": "Analysis & Findings",
+  "description": "Source-linked analysis, including discrimination, one-vs-both, and conservative checklist.",
+  "sections": [
+    {
+      "title": "Findings",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "AN-01",
+          "label": "Normal local increase",
+          "value": "1.6% or less on each eligible unit",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S02"
+          ],
+          "notes": "Once every 12 months; license; notice.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-02",
+          "label": "State cap is not a substitute",
+          "value": "AB 1482 8.8% does not apply to SF Rent Ordinance rent-controlled units",
+          "status": "verified",
+          "source_ids": [
+            "S27",
+            "S36"
+          ],
+          "notes": "Local protections remain.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-03",
+          "label": "No federal rent cap found",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S43",
+            "S40",
+            "S41",
+            "S42"
+          ],
+          "notes": "HUD FMR/SAFMR are voucher standards.",
+          "flag_id": "F22"
+        },
+        {
+          "id": "AN-04",
+          "label": "Disparate-impact risk",
+          "value": "Liability can exist without intent; neutral criteria and no less discriminatory alternative matter",
+          "status": "verified",
+          "source_ids": [
+            "S42"
+          ],
+          "notes": "Current eCFR as of 11/04/2026.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-05",
+          "label": "FEHA broader classes",
+          "value": "Source of income, retaliation, perception/association and aggregate-income rules apply",
+          "status": "verified",
+          "source_ids": [
+            "S38",
+            "S39"
+          ],
+          "notes": "State overlay.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-06",
+          "label": "Local harassment overlay",
+          "value": "Bad-faith coercion/discrimination prohibited",
+          "status": "verified",
+          "source_ids": [
+            "S22"
+          ],
+          "notes": "Larson footnote flagged.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-07",
+          "label": "Unit 1 roommate change",
+          "value": "Not a basis for extra rent; vacancy-decontrol eligibility unverified",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S17",
+            "S18",
+            "S15",
+            "S16",
+            "S37"
+          ],
+          "notes": "No market-rate reset recommended.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-08",
+          "label": "One vs both",
+          "value": "Raising both is not officially required; identical neutral policy reduces disparate-treatment optics",
+          "status": "analysis",
+          "source_ids": [
+            "S41",
+            "S42",
+            "S38"
+          ],
+          "notes": "Document neutral eligibility/anniversary reasons; no guarantee.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-09",
+          "label": "Unit 2 long tenure",
+          "value": "Mere below-market rent is not extraordinary circumstances",
+          "status": "verified",
+          "source_ids": [
+            "S10"
+          ],
+          "notes": "Special Circumstances petition required for comparable-rent reset.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-10",
+          "label": "Banked increases",
+          "value": "Cannot be inferred because rent history is unverified",
+          "status": "verified",
+          "source_ids": [
+            "S05"
+          ],
+          "notes": "Blank and flagged.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-11",
+          "label": "Corporate figures",
+          "value": "Portfolio-level disclosures are evidence of practice, not legal benchmarks",
+          "status": "verified",
+          "source_ids": [
+            "S48",
+            "S49"
+          ],
+          "notes": "Not SF-specific.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-12",
+          "label": "Individual figures",
+          "value": "June 2024 workload is narrow formal-petition evidence",
+          "status": "verified",
+          "source_ids": [
+            "S29"
+          ],
+          "notes": "No generalization.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-13",
+          "label": "Tenant-lawyer review",
+          "value": "Checklist capable of review; no approval claimed",
+          "status": "analysis",
+          "source_ids": [
+            "S23",
+            "S24",
+            "S25",
+            "S30",
+            "S31"
+          ],
+          "notes": "TRC is eviction-focused.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-14",
+          "label": "Conservative compliance checklist",
+          "value": "At most ordinary 1.6% annual allowable increase (or less) on each eligible unit, identical written neutral policy, license, notice, dates, calculations, recordkeeping",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S35",
+            "S42"
+          ],
+          "notes": "No guarantee of no complaint/lawsuit.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-15",
+          "label": "Flagged items do not block",
+          "value": "All 34 flags published with source links",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S43"
+          ],
+          "notes": "Needs review does not block merge.",
+          "flag_id": ""
+        }
+      ]
+    }
+  ]
+}

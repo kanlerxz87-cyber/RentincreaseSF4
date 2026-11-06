@@ -1,0 +1,367 @@
+{
+  "date": "2026-11-06",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "canonical source map matches site data",
+      "ok": true,
+      "detail": "52 official sources"
+    },
+    {
+      "name": "flags count matches dashboard",
+      "ok": true,
+      "detail": "34 flagged items"
+    },
+    {
+      "name": "source URLs use official domains",
+      "ok": true,
+      "detail": "all source URLs checked"
+    },
+    {
+      "name": "every source has id, title, agency, category and statement",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "every table row has valid official source links",
+      "ok": true,
+      "detail": "167 rows checked; "
+    },
+    {
+      "name": "unverified rows are blank and flagged",
+      "ok": true,
+      "detail": "39 needs-review rows"
+    },
+    {
+      "name": "every flag is published with official source links",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Flagged for Review page contains all flag IDs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Flagged for Review page is clearly labeled",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Sources page contains all source IDs and URLs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/summary.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/summary.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/requirements.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/requirements.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/rates.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/rates.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/local.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/local.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/state.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/state.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/federal.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/federal.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/case.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/case.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/calculations.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/calculations.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/compliance.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/compliance.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/reasons.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/reasons.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/corporate.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/corporate.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/individual.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/individual.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/market.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/market.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/questions.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/questions.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/analysis.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/analysis.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/summary.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/requirements.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/rates.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/local.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/state.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/federal.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/case.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/calculations.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/compliance.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/reasons.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/corporate.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/individual.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/market.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/questions.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/analysis.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/sources.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/flagged.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "site build files exist",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index has clean landing / dashboard",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index links to Flagged for Review",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index links to Executive Summary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "private intake file is excluded from git",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "raw identifiers parsed from private intake",
+      "ok": true,
+      "detail": "L O, V N, JP, M T, E R, I S"
+    },
+    {
+      "name": "no raw tenant identifiers in public files",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no exact street address published",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dates, amounts and placeholder IDs preserved",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "conservative compliance checklist wording present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no attorney approval or guarantee claimed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no forbidden certification language",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no broken internal links",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "sources": 52,
+    "pages": 17,
+    "data_files": 19,
+    "rows_verified": 167,
+    "needs_review_rows": 39,
+    "flags": 34,
+    "checks": 70,
+    "errors": 0
+  }
+}

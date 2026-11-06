@@ -1,0 +1,2352 @@
+{
+  "summary": {
+    "title": "Executive Summary",
+    "description": "Bottom line for Rental increase SF, with every finding linked to an official source.",
+    "sections": [
+      {
+        "title": "Executive findings",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "SUM-01",
+            "label": "Current SF annual allowable increase",
+            "value": "1.6% effective 3/1/26-2/28/27",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ],
+            "notes": "For covered rent-controlled units, once every 12 months.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-02",
+            "label": "State-only AB 1482 SF cap",
+            "value": "8.8% for 8/1/26-7/31/27",
+            "status": "verified",
+            "source_ids": [
+              "S27"
+            ],
+            "notes": "Does NOT apply to units under SF Rent Ordinance rent-increase limits.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-03",
+            "label": "Federal general private-rent cap",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S43",
+              "S40",
+              "S41",
+              "S42"
+            ],
+            "notes": "No official source found; blank and flagged.",
+            "flag_id": "F22"
+          },
+          {
+            "id": "SUM-04",
+            "label": "Rent Increase License",
+            "value": "Current license required before annual/banked increase takes effect",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S08"
+            ],
+            "notes": "Unlicensed increase may be null/void.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-05",
+            "label": "Notice",
+            "value": "30-day written; 90-day if >10%; +5 days if mailed; dollar amount, percentage, effective date",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S05",
+              "S35"
+            ],
+            "notes": "Use rate in effect on increase date.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-06",
+            "label": "Banked increases",
+            "value": "Only if >=24 full months without any increase; add percentages, do not compound/prorate",
+            "status": "verified",
+            "source_ids": [
+              "S05"
+            ],
+            "notes": "No banked amount inferred for this case.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-07",
+            "label": "Roommate / additional occupant",
+            "value": "Cannot charge extra rent merely because a new/additional roommate moved in",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S17",
+              "S18",
+              "S19"
+            ],
+            "notes": "No market-rate reset inferred.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-08",
+            "label": "Unit 1 vacancy-decontrol issue",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S15",
+              "S16",
+              "S28",
+              "S37"
+            ],
+            "notes": "Continuing occupant legal status and last-original-occupant facts unverified.",
+            "flag_id": "T03-F04"
+          },
+          {
+            "id": "SUM-09",
+            "label": "Corporate practice",
+            "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%",
+            "status": "verified",
+            "source_ids": [
+              "S48",
+              "S49"
+            ],
+            "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-10",
+            "label": "Individual practice",
+            "value": "June 2024: 23 landlord petitions/154 units; 73 tenant petitions; 89 eviction notices",
+            "status": "verified",
+            "source_ids": [
+              "S29"
+            ],
+            "notes": "Narrow formal-petition evidence only.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-11",
+            "label": "Conservative approach",
+            "value": "Identical, neutral, license-and-notice-compliant <=1.6% policy on each eligible unit; or less",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35",
+              "S42"
+            ],
+            "notes": "Compliance checklist capable of tenant-lawyer review; no approval or guarantee.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUM-12",
+            "label": "One unit or both",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S41",
+              "S42",
+              "S38"
+            ],
+            "notes": "No official source requires both; document neutral eligibility reasons if only one is raised.",
+            "flag_id": "F22"
+          },
+          {
+            "id": "SUM-13",
+            "label": "94122 Small Area FMR",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S44",
+              "S46",
+              "S50",
+              "S51",
+              "S52"
+            ],
+            "notes": "Official ZIP row not obtained; blank.",
+            "flag_id": "T03-F07"
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": {
+    "title": "Full Requirements List",
+    "description": "Every active requirement, status and official source link.",
+    "sections": [
+      {
+        "title": "Requirements",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "REQ-01",
+            "label": "Executive summary",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S27",
+              "S43"
+            ],
+            "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-02",
+            "label": "Public GitHub Pages site",
+            "value": "Built at repository root",
+            "status": "verified",
+            "source_ids": [
+              "S43"
+            ],
+            "notes": "Legacy Pages source main /.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-03",
+            "label": "Collect / organize / analyze full requirements list",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S20"
+            ],
+            "notes": "This page.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-04",
+            "label": "Answer all user questions",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S27",
+              "S43"
+            ],
+            "notes": "Questions & Answers page.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-05",
+            "label": "Review repo line by line",
+            "value": "Done",
+            "status": "verified",
+            "source_ids": [
+              "S20"
+            ],
+            "notes": "REPO_REVIEW.md.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-06",
+            "label": "Verify every row against official sources",
+            "value": "Done; validation script re-checks",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S43"
+            ],
+            "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-07",
+            "label": "Provide links for manual review",
+            "value": "Every row has official links",
+            "status": "verified",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Official source(s) column.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-08",
+            "label": "Flag irregularities",
+            "value": "34 flags published",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S43"
+            ],
+            "notes": "Flagged for Review page.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-09",
+            "label": "No hallucinations / no inferred values",
+            "value": "Blank cells for unverified values",
+            "status": "verified",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Validation enforces blank + flag.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-10",
+            "label": "Personal information top priority",
+            "value": "Placeholders only; raw identifiers internal-only",
+            "status": "verified",
+            "source_ids": [
+              "S23"
+            ],
+            "notes": "Privacy scan in validation.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-11",
+            "label": "Anonymize all personal information",
+            "value": "Tenant A-F placeholders",
+            "status": "verified",
+            "source_ids": [
+              "S23"
+            ],
+            "notes": "No real names, initials, contact details or exact address.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-12",
+            "label": "Keep dates and amounts same",
+            "value": "Preserved",
+            "status": "verified",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-13",
+            "label": "Clean landing page + category subpages",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S43"
+            ],
+            "notes": "index.html and pages/.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-14",
+            "label": "Simple dashboard UI",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S43"
+            ],
+            "notes": "Cards and status badges.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-15",
+            "label": "All entries/findings in easy-read tables",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Tables on every subpage.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-16",
+            "label": "Analysis / findings",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S42"
+            ],
+            "notes": "Analysis & Findings page.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-17",
+            "label": "Clearly labeled Flagged for Review page with source links",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "pages/flagged.html.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-18",
+            "label": "Verified source-linked tables",
+            "value": "Published",
+            "status": "verified",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Sources page.",
+            "flag_id": ""
+          },
+          {
+            "id": "REQ-19",
+            "label": "PR from integration branch to main",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S43"
+            ],
+            "notes": "Pending T05; PR link/merge result recorded in COORDINATION.md after merge.",
+            "flag_id": "F19"
+          },
+          {
+            "id": "REQ-20",
+            "label": "Merged PR + successful Pages deployment",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S43"
+            ],
+            "notes": "Pending T05; deployment result recorded in COORDINATION.md after deploy.",
+            "flag_id": "F19"
+          },
+          {
+            "id": "REQ-21",
+            "label": "Conservative compliance checklist capable of tenant-lawyer review",
+            "value": "Published",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35",
+              "S42"
+            ],
+            "notes": "No attorney approval or guarantee.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "rates": {
+    "title": "Official Allowable Increase Rates",
+    "description": "SF Rent Board rates effective on 2026-11-06 and historical context.",
+    "sections": [
+      {
+        "title": "Current and recent rates",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "RATE-01",
+            "label": "3/1/26 - 2/28/27",
+            "value": "1.6%",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ],
+            "notes": "Current local rate.",
+            "flag_id": ""
+          },
+          {
+            "id": "RATE-02",
+            "label": "3/1/25 - 2/28/26",
+            "value": "1.4%",
+            "status": "verified",
+            "source_ids": [
+              "S02",
+              "S04"
+            ],
+            "notes": "Historical.",
+            "flag_id": ""
+          },
+          {
+            "id": "RATE-03",
+            "label": "3/1/24 - 2/28/25",
+            "value": "1.7%",
+            "status": "verified",
+            "source_ids": [
+              "S02",
+              "S04"
+            ],
+            "notes": "Historical.",
+            "flag_id": ""
+          },
+          {
+            "id": "RATE-04",
+            "label": "3/1/23 - 2/29/24",
+            "value": "3.6%",
+            "status": "verified",
+            "source_ids": [
+              "S04"
+            ],
+            "notes": "Historical.",
+            "flag_id": ""
+          },
+          {
+            "id": "RATE-05",
+            "label": "3/1/22 - 2/28/23",
+            "value": "2.3%",
+            "status": "verified",
+            "source_ids": [
+              "S04"
+            ],
+            "notes": "Historical.",
+            "flag_id": ""
+          },
+          {
+            "id": "RATE-06",
+            "label": "3/1/21 - 2/28/22",
+            "value": "0.7%",
+            "status": "verified",
+            "source_ids": [
+              "S04"
+            ],
+            "notes": "Historical.",
+            "flag_id": ""
+          },
+          {
+            "id": "RATE-07",
+            "label": "3/1/20 - 2/28/21",
+            "value": "1.8%",
+            "status": "verified",
+            "source_ids": [
+              "S04"
+            ],
+            "notes": "Historical.",
+            "flag_id": ""
+          },
+          {
+            "id": "RATE-08",
+            "label": "3/1/19 - 2/29/20",
+            "value": "2.6%",
+            "status": "verified",
+            "source_ids": [
+              "S04"
+            ],
+            "notes": "Relevant to Unit 2 lease start; no banked amount inferred.",
+            "flag_id": ""
+          }
+        ]
+      },
+      {
+        "title": "Rate basis",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "RATE-09",
+            "label": "Local formula",
+            "value": "60% of Bay Area CPI-U increase; max 7%",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S21"
+            ],
+            "notes": "SF Admin Code 37.3.",
+            "flag_id": ""
+          },
+          {
+            "id": "RATE-10",
+            "label": "Temporary CPI methodology",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S28",
+              "S01"
+            ],
+            "notes": "Jan. 13, 2026 minutes adopted Version 1 temporary methodology.",
+            "flag_id": "F06"
+          },
+          {
+            "id": "RATE-11",
+            "label": "Calculation",
+            "value": "Base rent x rate; no rounding up",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S03",
+              "S04"
+            ],
+            "notes": "Temporary passthroughs excluded.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "local": {
+    "title": "Local Law - San Francisco",
+    "description": "SF Rent Ordinance, Rent Board rules, licensing, banking and petitions.",
+    "sections": [
+      {
+        "title": "Local rules",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "LOC-01",
+            "label": "Coverage cutoff",
+            "value": "Many units built on/before June 13, 1979 have rent control and eviction protection",
+            "status": "verified",
+            "source_ids": [
+              "S06"
+            ],
+            "notes": "Verify exact address in PIM; partial exemptions exist.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-02",
+            "label": "Annual increase",
+            "value": "1.6% once every 12 months on anniversary date",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S02"
+            ],
+            "notes": "Current rate.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-03",
+            "label": "Ordinance cap",
+            "value": "60% CPI, max 7%",
+            "status": "verified",
+            "source_ids": [
+              "S21"
+            ],
+            "notes": "SF Admin Code 37.3.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-04",
+            "label": "Initial rent",
+            "value": "No limit on first rent for vacant covered unit",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S27"
+            ],
+            "notes": "Not a reset for an existing tenancy.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-05",
+            "label": "License",
+            "value": "Current Rent Increase License required before annual/banked increase",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S08"
+            ],
+            "notes": "Unlicensed increase may be null/void.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-06",
+            "label": "Housing Inventory",
+            "value": "Annual report by March 1; license auto-generated for non-owner-occupied units",
+            "status": "verified",
+            "source_ids": [
+              "S07"
+            ],
+            "notes": "No monetary penalty, but notice unenforceable without license.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-07",
+            "label": "Banking",
+            "value": "24 full months; add percentages; no compounding/prorating; license",
+            "status": "verified",
+            "source_ids": [
+              "S05"
+            ],
+            "notes": "Notice must state banked portion.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-08",
+            "label": "Additional occupants",
+            "value": "No extra rent merely because new/additional roommate moved in",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S17",
+              "S18"
+            ],
+            "notes": "Even if lease says otherwise.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-09",
+            "label": "Petition grounds",
+            "value": "Capital improvement, O&M, comparable rents, Proposition I, utility, 1.21, bond/water passthroughs",
+            "status": "verified",
+            "source_ids": [
+              "S09"
+            ],
+            "notes": "Petition/worksheet before notice.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-10",
+            "label": "Section 6.14",
+            "value": "Unlimited increase only when last original occupant vacates plus timely 6.14 notice",
+            "status": "verified",
+            "source_ids": [
+              "S15",
+              "S16"
+            ],
+            "notes": "60 days generally reasonable.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-11",
+            "label": "Costa-Hawkins local view",
+            "value": "Co-tenants not subject; qualifying post-1995 subtenant/assignee only",
+            "status": "verified",
+            "source_ids": [
+              "S15",
+              "S16"
+            ],
+            "notes": "Legal advice strongly encouraged.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-12",
+            "label": "Tenant harassment",
+            "value": "Bad-faith coercion/discrimination/privacy interference prohibited",
+            "status": "verified",
+            "source_ids": [
+              "S22"
+            ],
+            "notes": "Larson footnote conflict flagged.",
+            "flag_id": ""
+          },
+          {
+            "id": "LOC-13",
+            "label": "Tenant petition",
+            "value": "No charge, no time limit, ALJ hearing",
+            "status": "verified",
+            "source_ids": [
+              "S25",
+              "S26"
+            ],
+            "notes": "516C and 518 forms.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "state": {
+    "title": "State Law - California",
+    "description": "AB 1482, Civil Code 827, 1947.12, 1954.53 and FEHA.",
+    "sections": [
+      {
+        "title": "State rules",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "ST-01",
+            "label": "AB 1482 SF state-only cap",
+            "value": "8.8% for 8/1/26-7/31/27 (5% + 3.8% CPI)",
+            "status": "verified",
+            "source_ids": [
+              "S27"
+            ],
+            "notes": "Does NOT apply to units under SF Rent Ordinance limits.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-02",
+            "label": "State cap formula",
+            "value": "5% + CPI or 10% lower; max two increases/12 months",
+            "status": "verified",
+            "source_ids": [
+              "S27",
+              "S36"
+            ],
+            "notes": "CPI-U April-over-April, rounded nearest 0.1%, Aug. 1 cutoff.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-03",
+            "label": "More-restrictive local exemption",
+            "value": "Units already subject to more restrictive local rent control are exempt from state cap",
+            "status": "verified",
+            "source_ids": [
+              "S27",
+              "S36"
+            ],
+            "notes": "Local protections remain.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-04",
+            "label": "Just cause",
+            "value": "Required after 12/24 months; lease expiration alone is not just cause",
+            "status": "verified",
+            "source_ids": [
+              "S27"
+            ],
+            "notes": "Relocation assistance for no-fault evictions.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-05",
+            "label": "Notice",
+            "value": "30 days <=10%; 90 days >10%; 827(c) longer notice controls",
+            "status": "verified",
+            "source_ids": [
+              "S35"
+            ],
+            "notes": "Personal delivery/mail rules.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-06",
+            "label": "Costa-Hawkins initial rent",
+            "value": "No limit on initial rent for vacant unit",
+            "status": "verified",
+            "source_ids": [
+              "S27",
+              "S37"
+            ],
+            "notes": "Not a reset for existing tenancy.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-07",
+            "label": "Costa-Hawkins d(2)",
+            "value": "Unlimited increase only to qualifying post-1995 lawful sublessee/assignee after original occupants no longer permanently reside",
+            "status": "verified",
+            "source_ids": [
+              "S37"
+            ],
+            "notes": "Co-tenants excluded.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-08",
+            "label": "Costa-Hawkins d(3)",
+            "value": "Partial occupancy changes protected when original occupant or qualifying pre-1996 lawful sublessee/assignee remains",
+            "status": "verified",
+            "source_ids": [
+              "S37"
+            ],
+            "notes": "Critical unresolved Unit 1 issue.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-09",
+            "label": "FEHA classes",
+            "value": "Race, color, religion, sex, gender, gender identity/expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran/military status, genetic information",
+            "status": "verified",
+            "source_ids": [
+              "S38",
+              "S39"
+            ],
+            "notes": "Includes perception/association.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-10",
+            "label": "FEHA retaliation",
+            "value": "Dominant-purpose retaliation/harassment/eviction barred",
+            "status": "verified",
+            "source_ids": [
+              "S38"
+            ],
+            "notes": "Source-of-income and aggregate-income rules.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-11",
+            "label": "Exemption notices",
+            "value": "Required written notice for single-family/condo exemption; REIT/corporate/LLC limits",
+            "status": "verified",
+            "source_ids": [
+              "S27"
+            ],
+            "notes": "AB 1482 notice language.",
+            "flag_id": ""
+          },
+          {
+            "id": "ST-12",
+            "label": "Damages",
+            "value": "Injunctive relief, excess rent, attorney fees, up to treble for willful/oppressive/fraud/malice",
+            "status": "verified",
+            "source_ids": [
+              "S27",
+              "S36"
+            ],
+            "notes": "State court enforcement; Rent Board cannot enforce state law.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "federal": {
+    "title": "Federal Law",
+    "description": "Fair Housing Act, disparate impact, HUD FMR/SAFMR context and the no-cap finding.",
+    "sections": [
+      {
+        "title": "Federal rules and context",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FED-01",
+            "label": "FHA 3604",
+            "value": "Discrimination in rental/terms/services because of race, color, religion, sex, familial status, national origin; disability provisions",
+            "status": "verified",
+            "source_ids": [
+              "S41",
+              "S40"
+            ],
+            "notes": "Official U.S. Code PDF.",
+            "flag_id": ""
+          },
+          {
+            "id": "FED-02",
+            "label": "Disparate impact",
+            "value": "Liability can exist without intent; substantial legitimate nondiscriminatory interest and no less discriminatory alternative",
+            "status": "verified",
+            "source_ids": [
+              "S42"
+            ],
+            "notes": "Current as of 11/04/2026.",
+            "flag_id": ""
+          },
+          {
+            "id": "FED-03",
+            "label": "General federal private-rent cap",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S43",
+              "S40",
+              "S41",
+              "S42"
+            ],
+            "notes": "No official source found; blank and flagged.",
+            "flag_id": "F22"
+          },
+          {
+            "id": "FED-04",
+            "label": "HUD FMR definition",
+            "value": "40th-percentile gross rents for standard-quality units",
+            "status": "verified",
+            "source_ids": [
+              "S43",
+              "S44"
+            ],
+            "notes": "Used for voucher payment standards, not a rent-increase cap.",
+            "flag_id": ""
+          },
+          {
+            "id": "FED-05",
+            "label": "FMR effective date",
+            "value": "Federal fiscal-year start, generally October 1",
+            "status": "verified",
+            "source_ids": [
+              "S43"
+            ],
+            "notes": "FY2027 is current on 2026-11-06.",
+            "flag_id": ""
+          },
+          {
+            "id": "FED-06",
+            "label": "SAFMR definition",
+            "value": "ZIP-code FMRs; designated/optional areas; exception payment standards up to 110%",
+            "status": "verified",
+            "source_ids": [
+              "S44"
+            ],
+            "notes": "Not a private rent cap.",
+            "flag_id": ""
+          },
+          {
+            "id": "FED-07",
+            "label": "94122 SAFMR",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S44",
+              "S46",
+              "S50",
+              "S51",
+              "S52"
+            ],
+            "notes": "Official ZIP row not obtained; blank.",
+            "flag_id": "T03-F07"
+          }
+        ]
+      }
+    ]
+  },
+  "case": {
+    "title": "Anonymized Case Facts",
+    "description": "Owner-supplied dates and amounts preserved; personal information replaced with placeholders; official-verified values blank where unverified.",
+    "sections": [
+      {
+        "title": "Location / building",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CASE-01",
+            "label": "Neighborhood / ZIP",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S33",
+              "S34"
+            ],
+            "notes": "Owner input: Outer Sunset, San Francisco, CA 94122; official SF Planning context only, not property-specific verification.",
+            "flag_id": "T03-F03"
+          },
+          {
+            "id": "CASE-02",
+            "label": "Exact street address",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S32"
+            ],
+            "notes": "Owner input: not supplied; no exact address published.",
+            "flag_id": "T03-F01"
+          },
+          {
+            "id": "CASE-03",
+            "label": "Building year",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S06",
+              "S32"
+            ],
+            "notes": "Owner input: 1940; before June 13, 1979 cutoff but property-specific record unverified.",
+            "flag_id": "T03-F03"
+          },
+          {
+            "id": "CASE-04",
+            "label": "Rent-controlled status",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S06",
+              "S20"
+            ],
+            "notes": "Owner input: units said to be rent controlled; not official-verified.",
+            "flag_id": "F21"
+          },
+          {
+            "id": "CASE-05",
+            "label": "Rent Increase License status",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S07",
+              "S08"
+            ],
+            "notes": "Owner input: not supplied.",
+            "flag_id": "T03-F05"
+          },
+          {
+            "id": "CASE-06",
+            "label": "Prior increases / banked increases / notice history / anniversary",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01",
+              "S05"
+            ],
+            "notes": "Owner input: not supplied; no banked amount inferred.",
+            "flag_id": "T03-F05"
+          }
+        ]
+      },
+      {
+        "title": "Unit 1 - anonymized",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CASE-07",
+            "label": "Last lease start",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Owner input: February 1, 2025; date unchanged.",
+            "flag_id": "T03-F01"
+          },
+          {
+            "id": "CASE-08",
+            "label": "Monthly rent at last lease start",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Owner input: $3,995; amount unchanged.",
+            "flag_id": "T03-F01"
+          },
+          {
+            "id": "CASE-09",
+            "label": "Initial lease tenants",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S17"
+            ],
+            "notes": "Published placeholders: Tenant A, Tenant B, Tenant C; no raw identifiers.",
+            "flag_id": "T03-F02"
+          },
+          {
+            "id": "CASE-10",
+            "label": "Continuing tenancy / current tenants",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S17"
+            ],
+            "notes": "Published placeholders: Tenant A, Tenant D; no inference about legal status.",
+            "flag_id": "T03-F04"
+          },
+          {
+            "id": "CASE-11",
+            "label": "Current-tenancy date",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Owner input: April 1, 2026; date unchanged.",
+            "flag_id": "T03-F01"
+          },
+          {
+            "id": "CASE-12",
+            "label": "Monthly rent on April 1, 2026",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Owner input: $3,995; amount unchanged.",
+            "flag_id": "T03-F01"
+          },
+          {
+            "id": "CASE-13",
+            "label": "Whether a new tenancy began April 1, 2026",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S16"
+            ],
+            "notes": "Owner input: not supplied; no inference.",
+            "flag_id": "T03-F04"
+          },
+          {
+            "id": "CASE-14",
+            "label": "Legal status of continuing occupant(s)",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S15",
+              "S37"
+            ],
+            "notes": "Owner input: not supplied; no inference.",
+            "flag_id": "T03-F04"
+          },
+          {
+            "id": "CASE-15",
+            "label": "Last original occupant vacated / no longer permanently resides",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S28"
+            ],
+            "notes": "Owner input: not supplied; no inference.",
+            "flag_id": "T03-F04"
+          }
+        ]
+      },
+      {
+        "title": "Unit 2 - anonymized",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CASE-16",
+            "label": "Last lease start",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Owner input: June 1, 2019; date unchanged.",
+            "flag_id": "T03-F01"
+          },
+          {
+            "id": "CASE-17",
+            "label": "Monthly rent at last lease start",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Owner input: $3,150; amount unchanged.",
+            "flag_id": "T03-F01"
+          },
+          {
+            "id": "CASE-18",
+            "label": "Tenants",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S17"
+            ],
+            "notes": "Published placeholders: Tenant E, Tenant F; no raw identifiers.",
+            "flag_id": "T03-F02"
+          },
+          {
+            "id": "CASE-19",
+            "label": "Prior increases since June 1, 2019",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S05"
+            ],
+            "notes": "Owner input: not supplied; no banked amount inferred.",
+            "flag_id": "T03-F05"
+          }
+        ]
+      }
+    ]
+  },
+  "calculations": {
+    "title": "Illustrative Calculations",
+    "description": "Owner-supplied amounts multiplied by official rates only; arithmetic, not a recommendation.",
+    "sections": [
+      {
+        "title": "Current 1.6% rate",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CALC-01",
+            "label": "Unit 1 $3,995 x 1.6%",
+            "value": "$63.92 increase; $4,058.92 illustrative new base rent",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ],
+            "notes": "Eligibility, license, notice and anniversary unverified.",
+            "flag_id": ""
+          },
+          {
+            "id": "CALC-02",
+            "label": "Unit 2 $3,150 x 1.6%",
+            "value": "$50.40 increase; $3,200.40 illustrative new base rent",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ],
+            "notes": "Eligibility, license, notice and anniversary unverified.",
+            "flag_id": ""
+          }
+        ]
+      },
+      {
+        "title": "Historical 1.4% rate",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CALC-03",
+            "label": "Unit 1 $3,995 x 1.4%",
+            "value": "$55.93 increase; $4,050.93 illustrative new base rent",
+            "status": "analysis",
+            "source_ids": [
+              "S02",
+              "S04"
+            ],
+            "notes": "Historical comparison only.",
+            "flag_id": ""
+          },
+          {
+            "id": "CALC-04",
+            "label": "Unit 2 $3,150 x 1.4%",
+            "value": "$44.10 increase; $3,194.10 illustrative new base rent",
+            "status": "analysis",
+            "source_ids": [
+              "S02",
+              "S04"
+            ],
+            "notes": "Historical comparison only.",
+            "flag_id": ""
+          }
+        ]
+      },
+      {
+        "title": "Banked increases",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CALC-05",
+            "label": "Banked total for either unit",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S05",
+              "S04"
+            ],
+            "notes": "Prior increases and anniversary dates not supplied; blank.",
+            "flag_id": "T03-F05"
+          },
+          {
+            "id": "CALC-06",
+            "label": "Rounding",
+            "value": "No rounding up; base rent only",
+            "status": "verified",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Temporary passthroughs excluded.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "compliance": {
+    "title": "Correct Tenant-Notice Method",
+    "description": "Conservative compliance checklist capable of tenant-lawyer review; not attorney approval.",
+    "sections": [
+      {
+        "title": "Before any increase",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CHK-01",
+            "label": "Verify coverage",
+            "value": "Check exact address in SF Planning PIM; confirm exemptions",
+            "status": "verified",
+            "source_ids": [
+              "S06",
+              "S32"
+            ],
+            "notes": "Exact address not supplied in this case.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-02",
+            "label": "Verify license",
+            "value": "Current Rent Increase License on effective date",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S08"
+            ],
+            "notes": "Tenant portal lookup.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-03",
+            "label": "Verify 12 months / anniversary",
+            "value": "At least 12 months since last increase",
+            "status": "verified",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Use rate in effect on increase date.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-04",
+            "label": "Verify banked amounts",
+            "value": "Only if >=24 full months without any increase; add percentages; no compounding/prorating",
+            "status": "verified",
+            "source_ids": [
+              "S05"
+            ],
+            "notes": "Not inferred here.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-05",
+            "label": "Written notice timing",
+            "value": "30 days; 90 days if >10% alone/combined in same year; +5 days if mailed",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S05",
+              "S35"
+            ],
+            "notes": "827(c) longer notice controls.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-06",
+            "label": "Notice contents",
+            "value": "Dollar amount, percentage, effective date; banked portion if any",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S05"
+            ],
+            "notes": "No rounding up.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-07",
+            "label": "Delivery",
+            "value": "Personal delivery or mail under Civil Code 827 / CCP 1013",
+            "status": "verified",
+            "source_ids": [
+              "S35"
+            ],
+            "notes": "Keep proof of service.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-08",
+            "label": "Petition grounds",
+            "value": "Petition/worksheet before notice when required",
+            "status": "verified",
+            "source_ids": [
+              "S09",
+              "S10",
+              "S11",
+              "S12",
+              "S13",
+              "S14"
+            ],
+            "notes": "Otherwise notice may be void.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-09",
+            "label": "Neutral policy",
+            "value": "Identical written neutral policy, dates, calculations and recordkeeping for each eligible unit",
+            "status": "analysis",
+            "source_ids": [
+              "S42",
+              "S38"
+            ],
+            "notes": "Document neutral eligibility reasons if only one unit is raised.",
+            "flag_id": ""
+          },
+          {
+            "id": "CHK-10",
+            "label": "Legal review",
+            "value": "Capable of tenant-lawyer review; no approval claimed",
+            "status": "analysis",
+            "source_ids": [
+              "S23",
+              "S24",
+              "S25"
+            ],
+            "notes": "Free counseling is not legal advice; TRC covers eviction proceedings.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "reasons": {
+    "title": "Reasonable Reasons for an Increase",
+    "description": "Official grounds that can support an increase; mere below-market rent is not enough.",
+    "sections": [
+      {
+        "title": "Supported grounds",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "REAS-01",
+            "label": "Annual CPI-based allowable increase",
+            "value": "1.6% effective 3/1/26-2/28/27",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S04"
+            ],
+            "notes": "Once every 12 months; license and notice.",
+            "flag_id": ""
+          },
+          {
+            "id": "REAS-02",
+            "label": "Properly banked skipped/partial increases",
+            "value": "24 full months; add percentages",
+            "status": "verified",
+            "source_ids": [
+              "S05"
+            ],
+            "notes": "No banked amount inferred here.",
+            "flag_id": ""
+          },
+          {
+            "id": "REAS-03",
+            "label": "Capital improvement petition",
+            "value": "Petition before notice; not base rent; discontinue after amortization",
+            "status": "verified",
+            "source_ids": [
+              "S09",
+              "S12"
+            ],
+            "notes": "Hardship application available.",
+            "flag_id": ""
+          },
+          {
+            "id": "REAS-04",
+            "label": "Operating & maintenance petition",
+            "value": "Up to 7% additional base rent; two-year comparison",
+            "status": "verified",
+            "source_ids": [
+              "S09",
+              "S11"
+            ],
+            "notes": "Petition before notice.",
+            "flag_id": ""
+          },
+          {
+            "id": "REAS-05",
+            "label": "Comparable-rent special circumstances",
+            "value": "Extraordinary circumstances; mere long-standing below-market rent is NOT enough",
+            "status": "verified",
+            "source_ids": [
+              "S09",
+              "S10"
+            ],
+            "notes": "One-time tenancy reset; petition before notice.",
+            "flag_id": ""
+          },
+          {
+            "id": "REAS-06",
+            "label": "Utility passthrough",
+            "value": "Dollar-for-dollar; petition/worksheet before notice; 12 months",
+            "status": "verified",
+            "source_ids": [
+              "S09",
+              "S13"
+            ],
+            "notes": "Not base rent.",
+            "flag_id": ""
+          },
+          {
+            "id": "REAS-07",
+            "label": "Section 1.21 no tenant in occupancy",
+            "value": "Petition before notice; otherwise void",
+            "status": "verified",
+            "source_ids": [
+              "S09",
+              "S14"
+            ],
+            "notes": "Not applicable if any qualifying tenant resides.",
+            "flag_id": ""
+          },
+          {
+            "id": "REAS-08",
+            "label": "Proposition I rent history / bond / water revenue bond passthroughs",
+            "value": "Rent Board petition/worksheet grounds",
+            "status": "verified",
+            "source_ids": [
+              "S09"
+            ],
+            "notes": "Follow specific form instructions.",
+            "flag_id": ""
+          },
+          {
+            "id": "REAS-09",
+            "label": "New or additional roommate",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01",
+              "S17",
+              "S18"
+            ],
+            "notes": "Not a lawful reason; blank and flagged.",
+            "flag_id": "T03-F04"
+          },
+          {
+            "id": "REAS-10",
+            "label": "Assumed vacancy decontrol / market-rate reset",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S15",
+              "S16",
+              "S37",
+              "S28"
+            ],
+            "notes": "Not recommended without official eligibility and legal review.",
+            "flag_id": "T03-F04"
+          }
+        ]
+      }
+    ]
+  },
+  "corporate": {
+    "title": "How Large Real Estate Corporations Handle Increases",
+    "description": "Official SEC EDGAR figures; portfolio-level evidence only, not SF-specific or a legal benchmark.",
+    "sections": [
+      {
+        "title": "SEC filing evidence",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CORP-01",
+            "label": "Independence Realty Trust Q4 2025",
+            "value": "Same-store new leases -3.7%; renewal 2.9%; blended 0.8%; occupancy 95.4%; retention 61.4%",
+            "status": "verified",
+            "source_ids": [
+              "S48"
+            ],
+            "notes": "Multifamily REIT; not SF-specific.",
+            "flag_id": ""
+          },
+          {
+            "id": "CORP-02",
+            "label": "Independence Realty Trust Q3 2025",
+            "value": "Same-store new leases -3.5%; renewal 2.6%; blended 0.1%",
+            "status": "verified",
+            "source_ids": [
+              "S48"
+            ],
+            "notes": "Not SF-specific.",
+            "flag_id": ""
+          },
+          {
+            "id": "CORP-03",
+            "label": "IRT 2025 value-add",
+            "value": "2,003 renovations; average $251/month increase over unrenovated comparables",
+            "status": "verified",
+            "source_ids": [
+              "S48"
+            ],
+            "notes": "Not SF-specific.",
+            "flag_id": ""
+          },
+          {
+            "id": "CORP-04",
+            "label": "Invitation Homes 2025 total portfolio",
+            "value": "Renewal +4.6%; new -0.8%",
+            "status": "verified",
+            "source_ids": [
+              "S49"
+            ],
+            "notes": "Single-family rental REIT; not SF-specific.",
+            "flag_id": ""
+          },
+          {
+            "id": "CORP-05",
+            "label": "Invitation Homes 2024 total portfolio",
+            "value": "Renewal +4.9%; new +1.0%",
+            "status": "verified",
+            "source_ids": [
+              "S49"
+            ],
+            "notes": "Not SF-specific.",
+            "flag_id": ""
+          },
+          {
+            "id": "CORP-06",
+            "label": "All large corporations generalization",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S48",
+              "S49"
+            ],
+            "notes": "No official source proves what all large corporations do.",
+            "flag_id": "F23"
+          }
+        ]
+      }
+    ]
+  },
+  "individual": {
+    "title": "How Individual SF Property Owners Handle Increases",
+    "description": "Official local rules and narrow Rent Board workload evidence; no generalization claimed.",
+    "sections": [
+      {
+        "title": "Official evidence",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "IND-01",
+            "label": "Ordinary path",
+            "value": "Annual allowable increase, license, 12-month anniversary, written notice",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35"
+            ],
+            "notes": "Same local rules apply to individual owners.",
+            "flag_id": ""
+          },
+          {
+            "id": "IND-02",
+            "label": "Formal petitions June 2024",
+            "value": "23 landlord petitions / 154 units",
+            "status": "verified",
+            "source_ids": [
+              "S29"
+            ],
+            "notes": "Narrow descriptive count.",
+            "flag_id": ""
+          },
+          {
+            "id": "IND-03",
+            "label": "Capital improvement petitions June 2024",
+            "value": "19 petitions / 148 units",
+            "status": "verified",
+            "source_ids": [
+              "S29"
+            ],
+            "notes": "Narrow descriptive count.",
+            "flag_id": ""
+          },
+          {
+            "id": "IND-04",
+            "label": "Tenant petitions / eviction notices June 2024",
+            "value": "73 tenant petitions / 73 units; 89 eviction notices",
+            "status": "verified",
+            "source_ids": [
+              "S29"
+            ],
+            "notes": "Not proof of typical practice.",
+            "flag_id": ""
+          },
+          {
+            "id": "IND-05",
+            "label": "All individual SF owners generalization",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S29"
+            ],
+            "notes": "No official source proves what all individual owners do.",
+            "flag_id": "F23"
+          }
+        ]
+      }
+    ]
+  },
+  "market": {
+    "title": "Market Context - HUD FMR / SAFMR",
+    "description": "HUD figures are voucher standards, not rent caps or legal bases for an increase.",
+    "sections": [
+      {
+        "title": "FY2027 current federal fiscal year",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "MKT-01",
+            "label": "San Francisco, CA HMFA 0 BR",
+            "value": "$2,574",
+            "status": "verified",
+            "source_ids": [
+              "S47",
+              "S43"
+            ],
+            "notes": "FY2027 FMR; current federal FY on 2026-11-06.",
+            "flag_id": ""
+          },
+          {
+            "id": "MKT-02",
+            "label": "San Francisco, CA HMFA 1 BR",
+            "value": "$3,003",
+            "status": "verified",
+            "source_ids": [
+              "S47",
+              "S43"
+            ],
+            "notes": "FY2027 FMR.",
+            "flag_id": ""
+          },
+          {
+            "id": "MKT-03",
+            "label": "San Francisco, CA HMFA 2 BR",
+            "value": "$3,697",
+            "status": "verified",
+            "source_ids": [
+              "S47",
+              "S43"
+            ],
+            "notes": "FY2027 FMR.",
+            "flag_id": ""
+          },
+          {
+            "id": "MKT-04",
+            "label": "San Francisco, CA HMFA 3 BR",
+            "value": "$4,832",
+            "status": "verified",
+            "source_ids": [
+              "S47",
+              "S43"
+            ],
+            "notes": "FY2027 FMR.",
+            "flag_id": ""
+          },
+          {
+            "id": "MKT-05",
+            "label": "San Francisco, CA HMFA 4 BR",
+            "value": "$5,439",
+            "status": "verified",
+            "source_ids": [
+              "S47",
+              "S43"
+            ],
+            "notes": "FY2027 FMR.",
+            "flag_id": ""
+          }
+        ]
+      },
+      {
+        "title": "FY2026 historical",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "MKT-06",
+            "label": "San Francisco, CA HMFA 0-4 BR",
+            "value": "$2,485 / $2,977 / $3,604 / $4,604 / $4,772",
+            "status": "verified",
+            "source_ids": [
+              "S45",
+              "S43"
+            ],
+            "notes": "FY2026 revised effective May 21, 2026; historical as of 2026-11-06.",
+            "flag_id": ""
+          },
+          {
+            "id": "MKT-07",
+            "label": "94122 FY2026 Small Area FMR",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S44",
+              "S46",
+              "S51"
+            ],
+            "notes": "Official ZIP row not obtained; blank.",
+            "flag_id": "T03-F07"
+          },
+          {
+            "id": "MKT-08",
+            "label": "94122 FY2027 Small Area FMR",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S44",
+              "S50",
+              "S52"
+            ],
+            "notes": "Official ZIP row not obtained; blank.",
+            "flag_id": "T03-F07"
+          },
+          {
+            "id": "MKT-09",
+            "label": "FMR/SAFMR as rent cap",
+            "value": "No - voucher payment standards only",
+            "status": "verified",
+            "source_ids": [
+              "S43",
+              "S44"
+            ],
+            "notes": "Not a legal basis for a private rent increase.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "questions": {
+    "title": "All User Questions Answered",
+    "description": "Direct answers with official source links; blanks where official confirmation is absent.",
+    "sections": [
+      {
+        "title": "Questions and answers",
+        "columns": [
+          "Question",
+          "Answer",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "Q-01",
+            "label": "What are reasonable/normal rental increases under local, state and federal law?",
+            "value": "Local 1.6% for covered units; state-only AB 1482 8.8% does not replace SF limits; no official general federal private-rent cap found. HUD FMR is not a cap.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S27",
+              "S43",
+              "S44"
+            ],
+            "notes": "Federal cap blank and flagged.",
+            "flag_id": ""
+          },
+          {
+            "id": "Q-02",
+            "label": "How do big real estate corporations handle increases?",
+            "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.",
+            "status": "verified",
+            "source_ids": [
+              "S48",
+              "S49"
+            ],
+            "notes": "Portfolio-level, not SF-specific; no generalization.",
+            "flag_id": ""
+          },
+          {
+            "id": "Q-03",
+            "label": "How do individual SF property owners handle increases?",
+            "value": "Official rules require the annual allowable increase, license, 12-month timing and notice; June 2024 Rent Board workload shows 23 landlord petitions/154 units.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S29"
+            ],
+            "notes": "Narrow formal-petition evidence only.",
+            "flag_id": ""
+          },
+          {
+            "id": "Q-04",
+            "label": "What is the correct tenant-notice method?",
+            "value": "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; license first; 827 delivery rules.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S05",
+              "S35",
+              "S07"
+            ],
+            "notes": "Conservative checklist capable of lawyer review.",
+            "flag_id": ""
+          },
+          {
+            "id": "Q-05",
+            "label": "What are reasonable reasons for increases?",
+            "value": "Annual CPI-based allowable increase, properly banked skipped/partial increases, and Rent Board-approved petition/worksheet passthroughs; not extra rent merely because a roommate moved in.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S05",
+              "S09",
+              "S10",
+              "S18"
+            ],
+            "notes": "Mere long tenure below market is not extraordinary.",
+            "flag_id": ""
+          },
+          {
+            "id": "Q-06",
+            "label": "What tenant-friendly advocate/lawyer scrutiny exists?",
+            "value": "Free Rent Board counseling (not legal advice), tenant counselors, eviction-court free legal help, Tenant Right to Counsel for eviction proceedings, and tenant petitions before an ALJ.",
+            "status": "verified",
+            "source_ids": [
+              "S23",
+              "S24",
+              "S25",
+              "S30",
+              "S31"
+            ],
+            "notes": "No official general rent-increase attorney approval service found.",
+            "flag_id": ""
+          },
+          {
+            "id": "Q-07",
+            "label": "Can increases pass a SF tenant lawyer's review as reasonable, normal business practice, nondiscriminatory and lawful?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S23",
+              "S24",
+              "S25",
+              "S42"
+            ],
+            "notes": "No official source can certify approval; only a conservative checklist capable of review.",
+            "flag_id": "T03-F08"
+          },
+          {
+            "id": "Q-08",
+            "label": "Should one unit or both be raised to avoid discrimination lawsuits/inquiries?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S41",
+              "S42",
+              "S38"
+            ],
+            "notes": "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised.",
+            "flag_id": "F22"
+          },
+          {
+            "id": "Q-09",
+            "label": "Is a market-rate reset available after Unit 1's roommate change?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S15",
+              "S16",
+              "S37",
+              "S28"
+            ],
+            "notes": "Continuing occupant legal status and last-original-occupant facts unverified; no reset recommended.",
+            "flag_id": "T03-F04"
+          },
+          {
+            "id": "Q-10",
+            "label": "Is any increase guaranteed lawful or lawsuit-proof?",
+            "value": "No. No attorney approval or guarantee of no complaint/inquiry/lawsuit is claimed.",
+            "status": "analysis",
+            "source_ids": [
+              "S23",
+              "S24",
+              "S42"
+            ],
+            "notes": "Conservative compliance checklist only.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "analysis": {
+    "title": "Analysis & Findings",
+    "description": "Source-linked analysis, including discrimination, one-vs-both, and conservative checklist.",
+    "sections": [
+      {
+        "title": "Findings",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "AN-01",
+            "label": "Normal local increase",
+            "value": "1.6% or less on each eligible unit",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S02"
+            ],
+            "notes": "Once every 12 months; license; notice.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-02",
+            "label": "State cap is not a substitute",
+            "value": "AB 1482 8.8% does not apply to SF Rent Ordinance rent-controlled units",
+            "status": "verified",
+            "source_ids": [
+              "S27",
+              "S36"
+            ],
+            "notes": "Local protections remain.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-03",
+            "label": "No federal rent cap found",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S43",
+              "S40",
+              "S41",
+              "S42"
+            ],
+            "notes": "HUD FMR/SAFMR are voucher standards.",
+            "flag_id": "F22"
+          },
+          {
+            "id": "AN-04",
+            "label": "Disparate-impact risk",
+            "value": "Liability can exist without intent; neutral criteria and no less discriminatory alternative matter",
+            "status": "verified",
+            "source_ids": [
+              "S42"
+            ],
+            "notes": "Current eCFR as of 11/04/2026.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-05",
+            "label": "FEHA broader classes",
+            "value": "Source of income, retaliation, perception/association and aggregate-income rules apply",
+            "status": "verified",
+            "source_ids": [
+              "S38",
+              "S39"
+            ],
+            "notes": "State overlay.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-06",
+            "label": "Local harassment overlay",
+            "value": "Bad-faith coercion/discrimination prohibited",
+            "status": "verified",
+            "source_ids": [
+              "S22"
+            ],
+            "notes": "Larson footnote flagged.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-07",
+            "label": "Unit 1 roommate change",
+            "value": "Not a basis for extra rent; vacancy-decontrol eligibility unverified",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S17",
+              "S18",
+              "S15",
+              "S16",
+              "S37"
+            ],
+            "notes": "No market-rate reset recommended.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-08",
+            "label": "One vs both",
+            "value": "Raising both is not officially required; identical neutral policy reduces disparate-treatment optics",
+            "status": "analysis",
+            "source_ids": [
+              "S41",
+              "S42",
+              "S38"
+            ],
+            "notes": "Document neutral eligibility/anniversary reasons; no guarantee.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-09",
+            "label": "Unit 2 long tenure",
+            "value": "Mere below-market rent is not extraordinary circumstances",
+            "status": "verified",
+            "source_ids": [
+              "S10"
+            ],
+            "notes": "Special Circumstances petition required for comparable-rent reset.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-10",
+            "label": "Banked increases",
+            "value": "Cannot be inferred because rent history is unverified",
+            "status": "verified",
+            "source_ids": [
+              "S05"
+            ],
+            "notes": "Blank and flagged.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-11",
+            "label": "Corporate figures",
+            "value": "Portfolio-level disclosures are evidence of practice, not legal benchmarks",
+            "status": "verified",
+            "source_ids": [
+              "S48",
+              "S49"
+            ],
+            "notes": "Not SF-specific.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-12",
+            "label": "Individual figures",
+            "value": "June 2024 workload is narrow formal-petition evidence",
+            "status": "verified",
+            "source_ids": [
+              "S29"
+            ],
+            "notes": "No generalization.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-13",
+            "label": "Tenant-lawyer review",
+            "value": "Checklist capable of review; no approval claimed",
+            "status": "analysis",
+            "source_ids": [
+              "S23",
+              "S24",
+              "S25",
+              "S30",
+              "S31"
+            ],
+            "notes": "TRC is eviction-focused.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-14",
+            "label": "Conservative compliance checklist",
+            "value": "At most ordinary 1.6% annual allowable increase (or less) on each eligible unit, identical written neutral policy, license, notice, dates, calculations, recordkeeping",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35",
+              "S42"
+            ],
+            "notes": "No guarantee of no complaint/lawsuit.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-15",
+            "label": "Flagged items do not block",
+            "value": "All 34 flags published with source links",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S43"
+            ],
+            "notes": "Needs review does not block merge.",
+            "flag_id": ""
+          }
+        ]
+      }
+    ]
+  }
+}

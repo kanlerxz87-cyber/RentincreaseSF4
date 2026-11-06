@@ -1,0 +1,155 @@
+{
+  "title": "State Law - California",
+  "description": "AB 1482, Civil Code 827, 1947.12, 1954.53 and FEHA.",
+  "sections": [
+    {
+      "title": "State rules",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "ST-01",
+          "label": "AB 1482 SF state-only cap",
+          "value": "8.8% for 8/1/26-7/31/27 (5% + 3.8% CPI)",
+          "status": "verified",
+          "source_ids": [
+            "S27"
+          ],
+          "notes": "Does NOT apply to units under SF Rent Ordinance limits.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-02",
+          "label": "State cap formula",
+          "value": "5% + CPI or 10% lower; max two increases/12 months",
+          "status": "verified",
+          "source_ids": [
+            "S27",
+            "S36"
+          ],
+          "notes": "CPI-U April-over-April, rounded nearest 0.1%, Aug. 1 cutoff.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-03",
+          "label": "More-restrictive local exemption",
+          "value": "Units already subject to more restrictive local rent control are exempt from state cap",
+          "status": "verified",
+          "source_ids": [
+            "S27",
+            "S36"
+          ],
+          "notes": "Local protections remain.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-04",
+          "label": "Just cause",
+          "value": "Required after 12/24 months; lease expiration alone is not just cause",
+          "status": "verified",
+          "source_ids": [
+            "S27"
+          ],
+          "notes": "Relocation assistance for no-fault evictions.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-05",
+          "label": "Notice",
+          "value": "30 days <=10%; 90 days >10%; 827(c) longer notice controls",
+          "status": "verified",
+          "source_ids": [
+            "S35"
+          ],
+          "notes": "Personal delivery/mail rules.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-06",
+          "label": "Costa-Hawkins initial rent",
+          "value": "No limit on initial rent for vacant unit",
+          "status": "verified",
+          "source_ids": [
+            "S27",
+            "S37"
+          ],
+          "notes": "Not a reset for existing tenancy.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-07",
+          "label": "Costa-Hawkins d(2)",
+          "value": "Unlimited increase only to qualifying post-1995 lawful sublessee/assignee after original occupants no longer permanently reside",
+          "status": "verified",
+          "source_ids": [
+            "S37"
+          ],
+          "notes": "Co-tenants excluded.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-08",
+          "label": "Costa-Hawkins d(3)",
+          "value": "Partial occupancy changes protected when original occupant or qualifying pre-1996 lawful sublessee/assignee remains",
+          "status": "verified",
+          "source_ids": [
+            "S37"
+          ],
+          "notes": "Critical unresolved Unit 1 issue.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-09",
+          "label": "FEHA classes",
+          "value": "Race, color, religion, sex, gender, gender identity/expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran/military status, genetic information",
+          "status": "verified",
+          "source_ids": [
+            "S38",
+            "S39"
+          ],
+          "notes": "Includes perception/association.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-10",
+          "label": "FEHA retaliation",
+          "value": "Dominant-purpose retaliation/harassment/eviction barred",
+          "status": "verified",
+          "source_ids": [
+            "S38"
+          ],
+          "notes": "Source-of-income and aggregate-income rules.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-11",
+          "label": "Exemption notices",
+          "value": "Required written notice for single-family/condo exemption; REIT/corporate/LLC limits",
+          "status": "verified",
+          "source_ids": [
+            "S27"
+          ],
+          "notes": "AB 1482 notice language.",
+          "flag_id": ""
+        },
+        {
+          "id": "ST-12",
+          "label": "Damages",
+          "value": "Injunctive relief, excess rent, attorney fees, up to treble for willful/oppressive/fraud/malice",
+          "status": "verified",
+          "source_ids": [
+            "S27",
+            "S36"
+          ],
+          "notes": "State court enforcement; Rent Board cannot enforce state law.",
+          "flag_id": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "title": "Executive Summary",
+  "description": "Bottom line for Rental increase SF, with every finding linked to an official source.",
+  "sections": [
+    {
+      "title": "Executive findings",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "SUM-01",
+          "label": "Current SF annual allowable increase",
+          "value": "1.6% effective 3/1/26-2/28/27",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "notes": "For covered rent-controlled units, once every 12 months.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-02",
+          "label": "State-only AB 1482 SF cap",
+          "value": "8.8% for 8/1/26-7/31/27",
+          "status": "verified",
+          "source_ids": [
+            "S27"
+          ],
+          "notes": "Does NOT apply to units under SF Rent Ordinance rent-increase limits.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-03",
+          "label": "Federal general private-rent cap",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S43",
+            "S40",
+            "S41",
+            "S42"
+          ],
+          "notes": "No official source found; blank and flagged.",
+          "flag_id": "F22"
+        },
+        {
+          "id": "SUM-04",
+          "label": "Rent Increase License",
+          "value": "Current license required before annual/banked increase takes effect",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S08"
+          ],
+          "notes": "Unlicensed increase may be null/void.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-05",
+          "label": "Notice",
+          "value": "30-day written; 90-day if >10%; +5 days if mailed; dollar amount, percentage, effective date",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S35"
+          ],
+          "notes": "Use rate in effect on increase date.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-06",
+          "label": "Banked increases",
+          "value": "Only if >=24 full months without any increase; add percentages, do not compound/prorate",
+          "status": "verified",
+          "source_ids": [
+            "S05"
+          ],
+          "notes": "No banked amount inferred for this case.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-07",
+          "label": "Roommate / additional occupant",
+          "value": "Cannot charge extra rent merely because a new/additional roommate moved in",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S17",
+            "S18",
+            "S19"
+          ],
+          "notes": "No market-rate reset inferred.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-08",
+          "label": "Unit 1 vacancy-decontrol issue",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S15",
+            "S16",
+            "S28",
+            "S37"
+          ],
+          "notes": "Continuing occupant legal status and last-original-occupant facts unverified.",
+          "flag_id": "T03-F04"
+        },
+        {
+          "id": "SUM-09",
+          "label": "Corporate practice",
+          "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%",
+          "status": "verified",
+          "source_ids": [
+            "S48",
+            "S49"
+          ],
+          "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-10",
+          "label": "Individual practice",
+          "value": "June 2024: 23 landlord petitions/154 units; 73 tenant petitions; 89 eviction notices",
+          "status": "verified",
+          "source_ids": [
+            "S29"
+          ],
+          "notes": "Narrow formal-petition evidence only.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-11",
+          "label": "Conservative approach",
+          "value": "Identical, neutral, license-and-notice-compliant <=1.6% policy on each eligible unit; or less",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S35",
+            "S42"
+          ],
+          "notes": "Compliance checklist capable of tenant-lawyer review; no approval or guarantee.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUM-12",
+          "label": "One unit or both",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S41",
+            "S42",
+            "S38"
+          ],
+          "notes": "No official source requires both; document neutral eligibility reasons if only one is raised.",
+          "flag_id": "F22"
+        },
+        {
+          "id": "SUM-13",
+          "label": "94122 Small Area FMR",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S44",
+            "S46",
+            "S50",
+            "S51",
+            "S52"
+          ],
+          "notes": "Official ZIP row not obtained; blank.",
+          "flag_id": "T03-F07"
+        }
+      ]
+    }
+  ]
+}

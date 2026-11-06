@@ -1,0 +1,140 @@
+{
+  "title": "Market Context - HUD FMR / SAFMR",
+  "description": "HUD figures are voucher standards, not rent caps or legal bases for an increase.",
+  "sections": [
+    {
+      "title": "FY2027 current federal fiscal year",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "MKT-01",
+          "label": "San Francisco, CA HMFA 0 BR",
+          "value": "$2,574",
+          "status": "verified",
+          "source_ids": [
+            "S47",
+            "S43"
+          ],
+          "notes": "FY2027 FMR; current federal FY on 2026-11-06.",
+          "flag_id": ""
+        },
+        {
+          "id": "MKT-02",
+          "label": "San Francisco, CA HMFA 1 BR",
+          "value": "$3,003",
+          "status": "verified",
+          "source_ids": [
+            "S47",
+            "S43"
+          ],
+          "notes": "FY2027 FMR.",
+          "flag_id": ""
+        },
+        {
+          "id": "MKT-03",
+          "label": "San Francisco, CA HMFA 2 BR",
+          "value": "$3,697",
+          "status": "verified",
+          "source_ids": [
+            "S47",
+            "S43"
+          ],
+          "notes": "FY2027 FMR.",
+          "flag_id": ""
+        },
+        {
+          "id": "MKT-04",
+          "label": "San Francisco, CA HMFA 3 BR",
+          "value": "$4,832",
+          "status": "verified",
+          "source_ids": [
+            "S47",
+            "S43"
+          ],
+          "notes": "FY2027 FMR.",
+          "flag_id": ""
+        },
+        {
+          "id": "MKT-05",
+          "label": "San Francisco, CA HMFA 4 BR",
+          "value": "$5,439",
+          "status": "verified",
+          "source_ids": [
+            "S47",
+            "S43"
+          ],
+          "notes": "FY2027 FMR.",
+          "flag_id": ""
+        }
+      ]
+    },
+    {
+      "title": "FY2026 historical",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "MKT-06",
+          "label": "San Francisco, CA HMFA 0-4 BR",
+          "value": "$2,485 / $2,977 / $3,604 / $4,604 / $4,772",
+          "status": "verified",
+          "source_ids": [
+            "S45",
+            "S43"
+          ],
+          "notes": "FY2026 revised effective May 21, 2026; historical as of 2026-11-06.",
+          "flag_id": ""
+        },
+        {
+          "id": "MKT-07",
+          "label": "94122 FY2026 Small Area FMR",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S44",
+            "S46",
+            "S51"
+          ],
+          "notes": "Official ZIP row not obtained; blank.",
+          "flag_id": "T03-F07"
+        },
+        {
+          "id": "MKT-08",
+          "label": "94122 FY2027 Small Area FMR",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S44",
+            "S50",
+            "S52"
+          ],
+          "notes": "Official ZIP row not obtained; blank.",
+          "flag_id": "T03-F07"
+        },
+        {
+          "id": "MKT-09",
+          "label": "FMR/SAFMR as rent cap",
+          "value": "No - voucher payment standards only",
+          "status": "verified",
+          "source_ids": [
+            "S43",
+            "S44"
+          ],
+          "notes": "Not a legal basis for a private rent increase.",
+          "flag_id": ""
+        }
+      ]
+    }
+  ]
+}

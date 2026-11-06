@@ -1,0 +1,117 @@
+{
+  "title": "Illustrative Calculations",
+  "description": "Owner-supplied amounts multiplied by official rates only; arithmetic, not a recommendation.",
+  "sections": [
+    {
+      "title": "Current 1.6% rate",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CALC-01",
+          "label": "Unit 1 $3,995 x 1.6%",
+          "value": "$63.92 increase; $4,058.92 illustrative new base rent",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "notes": "Eligibility, license, notice and anniversary unverified.",
+          "flag_id": ""
+        },
+        {
+          "id": "CALC-02",
+          "label": "Unit 2 $3,150 x 1.6%",
+          "value": "$50.40 increase; $3,200.40 illustrative new base rent",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "notes": "Eligibility, license, notice and anniversary unverified.",
+          "flag_id": ""
+        }
+      ]
+    },
+    {
+      "title": "Historical 1.4% rate",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CALC-03",
+          "label": "Unit 1 $3,995 x 1.4%",
+          "value": "$55.93 increase; $4,050.93 illustrative new base rent",
+          "status": "analysis",
+          "source_ids": [
+            "S02",
+            "S04"
+          ],
+          "notes": "Historical comparison only.",
+          "flag_id": ""
+        },
+        {
+          "id": "CALC-04",
+          "label": "Unit 2 $3,150 x 1.4%",
+          "value": "$44.10 increase; $3,194.10 illustrative new base rent",
+          "status": "analysis",
+          "source_ids": [
+            "S02",
+            "S04"
+          ],
+          "notes": "Historical comparison only.",
+          "flag_id": ""
+        }
+      ]
+    },
+    {
+      "title": "Banked increases",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CALC-05",
+          "label": "Banked total for either unit",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S05",
+            "S04"
+          ],
+          "notes": "Prior increases and anniversary dates not supplied; blank.",
+          "flag_id": "T03-F05"
+        },
+        {
+          "id": "CALC-06",
+          "label": "Rounding",
+          "value": "No rounding up; base rent only",
+          "status": "verified",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Temporary passthroughs excluded.",
+          "flag_id": ""
+        }
+      ]
+    }
+  ]
+}

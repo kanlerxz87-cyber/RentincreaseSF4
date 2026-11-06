@@ -1,0 +1,155 @@
+{
+  "title": "All User Questions Answered",
+  "description": "Direct answers with official source links; blanks where official confirmation is absent.",
+  "sections": [
+    {
+      "title": "Questions and answers",
+      "columns": [
+        "Question",
+        "Answer",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "Q-01",
+          "label": "What are reasonable/normal rental increases under local, state and federal law?",
+          "value": "Local 1.6% for covered units; state-only AB 1482 8.8% does not replace SF limits; no official general federal private-rent cap found. HUD FMR is not a cap.",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S27",
+            "S43",
+            "S44"
+          ],
+          "notes": "Federal cap blank and flagged.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-02",
+          "label": "How do big real estate corporations handle increases?",
+          "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.",
+          "status": "verified",
+          "source_ids": [
+            "S48",
+            "S49"
+          ],
+          "notes": "Portfolio-level, not SF-specific; no generalization.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-03",
+          "label": "How do individual SF property owners handle increases?",
+          "value": "Official rules require the annual allowable increase, license, 12-month timing and notice; June 2024 Rent Board workload shows 23 landlord petitions/154 units.",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S29"
+          ],
+          "notes": "Narrow formal-petition evidence only.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-04",
+          "label": "What is the correct tenant-notice method?",
+          "value": "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; license first; 827 delivery rules.",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S35",
+            "S07"
+          ],
+          "notes": "Conservative checklist capable of lawyer review.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-05",
+          "label": "What are reasonable reasons for increases?",
+          "value": "Annual CPI-based allowable increase, properly banked skipped/partial increases, and Rent Board-approved petition/worksheet passthroughs; not extra rent merely because a roommate moved in.",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S09",
+            "S10",
+            "S18"
+          ],
+          "notes": "Mere long tenure below market is not extraordinary.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-06",
+          "label": "What tenant-friendly advocate/lawyer scrutiny exists?",
+          "value": "Free Rent Board counseling (not legal advice), tenant counselors, eviction-court free legal help, Tenant Right to Counsel for eviction proceedings, and tenant petitions before an ALJ.",
+          "status": "verified",
+          "source_ids": [
+            "S23",
+            "S24",
+            "S25",
+            "S30",
+            "S31"
+          ],
+          "notes": "No official general rent-increase attorney approval service found.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-07",
+          "label": "Can increases pass a SF tenant lawyer's review as reasonable, normal business practice, nondiscriminatory and lawful?",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S23",
+            "S24",
+            "S25",
+            "S42"
+          ],
+          "notes": "No official source can certify approval; only a conservative checklist capable of review.",
+          "flag_id": "T03-F08"
+        },
+        {
+          "id": "Q-08",
+          "label": "Should one unit or both be raised to avoid discrimination lawsuits/inquiries?",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S41",
+            "S42",
+            "S38"
+          ],
+          "notes": "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised.",
+          "flag_id": "F22"
+        },
+        {
+          "id": "Q-09",
+          "label": "Is a market-rate reset available after Unit 1's roommate change?",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S15",
+            "S16",
+            "S37",
+            "S28"
+          ],
+          "notes": "Continuing occupant legal status and last-original-occupant facts unverified; no reset recommended.",
+          "flag_id": "T03-F04"
+        },
+        {
+          "id": "Q-10",
+          "label": "Is any increase guaranteed lawful or lawsuit-proof?",
+          "value": "No. No attorney approval or guarantee of no complaint/inquiry/lawsuit is claimed.",
+          "status": "analysis",
+          "source_ids": [
+            "S23",
+            "S24",
+            "S42"
+          ],
+          "notes": "Conservative compliance checklist only.",
+          "flag_id": ""
+        }
+      ]
+    }
+  ]
+}
