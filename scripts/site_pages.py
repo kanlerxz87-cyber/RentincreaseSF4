@@ -1,0 +1,308 @@
+"""Page definitions: every row has source_ids, status, value, notes and optional flag_id."""
+
+COLUMNS = ["Item", "Value / finding", "Status", "Official source(s)", "Notes / flag"]
+
+def row(id, label, value, status, source_ids, notes="", flag_id=""):
+    return {"id": id, "label": label, "value": value, "status": status, "source_ids": source_ids, "notes": notes, "flag_id": flag_id}
+
+PAGES = {
+    "summary": {
+        "title": "Executive Summary",
+        "description": "Bottom line for Rental increase SF, with every finding linked to an official source.",
+        "sections": [
+            {"title": "Executive findings", "columns": COLUMNS, "rows": [
+                row("SUM-01", "Current SF annual allowable increase", "1.6% effective 3/1/26-2/28/27", "verified", ["S01", "S02", "S03", "S04"], "For covered rent-controlled units, once every 12 months."),
+                row("SUM-02", "State-only AB 1482 SF cap", "8.8% for 8/1/26-7/31/27", "verified", ["S27"], "Does NOT apply to units under SF Rent Ordinance rent-increase limits."),
+                row("SUM-03", "Federal general private-rent cap", "", "needs review", ["S43", "S40", "S41", "S42"], "No official source found; blank and flagged.", "F22"),
+                row("SUM-04", "Rent Increase License", "Current license required before annual/banked increase takes effect", "verified", ["S01", "S07", "S08"], "Unlicensed increase may be null/void."),
+                row("SUM-05", "Notice", "30-day written; 90-day if >10%; +5 days if mailed; dollar amount, percentage, effective date", "verified", ["S01", "S05", "S35"], "Use rate in effect on increase date."),
+                row("SUM-06", "Banked increases", "Only if >=24 full months without any increase; add percentages, do not compound/prorate", "verified", ["S05"], "No banked amount inferred for this case."),
+                row("SUM-07", "Roommate / additional occupant", "Cannot charge extra rent merely because a new/additional roommate moved in", "verified", ["S01", "S17", "S18", "S19"], "No market-rate reset inferred."),
+                row("SUM-08", "Unit 1 vacancy-decontrol issue", "", "needs review", ["S15", "S16", "S28", "S37"], "Continuing occupant legal status and last-original-occupant facts unverified.", "T03-F04"),
+                row("SUM-09", "Corporate practice", "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%", "verified", ["S48", "S49"], "Portfolio-level, not SF-specific and not a legal benchmark."),
+                row("SUM-10", "Individual practice", "June 2024: 23 landlord petitions/154 units; 73 tenant petitions; 89 eviction notices", "verified", ["S29"], "Narrow formal-petition evidence only."),
+                row("SUM-11", "Conservative approach", "Identical, neutral, license-and-notice-compliant <=1.6% policy on each eligible unit; or less", "analysis", ["S01", "S07", "S35", "S42"], "Compliance checklist capable of tenant-lawyer review; no approval or guarantee."),
+                row("SUM-12", "One unit or both", "", "needs review", ["S41", "S42", "S38"], "No official source requires both; document neutral eligibility reasons if only one is raised.", "F22"),
+                row("SUM-13", "94122 Small Area FMR", "", "needs review", ["S44", "S46", "S50", "S51", "S52"], "Official ZIP row not obtained; blank.", "T03-F07"),
+            ]},
+        ],
+    },
+    "requirements": {
+        "title": "Full Requirements List",
+        "description": "Every active requirement, status and official source link.",
+        "sections": [
+            {"title": "Requirements", "columns": COLUMNS, "rows": [
+                row("REQ-01", "Executive summary", "Published", "verified", ["S01", "S27", "S43"], "Executive Summary page and EXECUTIVE_SUMMARY.md."),
+                row("REQ-02", "Public GitHub Pages site", "Built at repository root", "verified", ["S43"], "Legacy Pages source main /."),
+                row("REQ-03", "Collect / organize / analyze full requirements list", "Published", "verified", ["S20"], "This page."),
+                row("REQ-04", "Answer all user questions", "Published", "verified", ["S01", "S27", "S43"], "Questions & Answers page."),
+                row("REQ-05", "Review repo line by line", "Done", "verified", ["S20"], "REPO_REVIEW.md."),
+                row("REQ-06", "Verify every row against official sources", "Done; validation script re-checks", "verified", ["S01", "S43"], "SOURCES.md, VERIFICATION.md, data/validation_report.json."),
+                row("REQ-07", "Provide links for manual review", "Every row has official links", "verified", ["S01"], "Official source(s) column."),
+                row("REQ-08", "Flag irregularities", "34 flags published", "verified", ["S01", "S43"], "Flagged for Review page."),
+                row("REQ-09", "No hallucinations / no inferred values", "Blank cells for unverified values", "verified", ["S01"], "Validation enforces blank + flag."),
+                row("REQ-10", "Personal information top priority", "Placeholders only; raw identifiers internal-only", "verified", ["S23"], "Privacy scan in validation."),
+                row("REQ-11", "Anonymize all personal information", "Tenant A-F placeholders", "verified", ["S23"], "No real names, initials, contact details or exact address."),
+                row("REQ-12", "Keep dates and amounts same", "Preserved", "verified", ["S01"], "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150."),
+                row("REQ-13", "Clean landing page + category subpages", "Published", "verified", ["S43"], "index.html and pages/."),
+                row("REQ-14", "Simple dashboard UI", "Published", "verified", ["S43"], "Cards and status badges."),
+                row("REQ-15", "All entries/findings in easy-read tables", "Published", "verified", ["S01"], "Tables on every subpage."),
+                row("REQ-16", "Analysis / findings", "Published", "verified", ["S42"], "Analysis & Findings page."),
+                row("REQ-17", "Clearly labeled Flagged for Review page with source links", "Published", "verified", ["S01"], "pages/flagged.html."),
+                row("REQ-18", "Verified source-linked tables", "Published", "verified", ["S01"], "Sources page."),
+                row("REQ-19", "PR from integration branch to main", "Pending T05", "needs review", ["S43"], "Recorded in COORDINATION.md after merge.", "F19"),
+                row("REQ-20", "Merged PR + successful Pages deployment", "Pending T05", "needs review", ["S43"], "Recorded in COORDINATION.md after deploy.", "F19"),
+                row("REQ-21", "Conservative compliance checklist capable of tenant-lawyer review", "Published", "analysis", ["S01", "S07", "S35", "S42"], "No attorney approval or guarantee."),
+            ]},
+        ],
+    },
+    "rates": {
+        "title": "Official Allowable Increase Rates",
+        "description": "SF Rent Board rates effective on 2026-11-06 and historical context.",
+        "sections": [
+            {"title": "Current and recent rates", "columns": COLUMNS, "rows": [
+                row("RATE-01", "3/1/26 - 2/28/27", "1.6%", "verified", ["S01", "S02", "S03", "S04"], "Current local rate."),
+                row("RATE-02", "3/1/25 - 2/28/26", "1.4%", "verified", ["S02", "S04"], "Historical."),
+                row("RATE-03", "3/1/24 - 2/28/25", "1.7%", "verified", ["S02", "S04"], "Historical."),
+                row("RATE-04", "3/1/23 - 2/29/24", "3.6%", "verified", ["S04"], "Historical."),
+                row("RATE-05", "3/1/22 - 2/28/23", "2.3%", "verified", ["S04"], "Historical."),
+                row("RATE-06", "3/1/21 - 2/28/22", "0.7%", "verified", ["S04"], "Historical."),
+                row("RATE-07", "3/1/20 - 2/28/21", "1.8%", "verified", ["S04"], "Historical."),
+                row("RATE-08", "3/1/19 - 2/29/20", "2.6%", "verified", ["S04"], "Relevant to Unit 2 lease start; no banked amount inferred."),
+            ]},
+            {"title": "Rate basis", "columns": COLUMNS, "rows": [
+                row("RATE-09", "Local formula", "60% of Bay Area CPI-U increase; max 7%", "verified", ["S01", "S21"], "SF Admin Code 37.3."),
+                row("RATE-10", "Temporary CPI methodology", "", "needs review", ["S28", "S01"], "Jan. 13, 2026 minutes adopted Version 1 temporary methodology.", "F06"),
+                row("RATE-11", "Calculation", "Base rent x rate; no rounding up", "verified", ["S01", "S03", "S04"], "Temporary passthroughs excluded."),
+            ]},
+        ],
+    },
+    "local": {
+        "title": "Local Law - San Francisco",
+        "description": "SF Rent Ordinance, Rent Board rules, licensing, banking and petitions.",
+        "sections": [
+            {"title": "Local rules", "columns": COLUMNS, "rows": [
+                row("LOC-01", "Coverage cutoff", "Many units built on/before June 13, 1979 have rent control and eviction protection", "verified", ["S06"], "Verify exact address in PIM; partial exemptions exist."),
+                row("LOC-02", "Annual increase", "1.6% once every 12 months on anniversary date", "verified", ["S01", "S02"], "Current rate."),
+                row("LOC-03", "Ordinance cap", "60% CPI, max 7%", "verified", ["S21"], "SF Admin Code 37.3."),
+                row("LOC-04", "Initial rent", "No limit on first rent for vacant covered unit", "verified", ["S01", "S27"], "Not a reset for an existing tenancy."),
+                row("LOC-05", "License", "Current Rent Increase License required before annual/banked increase", "verified", ["S01", "S07", "S08"], "Unlicensed increase may be null/void."),
+                row("LOC-06", "Housing Inventory", "Annual report by March 1; license auto-generated for non-owner-occupied units", "verified", ["S07"], "No monetary penalty, but notice unenforceable without license."),
+                row("LOC-07", "Banking", "24 full months; add percentages; no compounding/prorating; license", "verified", ["S05"], "Notice must state banked portion."),
+                row("LOC-08", "Additional occupants", "No extra rent merely because new/additional roommate moved in", "verified", ["S01", "S17", "S18"], "Even if lease says otherwise."),
+                row("LOC-09", "Petition grounds", "Capital improvement, O&M, comparable rents, Proposition I, utility, 1.21, bond/water passthroughs", "verified", ["S09"], "Petition/worksheet before notice."),
+                row("LOC-10", "Section 6.14", "Unlimited increase only when last original occupant vacates plus timely 6.14 notice", "verified", ["S15", "S16"], "60 days generally reasonable."),
+                row("LOC-11", "Costa-Hawkins local view", "Co-tenants not subject; qualifying post-1995 subtenant/assignee only", "verified", ["S15", "S16"], "Legal advice strongly encouraged."),
+                row("LOC-12", "Tenant harassment", "Bad-faith coercion/discrimination/privacy interference prohibited", "verified", ["S22"], "Larson footnote conflict flagged."),
+                row("LOC-13", "Tenant petition", "No charge, no time limit, ALJ hearing", "verified", ["S25", "S26"], "516C and 518 forms."),
+            ]},
+        ],
+    },
+    "state": {
+        "title": "State Law - California",
+        "description": "AB 1482, Civil Code 827, 1947.12, 1954.53 and FEHA.",
+        "sections": [
+            {"title": "State rules", "columns": COLUMNS, "rows": [
+                row("ST-01", "AB 1482 SF state-only cap", "8.8% for 8/1/26-7/31/27 (5% + 3.8% CPI)", "verified", ["S27"], "Does NOT apply to units under SF Rent Ordinance limits."),
+                row("ST-02", "State cap formula", "5% + CPI or 10% lower; max two increases/12 months", "verified", ["S27", "S36"], "CPI-U April-over-April, rounded nearest 0.1%, Aug. 1 cutoff."),
+                row("ST-03", "More-restrictive local exemption", "Units already subject to more restrictive local rent control are exempt from state cap", "verified", ["S27", "S36"], "Local protections remain."),
+                row("ST-04", "Just cause", "Required after 12/24 months; lease expiration alone is not just cause", "verified", ["S27"], "Relocation assistance for no-fault evictions."),
+                row("ST-05", "Notice", "30 days <=10%; 90 days >10%; 827(c) longer notice controls", "verified", ["S35"], "Personal delivery/mail rules."),
+                row("ST-06", "Costa-Hawkins initial rent", "No limit on initial rent for vacant unit", "verified", ["S27", "S37"], "Not a reset for existing tenancy."),
+                row("ST-07", "Costa-Hawkins d(2)", "Unlimited increase only to qualifying post-1995 lawful sublessee/assignee after original occupants no longer permanently reside", "verified", ["S37"], "Co-tenants excluded."),
+                row("ST-08", "Costa-Hawkins d(3)", "Partial occupancy changes protected when original occupant or qualifying pre-1996 lawful sublessee/assignee remains", "verified", ["S37"], "Critical unresolved Unit 1 issue."),
+                row("ST-09", "FEHA classes", "Race, color, religion, sex, gender, gender identity/expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran/military status, genetic information", "verified", ["S38", "S39"], "Includes perception/association."),
+                row("ST-10", "FEHA retaliation", "Dominant-purpose retaliation/harassment/eviction barred", "verified", ["S38"], "Source-of-income and aggregate-income rules."),
+                row("ST-11", "Exemption notices", "Required written notice for single-family/condo exemption; REIT/corporate/LLC limits", "verified", ["S27"], "AB 1482 notice language."),
+                row("ST-12", "Damages", "Injunctive relief, excess rent, attorney fees, up to treble for willful/oppressive/fraud/malice", "verified", ["S27", "S36"], "State court enforcement; Rent Board cannot enforce state law."),
+            ]},
+        ],
+    },
+    "federal": {
+        "title": "Federal Law",
+        "description": "Fair Housing Act, disparate impact, HUD FMR/SAFMR context and the no-cap finding.",
+        "sections": [
+            {"title": "Federal rules and context", "columns": COLUMNS, "rows": [
+                row("FED-01", "FHA 3604", "Discrimination in rental/terms/services because of race, color, religion, sex, familial status, national origin; disability provisions", "verified", ["S41", "S40"], "Official U.S. Code PDF."),
+                row("FED-02", "Disparate impact", "Liability can exist without intent; substantial legitimate nondiscriminatory interest and no less discriminatory alternative", "verified", ["S42"], "Current as of 11/04/2026."),
+                row("FED-03", "General federal private-rent cap", "", "needs review", ["S43", "S40", "S41", "S42"], "No official source found; blank and flagged.", "F22"),
+                row("FED-04", "HUD FMR definition", "40th-percentile gross rents for standard-quality units", "verified", ["S43", "S44"], "Used for voucher payment standards, not a rent-increase cap."),
+                row("FED-05", "FMR effective date", "Federal fiscal-year start, generally October 1", "verified", ["S43"], "FY2027 is current on 2026-11-06."),
+                row("FED-06", "SAFMR definition", "ZIP-code FMRs; designated/optional areas; exception payment standards up to 110%", "verified", ["S44"], "Not a private rent cap."),
+                row("FED-07", "94122 SAFMR", "", "needs review", ["S44", "S46", "S50", "S51", "S52"], "Official ZIP row not obtained; blank.", "T03-F07"),
+            ]},
+        ],
+    },
+    "case": {
+        "title": "Anonymized Case Facts",
+        "description": "Owner-supplied dates and amounts preserved; personal information replaced with placeholders; official-verified values blank where unverified.",
+        "sections": [
+            {"title": "Location / building", "columns": COLUMNS, "rows": [
+                row("CASE-01", "Neighborhood / ZIP", "", "needs review", ["S33", "S34"], "Owner input: Outer Sunset, San Francisco, CA 94122; official SF Planning context only, not property-specific verification.", "T03-F03"),
+                row("CASE-02", "Exact street address", "", "needs review", ["S32"], "Owner input: not supplied; no exact address published.", "T03-F01"),
+                row("CASE-03", "Building year", "", "needs review", ["S06", "S32"], "Owner input: 1940; before June 13, 1979 cutoff but property-specific record unverified.", "T03-F03"),
+                row("CASE-04", "Rent-controlled status", "", "needs review", ["S06", "S20"], "Owner input: units said to be rent controlled; not official-verified.", "F21"),
+                row("CASE-05", "Rent Increase License status", "", "needs review", ["S07", "S08"], "Owner input: not supplied.", "T03-F05"),
+                row("CASE-06", "Prior increases / banked increases / notice history / anniversary", "", "needs review", ["S01", "S05"], "Owner input: not supplied; no banked amount inferred.", "T03-F05"),
+            ]},
+            {"title": "Unit 1 - anonymized", "columns": COLUMNS, "rows": [
+                row("CASE-07", "Last lease start", "", "needs review", ["S01"], "Owner input: February 1, 2025; date unchanged.", "T03-F01"),
+                row("CASE-08", "Monthly rent at last lease start", "", "needs review", ["S01"], "Owner input: $3,995; amount unchanged.", "T03-F01"),
+                row("CASE-09", "Initial lease tenants", "", "needs review", ["S17"], "Published placeholders: Tenant A, Tenant B, Tenant C; no raw identifiers.", "T03-F02"),
+                row("CASE-10", "Continuing tenancy / current tenants", "", "needs review", ["S17"], "Published placeholders: Tenant A, Tenant D; no inference about legal status.", "T03-F04"),
+                row("CASE-11", "Current-tenancy date", "", "needs review", ["S01"], "Owner input: April 1, 2026; date unchanged.", "T03-F01"),
+                row("CASE-12", "Monthly rent on April 1, 2026", "", "needs review", ["S01"], "Owner input: $3,995; amount unchanged.", "T03-F01"),
+                row("CASE-13", "Whether a new tenancy began April 1, 2026", "", "needs review", ["S16"], "Owner input: not supplied; no inference.", "T03-F04"),
+                row("CASE-14", "Legal status of continuing occupant(s)", "", "needs review", ["S15", "S37"], "Owner input: not supplied; no inference.", "T03-F04"),
+                row("CASE-15", "Last original occupant vacated / no longer permanently resides", "", "needs review", ["S28"], "Owner input: not supplied; no inference.", "T03-F04"),
+            ]},
+            {"title": "Unit 2 - anonymized", "columns": COLUMNS, "rows": [
+                row("CASE-16", "Last lease start", "", "needs review", ["S01"], "Owner input: June 1, 2019; date unchanged.", "T03-F01"),
+                row("CASE-17", "Monthly rent at last lease start", "", "needs review", ["S01"], "Owner input: $3,150; amount unchanged.", "T03-F01"),
+                row("CASE-18", "Tenants", "", "needs review", ["S17"], "Published placeholders: Tenant E, Tenant F; no raw identifiers.", "T03-F02"),
+                row("CASE-19", "Prior increases since June 1, 2019", "", "needs review", ["S05"], "Owner input: not supplied; no banked amount inferred.", "T03-F05"),
+            ]},
+        ],
+    },
+    "calculations": {
+        "title": "Illustrative Calculations",
+        "description": "Owner-supplied amounts multiplied by official rates only; arithmetic, not a recommendation.",
+        "sections": [
+            {"title": "Current 1.6% rate", "columns": COLUMNS, "rows": [
+                row("CALC-01", "Unit 1 $3,995 x 1.6%", "$63.92 increase; $4,058.92 illustrative new base rent", "analysis", ["S01", "S02", "S03", "S04"], "Eligibility, license, notice and anniversary unverified."),
+                row("CALC-02", "Unit 2 $3,150 x 1.6%", "$50.40 increase; $3,200.40 illustrative new base rent", "analysis", ["S01", "S02", "S03", "S04"], "Eligibility, license, notice and anniversary unverified."),
+            ]},
+            {"title": "Historical 1.4% rate", "columns": COLUMNS, "rows": [
+                row("CALC-03", "Unit 1 $3,995 x 1.4%", "$55.93 increase; $4,050.93 illustrative new base rent", "analysis", ["S02", "S04"], "Historical comparison only."),
+                row("CALC-04", "Unit 2 $3,150 x 1.4%", "$44.10 increase; $3,194.10 illustrative new base rent", "analysis", ["S02", "S04"], "Historical comparison only."),
+            ]},
+            {"title": "Banked increases", "columns": COLUMNS, "rows": [
+                row("CALC-05", "Banked total for either unit", "", "needs review", ["S05", "S04"], "Prior increases and anniversary dates not supplied; blank.", "T03-F05"),
+                row("CALC-06", "Rounding", "No rounding up; base rent only", "verified", ["S01"], "Temporary passthroughs excluded."),
+            ]},
+        ],
+    },
+    "compliance": {
+        "title": "Correct Tenant-Notice Method",
+        "description": "Conservative compliance checklist capable of tenant-lawyer review; not attorney approval.",
+        "sections": [
+            {"title": "Before any increase", "columns": COLUMNS, "rows": [
+                row("CHK-01", "Verify coverage", "Check exact address in SF Planning PIM; confirm exemptions", "verified", ["S06", "S32"], "Exact address not supplied in this case."),
+                row("CHK-02", "Verify license", "Current Rent Increase License on effective date", "verified", ["S01", "S07", "S08"], "Tenant portal lookup."),
+                row("CHK-03", "Verify 12 months / anniversary", "At least 12 months since last increase", "verified", ["S01"], "Use rate in effect on increase date."),
+                row("CHK-04", "Verify banked amounts", "Only if >=24 full months without any increase; add percentages; no compounding/prorating", "verified", ["S05"], "Not inferred here."),
+                row("CHK-05", "Written notice timing", "30 days; 90 days if >10% alone/combined in same year; +5 days if mailed", "verified", ["S01", "S05", "S35"], "827(c) longer notice controls."),
+                row("CHK-06", "Notice contents", "Dollar amount, percentage, effective date; banked portion if any", "verified", ["S01", "S05"], "No rounding up."),
+                row("CHK-07", "Delivery", "Personal delivery or mail under Civil Code 827 / CCP 1013", "verified", ["S35"], "Keep proof of service."),
+                row("CHK-08", "Petition grounds", "Petition/worksheet before notice when required", "verified", ["S09", "S10", "S11", "S12", "S13", "S14"], "Otherwise notice may be void."),
+                row("CHK-09", "Neutral policy", "Identical written neutral policy, dates, calculations and recordkeeping for each eligible unit", "analysis", ["S42", "S38"], "Document neutral eligibility reasons if only one unit is raised."),
+                row("CHK-10", "Legal review", "Capable of tenant-lawyer review; no approval claimed", "analysis", ["S23", "S24", "S25"], "Free counseling is not legal advice; TRC covers eviction proceedings."),
+            ]},
+        ],
+    },
+    "reasons": {
+        "title": "Reasonable Reasons for an Increase",
+        "description": "Official grounds that can support an increase; mere below-market rent is not enough.",
+        "sections": [
+            {"title": "Supported grounds", "columns": COLUMNS, "rows": [
+                row("REAS-01", "Annual CPI-based allowable increase", "1.6% effective 3/1/26-2/28/27", "verified", ["S01", "S02", "S04"], "Once every 12 months; license and notice."),
+                row("REAS-02", "Properly banked skipped/partial increases", "24 full months; add percentages", "verified", ["S05"], "No banked amount inferred here."),
+                row("REAS-03", "Capital improvement petition", "Petition before notice; not base rent; discontinue after amortization", "verified", ["S09", "S12"], "Hardship application available."),
+                row("REAS-04", "Operating & maintenance petition", "Up to 7% additional base rent; two-year comparison", "verified", ["S09", "S11"], "Petition before notice."),
+                row("REAS-05", "Comparable-rent special circumstances", "Extraordinary circumstances; mere long-standing below-market rent is NOT enough", "verified", ["S09", "S10"], "One-time tenancy reset; petition before notice."),
+                row("REAS-06", "Utility passthrough", "Dollar-for-dollar; petition/worksheet before notice; 12 months", "verified", ["S09", "S13"], "Not base rent."),
+                row("REAS-07", "Section 1.21 no tenant in occupancy", "Petition before notice; otherwise void", "verified", ["S09", "S14"], "Not applicable if any qualifying tenant resides."),
+                row("REAS-08", "Proposition I rent history / bond / water revenue bond passthroughs", "Rent Board petition/worksheet grounds", "verified", ["S09"], "Follow specific form instructions."),
+                row("REAS-09", "New or additional roommate", "", "needs review", ["S01", "S17", "S18"], "Not a lawful reason; blank and flagged.", "T03-F04"),
+                row("REAS-10", "Assumed vacancy decontrol / market-rate reset", "", "needs review", ["S15", "S16", "S37", "S28"], "Not recommended without official eligibility and legal review.", "T03-F04"),
+            ]},
+        ],
+    },
+    "corporate": {
+        "title": "How Large Real Estate Corporations Handle Increases",
+        "description": "Official SEC EDGAR figures; portfolio-level evidence only, not SF-specific or a legal benchmark.",
+        "sections": [
+            {"title": "SEC filing evidence", "columns": COLUMNS, "rows": [
+                row("CORP-01", "Independence Realty Trust Q4 2025", "Same-store new leases -3.7%; renewal 2.9%; blended 0.8%; occupancy 95.4%; retention 61.4%", "verified", ["S48"], "Multifamily REIT; not SF-specific."),
+                row("CORP-02", "Independence Realty Trust Q3 2025", "Same-store new leases -3.5%; renewal 2.6%; blended 0.1%", "verified", ["S48"], "Not SF-specific."),
+                row("CORP-03", "IRT 2025 value-add", "2,003 renovations; average $251/month increase over unrenovated comparables", "verified", ["S48"], "Not SF-specific."),
+                row("CORP-04", "Invitation Homes 2025 total portfolio", "Renewal +4.6%; new -0.8%", "verified", ["S49"], "Single-family rental REIT; not SF-specific."),
+                row("CORP-05", "Invitation Homes 2024 total portfolio", "Renewal +4.9%; new +1.0%", "verified", ["S49"], "Not SF-specific."),
+                row("CORP-06", "All large corporations generalization", "", "needs review", ["S48", "S49"], "No official source proves what all large corporations do.", "F23"),
+            ]},
+        ],
+    },
+    "individual": {
+        "title": "How Individual SF Property Owners Handle Increases",
+        "description": "Official local rules and narrow Rent Board workload evidence; no generalization claimed.",
+        "sections": [
+            {"title": "Official evidence", "columns": COLUMNS, "rows": [
+                row("IND-01", "Ordinary path", "Annual allowable increase, license, 12-month anniversary, written notice", "verified", ["S01", "S07", "S35"], "Same local rules apply to individual owners."),
+                row("IND-02", "Formal petitions June 2024", "23 landlord petitions / 154 units", "verified", ["S29"], "Narrow descriptive count."),
+                row("IND-03", "Capital improvement petitions June 2024", "19 petitions / 148 units", "verified", ["S29"], "Narrow descriptive count."),
+                row("IND-04", "Tenant petitions / eviction notices June 2024", "73 tenant petitions / 73 units; 89 eviction notices", "verified", ["S29"], "Not proof of typical practice."),
+                row("IND-05", "All individual SF owners generalization", "", "needs review", ["S29"], "No official source proves what all individual owners do.", "F23"),
+            ]},
+        ],
+    },
+    "market": {
+        "title": "Market Context - HUD FMR / SAFMR",
+        "description": "HUD figures are voucher standards, not rent caps or legal bases for an increase.",
+        "sections": [
+            {"title": "FY2027 current federal fiscal year", "columns": COLUMNS, "rows": [
+                row("MKT-01", "San Francisco, CA HMFA 0 BR", "$2,574", "verified", ["S47", "S43"], "FY2027 FMR; current federal FY on 2026-11-06."),
+                row("MKT-02", "San Francisco, CA HMFA 1 BR", "$3,003", "verified", ["S47", "S43"], "FY2027 FMR."),
+                row("MKT-03", "San Francisco, CA HMFA 2 BR", "$3,697", "verified", ["S47", "S43"], "FY2027 FMR."),
+                row("MKT-04", "San Francisco, CA HMFA 3 BR", "$4,832", "verified", ["S47", "S43"], "FY2027 FMR."),
+                row("MKT-05", "San Francisco, CA HMFA 4 BR", "$5,439", "verified", ["S47", "S43"], "FY2027 FMR."),
+            ]},
+            {"title": "FY2026 historical", "columns": COLUMNS, "rows": [
+                row("MKT-06", "San Francisco, CA HMFA 0-4 BR", "$2,485 / $2,977 / $3,604 / $4,604 / $4,772", "verified", ["S45", "S43"], "FY2026 revised effective May 21, 2026; historical as of 2026-11-06."),
+                row("MKT-07", "94122 FY2026 Small Area FMR", "", "needs review", ["S44", "S46", "S51"], "Official ZIP row not obtained; blank.", "T03-F07"),
+                row("MKT-08", "94122 FY2027 Small Area FMR", "", "needs review", ["S44", "S50", "S52"], "Official ZIP row not obtained; blank.", "T03-F07"),
+                row("MKT-09", "FMR/SAFMR as rent cap", "No - voucher payment standards only", "verified", ["S43", "S44"], "Not a legal basis for a private rent increase."),
+            ]},
+        ],
+    },
+    "questions": {
+        "title": "All User Questions Answered",
+        "description": "Direct answers with official source links; blanks where official confirmation is absent.",
+        "sections": [
+            {"title": "Questions and answers", "columns": ["Question", "Answer", "Status", "Official source(s)", "Notes / flag"], "rows": [
+                row("Q-01", "What are reasonable/normal rental increases under local, state and federal law?", "Local 1.6% for covered units; state-only AB 1482 8.8% does not replace SF limits; no official general federal private-rent cap found. HUD FMR is not a cap.", "verified", ["S01", "S27", "S43", "S44"], "Federal cap blank and flagged."),
+                row("Q-02", "How do big real estate corporations handle increases?", "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.", "verified", ["S48", "S49"], "Portfolio-level, not SF-specific; no generalization."),
+                row("Q-03", "How do individual SF property owners handle increases?", "Official rules require the annual allowable increase, license, 12-month timing and notice; June 2024 Rent Board workload shows 23 landlord petitions/154 units.", "verified", ["S01", "S07", "S29"], "Narrow formal-petition evidence only."),
+                row("Q-04", "What is the correct tenant-notice method?", "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; license first; 827 delivery rules.", "verified", ["S01", "S05", "S35", "S07"], "Conservative checklist capable of lawyer review."),
+                row("Q-05", "What are reasonable reasons for increases?", "Annual CPI-based allowable increase, properly banked skipped/partial increases, and Rent Board-approved petition/worksheet passthroughs; not extra rent merely because a roommate moved in.", "verified", ["S01", "S05", "S09", "S10", "S18"], "Mere long tenure below market is not extraordinary."),
+                row("Q-06", "What tenant-friendly advocate/lawyer scrutiny exists?", "Free Rent Board counseling (not legal advice), tenant counselors, eviction-court free legal help, Tenant Right to Counsel for eviction proceedings, and tenant petitions before an ALJ.", "verified", ["S23", "S24", "S25", "S30", "S31"], "No official general rent-increase attorney approval service found."),
+                row("Q-07", "Can increases pass a SF tenant lawyer's review as reasonable, normal business practice, nondiscriminatory and lawful?", "", "needs review", ["S23", "S24", "S25", "S42"], "No official source can certify approval; only a conservative checklist capable of review.", "T03-F08"),
+                row("Q-08", "Should one unit or both be raised to avoid discrimination lawsuits/inquiries?", "", "needs review", ["S41", "S42", "S38"], "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised.", "F22"),
+                row("Q-09", "Is a market-rate reset available after Unit 1's roommate change?", "", "needs review", ["S15", "S16", "S37", "S28"], "Continuing occupant legal status and last-original-occupant facts unverified; no reset recommended.", "T03-F04"),
+                row("Q-10", "Is any increase guaranteed lawful or lawsuit-proof?", "No. No attorney approval or guarantee of no complaint/inquiry/lawsuit is claimed.", "analysis", ["S23", "S24", "S42"], "Conservative compliance checklist only."),
+            ]},
+        ],
+    },
+    "analysis": {
+        "title": "Analysis & Findings",
+        "description": "Source-linked analysis, including discrimination, one-vs-both, and conservative checklist.",
+        "sections": [
+            {"title": "Findings", "columns": COLUMNS, "rows": [
+                row("AN-01", "Normal local increase", "1.6% or less on each eligible unit", "verified", ["S01", "S02"], "Once every 12 months; license; notice."),
+                row("AN-02", "State cap is not a substitute", "AB 1482 8.8% does not apply to SF Rent Ordinance rent-controlled units", "verified", ["S27", "S36"], "Local protections remain."),
+                row("AN-03", "No federal rent cap found", "", "needs review", ["S43", "S40", "S41", "S42"], "HUD FMR/SAFMR are voucher standards.", "F22"),
+                row("AN-04", "Disparate-impact risk", "Liability can exist without intent; neutral criteria and no less discriminatory alternative matter", "verified", ["S42"], "Current eCFR as of 11/04/2026."),
+                row("AN-05", "FEHA broader classes", "Source of income, retaliation, perception/association and aggregate-income rules apply", "verified", ["S38", "S39"], "State overlay."),
+                row("AN-06", "Local harassment overlay", "Bad-faith coercion/discrimination prohibited", "verified", ["S22"], "Larson footnote flagged."),
+                row("AN-07", "Unit 1 roommate change", "Not a basis for extra rent; vacancy-decontrol eligibility unverified", "verified", ["S01", "S17", "S18", "S15", "S16", "S37"], "No market-rate reset recommended."),
+                row("AN-08", "One vs both", "Raising both is not officially required; identical neutral policy reduces disparate-treatment optics", "analysis", ["S41", "S42", "S38"], "Document neutral eligibility/anniversary reasons; no guarantee."),
+                row("AN-09", "Unit 2 long tenure", "Mere below-market rent is not extraordinary circumstances", "verified", ["S10"], "Special Circumstances petition required for comparable-rent reset."),
+                row("AN-10", "Banked increases", "Cannot be inferred because rent history is unverified", "verified", ["S05"], "Blank and flagged."),
+                row("AN-11", "Corporate figures", "Portfolio-level disclosures are evidence of practice, not legal benchmarks", "verified", ["S48", "S49"], "Not SF-specific."),
+                row("AN-12", "Individual figures", "June 2024 workload is narrow formal-petition evidence", "verified", ["S29"], "No generalization."),
+                row("AN-13", "Tenant-lawyer review", "Checklist capable of review; no approval claimed", "analysis", ["S23", "S24", "S25", "S30", "S31"], "TRC is eviction-focused."),
+                row("AN-14", "Conservative compliance checklist", "At most ordinary 1.6% annual allowable increase (or less) on each eligible unit, identical written neutral policy, license, notice, dates, calculations, recordkeeping", "analysis", ["S01", "S07", "S35", "S42"], "No guarantee of no complaint/lawsuit."),
+                row("AN-15", "Flagged items do not block", "All 34 flags published with source links", "verified", ["S01", "S43"], "Needs review does not block merge."),
+            ]},
+        ],
+    },
+}
