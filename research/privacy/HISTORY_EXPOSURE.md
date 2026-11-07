@@ -32,7 +32,7 @@ The first generated validation report, `data/validation_report.json`, printed th
 
 ## Owner remediation options (choose; none is required to read the site)
 
-1. **Decide whether the exposure matters** (initials only). If acceptable, no further action; the site and history already carry the F26/F31 disclosure.
+1. **Decide whether the exposure matters** (initials only). If acceptable, no further action is needed beyond the disclosure on the site's Flagged for Review page (flag F26 today; the history-exposure flag is added in D16-C).
 2. **Delete the two stale branches whose tips still carry the tokens** (`arena/73f5f1a2-rentincreasesf4`, `arena/fce57ebb-rentincreasesf4`) in the GitHub UI (Branches page) — they belong to finished sessions; their work is already merged (PR #1 and PR #3).
 3. **Purge history** with `git filter-repo` on a fresh mirror clone, replacing the literal check-detail string in `data/validation_report.json` across all commits, then force-push all refs. GitHub's guidance: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository . It lists the side effects: commit hashes change; open and closed PR diff views break; other clones can re-introduce the data; signatures are lost.
 4. **Ask GitHub Support to remove cached views and pull-request references** after a rewrite. GitHub states Support removes "cached views and references to the sensitive data in pull requests", but "will only assist in the removal of sensitive data in cases where we determine that the risk can't be mitigated by rotating affected credentials" — personal-data requests may be declined.
