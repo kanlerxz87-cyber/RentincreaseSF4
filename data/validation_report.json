@@ -313,9 +313,9 @@
       "detail": ""
     },
     {
-      "name": "raw identifiers parsed from private intake",
+      "name": "privacy fingerprint baseline present",
       "ok": true,
-      "detail": "L O, V N, JP, M T, E R, I S"
+      "detail": "6 one-way fingerprints; no private intake required"
     },
     {
       "name": "no raw tenant identifiers in public files",

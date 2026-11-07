@@ -180,8 +180,8 @@
   },
   {
     "id": "F19",
-    "title": "GitHub Pages root source / merge pending",
-    "detail": "Legacy source main / requires root-level site; PR/merge/Pages result pending T05.",
+    "title": "GitHub Pages deployment record",
+    "detail": "Legacy source main / requires root-level site. PR #1 merged at a0591c3; GitHub Pages API confirmed built on 2026-11-07. Follow-up publication details are recorded in COORDINATION.md.",
     "source_ids": [
       "S43"
     ],

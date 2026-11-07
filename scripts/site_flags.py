@@ -23,7 +23,7 @@ NAV = [
 CARDS = [
     ("Current local rate", "1.6%", "rates", "Effective 3/1/26-2/28/27 for covered units."),
     ("State-only SF cap", "8.8%", "state", "AB 1482 8/1/26-7/31/27; does not replace SF Rent Ordinance limits."),
-    ("Verified sources", "52", "sources", "Official government and SEC links for manual review."),
+    ("Official source links", "52", "sources", "Official government and SEC links for manual review."),
     ("Flagged items", "34", "flagged", "Published with source links; do not block the site."),
     ("Anonymized units", "2", "case", "Placeholder tenant IDs; dates and amounts unchanged."),
     ("Federal cap", "Blank", "federal", "No official general private-rent cap found; flagged."),
@@ -50,7 +50,7 @@ FLAGS = [
     {"id": "F16", "title": "Tenant petition page duplicate block", "detail": "Eligibility block repeats twice; treated as page artifact.", "source_ids": ["S25"], "status": "needs review"},
     {"id": "F17", "title": "Rent Ordinance not official record", "detail": "SF.gov says Rent Board version is administrative convenience; American Legal is official publisher.", "source_ids": ["S20"], "status": "needs review"},
     {"id": "F18", "title": "Tenant Right to Counsel annual report 404", "detail": "MOHCD presentation and Housing Trust Fund report used instead.", "source_ids": ["S30", "S31"], "status": "needs review"},
-    {"id": "F19", "title": "GitHub Pages root source / merge pending", "detail": "Legacy source main / requires root-level site; PR/merge/Pages result pending T05.", "source_ids": ["S43"], "status": "needs review"},
+    {"id": "F19", "title": "GitHub Pages deployment record", "detail": "Legacy source main / requires root-level site. PR #1 merged at a0591c3; GitHub Pages API confirmed built on 2026-11-07. Follow-up publication details are recorded in COORDINATION.md.", "source_ids": ["S43"], "status": "needs review"},
     {"id": "F20", "title": "Platform branch constraint", "detail": "Requested session branches cannot be created; exclusive file scopes used.", "source_ids": ["S20"], "status": "needs review"},
     {"id": "F21", "title": "Case facts owner-supplied / missing", "detail": "Exact address, 1940 year, rent-control coverage, license, prior increases, notice history and legal status unverified.", "source_ids": ["S06", "S07", "S25"], "status": "needs review"},
     {"id": "F22", "title": "No federal cap / attorney approval / both-units rule", "detail": "No official source found for a general federal private-rent cap, attorney approval, no-lawsuit guarantee, or a rule requiring both units.", "source_ids": ["S43", "S23", "S24", "S42"], "status": "needs review"},
