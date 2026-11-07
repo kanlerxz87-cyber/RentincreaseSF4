@@ -135,6 +135,44 @@
           ],
           "notes": "Free counseling is not legal advice; TRC covers eviction proceedings.",
           "flag_id": ""
+        },
+        {
+          "id": "CHK-11",
+          "label": "License before notice",
+          "value": "Report into the Housing Inventory and confirm a current license for each unit and each effective date",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S07",
+            "S55"
+          ],
+          "notes": "Unlicensed notices may be void or unenforceable.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-12",
+          "label": "Keep the license record",
+          "value": "File the license record and a dated portal lookup with the notice and proof of service",
+          "status": "analysis",
+          "source_ids": [
+            "S08",
+            "S55"
+          ],
+          "notes": "Evidence if the increase is challenged.",
+          "flag_id": ""
+        },
+        {
+          "id": "CHK-13",
+          "label": "90-day notice if the total exceeds 10%",
+          "value": "90 days when the increase alone or combined with another increase in the same year is more than 10%",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S35"
+          ],
+          "notes": "A correctly banked total can exceed 10%.",
+          "flag_id": ""
         }
       ]
     }

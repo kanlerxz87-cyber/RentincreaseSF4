@@ -88,3 +88,19 @@ Session `arena-73f5f1a2`, 2026-11-06 UTC. Each numbered line is a claim used on 
 ## Re-verification procedure used in final integration
 
 The site's `scripts/validate_site.py` re-reads every `data/*.json` row, requires `source_ids` and official URLs, requires blank `value` fields for items marked `needs review`, checks that all flagged IDs appear on `pages/flagged.html`, scans generated HTML for raw private identifiers from the untracked `internal/` file, and checks every internal `href`/`src` resolves to a real file. Results are recorded in `COORDINATION.md` before merge.
+
+## Addendum — 2026-11-07 integration re-verification (`arena-c007d556`)
+
+| # | Claim | Verified against | Pages affected | Status |
+| --- | --- | --- | --- | --- |
+| 81 | License required before annual/banked increase; 1–9 unit buildings covered from 3/1/2023 | S01, S07, S08, S53 | Summary, Process, Local, Compliance, Q&A, Analysis | verified |
+| 82 | All owners of residential property must report into the Housing Inventory; license auto-generated for tenant-occupied units | S07, S53 | Process, Local | verified |
+| 83 | Unlicensed notice may be null and void for multiple years; tenant refund and petition possible | S08, S53, S25, S26 | Process, Summary, Q&A | verified |
+| 84 | License applies only to rent-controlled units, and is not required for §6.14/Costa-Hawkins or passthrough increases | S08, S16, S09 | Process, Local | verified |
+| 85 | No separate per-increase notice filing described; license need not accompany the notice | S07, S01 | Process, Summary, Q&A | verified (absence) |
+| 86 | Housing Inventory submission information is public | S07, S53 | Process, Local, Case, Analysis | verified |
+| 87 | Multi-year banked increases: add percentages, no compounding, no petition required, no rounding | S54, S05 | Process, Local | verified |
+| 88 | No individual-owner / small-building exemption found | S01, S07, S08, S53 | Summary, Process, Analysis, Q&A | verified (absence) |
+| 89 | No 2027–28 rate published as of 2026-11-07 | S02 | Summary, Process, Rates, Analysis | needs review (F25) |
+| 90 | Unit 1 §6.14 notice history unknown | S16, S15, S37 | Case, Process, Q&A | needs review (F26) |
+

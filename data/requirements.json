@@ -97,7 +97,7 @@
         {
           "id": "REQ-08",
           "label": "Flag irregularities",
-          "value": "36 flags published",
+          "value": "38 flags published",
           "status": "verified",
           "source_ids": [
             "S01",
@@ -237,6 +237,46 @@
           ],
           "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
           "flag_id": "F19"
+        },
+        {
+          "id": "REQ-22",
+          "label": "Step-by-step licensing and notice process",
+          "value": "Published - pages/process.html with 12 numbered steps",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S01",
+            "S35"
+          ],
+          "notes": "Every step carries official links.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-23",
+          "label": "Ordinance-level license citations",
+          "value": "Published - Sec. 37.3(a)(1), Sec. 37.15 and Form 571",
+          "status": "verified",
+          "source_ids": [
+            "S21",
+            "S53",
+            "S04"
+          ],
+          "notes": "Licensing condition is in the ordinance itself.",
+          "flag_id": ""
+        },
+        {
+          "id": "REQ-24",
+          "label": "Independent re-verification of the combined data",
+          "value": "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S53",
+            "S02"
+          ],
+          "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
+          "flag_id": ""
         },
         {
           "id": "REQ-21",

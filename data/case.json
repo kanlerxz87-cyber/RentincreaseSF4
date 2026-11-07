@@ -250,6 +250,43 @@
           ],
           "notes": "Owner input: not supplied; no banked amount inferred.",
           "flag_id": "T03-F05"
+        },
+        {
+          "id": "CASE-20",
+          "label": "Section 6.14 notice served on the occupant added April 1, 2026",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S16",
+            "S15"
+          ],
+          "notes": "Owner input: not supplied; whether a written 6.14 notice was served within a reasonable time (generally 60 days) and whether the occupant is a co-tenant or subtenant is unknown.",
+          "flag_id": "F28"
+        },
+        {
+          "id": "CASE-21",
+          "label": "Housing Inventory / license status for each unit",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S07",
+            "S08",
+            "S53"
+          ],
+          "notes": "Owner input: not supplied; license status must be confirmed for the effective date of any increase.",
+          "flag_id": "T03-F05"
+        },
+        {
+          "id": "CASE-22",
+          "label": "Privacy of the Housing Inventory filing",
+          "value": "Inventory submission information is public, including owner name and business contact information",
+          "status": "verified",
+          "source_ids": [
+            "S07",
+            "S53"
+          ],
+          "notes": "Stated by SF.gov; relevant before reporting, but the filing is required to obtain a license.",
+          "flag_id": ""
         }
       ]
     }

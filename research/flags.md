@@ -31,3 +31,9 @@ All 24 flags F01–F24 in `research/sources/irregularities.md` are also publishe
 - Rent Ordinance "not official record" note, Pages root source, platform branch constraint, unverified case facts, and missing federal/attorney/both-units sources (F17, F19–F22, F24).
 
 See `research/sources/irregularities.md` and `research/sources/unverified.md` for the complete list and links.
+
+## Added 2026-11-07 (`arena-c007d556`)
+
+- F25 — Next year's allowable rate not yet published: the Current Rates page lists 1.6% only through 2/28/27 on 2026-11-07; an increase effective on or after 3/1/27 needs the next published rate. Sources: S02, S01. Value left blank.
+- F26 — Unit 1 §6.14 notice history unknown: whether a written 6.14 notice was served on the occupant added April 1, 2026 (within a reasonable time, generally 60 days) and whether that occupant is a co-tenant or a subtenant was not supplied. Sources: S16, S15, S37. No market-rate reset inferred.
+

@@ -117,6 +117,21 @@
           ],
           "notes": "Owner-supplied intake does not confirm Housing Inventory reporting or a current license for either unit; blank and flagged. No increase should be treated as effective until this is confirmed.",
           "flag_id": "T03-F05"
+        },
+        {
+          "id": "LIC-10",
+          "label": "Full step-by-step page",
+          "value": "12 numbered steps from coverage check to notice delivery, each with its official source link, plus the ordinance text and the case-specific application",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S53",
+            "S21",
+            "S35"
+          ],
+          "notes": "Published on the Step-by-Step License page (pages/process.html).",
+          "flag_id": ""
         }
       ]
     },
