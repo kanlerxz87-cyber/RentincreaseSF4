@@ -150,3 +150,15 @@ Session `arena-2e273eee` on fixed branch `arena/2e273eee-rentincreasesf4` takes 
 - **Post-merge state:** my branch was re-synced to `main` after the merge; this record is published through a follow-up PR so that the merged site states its own deploy result accurately.
 
 **Handoff notes for the next session.** (1) No conflicting claims were found at merge time; prior sessions' F25/F26 meanings, CI workflow, `FOLLOWUP_AUDIT.md` and `TENANT_ASSISTANCE_RESEARCH.md` are preserved. (2) Outstanding `needs review` items are unchanged in kind: F27 (2027–28 rate not yet published) and F28 (Unit 1 §6.14 notice history) need owner facts or a later SF.gov publication, not more research. (3) Public-page flag section headers are regenerated from `scripts/site_flags.py`; edit that file and rebuild rather than editing `pages/*.html`.
+
+### Final publication status (session `arena-c007d556`, 2026-11-07)
+
+| Item | Result | Evidence |
+| --- | --- | --- |
+| PR #9 - step-by-step license page, S53–S55, F27–F28, reconciled with parallel sessions | `MERGED` 2026-11-07T20:08:09Z, merge commit `cd4218979591421376d2cbb66ec52b25c83b1eda` | `gh pr merge 9 --merge`; `gh pr view 9`; CI `validate` passed |
+| Pages deploy for PR #9 | `built`, commit `cd42189` | `gh api .../pages/builds/latest`; cache-busted live fetch of `index.html` and `pages/process.html` |
+| PR #10 - record PR #9 merge/deploy in this file | `MERGED`, merge commit `d3508d26ce583ff691a92d6a5edf238734a35f10` | `gh pr merge 10 --merge`; `gh pr view 10`; CI `validate` passed |
+| Pages deploy for PR #10 | `built`, commit `d3508d2` | `gh api .../pages/builds/latest` (status `built`) |
+| Local gate before every merge | 82 checks, 0 errors | `python3 scripts/validate_site.py`; `data/validation_report.json` |
+
+Any later commit's deployment status can be re-checked with `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`. This file records results rather than predicting them; the deploy status of this very commit is therefore verified via that API and reported in the session summary.
