@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "status": "passed",
+  "status": "passed_with_warnings",
   "checks": [
     {
       "name": "canonical source map matches site data",
@@ -313,16 +313,6 @@
       "detail": ""
     },
     {
-      "name": "raw identifiers parsed from private intake",
-      "ok": true,
-      "detail": "L O, V N, JP, M T, E R, I S"
-    },
-    {
-      "name": "no raw tenant identifiers in public files",
-      "ok": true,
-      "detail": ""
-    },
-    {
       "name": "no exact street address published",
       "ok": true,
       "detail": ""
@@ -354,6 +344,9 @@
     }
   ],
   "errors": [],
+  "warnings": [
+    "identifier-specific privacy scan unavailable: gitignored private intake is absent; it was not recreated or committed"
+  ],
   "summary": {
     "sources": 52,
     "pages": 17,
@@ -361,7 +354,7 @@
     "rows_verified": 167,
     "needs_review_rows": 39,
     "flags": 34,
-    "checks": 70,
+    "checks": 68,
     "errors": 0
   }
 }

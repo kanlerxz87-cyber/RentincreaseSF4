@@ -23,7 +23,7 @@ OFFICIAL_DOMAINS = {
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
 }
 
-report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
+report = {"date": D.DATE, "status": "running", "checks": [], "errors": [], "warnings": []}
 
 def check(name, ok, detail=""):
     entry = {"name": name, "ok": bool(ok), "detail": detail}
@@ -31,6 +31,11 @@ def check(name, ok, detail=""):
     if not ok:
         report["errors"].append("{}: {}".format(name, detail))
     print(("PASS " if ok else "FAIL ") + name + ((" - " + detail) if detail else ""))
+
+def warn(name, detail=""):
+    message = name + ((": " + detail) if detail else "")
+    report["warnings"].append(message)
+    print("WARN " + message)
 
 def official_domain(url):
     host = urlparse(url).netloc.lower()
@@ -151,14 +156,17 @@ def main():
                     if len(token) >= 2 and token not in raw_identifiers:
                         raw_identifiers.append(token)
     check("private intake file is excluded from git", "internal/" in (ROOT / ".gitignore").read_text(encoding="utf-8"))
-    check("raw identifiers parsed from private intake", len(raw_identifiers) >= 6, ", ".join(raw_identifiers))
-    privacy_hits = []
-    for p in public_files:
-        text = p.read_text(encoding="utf-8")
-        for token in raw_identifiers:
-            if token in text:
-                privacy_hits.append("{} contains {}".format(p.relative_to(ROOT), token))
-    check("no raw tenant identifiers in public files", not privacy_hits, "; ".join(privacy_hits[:5]))
+    if internal.exists() and raw_identifiers:
+        check("raw identifiers parsed from private intake", len(raw_identifiers) >= 6, "{} identifiers loaded from gitignored local intake".format(len(raw_identifiers)))
+        privacy_hits = []
+        for p in public_files:
+            text = p.read_text(encoding="utf-8")
+            for token in raw_identifiers:
+                if token in text:
+                    privacy_hits.append("{} contains a private identifier".format(p.relative_to(ROOT)))
+        check("no raw tenant identifiers in public files", not privacy_hits, "; ".join(privacy_hits[:5]))
+    else:
+        warn("identifier-specific privacy scan unavailable", "gitignored private intake is absent; it was not recreated or committed")
 
     address_patterns = [
         r"\b\d{3,5}\s+\d{1,2}(?:st|nd|rd|th)\s+(?:Ave|Avenue|Street|St)\b",
@@ -200,7 +208,7 @@ def main():
                 broken.append("{} -> {}".format(html_file.relative_to(ROOT), link))
     check("no broken internal links", not broken, "; ".join(broken[:5]))
 
-    report["status"] = "passed" if not report["errors"] else "failed"
+    report["status"] = "failed" if report["errors"] else ("passed_with_warnings" if report["warnings"] else "passed")
     report["summary"] = {
         "sources": len(source_map),
         "pages": len(list(PAGES.glob("*.html"))),
@@ -212,8 +220,8 @@ def main():
         "errors": len(report["errors"]),
     }
     (DATA / "validation_report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("\nValidation {} ({} checks, {} errors). Report: data/validation_report.json".format(
-        report["status"].upper(), len(report["checks"]), len(report["errors"])
+    print("\nValidation {} ({} checks, {} errors, {} warnings). Report: data/validation_report.json".format(
+        report["status"].upper(), len(report["checks"]), len(report["errors"]), len(report["warnings"])
     ))
     if report["errors"]:
         for err in report["errors"]:
