@@ -150,6 +150,8 @@ Read `COORDINATION.md`, `git ls-remote` and every `origin/arena/*` branch before
 
 **Conflict resolution.** Merging `origin/main` conflicted in `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `index.html`, `data/pages.json`, `data/summary.json`, `data/validation_report.json`, all `pages/*.html`, and `scripts/site_flags.py`, `site_pages.py`, `site_text.py`, `validate_site.py`. Resolution rule: the prior sessions' published script structure, CI workflow (`.github/workflows/validate.yml`), `FOLLOWUP_AUDIT.md`, `TENANT_ASSISTANCE_RESEARCH.md` and privacy fingerprint approach were kept in full and my additions were re-applied on top of them (generated `data/`, `pages/`, `index.html`, markdown deliverables were rebuilt from the reconciled scripts). Nothing from another session was discarded; the other sessions' flags F25/F26 keep their original meanings and my two new flags use F27/F28.
 
+**Post-merge counts (after PR #11 was merged into this branch).** The reconciled tree carries 40 flags (the parallel session added F29 capital-improvement petition count correction and F30 conditional banked illustration), 243 table rows and 85 validation checks, all passing. Dashboard counts are generated automatically from the flag and source registries, so they follow the merged data.
+
 **PR.** PR #9 opened from `arena/c007d556-rentincreasesf4` to `main`: https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/9 — merge result and Pages deploy confirmation are recorded below once available.
 
 ### PR #9 merge and Pages deployment result (session `arena-c007d556`)
@@ -183,3 +185,72 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 
 - The base commit `a0591c3` was far behind `origin/main` (`cd42189`, PRs #2–#9). Rather than merge conflicting rewrites of the same generator files, this session took `main` as the base and re-applied its deltas on top; the earlier WIP commit on this branch is superseded and adds nothing to `main`. Nothing from another session was discarded.
 - T05 (PR #1) was already merged and Pages already built before this session started; T07 does not re-claim T05.
+
+## Re-verification and step-by-step build — 2026-11-07 (session `arena-c007d556`)
+
+**Claim.** Session `arena-c007d556` (fixed branch `arena/c007d556-rentincreasesf4`) claimed a re-verification and add-on integration task on 2026-11-07 UTC, after finding T01–T05 done by earlier sessions and T06 done by `arena-6f344b80` (PR #4, PR #7). No file owned by another live claim was edited: this session's work is additive to the published scripts/data/docs and was reconciled with `origin/main` (18 commits ahead, including PR #2, #3, #4, #6, #7) before publication.
+
+**Scope.** `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_sources.py`, `scripts/site_text.py`, `scripts/validate_site.py`, `index.html`, `pages/` and `data/` (build outputs), `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`, `research/sources/official_sources.md`, `research/verification/line_by_line.md`, `research/flags.md`, `research/sources/unverified.md`, `COORDINATION.md`.
+
+**What was added (on top of the prior sessions' work).**
+
+1. **Step-by-step page** `pages/process.html` ("Step-by-Step License", second item in the nav): 9 licensing rows, the ordinance text, 12 numbered steps each with official links, and the case application for Unit 1 / Unit 2. The summary page gained a pointer row (LIC-10).
+2. **New official sources (52 → 55):** S53 [Sec. 37.15 Reporting Obligations; Licensing](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing), S54 [Annual rent increase for multiple years](https://www.sf.gov/information--annual-rent-increase-multiple-years), S55 [Rent Board Portal](https://portal.sfrb.org/).
+3. **Ordinance-level confirmation** of the licensing condition: §37.3(a)(1) ("shall have a license to impose annually a rent increase ... never greater than 7%") and §37.15(e) (license suspended during noncompliance; tenant not obligated to pay the increase), plus Form 571 "without filing a petition at the Rent Board".
+4. **New rows:** Local LOC-14–LOC-18, Case CASE-20–CASE-22, Q&A Q-11–Q-14, Checklist CHK-11–CHK-13, Requirements REQ-22–REQ-24, Analysis AN-16–AN-19.
+5. **New flags (36 → 38):** **F27** next year's allowable rate (3/1/27–2/28/28) not yet published on 2026-11-07 — value left blank; **F28** Unit 1 Section 6.14 notice history unknown (whether a written 6.14 notice was served on the occupant added 2026-04-01, and whether that occupant is a co-tenant or subtenant) — value left blank.
+6. **Landing page:** "Start here" answer block with the direct yes-answer and a link to the step-by-step page; dashboard cards now lead with "Rent Board license — Required"; quick-navigation table now shows each page's own sources instead of a fixed pair.
+
+**Sources re-fetched and verified this session (2026-11-07 UTC, direct `fetch_page`).** S01 (learn about rent increases), S02 (Current Rates — 1.6% through 2/28/27, no 2027–28 row), S04 (Form 571 PDF — full historical series 2.6/1.8/0.7/2.3/3.6/1.7/1.4/1.6), S05 (banked increases — 24-month rule, no compounding/proration, license, notice must state banked portion), S06 (rental laws — June 13, 1979 cutoff, single-family/condo and other exemptions), S07 (Housing Inventory — all owners must report; license auto-generated for tenant-occupied units; late filing allowed, no monetary penalty; information public), S08 (noncompliance — unlicensed notice "may be null and void (this may apply for multiple years)"; buildings under 10 units since 3/1/2023; license rules apply ONLY to rent-controlled units; not required for 6.14/Costa-Hawkins or passthroughs; tenant petition route), S16 (§6.14 / Costa-Hawkins, 60-day notice guidance, co-tenants excluded), S21 (§37.3 text), S27 (AB 1482 — 8.8% for 8/1/26–7/31/27; does NOT apply to SF Rent Ordinance units), S35 (Civil Code 827 — 30/90-day rules, delivery), S48 (SEC IRT Q4 2025 — new (3.7)%, renewal 2.9%, blended 0.8%), and the new S53, S54, S55. All previously published values held; nothing was inferred.
+
+**Build and validation.** `python3 scripts/build_site.py` → 20 data files, 18 page HTML files, index, CSS, `.nojekyll`, 3 markdown deliverables. `python3 scripts/validate_site.py` → **82 checks, 0 errors**; `data/validation_report.json` summary: 55 sources, 18 pages, 226 table rows, 46 needs-review rows, 38 flags. Privacy: the one-way fingerprint regression test from PR #2 is retained (no private intake needed, no identifiers printed); placeholder-only, no-street-address, dates/amounts, forbidden-certification and broken-link checks all pass.
+
+**Conflict resolution.** Merging `origin/main` conflicted in `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `index.html`, `data/pages.json`, `data/summary.json`, `data/validation_report.json`, all `pages/*.html`, and `scripts/site_flags.py`, `site_pages.py`, `site_text.py`, `validate_site.py`. Resolution rule: the prior sessions' published script structure, CI workflow (`.github/workflows/validate.yml`), `FOLLOWUP_AUDIT.md`, `TENANT_ASSISTANCE_RESEARCH.md` and privacy fingerprint approach were kept in full and my additions were re-applied on top of them (generated `data/`, `pages/`, `index.html`, markdown deliverables were rebuilt from the reconciled scripts). Nothing from another session was discarded; the other sessions' flags F25/F26 keep their original meanings and my two new flags use F27/F28.
+
+**PR.** PR #9 opened from `arena/c007d556-rentincreasesf4` to `main`: https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/9 — merge result and Pages deploy confirmation are recorded below once available.
+
+### PR #9 merge and Pages deployment result (session `arena-c007d556`)
+
+- **PR #9 merged:** https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/9 — state `MERGED`, merged 2026-11-07T20:08:09Z, merge commit `cd4218979591421376d2cbb66ec52b25c83b1eda` (verified with `gh pr merge 9 --merge` then `gh pr view 9`).
+- **CI:** the repository's `validate` workflow passed on PR #9 (6s).
+- **GitHub Pages deployment:** `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages` → `status: built`, `build_type: legacy`, `source: main /`; `pages/builds/latest` → `status: built`, `commit cd42189`, created 2026-11-07T20:08:11Z.
+- **Live verification (cache-busted fetch of the deployed HTML):** `index.html` shows the "Start here" license answer, the "Rent Board license — Required" card, "Official source links 55" and "Flagged items 38"; `pages/process.html` is live with all 12 steps and the ordinance citations; the quick-navigation table now lists each page's own sources.
+- **Local pre-merge gate:** `python3 scripts/build_site.py` then `python3 scripts/validate_site.py` → **82 checks, 0 errors** (55 sources, 18 pages, 226 rows, 44 needs-review rows, 38 flags, no broken internal links).
+- **Post-merge state:** my branch was re-synced to `main` after the merge; this record is published through a follow-up PR so that the merged site states its own deploy result accurately.
+
+**Handoff notes for the next session.** (1) No conflicting claims were found at merge time; prior sessions' F25/F26 meanings, CI workflow, `FOLLOWUP_AUDIT.md` and `TENANT_ASSISTANCE_RESEARCH.md` are preserved. (2) Outstanding `needs review` items are unchanged in kind: F27 (2027–28 rate not yet published) and F28 (Unit 1 §6.14 notice history) need owner facts or a later SF.gov publication, not more research. (3) Public-page flag section headers are regenerated from `scripts/site_flags.py`; edit that file and rebuild rather than editing `pages/*.html`.
+
+<<<<<<< HEAD
+### Final publication status (session `arena-c007d556`, 2026-11-07)
+
+| Item | Result | Evidence |
+| --- | --- | --- |
+| PR #9 - step-by-step license page, S53–S55, F27–F28, reconciled with parallel sessions | `MERGED` 2026-11-07T20:08:09Z, merge commit `cd4218979591421376d2cbb66ec52b25c83b1eda` | `gh pr merge 9 --merge`; `gh pr view 9`; CI `validate` passed |
+| Pages deploy for PR #9 | `built`, commit `cd42189` | `gh api .../pages/builds/latest`; cache-busted live fetch of `index.html` and `pages/process.html` |
+| PR #10 - record PR #9 merge/deploy in this file | `MERGED`, merge commit `d3508d26ce583ff691a92d6a5edf238734a35f10` | `gh pr merge 10 --merge`; `gh pr view 10`; CI `validate` passed |
+| Pages deploy for PR #10 | `built`, commit `d3508d2` | `gh api .../pages/builds/latest` (status `built`) |
+| Local gate before every merge | 82 checks, 0 errors | `python3 scripts/validate_site.py`; `data/validation_report.json` |
+
+Any later commit's deployment status can be re-checked with `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`. This file records results rather than predicting them; the deploy status of this very commit is therefore verified via that API and reported in the session summary.
+=======
+## Session 2026-11-07 — `arena-5cbd3f13` (T07)
+
+Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto the then-current `main` (`cd42189`) before any delta was re-applied. No other session's files were overwritten; this session re-applied only the changes listed below on top of `main`.
+
+| ID | Task | Status | Owner | File scope (exclusive) | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T07 | Publish the owner-supplied case facts (anonymized) instead of blank cells; correct the June 2024 petition count; add conditional banked and notice-deadline arithmetic; harden the validator; rebuild, validate, PR, merge and confirm Pages | `done` | `arena-5cbd3f13` (claimed 2026-11-07 UTC) | `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/build_site.py`, `scripts/validate_site.py`, `scripts/site_text.py` (CSS/text only), regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `README.md`, `VERIFICATION.md`, `SOURCES.md`, `REPO_REVIEW.md`, `research/flags.md`, `COORDINATION.md` | Re-opened 18 official sources directly on 2026-11-07 and recorded exact wording in `VERIFICATION.md` R1–R18: S01, S02, S03, S04, S05, S06 (context), S16, S22, S27, S29, S35, S47, S48, S49. Every published finding row still carries an official link; owner-supplied rows carry none by design and are labelled. `scripts/validate_site.py`: **85 checks, 0 errors**, 216 rows, 23 owner-supplied rows, 40 flags, 55 sources. | New flags **F29** (capital-improvement count corrected from 19/148 to 18/148) and **F30** (the 13.1% banked figure for Unit 2 is conditional arithmetic, not a finding). Privacy: no raw initials published; validator scans the case JSON/HTML for initial patterns. Flagged items do not block the merge. |
+
+### What T07 changed and why
+
+1. **Case facts are published, not blank.** The user asked for the entries to appear on the site with placeholder names and unchanged dates and amounts. The case page now shows ZIP 94122, 1940, two units, February 1, 2025 / $3,995, April 1, 2026 / $3,995, June 1, 2019 / $3,150 and Tenant A–F as `owner-supplied` rows, with a note in every row's Source cell that this is owner intake, not an official source. A separate table keeps the unverified items blank with flags (coverage, official building record, license status, increase history, occupant status, 6.14 notice, banked eligibility).
+2. **Correction.** `IND-03` now reads 18 capital-improvement petitions / 148 units, matching S29; the 19 / 149 subtotal includes one Costa-Hawkins petition (F29).
+3. **Arithmetic added, clearly conditioned.** CALC-08 shows the 13.1% / $412.65 figure only as "if nothing was ever raised since June 1, 2019", with the 90-day notice consequence and the 2/28/2027 rate-window limit (F30). CALC-10/11 give the 30-day and mailed notice deadlines for a February 1, 2027 effective date.
+4. **Validator hardening.** Dynamic source/flag counts, duplicate-ID rejection, owner-row validation, raw-initial scan, and an index check that tests the badge legend and the direct answer rather than the old placeholder heading. The privacy-fingerprint approach from PR #2 is preserved.
+5. **Documentation.** `VERIFICATION.md` R1–R18, `SOURCES.md` statement updates for S01/S03/S07/S29, `research/flags.md` F29/F30 entry, and `REPO_REVIEW.md` re-review table.
+
+### Conflict / handoff log (this session)
+
+- The base commit `a0591c3` was far behind `origin/main` (`cd42189`, PRs #2–#9). Rather than merge conflicting rewrites of the same generator files, this session took `main` as the base and re-applied its deltas on top; the earlier WIP commit on this branch is superseded and adds nothing to `main`. Nothing from another session was discarded.
+- T05 (PR #1) was already merged and Pages already built before this session started; T07 does not re-claim T05.
+>>>>>>> origin/main
