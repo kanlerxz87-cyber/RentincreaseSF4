@@ -282,6 +282,26 @@
     "status": "needs review"
   },
   {
+    "id": "F29",
+    "title": "Correction: capital-improvement petition count",
+    "detail": "The June 2024 Rent Board workload statistics show 18 capital-improvement petitions covering 148 units, with a subtotal of 19 petitions / 149 units that includes one Costa-Hawkins petition. An earlier version of this site listed 19 petitions / 148 units (mixing the subtotal with the capital-improvement unit count). Corrected 2026-11-07 after re-reading the source PDF; see VERIFICATION.md.",
+    "source_ids": [
+      "S29"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F30",
+    "title": "Banked-increase illustration is conditional, not a finding",
+    "detail": "The 13.1% figure for Unit 2 applies only if no increase was imposed since June 1, 2019 and every skipped year banked. The owner has not supplied rent history, so no banked amount is asserted, recommended or relied on anywhere on this site.",
+    "source_ids": [
+      "S05",
+      "S04",
+      "S02"
+    ],
+    "status": "needs review"
+  },
+  {
     "id": "T03-F01",
     "title": "Case facts not official-verified",
     "detail": "Dates and amounts preserved; official source cells blank.",

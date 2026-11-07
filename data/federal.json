@@ -22,7 +22,8 @@
             "S40"
           ],
           "notes": "Official U.S. Code PDF.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "FED-02",
@@ -33,7 +34,8 @@
             "S42"
           ],
           "notes": "Current as of 11/04/2026.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "FED-03",
@@ -47,7 +49,8 @@
             "S42"
           ],
           "notes": "No official source found; blank and flagged.",
-          "flag_id": "F22"
+          "flag_id": "F22",
+          "source_note": ""
         },
         {
           "id": "FED-04",
@@ -59,7 +62,8 @@
             "S44"
           ],
           "notes": "Used for voucher payment standards, not a rent-increase cap.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "FED-05",
@@ -70,7 +74,8 @@
             "S43"
           ],
           "notes": "FY2027 is current on 2026-11-06.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "FED-06",
@@ -81,7 +86,8 @@
             "S44"
           ],
           "notes": "Not a private rent cap.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "FED-07",
@@ -96,7 +102,8 @@
             "S52"
           ],
           "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07"
+          "flag_id": "T03-F07",
+          "source_note": ""
         }
       ]
     }

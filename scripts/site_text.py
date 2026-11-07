@@ -38,7 +38,7 @@ For a unit covered by the San Francisco Rent Ordinance, the current ordinary ann
 
 ## Case handling
 
-The owner-supplied case facts are anonymized. Dates and dollar amounts are preserved: Unit 1 last lease start February 1, 2025 at $3,995; Unit 1 continuing tenancy/current tenants April 1, 2026 at $3,995; Unit 2 last lease start June 1, 2019 at $3,150. Tenant identifiers are replaced with placeholders Tenant A-F. No exact street address, real name, initial, or contact detail is published. All case-specific official-source cells are blank and flagged because address, building year, rent-control coverage, license, prior increases, notice history and tenant legal status were not official-verified.
+The owner-supplied case facts are anonymized. Dates and dollar amounts are preserved: Unit 1 last lease start February 1, 2025 at $3,995; Unit 1 continuing tenancy/current tenants April 1, 2026 at $3,995; Unit 2 last lease start June 1, 2019 at $3,150. Tenant identifiers are replaced with placeholders Tenant A-F. No exact street address, real name, initial, or contact detail is published. The case facts themselves are now published in full on the site as clearly labelled **owner-supplied (anonymized)** rows - ZIP 94122, 1940, two units, lease dates and rents, Tenant A-F - because you asked for the entries to be readable; they are explicitly not official findings. The separate official-verification rows stay blank and flagged: exact-address coverage, the official building-year record, license status, prior increases and notice history, whether the April 1, 2026 continuation restarted the anniversary date, and the legal status of the continuing occupants were not official-verified.
 
 Arithmetic using owner-supplied amounts and official rates only: Unit 1 $3,995 x 1.6% = $63.92 -> $4,058.92; Unit 2 $3,150 x 1.6% = $50.40 -> $3,200.40. These are illustrative only, not a recommendation or eligibility determination. No banked increase is inferred.
 
@@ -54,11 +54,11 @@ The federal FHA, 24 CFR 100.500 disparate-impact rule, California FEHA and SF te
 
 ## Corporate / individual evidence
 
-SEC filings show IRT Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8% and Invitation Homes 2025 total-portfolio renewal +4.6%, new -0.8%. These are portfolio-level, not SF-specific and not legal benchmarks. SF Rent Board June 2024 workload stats show 23 landlord petitions/154 units and 73 tenant petitions/73 units; this is narrow formal-petition evidence only. No official source proves what all large corporations or all individual SF owners do.
+SEC filings show IRT Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8% and Invitation Homes 2025 total-portfolio renewal +4.6%, new -0.8%. These are portfolio-level, not SF-specific and not legal benchmarks. SF Rent Board June 2024 workload stats show 23 landlord petitions/154 units (18 capital-improvement petitions covering 148 units) and 73 tenant petitions/73 units; this is narrow formal-petition evidence only. An earlier draft listed 19 capital-improvement petitions / 148 units - the unit count belonged to the capital-improvement line while the 19 was the subtotal including one Costa-Hawkins petition; corrected and flagged as F29. No official source proves what all large corporations or all individual SF owners do.
 
 ## Banked increases and the 10% notice threshold
 
-A skipped increase is only banked if at least 24 full months pass without any rent increase; banked percentages are added, never compounded or prorated, and never carry over to a new tenant. Two-or-more-year increases are imposed by adding the allowable percentages and need no Rent Board petition. If a correctly banked total plus the current annual rate exceeds 10%, the notice must be 90 days rather than 30 days. No banked amount is asserted for either unit here, because neither rent history was supplied - both are blank and flagged. (https://www.sf.gov/information--banked-rent-increases, https://www.sf.gov/information--annual-rent-increase-multiple-years)
+A skipped increase is only banked if at least 24 full months pass without any rent increase; banked percentages are added, never compounded or prorated, and never carry over to a new tenant. Two-or-more-year increases are imposed by adding the allowable percentages and need no Rent Board petition. If a correctly banked total plus the current annual rate exceeds 10%, the notice must be 90 days rather than 30 days. No banked amount is asserted for either unit here, because neither rent history was supplied - both are blank and flagged. **Conditional arithmetic only (not a finding, not a recommendation):** if literally no increase had been imposed on Unit 2 since June 1, 2019, the official rates for the skipped years (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 = 11.5%) plus the current 1.6% would total 13.1%, i.e. $412.65 on $3,150, or $3,562.65; a combined increase above 10% requires 90 days' written notice. Because the increase history is unconfirmed, this figure is flagged (F30) and is not relied on anywhere. (https://www.sf.gov/information--banked-rent-increases, https://www.sf.gov/information--annual-rent-increase-multiple-years)
 
 ## Unit 1, Section 6.14 and privacy
 
@@ -81,8 +81,8 @@ Full detail is in `research/sources/irregularities.md`, `research/sources/unveri
 
 ## Summary of flags
 
-- 28 source-quality flags F01-F28 (F25: SF.gov license-consequence wording differs — 'may be null/void' vs notice 'not enforceable' without a license on the effective date; F26: earlier validation report published raw identifier tokens in a check detail — fixed 2026-11-07, values withheld): SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, old 1.7% example, F27 (next year's allowable rate not yet published) and F28 (Unit 1 Section 6.14 notice history unknown).
-- 10 case/analysis flags T03-F01-F10: owner-supplied facts, anonymization, address/year/coverage, Unit 1 legal status, banked/license/notice history, illustrative arithmetic, 94122 SAFMR blank, no cap/approval/both-units guarantee, narrow corporate/individual evidence, and conservative checklist only.
+- 30 source-quality flags F01-F30 (F25: SF.gov license-consequence wording differs — 'may be null/void' vs notice 'not enforceable' without a license on the effective date; F26: earlier validation report published raw identifier tokens in a check detail — fixed 2026-11-07, values withheld): SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, old 1.7% example, F27 (next year's allowable rate not yet published), F28 (Unit 1 Section 6.14 notice history unknown), F29 (correction: the June 2024 source shows 18 capital-improvement petitions / 148 units, not 19 / 148) and F30 (the 13.1% banked figure for Unit 2 is conditional arithmetic, not a finding).
+- 10 case/analysis flags T03-F01-T03-F10: owner-supplied facts, anonymization, address/year/coverage, Unit 1 legal status, banked/license/notice history, illustrative arithmetic, 94122 SAFMR blank, no cap/approval/both-units guarantee, narrow corporate/individual evidence, and conservative checklist only.
 
 Every flag on the site includes official source links. Unverified value cells are blank.
 """
@@ -109,7 +109,7 @@ Not legal advice. No attorney approval or guarantee of no complaint/lawsuit is c
 """
 
 CSS_TEXT = r"""
-:root{--ink:#14213d;--muted:#5b6b84;--bg:#f5f7fb;--card:#fff;--line:#dce3ef;--accent:#0b6e4f;--accent2:#1f4e79;--warn:#9a6700;--warnbg:#fff8e1;--okbg:#eaf6ef;--flagbg:#fff1f1;--flag:#a12424}
+:root{--ink:#14213d;--muted:#5b6b84;--bg:#f5f7fb;--card:#fff;--line:#dce3ef;--accent:#0b6e4f;--accent2:#1f4e79;--warn:#9a6700;--warnbg:#fff8e1;--okbg:#eaf6ef;--flagbg:#fff1f1;--flag:#a12424;--owner:#5b4b8a;--ownerbg:#f1eefc}
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
 a{color:var(--accent2);text-decoration:none}
@@ -144,6 +144,10 @@ td.blank{color:var(--muted);font-style:italic}
 .badge.verified{background:var(--okbg);color:var(--accent)}
 .badge.review{background:var(--warnbg);color:var(--warn)}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
+.badge.owner{background:var(--ownerbg);color:var(--owner)}
+.owner-src{font-size:.78rem;color:var(--owner)}
+td.blank{color:var(--warn);font-style:italic}
+@media print{nav,.cta{display:none}section,.hero{box-shadow:none}}
 .src a{display:inline-block;margin:0 .25rem .2rem 0;font-size:.78rem;background:#eef3fa;border:1px solid #d3ddef;padding:.1rem .35rem;border-radius:5px}
 .flaglink{font-weight:700;color:var(--flag)}
 .flagged-banner{background:var(--flagbg);border:1px solid #f0c2c2;border-left:5px solid var(--flag);padding:1rem;border-radius:10px;margin:1rem 0}

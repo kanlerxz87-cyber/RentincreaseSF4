@@ -21,7 +21,8 @@
             "S27"
           ],
           "notes": "Does NOT apply to units under SF Rent Ordinance limits.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-02",
@@ -33,7 +34,8 @@
             "S36"
           ],
           "notes": "CPI-U April-over-April, rounded nearest 0.1%, Aug. 1 cutoff.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-03",
@@ -45,7 +47,8 @@
             "S36"
           ],
           "notes": "Local protections remain.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-04",
@@ -56,7 +59,8 @@
             "S27"
           ],
           "notes": "Relocation assistance for no-fault evictions.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-05",
@@ -67,7 +71,8 @@
             "S35"
           ],
           "notes": "Personal delivery/mail rules.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-06",
@@ -79,7 +84,8 @@
             "S37"
           ],
           "notes": "Not a reset for existing tenancy.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-07",
@@ -90,7 +96,8 @@
             "S37"
           ],
           "notes": "Co-tenants excluded.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-08",
@@ -101,7 +108,8 @@
             "S37"
           ],
           "notes": "Critical unresolved Unit 1 issue.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-09",
@@ -113,7 +121,8 @@
             "S39"
           ],
           "notes": "Includes perception/association.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-10",
@@ -124,7 +133,8 @@
             "S38"
           ],
           "notes": "Source-of-income and aggregate-income rules.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-11",
@@ -135,7 +145,8 @@
             "S27"
           ],
           "notes": "AB 1482 notice language.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "ST-12",
@@ -147,7 +158,8 @@
             "S36"
           ],
           "notes": "State court enforcement; Rent Board cannot enforce state law.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

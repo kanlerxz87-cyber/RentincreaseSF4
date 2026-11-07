@@ -22,7 +22,8 @@
             "S43"
           ],
           "notes": "FY2027 FMR; current federal FY on 2026-11-06.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "MKT-02",
@@ -34,7 +35,8 @@
             "S43"
           ],
           "notes": "FY2027 FMR.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "MKT-03",
@@ -46,7 +48,8 @@
             "S43"
           ],
           "notes": "FY2027 FMR.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "MKT-04",
@@ -58,7 +61,8 @@
             "S43"
           ],
           "notes": "FY2027 FMR.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "MKT-05",
@@ -70,7 +74,8 @@
             "S43"
           ],
           "notes": "FY2027 FMR.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     },
@@ -94,7 +99,8 @@
             "S43"
           ],
           "notes": "FY2026 revised effective May 21, 2026; historical as of 2026-11-06.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "MKT-07",
@@ -107,7 +113,8 @@
             "S51"
           ],
           "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07"
+          "flag_id": "T03-F07",
+          "source_note": ""
         },
         {
           "id": "MKT-08",
@@ -120,7 +127,8 @@
             "S52"
           ],
           "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07"
+          "flag_id": "T03-F07",
+          "source_note": ""
         },
         {
           "id": "MKT-09",
@@ -132,7 +140,8 @@
             "S44"
           ],
           "notes": "Not a legal basis for a private rent increase.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

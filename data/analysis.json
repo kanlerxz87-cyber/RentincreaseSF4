@@ -22,7 +22,8 @@
             "S02"
           ],
           "notes": "Once every 12 months; license; notice.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-02",
@@ -34,7 +35,8 @@
             "S36"
           ],
           "notes": "Local protections remain.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-03",
@@ -48,7 +50,8 @@
             "S42"
           ],
           "notes": "HUD FMR/SAFMR are voucher standards.",
-          "flag_id": "F22"
+          "flag_id": "F22",
+          "source_note": ""
         },
         {
           "id": "AN-04",
@@ -59,7 +62,8 @@
             "S42"
           ],
           "notes": "Current eCFR as of 11/04/2026.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-05",
@@ -71,7 +75,8 @@
             "S39"
           ],
           "notes": "State overlay.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-06",
@@ -82,7 +87,8 @@
             "S22"
           ],
           "notes": "Larson footnote flagged.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-07",
@@ -98,7 +104,8 @@
             "S37"
           ],
           "notes": "No market-rate reset recommended.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-08",
@@ -111,7 +118,8 @@
             "S38"
           ],
           "notes": "Document neutral eligibility/anniversary reasons; no guarantee.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-09",
@@ -122,7 +130,8 @@
             "S10"
           ],
           "notes": "Special Circumstances petition required for comparable-rent reset.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-10",
@@ -133,7 +142,8 @@
             "S05"
           ],
           "notes": "Blank and flagged.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-11",
@@ -145,7 +155,8 @@
             "S49"
           ],
           "notes": "Not SF-specific.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-12",
@@ -156,7 +167,8 @@
             "S29"
           ],
           "notes": "No generalization.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-13",
@@ -171,7 +183,8 @@
             "S31"
           ],
           "notes": "TRC is eviction-focused.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-14",
@@ -185,7 +198,8 @@
             "S42"
           ],
           "notes": "No guarantee of no complaint/lawsuit.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-15",
@@ -197,7 +211,25 @@
             "S43"
           ],
           "notes": "Needs review does not block merge.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "AN-20",
+          "label": "What a tenant-side reviewer would test",
+          "value": "1) current license on the effective date, 2) correct rate for that date, 3) 12 months since the last increase, 4) base rent only and no rounding up, 5) notice contents, lead time and delivery, 6) no extra charge for an added roommate, 7) no retaliation or bad-faith harassment",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S07",
+            "S35",
+            "S17",
+            "S22"
+          ],
+          "notes": "Each item is checkable against the official pages linked here; passing them is not a certification of lawfulness.",
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-16",
@@ -210,7 +242,8 @@
             "S28"
           ],
           "notes": "Checks should look at the effective date, not today's status.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-17",
@@ -223,7 +256,8 @@
             "S08"
           ],
           "notes": "Direct answer to the owner's question.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-18",
@@ -236,7 +270,8 @@
             "S54"
           ],
           "notes": "No banked amount is asserted for either unit.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "AN-19",
@@ -248,7 +283,8 @@
             "S53"
           ],
           "notes": "Privacy consideration; the filing is still required for a license.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }
