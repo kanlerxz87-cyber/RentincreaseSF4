@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "status": "passed",
   "checks": [
     {
@@ -10,7 +10,7 @@
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "34 flagged items"
+      "detail": "36 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -25,12 +25,12 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "167 rows checked; "
+      "detail": "176 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "39 needs-review rows"
+      "detail": "40 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -308,6 +308,11 @@
       "detail": ""
     },
     {
+      "name": "executive summary forefront covers Rent Board license for individual owners",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "private intake file is excluded from git",
       "ok": true,
       "detail": ""
@@ -358,10 +363,10 @@
     "sources": 52,
     "pages": 17,
     "data_files": 19,
-    "rows_verified": 167,
-    "needs_review_rows": 39,
-    "flags": 34,
-    "checks": 70,
+    "rows_verified": 176,
+    "needs_review_rows": 40,
+    "flags": 36,
+    "checks": 71,
     "errors": 0
   }
 }

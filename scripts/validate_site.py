@@ -60,7 +60,7 @@ def main():
     source_map = {s["id"]: s for s in sources_list}
 
     check("canonical source map matches site data", len(source_map) == len(D.SOURCES) == 52, "52 official sources")
-    check("flags count matches dashboard", len(flags) == 34, "34 flagged items")
+    check("flags count matches dashboard", len(flags) == 36, "36 flagged items")
     check("source URLs use official domains", all(official_domain(s["url"]) for s in sources_list), "all source URLs checked")
     check("every source has id, title, agency, category and statement",
           all(all(k in s for k in ("id", "title", "agency", "category", "statement", "url")) for s in sources_list))
@@ -133,6 +133,9 @@ def main():
     check("index has clean landing / dashboard", "dashboard" in index_html.lower() and "Clean landing page / dashboard" in index_html)
     check("index links to Flagged for Review", 'pages/flagged.html' in index_html and "Flagged for Review" in index_html)
     check("index links to Executive Summary", 'pages/summary.html' in index_html and "Executive Summary" in index_html)
+    summary_html = (PAGES / "summary.html").read_text(encoding="utf-8")
+    check("executive summary forefront covers Rent Board license for individual owners",
+          "FOREFRONT" in summary_html and "individual" in summary_html.lower() and "Rent Increase License" in summary_html)
 
     public_md = sorted(ROOT.glob("*.md")) + sorted((ROOT / "research").rglob("*.md"))
     public_json = sorted(DATA.glob("*.json"))
