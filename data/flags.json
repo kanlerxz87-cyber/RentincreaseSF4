@@ -411,5 +411,57 @@
       "S42"
     ],
     "status": "needs review"
+  },
+  {
+    "id": "F31",
+    "title": "Merge-conflict markers were committed to COORDINATION.md",
+    "detail": "main commit 1d80419 committed raw conflict markers (<<<<<<<, =======, >>>>>>>) into COORDINATION.md and the validator did not check for them. Found by an independent scan on 2026-11-07, resolved by keeping both sessions' records, and a validator check was added so it cannot recur silently.",
+    "source_ids": [
+      "S20"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F32",
+    "title": "Flag cross-references in the source ledger were out of sequence",
+    "detail": "SOURCES.md attributed the missing next-year rate to F25 and a 25-26 Form 571 link to F28; those are F27 and a separate S03 link defect. Corrected; the substantive findings are unchanged.",
+    "source_ids": [
+      "S02",
+      "S03"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F33",
+    "title": "Rent Board Fee and Rent Increase License are easy to conflate",
+    "detail": "They are separate obligations. The licence comes from Housing Inventory reporting; the fee is a per-unit annual payment (2026-2027: $59.00 per dwelling unit, due March 1). SF.gov states expressly that requesting a fee exemption does not satisfy Housing Inventory reporting, so an owner can be fee-paid and still unlicensed, or licensed and still owe the fee.",
+    "source_ids": [
+      "S56",
+      "S07",
+      "S53"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F34",
+    "title": "Two-unit owner-occupied exemption is conditional and unverified here",
+    "detail": "AB 1482 exempts a two-unit structure only if the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU. Whether the owner ever occupied a unit in this building was not supplied, so no exemption is asserted.",
+    "source_ids": [
+      "S58",
+      "S60",
+      "S59"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F35",
+    "title": "In-law or second structure on the lot changes coverage",
+    "detail": "SF.gov states a dwelling with a legal or illegal in-law unit is a two-unit building and is not exempt from the Rent Ordinance unless both units are rented together as a single tenancy, and a single-family dwelling is not exempt if another residential structure is on the same lot. The owner described two units, which is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
+    "source_ids": [
+      "S60",
+      "S59",
+      "S06"
+    ],
+    "status": "needs review"
   }
 ]
