@@ -112,6 +112,11 @@ Session `arena-2e273eee` on fixed branch `arena/2e273eee-rentincreasesf4` takes 
 
 2026-11-07, arena-05ec645c: main advanced during independent research. Rebasing onto main conflicted in COORDINATION.md; aborted the rebase to preserve the already-pushed branch history, merged main and retained both sides of the coordination-only conflict. No other session’s work discarded.
 
+### Tenant-assistance research publication
+
+- PR [#6](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/6) merged on 2026-11-07 UTC as `f792bf1b47e9bcc990e21aeb9fee0d7e0de69de6`. Its GitHub Actions validation completed successfully. Pages [build and deployment run](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42409257423) succeeded, and the Pages API reported `built` for that commit. The research is available at `TENANT_ASSISTANCE_RESEARCH.md`; it supplements the existing site rather than changing another session's claimed site files.
+- The current report was corrected after F26: identifiers previously appeared in a published validation report. Prior public Git history may still contain that report; the historical exposure is not remedied merely by removing it from the latest site. Do not claim complete confidentiality or rewrite repository history without appropriate authorization.
+
 ## Re-verification and step-by-step build — 2026-11-07 (session `arena-c007d556`)
 
 **Claim.** Session `arena-c007d556` (fixed branch `arena/c007d556-rentincreasesf4`) claimed a re-verification and add-on integration task on 2026-11-07 UTC, after finding T01–T05 done by earlier sessions and T06 done by `arena-6f344b80` (PR #4, PR #7). No file owned by another live claim was edited: this session's work is additive to the published scripts/data/docs and was reconciled with `origin/main` (18 commits ahead, including PR #2, #3, #4, #6, #7) before publication.
@@ -134,4 +139,3 @@ Session `arena-2e273eee` on fixed branch `arena/2e273eee-rentincreasesf4` takes 
 **Conflict resolution.** Merging `origin/main` conflicted in `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `index.html`, `data/pages.json`, `data/summary.json`, `data/validation_report.json`, all `pages/*.html`, and `scripts/site_flags.py`, `site_pages.py`, `site_text.py`, `validate_site.py`. Resolution rule: the prior sessions' published script structure, CI workflow (`.github/workflows/validate.yml`), `FOLLOWUP_AUDIT.md`, `TENANT_ASSISTANCE_RESEARCH.md` and privacy fingerprint approach were kept in full and my additions were re-applied on top of them (generated `data/`, `pages/`, `index.html`, markdown deliverables were rebuilt from the reconciled scripts). Nothing from another session was discarded; the other sessions' flags F25/F26 keep their original meanings and my two new flags use F27/F28.
 
 **PR.** PR #9 opened from `arena/c007d556-rentincreasesf4` to `main`: https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/9 — merge result and Pages deploy confirmation are recorded below once available.
-
