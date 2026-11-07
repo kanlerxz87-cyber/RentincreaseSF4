@@ -59,3 +59,11 @@ Session `arena-2e273eee` on fixed branch `arena/2e273eee-rentincreasesf4` takes 
 | Task | Status | Owner | Scope |
 | --- | --- | --- | --- |
 | F01 follow-up audit and final publication | in progress | arena-2e273eee | COORDINATION.md, FOLLOWUP_AUDIT.md, scripts/, generated site/data as needed |
+
+### Follow-up audit completion
+
+- 2026-11-07: First branch-specific pull failed because the remote branch did not yet exist. Pulled/rebased origin main before initial push; no conflict and no work discarded.
+- F01 audit/integration done: fresh fetches of S01 (both chunks), S02, S27 (first chunk) confirm operative local/state rates and core notice/roommate guidance. Other historical source checks are inherited, not claimed as fresh verification. Limits and the incorrect alternative AB1482 URL are documented in FOLLOWUP_AUDIT.md, linked on every page.
+- Fixed clean-checkout privacy validation without publishing identifiers; removed blanket fresh-verification header wording; updated stale F19 deployment flag. Added GitHub Actions build/structural validation on pushes and PRs (scope extended to `.github/workflows/validate.yml`).
+- Built and validated all 167 source-linked rows, 39 blank/flagged rows, 34 flags, 52 source links; 70 checks passed, zero errors, no broken internal links. These are structural checks, not legal certification. Remaining legal/private-record unknowns remain published for review.
+- Follow-up publication in progress; prior PR #1 merge and successful Pages build confirmed using gh API. Current session uses only arena/2e273eee-rentincreasesf4 as required.
