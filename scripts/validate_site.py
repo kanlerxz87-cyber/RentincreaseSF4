@@ -21,6 +21,7 @@ OFFICIAL_DOMAINS = {
     "sf.gov", "media.api.sf.gov", "sfplanninggis.org", "default.sfplanning.org",
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
+    "sfrb.org",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -59,8 +60,8 @@ def main():
     flag_ids = {f["id"] for f in flags}
     source_map = {s["id"]: s for s in sources_list}
 
-    check("canonical source map matches site data", len(source_map) == len(D.SOURCES) == 52, "52 official sources")
-    check("flags count matches dashboard", len(flags) == 36, "36 flagged items")
+    check("canonical source map matches site data", len(source_map) == len(D.SOURCES) == 55, "55 official sources")
+    check("flags count matches dashboard", len(flags) == 38, "38 flagged items")
     check("source URLs use official domains", all(official_domain(s["url"]) for s in sources_list), "all source URLs checked")
     check("every source has id, title, agency, category and statement",
           all(all(k in s for k in ("id", "title", "agency", "category", "statement", "url")) for s in sources_list))
@@ -183,6 +184,29 @@ def main():
           "No attorney approval or guarantee" in all_text or "No attorney has approved" in all_text)
     forbidden = ["approved by a tenant lawyer", "this increase is certified lawful", "guaranteed no lawsuit", "attorney approved this increase", "we certify this increase is lawful"]
     check("no forbidden certification language", not any(s in all_text.lower() for s in forbidden))
+
+    process_html = (PAGES / "process.html").read_text(encoding="utf-8")
+    process_plain = unescape(process_html)
+    check("step-by-step license page exists in navigation",
+          "pages/process.html" in (ROOT / "index.html").read_text(encoding="utf-8"))
+    check("step-by-step license page has all 12 numbered steps",
+          all(("Step {}".format(n)) in process_plain for n in range(1, 13)))
+    check("step-by-step page links Sec. 37.15, Sec. 37.3 and the Housing Inventory",
+          "sec-3715" in process_plain and "sec-373" in process_plain and "rent-board-housing-inventory" in process_plain)
+    check("step-by-step page answers the individual-owner question",
+          "individual property owner" in process_plain.lower() and "yes." in process_plain.lower())
+
+    exec_md = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("executive summary puts the license answer first",
+          exec_md.index("Rent Increase License") < exec_md.index("## Bottom line"), "license section precedes the rate bottom line")
+    check("executive summary cites the ordinance license condition",
+          "37.3(a)(1)" in exec_md and "37.15" in exec_md)
+    check("executive summary links the official license pages",
+          "https://www.sf.gov/learn-about-rent-increases-san-francisco" in exec_md
+          and "https://www.sf.gov/rent-board-housing-inventory" in exec_md
+          and "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing" in exec_md)
+    check("executive summary states no individual-owner exception",
+          "no individual-owner exception is stated" in exec_md.lower())
 
     broken = []
     for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):

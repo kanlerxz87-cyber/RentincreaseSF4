@@ -137,6 +137,61 @@
           "flag_id": "T03-F04"
         },
         {
+          "id": "Q-11",
+          "label": "Do individual owners (not corporations) need to apply for the Rent Board license and inform the Rent Board before notifying tenants?",
+          "value": "Yes. A current Rent Increase License must be on file before an annual or banked increase takes effect, and all owners must report into the Housing Inventory first; no individual-owner or small-building exemption was found (buildings under 10 units report from March 1, 2023).",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S08",
+            "S53"
+          ],
+          "notes": "See the Step-by-Step License page.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-12",
+          "label": "Is there a separate form to tell the Rent Board about each individual increase?",
+          "value": "The official pages describe only the annual Housing Inventory report as the route to the license; no separate filing of the increase notice is described, and the license need not be included with the notice.",
+          "status": "verified",
+          "source_ids": [
+            "S07",
+            "S53",
+            "S01"
+          ],
+          "notes": "Absence of a stated requirement; counselor confirmation suggested.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-13",
+          "label": "What happens if a notice goes out without a current license?",
+          "value": "The increase may be null and void, the tenant may be entitled to a refund and may petition the Rent Board, which can schedule an Administrative Law Judge hearing.",
+          "status": "verified",
+          "source_ids": [
+            "S08",
+            "S53",
+            "S25",
+            "S26"
+          ],
+          "notes": "A tenant summary petition also prompts a letter to the landlord.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-14",
+          "label": "Does the added roommate allow a market-rate reset?",
+          "value": "No, not by itself: extra rent for an additional occupant is unlawful, and a 6.14/Costa-Hawkins increase requires specific facts plus a timely written 6.14 notice. Those facts are unverified here.",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S18",
+            "S16",
+            "S37"
+          ],
+          "notes": "No reset recommended; see flag F28.",
+          "flag_id": ""
+        },
+        {
           "id": "Q-10",
           "label": "Is any increase guaranteed lawful or lawsuit-proof?",
           "value": "No. No attorney approval or guarantee of no complaint/inquiry/lawsuit is claimed.",

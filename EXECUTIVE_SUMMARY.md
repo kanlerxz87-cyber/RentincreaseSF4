@@ -17,7 +17,17 @@ Date: 2026-11-07 UTC (Rent Board license pages re-verified 2026-11-07). Informat
 5. **Late?** You can still report and receive a license after March 1; the Rent Board assesses **no monetary penalty** for late filing — but that does not make a notice enforceable for an effective date on which no license was on file.
 6. **Only then notify tenants**, in writing: 30 days (90 days if the increase, alone or combined with another increase in the same year, exceeds 10%; +5 days if mailed), stating the dollar amount, percentage, and effective date, using the rate in effect on the increase date. Complying with the license rule does not replace any other local or state rent-increase law.
 
-Official links for manual review: SF.gov "Learn about rent increases in San Francisco" (https://www.sf.gov/learn-about-rent-increases-san-francisco) and SF.gov "The Rent Board Housing Inventory" (https://www.sf.gov/rent-board-housing-inventory). For this case, Housing Inventory reporting and a current license for either unit are **unconfirmed** (blank, flagged T03-F05) — no increase should be treated as effective until that is confirmed.
+Official links for manual review: SF.gov "Learn about rent increases in San Francisco" (https://www.sf.gov/learn-about-rent-increases-san-francisco) and SF.gov "The Rent Board Housing Inventory" (https://www.sf.gov/rent-board-housing-inventory).
+
+**What the Rent Ordinance itself says:**
+
+- **Sec. 37.3(a)(1):** "A landlord who has reported the required information about their rental unit to the Rent Board as set forth in Section 37.15 shall have a license to impose annually a rent increase which does not exceed a tenant's base rent by more than 60% of said published increase. In no event, however, shall the allowable annual increase be greater than 7%." - https://www.sf.gov/information--sec-373-rent-limitations
+- **Sec. 37.15(e):** a substantially compliant owner "shall receive a license to impose rent increases"; if not, "the license to impose rent increases shall be temporarily suspended ... but a tenant shall not be obligated to pay the increased rent for months during the period of suspension." Added by Ord. 265-20. - https://www.sf.gov/information--sec-3715-reporting-obligations-licensing
+- **Form 571 (Rent Board):** the annual increase may be imposed "without filing a petition at the Rent Board." - https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf
+
+**Scope limits:** SF.gov states the license rules apply ONLY to rent-controlled units, and that the license is not required for Section 6.14/Costa-Hawkins increases or for passthroughs allowed under the Rent Ordinance (https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory, https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins). The Housing Inventory information you submit is **public**, including the owner's name and business contact information.
+
+**Full step-by-step tables:** the site's Step-by-Step License page (`pages/process.html`) carries 12 numbered steps with an official link on every step, the ordinance text, and the case application for both units. For this case, Housing Inventory reporting and a current license for either unit are **unconfirmed** (blank, flagged T03-F05) — no increase should be treated as effective until that is confirmed.
 
 
 ## Bottom line
@@ -44,10 +54,18 @@ The federal FHA, 24 CFR 100.500 disparate-impact rule, California FEHA and SF te
 
 SEC filings show IRT Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8% and Invitation Homes 2025 total-portfolio renewal +4.6%, new -0.8%. These are portfolio-level, not SF-specific and not legal benchmarks. SF Rent Board June 2024 workload stats show 23 landlord petitions/154 units and 73 tenant petitions/73 units; this is narrow formal-petition evidence only. No official source proves what all large corporations or all individual SF owners do.
 
+## Banked increases and the 10% notice threshold
+
+A skipped increase is only banked if at least 24 full months pass without any rent increase; banked percentages are added, never compounded or prorated, and never carry over to a new tenant. Two-or-more-year increases are imposed by adding the allowable percentages and need no Rent Board petition. If a correctly banked total plus the current annual rate exceeds 10%, the notice must be 90 days rather than 30 days. No banked amount is asserted for either unit here, because neither rent history was supplied - both are blank and flagged. (https://www.sf.gov/information--banked-rent-increases, https://www.sf.gov/information--annual-rent-increase-multiple-years)
+
+## Unit 1, Section 6.14 and privacy
+
+Extra rent for an additional occupant is unlawful, and adding an occupant is not a market-rate reset. A Section 6.14 or Costa-Hawkins unlimited increase requires the last original occupant to have vacated plus a timely written 6.14 notice (served within a reasonable time, generally 60 days, after the landlord knew or should have known of the occupancy); co-tenants are not subject to a Costa-Hawkins increase at all. Whether a 6.14 notice was served on the April 2026 occupant, and whether that occupant is a co-tenant or a subtenant, was not supplied - blank and flagged (F28). Separately: replacing tenant identifiers with Tenant A-F, keeping dates and amounts, withholding any street address, and keeping the raw-identifier intake out of git is this project's privacy rule; the Rent Board's own inventory filing is public by design. (https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins, https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53.&lawCode=CIV, https://www.sf.gov/rent-board-housing-inventory)
+
 ## Flagged for Review
 
-All 36 irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), and a privacy defect found 2026-11-07 in the earlier validation report, now fixed (F26). Flagged items do not block the site or merge.
+All 38 irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), and Unit 1's unknown Section 6.14 notice history (F28). Flagged items do not block the site or merge.
 
 ## Sources
 
-52 official sources are catalogued in SOURCES.md and on the Sources page. Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.
+55 official sources are catalogued in SOURCES.md and on the Sources page. Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.

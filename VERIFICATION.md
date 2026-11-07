@@ -1,6 +1,6 @@
 # VERIFICATION.md — line-by-line verification ledger
 
-Session `arena-73f5f1a2`, verified 2026-11-06 UTC. This ledger maps every substantive finding to at least one official source. `needs review` means the item is published on the site's **Flagged for Review** page and does not block the work. Detailed exact quotes and chunk numbers are in `research/verification/line_by_line.md`; source URLs are in `SOURCES.md`.
+Session `arena-73f5f1a2`, verified 2026-11-06 UTC; re-verified by session `arena-c007d556` on 2026-11-07 UTC (rows 69–80 added below). This ledger maps every substantive finding to at least one official source. `needs review` means the item is published on the site's **Flagged for Review** page and does not block the work. Detailed exact quotes and chunk numbers are in `research/verification/line_by_line.md`; source URLs are in `SOURCES.md`.
 
 | # | Verified claim / finding | Status | Official source(s) |
 | --- | --- | --- | --- |
@@ -72,6 +72,19 @@ Session `arena-73f5f1a2`, verified 2026-11-06 UTC. This ledger maps every substa
 | 66 | GitHub Pages is already configured with legacy source `main` / `/`; site must be built at root. | verified (repo inspection) | [GitHub Pages API](https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages) |
 | 67 | Repository initially contained only `README.md` line 1 `# RentincreaseSF4`. | verified (repo inspection) | [Repository](https://github.com/kanlerxz87-cyber/RentincreaseSF4) |
 | 68 | All public site rows must carry official source links; unverified values blank and flagged. | project rule | `COORDINATION.md`, `SOURCES.md` |
+
+| 69 | A landlord must obtain a rent increase license before imposing annual allowable and/or banked increases; buildings with 1–9 residential units were covered from March 1, 2023. | verified | [S01](https://www.sf.gov/learn-about-rent-increases-san-francisco) |
+| 70 | "All owners of residential property are required to report" into the Housing Inventory; the license is generated for units reported as tenant-occupied. | verified | [S07](https://www.sf.gov/rent-board-housing-inventory) |
+| 71 | Owners of condominiums and buildings with fewer than 10 residential units have been required to report since March 1, 2023, with updates every following March; a notice effective while unlicensed may be null and void (possibly for multiple years); license rules apply only to rent-controlled units. | verified | [S08](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory) |
+| 72 | §37.15(e): substantially compliant owners receive a license; noncompliant owners' license is suspended and the tenant is not obligated to pay the increased rent for months during the suspension. | verified | [S53](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing) |
+| 73 | The license is not required for §6.14/Costa-Hawkins increases or for passthroughs allowed under the Rent Ordinance. | verified | [S08](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory), [S16](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins), [S09](https://www.sf.gov/landlord-petitions-and-passthroughs) |
+| 74 | No official page reviewed describes a separate filing of each rent increase notice with the Rent Board; the license need not be included with the notice. | verified (absence of stated requirement) | [S07](https://www.sf.gov/rent-board-housing-inventory), [S01](https://www.sf.gov/learn-about-rent-increases-san-francisco) |
+| 75 | Housing Inventory submission information is public, including owner name and business contact details. | verified | [S07](https://www.sf.gov/rent-board-housing-inventory), [S53](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing) |
+| 76 | A two-or-more-year (banked) increase is imposed by adding the allowable percentages; no petition is required for that kind of increase; no compounding; no rounding up; 30-day notice (35 if mailed). | verified | [S54](https://www.sf.gov/information--annual-rent-increase-multiple-years) |
+| 77 | No individual-owner, small-portfolio or fewer-than-10-unit exemption from the license requirement appears in the official sources. | verified (absence of exemption) | [S01](https://www.sf.gov/learn-about-rent-increases-san-francisco), [S07](https://www.sf.gov/rent-board-housing-inventory), [S08](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory), [S53](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing) |
+| 78 | No 3/1/27–2/28/28 allowable rate was published on the Current Rates page as of 2026-11-07. | needs review | [S02](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) |
+| 79 | Whether a written §6.14 notice was served on the occupant added on April 1, 2026, and whether that occupant is a co-tenant or subtenant, is not supplied. | needs review | [S16](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins), [S37](https://leginfo.legislature.ca.gov/codes_displaySection.xhtml?sectionNum=1954.53.&lawCode=CIV) |
+| 80 | Site rebuilt and re-validated on 2026-11-07: 216 rows, 44 needs-review rows, 36 flags, 55 official sources, 81 checks, 0 errors. | verified (build) | `data/validation_report.json` |
 
 ## Verification performed
 

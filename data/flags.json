@@ -261,6 +261,27 @@
     "status": "needs review"
   },
   {
+    "id": "F27",
+    "title": "Next year's allowable rate not yet published",
+    "detail": "The Current Rates page, re-checked 2026-11-07, lists 1.6% only through 2/28/27. An increase whose effective date is on or after 3/1/27 needs the next published rate; no estimate is substituted here.",
+    "source_ids": [
+      "S02",
+      "S01"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F28",
+    "title": "Unit 1 Section 6.14 notice history unknown",
+    "detail": "Whether a written Section 6.14 notice was served on the occupant added in the April 1, 2026 continuing tenancy (within a reasonable time, generally 60 days), and whether that occupant is a co-tenant or a subtenant, was not supplied. No market-rate reset is inferred.",
+    "source_ids": [
+      "S16",
+      "S15",
+      "S37"
+    ],
+    "status": "needs review"
+  },
+  {
     "id": "T03-F01",
     "title": "Case facts not official-verified",
     "detail": "Dates and amounts preserved; official source cells blank.",
