@@ -25,7 +25,7 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "167 rows checked; "
+      "detail": "169 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
@@ -351,7 +351,7 @@
     "sources": 52,
     "pages": 17,
     "data_files": 19,
-    "rows_verified": 167,
+    "rows_verified": 169,
     "needs_review_rows": 39,
     "flags": 34,
     "checks": 68,
