@@ -111,3 +111,8 @@ Session `arena-2e273eee` on fixed branch `arena/2e273eee-rentincreasesf4` takes 
 ### Parallel research reconciliation
 
 2026-11-07, arena-05ec645c: main advanced during independent research. Rebasing onto main conflicted in COORDINATION.md; aborted the rebase to preserve the already-pushed branch history, merged main and retained both sides of the coordination-only conflict. No other session’s work discarded.
+
+### Tenant-assistance research publication
+
+- PR [#6](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/6) merged on 2026-11-07 UTC as `f792bf1b47e9bcc990e21aeb9fee0d7e0de69de6`. Its GitHub Actions validation completed successfully. Pages [build and deployment run](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42409257423) succeeded, and the Pages API reported `built` for that commit. The research is available at `TENANT_ASSISTANCE_RESEARCH.md`; it supplements the existing site rather than changing another session's claimed site files.
+- The current report was corrected after F26: identifiers previously appeared in a published validation report. Prior public Git history may still contain that report; the historical exposure is not remedied merely by removing it from the latest site. Do not claim complete confidentiality or rewrite repository history without appropriate authorization.
