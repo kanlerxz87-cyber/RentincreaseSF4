@@ -2,6 +2,7 @@
 
 NAV = [
     ("summary", "Executive Summary"),
+    ("process", "Step-by-Step License"),
     ("requirements", "Requirements"),
     ("rates", "Rates"),
     ("local", "Local Law"),
@@ -21,10 +22,11 @@ NAV = [
 ]
 
 CARDS = [
+    ("Rent Board license", "Required", "process", "Individual owners included; buildings under 10 units must report since March 1, 2023."),
     ("Current local rate", "1.6%", "rates", "Effective 3/1/26-2/28/27 for covered units."),
     ("State-only SF cap", "8.8%", "state", "AB 1482 8/1/26-7/31/27; does not replace SF Rent Ordinance limits."),
-    ("Verified sources", "52", "sources", "Official government and SEC links for manual review."),
-    ("Flagged items", "34", "flagged", "Published with source links; do not block the site."),
+    ("Verified sources", "55", "sources", "Official government and SEC links for manual review."),
+    ("Flagged items", "36", "flagged", "Published with source links; do not block the site."),
     ("Anonymized units", "2", "case", "Placeholder tenant IDs; dates and amounts unchanged."),
     ("Federal cap", "Blank", "federal", "No official general private-rent cap found; flagged."),
     ("94122 SAFMR", "Blank", "market", "Official ZIP row not obtained; flagged."),
@@ -66,4 +68,6 @@ FLAGS = [
     {"id": "T03-F08", "title": "No cap / approval / both-units guarantee", "detail": "Conservative checklist only.", "source_ids": ["S43", "S42", "S23", "S24"], "status": "needs review"},
     {"id": "T03-F09", "title": "No all-corporate / all-individual source", "detail": "SEC and Rent Board figures are narrow evidence.", "source_ids": ["S48", "S49", "S29"], "status": "needs review"},
     {"id": "T03-F10", "title": "Conservative compliance checklist only", "detail": "No claim of actual attorney approval or guarantee.", "source_ids": ["S01", "S07", "S35", "S42"], "status": "needs review"},
+    {"id": "F25", "title": "Next year's allowable rate not yet published", "detail": "The Current Rates page checked 2026-11-07 lists 1.6% only through 2/28/27. An increase with an effective date on or after 3/1/27 needs the next published rate; no estimate is substituted here.", "source_ids": ["S02", "S01"], "status": "needs review"},
+    {"id": "F26", "title": "Unit 1 6.14 notice history unknown", "detail": "Whether a written Section 6.14 notice was served on the occupant added in the April 1, 2026 continuing tenancy, and whether that occupant is a co-tenant or a subtenant, was not supplied. No market-rate reset is inferred.", "source_ids": ["S16", "S15", "S37"], "status": "needs review"},
 ]

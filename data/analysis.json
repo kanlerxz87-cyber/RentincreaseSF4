@@ -190,7 +190,7 @@
         {
           "id": "AN-15",
           "label": "Flagged items do not block",
-          "value": "All 34 flags published with source links",
+          "value": "All 36 flags published with source links",
           "status": "verified",
           "source_ids": [
             "S01",

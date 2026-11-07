@@ -1,6 +1,6 @@
 """Official source map for the public site."""
 
-DATE = "2026-11-06"
+DATE = "2026-11-07"
 
 DISCLAIMER = (
     "Informational compliance research, not legal advice. No attorney has approved "
@@ -11,7 +11,7 @@ DISCLAIMER = (
 
 SOURCES = {
     "S01": {"agency": "SF Rent Board", "title": "Learn about rent increases in San Francisco", "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco", "category": "Local", "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants."},
-    "S02": {"agency": "SF Rent Board", "title": "Current Rates", "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit", "category": "Local", "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25."},
+    "S02": {"agency": "SF Rent Board", "title": "Current Rates", "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit", "category": "Local", "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Page checked 2026-11-07: no 3/1/27-2/28/28 rate published yet."},
     "S03": {"agency": "SF Rent Board", "title": "Annual Rent Increase 3/1/26-2/28/27 Announced", "url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced", "category": "Local", "statement": "Jan. 14, 2026 announcement: 1.6%; $2,000 x .016 = $32.00; prior 1.4%."},
     "S04": {"agency": "SF Rent Board", "title": "Form 571 Allowable Annual Increases 26-27", "url": "https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf", "category": "Local", "statement": "Historical rates 1982-2027; 2019-2027 series 2.6, 1.8, 0.7, 2.3, 3.6, 1.7, 1.4, 1.6%. Tool title displays 517 - flagged."},
     "S05": {"agency": "SF Rent Board", "title": "Banked rent increases", "url": "https://www.sf.gov/information--banked-rent-increases", "category": "Local", "statement": "24 full months; no compounding/prorating; add percentages; license; notice states banked portion; example inconsistency flagged."},
@@ -62,4 +62,7 @@ SOURCES = {
     "S50": {"agency": "HUD", "title": "FY2027 Small Area FMR data (xlsx)", "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY27_safmrs.xlsx", "category": "Federal", "statement": "Official xlsx listed; not parsed successfully; 94122 row left blank."},
     "S51": {"agency": "HUD", "title": "FY2026 revised Small Area FMR data (xlsx)", "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/fy2026_safmrs_revised.xlsx", "category": "Federal", "statement": "Fetch returned HTTP 500; 94122 row left blank."},
     "S52": {"agency": "HUD", "title": "FY2027 Small Area FMR Schedule", "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_Small_Area_FMR_Schedule.pdf", "category": "Federal", "statement": "Official schedule listed; 94122 row not parsed; blank."},
+    "S53": {"agency": "SF Admin Code", "title": "Sec. 37.15 Reporting Obligations; Licensing", "url": "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing", "category": "Local", "statement": "Owners must report unit data under penalty of perjury; condominiums and units in buildings with fewer than 10 units report from March 1, 2023 and annually by March 1; substantially compliant owners receive a license to impose rent increases; otherwise the license is suspended and the tenant is not obligated to pay the increased rent for months during the suspension. Added by Ord. 265-20."},
+    "S54": {"agency": "SF Rent Board", "title": "Annual rent increase for multiple years", "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years", "category": "Local", "statement": "Increase for two or more years by adding the allowable percentages; increases cannot be compounded; no petition required for these increases; no rounding up; 30-day notice (35 if mailed); base rent only."},
+    "S55": {"agency": "SF Rent Board", "title": "Rent Board Portal", "url": "https://portal.sfrb.org/", "category": "Local", "statement": "Official portal to create an owner account, report into the Housing Inventory and check Rent Increase License status by address or APN."},
 }

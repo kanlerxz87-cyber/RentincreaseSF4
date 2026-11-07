@@ -145,9 +145,24 @@ def flagged_page_html():
     out.append(footer_html(True))
     return "".join(out)
 
+def page_sources(page):
+    ids = []
+    for sec in page.get("sections", []):
+        for r in sec["rows"]:
+            for sid in r["source_ids"]:
+                if sid not in ids:
+                    ids.append(sid)
+    return ids
+
 def index_html():
     out = [header_html("Rental increase SF", "Executive-summary dashboard for an anonymized San Francisco rent-increase case.", "", False)]
-    out.append('<section class="hero"><h2>Clean landing page / dashboard</h2><p>Official-source-linked findings, local / state / federal rules, anonymized case facts, calculations, analysis, and a clearly labeled Flagged for Review page.</p><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
+    out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
+               '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
+               '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
+               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a></p>'
+               '<div class="disclaimer">{}</div></section>'.format(
+                   source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
+    out.append('<section class="hero"><h2>Clean landing page / dashboard</h2><p>Official-source-linked findings, local / state / federal rules, anonymized case facts, calculations, analysis, and a clearly labeled Flagged for Review page.</p></section>')
     out.append('<div class="cards">')
     for label, value, slug, desc in D.CARDS:
         out.append('<div class="card"><div class="k">{}</div><div class="v">{}</div><div class="d">{}</div><a href="pages/{}.html">Open {} &rarr;</a></div>'.format(
@@ -156,8 +171,18 @@ def index_html():
     out.append("</div>")
     out.append('<section><h2>Quick navigation</h2><div class="tablewrap"><table><thead><tr><th>Category</th><th>What it contains</th><th>Official source(s)</th></tr></thead><tbody>')
     for slug, title in D.NAV:
-        out.append('<tr><td><a href="pages/{}.html">{}</a></td><td>Source-linked findings and easy-read tables.</td><td>{}</td></tr>'.format(
-            e(slug), e(title), source_links(["S01", "S43"])
+        if slug == "sources":
+            desc = "All 55 official sources with manual-review links."
+            sids = ["S01", "S07", "S53", "S27", "S43"]
+        elif slug == "flagged":
+            desc = "Clearly labeled irregularities and unverified items, each with official source links."
+            sids = ["S01", "S07", "S08", "S02"]
+        else:
+            page = D.PAGES[slug]
+            desc = page["description"]
+            sids = page_sources(page)[:6]
+        out.append('<tr><td><a href="pages/{}.html">{}</a></td><td>{}</td><td>{}</td></tr>'.format(
+            e(slug), e(title), e(desc), source_links(sids)
         ))
     out.append("</tbody></table></div></section>")
     out.append(footer_html(False))
