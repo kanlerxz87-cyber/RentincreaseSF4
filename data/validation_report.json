@@ -10,7 +10,7 @@
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "38 flagged items"
+      "detail": "40 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -23,14 +23,24 @@
       "detail": ""
     },
     {
+      "name": "row IDs are unique across all pages",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "owner-supplied case rows are published and labelled",
+      "ok": true,
+      "detail": "23 owner-supplied rows (CASE-01, CASE-02, CASE-03 ...)"
+    },
+    {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "226 rows checked; "
+      "detail": "243 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "44 needs-review rows"
+      "detail": "33 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -308,7 +318,7 @@
       "detail": ""
     },
     {
-      "name": "index has clean landing / dashboard",
+      "name": "index explains the badges and leads with the direct answer",
       "ok": true,
       "detail": ""
     },
@@ -349,6 +359,11 @@
     },
     {
       "name": "dates, amounts and placeholder IDs preserved",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no raw initials in the anonymized case files",
       "ok": true,
       "detail": ""
     },
@@ -418,10 +433,10 @@
     "sources": 55,
     "pages": 18,
     "data_files": 20,
-    "rows_verified": 226,
-    "needs_review_rows": 44,
-    "flags": 38,
-    "checks": 82,
+    "rows_verified": 243,
+    "needs_review_rows": 33,
+    "flags": 40,
+    "checks": 85,
     "errors": 0
   }
 }

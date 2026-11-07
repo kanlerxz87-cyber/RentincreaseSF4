@@ -60,20 +60,30 @@ def main():
     flag_ids = {f["id"] for f in flags}
     source_map = {s["id"]: s for s in sources_list}
 
-    check("canonical source map matches site data", len(source_map) == len(D.SOURCES) == 55, "55 official sources")
-    check("flags count matches dashboard", len(flags) == 38, "38 flagged items")
+    check("canonical source map matches site data", len(source_map) == len(D.SOURCES), "{} official sources".format(len(D.SOURCES)))
+    check("flags count matches dashboard", len(flags) == len(D.FLAGS), "{} flagged items".format(len(D.FLAGS)))
     check("source URLs use official domains", all(official_domain(s["url"]) for s in sources_list), "all source URLs checked")
     check("every source has id, title, agency, category and statement",
           all(all(k in s for k in ("id", "title", "agency", "category", "statement", "url")) for s in sources_list))
 
     row_count = 0
     needs_review_count = 0
+    owner_rows = []
     row_errors = []
     for slug, page in pages.items():
         for sec in page["sections"]:
             for r in sec["rows"]:
                 row_count += 1
                 rid = r.get("id", "?")
+                if r.get("status") == "owner supplied":
+                    owner_rows.append(rid)
+                    if r.get("source_ids"):
+                        row_errors.append("{} is owner-supplied but carries official source_ids".format(rid))
+                    if not r.get("source_note"):
+                        row_errors.append("{} is owner-supplied but has no source note".format(rid))
+                    if not r.get("value"):
+                        row_errors.append("{} is owner-supplied but has no value".format(rid))
+                    continue
                 if not r.get("source_ids"):
                     row_errors.append("{} has no source_ids".format(rid))
                 for sid in r["source_ids"]:
@@ -93,6 +103,10 @@ def main():
                         row_errors.append("{} flag_id {} not published".format(rid, r["flag_id"]))
                 if r.get("flag_id") and r["flag_id"] not in flag_ids:
                     row_errors.append("{} flag_id {} not published".format(rid, r["flag_id"]))
+    import collections as _c
+    dupes = [i for i, n in _c.Counter(r["id"] for pg in pages.values() for sec in pg["sections"] for r in sec["rows"]).items() if n > 1]
+    check("row IDs are unique across all pages", not dupes, ", ".join(dupes[:5]))
+    check("owner-supplied case rows are published and labelled", len(owner_rows) >= 10, "{} owner-supplied rows ({} ...)".format(len(owner_rows), ", ".join(owner_rows[:3])))
     check("every table row has valid official source links", not row_errors, "{} rows checked; {}".format(row_count, "; ".join(row_errors[:5])))
     check("unverified rows are blank and flagged", needs_review_count > 0, "{} needs-review rows".format(needs_review_count))
 
@@ -131,7 +145,7 @@ def main():
     check("site build files exist", all(p.exists() for p in required_files))
 
     index_html = (ROOT / "index.html").read_text(encoding="utf-8")
-    check("index has clean landing / dashboard", "dashboard" in index_html.lower() and "Clean landing page / dashboard" in index_html)
+    check("index explains the badges and leads with the direct answer", "How to read this dashboard" in index_html and "Direct answer" in index_html)
     check("index links to Flagged for Review", 'pages/flagged.html' in index_html and "Flagged for Review" in index_html)
     check("index links to Executive Summary", 'pages/summary.html' in index_html and "Executive Summary" in index_html)
     summary_html = (PAGES / "summary.html").read_text(encoding="utf-8")
@@ -176,6 +190,9 @@ def main():
     case_text = (DATA / "case.json").read_text(encoding="utf-8")
     expected_case = ["February 1, 2025", "$3,995", "April 1, 2026", "June 1, 2019", "$3,150"] + ["Tenant {}".format(c) for c in "ABCDEF"]
     check("dates, amounts and placeholder IDs preserved", all(s in case_text for s in expected_case))
+    initial_hits = [str(x.relative_to(ROOT)) for x in (DATA / "case.json", PAGES / "case.html")
+                    if re.search(r"\b[A-Z]{1,2}\s[A-Z]{1,2}\b", x.read_text(encoding="utf-8"))]
+    check("no raw initials in the anonymized case files", not initial_hits, "; ".join(initial_hits[:3]))
 
     all_text = "\n".join(p.read_text(encoding="utf-8") for p in public_files if p.suffix in (".html", ".md", ".json", ".css"))
     check("conservative compliance checklist wording present",

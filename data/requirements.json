@@ -23,7 +23,8 @@
             "S43"
           ],
           "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-02",
@@ -34,7 +35,8 @@
             "S43"
           ],
           "notes": "Legacy Pages source main /.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-03",
@@ -45,7 +47,8 @@
             "S20"
           ],
           "notes": "This page.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-04",
@@ -58,7 +61,8 @@
             "S43"
           ],
           "notes": "Questions & Answers page.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-05",
@@ -69,7 +73,8 @@
             "S20"
           ],
           "notes": "REPO_REVIEW.md.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-06",
@@ -81,7 +86,8 @@
             "S43"
           ],
           "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-07",
@@ -92,7 +98,8 @@
             "S01"
           ],
           "notes": "Official source(s) column.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-08",
@@ -104,7 +111,8 @@
             "S43"
           ],
           "notes": "Flagged for Review page.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-09",
@@ -115,7 +123,8 @@
             "S01"
           ],
           "notes": "Validation enforces blank + flag.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-10",
@@ -126,7 +135,8 @@
             "S23"
           ],
           "notes": "Privacy scan in validation.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-11",
@@ -137,7 +147,8 @@
             "S23"
           ],
           "notes": "No real names, initials, contact details or exact address.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-12",
@@ -148,7 +159,8 @@
             "S01"
           ],
           "notes": "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-13",
@@ -159,7 +171,8 @@
             "S43"
           ],
           "notes": "index.html and pages/.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-14",
@@ -170,7 +183,8 @@
             "S43"
           ],
           "notes": "Cards and status badges.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-15",
@@ -181,7 +195,8 @@
             "S01"
           ],
           "notes": "Tables on every subpage.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-16",
@@ -192,7 +207,8 @@
             "S42"
           ],
           "notes": "Analysis & Findings page.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-17",
@@ -203,7 +219,8 @@
             "S01"
           ],
           "notes": "pages/flagged.html.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-18",
@@ -214,7 +231,8 @@
             "S01"
           ],
           "notes": "Sources page.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-19",
@@ -225,7 +243,8 @@
             "S43"
           ],
           "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
-          "flag_id": "F19"
+          "flag_id": "F19",
+          "source_note": ""
         },
         {
           "id": "REQ-20",
@@ -236,7 +255,8 @@
             "S43"
           ],
           "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
-          "flag_id": "F19"
+          "flag_id": "F19",
+          "source_note": ""
         },
         {
           "id": "REQ-22",
@@ -249,7 +269,8 @@
             "S35"
           ],
           "notes": "Every step carries official links.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-23",
@@ -262,7 +283,8 @@
             "S04"
           ],
           "notes": "Licensing condition is in the ordinance itself.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-24",
@@ -276,7 +298,8 @@
             "S02"
           ],
           "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REQ-21",
@@ -290,7 +313,8 @@
             "S42"
           ],
           "notes": "No attorney approval or guarantee.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }
