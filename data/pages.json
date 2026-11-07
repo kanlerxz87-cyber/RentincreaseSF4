@@ -14,6 +14,18 @@
         ],
         "rows": [
           {
+            "id": "SUM-00",
+            "label": "Lead answer: individual owner, license and notice",
+            "value": "Yes. Individual owners are included: all residential property owners must report in the Rent Board Housing Inventory; tenant-occupied units receive a license after submission. For an ordinary annual/banked increase, have a current license by the effective date; SF.gov says it need not accompany the notice.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07"
+            ],
+            "notes": "The official process reviewed does not list a separate routine per-increase Board filing before notice. Petition-based increases may require filing before notice. A license does not prevent a tenant from challenging an increase.",
+            "flag_id": ""
+          },
+          {
             "id": "SUM-01",
             "label": "Current SF annual allowable increase",
             "value": "1.6% effective 3/1/26-2/28/27",
@@ -55,14 +67,14 @@
           {
             "id": "SUM-04",
             "label": "Rent Increase License",
-            "value": "Current license required before annual/banked increase takes effect",
+            "value": "Current license required by the effective date of annual/banked increase",
             "status": "verified",
             "source_ids": [
               "S01",
               "S07",
               "S08"
             ],
-            "notes": "Unlicensed increase may be null/void.",
+            "notes": "Housing Inventory page says license need not be included with the notice; unlicensed increase may be unenforceable.",
             "flag_id": ""
           },
           {
@@ -2045,7 +2057,7 @@
           {
             "id": "Q-04",
             "label": "What is the correct tenant-notice method?",
-            "value": "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; license first; 827 delivery rules.",
+            "value": "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; Civil Code 827 delivery rules.",
             "status": "verified",
             "source_ids": [
               "S01",
@@ -2053,7 +2065,7 @@
               "S35",
               "S07"
             ],
-            "notes": "Conservative checklist capable of lawyer review.",
+            "notes": "For an ordinary annual/banked increase, current license must be in place by effective date; it need not accompany the notice. File a required petition/worksheet before notice.",
             "flag_id": ""
           },
           {
@@ -2138,6 +2150,18 @@
               "S42"
             ],
             "notes": "Conservative compliance checklist only.",
+            "flag_id": ""
+          },
+          {
+            "id": "Q-11",
+            "label": "As an individual owner, must I report to the Rent Board and get a license before notifying tenants?",
+            "value": "Yes, individual owners are included in the requirement for all residential property owners to report through the Housing Inventory. A tenant-occupied unit's license is generated after submission and must be current by the increase's effective date. The license need not accompany the notice; the official ordinary annual-increase instructions do not specify a separate filing of each rent increase with the Board before tenant notice.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07"
+            ],
+            "notes": "Petition-based increases have separate procedures and may require a Board petition/worksheet before notice. A license does not bar challenges.",
             "flag_id": ""
           }
         ]

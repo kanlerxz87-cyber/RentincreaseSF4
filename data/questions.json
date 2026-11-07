@@ -54,7 +54,7 @@
         {
           "id": "Q-04",
           "label": "What is the correct tenant-notice method?",
-          "value": "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; license first; 827 delivery rules.",
+          "value": "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; Civil Code 827 delivery rules.",
           "status": "verified",
           "source_ids": [
             "S01",
@@ -62,7 +62,7 @@
             "S35",
             "S07"
           ],
-          "notes": "Conservative checklist capable of lawyer review.",
+          "notes": "For an ordinary annual/banked increase, current license must be in place by effective date; it need not accompany the notice. File a required petition/worksheet before notice.",
           "flag_id": ""
         },
         {
@@ -147,6 +147,18 @@
             "S42"
           ],
           "notes": "Conservative compliance checklist only.",
+          "flag_id": ""
+        },
+        {
+          "id": "Q-11",
+          "label": "As an individual owner, must I report to the Rent Board and get a license before notifying tenants?",
+          "value": "Yes, individual owners are included in the requirement for all residential property owners to report through the Housing Inventory. A tenant-occupied unit's license is generated after submission and must be current by the increase's effective date. The license need not accompany the notice; the official ordinary annual-increase instructions do not specify a separate filing of each rent increase with the Board before tenant notice.",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S07"
+          ],
+          "notes": "Petition-based increases have separate procedures and may require a Board petition/worksheet before notice. A license does not bar challenges.",
           "flag_id": ""
         }
       ]

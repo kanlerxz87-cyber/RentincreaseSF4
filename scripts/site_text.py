@@ -2,11 +2,17 @@
 
 EXECUTIVE_SUMMARY_TEXT = """# Executive Summary - Rental increase SF
 
-Date: 2026-11-06 UTC. Informational compliance research, not legal advice.
+Date: 2026-11-07 UTC. Informational compliance research, not legal advice. SF Rent Board license/Housing Inventory guidance was rechecked on 2026-11-07.
+
+## First: the Rent Board process for an individual owner
+
+**Yes—an individual owner is included.** SF.gov says all residential property owners must report their property through the Rent Board Housing Inventory; owners reporting a tenant-occupied unit receive a Rent Increase License after submission. The official instructions require a current license **by the effective date** of an annual or banked increase. They also say the license **does not need to accompany the tenant notice**. So the ordinary sequence is: (1) report the property through the Housing Inventory, (2) ensure a current license is on file for the effective date, and (3) give the tenant legally compliant written notice. On the official pages reviewed, a separate filing of each routine annual increase with the Board before tenant notice is not listed. This is different from petition/worksheet increases, for which Rent Board procedures can require filing before notice. A license is not a Rent Board approval of the proposed amount and cannot prevent a tenant from challenging it.
+
+Official links: [Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory) and [Learn about rent increases in San Francisco](https://www.sf.gov/learn-about-rent-increases-san-francisco). Housing Inventory submissions contain some public information, including owner/business contact details; review the official form and privacy implications before submitting. Do not publish personal owner or tenant data on this site.
 
 ## Bottom line
 
-For a unit covered by the San Francisco Rent Ordinance, the current ordinary annual allowable increase is **1.6% effective 3/1/26-2/28/27**, once every 12 months on the tenant's anniversary date. A current Rent Increase License must be on file before the increase takes effect; the increase is calculated on base rent only, is not rounded up, and requires written notice. California's state-only AB 1482 cap is **8.8% for San Francisco 8/1/26-7/31/27**, but SF.gov says it does **not** apply to units already under the SF Rent Ordinance's rent-increase limits. No official general federal private-rent cap was found; HUD FMR/SAFMR figures are voucher payment standards, not rent caps.
+For a unit covered by the San Francisco Rent Ordinance, the current ordinary annual allowable increase is **1.6% effective 3/1/26-2/28/27**, once every 12 months on the tenant's anniversary date. The increase is calculated on base rent only, is not rounded up, and requires written notice. California's state-only AB 1482 cap is **8.8% for San Francisco 8/1/26-7/31/27**, but SF.gov says it does **not** apply to units already under the SF Rent Ordinance's rent-increase limits. No official general federal private-rent cap was found; HUD FMR/SAFMR figures are voucher payment standards, not rent caps.
 
 ## Case handling
 
