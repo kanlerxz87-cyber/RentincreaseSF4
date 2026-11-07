@@ -1,6 +1,6 @@
 """Official source map for the public site."""
 
-DATE = "2026-11-06"
+DATE = "2026-11-07"
 
 DISCLAIMER = (
     "Informational compliance research, not legal advice. No attorney has approved "

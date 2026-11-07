@@ -2,7 +2,25 @@
 
 EXECUTIVE_SUMMARY_TEXT = """# Executive Summary - Rental increase SF
 
-Date: 2026-11-06 UTC. Informational compliance research, not legal advice.
+Date: 2026-11-07 UTC (Rent Board license pages re-verified 2026-11-07). Informational compliance research, not legal advice.
+
+## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
+
+**Question:** "I am just an individual property owner and not part of a corporation — do I still need to apply for the license and inform the Rent Board before notifying tenants of a rent increase?"
+
+**Answer: Yes.** SF.gov states: "A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases on a tenant." No individual-owner exception is stated. The requirement has applied since July 1, 2022 — and since **March 1, 2023 for condominiums and buildings with 1-9 residential units** — so a small individual-owned building in San Francisco is covered now. "Informing the Rent Board" and "getting the license" are the same process: you report into the **Rent Board Housing Inventory**, and the license is generated from that report.
+
+**Step by step (do these in order, before any tenant notice takes effect):**
+
+1. **Confirm the unit is covered** by the SF Rent Ordinance (check the property in the SF Planning Property Information Map; many units built on/before June 13, 1979 are covered — the owner-supplied "built in 1940" fact is unverified, see Flagged for Review).
+2. **Report into the Rent Board Housing Inventory** via the Rent Board Portal (https://portal.sfrb.org/). SF.gov: "All owners of residential property are required to report." Reporting is free, online 24/7, due **March 1 every year**, and is submitted under penalty of perjury. The information entered is public.
+3. **Receive the Rent Increase License.** Owners who report a unit as tenant-occupied receive a rent increase license; it is **automatically generated for non-owner-occupied units**. The license does **not** need to be included with your notice to tenants.
+4. **Check the license is current and on file before the increase's effective date.** SF.gov: "A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect," and a rent increase notice "will not be enforceable without having a rent increase license on the effective date of the notice." Tenants can search the Portal to check whether you are up to date; if you miss the deadline, the Rent Board may notify your tenants that you are not in compliance. (Exact consequence wording differs between SF.gov pages — see flag F25.)
+5. **Late?** You can still report and receive a license after March 1; the Rent Board assesses **no monetary penalty** for late filing — but that does not make a notice enforceable for an effective date on which no license was on file.
+6. **Only then notify tenants**, in writing: 30 days (90 days if the increase, alone or combined with another increase in the same year, exceeds 10%; +5 days if mailed), stating the dollar amount, percentage, and effective date, using the rate in effect on the increase date. Complying with the license rule does not replace any other local or state rent-increase law.
+
+Official links for manual review: SF.gov "Learn about rent increases in San Francisco" (https://www.sf.gov/learn-about-rent-increases-san-francisco) and SF.gov "The Rent Board Housing Inventory" (https://www.sf.gov/rent-board-housing-inventory). For this case, Housing Inventory reporting and a current license for either unit are **unconfirmed** (blank, flagged T03-F05) — no increase should be treated as effective until that is confirmed.
+
 
 ## Bottom line
 
@@ -30,7 +48,7 @@ SEC filings show IRT Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8% an
 
 ## Flagged for Review
 
-All 34 irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, and the absence of any official federal cap / attorney approval / both-units rule. Flagged items do not block the site or merge.
+All 36 irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), and a privacy defect found 2026-11-07 in the earlier validation report, now fixed (F26). Flagged items do not block the site or merge.
 
 ## Sources
 
@@ -45,7 +63,7 @@ Full detail is in `research/sources/irregularities.md`, `research/sources/unveri
 
 ## Summary of flags
 
-- 24 source-quality flags F01-F24: SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, and old 1.7% example.
+- 26 source-quality flags F01-F26 (F25: SF.gov license-consequence wording differs — 'may be null/void' vs notice 'not enforceable' without a license on the effective date; F26: earlier validation report published raw identifier tokens in a check detail — fixed 2026-11-07, values withheld): SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, and old 1.7% example.
 - 10 case/analysis flags T03-F01-F10: owner-supplied facts, anonymization, address/year/coverage, Unit 1 legal status, banked/license/notice history, illustrative arithmetic, 94122 SAFMR blank, no cap/approval/both-units guarantee, narrow corporate/individual evidence, and conservative checklist only.
 
 Every flag on the site includes official source links. Unverified value cells are blank.

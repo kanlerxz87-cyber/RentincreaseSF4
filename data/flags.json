@@ -180,8 +180,8 @@
   },
   {
     "id": "F19",
-    "title": "GitHub Pages root source / merge pending",
-    "detail": "Legacy source main / requires root-level site; PR/merge/Pages result pending T05.",
+    "title": "GitHub Pages root source / this session merge pending",
+    "detail": "Legacy source main / requires root-level site. Prior PR #1 merged 2026-11-06 (merge commit a0591c3); Pages API status built. This session (T06) PR/merge/Pages result is recorded in COORDINATION.md after merge; the site row is not self-updated after its own merge.",
     "source_ids": [
       "S43"
     ],
@@ -237,6 +237,26 @@
     "source_ids": [
       "S06",
       "S02"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F25",
+    "title": "License-consequence wording differs between SF.gov pages",
+    "detail": "Site rows state an unlicensed increase 'may be null/void', while the Housing Inventory page (re-fetched 2026-11-07) states a rent increase notice 'will not be enforceable' without a rent increase license on the effective date. Exact legal consequence wording needs manual review against the Rent Ordinance; no wording is chosen over the other here.",
+    "source_ids": [
+      "S01",
+      "S07",
+      "S08"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F26",
+    "title": "Privacy: earlier validation report published raw identifier tokens",
+    "detail": "data/validation_report.json generated 2026-11-06 listed the raw tenant identifier tokens it scanned for, in a check detail. Found 2026-11-07 by session arena-6f344b80. Fixed: validate_site.py now reports only a count (values withheld) and the report was regenerated. Manual review should confirm no other published file contains those tokens.",
+    "source_ids": [
+      "S23"
     ],
     "status": "needs review"
   },
