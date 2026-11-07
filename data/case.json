@@ -261,7 +261,7 @@
             "S15"
           ],
           "notes": "Owner input: not supplied; whether a written 6.14 notice was served within a reasonable time (generally 60 days) and whether the occupant is a co-tenant or subtenant is unknown.",
-          "flag_id": "F26"
+          "flag_id": "F28"
         },
         {
           "id": "CASE-21",

@@ -180,8 +180,8 @@
   },
   {
     "id": "F19",
-    "title": "GitHub Pages root source / merge pending",
-    "detail": "Legacy source main / requires root-level site; PR/merge/Pages result pending T05.",
+    "title": "GitHub Pages deployment record",
+    "detail": "Legacy source main / requires root-level site. PR #1 merged at a0591c3; GitHub Pages API confirmed built on 2026-11-07. Follow-up publication details are recorded in COORDINATION.md.",
     "source_ids": [
       "S43"
     ],
@@ -237,6 +237,47 @@
     "source_ids": [
       "S06",
       "S02"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F25",
+    "title": "License-consequence wording differs between SF.gov pages",
+    "detail": "Site rows state an unlicensed increase 'may be null/void', while the Housing Inventory page (re-fetched 2026-11-07) states a rent increase notice 'will not be enforceable' without a rent increase license on the effective date. Exact legal consequence wording needs manual review against the Rent Ordinance; no wording is chosen over the other here.",
+    "source_ids": [
+      "S01",
+      "S07",
+      "S08"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F26",
+    "title": "Privacy: earlier validation report published raw identifier tokens",
+    "detail": "data/validation_report.json generated 2026-11-06 listed the raw tenant identifier tokens it scanned for, in a check detail. Found independently on 2026-11-07 by sessions arena-6f344b80 and arena-2e273eee (PR #2, merged). validate_site.py no longer prints raw tokens (count/fingerprint only) and the report was regenerated. Manual review should confirm no other published file contains those tokens.",
+    "source_ids": [
+      "S23"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F27",
+    "title": "Next year's allowable rate not yet published",
+    "detail": "The Current Rates page, re-checked 2026-11-07, lists 1.6% only through 2/28/27. An increase whose effective date is on or after 3/1/27 needs the next published rate; no estimate is substituted here.",
+    "source_ids": [
+      "S02",
+      "S01"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F28",
+    "title": "Unit 1 Section 6.14 notice history unknown",
+    "detail": "Whether a written Section 6.14 notice was served on the occupant added in the April 1, 2026 continuing tenancy (within a reasonable time, generally 60 days), and whether that occupant is a co-tenant or a subtenant, was not supplied. No market-rate reset is inferred.",
+    "source_ids": [
+      "S16",
+      "S15",
+      "S37"
     ],
     "status": "needs review"
   },
@@ -348,27 +389,6 @@
       "S07",
       "S35",
       "S42"
-    ],
-    "status": "needs review"
-  },
-  {
-    "id": "F25",
-    "title": "Next year's allowable rate not yet published",
-    "detail": "The Current Rates page checked 2026-11-07 lists 1.6% only through 2/28/27. An increase with an effective date on or after 3/1/27 needs the next published rate; no estimate is substituted here.",
-    "source_ids": [
-      "S02",
-      "S01"
-    ],
-    "status": "needs review"
-  },
-  {
-    "id": "F26",
-    "title": "Unit 1 6.14 notice history unknown",
-    "detail": "Whether a written Section 6.14 notice was served on the occupant added in the April 1, 2026 continuing tenancy, and whether that occupant is a co-tenant or a subtenant, was not supplied. No market-rate reset is inferred.",
-    "source_ids": [
-      "S16",
-      "S15",
-      "S37"
     ],
     "status": "needs review"
   }

@@ -1,10 +1,10 @@
 {
   "summary": {
     "title": "Executive Summary",
-    "description": "Bottom line for Rental increase SF, starting with the Rent Board license question, with every finding linked to an official source.",
+    "description": "Bottom line for Rental increase SF, with every finding linked to an official source.",
     "sections": [
       {
-        "title": "Question first: Rent Board license for an individual owner",
+        "title": "FOREFRONT - Rent Board & Rent Increase License: individual owner",
         "columns": [
           "Item",
           "Value / finding",
@@ -14,70 +14,125 @@
         ],
         "rows": [
           {
-            "id": "SUM-14",
-            "label": "Do I need a Rent Board license as an individual owner (no corporation)?",
-            "value": "Yes. A current Rent Increase License must be on file before an annual or banked increase takes effect; no individual-owner, small-portfolio or fewer-than-10-unit exemption was found.",
+            "id": "LIC-01",
+            "label": "Does an individual (non-corporate) owner still need the license?",
+            "value": "Yes - SF.gov states 'a landlord must get a rent increase license before imposing annual allowable and/or banked rent increases'; no individual-owner exception is stated on the official pages re-fetched 2026-11-07",
             "status": "verified",
             "source_ids": [
               "S01",
-              "S07",
-              "S08",
-              "S53"
+              "S07"
             ],
-            "notes": "Requirement follows the rent-controlled status of the unit, not the size of the owner.",
+            "notes": "Ownership form (individual vs corporation) is not listed as an exemption. Do not rely on being a small/individual owner.",
             "flag_id": ""
           },
           {
-            "id": "SUM-15",
-            "label": "Must I report to the Rent Board before notifying tenants?",
-            "value": "Yes. Report each unit into the Housing Inventory (buildings under 10 units since March 1, 2023; every March 1 after that); the license is generated from that report.",
-            "status": "verified",
-            "source_ids": [
-              "S07",
-              "S53",
-              "S55"
-            ],
-            "notes": "No separate filing of the increase notice itself is described.",
-            "flag_id": ""
-          },
-          {
-            "id": "SUM-16",
-            "label": "What happens if I notice an increase without a current license?",
-            "value": "The notice may be null and void, the tenant may be owed a refund, and the tenant may petition the Rent Board for an Administrative Law Judge hearing.",
-            "status": "verified",
-            "source_ids": [
-              "S08",
-              "S53",
-              "S25"
-            ],
-            "notes": "Tenants can check license status in the Rent Board Portal.",
-            "flag_id": ""
-          },
-          {
-            "id": "SUM-17",
-            "label": "Step-by-step process",
-            "value": "12 numbered steps from coverage check to notice delivery, each with its official link",
+            "id": "LIC-02",
+            "label": "Small buildings (1-9 units) timing",
+            "value": "Requirement effective July 1, 2022; March 1, 2023 for condominiums and buildings with 1-9 residential units",
             "status": "verified",
             "source_ids": [
               "S01",
+              "S07"
+            ],
+            "notes": "A small individual-owned building is therefore covered now (2026).",
+            "flag_id": ""
+          },
+          {
+            "id": "LIC-03",
+            "label": "Step 1 - Report to the Rent Board (Housing Inventory)",
+            "value": "All owners of residential property are required to report through the Rent Board Portal; reporting is free, online 24/7, due March 1 every year",
+            "status": "verified",
+            "source_ids": [
+              "S07"
+            ],
+            "notes": "This reporting is how you 'inform the Rent Board'. Information submitted is public; submit under penalty of perjury.",
+            "flag_id": ""
+          },
+          {
+            "id": "LIC-04",
+            "label": "Step 2 - License is generated",
+            "value": "Property owners who report a unit as tenant-occupied receive a rent increase license; it is automatically generated for non-owner-occupied units",
+            "status": "verified",
+            "source_ids": [
+              "S07"
+            ],
+            "notes": "The license does not need to be included with the rent increase notice to tenants.",
+            "flag_id": ""
+          },
+          {
+            "id": "LIC-05",
+            "label": "Step 3 - License must be current BEFORE the increase takes effect",
+            "value": "A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect; a notice is not enforceable without a license on the effective date",
+            "status": "verified",
+            "source_ids": [
               "S07",
-              "S53",
+              "S01"
+            ],
+            "notes": "Order matters: Housing Inventory report -> license on file -> then serve tenant notice -> effective date. See flag F25 on consequence wording.",
+            "flag_id": ""
+          },
+          {
+            "id": "LIC-06",
+            "label": "Late reporting",
+            "value": "You can still submit and receive a license after the March 1 deadline; the Rent Board does not assess monetary penalties for late filing - but the increase notice is not enforceable without a license on the effective date",
+            "status": "verified",
+            "source_ids": [
+              "S07"
+            ],
+            "notes": "Late filing does not cure a notice whose effective date passed without a license; get legal advice on any already-served notice.",
+            "flag_id": ""
+          },
+          {
+            "id": "LIC-07",
+            "label": "Step 4 - Only then notify tenants",
+            "value": "30-day written notice (90-day if >10% alone/combined in same year; +5 days if mailed) stating dollar amount, percentage and effective date, using the rate in effect on the increase date",
+            "status": "verified",
+            "source_ids": [
+              "S01",
               "S05",
               "S35"
             ],
-            "notes": "Published on the Step-by-Step License page.",
+            "notes": "License first, tenant notice second. License alone does not satisfy state/local notice law; you must still comply with all other rent increase laws.",
             "flag_id": ""
           },
           {
-            "id": "SUM-18",
-            "label": "Allowable rate for increases on or after 3/1/27",
+            "id": "LIC-08",
+            "label": "Can tenants check?",
+            "value": "Tenants can search the Rent Board Portal to see if their landlord is up to date with their rent increase license; if you miss the deadline the Rent Board may notify tenants you are not in compliance",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S08"
+            ],
+            "notes": "Assume tenants and free tenant-side legal services can and will check this before paying an increase.",
+            "flag_id": ""
+          },
+          {
+            "id": "LIC-09",
+            "label": "This case: license / Housing Inventory status",
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S02"
+              "S07",
+              "S01"
             ],
-            "notes": "Not yet published on 2026-11-07; blank rather than estimated.",
-            "flag_id": "F25"
+            "notes": "Owner-supplied intake does not confirm Housing Inventory reporting or a current license for either unit; blank and flagged. No increase should be treated as effective until this is confirmed.",
+            "flag_id": "T03-F05"
+          },
+          {
+            "id": "LIC-10",
+            "label": "Full step-by-step page",
+            "value": "12 numbered steps from coverage check to notice delivery, each with its official source link, plus the ordinance text and the case-specific application",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S53",
+              "S21",
+              "S35"
+            ],
+            "notes": "Published on the Step-by-Step License page (pages/process.html).",
+            "flag_id": ""
           }
         ]
       },
@@ -266,10 +321,10 @@
   },
   "process": {
     "title": "Step-by-Step: Rent Board License and Notice",
-    "description": "The direct answer to the licensing question, the 12-step official process, and how it applies to the two anonymized units.",
+    "description": "The direct answer to the licensing question, the ordinance text, the 12-step process, and how it applies to the two anonymized units.",
     "sections": [
       {
-        "title": "Your question first: does an individual owner need a Rent Board license?",
+        "title": "Direct answer and ordinance text",
         "columns": [
           "Item",
           "Value / finding",
@@ -279,9 +334,9 @@
         ],
         "rows": [
           {
-            "id": "LIC-01",
+            "id": "PRC-01",
             "label": "Must an individual property owner (not a corporation) get a Rent Increase License before raising rent?",
-            "value": "Yes. A landlord must have a current Rent Increase License on file before any annual or banked increase can take effect. The requirement is tied to the unit being under San Francisco rent control, not to the owner's size or corporate status.",
+            "value": "Yes. A landlord must have a current Rent Increase License on file before any annual or banked increase can take effect. The requirement follows the unit's rent-controlled status, not the owner's size or corporate form.",
             "status": "verified",
             "source_ids": [
               "S01",
@@ -293,47 +348,59 @@
             "flag_id": ""
           },
           {
-            "id": "LIC-02",
-            "label": "Must the owner report into the Rent Board Housing Inventory first?",
-            "value": "Yes. SF.gov states that all owners of residential property are required to report into the Housing Inventory; a rent increase license is generated for units reported as tenant-occupied.",
+            "id": "PRC-02",
+            "label": "What does the Rent Ordinance itself say?",
+            "value": "Section 37.3(a)(1): a landlord who has reported the required information under Section 37.15 shall have a license to impose an annual increase not exceeding 60% of the published CPI increase, never more than 7%. Section 37.15(e): a substantially compliant owner receives the license; otherwise it is suspended and the tenant is not obligated to pay the increased rent for the months of the suspension.",
             "status": "verified",
             "source_ids": [
-              "S07",
+              "S21",
               "S53"
             ],
-            "notes": "Reporting is free; the annual deadline is March 1.",
+            "notes": "The license condition is written into the ordinance, not only the SF.gov summaries.",
             "flag_id": ""
           },
           {
-            "id": "LIC-03",
+            "id": "PRC-03",
             "label": "Is there a small-owner or fewer-than-10-unit exemption?",
-            "value": "No exemption found. Owners of condominiums and buildings with fewer than 10 residential units have been required to report since March 1, 2023, with updates due every March 1.",
+            "value": "No exemption found. Condominiums and units in buildings with fewer than 10 residential units have been required to report since March 1, 2023, with updates every March 1.",
             "status": "verified",
             "source_ids": [
               "S07",
               "S08",
               "S53"
             ],
-            "notes": "Relevant to this two-unit building if the units are rent-controlled.",
+            "notes": "Applies to this two-unit building if the units are rent-controlled.",
             "flag_id": ""
           },
           {
-            "id": "LIC-04",
-            "label": "Does \"informing the Rent Board\" mean filing each increase notice?",
-            "value": "The official pages describe the license as arising from the annual Housing Inventory report. No separate filing of an individual increase notice with the Rent Board is described, and the license does not need to be included with the notice.",
+            "id": "PRC-04",
+            "label": "Must the owner report into the Housing Inventory first?",
+            "value": "Yes. All owners of residential property are required to report; a rent increase license is generated for units reported as tenant-occupied.",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S53"
+            ],
+            "notes": "Free; annual deadline March 1; no monetary penalty for late filing.",
+            "flag_id": ""
+          },
+          {
+            "id": "PRC-05",
+            "label": "Does informing the Rent Board mean filing each increase notice?",
+            "value": "The official pages describe the license as arising from the annual Housing Inventory report. No separate filing of an individual increase notice is described, and the license does not need to be included with the notice.",
             "status": "verified",
             "source_ids": [
               "S07",
               "S53",
               "S01"
             ],
-            "notes": "Read as the absence of a stated requirement; confirm with a Rent Board counselor.",
+            "notes": "Read as absence of a stated requirement; confirm with a Rent Board counselor.",
             "flag_id": ""
           },
           {
-            "id": "LIC-05",
+            "id": "PRC-06",
             "label": "What happens if a notice goes into effect without a current license?",
-            "value": "SF.gov says a rent increase notice that goes into effect while the unit is unlicensed may be null and void (possibly for multiple years); the tenant may be entitled to a rent refund and may file a Tenant Petition for Unlawful Rent Increase for a hearing before an Administrative Law Judge.",
+            "value": "The notice may be null and void (possibly for multiple years) or unenforceable, depending on the SF.gov page; the tenant may be entitled to a refund and may file a Tenant Petition for Unlawful Rent Increase for an Administrative Law Judge hearing.",
             "status": "verified",
             "source_ids": [
               "S08",
@@ -341,57 +408,44 @@
               "S25",
               "S26"
             ],
-            "notes": "Tenants can check license status in the portal for the effective date of the increase.",
+            "notes": "Wording differs between SF.gov pages - see flag F25.",
             "flag_id": ""
           },
           {
-            "id": "LIC-06",
+            "id": "PRC-07",
             "label": "Does the license requirement cover every kind of increase?",
-            "value": "SF.gov ties the license to annual allowable and banked increases on rent-controlled units, and states it is not required for Section 6.14/Costa-Hawkins increases or for passthroughs allowed under the Rent Ordinance.",
+            "value": "It covers annual allowable and banked increases on rent-controlled units. SF.gov states it is not required for Section 6.14/Costa-Hawkins increases or for passthroughs allowed under the Rent Ordinance.",
             "status": "verified",
             "source_ids": [
               "S08",
               "S16",
               "S09"
             ],
-            "notes": "Those other increases have their own notice and petition rules.",
+            "notes": "Those increases have their own notice and petition rules.",
             "flag_id": ""
           },
           {
-            "id": "LIC-07",
+            "id": "PRC-08",
             "label": "Is the Housing Inventory information public?",
-            "value": "Yes. SF.gov states that the information entered in the Housing Inventory submission is public, and may include name and business, contact information, approximate square footage, bedrooms, bathrooms and vacancy/occupancy history.",
+            "value": "Yes. SF.gov states the information entered in the Housing Inventory submission is public, and may include name and business, contact information, approximate square footage, bedrooms, bathrooms and vacancy/occupancy history.",
             "status": "verified",
             "source_ids": [
               "S07",
               "S53"
             ],
-            "notes": "Privacy note: the filing itself publishes the owner's name and business contact information.",
+            "notes": "Privacy note: the required filing publishes the owner's name and business contact information.",
             "flag_id": ""
           },
           {
-            "id": "LIC-09",
-            "label": "What does the Rent Ordinance itself say?",
-            "value": "Section 37.3(a)(1): \"A landlord who has reported the required information about their rental unit to the Rent Board as set forth in Section 37.15 shall have a license to impose annually a rent increase which does not exceed a tenant's base rent by more than 60% of said published increase.\" Form 571 adds that the annual increase may be imposed \"without filing a petition at the Rent Board.\"",
-            "status": "verified",
-            "source_ids": [
-              "S21",
-              "S04",
-              "S53"
-            ],
-            "notes": "The license precondition is written into the ordinance, not just the SF.gov summaries.",
-            "flag_id": ""
-          },
-          {
-            "id": "LIC-08",
+            "id": "PRC-09",
             "label": "Does the license requirement apply if the unit is not rent-controlled?",
-            "value": "No. SF.gov states that the Rent Increase License rules apply only to units under San Francisco rent control.",
+            "value": "No. SF.gov states the Rent Increase License rules apply only to units under San Francisco rent control.",
             "status": "verified",
             "source_ids": [
               "S08",
               "S06"
             ],
-            "notes": "Coverage of the specific address is still unverified in this case.",
+            "notes": "Coverage of the specific address is unverified in this case.",
             "flag_id": ""
           }
         ]
@@ -409,7 +463,7 @@
           {
             "id": "STP-01",
             "label": "Step 1 - Confirm the unit is under the Rent Ordinance",
-            "value": "Check the building on the SF Planning Property Information Map: many units built on or before June 13, 1979 that are not single-family dwellings have rent control; partial exemptions exist.",
+            "value": "Many units built on or before June 13, 1979 that are not single-family dwellings have rent control; check the address in the SF Planning Property Information Map. Partial exemptions exist.",
             "status": "verified",
             "source_ids": [
               "S06",
@@ -422,13 +476,14 @@
           {
             "id": "STP-02",
             "label": "Step 2 - Create a Rent Board Portal account",
-            "value": "Owners create an account in the Rent Board Portal to reach the Housing Inventory and the license record.",
+            "value": "Owners create an account in the Rent Board Portal to reach the Housing Inventory and the license record; paper filings can be emailed to the Rent Board or dropped off at its office.",
             "status": "verified",
             "source_ids": [
               "S55",
-              "S07"
+              "S07",
+              "S08"
             ],
-            "notes": "Paper filings can be emailed or dropped off at the Rent Board office.",
+            "notes": "Office open 9-4 weekdays; counseling 415-252-4600.",
             "flag_id": ""
           },
           {
@@ -445,8 +500,8 @@
           },
           {
             "id": "STP-04",
-            "label": "Step 4 - Confirm a current Rent Increase License",
-            "value": "The license is generated for tenant-occupied units after reporting. It must be on file and current on the effective date of the increase, not merely later.",
+            "label": "Step 4 - Confirm a current license for each unit",
+            "value": "The license is generated for tenant-occupied units after reporting and must be current on the effective date of the increase, not merely later.",
             "status": "verified",
             "source_ids": [
               "S07",
@@ -470,32 +525,33 @@
           {
             "id": "STP-06",
             "label": "Step 6 - Use the rate in effect on the effective date",
-            "value": "1.6% for increases effective March 1, 2026 through February 28, 2027. Use the percentage in effect on the increase date, not the notice date.",
+            "value": "1.6% for increases effective March 1, 2026 through February 28, 2027; the rate is 60% of the Bay Area CPI-U increase and Section 37.3 caps it at 7%.",
             "status": "verified",
             "source_ids": [
               "S01",
               "S02",
-              "S04"
+              "S04",
+              "S21"
             ],
-            "notes": "The rate for increases on or after 3/1/27 is not yet published.",
+            "notes": "No rate published yet for increases on or after 3/1/27 - flag F27.",
             "flag_id": ""
           },
           {
             "id": "STP-07",
             "label": "Step 7 - Decide whether a banked increase applies",
-            "value": "A skipped increase is only banked if at least 24 full months pass without any rent increase; banked percentages are added together, never compounded or prorated, and never carry to a new tenant.",
+            "value": "A skipped increase is only banked if at least 24 full months pass without any rent increase; banked percentages are added together, never compounded or prorated, never carry to a new tenant, and need no Rent Board petition.",
             "status": "verified",
             "source_ids": [
               "S05",
               "S54"
             ],
-            "notes": "SF.gov examples describe elapsed time differently - flagged as F03.",
+            "notes": "SF.gov examples describe elapsed time differently - flag F03.",
             "flag_id": ""
           },
           {
             "id": "STP-08",
             "label": "Step 8 - Calculate on base rent only and do not round up",
-            "value": "Multiply base rent (including parking or storage charges) by the total percentage; temporary passthroughs and fluctuating charges are excluded, and the result is not rounded up to the nearest dollar.",
+            "value": "Multiply base rent (including parking or storage charges) by the total percentage; temporary passthroughs and fluctuating charges are excluded, and the result is not rounded up.",
             "status": "verified",
             "source_ids": [
               "S01",
@@ -588,7 +644,7 @@
           {
             "id": "APP-02",
             "label": "Unit 1 - effect of the April 1, 2026 continuing tenancy at $3,995",
-            "value": "Adding an occupant and keeping the same rent does not by itself create a new tenancy or a market-rate reset, and extra rent for an additional occupant is unlawful.",
+            "value": "Adding an occupant while keeping the same rent does not by itself create a new tenancy or a market-rate reset, and extra rent for an additional occupant is unlawful.",
             "status": "verified",
             "source_ids": [
               "S01",
@@ -633,7 +689,7 @@
               "S02"
             ],
             "notes": "The next allowable rate has not been published; blank rather than estimated.",
-            "flag_id": "F25"
+            "flag_id": "F27"
           },
           {
             "id": "APP-06",
@@ -751,7 +807,7 @@
           {
             "id": "REQ-08",
             "label": "Flag irregularities",
-            "value": "36 flags published",
+            "value": "38 flags published",
             "status": "verified",
             "source_ids": [
               "S01",
@@ -878,7 +934,7 @@
             "source_ids": [
               "S43"
             ],
-            "notes": "Pending T05; PR link/merge result recorded in COORDINATION.md after merge.",
+            "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
             "flag_id": "F19"
           },
           {
@@ -889,26 +945,13 @@
             "source_ids": [
               "S43"
             ],
-            "notes": "Pending T05; deployment result recorded in COORDINATION.md after deploy.",
+            "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
             "flag_id": "F19"
           },
           {
             "id": "REQ-22",
-            "label": "Rent Board license question at the forefront of the executive summary",
-            "value": "Published - direct answer first, then the 12-step process with official links",
-            "status": "verified",
-            "source_ids": [
-              "S01",
-              "S07",
-              "S53"
-            ],
-            "notes": "EXECUTIVE_SUMMARY.md and the Executive Summary page.",
-            "flag_id": ""
-          },
-          {
-            "id": "REQ-23",
             "label": "Step-by-step licensing and notice process",
-            "value": "Published - pages/process.html",
+            "value": "Published - pages/process.html with 12 numbered steps",
             "status": "verified",
             "source_ids": [
               "S53",
@@ -919,14 +962,28 @@
             "flag_id": ""
           },
           {
+            "id": "REQ-23",
+            "label": "Ordinance-level license citations",
+            "value": "Published - Sec. 37.3(a)(1), Sec. 37.15 and Form 571",
+            "status": "verified",
+            "source_ids": [
+              "S21",
+              "S53",
+              "S04"
+            ],
+            "notes": "Licensing condition is in the ordinance itself.",
+            "flag_id": ""
+          },
+          {
             "id": "REQ-24",
-            "label": "Re-verification of the combined data after prior sessions",
+            "label": "Independent re-verification of the combined data",
             "value": "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run",
             "status": "verified",
             "source_ids": [
               "S01",
               "S07",
-              "S53"
+              "S53",
+              "S02"
             ],
             "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
             "flag_id": ""
@@ -1861,7 +1918,7 @@
               "S15"
             ],
             "notes": "Owner input: not supplied; whether a written 6.14 notice was served within a reasonable time (generally 60 days) and whether the occupant is a co-tenant or subtenant is unknown.",
-            "flag_id": "F26"
+            "flag_id": "F28"
           },
           {
             "id": "CASE-21",
@@ -2157,7 +2214,7 @@
               "S07",
               "S55"
             ],
-            "notes": "Unlicensed notices may be void.",
+            "notes": "Unlicensed notices may be void or unenforceable.",
             "flag_id": ""
           },
           {
@@ -2819,7 +2876,7 @@
               "S16",
               "S37"
             ],
-            "notes": "No reset recommended; see flag F26.",
+            "notes": "No reset recommended; see flag F28.",
             "flag_id": ""
           },
           {
@@ -3031,13 +3088,64 @@
           {
             "id": "AN-15",
             "label": "Flagged items do not block",
-            "value": "All 36 flags published with source links",
+            "value": "All 38 flags published with source links",
             "status": "verified",
             "source_ids": [
               "S01",
               "S43"
             ],
             "notes": "Needs review does not block merge.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-16",
+            "label": "The license is a precondition, not paperwork",
+            "value": "An increase noticed while the unit is unlicensed may be null and void or unenforceable with refund exposure, and the Rent Board issues noncompliance notices; its January 2026 minutes record more than 23,000 licenses",
+            "status": "verified",
+            "source_ids": [
+              "S08",
+              "S53",
+              "S28"
+            ],
+            "notes": "Checks should look at the effective date, not today's status.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-17",
+            "label": "Individual owners are not exempt",
+            "value": "The requirement follows rent-controlled status; there is no owner-size exemption, and buildings under 10 units have reported since March 1, 2023",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S53",
+              "S08"
+            ],
+            "notes": "Direct answer to the owner's question.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-18",
+            "label": "A banked total can exceed 10%",
+            "value": "Adding a correctly banked percentage to the current annual increase can push one notice above 10%, which then needs 90-day notice",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S05",
+              "S54"
+            ],
+            "notes": "No banked amount is asserted for either unit.",
+            "flag_id": ""
+          },
+          {
+            "id": "AN-19",
+            "label": "The filing itself is public",
+            "value": "Housing Inventory information is public, so reporting publishes the owner's name and business contact information",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S53"
+            ],
+            "notes": "Privacy consideration; the filing is still required for a license.",
             "flag_id": ""
           }
         ]

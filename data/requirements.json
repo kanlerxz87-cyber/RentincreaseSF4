@@ -97,7 +97,7 @@
         {
           "id": "REQ-08",
           "label": "Flag irregularities",
-          "value": "36 flags published",
+          "value": "38 flags published",
           "status": "verified",
           "source_ids": [
             "S01",
@@ -224,7 +224,7 @@
           "source_ids": [
             "S43"
           ],
-          "notes": "Pending T05; PR link/merge result recorded in COORDINATION.md after merge.",
+          "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
           "flag_id": "F19"
         },
         {
@@ -235,26 +235,13 @@
           "source_ids": [
             "S43"
           ],
-          "notes": "Pending T05; deployment result recorded in COORDINATION.md after deploy.",
+          "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
           "flag_id": "F19"
         },
         {
           "id": "REQ-22",
-          "label": "Rent Board license question at the forefront of the executive summary",
-          "value": "Published - direct answer first, then the 12-step process with official links",
-          "status": "verified",
-          "source_ids": [
-            "S01",
-            "S07",
-            "S53"
-          ],
-          "notes": "EXECUTIVE_SUMMARY.md and the Executive Summary page.",
-          "flag_id": ""
-        },
-        {
-          "id": "REQ-23",
           "label": "Step-by-step licensing and notice process",
-          "value": "Published - pages/process.html",
+          "value": "Published - pages/process.html with 12 numbered steps",
           "status": "verified",
           "source_ids": [
             "S53",
@@ -265,14 +252,28 @@
           "flag_id": ""
         },
         {
+          "id": "REQ-23",
+          "label": "Ordinance-level license citations",
+          "value": "Published - Sec. 37.3(a)(1), Sec. 37.15 and Form 571",
+          "status": "verified",
+          "source_ids": [
+            "S21",
+            "S53",
+            "S04"
+          ],
+          "notes": "Licensing condition is in the ordinance itself.",
+          "flag_id": ""
+        },
+        {
           "id": "REQ-24",
-          "label": "Re-verification of the combined data after prior sessions",
+          "label": "Independent re-verification of the combined data",
           "value": "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run",
           "status": "verified",
           "source_ids": [
             "S01",
             "S07",
-            "S53"
+            "S53",
+            "S02"
           ],
           "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
           "flag_id": ""

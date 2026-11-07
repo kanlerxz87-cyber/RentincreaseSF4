@@ -10,7 +10,7 @@
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "36 flagged items"
+      "detail": "38 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -25,7 +25,7 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "217 rows checked; "
+      "detail": "226 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
@@ -323,14 +323,19 @@
       "detail": ""
     },
     {
+      "name": "executive summary forefront covers Rent Board license for individual owners",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "private intake file is excluded from git",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "private intake absent in this environment",
+      "name": "privacy fingerprint baseline present",
       "ok": true,
-      "detail": "no internal/ intake file here; identifier scan runs when present"
+      "detail": "6 one-way fingerprints; no private intake required"
     },
     {
       "name": "no raw tenant identifiers in public files",
@@ -363,42 +368,42 @@
       "detail": ""
     },
     {
-      "name": "tenant placeholders are limited to Tenant A-F",
+      "name": "step-by-step license page exists in navigation",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "step-by-step license page exists with numbered steps",
+      "name": "step-by-step license page has all 12 numbered steps",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "step-by-step page answers the individual-owner question first",
+      "name": "step-by-step page links Sec. 37.15, Sec. 37.3 and the Housing Inventory",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "step-by-step page links Sec. 37.15 and the Housing Inventory",
+      "name": "step-by-step page answers the individual-owner question",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "executive summary leads with the Rent Board license answer",
+      "name": "executive summary puts the license answer first",
       "ok": true,
-      "detail": "license section precedes case facts"
+      "detail": "license section precedes the rate bottom line"
     },
     {
-      "name": "executive summary carries the official license links",
-      "ok": true,
-      "detail": ""
-    },
-    {
-      "name": "executive summary has a 12-step process",
+      "name": "executive summary cites the ordinance license condition",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "executive summary states no individual-owner exemption was found",
+      "name": "executive summary links the official license pages",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "executive summary states no individual-owner exception",
       "ok": true,
       "detail": ""
     },
@@ -413,10 +418,10 @@
     "sources": 55,
     "pages": 18,
     "data_files": 20,
-    "rows_verified": 217,
+    "rows_verified": 226,
     "needs_review_rows": 44,
-    "flags": 36,
-    "checks": 81,
+    "flags": 38,
+    "checks": 82,
     "errors": 0
   }
 }

@@ -190,13 +190,64 @@
         {
           "id": "AN-15",
           "label": "Flagged items do not block",
-          "value": "All 36 flags published with source links",
+          "value": "All 38 flags published with source links",
           "status": "verified",
           "source_ids": [
             "S01",
             "S43"
           ],
           "notes": "Needs review does not block merge.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-16",
+          "label": "The license is a precondition, not paperwork",
+          "value": "An increase noticed while the unit is unlicensed may be null and void or unenforceable with refund exposure, and the Rent Board issues noncompliance notices; its January 2026 minutes record more than 23,000 licenses",
+          "status": "verified",
+          "source_ids": [
+            "S08",
+            "S53",
+            "S28"
+          ],
+          "notes": "Checks should look at the effective date, not today's status.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-17",
+          "label": "Individual owners are not exempt",
+          "value": "The requirement follows rent-controlled status; there is no owner-size exemption, and buildings under 10 units have reported since March 1, 2023",
+          "status": "verified",
+          "source_ids": [
+            "S07",
+            "S53",
+            "S08"
+          ],
+          "notes": "Direct answer to the owner's question.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-18",
+          "label": "A banked total can exceed 10%",
+          "value": "Adding a correctly banked percentage to the current annual increase can push one notice above 10%, which then needs 90-day notice",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S54"
+          ],
+          "notes": "No banked amount is asserted for either unit.",
+          "flag_id": ""
+        },
+        {
+          "id": "AN-19",
+          "label": "The filing itself is public",
+          "value": "Housing Inventory information is public, so reporting publishes the owner's name and business contact information",
+          "status": "verified",
+          "source_ids": [
+            "S07",
+            "S53"
+          ],
+          "notes": "Privacy consideration; the filing is still required for a license.",
           "flag_id": ""
         }
       ]

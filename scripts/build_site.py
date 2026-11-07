@@ -86,7 +86,7 @@ def header_html(title, subtitle, active, in_pages):
 <link rel="stylesheet" href="{css}">
 </head>
 <body>
-<header><div class="wrap"><h1>{title}</h1><p>{subtitle}</p><p class="small">Verified {date} UTC &middot; official-source-linked research</p></div></header>
+<header><div class="wrap"><h1>{title}</h1><p>{subtitle}</p><p class="small">Research ledger dated {date} UTC &middot; official-source-linked research</p></div></header>
 <nav>{nav}</nav>
 <main>
 """.format(title=e(title), subtitle=e(subtitle), date=e(D.DATE), css=css, nav=nav_html(active, in_pages))
@@ -97,7 +97,7 @@ def footer_html(in_pages):
 <footer><div class="wrap">
 <p>{disclaimer}</p>
 <p>Manual review: <a href="{p}SOURCES.md">SOURCES.md</a> &middot; <a href="{p}VERIFICATION.md">VERIFICATION.md</a> &middot; <a href="{p}EXECUTIVE_SUMMARY.md">Executive summary</a> &middot; <a href="{p}FLAGGED_FOR_REVIEW.md">Flagged for Review</a> &middot; <a href="{p}data/validation_report.json">Validation report</a></p>
-<p class="small">No hallucinations: unverified values are blank and flagged. Personal information is anonymized with placeholders.</p>
+<p class="small">Unverified values are blank and flagged. Personal information uses placeholders. Structural validation is not legal verification. See <a href="{p}FOLLOWUP_AUDIT.md">follow-up audit and verification limits</a>.</p>
 </div></footer>
 </body>
 </html>
