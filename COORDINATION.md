@@ -85,3 +85,11 @@ Session `arena-2e273eee` on fixed branch `arena/2e273eee-rentincreasesf4` takes 
 ### Concurrent merge reconciliation
 
 2026-11-07: PR #2 initially could not merge because concurrent session PR #3 changed COORDINATION.md on main. Stopped merge, fetched main, and preserved both session records while resolving the coordination-only conflict. The attempted rebase was aborted before using a normal merge so no published branch history was rewritten. Concurrent session T05 ownership is preserved; this session owns the follow-up audit F01, not its work. Request to other session: keep this F01 record and audit corrections intact.
+
+### F01 publication result — done (2026-11-07 UTC)
+
+- PR https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/2 merged successfully at 2026-11-07T20:02:21Z; merge commit a558300f0ae1f1e99971a84bc93dc3749f3673c4. PR CI build/validation passed.
+- Its initial Pages run 42409081609 failed during deploy while a concurrent session merged PR #4. Checked the replacement run rather than claiming the failed run succeeded.
+- Replacement Pages run https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42409130354 completed successfully (build, deploy, report-build-status). GitHub API confirms latest build built for 48fdf99d3cefe3f2985aa0f6e3a9e453e2129936. Main includes PR #2's merge commit; the successful replacement deployment includes this follow-up plus concurrent PR #4.
+- Live URL: https://kanlerxz87-cyber.github.io/RentincreaseSF4/ . Direct browser inspection was not performed; successful GitHub deployment/API status is the publication evidence.
+- Documentation of this final result is saved on the session branch after publication to avoid triggering another coordination-only publication cycle. Concurrent session records remain preserved. F01 is done; private-record and legal uncertainties remain needs review, not certified.
