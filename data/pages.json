@@ -23,7 +23,8 @@
               "S07"
             ],
             "notes": "Ownership form (individual vs corporation) is not listed as an exemption. Do not rely on being a small/individual owner.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LIC-02",
@@ -35,7 +36,8 @@
               "S07"
             ],
             "notes": "A small individual-owned building is therefore covered now (2026).",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LIC-03",
@@ -46,7 +48,8 @@
               "S07"
             ],
             "notes": "This reporting is how you 'inform the Rent Board'. Information submitted is public; submit under penalty of perjury.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LIC-04",
@@ -57,7 +60,8 @@
               "S07"
             ],
             "notes": "The license does not need to be included with the rent increase notice to tenants.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LIC-05",
@@ -69,7 +73,8 @@
               "S01"
             ],
             "notes": "Order matters: Housing Inventory report -> license on file -> then serve tenant notice -> effective date. See flag F25 on consequence wording.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LIC-06",
@@ -80,7 +85,8 @@
               "S07"
             ],
             "notes": "Late filing does not cure a notice whose effective date passed without a license; get legal advice on any already-served notice.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LIC-07",
@@ -93,7 +99,8 @@
               "S35"
             ],
             "notes": "License first, tenant notice second. License alone does not satisfy state/local notice law; you must still comply with all other rent increase laws.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LIC-08",
@@ -105,7 +112,8 @@
               "S08"
             ],
             "notes": "Assume tenants and free tenant-side legal services can and will check this before paying an increase.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LIC-09",
@@ -117,7 +125,8 @@
               "S01"
             ],
             "notes": "Owner-supplied intake does not confirm Housing Inventory reporting or a current license for either unit; blank and flagged. No increase should be treated as effective until this is confirmed.",
-            "flag_id": "T03-F05"
+            "flag_id": "T03-F05",
+            "source_note": ""
           },
           {
             "id": "LIC-10",
@@ -132,7 +141,8 @@
               "S35"
             ],
             "notes": "Published on the Step-by-Step License page (pages/process.html).",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -158,7 +168,8 @@
               "S04"
             ],
             "notes": "For covered rent-controlled units, once every 12 months.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-02",
@@ -169,7 +180,8 @@
               "S27"
             ],
             "notes": "Does NOT apply to units under SF Rent Ordinance rent-increase limits.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-03",
@@ -183,7 +195,8 @@
               "S42"
             ],
             "notes": "No official source found; blank and flagged.",
-            "flag_id": "F22"
+            "flag_id": "F22",
+            "source_note": ""
           },
           {
             "id": "SUM-04",
@@ -196,7 +209,8 @@
               "S08"
             ],
             "notes": "Unlicensed increase may be null/void.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-05",
@@ -209,7 +223,8 @@
               "S35"
             ],
             "notes": "Use rate in effect on increase date.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-06",
@@ -220,7 +235,8 @@
               "S05"
             ],
             "notes": "No banked amount inferred for this case.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-07",
@@ -234,7 +250,8 @@
               "S19"
             ],
             "notes": "No market-rate reset inferred.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-08",
@@ -248,7 +265,8 @@
               "S37"
             ],
             "notes": "Continuing occupant legal status and last-original-occupant facts unverified.",
-            "flag_id": "T03-F04"
+            "flag_id": "T03-F04",
+            "source_note": ""
           },
           {
             "id": "SUM-09",
@@ -260,7 +278,8 @@
               "S49"
             ],
             "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-10",
@@ -271,7 +290,8 @@
               "S29"
             ],
             "notes": "Narrow formal-petition evidence only.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-11",
@@ -285,7 +305,8 @@
               "S42"
             ],
             "notes": "Compliance checklist capable of tenant-lawyer review; no approval or guarantee.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "SUM-12",
@@ -298,7 +319,8 @@
               "S38"
             ],
             "notes": "No official source requires both; document neutral eligibility reasons if only one is raised.",
-            "flag_id": "F22"
+            "flag_id": "F22",
+            "source_note": ""
           },
           {
             "id": "SUM-13",
@@ -313,7 +335,8 @@
               "S52"
             ],
             "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07"
+            "flag_id": "T03-F07",
+            "source_note": ""
           }
         ]
       }
@@ -345,7 +368,8 @@
               "S53"
             ],
             "notes": "No owner-type, individual-owner or small-portfolio exemption appears on the official pages.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "PRC-02",
@@ -357,7 +381,8 @@
               "S53"
             ],
             "notes": "The license condition is written into the ordinance, not only the SF.gov summaries.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "PRC-03",
@@ -370,7 +395,8 @@
               "S53"
             ],
             "notes": "Applies to this two-unit building if the units are rent-controlled.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "PRC-04",
@@ -382,7 +408,8 @@
               "S53"
             ],
             "notes": "Free; annual deadline March 1; no monetary penalty for late filing.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "PRC-05",
@@ -395,7 +422,8 @@
               "S01"
             ],
             "notes": "Read as absence of a stated requirement; confirm with a Rent Board counselor.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "PRC-06",
@@ -409,7 +437,8 @@
               "S26"
             ],
             "notes": "Wording differs between SF.gov pages - see flag F25.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "PRC-07",
@@ -422,7 +451,8 @@
               "S09"
             ],
             "notes": "Those increases have their own notice and petition rules.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "PRC-08",
@@ -434,7 +464,8 @@
               "S53"
             ],
             "notes": "Privacy note: the required filing publishes the owner's name and business contact information.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "PRC-09",
@@ -446,7 +477,8 @@
               "S06"
             ],
             "notes": "Coverage of the specific address is unverified in this case.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -471,7 +503,8 @@
               "S08"
             ],
             "notes": "Exact address not supplied in this case.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-02",
@@ -484,7 +517,8 @@
               "S08"
             ],
             "notes": "Office open 9-4 weekdays; counseling 415-252-4600.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-03",
@@ -496,7 +530,8 @@
               "S53"
             ],
             "notes": "Reporting is free; no monetary penalty is assessed for late filing.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-04",
@@ -509,7 +544,8 @@
               "S55"
             ],
             "notes": "Check status by address or APN in the portal.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-05",
@@ -520,7 +556,8 @@
               "S01"
             ],
             "notes": "A later increase date becomes the new anniversary date.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-06",
@@ -534,7 +571,8 @@
               "S21"
             ],
             "notes": "No rate published yet for increases on or after 3/1/27 - flag F27.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-07",
@@ -546,7 +584,8 @@
               "S54"
             ],
             "notes": "SF.gov examples describe elapsed time differently - flag F03.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-08",
@@ -559,7 +598,8 @@
               "S54"
             ],
             "notes": "See the Calculations page for the illustrative arithmetic.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-09",
@@ -575,7 +615,8 @@
               "S14"
             ],
             "notes": "Not needed for a plain annual or banked increase.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-10",
@@ -588,7 +629,8 @@
               "S35"
             ],
             "notes": "Civil Code 827 requires longer notice in some cases.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-11",
@@ -601,7 +643,8 @@
               "S55"
             ],
             "notes": "The license need not be attached to the notice.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "STP-12",
@@ -615,7 +658,8 @@
               "S42"
             ],
             "notes": "No rule requires raising both units - see Analysis.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -639,7 +683,8 @@
               "S02"
             ],
             "notes": "Derived from the official timing rule plus the owner-supplied date; no increase history was supplied.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "APP-02",
@@ -652,7 +697,8 @@
               "S18"
             ],
             "notes": "Whether the April 1, 2026 document restarted the lease or anniversary date is unverified - see Anonymized Case.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "APP-03",
@@ -665,7 +711,8 @@
               "S02"
             ],
             "notes": "Prior increases since 2019 were not supplied, so no banked amount is computed.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "APP-04",
@@ -678,7 +725,8 @@
               "S35"
             ],
             "notes": "No banked percentage is asserted for either unit.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "APP-05",
@@ -689,7 +737,8 @@
               "S02"
             ],
             "notes": "The next allowable rate has not been published; blank rather than estimated.",
-            "flag_id": "F27"
+            "flag_id": "F27",
+            "source_note": ""
           },
           {
             "id": "APP-06",
@@ -702,7 +751,8 @@
               "S53"
             ],
             "notes": "Owner has not stated whether each unit is reported and licensed; check the portal.",
-            "flag_id": "T03-F05"
+            "flag_id": "T03-F05",
+            "source_note": ""
           }
         ]
       }
@@ -733,7 +783,8 @@
               "S43"
             ],
             "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-02",
@@ -744,7 +795,8 @@
               "S43"
             ],
             "notes": "Legacy Pages source main /.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-03",
@@ -755,7 +807,8 @@
               "S20"
             ],
             "notes": "This page.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-04",
@@ -768,7 +821,8 @@
               "S43"
             ],
             "notes": "Questions & Answers page.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-05",
@@ -779,7 +833,8 @@
               "S20"
             ],
             "notes": "REPO_REVIEW.md.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-06",
@@ -791,7 +846,8 @@
               "S43"
             ],
             "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-07",
@@ -802,7 +858,8 @@
               "S01"
             ],
             "notes": "Official source(s) column.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-08",
@@ -814,7 +871,8 @@
               "S43"
             ],
             "notes": "Flagged for Review page.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-09",
@@ -825,7 +883,8 @@
               "S01"
             ],
             "notes": "Validation enforces blank + flag.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-10",
@@ -836,7 +895,8 @@
               "S23"
             ],
             "notes": "Privacy scan in validation.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-11",
@@ -847,7 +907,8 @@
               "S23"
             ],
             "notes": "No real names, initials, contact details or exact address.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-12",
@@ -858,7 +919,8 @@
               "S01"
             ],
             "notes": "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-13",
@@ -869,7 +931,8 @@
               "S43"
             ],
             "notes": "index.html and pages/.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-14",
@@ -880,7 +943,8 @@
               "S43"
             ],
             "notes": "Cards and status badges.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-15",
@@ -891,7 +955,8 @@
               "S01"
             ],
             "notes": "Tables on every subpage.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-16",
@@ -902,7 +967,8 @@
               "S42"
             ],
             "notes": "Analysis & Findings page.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-17",
@@ -913,7 +979,8 @@
               "S01"
             ],
             "notes": "pages/flagged.html.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-18",
@@ -924,7 +991,8 @@
               "S01"
             ],
             "notes": "Sources page.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-19",
@@ -935,7 +1003,8 @@
               "S43"
             ],
             "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
-            "flag_id": "F19"
+            "flag_id": "F19",
+            "source_note": ""
           },
           {
             "id": "REQ-20",
@@ -946,7 +1015,8 @@
               "S43"
             ],
             "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
-            "flag_id": "F19"
+            "flag_id": "F19",
+            "source_note": ""
           },
           {
             "id": "REQ-22",
@@ -959,7 +1029,8 @@
               "S35"
             ],
             "notes": "Every step carries official links.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-23",
@@ -972,7 +1043,8 @@
               "S04"
             ],
             "notes": "Licensing condition is in the ordinance itself.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-24",
@@ -986,7 +1058,8 @@
               "S02"
             ],
             "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REQ-21",
@@ -1000,7 +1073,8 @@
               "S42"
             ],
             "notes": "No attorney approval or guarantee.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -1032,7 +1106,8 @@
               "S04"
             ],
             "notes": "Current local rate.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "RATE-02",
@@ -1044,7 +1119,8 @@
               "S04"
             ],
             "notes": "Historical.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "RATE-03",
@@ -1056,7 +1132,8 @@
               "S04"
             ],
             "notes": "Historical.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "RATE-04",
@@ -1067,7 +1144,8 @@
               "S04"
             ],
             "notes": "Historical.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "RATE-05",
@@ -1078,7 +1156,8 @@
               "S04"
             ],
             "notes": "Historical.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "RATE-06",
@@ -1089,7 +1168,8 @@
               "S04"
             ],
             "notes": "Historical.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "RATE-07",
@@ -1100,7 +1180,8 @@
               "S04"
             ],
             "notes": "Historical.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "RATE-08",
@@ -1111,7 +1192,8 @@
               "S04"
             ],
             "notes": "Relevant to Unit 2 lease start; no banked amount inferred.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -1135,7 +1217,8 @@
               "S21"
             ],
             "notes": "SF Admin Code 37.3.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "RATE-10",
@@ -1147,7 +1230,8 @@
               "S01"
             ],
             "notes": "Jan. 13, 2026 minutes adopted Version 1 temporary methodology.",
-            "flag_id": "F06"
+            "flag_id": "F06",
+            "source_note": ""
           },
           {
             "id": "RATE-11",
@@ -1160,7 +1244,8 @@
               "S04"
             ],
             "notes": "Temporary passthroughs excluded.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -1189,7 +1274,8 @@
               "S06"
             ],
             "notes": "Verify exact address in PIM; partial exemptions exist.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-02",
@@ -1201,7 +1287,8 @@
               "S02"
             ],
             "notes": "Current rate.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-03",
@@ -1212,7 +1299,8 @@
               "S21"
             ],
             "notes": "SF Admin Code 37.3.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-04",
@@ -1224,7 +1312,8 @@
               "S27"
             ],
             "notes": "Not a reset for an existing tenancy.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-05",
@@ -1237,7 +1326,8 @@
               "S08"
             ],
             "notes": "Unlicensed increase may be null/void.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-06",
@@ -1248,7 +1338,8 @@
               "S07"
             ],
             "notes": "No monetary penalty, but notice unenforceable without license.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-07",
@@ -1259,7 +1350,8 @@
               "S05"
             ],
             "notes": "Notice must state banked portion.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-08",
@@ -1272,7 +1364,8 @@
               "S18"
             ],
             "notes": "Even if lease says otherwise.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-09",
@@ -1283,7 +1376,8 @@
               "S09"
             ],
             "notes": "Petition/worksheet before notice.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-10",
@@ -1295,7 +1389,8 @@
               "S16"
             ],
             "notes": "60 days generally reasonable.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-11",
@@ -1307,7 +1402,8 @@
               "S16"
             ],
             "notes": "Legal advice strongly encouraged.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-12",
@@ -1318,7 +1414,8 @@
               "S22"
             ],
             "notes": "Larson footnote conflict flagged.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-13",
@@ -1330,7 +1427,8 @@
               "S26"
             ],
             "notes": "516C and 518 forms.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-14",
@@ -1342,7 +1440,8 @@
               "S20"
             ],
             "notes": "Added by Ord. 265-20; not a rental registry under Civil Code 1947.7-1947.8.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-15",
@@ -1355,7 +1454,8 @@
               "S09"
             ],
             "notes": "Those increases have separate rules and remedies.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-16",
@@ -1367,7 +1467,8 @@
               "S53"
             ],
             "notes": "Privacy consideration before filing.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-17",
@@ -1378,7 +1479,8 @@
               "S54"
             ],
             "notes": "30-day notice (35 if mailed).",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "LOC-18",
@@ -1390,7 +1492,8 @@
               "S08"
             ],
             "notes": "Office open 9-4 weekdays; counseling 415-252-4600.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -1419,7 +1522,8 @@
               "S27"
             ],
             "notes": "Does NOT apply to units under SF Rent Ordinance limits.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-02",
@@ -1431,7 +1535,8 @@
               "S36"
             ],
             "notes": "CPI-U April-over-April, rounded nearest 0.1%, Aug. 1 cutoff.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-03",
@@ -1443,7 +1548,8 @@
               "S36"
             ],
             "notes": "Local protections remain.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-04",
@@ -1454,7 +1560,8 @@
               "S27"
             ],
             "notes": "Relocation assistance for no-fault evictions.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-05",
@@ -1465,7 +1572,8 @@
               "S35"
             ],
             "notes": "Personal delivery/mail rules.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-06",
@@ -1477,7 +1585,8 @@
               "S37"
             ],
             "notes": "Not a reset for existing tenancy.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-07",
@@ -1488,7 +1597,8 @@
               "S37"
             ],
             "notes": "Co-tenants excluded.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-08",
@@ -1499,7 +1609,8 @@
               "S37"
             ],
             "notes": "Critical unresolved Unit 1 issue.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-09",
@@ -1511,7 +1622,8 @@
               "S39"
             ],
             "notes": "Includes perception/association.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-10",
@@ -1522,7 +1634,8 @@
               "S38"
             ],
             "notes": "Source-of-income and aggregate-income rules.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-11",
@@ -1533,7 +1646,8 @@
               "S27"
             ],
             "notes": "AB 1482 notice language.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "ST-12",
@@ -1545,7 +1659,8 @@
               "S36"
             ],
             "notes": "State court enforcement; Rent Board cannot enforce state law.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -1575,7 +1690,8 @@
               "S40"
             ],
             "notes": "Official U.S. Code PDF.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "FED-02",
@@ -1586,7 +1702,8 @@
               "S42"
             ],
             "notes": "Current as of 11/04/2026.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "FED-03",
@@ -1600,7 +1717,8 @@
               "S42"
             ],
             "notes": "No official source found; blank and flagged.",
-            "flag_id": "F22"
+            "flag_id": "F22",
+            "source_note": ""
           },
           {
             "id": "FED-04",
@@ -1612,7 +1730,8 @@
               "S44"
             ],
             "notes": "Used for voucher payment standards, not a rent-increase cap.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "FED-05",
@@ -1623,7 +1742,8 @@
               "S43"
             ],
             "notes": "FY2027 is current on 2026-11-06.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "FED-06",
@@ -1634,7 +1754,8 @@
               "S44"
             ],
             "notes": "Not a private rent cap.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "FED-07",
@@ -1649,7 +1770,8 @@
               "S52"
             ],
             "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07"
+            "flag_id": "T03-F07",
+            "source_note": ""
           }
         ]
       }
@@ -1657,272 +1779,301 @@
   },
   "case": {
     "title": "Anonymized Case Facts",
-    "description": "Owner-supplied dates and amounts preserved; personal information replaced with placeholders; official-verified values blank where unverified.",
+    "description": "Owner-supplied facts published with placeholder tenants and unchanged dates and amounts, separated from what still has to be verified officially.",
     "sections": [
       {
-        "title": "Location / building",
+        "title": "Owner-supplied case facts (anonymized) - not official findings",
         "columns": [
           "Item",
-          "Value / finding",
+          "Owner-supplied value",
           "Status",
-          "Official source(s)",
+          "Source",
           "Notes / flag"
         ],
         "rows": [
           {
             "id": "CASE-01",
-            "label": "Neighborhood / ZIP",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S33",
-              "S34"
-            ],
-            "notes": "Owner input: Outer Sunset, San Francisco, CA 94122; official SF Planning context only, not property-specific verification.",
-            "flag_id": "T03-F03"
+            "label": "Location",
+            "value": "Outer Sunset, San Francisco, CA 94122",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "ZIP and neighbourhood only; no street address is published.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
           },
           {
             "id": "CASE-02",
             "label": "Exact street address",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S32"
-            ],
-            "notes": "Owner input: not supplied; no exact address published.",
-            "flag_id": "T03-F01"
+            "value": "Withheld - not published",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Privacy rule: no exact address appears anywhere on this site or in the repository.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
           },
           {
             "id": "CASE-03",
             "label": "Building year",
+            "value": "1940",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Before the June 13, 1979 coverage cutoff; a property-specific check is still required.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-04",
+            "label": "Residential units in the building",
+            "value": "2",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Owner describes Unit 1 and Unit 2.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-05",
+            "label": "Rent-controlled status",
+            "value": "Owner states both units are rent controlled",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Owner statement, not an official determination.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-06",
+            "label": "Rent Increase License / Housing Inventory status",
+            "value": "Not supplied",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Confirm in the Rent Board Portal before serving any notice.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-07",
+            "label": "Prior increases, notices, petitions",
+            "value": "Not supplied",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "No banked amount is inferred.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-08",
+            "label": "Unit 1 - last lease start",
+            "value": "February 1, 2025",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Date preserved exactly.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-09",
+            "label": "Unit 1 - rent at last lease start",
+            "value": "$3,995 per month",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Amount preserved exactly.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-10",
+            "label": "Unit 1 - initial lease tenants",
+            "value": "Tenant A, Tenant B, Tenant C",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Placeholders replace all three original initials.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-11",
+            "label": "Unit 1 - continuing tenancy / current tenants",
+            "value": "Tenant A and Tenant D",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Placeholders; no inference about legal status.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-12",
+            "label": "Unit 1 - current tenancy date",
+            "value": "April 1, 2026",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Date preserved exactly.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-13",
+            "label": "Unit 1 - rent on April 1, 2026",
+            "value": "$3,995 per month",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Unchanged from the last lease start.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-14",
+            "label": "Unit 2 - last lease start",
+            "value": "June 1, 2019",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Date preserved exactly.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-15",
+            "label": "Unit 2 - rent at last lease start",
+            "value": "$3,150 per month",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Amount preserved exactly.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-16",
+            "label": "Unit 2 - tenants",
+            "value": "Tenant E and Tenant F",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Placeholders replace both initials.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "CASE-17",
+            "label": "Unit 2 - current rent",
+            "value": "Not supplied",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "No current figure is assumed.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          }
+        ]
+      },
+      {
+        "title": "Anonymization map (published; no raw initials anywhere)",
+        "columns": [
+          "Item",
+          "Owner-supplied value",
+          "Status",
+          "Source",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "MAP-1",
+            "label": "Tenant A",
+            "value": "Original Unit 1 tenant, still listed on the continuing tenancy",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Role only.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "MAP-2",
+            "label": "Tenant B",
+            "value": "Original Unit 1 tenant, not on the continuing tenancy",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Role only.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "MAP-3",
+            "label": "Tenant C",
+            "value": "Original Unit 1 tenant, not on the continuing tenancy",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Role only.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "MAP-4",
+            "label": "Tenant D",
+            "value": "Unit 1 tenant on the April 1, 2026 tenancy",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Role only.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "MAP-5",
+            "label": "Tenant E",
+            "value": "Unit 2 tenant since June 1, 2019",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Role only.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          },
+          {
+            "id": "MAP-6",
+            "label": "Tenant F",
+            "value": "Unit 2 tenant since June 1, 2019",
+            "status": "owner supplied",
+            "source_ids": [],
+            "notes": "Role only.",
+            "flag_id": "",
+            "source_note": "Owner intake (anonymized)"
+          }
+        ]
+      },
+      {
+        "title": "What still has to be verified from an official source",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CASE-V1",
+            "label": "Coverage of the exact address",
             "value": "",
             "status": "needs review",
             "source_ids": [
               "S06",
               "S32"
             ],
-            "notes": "Owner input: 1940; before June 13, 1979 cutoff but property-specific record unverified.",
-            "flag_id": "T03-F03"
+            "notes": "Check the address in the Planning Property Information Map; no exact address is published here.",
+            "flag_id": "T03-F03",
+            "source_note": ""
           },
           {
-            "id": "CASE-04",
-            "label": "Rent-controlled status",
+            "id": "CASE-V2",
+            "label": "Official building-year record",
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S06",
-              "S20"
+              "S32",
+              "S06"
             ],
-            "notes": "Owner input: units said to be rent controlled; not official-verified.",
-            "flag_id": "F21"
+            "notes": "Owner says 1940; the official record was not obtained in this session.",
+            "flag_id": "T03-F03",
+            "source_note": ""
           },
           {
-            "id": "CASE-05",
-            "label": "Rent Increase License status",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S07",
-              "S08"
-            ],
-            "notes": "Owner input: not supplied.",
-            "flag_id": "T03-F05"
-          },
-          {
-            "id": "CASE-06",
-            "label": "Prior increases / banked increases / notice history / anniversary",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S01",
-              "S05"
-            ],
-            "notes": "Owner input: not supplied; no banked amount inferred.",
-            "flag_id": "T03-F05"
-          }
-        ]
-      },
-      {
-        "title": "Unit 1 - anonymized",
-        "columns": [
-          "Item",
-          "Value / finding",
-          "Status",
-          "Official source(s)",
-          "Notes / flag"
-        ],
-        "rows": [
-          {
-            "id": "CASE-07",
-            "label": "Last lease start",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Owner input: February 1, 2025; date unchanged.",
-            "flag_id": "T03-F01"
-          },
-          {
-            "id": "CASE-08",
-            "label": "Monthly rent at last lease start",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Owner input: $3,995; amount unchanged.",
-            "flag_id": "T03-F01"
-          },
-          {
-            "id": "CASE-09",
-            "label": "Initial lease tenants",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S17"
-            ],
-            "notes": "Published placeholders: Tenant A, Tenant B, Tenant C; no raw identifiers.",
-            "flag_id": "T03-F02"
-          },
-          {
-            "id": "CASE-10",
-            "label": "Continuing tenancy / current tenants",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S17"
-            ],
-            "notes": "Published placeholders: Tenant A, Tenant D; no inference about legal status.",
-            "flag_id": "T03-F04"
-          },
-          {
-            "id": "CASE-11",
-            "label": "Current-tenancy date",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Owner input: April 1, 2026; date unchanged.",
-            "flag_id": "T03-F01"
-          },
-          {
-            "id": "CASE-12",
-            "label": "Monthly rent on April 1, 2026",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Owner input: $3,995; amount unchanged.",
-            "flag_id": "T03-F01"
-          },
-          {
-            "id": "CASE-13",
-            "label": "Whether a new tenancy began April 1, 2026",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S16"
-            ],
-            "notes": "Owner input: not supplied; no inference.",
-            "flag_id": "T03-F04"
-          },
-          {
-            "id": "CASE-14",
-            "label": "Legal status of continuing occupant(s)",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S15",
-              "S37"
-            ],
-            "notes": "Owner input: not supplied; no inference.",
-            "flag_id": "T03-F04"
-          },
-          {
-            "id": "CASE-15",
-            "label": "Last original occupant vacated / no longer permanently resides",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S28"
-            ],
-            "notes": "Owner input: not supplied; no inference.",
-            "flag_id": "T03-F04"
-          }
-        ]
-      },
-      {
-        "title": "Unit 2 - anonymized",
-        "columns": [
-          "Item",
-          "Value / finding",
-          "Status",
-          "Official source(s)",
-          "Notes / flag"
-        ],
-        "rows": [
-          {
-            "id": "CASE-16",
-            "label": "Last lease start",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Owner input: June 1, 2019; date unchanged.",
-            "flag_id": "T03-F01"
-          },
-          {
-            "id": "CASE-17",
-            "label": "Monthly rent at last lease start",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Owner input: $3,150; amount unchanged.",
-            "flag_id": "T03-F01"
-          },
-          {
-            "id": "CASE-18",
-            "label": "Tenants",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S17"
-            ],
-            "notes": "Published placeholders: Tenant E, Tenant F; no raw identifiers.",
-            "flag_id": "T03-F02"
-          },
-          {
-            "id": "CASE-19",
-            "label": "Prior increases since June 1, 2019",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S05"
-            ],
-            "notes": "Owner input: not supplied; no banked amount inferred.",
-            "flag_id": "T03-F05"
-          },
-          {
-            "id": "CASE-20",
-            "label": "Section 6.14 notice served on the occupant added April 1, 2026",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S16",
-              "S15"
-            ],
-            "notes": "Owner input: not supplied; whether a written 6.14 notice was served within a reasonable time (generally 60 days) and whether the occupant is a co-tenant or subtenant is unknown.",
-            "flag_id": "F28"
-          },
-          {
-            "id": "CASE-21",
-            "label": "Housing Inventory / license status for each unit",
+            "id": "CASE-V3",
+            "label": "Current Rent Increase License status",
             "value": "",
             "status": "needs review",
             "source_ids": [
@@ -1930,11 +2081,90 @@
               "S08",
               "S53"
             ],
-            "notes": "Owner input: not supplied; license status must be confirmed for the effective date of any increase.",
-            "flag_id": "T03-F05"
+            "notes": "Not supplied; confirm in the Rent Board Portal for the effective date of any increase.",
+            "flag_id": "T03-F05",
+            "source_note": ""
           },
           {
-            "id": "CASE-22",
+            "id": "CASE-V4",
+            "label": "Anniversary dates and prior increase history",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01",
+              "S05"
+            ],
+            "notes": "Not supplied; see F28 for the Section 6.14 and anniversary-date question.",
+            "flag_id": "T03-F05",
+            "source_note": ""
+          },
+          {
+            "id": "CASE-V5",
+            "label": "Unit 1 continuing occupant legal status (co-tenant, subtenant, assignee)",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S15",
+              "S16",
+              "S37"
+            ],
+            "notes": "Not supplied; no market-rate reset is recommended.",
+            "flag_id": "T03-F04",
+            "source_note": ""
+          },
+          {
+            "id": "CASE-V6",
+            "label": "Whether a new tenancy actually began on April 1, 2026",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S16",
+              "S01"
+            ],
+            "notes": "Not supplied; affects the anniversary date and any Costa-Hawkins analysis.",
+            "flag_id": "T03-F04",
+            "source_note": ""
+          },
+          {
+            "id": "CASE-V7",
+            "label": "Whether the last original Unit 1 tenant still permanently resides there",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S16",
+              "S28"
+            ],
+            "notes": "Not supplied; Section 6.14 requires the last original occupant to have vacated.",
+            "flag_id": "T03-F04",
+            "source_note": ""
+          },
+          {
+            "id": "CASE-V8",
+            "label": "Section 6.14 notice served on the occupant added April 1, 2026",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S16",
+              "S15"
+            ],
+            "notes": "Not supplied; a written 6.14 notice within a reasonable time (generally 60 days) is required for a later unlimited increase.",
+            "flag_id": "F28",
+            "source_note": ""
+          },
+          {
+            "id": "CASE-V9",
+            "label": "Banked increase eligibility for either unit",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S05"
+            ],
+            "notes": "Needs 24 full months without any increase; history unknown.",
+            "flag_id": "T03-F05",
+            "source_note": ""
+          },
+          {
+            "id": "CASE-V10",
             "label": "Privacy of the Housing Inventory filing",
             "value": "Inventory submission information is public, including owner name and business contact information",
             "status": "verified",
@@ -1942,8 +2172,9 @@
               "S07",
               "S53"
             ],
-            "notes": "Stated by SF.gov; relevant before reporting, but the filing is required to obtain a license.",
-            "flag_id": ""
+            "notes": "Relevant before filing, but the filing is required to obtain the license.",
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -1975,7 +2206,8 @@
               "S04"
             ],
             "notes": "Eligibility, license, notice and anniversary unverified.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CALC-02",
@@ -1989,7 +2221,8 @@
               "S04"
             ],
             "notes": "Eligibility, license, notice and anniversary unverified.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -2013,7 +2246,8 @@
               "S04"
             ],
             "notes": "Historical comparison only.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CALC-04",
@@ -2025,7 +2259,8 @@
               "S04"
             ],
             "notes": "Historical comparison only.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -2049,7 +2284,8 @@
               "S04"
             ],
             "notes": "Prior increases and anniversary dates not supplied; blank.",
-            "flag_id": "T03-F05"
+            "flag_id": "T03-F05",
+            "source_note": ""
           },
           {
             "id": "CALC-06",
@@ -2060,7 +2296,86 @@
               "S01"
             ],
             "notes": "Temporary passthroughs excluded.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CALC-07",
+            "label": "Official rate series behind any banked amount",
+            "value": "1.8% (3/1/20-2/28/21), 0.7% (3/1/21-2/28/22), 2.3% (3/1/22-2/28/23), 3.6% (3/1/23-2/29/24), 1.7% (3/1/24-2/28/25), 1.4% (3/1/25-2/28/26), 1.6% (3/1/26-2/28/27)",
+            "status": "verified",
+            "source_ids": [
+              "S04",
+              "S02"
+            ],
+            "notes": "Banked percentages are added, then applied to current base rent; they are never compounded or prorated.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CALC-08",
+            "label": "Unit 2 - conditional maximum if nothing was ever raised",
+            "value": "11.5% of skipped years (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4) plus 1.6% = 13.1%; $3,150 x 13.1% = $412.65, or $3,562.65",
+            "status": "analysis",
+            "source_ids": [
+              "S05",
+              "S04",
+              "S02"
+            ],
+            "notes": "Conditional arithmetic only: it assumes no increase since June 1, 2019, which the owner has not confirmed. A combined increase above 10% also requires 90 days' written notice, and the effective date must fall on or before 2/28/2027 for the 1.6% component to be the published rate.",
+            "flag_id": "F30",
+            "source_note": ""
+          },
+          {
+            "id": "CALC-09",
+            "label": "Unit 1 - banked amount",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S05",
+              "S01"
+            ],
+            "notes": "The lease began February 1, 2025 and no notice history was supplied, so nothing can yet satisfy the 24-full-month banking rule.",
+            "flag_id": "T03-F05",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Notice deadlines if the increase is 1.6%",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "CALC-10",
+            "label": "Effective February 1, 2027, served in person",
+            "value": "Notice delivered by January 2, 2027",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S35"
+            ],
+            "notes": "30 days before the effective date; the 1.6% rate is in effect through 2/28/2027.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CALC-11",
+            "label": "Effective February 1, 2027, served by mail",
+            "value": "Notice mailed by December 28, 2026",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S35"
+            ],
+            "notes": "Mailed notice gets 5 extra days and Civil Code 1013 extension rules apply.",
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -2090,7 +2405,8 @@
               "S32"
             ],
             "notes": "Exact address not supplied in this case.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-02",
@@ -2103,7 +2419,8 @@
               "S08"
             ],
             "notes": "Tenant portal lookup.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-03",
@@ -2114,7 +2431,8 @@
               "S01"
             ],
             "notes": "Use rate in effect on increase date.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-04",
@@ -2125,7 +2443,8 @@
               "S05"
             ],
             "notes": "Not inferred here.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-05",
@@ -2138,7 +2457,8 @@
               "S35"
             ],
             "notes": "827(c) longer notice controls.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-06",
@@ -2150,7 +2470,8 @@
               "S05"
             ],
             "notes": "No rounding up.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-07",
@@ -2161,7 +2482,8 @@
               "S35"
             ],
             "notes": "Keep proof of service.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-08",
@@ -2177,7 +2499,8 @@
               "S14"
             ],
             "notes": "Otherwise notice may be void.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-09",
@@ -2189,7 +2512,8 @@
               "S38"
             ],
             "notes": "Document neutral eligibility reasons if only one unit is raised.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-10",
@@ -2202,7 +2526,8 @@
               "S25"
             ],
             "notes": "Free counseling is not legal advice; TRC covers eviction proceedings.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-11",
@@ -2215,7 +2540,8 @@
               "S55"
             ],
             "notes": "Unlicensed notices may be void or unenforceable.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-12",
@@ -2227,7 +2553,8 @@
               "S55"
             ],
             "notes": "Evidence if the increase is challenged.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CHK-13",
@@ -2240,7 +2567,8 @@
               "S35"
             ],
             "notes": "A correctly banked total can exceed 10%.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -2271,7 +2599,8 @@
               "S04"
             ],
             "notes": "Once every 12 months; license and notice.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REAS-02",
@@ -2282,7 +2611,8 @@
               "S05"
             ],
             "notes": "No banked amount inferred here.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REAS-03",
@@ -2294,7 +2624,8 @@
               "S12"
             ],
             "notes": "Hardship application available.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REAS-04",
@@ -2306,7 +2637,8 @@
               "S11"
             ],
             "notes": "Petition before notice.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REAS-05",
@@ -2318,7 +2650,8 @@
               "S10"
             ],
             "notes": "One-time tenancy reset; petition before notice.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REAS-06",
@@ -2330,7 +2663,8 @@
               "S13"
             ],
             "notes": "Not base rent.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REAS-07",
@@ -2342,7 +2676,8 @@
               "S14"
             ],
             "notes": "Not applicable if any qualifying tenant resides.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REAS-08",
@@ -2353,7 +2688,8 @@
               "S09"
             ],
             "notes": "Follow specific form instructions.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "REAS-09",
@@ -2366,7 +2702,8 @@
               "S18"
             ],
             "notes": "Not a lawful reason; blank and flagged.",
-            "flag_id": "T03-F04"
+            "flag_id": "T03-F04",
+            "source_note": ""
           },
           {
             "id": "REAS-10",
@@ -2380,7 +2717,8 @@
               "S28"
             ],
             "notes": "Not recommended without official eligibility and legal review.",
-            "flag_id": "T03-F04"
+            "flag_id": "T03-F04",
+            "source_note": ""
           }
         ]
       }
@@ -2409,7 +2747,8 @@
               "S48"
             ],
             "notes": "Multifamily REIT; not SF-specific.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CORP-02",
@@ -2420,7 +2759,8 @@
               "S48"
             ],
             "notes": "Not SF-specific.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CORP-03",
@@ -2431,7 +2771,8 @@
               "S48"
             ],
             "notes": "Not SF-specific.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CORP-04",
@@ -2442,7 +2783,8 @@
               "S49"
             ],
             "notes": "Single-family rental REIT; not SF-specific.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CORP-05",
@@ -2453,7 +2795,8 @@
               "S49"
             ],
             "notes": "Not SF-specific.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "CORP-06",
@@ -2465,7 +2808,8 @@
               "S49"
             ],
             "notes": "No official source proves what all large corporations do.",
-            "flag_id": "F23"
+            "flag_id": "F23",
+            "source_note": ""
           }
         ]
       }
@@ -2496,7 +2840,8 @@
               "S35"
             ],
             "notes": "Same local rules apply to individual owners.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "IND-02",
@@ -2507,18 +2852,20 @@
               "S29"
             ],
             "notes": "Narrow descriptive count.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "IND-03",
             "label": "Capital improvement petitions June 2024",
-            "value": "19 petitions / 148 units",
+            "value": "18 petitions / 148 units",
             "status": "verified",
             "source_ids": [
               "S29"
             ],
-            "notes": "Narrow descriptive count.",
-            "flag_id": ""
+            "notes": "Corrected 2026-11-07 against the source PDF: 18 capital-improvement petitions / 148 units; the 19 / 149 subtotal includes 1 Costa-Hawkins petition (F29).",
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "IND-04",
@@ -2529,7 +2876,8 @@
               "S29"
             ],
             "notes": "Not proof of typical practice.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "IND-05",
@@ -2540,7 +2888,8 @@
               "S29"
             ],
             "notes": "No official source proves what all individual owners do.",
-            "flag_id": "F23"
+            "flag_id": "F23",
+            "source_note": ""
           }
         ]
       }
@@ -2570,7 +2919,8 @@
               "S43"
             ],
             "notes": "FY2027 FMR; current federal FY on 2026-11-06.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "MKT-02",
@@ -2582,7 +2932,8 @@
               "S43"
             ],
             "notes": "FY2027 FMR.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "MKT-03",
@@ -2594,7 +2945,8 @@
               "S43"
             ],
             "notes": "FY2027 FMR.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "MKT-04",
@@ -2606,7 +2958,8 @@
               "S43"
             ],
             "notes": "FY2027 FMR.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "MKT-05",
@@ -2618,7 +2971,8 @@
               "S43"
             ],
             "notes": "FY2027 FMR.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -2642,7 +2996,8 @@
               "S43"
             ],
             "notes": "FY2026 revised effective May 21, 2026; historical as of 2026-11-06.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "MKT-07",
@@ -2655,7 +3010,8 @@
               "S51"
             ],
             "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07"
+            "flag_id": "T03-F07",
+            "source_note": ""
           },
           {
             "id": "MKT-08",
@@ -2668,7 +3024,8 @@
               "S52"
             ],
             "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07"
+            "flag_id": "T03-F07",
+            "source_note": ""
           },
           {
             "id": "MKT-09",
@@ -2680,7 +3037,8 @@
               "S44"
             ],
             "notes": "Not a legal basis for a private rent increase.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -2712,7 +3070,8 @@
               "S44"
             ],
             "notes": "Federal cap blank and flagged.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-02",
@@ -2724,7 +3083,8 @@
               "S49"
             ],
             "notes": "Portfolio-level, not SF-specific; no generalization.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-03",
@@ -2737,7 +3097,8 @@
               "S29"
             ],
             "notes": "Narrow formal-petition evidence only.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-04",
@@ -2751,7 +3112,8 @@
               "S07"
             ],
             "notes": "Conservative checklist capable of lawyer review.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-05",
@@ -2766,7 +3128,8 @@
               "S18"
             ],
             "notes": "Mere long tenure below market is not extraordinary.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-06",
@@ -2781,7 +3144,8 @@
               "S31"
             ],
             "notes": "No official general rent-increase attorney approval service found.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-07",
@@ -2795,7 +3159,8 @@
               "S42"
             ],
             "notes": "No official source can certify approval; only a conservative checklist capable of review.",
-            "flag_id": "T03-F08"
+            "flag_id": "T03-F08",
+            "source_note": ""
           },
           {
             "id": "Q-08",
@@ -2808,7 +3173,8 @@
               "S38"
             ],
             "notes": "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised.",
-            "flag_id": "F22"
+            "flag_id": "F22",
+            "source_note": ""
           },
           {
             "id": "Q-09",
@@ -2822,7 +3188,8 @@
               "S28"
             ],
             "notes": "Continuing occupant legal status and last-original-occupant facts unverified; no reset recommended.",
-            "flag_id": "T03-F04"
+            "flag_id": "T03-F04",
+            "source_note": ""
           },
           {
             "id": "Q-11",
@@ -2836,7 +3203,8 @@
               "S53"
             ],
             "notes": "See the Step-by-Step License page.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-12",
@@ -2849,7 +3217,8 @@
               "S01"
             ],
             "notes": "Absence of a stated requirement; counselor confirmation suggested.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-13",
@@ -2863,7 +3232,8 @@
               "S26"
             ],
             "notes": "A tenant summary petition also prompts a letter to the landlord.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-14",
@@ -2877,7 +3247,8 @@
               "S37"
             ],
             "notes": "No reset recommended; see flag F28.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "Q-10",
@@ -2890,7 +3261,8 @@
               "S42"
             ],
             "notes": "Conservative compliance checklist only.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -2920,7 +3292,8 @@
               "S02"
             ],
             "notes": "Once every 12 months; license; notice.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-02",
@@ -2932,7 +3305,8 @@
               "S36"
             ],
             "notes": "Local protections remain.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-03",
@@ -2946,7 +3320,8 @@
               "S42"
             ],
             "notes": "HUD FMR/SAFMR are voucher standards.",
-            "flag_id": "F22"
+            "flag_id": "F22",
+            "source_note": ""
           },
           {
             "id": "AN-04",
@@ -2957,7 +3332,8 @@
               "S42"
             ],
             "notes": "Current eCFR as of 11/04/2026.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-05",
@@ -2969,7 +3345,8 @@
               "S39"
             ],
             "notes": "State overlay.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-06",
@@ -2980,7 +3357,8 @@
               "S22"
             ],
             "notes": "Larson footnote flagged.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-07",
@@ -2996,7 +3374,8 @@
               "S37"
             ],
             "notes": "No market-rate reset recommended.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-08",
@@ -3009,7 +3388,8 @@
               "S38"
             ],
             "notes": "Document neutral eligibility/anniversary reasons; no guarantee.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-09",
@@ -3020,7 +3400,8 @@
               "S10"
             ],
             "notes": "Special Circumstances petition required for comparable-rent reset.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-10",
@@ -3031,7 +3412,8 @@
               "S05"
             ],
             "notes": "Blank and flagged.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-11",
@@ -3043,7 +3425,8 @@
               "S49"
             ],
             "notes": "Not SF-specific.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-12",
@@ -3054,7 +3437,8 @@
               "S29"
             ],
             "notes": "No generalization.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-13",
@@ -3069,7 +3453,8 @@
               "S31"
             ],
             "notes": "TRC is eviction-focused.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-14",
@@ -3083,7 +3468,8 @@
               "S42"
             ],
             "notes": "No guarantee of no complaint/lawsuit.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-15",
@@ -3095,7 +3481,25 @@
               "S43"
             ],
             "notes": "Needs review does not block merge.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-20",
+            "label": "What a tenant-side reviewer would test",
+            "value": "1) current license on the effective date, 2) correct rate for that date, 3) 12 months since the last increase, 4) base rent only and no rounding up, 5) notice contents, lead time and delivery, 6) no extra charge for an added roommate, 7) no retaliation or bad-faith harassment",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S05",
+              "S07",
+              "S35",
+              "S17",
+              "S22"
+            ],
+            "notes": "Each item is checkable against the official pages linked here; passing them is not a certification of lawfulness.",
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-16",
@@ -3108,7 +3512,8 @@
               "S28"
             ],
             "notes": "Checks should look at the effective date, not today's status.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-17",
@@ -3121,7 +3526,8 @@
               "S08"
             ],
             "notes": "Direct answer to the owner's question.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-18",
@@ -3134,7 +3540,8 @@
               "S54"
             ],
             "notes": "No banked amount is asserted for either unit.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           },
           {
             "id": "AN-19",
@@ -3146,7 +3553,8 @@
               "S53"
             ],
             "notes": "Privacy consideration; the filing is still required for a license.",
-            "flag_id": ""
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }

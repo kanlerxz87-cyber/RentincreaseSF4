@@ -24,7 +24,8 @@
             "S04"
           ],
           "notes": "Current local rate.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "RATE-02",
@@ -36,7 +37,8 @@
             "S04"
           ],
           "notes": "Historical.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "RATE-03",
@@ -48,7 +50,8 @@
             "S04"
           ],
           "notes": "Historical.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "RATE-04",
@@ -59,7 +62,8 @@
             "S04"
           ],
           "notes": "Historical.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "RATE-05",
@@ -70,7 +74,8 @@
             "S04"
           ],
           "notes": "Historical.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "RATE-06",
@@ -81,7 +86,8 @@
             "S04"
           ],
           "notes": "Historical.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "RATE-07",
@@ -92,7 +98,8 @@
             "S04"
           ],
           "notes": "Historical.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "RATE-08",
@@ -103,7 +110,8 @@
             "S04"
           ],
           "notes": "Relevant to Unit 2 lease start; no banked amount inferred.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     },
@@ -127,7 +135,8 @@
             "S21"
           ],
           "notes": "SF Admin Code 37.3.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "RATE-10",
@@ -139,7 +148,8 @@
             "S01"
           ],
           "notes": "Jan. 13, 2026 minutes adopted Version 1 temporary methodology.",
-          "flag_id": "F06"
+          "flag_id": "F06",
+          "source_note": ""
         },
         {
           "id": "RATE-11",
@@ -152,7 +162,8 @@
             "S04"
           ],
           "notes": "Temporary passthroughs excluded.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

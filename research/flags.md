@@ -37,3 +37,9 @@ See `research/sources/irregularities.md` and `research/sources/unverified.md` fo
 - F25 — Next year's allowable rate not yet published: the Current Rates page lists 1.6% only through 2/28/27 on 2026-11-07; an increase effective on or after 3/1/27 needs the next published rate. Sources: S02, S01. Value left blank.
 - F26 — Unit 1 §6.14 notice history unknown: whether a written 6.14 notice was served on the occupant added April 1, 2026 (within a reasonable time, generally 60 days) and whether that occupant is a co-tenant or a subtenant was not supplied. Sources: S16, S15, S37. No market-rate reset inferred.
 
+
+## Added 2026-11-07 (session `arena-5cbd3f13`)
+
+- F29 — **Correction, capital-improvement petition count.** The June 2024 workload statistics show 18 capital-improvement petitions covering 148 units; the 19 / 149 subtotal includes one Costa-Hawkins petition. The site previously published "19 petitions / 148 units", which mixed the subtotal with the capital-improvement unit count. Corrected in `data/individual.json`, `pages/individual.html` and the executive summary. Source: S29.
+- F30 — **Banked-increase illustration is conditional.** A 13.1% total for Unit 2 (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 skipped years, plus 1.6% current = 13.1%, i.e. $412.65 on $3,150) is published as arithmetic only. It assumes no increase since June 1, 2019, which the owner has not confirmed, and it would require 90 days' written notice. It is not a recommendation and is not relied on elsewhere. Sources: S05, S04, S02.
+- Case facts are published as `owner-supplied` rows (anonymized) rather than blank cells; the official-verification rows for the same facts stay blank and flagged. No raw initials are published: the validator now scans `data/case.json` and `pages/case.html` for initial patterns.

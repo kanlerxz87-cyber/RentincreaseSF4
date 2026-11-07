@@ -23,7 +23,8 @@
             "S35"
           ],
           "notes": "Same local rules apply to individual owners.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "IND-02",
@@ -34,18 +35,20 @@
             "S29"
           ],
           "notes": "Narrow descriptive count.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "IND-03",
           "label": "Capital improvement petitions June 2024",
-          "value": "19 petitions / 148 units",
+          "value": "18 petitions / 148 units",
           "status": "verified",
           "source_ids": [
             "S29"
           ],
-          "notes": "Narrow descriptive count.",
-          "flag_id": ""
+          "notes": "Corrected 2026-11-07 against the source PDF: 18 capital-improvement petitions / 148 units; the 19 / 149 subtotal includes 1 Costa-Hawkins petition (F29).",
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "IND-04",
@@ -56,7 +59,8 @@
             "S29"
           ],
           "notes": "Not proof of typical practice.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "IND-05",
@@ -67,7 +71,8 @@
             "S29"
           ],
           "notes": "No official source proves what all individual owners do.",
-          "flag_id": "F23"
+          "flag_id": "F23",
+          "source_note": ""
         }
       ]
     }

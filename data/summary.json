@@ -22,7 +22,8 @@
             "S07"
           ],
           "notes": "Ownership form (individual vs corporation) is not listed as an exemption. Do not rely on being a small/individual owner.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LIC-02",
@@ -34,7 +35,8 @@
             "S07"
           ],
           "notes": "A small individual-owned building is therefore covered now (2026).",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LIC-03",
@@ -45,7 +47,8 @@
             "S07"
           ],
           "notes": "This reporting is how you 'inform the Rent Board'. Information submitted is public; submit under penalty of perjury.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LIC-04",
@@ -56,7 +59,8 @@
             "S07"
           ],
           "notes": "The license does not need to be included with the rent increase notice to tenants.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LIC-05",
@@ -68,7 +72,8 @@
             "S01"
           ],
           "notes": "Order matters: Housing Inventory report -> license on file -> then serve tenant notice -> effective date. See flag F25 on consequence wording.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LIC-06",
@@ -79,7 +84,8 @@
             "S07"
           ],
           "notes": "Late filing does not cure a notice whose effective date passed without a license; get legal advice on any already-served notice.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LIC-07",
@@ -92,7 +98,8 @@
             "S35"
           ],
           "notes": "License first, tenant notice second. License alone does not satisfy state/local notice law; you must still comply with all other rent increase laws.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LIC-08",
@@ -104,7 +111,8 @@
             "S08"
           ],
           "notes": "Assume tenants and free tenant-side legal services can and will check this before paying an increase.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LIC-09",
@@ -116,7 +124,8 @@
             "S01"
           ],
           "notes": "Owner-supplied intake does not confirm Housing Inventory reporting or a current license for either unit; blank and flagged. No increase should be treated as effective until this is confirmed.",
-          "flag_id": "T03-F05"
+          "flag_id": "T03-F05",
+          "source_note": ""
         },
         {
           "id": "LIC-10",
@@ -131,7 +140,8 @@
             "S35"
           ],
           "notes": "Published on the Step-by-Step License page (pages/process.html).",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     },
@@ -157,7 +167,8 @@
             "S04"
           ],
           "notes": "For covered rent-controlled units, once every 12 months.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-02",
@@ -168,7 +179,8 @@
             "S27"
           ],
           "notes": "Does NOT apply to units under SF Rent Ordinance rent-increase limits.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-03",
@@ -182,7 +194,8 @@
             "S42"
           ],
           "notes": "No official source found; blank and flagged.",
-          "flag_id": "F22"
+          "flag_id": "F22",
+          "source_note": ""
         },
         {
           "id": "SUM-04",
@@ -195,7 +208,8 @@
             "S08"
           ],
           "notes": "Unlicensed increase may be null/void.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-05",
@@ -208,7 +222,8 @@
             "S35"
           ],
           "notes": "Use rate in effect on increase date.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-06",
@@ -219,7 +234,8 @@
             "S05"
           ],
           "notes": "No banked amount inferred for this case.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-07",
@@ -233,7 +249,8 @@
             "S19"
           ],
           "notes": "No market-rate reset inferred.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-08",
@@ -247,7 +264,8 @@
             "S37"
           ],
           "notes": "Continuing occupant legal status and last-original-occupant facts unverified.",
-          "flag_id": "T03-F04"
+          "flag_id": "T03-F04",
+          "source_note": ""
         },
         {
           "id": "SUM-09",
@@ -259,7 +277,8 @@
             "S49"
           ],
           "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-10",
@@ -270,7 +289,8 @@
             "S29"
           ],
           "notes": "Narrow formal-petition evidence only.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-11",
@@ -284,7 +304,8 @@
             "S42"
           ],
           "notes": "Compliance checklist capable of tenant-lawyer review; no approval or guarantee.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "SUM-12",
@@ -297,7 +318,8 @@
             "S38"
           ],
           "notes": "No official source requires both; document neutral eligibility reasons if only one is raised.",
-          "flag_id": "F22"
+          "flag_id": "F22",
+          "source_note": ""
         },
         {
           "id": "SUM-13",
@@ -312,7 +334,8 @@
             "S52"
           ],
           "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07"
+          "flag_id": "T03-F07",
+          "source_note": ""
         }
       ]
     }
