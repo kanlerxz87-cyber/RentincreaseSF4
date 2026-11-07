@@ -1,9 +1,16 @@
 """Page definitions: every row has source_ids, status, value, notes and optional flag_id."""
 
 COLUMNS = ["Item", "Value / finding", "Status", "Official source(s)", "Notes / flag"]
+OWNER_COLUMNS = ["Item", "Owner-supplied value", "Status", "Source", "Notes / flag"]
 
-def row(id, label, value, status, source_ids, notes="", flag_id=""):
-    return {"id": id, "label": label, "value": value, "status": status, "source_ids": source_ids, "notes": notes, "flag_id": flag_id}
+def row(id, label, value, status, source_ids, notes="", flag_id="", source_note=""):
+    return {"id": id, "label": label, "value": value, "status": status, "source_ids": source_ids,
+            "notes": notes, "flag_id": flag_id, "source_note": source_note}
+
+def owned(id, label, value, notes=""):
+    """Owner-supplied case fact: published, anonymized, and explicitly not an official source."""
+    return {"id": id, "label": label, "value": value, "status": "owner supplied", "source_ids": [],
+            "notes": notes, "flag_id": "", "source_note": "Owner intake (anonymized)"}
 
 PAGES = {
     "summary": {
@@ -194,35 +201,46 @@ PAGES = {
     },
     "case": {
         "title": "Anonymized Case Facts",
-        "description": "Owner-supplied dates and amounts preserved; personal information replaced with placeholders; official-verified values blank where unverified.",
+        "description": "Owner-supplied facts published with placeholder tenants and unchanged dates and amounts, separated from what still has to be verified officially.",
         "sections": [
-            {"title": "Location / building", "columns": COLUMNS, "rows": [
-                row("CASE-01", "Neighborhood / ZIP", "", "needs review", ["S33", "S34"], "Owner input: Outer Sunset, San Francisco, CA 94122; official SF Planning context only, not property-specific verification.", "T03-F03"),
-                row("CASE-02", "Exact street address", "", "needs review", ["S32"], "Owner input: not supplied; no exact address published.", "T03-F01"),
-                row("CASE-03", "Building year", "", "needs review", ["S06", "S32"], "Owner input: 1940; before June 13, 1979 cutoff but property-specific record unverified.", "T03-F03"),
-                row("CASE-04", "Rent-controlled status", "", "needs review", ["S06", "S20"], "Owner input: units said to be rent controlled; not official-verified.", "F21"),
-                row("CASE-05", "Rent Increase License status", "", "needs review", ["S07", "S08"], "Owner input: not supplied.", "T03-F05"),
-                row("CASE-06", "Prior increases / banked increases / notice history / anniversary", "", "needs review", ["S01", "S05"], "Owner input: not supplied; no banked amount inferred.", "T03-F05"),
+            {"title": "Owner-supplied case facts (anonymized) - not official findings", "columns": OWNER_COLUMNS, "rows": [
+                owned("CASE-01", "Location", "Outer Sunset, San Francisco, CA 94122", "ZIP and neighbourhood only; no street address is published."),
+                owned("CASE-02", "Exact street address", "Withheld - not published", "Privacy rule: no exact address appears anywhere on this site or in the repository."),
+                owned("CASE-03", "Building year", "1940", "Before the June 13, 1979 coverage cutoff; a property-specific check is still required."),
+                owned("CASE-04", "Residential units in the building", "2", "Owner describes Unit 1 and Unit 2."),
+                owned("CASE-05", "Rent-controlled status", "Owner states both units are rent controlled", "Owner statement, not an official determination."),
+                owned("CASE-06", "Rent Increase License / Housing Inventory status", "Not supplied", "Confirm in the Rent Board Portal before serving any notice."),
+                owned("CASE-07", "Prior increases, notices, petitions", "Not supplied", "No banked amount is inferred."),
+                owned("CASE-08", "Unit 1 - last lease start", "February 1, 2025", "Date preserved exactly."),
+                owned("CASE-09", "Unit 1 - rent at last lease start", "$3,995 per month", "Amount preserved exactly."),
+                owned("CASE-10", "Unit 1 - initial lease tenants", "Tenant A, Tenant B, Tenant C", "Placeholders replace all three original initials."),
+                owned("CASE-11", "Unit 1 - continuing tenancy / current tenants", "Tenant A and Tenant D", "Placeholders; no inference about legal status."),
+                owned("CASE-12", "Unit 1 - current tenancy date", "April 1, 2026", "Date preserved exactly."),
+                owned("CASE-13", "Unit 1 - rent on April 1, 2026", "$3,995 per month", "Unchanged from the last lease start."),
+                owned("CASE-14", "Unit 2 - last lease start", "June 1, 2019", "Date preserved exactly."),
+                owned("CASE-15", "Unit 2 - rent at last lease start", "$3,150 per month", "Amount preserved exactly."),
+                owned("CASE-16", "Unit 2 - tenants", "Tenant E and Tenant F", "Placeholders replace both initials."),
+                owned("CASE-17", "Unit 2 - current rent", "Not supplied", "No current figure is assumed."),
             ]},
-            {"title": "Unit 1 - anonymized", "columns": COLUMNS, "rows": [
-                row("CASE-07", "Last lease start", "", "needs review", ["S01"], "Owner input: February 1, 2025; date unchanged.", "T03-F01"),
-                row("CASE-08", "Monthly rent at last lease start", "", "needs review", ["S01"], "Owner input: $3,995; amount unchanged.", "T03-F01"),
-                row("CASE-09", "Initial lease tenants", "", "needs review", ["S17"], "Published placeholders: Tenant A, Tenant B, Tenant C; no raw identifiers.", "T03-F02"),
-                row("CASE-10", "Continuing tenancy / current tenants", "", "needs review", ["S17"], "Published placeholders: Tenant A, Tenant D; no inference about legal status.", "T03-F04"),
-                row("CASE-11", "Current-tenancy date", "", "needs review", ["S01"], "Owner input: April 1, 2026; date unchanged.", "T03-F01"),
-                row("CASE-12", "Monthly rent on April 1, 2026", "", "needs review", ["S01"], "Owner input: $3,995; amount unchanged.", "T03-F01"),
-                row("CASE-13", "Whether a new tenancy began April 1, 2026", "", "needs review", ["S16"], "Owner input: not supplied; no inference.", "T03-F04"),
-                row("CASE-14", "Legal status of continuing occupant(s)", "", "needs review", ["S15", "S37"], "Owner input: not supplied; no inference.", "T03-F04"),
-                row("CASE-15", "Last original occupant vacated / no longer permanently resides", "", "needs review", ["S28"], "Owner input: not supplied; no inference.", "T03-F04"),
+            {"title": "Anonymization map (published; no raw initials anywhere)", "columns": OWNER_COLUMNS, "rows": [
+                owned("MAP-1", "Tenant A", "Original Unit 1 tenant, still listed on the continuing tenancy", "Role only."),
+                owned("MAP-2", "Tenant B", "Original Unit 1 tenant, not on the continuing tenancy", "Role only."),
+                owned("MAP-3", "Tenant C", "Original Unit 1 tenant, not on the continuing tenancy", "Role only."),
+                owned("MAP-4", "Tenant D", "Unit 1 tenant on the April 1, 2026 tenancy", "Role only."),
+                owned("MAP-5", "Tenant E", "Unit 2 tenant since June 1, 2019", "Role only."),
+                owned("MAP-6", "Tenant F", "Unit 2 tenant since June 1, 2019", "Role only."),
             ]},
-            {"title": "Unit 2 - anonymized", "columns": COLUMNS, "rows": [
-                row("CASE-16", "Last lease start", "", "needs review", ["S01"], "Owner input: June 1, 2019; date unchanged.", "T03-F01"),
-                row("CASE-17", "Monthly rent at last lease start", "", "needs review", ["S01"], "Owner input: $3,150; amount unchanged.", "T03-F01"),
-                row("CASE-18", "Tenants", "", "needs review", ["S17"], "Published placeholders: Tenant E, Tenant F; no raw identifiers.", "T03-F02"),
-                row("CASE-19", "Prior increases since June 1, 2019", "", "needs review", ["S05"], "Owner input: not supplied; no banked amount inferred.", "T03-F05"),
-                row("CASE-20", "Section 6.14 notice served on the occupant added April 1, 2026", "", "needs review", ["S16", "S15"], "Owner input: not supplied; whether a written 6.14 notice was served within a reasonable time (generally 60 days) and whether the occupant is a co-tenant or subtenant is unknown.", "F28"),
-                row("CASE-21", "Housing Inventory / license status for each unit", "", "needs review", ["S07", "S08", "S53"], "Owner input: not supplied; license status must be confirmed for the effective date of any increase.", "T03-F05"),
-                row("CASE-22", "Privacy of the Housing Inventory filing", "Inventory submission information is public, including owner name and business contact information", "verified", ["S07", "S53"], "Stated by SF.gov; relevant before reporting, but the filing is required to obtain a license."),
+            {"title": "What still has to be verified from an official source", "columns": COLUMNS, "rows": [
+                row("CASE-V1", "Coverage of the exact address", "", "needs review", ["S06", "S32"], "Check the address in the Planning Property Information Map; no exact address is published here.", "T03-F03"),
+                row("CASE-V2", "Official building-year record", "", "needs review", ["S32", "S06"], "Owner says 1940; the official record was not obtained in this session.", "T03-F03"),
+                row("CASE-V3", "Current Rent Increase License status", "", "needs review", ["S07", "S08", "S53"], "Not supplied; confirm in the Rent Board Portal for the effective date of any increase.", "T03-F05"),
+                row("CASE-V4", "Anniversary dates and prior increase history", "", "needs review", ["S01", "S05"], "Not supplied; see F28 for the Section 6.14 and anniversary-date question.", "T03-F05"),
+                row("CASE-V5", "Unit 1 continuing occupant legal status (co-tenant, subtenant, assignee)", "", "needs review", ["S15", "S16", "S37"], "Not supplied; no market-rate reset is recommended.", "T03-F04"),
+                row("CASE-V6", "Whether a new tenancy actually began on April 1, 2026", "", "needs review", ["S16", "S01"], "Not supplied; affects the anniversary date and any Costa-Hawkins analysis.", "T03-F04"),
+                row("CASE-V7", "Whether the last original Unit 1 tenant still permanently resides there", "", "needs review", ["S16", "S28"], "Not supplied; Section 6.14 requires the last original occupant to have vacated.", "T03-F04"),
+                row("CASE-V8", "Section 6.14 notice served on the occupant added April 1, 2026", "", "needs review", ["S16", "S15"], "Not supplied; a written 6.14 notice within a reasonable time (generally 60 days) is required for a later unlimited increase.", "F28"),
+                row("CASE-V9", "Banked increase eligibility for either unit", "", "needs review", ["S05"], "Needs 24 full months without any increase; history unknown.", "T03-F05"),
+                row("CASE-V10", "Privacy of the Housing Inventory filing", "Inventory submission information is public, including owner name and business contact information", "verified", ["S07", "S53"], "Relevant before filing, but the filing is required to obtain the license."),
             ]},
         ],
     },
@@ -241,6 +259,13 @@ PAGES = {
             {"title": "Banked increases", "columns": COLUMNS, "rows": [
                 row("CALC-05", "Banked total for either unit", "", "needs review", ["S05", "S04"], "Prior increases and anniversary dates not supplied; blank.", "T03-F05"),
                 row("CALC-06", "Rounding", "No rounding up; base rent only", "verified", ["S01"], "Temporary passthroughs excluded."),
+                row("CALC-07", "Official rate series behind any banked amount", "1.8% (3/1/20-2/28/21), 0.7% (3/1/21-2/28/22), 2.3% (3/1/22-2/28/23), 3.6% (3/1/23-2/29/24), 1.7% (3/1/24-2/28/25), 1.4% (3/1/25-2/28/26), 1.6% (3/1/26-2/28/27)", "verified", ["S04", "S02"], "Banked percentages are added, then applied to current base rent; they are never compounded or prorated."),
+                row("CALC-08", "Unit 2 - conditional maximum if nothing was ever raised", "11.5% of skipped years (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4) plus 1.6% = 13.1%; $3,150 x 13.1% = $412.65, or $3,562.65", "analysis", ["S05", "S04", "S02"], "Conditional arithmetic only: it assumes no increase since June 1, 2019, which the owner has not confirmed. A combined increase above 10% also requires 90 days' written notice, and the effective date must fall on or before 2/28/2027 for the 1.6% component to be the published rate.", "F30"),
+                row("CALC-09", "Unit 1 - banked amount", "", "needs review", ["S05", "S01"], "The lease began February 1, 2025 and no notice history was supplied, so nothing can yet satisfy the 24-full-month banking rule.", "T03-F05"),
+            ]},
+            {"title": "Notice deadlines if the increase is 1.6%", "columns": COLUMNS, "rows": [
+                row("CALC-10", "Effective February 1, 2027, served in person", "Notice delivered by January 2, 2027", "analysis", ["S01", "S35"], "30 days before the effective date; the 1.6% rate is in effect through 2/28/2027."),
+                row("CALC-11", "Effective February 1, 2027, served by mail", "Notice mailed by December 28, 2026", "analysis", ["S01", "S35"], "Mailed notice gets 5 extra days and Civil Code 1013 extension rules apply."),
             ]},
         ],
     },
@@ -304,7 +329,7 @@ PAGES = {
             {"title": "Official evidence", "columns": COLUMNS, "rows": [
                 row("IND-01", "Ordinary path", "Annual allowable increase, license, 12-month anniversary, written notice", "verified", ["S01", "S07", "S35"], "Same local rules apply to individual owners."),
                 row("IND-02", "Formal petitions June 2024", "23 landlord petitions / 154 units", "verified", ["S29"], "Narrow descriptive count."),
-                row("IND-03", "Capital improvement petitions June 2024", "19 petitions / 148 units", "verified", ["S29"], "Narrow descriptive count."),
+                row("IND-03", "Capital improvement petitions June 2024", "18 petitions / 148 units", "verified", ["S29"], "Corrected 2026-11-07 against the source PDF: 18 capital-improvement petitions / 148 units; the 19 / 149 subtotal includes 1 Costa-Hawkins petition (F29)."),
                 row("IND-04", "Tenant petitions / eviction notices June 2024", "73 tenant petitions / 73 units; 89 eviction notices", "verified", ["S29"], "Not proof of typical practice."),
                 row("IND-05", "All individual SF owners generalization", "", "needs review", ["S29"], "No official source proves what all individual owners do.", "F23"),
             ]},
@@ -371,6 +396,7 @@ PAGES = {
                 row("AN-13", "Tenant-lawyer review", "Checklist capable of review; no approval claimed", "analysis", ["S23", "S24", "S25", "S30", "S31"], "TRC is eviction-focused."),
                 row("AN-14", "Conservative compliance checklist", "At most ordinary 1.6% annual allowable increase (or less) on each eligible unit, identical written neutral policy, license, notice, dates, calculations, recordkeeping", "analysis", ["S01", "S07", "S35", "S42"], "No guarantee of no complaint/lawsuit."),
                 row("AN-15", "Flagged items do not block", "All 38 flags published with source links", "verified", ["S01", "S43"], "Needs review does not block merge."),
+                row("AN-20", "What a tenant-side reviewer would test", "1) current license on the effective date, 2) correct rate for that date, 3) 12 months since the last increase, 4) base rent only and no rounding up, 5) notice contents, lead time and delivery, 6) no extra charge for an added roommate, 7) no retaliation or bad-faith harassment", "analysis", ["S01", "S05", "S07", "S35", "S17", "S22"], "Each item is checkable against the official pages linked here; passing them is not a certification of lawfulness."),
                 row("AN-16", "The license is a precondition, not paperwork", "An increase noticed while the unit is unlicensed may be null and void or unenforceable with refund exposure, and the Rent Board issues noncompliance notices; its January 2026 minutes record more than 23,000 licenses", "verified", ["S08", "S53", "S28"], "Checks should look at the effective date, not today's status."),
                 row("AN-17", "Individual owners are not exempt", "The requirement follows rent-controlled status; there is no owner-size exemption, and buildings under 10 units have reported since March 1, 2023", "verified", ["S07", "S53", "S08"], "Direct answer to the owner's question."),
                 row("AN-18", "A banked total can exceed 10%", "Adding a correctly banked percentage to the current annual increase can push one notice above 10%, which then needs 90-day notice", "verified", ["S01", "S05", "S54"], "No banked amount is asserted for either unit."),

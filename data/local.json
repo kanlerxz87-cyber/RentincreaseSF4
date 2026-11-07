@@ -21,7 +21,8 @@
             "S06"
           ],
           "notes": "Verify exact address in PIM; partial exemptions exist.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-02",
@@ -33,7 +34,8 @@
             "S02"
           ],
           "notes": "Current rate.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-03",
@@ -44,7 +46,8 @@
             "S21"
           ],
           "notes": "SF Admin Code 37.3.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-04",
@@ -56,7 +59,8 @@
             "S27"
           ],
           "notes": "Not a reset for an existing tenancy.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-05",
@@ -69,7 +73,8 @@
             "S08"
           ],
           "notes": "Unlicensed increase may be null/void.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-06",
@@ -80,7 +85,8 @@
             "S07"
           ],
           "notes": "No monetary penalty, but notice unenforceable without license.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-07",
@@ -91,7 +97,8 @@
             "S05"
           ],
           "notes": "Notice must state banked portion.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-08",
@@ -104,7 +111,8 @@
             "S18"
           ],
           "notes": "Even if lease says otherwise.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-09",
@@ -115,7 +123,8 @@
             "S09"
           ],
           "notes": "Petition/worksheet before notice.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-10",
@@ -127,7 +136,8 @@
             "S16"
           ],
           "notes": "60 days generally reasonable.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-11",
@@ -139,7 +149,8 @@
             "S16"
           ],
           "notes": "Legal advice strongly encouraged.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-12",
@@ -150,7 +161,8 @@
             "S22"
           ],
           "notes": "Larson footnote conflict flagged.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-13",
@@ -162,7 +174,8 @@
             "S26"
           ],
           "notes": "516C and 518 forms.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-14",
@@ -174,7 +187,8 @@
             "S20"
           ],
           "notes": "Added by Ord. 265-20; not a rental registry under Civil Code 1947.7-1947.8.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-15",
@@ -187,7 +201,8 @@
             "S09"
           ],
           "notes": "Those increases have separate rules and remedies.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-16",
@@ -199,7 +214,8 @@
             "S53"
           ],
           "notes": "Privacy consideration before filing.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-17",
@@ -210,7 +226,8 @@
             "S54"
           ],
           "notes": "30-day notice (35 if mailed).",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "LOC-18",
@@ -222,7 +239,8 @@
             "S08"
           ],
           "notes": "Office open 9-4 weekdays; counseling 415-252-4600.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

@@ -24,7 +24,8 @@
             "S44"
           ],
           "notes": "Federal cap blank and flagged.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-02",
@@ -36,7 +37,8 @@
             "S49"
           ],
           "notes": "Portfolio-level, not SF-specific; no generalization.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-03",
@@ -49,7 +51,8 @@
             "S29"
           ],
           "notes": "Narrow formal-petition evidence only.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-04",
@@ -63,7 +66,8 @@
             "S07"
           ],
           "notes": "Conservative checklist capable of lawyer review.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-05",
@@ -78,7 +82,8 @@
             "S18"
           ],
           "notes": "Mere long tenure below market is not extraordinary.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-06",
@@ -93,7 +98,8 @@
             "S31"
           ],
           "notes": "No official general rent-increase attorney approval service found.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-07",
@@ -107,7 +113,8 @@
             "S42"
           ],
           "notes": "No official source can certify approval; only a conservative checklist capable of review.",
-          "flag_id": "T03-F08"
+          "flag_id": "T03-F08",
+          "source_note": ""
         },
         {
           "id": "Q-08",
@@ -120,7 +127,8 @@
             "S38"
           ],
           "notes": "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised.",
-          "flag_id": "F22"
+          "flag_id": "F22",
+          "source_note": ""
         },
         {
           "id": "Q-09",
@@ -134,7 +142,8 @@
             "S28"
           ],
           "notes": "Continuing occupant legal status and last-original-occupant facts unverified; no reset recommended.",
-          "flag_id": "T03-F04"
+          "flag_id": "T03-F04",
+          "source_note": ""
         },
         {
           "id": "Q-11",
@@ -148,7 +157,8 @@
             "S53"
           ],
           "notes": "See the Step-by-Step License page.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-12",
@@ -161,7 +171,8 @@
             "S01"
           ],
           "notes": "Absence of a stated requirement; counselor confirmation suggested.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-13",
@@ -175,7 +186,8 @@
             "S26"
           ],
           "notes": "A tenant summary petition also prompts a letter to the landlord.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-14",
@@ -189,7 +201,8 @@
             "S37"
           ],
           "notes": "No reset recommended; see flag F28.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "Q-10",
@@ -202,7 +215,8 @@
             "S42"
           ],
           "notes": "Conservative compliance checklist only.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

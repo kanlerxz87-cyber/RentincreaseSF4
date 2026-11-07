@@ -23,7 +23,8 @@
             "S04"
           ],
           "notes": "Once every 12 months; license and notice.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REAS-02",
@@ -34,7 +35,8 @@
             "S05"
           ],
           "notes": "No banked amount inferred here.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REAS-03",
@@ -46,7 +48,8 @@
             "S12"
           ],
           "notes": "Hardship application available.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REAS-04",
@@ -58,7 +61,8 @@
             "S11"
           ],
           "notes": "Petition before notice.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REAS-05",
@@ -70,7 +74,8 @@
             "S10"
           ],
           "notes": "One-time tenancy reset; petition before notice.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REAS-06",
@@ -82,7 +87,8 @@
             "S13"
           ],
           "notes": "Not base rent.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REAS-07",
@@ -94,7 +100,8 @@
             "S14"
           ],
           "notes": "Not applicable if any qualifying tenant resides.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REAS-08",
@@ -105,7 +112,8 @@
             "S09"
           ],
           "notes": "Follow specific form instructions.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "REAS-09",
@@ -118,7 +126,8 @@
             "S18"
           ],
           "notes": "Not a lawful reason; blank and flagged.",
-          "flag_id": "T03-F04"
+          "flag_id": "T03-F04",
+          "source_note": ""
         },
         {
           "id": "REAS-10",
@@ -132,7 +141,8 @@
             "S28"
           ],
           "notes": "Not recommended without official eligibility and legal review.",
-          "flag_id": "T03-F04"
+          "flag_id": "T03-F04",
+          "source_note": ""
         }
       ]
     }

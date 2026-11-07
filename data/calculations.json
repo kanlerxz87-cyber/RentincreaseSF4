@@ -24,7 +24,8 @@
             "S04"
           ],
           "notes": "Eligibility, license, notice and anniversary unverified.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "CALC-02",
@@ -38,7 +39,8 @@
             "S04"
           ],
           "notes": "Eligibility, license, notice and anniversary unverified.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     },
@@ -62,7 +64,8 @@
             "S04"
           ],
           "notes": "Historical comparison only.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         },
         {
           "id": "CALC-04",
@@ -74,7 +77,8 @@
             "S04"
           ],
           "notes": "Historical comparison only.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     },
@@ -98,7 +102,8 @@
             "S04"
           ],
           "notes": "Prior increases and anniversary dates not supplied; blank.",
-          "flag_id": "T03-F05"
+          "flag_id": "T03-F05",
+          "source_note": ""
         },
         {
           "id": "CALC-06",
@@ -109,7 +114,86 @@
             "S01"
           ],
           "notes": "Temporary passthroughs excluded.",
-          "flag_id": ""
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CALC-07",
+          "label": "Official rate series behind any banked amount",
+          "value": "1.8% (3/1/20-2/28/21), 0.7% (3/1/21-2/28/22), 2.3% (3/1/22-2/28/23), 3.6% (3/1/23-2/29/24), 1.7% (3/1/24-2/28/25), 1.4% (3/1/25-2/28/26), 1.6% (3/1/26-2/28/27)",
+          "status": "verified",
+          "source_ids": [
+            "S04",
+            "S02"
+          ],
+          "notes": "Banked percentages are added, then applied to current base rent; they are never compounded or prorated.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CALC-08",
+          "label": "Unit 2 - conditional maximum if nothing was ever raised",
+          "value": "11.5% of skipped years (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4) plus 1.6% = 13.1%; $3,150 x 13.1% = $412.65, or $3,562.65",
+          "status": "analysis",
+          "source_ids": [
+            "S05",
+            "S04",
+            "S02"
+          ],
+          "notes": "Conditional arithmetic only: it assumes no increase since June 1, 2019, which the owner has not confirmed. A combined increase above 10% also requires 90 days' written notice, and the effective date must fall on or before 2/28/2027 for the 1.6% component to be the published rate.",
+          "flag_id": "F30",
+          "source_note": ""
+        },
+        {
+          "id": "CALC-09",
+          "label": "Unit 1 - banked amount",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S05",
+            "S01"
+          ],
+          "notes": "The lease began February 1, 2025 and no notice history was supplied, so nothing can yet satisfy the 24-full-month banking rule.",
+          "flag_id": "T03-F05",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Notice deadlines if the increase is 1.6%",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CALC-10",
+          "label": "Effective February 1, 2027, served in person",
+          "value": "Notice delivered by January 2, 2027",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S35"
+          ],
+          "notes": "30 days before the effective date; the 1.6% rate is in effect through 2/28/2027.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CALC-11",
+          "label": "Effective February 1, 2027, served by mail",
+          "value": "Notice mailed by December 28, 2026",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S35"
+          ],
+          "notes": "Mailed notice gets 5 extra days and Civil Code 1013 extension rules apply.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

@@ -32,6 +32,8 @@ def source_links(ids):
     return '<span class="src">' + " ".join(parts) + "</span>"
 
 def badge(status):
+    if status == "owner supplied":
+        return '<span class="badge owner">owner-supplied</span>'
     cls = {"verified": "verified", "needs review": "review", "analysis": "analysis"}.get(status, "analysis")
     label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis"}.get(status, status)
     return '<span class="badge {}">{}</span>'.format(cls, e(label))
@@ -50,7 +52,7 @@ def render_table(section, in_pages=True):
     out.append("</tr></thead><tbody>")
     for r in section["rows"]:
         value = r.get("value", "")
-        value_cell = '<td class="blank">(blank)</td>' if value == "" else "<td>{}</td>".format(e(value))
+        value_cell = '<td class="blank">(blank - not officially confirmed)</td>' if value == "" else "<td>{}</td>".format(e(value))
         notes = e(r.get("notes", ""))
         fl = flag_link(r.get("flag_id", ""), in_pages)
         if fl:
@@ -59,7 +61,10 @@ def render_table(section, in_pages=True):
         out.append("<td><strong>{}</strong><br><span class=\"small\">{}</span></td>".format(e(r["label"]), e(r["id"])))
         out.append(value_cell)
         out.append("<td>{}</td>".format(badge(r["status"])))
-        out.append("<td>{}</td>".format(source_links(r["source_ids"])))
+        if r.get("status") == "owner supplied" and r.get("source_note"):
+            out.append('<td><span class="owner-src">{}</span></td>'.format(e(r["source_note"])))
+        else:
+            out.append("<td>{}</td>".format(source_links(r.get("source_ids", []))))
         out.append("<td>{}</td>".format(notes))
         out.append("</tr>")
     out.append("</tbody></table></div>")
@@ -162,9 +167,18 @@ def index_html():
                '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a></p>'
                '<div class="disclaimer">{}</div></section>'.format(
                    source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
-    out.append('<section class="hero"><h2>Clean landing page / dashboard</h2><p>Official-source-linked findings, local / state / federal rules, anonymized case facts, calculations, analysis, and a clearly labeled Flagged for Review page.</p></section>')
+    out.append('<section class="hero"><h2>How to read this dashboard</h2>'
+               '<p>Every finding row carries a <span class="badge verified">verified</span> badge and one or more official source links (SF.gov, the Rent Ordinance, California statute, eCFR, HUD, SEC). '
+               '<span class="badge analysis">analysis</span> means a reasoned conclusion drawn from those rules plus the owner-supplied facts. '
+               '<span class="badge review">needs review</span> means the value could not be confirmed officially, so the cell is left blank and the item is published on the Flagged for Review page. '
+               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings.</p>'
+               '<p class="small">Start with the Executive Summary for the answer, the Step-by-Step License page for the order of operations, the Anonymized Case for the two units, and the Flagged for Review page for anything still open.</p></section>')
     out.append('<div class="cards">')
     for label, value, slug, desc in D.CARDS:
+        if value == "auto:sources":
+            value = str(len(D.SOURCES))
+        elif value == "auto:flags":
+            value = str(len(D.FLAGS))
         out.append('<div class="card"><div class="k">{}</div><div class="v">{}</div><div class="d">{}</div><a href="pages/{}.html">Open {} &rarr;</a></div>'.format(
             e(label), e(value), e(desc), e(slug), e(label)
         ))
