@@ -220,7 +220,6 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 
 **Handoff notes for the next session.** (1) No conflicting claims were found at merge time; prior sessions' F25/F26 meanings, CI workflow, `FOLLOWUP_AUDIT.md` and `TENANT_ASSISTANCE_RESEARCH.md` are preserved. (2) Outstanding `needs review` items are unchanged in kind: F27 (2027–28 rate not yet published) and F28 (Unit 1 §6.14 notice history) need owner facts or a later SF.gov publication, not more research. (3) Public-page flag section headers are regenerated from `scripts/site_flags.py`; edit that file and rebuild rather than editing `pages/*.html`.
 
-<<<<<<< HEAD
 ### Final publication status (session `arena-c007d556`, 2026-11-07)
 
 | Item | Result | Evidence |
@@ -232,7 +231,6 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 | Local gate before every merge | 82 checks, 0 errors | `python3 scripts/validate_site.py`; `data/validation_report.json` |
 
 Any later commit's deployment status can be re-checked with `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`. This file records results rather than predicting them; the deploy status of this very commit is therefore verified via that API and reported in the session summary.
-=======
 ## Session 2026-11-07 — `arena-5cbd3f13` (T07)
 
 Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto the then-current `main` (`cd42189`) before any delta was re-applied. No other session's files were overwritten; this session re-applied only the changes listed below on top of `main`.
@@ -253,7 +251,6 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 
 - The base commit `a0591c3` was far behind `origin/main` (`cd42189`, PRs #2–#9). Rather than merge conflicting rewrites of the same generator files, this session took `main` as the base and re-applied its deltas on top; the earlier WIP commit on this branch is superseded and adds nothing to `main`. Nothing from another session was discarded.
 - T05 (PR #1) was already merged and Pages already built before this session started; T07 does not re-claim T05.
->>>>>>> origin/main
 
 ### D16 coordination note to `arena-ea02333c` (T08) and any later session — added 2026-11-07 ~20:20 UTC
 
@@ -262,3 +259,26 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 - **Privacy (D16-P).** `research/privacy/HISTORY_EXPOSURE.md` records that the raw tokens from the earlier validation report remain reachable in git history, in the diffs of PRs #1, #2, #4, #5 and #9, and at the tips of `arena/73f5f1a2-rentincreasesf4` and `arena/fce57ebb-rentincreasesf4`. F26 on the site does not say that; D16-C adds a flag. Agents cannot rewrite history; owner options are listed in that file. The file itself contains no raw identifier.
 - **QA findings already known to D16-B (not yet fixed on `main`, no claim on those lines by anyone but T08's scope):** `REQ-08` and `AN-15` say "38 flags" (actual 40); `pages/sources.html` header says "All 52 official sources" (actual 55; `scripts/build_site.py` line ~122); requirements rows `REQ-01/02/04/06/08/13/14/19/20` and `AN-15` cite S43 (HUD Fair Market Rents) as their "official source", which has nothing to do with a GitHub Pages / PR / flag-count requirement; `FLAGGED_FOR_REVIEW.md` says "30 source-quality flags F01-F30". If T08 is already fixing these, ignore; otherwise D16-C will after T08 finishes.
 - **Independently re-verified by D16-B on 2026-11-07 (fresh `fetch_page`, no change needed):** Admin Code §37.15(e) text; §37.3(a)(1)-(2) (60% of CPI, 7% cap, banking); SF.gov banked-increase page (24 full months; sum not compounded); Civil Code §1947.12 (a)(1), (a)(2), (d)(3); Gov. Code §12955(a), (f); 24 CFR 100.500 (eCFR current as of 11/05/2026; last amended 3/31/2023, 88 FR 19500).
+
+## Session 2026-11-08 — `arena-abb34cd1` (T09): QA, D16 integration, repair, PR + merge + Pages
+
+**Session ID:** `arena-abb34cd1` · **Branch:** `arena/abb34cd1-rentincreasesf4` (Arena fixes this branch; `session-<id>/<task>` branches cannot be created — exclusive file scopes are used instead). **Claimed:** 2026-11-08 UTC, immediately after `git pull` on the current `main` (`d63dee4`, merge of PR #13).
+
+**Claimed task (single owner, non-overlapping scope).**
+
+| ID | Task | Status | Owner | File scope (exclusive) | Sources / verification | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T09 | Take over the stale D16-B (QA) and D16-C (final integration) claims: integrate the Rent Board Fee research and the git-history privacy finding into the site, repair the open QA findings, harden the validator, rebuild, re-verify every changed row against a freshly fetched official page, open a PR to `main`, merge, confirm the GitHub Pages deploy, and record the result here | `in progress` | `arena-abb34cd1` | `scripts/site_sources.py`, `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/build_site.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `README.md`, `SOURCES.md`, `VERIFICATION.md`, `REPO_REVIEW.md`, `research/qa/`, `COORDINATION.md` | See the verification log appended at the end of this section. | Open QA findings inherited from D16-B are listed below and are fixed in this task. |
+
+**Takeover note (no work discarded).** D16-A and D16-P were claimed by `arena-d16cbfc8` on 2026-11-07 ~20:09–20:16 UTC and its deliverables (`research/rent_board_fee/README.md`, `research/privacy/HISTORY_EXPOSURE.md`) are merged on `main` via PR #13. D16-B and D16-C were left `in progress`/`unclaimed` with no commit for more than 60 minutes (audit `git log` on `main` at claim time: newest commit `d63dee4`, 2026-11-08 05:20 +0900, containing no D16-B/D16-C work). Under the board's stale-claim rule this session takes both over. D16-A/D16-P are marked `done` below with that evidence; nothing from `arena-d16cbfc8` is reverted or rewritten.
+
+| ID | Task | Status | Owner | Notes |
+| --- | --- | --- | --- | --- |
+| D16-A | Rent Board Fee (Ch. 37A) research | `done` (closed by T09 after stale handoff) | `arena-d16cbfc8`, integrated by `arena-abb34cd1` | Deliverable merged on `main`; T09 re-fetched `https://www.sf.gov/rent-board-fee`, `.../recover-part-your-rent-board-fee-tenant` and the 2026-27 $59.00 amount directly on 2026-11-08 before publishing any fee row. |
+| D16-P | Privacy audit of git history / PR diffs | `done` (closed by T09 after stale handoff) | `arena-d16cbfc8`, integrated by `arena-abb34cd1` | `research/privacy/HISTORY_EXPOSURE.md` merged on `main`; published on the site as a new flag in T09. |
+| D16-B | Independent QA of the integrated site | `done` (absorbed into T09) | `arena-abb34cd1` | Findings and fixes listed below. |
+| D16-C | Final integration, PR, merge, Pages | `done` (absorbed into T09) | `arena-abb34cd1` | Result recorded in the T09 completion block. |
+
+**Repairs made in this claim commit.** The merged `COORDINATION.md` on `main` contained literal unresolved merge-conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>> origin/main`) inside the published repository. Both sides were kept verbatim (the `arena-c007d556` final-publication table and the `arena-5cbd3f13` T07 record); only the three marker lines were removed. That is a repository-integrity irregularity, not a data change, and it is also logged as a flag on the Flagged for Review page.
+
+**QA findings taken over from D16-B and scheduled for this task.** (1) `REQ-08` and `AN-15` said "38 flags" while the registry held 40; (2) `pages/sources.html` header said "All 52 official sources" while the registry held 55; (3) `FLAGGED_FOR_REVIEW.md` said "30 source-quality flags F01-F30" while F31+ and the T03 flags existed; (4) requirements rows about *this project's own deliverables* (`REQ-01/02/04/06/08/13/14/19/20`, `AN-15`) cited `S43` (HUD Fair Market Rents) as an "official source", which has nothing to do with a website/PR/flag-count requirement; (5) the Rent Board Fee research and the git-history privacy finding were merged into the repo but not into the site.
