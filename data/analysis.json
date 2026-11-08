@@ -204,18 +204,18 @@
         {
           "id": "AN-15",
           "label": "Flagged items do not block",
-          "value": "All 38 flags published with source links",
+          "value": "All flagged items published with official source links",
           "status": "verified",
           "source_ids": [
             "S01",
-            "S43"
+            "S68"
           ],
-          "notes": "Needs review does not block merge.",
+          "notes": "Needs review does not block the merge; the live count is shown on the dashboard (flag F37).",
           "flag_id": "",
           "source_note": ""
         },
         {
-          "id": "AN-20",
+          "id": "AN-25",
           "label": "What a tenant-side reviewer would test",
           "value": "1) current license on the effective date, 2) correct rate for that date, 3) 12 months since the last increase, 4) base rent only and no rounding up, 5) notice contents, lead time and delivery, 6) no extra charge for an added roommate, 7) no retaliation or bad-faith harassment",
           "status": "analysis",
@@ -283,6 +283,63 @@
             "S53"
           ],
           "notes": "Privacy consideration; the filing is still required for a license.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "AN-26",
+          "label": "Two distinct registrations with the Rent Board",
+          "value": "Housing Inventory reporting produces the license at no charge; the Rent Board Fee is a separate $59.00-per-unit annual payment. Confusing them is the most likely cause of an unlicensed increase",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S56",
+            "S07"
+          ],
+          "notes": "Both are due around March 1 but are not interchangeable (F33).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "AN-27",
+          "label": "Timing is the second-most-common defect",
+          "value": "A license that exists today does not validate a notice whose effective date preceded it, and a notice inside the 180-day retaliation window is separately barred",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S08",
+            "S57"
+          ],
+          "notes": "Check the effective date, not the date of the check.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "AN-28",
+          "label": "This building is very likely covered",
+          "value": "Two rented units in a pre-1979 building is the paradigm Rent Ordinance case; the in-law-unit rule and the 1979 cutoff both point toward coverage rather than exemption",
+          "status": "analysis",
+          "source_ids": [
+            "S06",
+            "S59",
+            "S60"
+          ],
+          "notes": "Owner-supplied facts only; confirm in the Property Information Map.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "AN-29",
+          "label": "Cheapest compliant path",
+          "value": "Ordinary annual increase at or under 1.6%, license on file first, 30-day written notice, no additional-occupant charge, and an identical written standard applied to both units",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S35",
+            "S42"
+          ],
+          "notes": "Still not a guarantee against a petition.",
           "flag_id": "",
           "source_note": ""
         }

@@ -46,3 +46,18 @@ The repository had moved from `a0591c3` to `cd42189` through PRs #2–#9 by othe
 | `scripts/site_flags.py` — `CARDS` | Dashboard totals were typed in by hand. | Code read. | Cards resolve `auto:sources` / `auto:flags` at build time. |
 | `.github/workflows/validate.yml` | CI rebuilds and fails if generated outputs are not committed. | `git diff --exit-code` after a rebuild returns clean. | Rebuild outputs are committed with each change. |
 | `pages/*.html`, `data/*.json` | Generated files changed by other sessions between this branch's base and `main`. | `git diff --stat a0591c3 origin/main`. | Not merged blindly; branch rebased onto `main` first. |
+
+## Re-review 2026-11-08 (session `arena-abb34cd1`)
+
+`main` had advanced to `d63dee4` (merge of PR #13, the D16 research). This session reviewed the merged tree line by line before changing anything.
+
+| Line / file | Finding | Verification | Action |
+| --- | --- | --- | --- |
+| `COORDINATION.md` lines 223-256 | Three unresolved Git conflict markers were committed and published (`HEAD` side and `origin/main` side both present) | `grep -n '<<<<<<<\|=======\|>>>>>>>' COORDINATION.md` on `d63dee4` | Both sides kept verbatim, markers removed; validator now fails on any marker in a published file (F37) |
+| `scripts/build_site.py` line 122 | Sources page header hardcoded "All 52 official sources" while 55 existed | Code read + rendered page | Now `len(D.SOURCES)`; same for the quick-navigation row |
+| `scripts/site_pages.py` `REQ-08`, `AN-15` | Hardcoded "38 flags" while 40 existed | Code read | Now `len(FLAGS)` from the flag registry |
+| `scripts/site_pages.py` `REQ-01/02/04/06/08/13/14/19/20`, `AN-15` | Cited `S43` (HUD Fair Market Rents) for website/PR/flag-count requirements — a fabricated citation | Code read against the S43 entry | Converted to `project record` rows with repository-artifact links (F38) |
+| `scripts/validate_site.py` | Row validation required official `source_ids` for every non-owner row, which is what pushed earlier sessions to invent one; flags had the same restriction | Code read | Validation now accepts a repository artifact for project rows and for flags, and rejects a project row that carries official source IDs |
+| `scripts/validate_site.py` `OFFICIAL_DOMAINS` | `sftreasurer.org` (official City Treasurer & Tax Collector site) was not allowed | Code read + both pages fetched 2026-11-08 | Added; the two lessor/registration pages became S61/S62 |
+| `pages/sources.html`, `index.html`, `pages/flagged.html` | Generated counts could drift from the data | Rendered output compared with `data/sources.json` / `data/flags.json` | New validator checks compare the rendered counts with the registries |
+| `research/rent_board_fee/README.md`, `research/privacy/HISTORY_EXPOSURE.md` | Merged on `main` but not surfaced anywhere on the site | File read | Integrated as `pages/fee.html` + flags F31-F36 |

@@ -186,6 +186,59 @@
           "notes": "A correctly banked total can exceed 10%.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "CHK-14",
+          "label": "Check the retaliation clock",
+          "value": "Before serving any notice, confirm the tenant has no unresolved repair request or agency complaint from the prior 180 days",
+          "status": "verified",
+          "source_ids": [
+            "S57",
+            "S22"
+          ],
+          "notes": "A rent increase inside that window is barred if the tenant is not in default.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CHK-15",
+          "label": "Keep the fee separate",
+          "value": "Pay or confirm the Rent Board Fee ($59.00 per dwelling unit for 2026-2027, due March 1) and, if recovering 50%, show it as a separate fee recovery rather than folding it into the rent increase",
+          "status": "verified",
+          "source_ids": [
+            "S56"
+          ],
+          "notes": "The fee is not part of base rent.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CHK-16",
+          "label": "Match each notice to a license on its effective date",
+          "value": "Check the portal license status for the specific effective date of each notice, for each unit, including any prior year",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S08",
+            "S55"
+          ],
+          "notes": "A license now does not cure a notice effective before it existed.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CHK-17",
+          "label": "Re-serve rather than backdate",
+          "value": "If a notice went out unlicensed, report, confirm the license, and serve a new notice with a compliant effective date",
+          "status": "analysis",
+          "source_ids": [
+            "S08",
+            "S53",
+            "S35"
+          ],
+          "notes": "Do not treat an unenforceable notice as effective.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

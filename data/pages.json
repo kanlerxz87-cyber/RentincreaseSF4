@@ -758,6 +758,440 @@
       }
     ]
   },
+  "fee": {
+    "title": "Rent Board Fee & Other Registrations",
+    "description": "The second, separate Rent Board obligation: the annual per-unit fee, its March 1 deadline, penalties, exemptions, the 50% tenant recovery, and City business registration.",
+    "sections": [
+      {
+        "title": "Fee basics - a separate obligation from the Rent Increase License",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-01",
+            "label": "Who must pay the Rent Board Fee",
+            "value": "An owner of a residential dwelling unit or guest unit must pay a Rent Board Fee each year unless there is a current exemption on file with the Rent Board or a Homeowners' Exemption on file with the Assessor-Recorder. No individual-owner or small-building exception is stated.",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "This is a fee obligation, not a licence application.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-02",
+            "label": "What the fee is charged on",
+            "value": "All residential property owners must pay a per-unit fee unless the unit has a current exemption. This includes single-family homes and condominiums, units built after 1979, vacant units, and units occupied by friends or family members.",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "Rent-control coverage is not the test for the fee; exemption is.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-03",
+            "label": "Amount for the 2026-2027 tax year",
+            "value": "$59.00 per dwelling unit; $29.50 per guest unit (single room occupancy or SRO/residential hotel room). The 50% tenant share is $29.50 per dwelling unit or $14.75 per guest unit.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S64"
+            ],
+            "notes": "Form 573 confirms $59.00 per unit for 7/21-6/22 through 7/25-6/26 (flag F40 on the form's title metadata).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-04",
+            "label": "Paying the fee does not make you licensed",
+            "value": "SF.gov states that requesting a Rent Board Fee exemption does not satisfy Housing Inventory reporting requirements, and the 2027 informational notice states the reverse: Housing Inventory reporting does not satisfy a fee exemption. The licence arises only from the Housing Inventory report.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S65",
+              "S53"
+            ],
+            "notes": "Two separate obligations; no official page found conditions the licence on fee payment (flag F41).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-05",
+            "label": "How and where to pay",
+            "value": "Preferred: credit card or electronic check (ACH) online through the Rent Board Portal. In person: Office of the Treasurer and Tax Collector, City Hall Room 140. By mail: San Francisco Rent Board, PO Box 7429, San Francisco, CA 94120-7429. No payments are accepted at the Rent Board office.",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "A dishonoured check or eCheck adds a $50.00 payment failure fee.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-06",
+            "label": "Statutory scope of Chapter 37A",
+            "value": "Chapter 37A applies to all residential units in San Francisco, including units exempt from the Chapter 37 rent-increase limitations under the Costa-Hawkins Act or Section 37.3(d), with listed exclusions (nonprofit co-ops, licensed care facilities and dormitories, government-regulated rents such as Section 8, tourist-use guest rooms, and units with a current homeowners' exemption).",
+            "status": "verified",
+            "source_ids": [
+              "S63"
+            ],
+            "notes": "Ordinance text, not just the SF.gov summary.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Deadlines, penalties and the 2026-27 compliance calendar",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-07",
+            "label": "Due date and late penalties",
+            "value": "The fee is due March 1 each year. A 5% late penalty is added if unpaid by March 1, a further 5% if unpaid by April 1, and a further 5% if unpaid by May 1 - a maximum penalty of 15%.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S63"
+            ],
+            "notes": "SF.gov and Section 37A.4 agree on the March/April/May sequence.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-08",
+            "label": "Delinquency and referral to the Bureau of Delinquent Revenue",
+            "value": "SF.gov states that fees not paid in full by June 1 will be referred to the Bureau of Delinquent Revenue with additional costs added to the principal charges; its timeline instead says a Notice of Delinquent Payment is mailed in July, after which the owner has 30 days before referral. Section 37A.4 says the matter is referred if the fee remains outstanding as of June 1.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S63"
+            ],
+            "notes": "The official page is internally inconsistent - see flag F38. Manual confirmation with 311 is advised.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-09",
+            "label": "Payment failure fee",
+            "value": "If a check or eCheck payment is not honoured by the bank, the payment is null and void and a $50.00 payment failure fee is charged in addition to any late payment penalties.",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "Not recoverable from a tenant.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-10",
+            "label": "Exemption request window and annual refiling",
+            "value": "Requests for exemption are submitted through the Rent Board Portal between October and early December, and an exemption request must be submitted every year. For the 2027 fee the deadline is Monday, December 14, 2026; units without a valid approved exemption are billed for the fee due March 1, 2027.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S65"
+            ],
+            "notes": "Homeowners' Exemption holders do not refile yearly with the Rent Board.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-11",
+            "label": "2026-27 calendar as published",
+            "value": "October: informational notices mailed, exemption window opens. December 14, 2026: exemption request deadline. January 2027: annual notices (fee invoices) mailed. March 1, 2027: fee due with no penalty; first 5% penalty from March 2. April 1 and May 1: second and third 5% penalties. May 31, 11:59 pm: last day to pay with all penalties. June 1: outstanding bills delinquent. July: notice of delinquent payment mailed.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S65"
+            ],
+            "notes": "Housing Inventory reporting is also due March 1, 2027 - see the Step-by-Step License page.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-12",
+            "label": "This case: fee amount billed and exemption status for the two units",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S56",
+              "S64"
+            ],
+            "notes": "No official billing record or exemption record was supplied; the January 2027 annual notice does not exist yet. Left blank (flag F43).",
+            "flag_id": "F43",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Exemptions are narrow - a rented unit is not exempt",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-13",
+            "label": "Owner-occupied exemption",
+            "value": "A single-family home, condominium, co-op or apartment unit occupied by an owner of record and not rented at any time may qualify. Vacant units, and units occupied solely by children or close relatives who are not on title as owner, do not qualify. Section 37A.1(f) requires the owner to file an affidavit with the Rent Board.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S63"
+            ],
+            "notes": "Both units here are rented, so this exemption would not apply on the owner-supplied facts.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-14",
+            "label": "Other exemption categories",
+            "value": "Government-controlled or regulated rents (for example Section 8, with documentation), hotel guest rooms designed for tourist use under the Residential Hotel Ordinance, housing in hospitals, monasteries, extended-care facilities and licensed homes for the elderly, dormitories owned by educational institutions, and nonprofit cooperatives owned, occupied and controlled by a majority of residents.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S63"
+            ],
+            "notes": "Documentation is required for each category.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-15",
+            "label": "Homeowners' Exemption route",
+            "value": "An owner whose unit is the primary residence and who already has a Homeowners' Exemption through the Assessor-Recorder should not be assessed the Rent Board fee and may email proof to the Rent Board. The Homeowners' Exemption applies only to the current fee cycle and cannot be applied retroactively unless it appeared on earlier property tax statements.",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "The Rent Board does not process Homeowners' Exemption applications.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Recovering 50% of the fee from tenants - not a rent increase",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-16",
+            "label": "Maximum recovery and who can be charged",
+            "value": "An owner who has paid the fee in full may recover up to 50% of the annual fee (exclusive of any penalties) from the tenant(s) in occupancy of each unit on November 1 of the applicable tax year. For 2026-2027 that is $29.50 per dwelling unit.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S62",
+              "S63"
+            ],
+            "notes": "Only tenants in occupancy on or before November 1 can be billed.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-17",
+            "label": "How the recovery may be made",
+            "value": "By deducting the amount from the next security-deposit interest payment owed to the tenant, or by billing the tenant directly - but direct billing is allowed only where there is no or insufficient security deposit held, or where the owner already pays the deposit interest annually. The bill must state the amount for that unit, that the purpose is to fund the Rent Board and related administrative costs, and that the amount is due and payable within 30 days of the bill.",
+            "status": "verified",
+            "source_ids": [
+              "S62",
+              "S63"
+            ],
+            "notes": "Do not net it into the rent figure on a rent-increase notice.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-18",
+            "label": "Banking an unrecovered fee",
+            "value": "A fee not recovered in the year the owner was first entitled to it may be banked and collected from that tenant in a future year. Only fees that became due after July 25, 1999 may be banked, and the billing statement must show the fee owed for each year and any interest due for each year.",
+            "status": "verified",
+            "source_ids": [
+              "S62",
+              "S63"
+            ],
+            "notes": "Banking is by deposit-interest deduction except where no or insufficient interest exists.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-19",
+            "label": "If the tenant does not pay",
+            "value": "A tenant's failure to pay the Rent Board fee is not a just cause for eviction; the landlord must go to Small Claims Court to collect an unpaid fee.",
+            "status": "verified",
+            "source_ids": [
+              "S62"
+            ],
+            "notes": "The owner remains liable to the Rent Board either way (Section 37A.6(d)).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-20",
+            "label": "Security-deposit interest rate used for a deduction",
+            "value": "The interest rate owed on deposits for March 1, 2026 through February 28, 2027 is 4.2%. Interest is paid annually on the tenant's annual due date for deposits held over one year and may not be compounded. AB 12 caps a deposit at one month's rent (two months for a qualifying small natural-person owner), for deposits collected on or after July 1, 2024.",
+            "status": "verified",
+            "source_ids": [
+              "S67"
+            ],
+            "notes": "This is the amount a fee recovery is deducted from.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-21",
+            "label": "How a 50% recovery is divided among several co-tenants",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S62",
+              "S63"
+            ],
+            "notes": "No official page states how the 50% is allocated among multiple co-tenants of one unit. Left blank rather than inferred (flag F42).",
+            "flag_id": "F42",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-22",
+            "label": "Recovery is not part of the rent increase",
+            "value": "The fee recovery is a separate statutory billing mechanism tied to the security-deposit interest cycle; it is not an annual or banked rent increase, does not change the base rent, and is not covered by the Rent Increase License precondition for annual/banked increases.",
+            "status": "analysis",
+            "source_ids": [
+              "S62",
+              "S63",
+              "S01"
+            ],
+            "notes": "Keep the two documents and the two amounts visibly separate.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Other registration question - City business registration",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-23",
+            "label": "Does an individual small owner need a City business registration certificate?",
+            "value": "A person receiving rental income from one residential structure consisting of fewer than four units, or from one residential condominium, is not - by reason of that fact alone - required to obtain a business registration certificate. Other business activity or payroll expense may require one. A lessor is treated as a separate person for each individual building, the Tax Collector decides what a separate building is and how many units it has, and a return must be filed unless the lessor leases fewer than 4 units in any individual building.",
+            "status": "verified",
+            "source_ids": [
+              "S66"
+            ],
+            "notes": "Rule only. For this owner it depends on facts not supplied - see the next row.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-24",
+            "label": "What the Housing Inventory asks for",
+            "value": "Section 37.15(b)(2)(B) requires the business registration number for the unit, if any - so reporting does not assume that every owner has one.",
+            "status": "verified",
+            "source_ids": [
+              "S53"
+            ],
+            "notes": "Absence of a business registration number is not, by itself, a reporting failure.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-25",
+            "label": "This case: whether a business registration is required",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S66"
+            ],
+            "notes": "Whether both units are in one structure, whether the owner has other business activity or payroll, and any existing registration were not supplied. Left blank (flag F43).",
+            "flag_id": "F43",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Case arithmetic using the official fee (owner-supplied unit count)",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-26",
+            "label": "Fee for both rented units, 2026-2027",
+            "value": "2 units x $59.00 = $118.00, due March 1, 2027",
+            "status": "analysis",
+            "source_ids": [
+              "S56",
+              "S64"
+            ],
+            "notes": "Illustrative only: the unit count is owner-supplied and the official billing record has not been issued. Not a finding.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-27",
+            "label": "Maximum recoverable from the tenants",
+            "value": "50% x $118.00 = $59.00 in total, $29.50 per unit",
+            "status": "analysis",
+            "source_ids": [
+              "S56",
+              "S62"
+            ],
+            "notes": "Only after paying in full, only from tenants in occupancy on November 1, 2026, and never any penalty. Whether each tenant qualifies is unverified.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-28",
+            "label": "Illustration of the maximum statutory penalty",
+            "value": "15% x $118.00 = $17.70, added if the fee is still unpaid after May 1",
+            "status": "analysis",
+            "source_ids": [
+              "S56",
+              "S63"
+            ],
+            "notes": "Penalties cannot be recovered from tenants. Illustration, not a projection.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      }
+    ]
+  },
   "requirements": {
     "title": "Full Requirements List",
     "description": "Every active requirement, status and official source link.",
@@ -780,9 +1214,9 @@
             "source_ids": [
               "S01",
               "S27",
-              "S43"
+              "S68"
             ],
-            "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
+            "notes": "Executive Summary page, EXECUTIVE_SUMMARY.md and its source-linked summary rows. Project record only - no government source governs this internal deliverable (flag F37).",
             "flag_id": "",
             "source_note": ""
           },
@@ -792,9 +1226,10 @@
             "value": "Built at repository root",
             "status": "verified",
             "source_ids": [
-              "S43"
+              "S68",
+              "S69"
             ],
-            "notes": "Legacy Pages source main /.",
+            "notes": "Legacy Pages source main /; deployment status read from the GitHub Pages build API.",
             "flag_id": "",
             "source_note": ""
           },
@@ -818,9 +1253,9 @@
             "source_ids": [
               "S01",
               "S27",
-              "S43"
+              "S68"
             ],
-            "notes": "Questions & Answers page.",
+            "notes": "Questions & Answers page, with the substantive answers sourced to S01/S27.",
             "flag_id": "",
             "source_note": ""
           },
@@ -842,10 +1277,10 @@
             "value": "Done; validation script re-checks",
             "status": "verified",
             "source_ids": [
-              "S01",
-              "S43"
+              "S68",
+              "S01"
             ],
-            "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
+            "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json (project record).",
             "flag_id": "",
             "source_note": ""
           },
@@ -864,13 +1299,13 @@
           {
             "id": "REQ-08",
             "label": "Flag irregularities",
-            "value": "38 flags published",
+            "value": "All flagged items published with official source links",
             "status": "verified",
             "source_ids": [
-              "S01",
-              "S43"
+              "S68",
+              "S01"
             ],
-            "notes": "Flagged for Review page.",
+            "notes": "Flagged for Review page; the live count is shown on the dashboard and is not hard-coded here (flag F37).",
             "flag_id": "",
             "source_note": ""
           },
@@ -928,7 +1363,7 @@
             "value": "Published",
             "status": "verified",
             "source_ids": [
-              "S43"
+              "S68"
             ],
             "notes": "index.html and pages/.",
             "flag_id": "",
@@ -940,7 +1375,7 @@
             "value": "Published",
             "status": "verified",
             "source_ids": [
-              "S43"
+              "S68"
             ],
             "notes": "Cards and status badges.",
             "flag_id": "",
@@ -997,24 +1432,25 @@
           {
             "id": "REQ-19",
             "label": "PR from integration branch to main",
-            "value": "",
-            "status": "needs review",
+            "value": "Done - PRs #1 through #13 merged; each merge result and merge commit is recorded in COORDINATION.md",
+            "status": "verified",
             "source_ids": [
-              "S43"
+              "S68"
             ],
-            "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
+            "notes": "Verified with gh pr view / git log on 2026-11-08; the current session's PR link and merge result are recorded in COORDINATION.md after the merge (flag F19).",
             "flag_id": "F19",
             "source_note": ""
           },
           {
             "id": "REQ-20",
             "label": "Merged PR + successful Pages deployment",
-            "value": "",
-            "status": "needs review",
+            "value": "Done - GitHub Pages API reports status built with legacy source main /; the latest deployment commit is recorded in COORDINATION.md",
+            "status": "verified",
             "source_ids": [
-              "S43"
+              "S69",
+              "S68"
             ],
-            "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
+            "notes": "Read from the GitHub Pages build API on 2026-11-08 (flag F19).",
             "flag_id": "F19",
             "source_note": ""
           },
@@ -1049,15 +1485,18 @@
           {
             "id": "REQ-24",
             "label": "Independent re-verification of the combined data",
-            "value": "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run",
+            "value": "Done 2026-11-08 - official pages for the fee, retaliation, exemption and coverage rules re-fetched, sources expanded, validator re-run",
             "status": "verified",
             "source_ids": [
               "S01",
               "S07",
               "S53",
-              "S02"
+              "S02",
+              "S56",
+              "S57",
+              "S60"
             ],
-            "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
+            "notes": "Recorded in VERIFICATION.md and COORDINATION.md; the source count is computed, not hard-coded.",
             "flag_id": "",
             "source_note": ""
           },
@@ -1444,6 +1883,66 @@
             "source_note": ""
           },
           {
+            "id": "LOC-20",
+            "label": "Rent Board Fee is separate from the license",
+            "value": "Every residential dwelling unit owner pays a per-unit fee unless exempt: 2026-2027 is $59.00 per dwelling unit, due March 1, 5% late penalty per month to a 15% maximum; a fee exemption does not satisfy Housing Inventory reporting",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "Two separate obligations; see flag F33.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-21",
+            "label": "Recovering half the fee",
+            "value": "If the fee is paid in full, 50% ($29.50 per dwelling unit for 2026-2027) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "Not a rent increase; identify it separately on any statement.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-22",
+            "label": "Units built after June 13, 1979",
+            "value": "Exempt from the rent increase limitations only, if the first Certificate of Occupancy issued after June 13, 1979 and there was no prior residential use; just-cause eviction protection and the Rent Board fee still apply",
+            "status": "verified",
+            "source_ids": [
+              "S59"
+            ],
+            "notes": "The owner-supplied 1940 year would fall before the cutoff if confirmed.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-23",
+            "label": "In-law unit or second structure on the lot",
+            "value": "A single-family dwelling with a LEGAL in-law unit is a two-unit building and is not exempt. With an ILLEGAL in-law unit it is also a two-unit building and is not exempt UNLESS both units are rented together as a single tenancy. A single-family dwelling is not exempt if another residential structure is on the same lot",
+            "status": "verified",
+            "source_ids": [
+              "S60"
+            ],
+            "notes": "Wording corrected 2026-11-08 against the page; two rented units is consistent with coverage (flags F35, F36).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-24",
+            "label": "30-day update duty",
+            "value": "A change in the owner or designated manager name or business contact information must be reported within 30 days",
+            "status": "verified",
+            "source_ids": [
+              "S53"
+            ],
+            "notes": "Separate from the annual March 1 update.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
             "id": "LOC-15",
             "label": "License scope",
             "value": "License rules apply only to rent-controlled units; SF.gov says the license is not required for 6.14/Costa-Hawkins increases or petition-based passthroughs",
@@ -1659,6 +2158,68 @@
               "S36"
             ],
             "notes": "State court enforcement; Rent Board cannot enforce state law.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-13",
+            "label": "Retaliation - 180-day bar",
+            "value": "Where the tenant is not in default and has requested repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent or reduce services within 180 days of that act",
+            "status": "verified",
+            "source_ids": [
+              "S57"
+            ],
+            "notes": "Separate from any Rent Board question; timing here is unverified.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-14",
+            "label": "Retaliation - organizing and lawful rights",
+            "value": "Increasing rent to retaliate because a tenant organized or participated in a tenants' association, or lawfully exercised rights, is unlawful",
+            "status": "verified",
+            "source_ids": [
+              "S57"
+            ],
+            "notes": "The tenant bears the burden of producing evidence under this subdivision.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-15",
+            "label": "Retaliation remedies",
+            "value": "Actual damages; punitive damages of $100-$2,000 per retaliatory act where there is fraud, oppression or malice; the court awards reasonable attorney's fees to the prevailing party on request",
+            "status": "verified",
+            "source_ids": [
+              "S57"
+            ],
+            "notes": "In addition to any other statutory or decisional remedy.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-16",
+            "label": "AB 1482 two-unit owner-occupied exemption",
+            "value": "Exempt only for a two-unit structure in a single building where the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU",
+            "status": "verified",
+            "source_ids": [
+              "S58",
+              "S27"
+            ],
+            "notes": "Owner occupancy of a unit here was not supplied; no exemption asserted (F34).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-17",
+            "label": "AB 1482 separate-parcel exemption conditions",
+            "value": "Requires written tenant notice in the statutory form AND that the owner is not a REIT, a corporation, or an LLC with at least one corporate member",
+            "status": "verified",
+            "source_ids": [
+              "S58",
+              "S27"
+            ],
+            "notes": "An individual owner can meet the owner test, but the notice is still required.",
             "flag_id": "",
             "source_note": ""
           }
@@ -2569,6 +3130,59 @@
             "notes": "A correctly banked total can exceed 10%.",
             "flag_id": "",
             "source_note": ""
+          },
+          {
+            "id": "CHK-14",
+            "label": "Check the retaliation clock",
+            "value": "Before serving any notice, confirm the tenant has no unresolved repair request or agency complaint from the prior 180 days",
+            "status": "verified",
+            "source_ids": [
+              "S57",
+              "S22"
+            ],
+            "notes": "A rent increase inside that window is barred if the tenant is not in default.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CHK-15",
+            "label": "Keep the fee separate",
+            "value": "Pay or confirm the Rent Board Fee ($59.00 per dwelling unit for 2026-2027, due March 1) and, if recovering 50%, show it as a separate fee recovery rather than folding it into the rent increase",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "The fee is not part of base rent.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CHK-16",
+            "label": "Match each notice to a license on its effective date",
+            "value": "Check the portal license status for the specific effective date of each notice, for each unit, including any prior year",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S08",
+              "S55"
+            ],
+            "notes": "A license now does not cure a notice effective before it existed.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CHK-17",
+            "label": "Re-serve rather than backdate",
+            "value": "If a notice went out unlicensed, report, confirm the license, and serve a new notice with a compliant effective date",
+            "status": "analysis",
+            "source_ids": [
+              "S08",
+              "S53",
+              "S35"
+            ],
+            "notes": "Do not treat an unenforceable notice as effective.",
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -3251,6 +3865,102 @@
             "source_note": ""
           },
           {
+            "id": "Q-15",
+            "label": "Is the Rent Board Fee the same thing as the Rent Increase License?",
+            "value": "No. They are separate obligations. The license comes from Housing Inventory reporting and there is no charge for that reporting; the fee is a separate per-unit annual payment (2026-2027: $59.00 per dwelling unit, due March 1, with a 5% monthly late penalty to a 15% maximum). SF.gov states expressly that requesting a fee exemption does not satisfy Housing Inventory reporting.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S07",
+              "S53"
+            ],
+            "notes": "Paying the fee is not a substitute for the license; see flag F33.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-16",
+            "label": "Can part of the Rent Board Fee be charged to the tenants?",
+            "value": "Yes, if the fee is paid in full: 50% of the fee, i.e. $29.50 per dwelling unit for 2026-2027, may be recovered from tenants in occupancy as of November 1 of the applicable tax year. Penalties may not be recovered.",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "This is a fee recovery, not a rent increase; keep it separately identified.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-17",
+            "label": "How long do I have to report a Housing Inventory change, and what if I already served a notice?",
+            "value": "Unit information is updated annually by March 1, and a change in the owner or manager name or business contact information must be updated within 30 days. If a notice already went out with no license on file, report first, then re-serve the notice so the effective date falls after the license is on file: a notice is unenforceable for an effective date on which no license was on file, and an unlicensed increase may be null and void.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S07",
+              "S08"
+            ],
+            "notes": "Whether any notice has already been served here is unverified.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-18",
+            "label": "Can an increase during a repair dispute or after a complaint be retaliatory?",
+            "value": "Yes, that is a separate state-law risk. If the tenant is not in default and has asked for repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent within 180 days of that act; retaliation for tenant organizing or for exercising lawful rights is separately barred. Remedies include actual damages, punitive damages of $100-$2,000 per retaliatory act, and attorney's fees.",
+            "status": "verified",
+            "source_ids": [
+              "S57",
+              "S22",
+              "S42"
+            ],
+            "notes": "Timing versus any open habitability complaint is unverified; this is not a legal opinion.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-19",
+            "label": "Are these two units exempt from AB 1482 because the owner lives in one?",
+            "value": "Only if the owner occupied one unit as a principal residence when the tenancy began and continues in occupancy, and neither unit is an ADU/JADU. That fact was not supplied, so no exemption is asserted. Independently, AB 1482's rent cap does not apply where the unit is already under the SF Rent Ordinance limits, which are stricter.",
+            "status": "verified",
+            "source_ids": [
+              "S58",
+              "S60",
+              "S27"
+            ],
+            "notes": "Conditional; see flags F34 and F35.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-20",
+            "label": "Does an in-law unit or a second structure change whether these units are covered?",
+            "value": "It can. SF.gov states that a single-family dwelling with a legal in-law unit is a two-unit building and is not exempt, that with an illegal in-law unit it is also a two-unit building and is not exempt unless both units are rented together as a single tenancy, and that a single-family dwelling is not exempt if another residential structure is on the same lot. Two rented units is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
+            "status": "verified",
+            "source_ids": [
+              "S60",
+              "S59",
+              "S06"
+            ],
+            "notes": "Verify the lot in the Property Information Map; see flags F35 and F36.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-21",
+            "label": "Do the tenants have to keep accepting increases, or can they challenge each one?",
+            "value": "They can challenge. A tenant may file an unlawful-rent-increase petition with no filing fee and no time limit, and the matter can go to an Administrative Law Judge. Tenant-side free legal help is documented for eviction proceedings (Eviction Defense Collaborative line and Tenant Right to Counsel), not as a general pre-approval service for rent increases.",
+            "status": "verified",
+            "source_ids": [
+              "S25",
+              "S61",
+              "S30"
+            ],
+            "notes": "No official source offers approval of an increase before it is served.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
             "id": "Q-10",
             "label": "Is any increase guaranteed lawful or lawsuit-proof?",
             "value": "No. No attorney approval or guarantee of no complaint/inquiry/lawsuit is claimed.",
@@ -3474,18 +4184,18 @@
           {
             "id": "AN-15",
             "label": "Flagged items do not block",
-            "value": "All 38 flags published with source links",
+            "value": "All flagged items published with official source links",
             "status": "verified",
             "source_ids": [
               "S01",
-              "S43"
+              "S68"
             ],
-            "notes": "Needs review does not block merge.",
+            "notes": "Needs review does not block the merge; the live count is shown on the dashboard (flag F37).",
             "flag_id": "",
             "source_note": ""
           },
           {
-            "id": "AN-20",
+            "id": "AN-25",
             "label": "What a tenant-side reviewer would test",
             "value": "1) current license on the effective date, 2) correct rate for that date, 3) 12 months since the last increase, 4) base rent only and no rounding up, 5) notice contents, lead time and delivery, 6) no extra charge for an added roommate, 7) no retaliation or bad-faith harassment",
             "status": "analysis",
@@ -3553,6 +4263,63 @@
               "S53"
             ],
             "notes": "Privacy consideration; the filing is still required for a license.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-26",
+            "label": "Two distinct registrations with the Rent Board",
+            "value": "Housing Inventory reporting produces the license at no charge; the Rent Board Fee is a separate $59.00-per-unit annual payment. Confusing them is the most likely cause of an unlicensed increase",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S56",
+              "S07"
+            ],
+            "notes": "Both are due around March 1 but are not interchangeable (F33).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-27",
+            "label": "Timing is the second-most-common defect",
+            "value": "A license that exists today does not validate a notice whose effective date preceded it, and a notice inside the 180-day retaliation window is separately barred",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S08",
+              "S57"
+            ],
+            "notes": "Check the effective date, not the date of the check.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-28",
+            "label": "This building is very likely covered",
+            "value": "Two rented units in a pre-1979 building is the paradigm Rent Ordinance case; the in-law-unit rule and the 1979 cutoff both point toward coverage rather than exemption",
+            "status": "analysis",
+            "source_ids": [
+              "S06",
+              "S59",
+              "S60"
+            ],
+            "notes": "Owner-supplied facts only; confirm in the Property Information Map.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-29",
+            "label": "Cheapest compliant path",
+            "value": "Ordinary annual increase at or under 1.6%, license on file first, 30-day written notice, no additional-occupant charge, and an identical written standard applied to both units",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35",
+              "S42"
+            ],
+            "notes": "Still not a guarantee against a petition.",
             "flag_id": "",
             "source_note": ""
           }

@@ -48,4 +48,10 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padd
 footer .wrap{max-width:1120px;margin:0 auto}
 .small{font-size:.82rem;color:var(--muted)}
 ul{margin:.4rem 0 .4rem 1.2rem}
+.narrative h2{margin:1.4rem 0 .5rem;font-size:1.18rem;color:var(--accent2);border-bottom:1px solid var(--line);padding-bottom:.35rem}
+.narrative p{margin:.6rem 0}
+.narrative ol,.narrative ul{margin:.5rem 0 .9rem 1.3rem;padding:0}
+.narrative li{margin:.35rem 0}
+.narrative a{word-break:break-word}
+.narrative>h2:first-child{margin-top:0}
 @media(max-width:700px){header h1{font-size:1.55rem}nav .wrap{padding:.35rem .5rem}main{padding:1rem .6rem 2rem}th,td{padding:.5rem .45rem}}

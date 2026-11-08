@@ -6,6 +6,7 @@ README.md, EXECUTIVE_SUMMARY.md and FLAGGED_FOR_REVIEW.md.
 """
 
 import json
+import re
 from html import escape
 from pathlib import Path
 import site_data as D
@@ -108,6 +109,77 @@ def footer_html(in_pages):
 </html>
 """.format(disclaimer=e(D.DISCLAIMER), p=p)
 
+_URL_RE = re.compile(r"https?://[^\s)<>,]+")
+
+def _inline(text):
+    """Escape then apply the tiny subset of markdown used by the summaries."""
+    out = e(text)
+    out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
+    def link(m):
+        url = m.group(0)
+        return '<a href="{0}" target="_blank" rel="noopener">{0}</a>'.format(url)
+    return _URL_RE.sub(link, out)
+
+def md_to_html(text):
+    """Render the subset of markdown used in the executive summary text."""
+    blocks, para, items, kind = [], [], [], [None]
+
+    def flush_para():
+        if para:
+            blocks.append("<p>{}</p>".format(_inline(" ".join(para))))
+            para.clear()
+
+    def flush_items():
+        if items:
+            tag = kind[0] or "ul"
+            blocks.append("<{0}>{1}</{0}>".format(
+                tag, "".join("<li>{}</li>".format(_inline(i)) for i in items)))
+            items.clear()
+            kind[0] = None
+
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        if not line.strip():
+            flush_para(); flush_items(); continue
+        if line.startswith("# ") and not line.startswith("## "):
+            # The page header already renders the document title.
+            flush_para(); flush_items(); continue
+        if line.startswith("## "):
+            flush_para(); flush_items()
+            blocks.append("<h2>{}</h2>".format(_inline(line[3:])))
+            continue
+        m = re.match(r"^\s*\d+\.\s+(.*)$", line)
+        if m:
+            flush_para()
+            if kind[0] not in (None, "ol"):
+                flush_items()
+            kind[0] = "ol"; items.append(m.group(1)); continue
+        if line.startswith("- "):
+            flush_para()
+            if kind[0] not in (None, "ul"):
+                flush_items()
+            kind[0] = "ul"; items.append(line[2:]); continue
+        flush_items(); para.append(line.strip())
+    flush_para(); flush_items()
+    return "".join(blocks)
+
+def summary_page_with_narrative(page):
+    out = [header_html(page["title"], page["description"], "summary", True)]
+    out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
+        e(page["title"]), e(page["description"]), e(D.DISCLAIMER)))
+    out.append('<section class="narrative">{}'.format(md_to_html(counts(D.EXECUTIVE_SUMMARY_TEXT))))
+    out.append('<p class="small">The same text is available as <a href="../EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a> for manual review.</p></section>')
+    for sec in page["sections"]:
+        out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
+    out.append(footer_html(True))
+    return "".join(out)
+
+def counts(text):
+    """Substitute the computed source/flag counts so no total is ever typed by hand."""
+    return (text.replace("{{SOURCES}}", str(len(D.SOURCES)))
+                .replace("{{FLAGS}}", str(len(D.FLAGS)))
+                .replace("{{SOURCE_FLAGS}}", str(len([f for f in D.FLAGS if not f["id"].startswith("T03-")]))))
+
 def page_html(slug, page):
     out = [header_html(page["title"], page["description"], slug, True)]
     out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
@@ -119,7 +191,7 @@ def page_html(slug, page):
     return "".join(out)
 
 def sources_page_html():
-    out = [header_html("Sources", "All 52 official sources used for verification, with manual-review links.", "sources", True)]
+    out = [header_html("Sources", "All {} official sources used for verification, with manual-review links.".format(len(D.SOURCES)), "sources", True)]
     out.append('<section class="hero"><h2>Official source ledger</h2><p>Every published table row links to one or more of these official government or SEC sources.</p><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
     rows = []
     for sid, src in sorted(D.SOURCES.items()):
@@ -164,7 +236,8 @@ def index_html():
     out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
                '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
                '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
-               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a></p>'
+               '<p>A second, separate Rent Board obligation also applies: the annual <strong>Rent Board Fee</strong> - <strong>$59.00 per dwelling unit for 2026-2027</strong>, due March 1, with an exemption window closing December 14, 2026. Paying it does not create a license, and a license does not pay it.</p>'
+               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; <a class="cta" href="pages/fee.html">Rent Board Fee, penalties and tenant recovery &rarr;</a></p>'
                '<div class="disclaimer">{}</div></section>'.format(
                    source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
     out.append('<section class="hero"><h2>How to read this dashboard</h2>'
@@ -186,7 +259,7 @@ def index_html():
     out.append('<section><h2>Quick navigation</h2><div class="tablewrap"><table><thead><tr><th>Category</th><th>What it contains</th><th>Official source(s)</th></tr></thead><tbody>')
     for slug, title in D.NAV:
         if slug == "sources":
-            desc = "All 55 official sources with manual-review links."
+            desc = "All {} official sources with manual-review links.".format(len(D.SOURCES))
             sids = ["S01", "S07", "S53", "S27", "S43"]
         elif slug == "flagged":
             desc = "Clearly labeled irregularities and unverified items, each with official source links."
@@ -220,14 +293,15 @@ def main():
         write(DATA / "{}.json".format(slug), json.dumps(page, indent=2, ensure_ascii=False) + "\n")
 
     for slug, page in D.PAGES.items():
-        write(PAGES / "{}.html".format(slug), page_html(slug, page))
+        html = summary_page_with_narrative(page) if slug == "summary" else page_html(slug, page)
+        write(PAGES / "{}.html".format(slug), html)
     write(PAGES / "sources.html", sources_page_html())
     write(PAGES / "flagged.html", flagged_page_html())
     write(ROOT / "index.html", index_html())
 
-    write(ROOT / "EXECUTIVE_SUMMARY.md", D.EXECUTIVE_SUMMARY_TEXT)
-    write(ROOT / "FLAGGED_FOR_REVIEW.md", D.FLAGGED_TEXT)
-    write(ROOT / "README.md", D.README_TEXT)
+    write(ROOT / "EXECUTIVE_SUMMARY.md", counts(D.EXECUTIVE_SUMMARY_TEXT))
+    write(ROOT / "FLAGGED_FOR_REVIEW.md", counts(D.FLAGGED_TEXT))
+    write(ROOT / "README.md", counts(D.README_TEXT))
     print("Built {} data files, {} page HTML files, index.html, assets/site.css, .nojekyll and 3 markdown deliverables.".format(
         len(list(DATA.glob("*.json"))), len(list(PAGES.glob("*.html")))
     ))
