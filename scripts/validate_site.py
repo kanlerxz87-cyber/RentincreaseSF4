@@ -22,6 +22,7 @@ OFFICIAL_DOMAINS = {
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
     "sfrb.org",
+    "sftreasurer.org",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -275,6 +276,62 @@ def main():
           not re.search(r"<p>\s*#|\*\*|\]\(", summary_html))
     check("executive summary states the fee/licence distinction and retaliation rule",
           "$59.00" in summary_html and "1942.5" in summary_html and "in-law unit" in summary_html.lower())
+
+    # --- T09 (2026-11-08) additions -------------------------------------------------
+    fee_html = (PAGES / "fee.html").read_text(encoding="utf-8")
+    fee_plain = unescape(fee_html)
+    check("Rent Board Fee page is in the navigation and built",
+          "pages/fee.html" in (ROOT / "index.html").read_text(encoding="utf-8") and (PAGES / "fee.html").exists())
+    check("fee page states the 2026-2027 amount, due date and exemption deadline",
+          "$59.00" in fee_plain and "March 1" in fee_plain and "December 14, 2026" in fee_plain)
+    check("fee page distinguishes the no-charge licence from the paid fee",
+          "no charge" in fee_plain.lower() or "reporting itself is free" in fee_plain.lower())
+    check("fee page states that non-payment is not a just cause for eviction",
+          "not a just cause for eviction" in fee_plain)
+    check("fee page cites Chapter 37A and the fee-recovery page",
+          "901%20Rent%20Board%20Fee" in fee_html and "recover-part-your-rent-board-fee" in fee_html)
+    check("business-registration rule is published with the Treasurer source",
+          "sftreasurer.org" in fee_html and "fewer than four units" in fee_plain.lower())
+
+    # Every enumerated requirement row must cite a source that can support it (guards flag F37).
+    bad_pairs = []
+    hud_fmr = {"S43", "S44", "S45", "S46", "S47", "S50", "S51", "S52"}
+    for slug, page in pages.items():
+        for sec in page["sections"]:
+            for r in sec["rows"]:
+                # Rows about the repository/process itself must not lean on housing data.
+                if (r.get("id", "").startswith("REQ-") or r.get("id") == "AN-15") and set(r.get("source_ids", [])) & hud_fmr:
+                    bad_pairs.append("{} cites a HUD FMR source".format(r["id"]))
+    check("no repository/process row cites a HUD FMR source it cannot support", not bad_pairs, "; ".join(bad_pairs[:5]))
+
+    # Ledger statements must not claim a re-verification date later than the ledger date (guards F38).
+    ledger_dates = set()
+    for sid, src in D.SOURCES.items():
+        ledger_dates.update(re.findall(r"(20\d\d-\d\d-\d\d)", src.get("statement", "")))
+    stale_counts = []
+    live_flags = len(flags)
+    live_sources = len(source_map)
+    for p_ in [ROOT / "FLAGGED_FOR_REVIEW.md", ROOT / "EXECUTIVE_SUMMARY.md"] + sorted(PAGES.glob("*.html")):
+        text = p_.read_text(encoding="utf-8")
+        for n in re.findall(r"All (\d+) (?:published )?(?:irregularities|flags|flagged items)", text):
+            if int(n) != live_flags:
+                stale_counts.append("{} says All {}".format(p_.name, n))
+        for n in re.findall(r"All (\d+) official sources", text):
+            if int(n) != live_sources:
+                stale_counts.append("{} says {} sources".format(p_.name, n))
+        for n in re.findall(r"(\d+) source-quality flags", text):
+            if int(n) != live_flags:
+                stale_counts.append("{} says {} source-quality flags".format(p_.name, n))
+    check("published flag and source counts match the site data", not stale_counts, "; ".join(stale_counts[:5]))
+
+    check("no source statement claims a re-verification date after the ledger date",
+          all(d <= D.DATE for d in ledger_dates), "ledger {}; latest {}".format(D.DATE, max(ledger_dates) if ledger_dates else "-"))
+
+    # The identifier exposure is documented, and no identifier content is published (guards F36).
+    exposure = ROOT / "research" / "privacy" / "HISTORY_EXPOSURE.md"
+    check("git-history privacy exposure is documented for the owner", exposure.exists())
+    check("privacy exposure flag is published on the Flagged page", "F36" in flagged_html)
+    check("executive summary is dated with this ledger date", D.DATE in (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8"))
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

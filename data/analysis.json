@@ -204,13 +204,13 @@
         {
           "id": "AN-15",
           "label": "Flagged items do not block",
-          "value": "All 38 flags published with source links",
+          "value": "Every flagged item is published on the Flagged for Review page with source links; needs-review status does not block a task or a merge",
           "status": "verified",
           "source_ids": [
             "S01",
-            "S43"
+            "S08"
           ],
-          "notes": "Needs review does not block merge.",
+          "notes": "Flag count is shown on the dashboard card and the Flagged page header, not hard-coded in this row.",
           "flag_id": "",
           "source_note": ""
         },

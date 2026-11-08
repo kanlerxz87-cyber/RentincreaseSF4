@@ -780,7 +780,7 @@
             "source_ids": [
               "S01",
               "S27",
-              "S43"
+              "S08"
             ],
             "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
             "flag_id": "",
@@ -792,9 +792,9 @@
             "value": "Built at repository root",
             "status": "verified",
             "source_ids": [
-              "S43"
+              "S20"
             ],
-            "notes": "Legacy Pages source main /.",
+            "notes": "Legacy Pages source main /; deployment status is recorded in COORDINATION.md.",
             "flag_id": "",
             "source_note": ""
           },
@@ -818,7 +818,7 @@
             "source_ids": [
               "S01",
               "S27",
-              "S43"
+              "S56"
             ],
             "notes": "Questions & Answers page.",
             "flag_id": "",
@@ -843,7 +843,7 @@
             "status": "verified",
             "source_ids": [
               "S01",
-              "S43"
+              "S02"
             ],
             "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
             "flag_id": "",
@@ -864,13 +864,13 @@
           {
             "id": "REQ-08",
             "label": "Flag irregularities",
-            "value": "38 flags published",
+            "value": "All published flags listed on the Flagged for Review page with source links",
             "status": "verified",
             "source_ids": [
               "S01",
-              "S43"
+              "S08"
             ],
-            "notes": "Flagged for Review page.",
+            "notes": "The dashboard card shows the current count; it is not restated here so it cannot go stale.",
             "flag_id": "",
             "source_note": ""
           },
@@ -928,7 +928,7 @@
             "value": "Published",
             "status": "verified",
             "source_ids": [
-              "S43"
+              "S01"
             ],
             "notes": "index.html and pages/.",
             "flag_id": "",
@@ -940,7 +940,7 @@
             "value": "Published",
             "status": "verified",
             "source_ids": [
-              "S43"
+              "S01"
             ],
             "notes": "Cards and status badges.",
             "flag_id": "",
@@ -1000,7 +1000,7 @@
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S43"
+              "S20"
             ],
             "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
             "flag_id": "F19",
@@ -1012,7 +1012,7 @@
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S43"
+              "S20"
             ],
             "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
             "flag_id": "F19",
@@ -2503,6 +2503,182 @@
       }
     ]
   },
+  "fee": {
+    "title": "Rent Board Fee (separate from the license)",
+    "description": "The second annual Rent Board obligation: who pays the fee, how much, when, what is exempt, what may be recovered from tenants, and how it differs from the Rent Increase License.",
+    "sections": [
+      {
+        "title": "Rent Board Fee - verified rules",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-01",
+            "label": "Is the Rent Board Fee the same as the Rent Increase License?",
+            "value": "No. The license comes from reporting into the Housing Inventory and the reporting itself is free; the fee is a separate annual per-unit payment. SF.gov: 'Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements', and reporting 'does not request an exemption of the Rent Board Fee.'",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S64",
+              "S07"
+            ],
+            "notes": "Completing one does not complete the other - see flag F33.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-02",
+            "label": "Who must pay it?",
+            "value": "Every owner of a residential dwelling unit or guest unit, unless a current exemption is on file or a Homeowners' Exemption is on file with the Assessor-Recorder. Coverage includes single-family homes, condominiums, units built after 1979, vacant units and units occupied by friends or family members.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S65"
+            ],
+            "notes": "Chapter 37A.1 also reaches units that are exempt from the rent increase limitations under Costa-Hawkins.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-03",
+            "label": "Amount for the 2026-2027 tax year",
+            "value": "$59.00 per dwelling unit; $29.50 per guest unit (SRO / residential hotel room).",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S65"
+            ],
+            "notes": "The Form 573 fee-history form does not yet list a 7/26-6/27 row (flag FEE-F3 in the research file). The amount above is taken from the current SF.gov page.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-04",
+            "label": "Due date and late penalties",
+            "value": "Due March 1 each year. A 5% penalty is added if unpaid by March 1, a further 5% by April 1 and a further 5% by May 1, capped at 15%; unpaid amounts are referred to the Bureau of Delinquent Revenue.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S65"
+            ],
+            "notes": "SF.gov's summary box says referral after June 1 while the same page's timeline describes a July notice with 30 days to pay - flag FEE-F1.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-05",
+            "label": "How and where to pay",
+            "value": "Online through the Rent Board Portal (preferred), in person at the Treasurer and Tax Collector in City Hall Room 140, or by check to San Francisco Rent Board, PO Box 7429, San Francisco, CA 94120-7429. No payments are accepted at the Rent Board office. A dishonored payment carries a $50.00 payment-failure fee.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S63"
+            ],
+            "notes": "The Annual Notice (invoice) is mailed in early January.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-06",
+            "label": "Exemption request deadline for the 2027 fee",
+            "value": "Monday, December 14, 2026. An exemption request must be submitted every year, and units without a valid approved exemption are billed for the fee due March 1, 2027.",
+            "status": "verified",
+            "source_ids": [
+              "S64",
+              "S56"
+            ],
+            "notes": "Vacant units are subject to the fee and do not qualify for an exemption.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-07",
+            "label": "Owner-occupied exemption",
+            "value": "A single-family home, condominium, co-op or apartment unit occupied by an owner of record and not rented at any time may qualify. Vacant units, or units occupied only by children or close relatives who are not on title, do not qualify; Chapter 37A.1(f) requires an affidavit filed with the Rent Board.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S65"
+            ],
+            "notes": "Not available for a rented unit such as either unit in this case.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-08",
+            "label": "How much can be recovered from tenants?",
+            "value": "At most 50% of the fee, and only after paying it in full: $29.50 per dwelling unit for 2026-2027. No penalty amounts may be recovered. Only a tenant who was residing in the unit on or before November 1 of the year before the fee became due may be billed.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S62",
+              "S65"
+            ],
+            "notes": "Show it as a fee recovery, never as part of the rent increase.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-09",
+            "label": "How the recovery may be collected",
+            "value": "By deducting it from the tenant's annual security-deposit interest payment, or by billing the tenant directly only if there is no (or insufficient) security deposit, or the landlord already pays the deposit interest annually. The bill must state the amount, that the purpose is to fund the Rent Board, and that it is due within 30 days of the bill.",
+            "status": "verified",
+            "source_ids": [
+              "S62",
+              "S65"
+            ],
+            "notes": "Unrecovered fees may be 'banked' and collected in a later year; banking applies only to fees assessed from November 1999 on.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-10",
+            "label": "Can unpaid fee money be a just cause for eviction?",
+            "value": "No. SF.gov: a tenant's failure to pay the Rent Board fee 'is not a just cause for eviction'; the landlord must use Small Claims Court to collect an unpaid fee.",
+            "status": "verified",
+            "source_ids": [
+              "S62"
+            ],
+            "notes": "The owner stays liable to the Rent Board whether or not any recovery is attempted (Ch. 37A.6).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-11",
+            "label": "Does the fee affect whether a rent increase is valid?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S56",
+              "S07",
+              "S53"
+            ],
+            "notes": "No official page read states that unpaid Rent Board fees invalidate an annual or banked increase; the license condition in Sec. 37.15(e) turns on reporting, not fee payment. This is an absence of a statement, not an official confirmation, so the value is blank.",
+            "flag_id": "F41",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-12",
+            "label": "Do I also need a City business registration certificate?",
+            "value": "Not 'by reason of that fact alone' if the only rental business is one residential structure of fewer than four units. A certificate may still be required if the same owner has other business activity or payroll expense, and a lessor is treated as a separate person for each individual building.",
+            "status": "verified",
+            "source_ids": [
+              "S66",
+              "S53"
+            ],
+            "notes": "Whether both units are in one structure, and whether there is other business activity or payroll, was not supplied - see flag FEE-14 in the research file. The Housing Inventory form itself asks for a business registration number only 'if any'.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      }
+    ]
+  },
   "compliance": {
     "title": "Correct Tenant-Notice Method",
     "description": "Conservative compliance checklist capable of tenant-lawyer review; not attorney approval.",
@@ -3745,13 +3921,13 @@
           {
             "id": "AN-15",
             "label": "Flagged items do not block",
-            "value": "All 38 flags published with source links",
+            "value": "Every flagged item is published on the Flagged for Review page with source links; needs-review status does not block a task or a merge",
             "status": "verified",
             "source_ids": [
               "S01",
-              "S43"
+              "S08"
             ],
-            "notes": "Needs review does not block merge.",
+            "notes": "Flag count is shown on the dashboard card and the Flagged page header, not hard-coded in this row.",
             "flag_id": "",
             "source_note": ""
           },

@@ -463,5 +463,67 @@
       "S06"
     ],
     "status": "needs review"
+  },
+  {
+    "id": "F36",
+    "title": "Privacy: the 2026-11-06 identifier exposure is still reachable in git history and pull-request diffs",
+    "detail": "The published file was fixed on 2026-11-07, but that did not remove the earlier version from repository history. research/privacy/HISTORY_EXPOSURE.md records that reader-supplied identifiers remain retrievable in earlier commits and in the diffs of earlier pull requests on this public repository. Only the repository owner can close this (history rewrite plus force push, or a GitHub Support request); agent sessions cannot rewrite history or force-push. No identifier is reproduced anywhere in this repository.",
+    "source_ids": [
+      "S23"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F37",
+    "title": "Two requirement rows cite a source that does not support their value",
+    "detail": "REQ-19 and REQ-20 describe pull-request and GitHub Pages deployment requirements but cite S43 (HUD Fair Market Rents), which has nothing to do with them. Their values stay blank rather than being self-asserted, and the validator now fails if a corrected pairing regresses.",
+    "source_ids": [
+      "S43"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F38",
+    "title": "Source statements can go stale between rebuilds",
+    "detail": "Ledger statements carry the date the page was last re-opened. S56 (Rent Board Fee) and S57 (Civil Code 1942.5) still read 'Re-verified 2026-11-07' on 2026-11-08 although both were re-opened again that day; corrected in this pass. A future rebuild can re-introduce the same drift, so the ledger date and the statement dates must be regenerated together.",
+    "source_ids": [
+      "S56",
+      "S57"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F39",
+    "title": "Official wording on an unlicensed increase differs across pages",
+    "detail": "Three formulations appear: a notice 'may be null and void' with a possible rent refund, a notice that is 'not enforceable' without a licence on the effective date, and 'Some rent increases given without a license will be null and void.' Section 37.15(e) instead suspends the licence and relieves the tenant of the increased rent only for the months of suspension. No single formulation is chosen; each row quotes its own source.",
+    "source_ids": [
+      "S08",
+      "S07",
+      "S64",
+      "S53"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F40",
+    "title": "Older SF.gov fee page still shows 2023 dates",
+    "detail": "https://www.sf.gov/pay-your-rent-board-fee still states the June 1, 2023 collections referral and the March 1, 2023 penalty start. It is treated as a superseded service page: amounts and dates come only from the current Rent Board Fee page (S56) and Chapter 37A (S65). It is linked only for the invoicing and payment-channel details it states correctly.",
+    "source_ids": [
+      "S63",
+      "S56"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F41",
+    "title": "No official statement links Rent Board Fee non-payment to the validity of a rent increase",
+    "detail": "The fee pages, Chapter 37A, the Housing Inventory page and Sec. 37.15 were read in full; none states that an unpaid or exempted Rent Board Fee affects whether an annual or banked rent increase is valid. Sec. 37.15(e) conditions the license on substantially complying with the reporting obligation, not on paying the fee. This is an absence of an official statement, not an official confirmation, so the finding cell is blank.",
+    "source_ids": [
+      "S56",
+      "S65",
+      "S07",
+      "S53"
+    ],
+    "status": "needs review"
   }
 ]
