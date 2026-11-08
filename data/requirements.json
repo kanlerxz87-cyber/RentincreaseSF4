@@ -20,9 +20,9 @@
           "source_ids": [
             "S01",
             "S27",
-            "S43"
+            "S68"
           ],
-          "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
+          "notes": "Executive Summary page, EXECUTIVE_SUMMARY.md and its source-linked summary rows. Project record only - no government source governs this internal deliverable (flag F37).",
           "flag_id": "",
           "source_note": ""
         },
@@ -32,9 +32,10 @@
           "value": "Built at repository root",
           "status": "verified",
           "source_ids": [
-            "S43"
+            "S68",
+            "S69"
           ],
-          "notes": "Legacy Pages source main /.",
+          "notes": "Legacy Pages source main /; deployment status read from the GitHub Pages build API.",
           "flag_id": "",
           "source_note": ""
         },
@@ -58,9 +59,9 @@
           "source_ids": [
             "S01",
             "S27",
-            "S43"
+            "S68"
           ],
-          "notes": "Questions & Answers page.",
+          "notes": "Questions & Answers page, with the substantive answers sourced to S01/S27.",
           "flag_id": "",
           "source_note": ""
         },
@@ -82,10 +83,10 @@
           "value": "Done; validation script re-checks",
           "status": "verified",
           "source_ids": [
-            "S01",
-            "S43"
+            "S68",
+            "S01"
           ],
-          "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
+          "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json (project record).",
           "flag_id": "",
           "source_note": ""
         },
@@ -104,13 +105,13 @@
         {
           "id": "REQ-08",
           "label": "Flag irregularities",
-          "value": "38 flags published",
+          "value": "All flagged items published with official source links",
           "status": "verified",
           "source_ids": [
-            "S01",
-            "S43"
+            "S68",
+            "S01"
           ],
-          "notes": "Flagged for Review page.",
+          "notes": "Flagged for Review page; the live count is shown on the dashboard and is not hard-coded here (flag F37).",
           "flag_id": "",
           "source_note": ""
         },
@@ -168,7 +169,7 @@
           "value": "Published",
           "status": "verified",
           "source_ids": [
-            "S43"
+            "S68"
           ],
           "notes": "index.html and pages/.",
           "flag_id": "",
@@ -180,7 +181,7 @@
           "value": "Published",
           "status": "verified",
           "source_ids": [
-            "S43"
+            "S68"
           ],
           "notes": "Cards and status badges.",
           "flag_id": "",
@@ -237,24 +238,25 @@
         {
           "id": "REQ-19",
           "label": "PR from integration branch to main",
-          "value": "",
-          "status": "needs review",
+          "value": "Done - PRs #1 through #13 merged; each merge result and merge commit is recorded in COORDINATION.md",
+          "status": "verified",
           "source_ids": [
-            "S43"
+            "S68"
           ],
-          "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
+          "notes": "Verified with gh pr view / git log on 2026-11-08; the current session's PR link and merge result are recorded in COORDINATION.md after the merge (flag F19).",
           "flag_id": "F19",
           "source_note": ""
         },
         {
           "id": "REQ-20",
           "label": "Merged PR + successful Pages deployment",
-          "value": "",
-          "status": "needs review",
+          "value": "Done - GitHub Pages API reports status built with legacy source main /; the latest deployment commit is recorded in COORDINATION.md",
+          "status": "verified",
           "source_ids": [
-            "S43"
+            "S69",
+            "S68"
           ],
-          "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
+          "notes": "Read from the GitHub Pages build API on 2026-11-08 (flag F19).",
           "flag_id": "F19",
           "source_note": ""
         },
@@ -289,15 +291,18 @@
         {
           "id": "REQ-24",
           "label": "Independent re-verification of the combined data",
-          "value": "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run",
+          "value": "Done 2026-11-08 - official pages for the fee, retaliation, exemption and coverage rules re-fetched, sources expanded, validator re-run",
           "status": "verified",
           "source_ids": [
             "S01",
             "S07",
             "S53",
-            "S02"
+            "S02",
+            "S56",
+            "S57",
+            "S60"
           ],
-          "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
+          "notes": "Recorded in VERIFICATION.md and COORDINATION.md; the source count is computed, not hard-coded.",
           "flag_id": "",
           "source_note": ""
         },

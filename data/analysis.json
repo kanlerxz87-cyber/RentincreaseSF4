@@ -204,13 +204,13 @@
         {
           "id": "AN-15",
           "label": "Flagged items do not block",
-          "value": "All 38 flags published with source links",
+          "value": "All flagged items published with official source links",
           "status": "verified",
           "source_ids": [
             "S01",
-            "S43"
+            "S68"
           ],
-          "notes": "Needs review does not block merge.",
+          "notes": "Needs review does not block the merge; the live count is shown on the dashboard (flag F37).",
           "flag_id": "",
           "source_note": ""
         },

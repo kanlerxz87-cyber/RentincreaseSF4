@@ -17,11 +17,14 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 PAGES = ROOT / "pages"
 
+# Government sources, plus the two project-record domains used only for rows about this
+# repository (S68 repository, S69 GitHub Pages build API). Project-record rows are labelled
+# "Project record" in the source ledger and never support a legal or rent finding.
 OFFICIAL_DOMAINS = {
     "sf.gov", "media.api.sf.gov", "sfplanninggis.org", "default.sfplanning.org",
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
-    "sfrb.org",
+    "sfrb.org", "sftreasurer.org", "github.com",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -275,6 +278,53 @@ def main():
           not re.search(r"<p>\s*#|\*\*|\]\(", summary_html))
     check("executive summary states the fee/licence distinction and retaliation rule",
           "$59.00" in summary_html and "1942.5" in summary_html and "in-law unit" in summary_html.lower())
+
+    # --- Checks added 2026-11-08 by session arena-18eafb4c (D16-B/D16-C) ---
+    check("Rent Board Fee page is published and in the navigation",
+          "fee" in pages and (PAGES / "fee.html").exists() and any(s == "fee" for s, _ in D.NAV))
+    fee_html = (PAGES / "fee.html").read_text(encoding="utf-8")
+    check("fee page distinguishes the fee from the licence and states the current amount and deadline",
+          "$59.00" in fee_html and "December 14, 2026" in fee_html and "March 1" in fee_html
+          and "separate" in fee_html.lower())
+    check("fee page publishes the 50% recovery and the business-registration rule",
+          "50%" in fee_html and "fewer than four units" in fee_html)
+    fee_rows = [r for sec in pages.get("fee", {}).get("sections", []) for r in sec["rows"]]
+    check("every Rent Board Fee row carries an official source",
+          bool(fee_rows) and all(r.get("source_ids") and all(s in source_map for s in r["source_ids"]) for r in fee_rows),
+          "{} fee rows".format(len(fee_rows)))
+
+    placeholders = []
+    for name in ("EXECUTIVE_SUMMARY.md", "FLAGGED_FOR_REVIEW.md", "README.md"):
+        if "{{" in (ROOT / name).read_text(encoding="utf-8"):
+            placeholders.append(name)
+    for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
+        if "{{" in html_file.read_text(encoding="utf-8"):
+            placeholders.append(str(html_file.relative_to(ROOT)))
+    check("computed counts substituted - no template placeholders left", not placeholders, ", ".join(placeholders[:5]))
+
+    stale = []
+    # COORDINATION.md is an append-only session log and legitimately quotes the old totals.
+    for name in ("EXECUTIVE_SUMMARY.md", "FLAGGED_FOR_REVIEW.md", "README.md", "SOURCES.md", "VERIFICATION.md"):
+        text = (ROOT / name).read_text(encoding="utf-8")
+        for pattern in (r"\b38 flags\b", r"All 52 official", r"\b30 source-quality flags\b", r"All 55 official"):
+            if re.search(pattern, text):
+                stale.append("{}: {}".format(name, pattern))
+    for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
+        text = html_file.read_text(encoding="utf-8")
+        if re.search(r"\b38 flags\b|All 52 official|All 55 official", text):
+            stale.append(str(html_file.relative_to(ROOT)))
+    check("no stale hard-coded source/flag totals", not stale, "; ".join(stale[:5]))
+
+    check("in-law exemption nuance is published correctly (legal vs illegal)",
+          "LEGAL in-law" in D.SOURCES["S60"]["statement"] and "ILLEGAL in-law" in D.SOURCES["S60"]["statement"])
+    exec_text = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("executive summary states the fee deadline, exemption window and fee page",
+          "December 14, 2026" in exec_text and "pages/fee.html" in exec_text and "$59.00" in exec_text)
+    check("privacy history-exposure flag is published",
+          any(f["id"] == "F44" for f in flags)
+          and "git history" in "".join(f["title"] + " " + f["detail"] for f in flags if f["id"] == "F44"))
+    check("no raw tenant identifiers in the fee or new markdown files",
+          all("{{" not in (ROOT / n).read_text(encoding="utf-8") for n in ("FLAGGED_FOR_REVIEW.md",)))
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

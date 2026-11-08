@@ -167,12 +167,18 @@ def summary_page_with_narrative(page):
     out = [header_html(page["title"], page["description"], "summary", True)]
     out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
         e(page["title"]), e(page["description"]), e(D.DISCLAIMER)))
-    out.append('<section class="narrative">{}'.format(md_to_html(D.EXECUTIVE_SUMMARY_TEXT)))
+    out.append('<section class="narrative">{}'.format(md_to_html(counts(D.EXECUTIVE_SUMMARY_TEXT))))
     out.append('<p class="small">The same text is available as <a href="../EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a> for manual review.</p></section>')
     for sec in page["sections"]:
         out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
     out.append(footer_html(True))
     return "".join(out)
+
+def counts(text):
+    """Substitute the computed source/flag counts so no total is ever typed by hand."""
+    return (text.replace("{{SOURCES}}", str(len(D.SOURCES)))
+                .replace("{{FLAGS}}", str(len(D.FLAGS)))
+                .replace("{{SOURCE_FLAGS}}", str(len([f for f in D.FLAGS if not f["id"].startswith("T03-")]))))
 
 def page_html(slug, page):
     out = [header_html(page["title"], page["description"], slug, True)]
@@ -230,7 +236,8 @@ def index_html():
     out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
                '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
                '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
-               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a></p>'
+               '<p>A second, separate Rent Board obligation also applies: the annual <strong>Rent Board Fee</strong> - <strong>$59.00 per dwelling unit for 2026-2027</strong>, due March 1, with an exemption window closing December 14, 2026. Paying it does not create a license, and a license does not pay it.</p>'
+               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; <a class="cta" href="pages/fee.html">Rent Board Fee, penalties and tenant recovery &rarr;</a></p>'
                '<div class="disclaimer">{}</div></section>'.format(
                    source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
     out.append('<section class="hero"><h2>How to read this dashboard</h2>'
@@ -252,7 +259,7 @@ def index_html():
     out.append('<section><h2>Quick navigation</h2><div class="tablewrap"><table><thead><tr><th>Category</th><th>What it contains</th><th>Official source(s)</th></tr></thead><tbody>')
     for slug, title in D.NAV:
         if slug == "sources":
-            desc = "All 55 official sources with manual-review links."
+            desc = "All {} official sources with manual-review links.".format(len(D.SOURCES))
             sids = ["S01", "S07", "S53", "S27", "S43"]
         elif slug == "flagged":
             desc = "Clearly labeled irregularities and unverified items, each with official source links."
@@ -292,9 +299,9 @@ def main():
     write(PAGES / "flagged.html", flagged_page_html())
     write(ROOT / "index.html", index_html())
 
-    write(ROOT / "EXECUTIVE_SUMMARY.md", D.EXECUTIVE_SUMMARY_TEXT)
-    write(ROOT / "FLAGGED_FOR_REVIEW.md", D.FLAGGED_TEXT)
-    write(ROOT / "README.md", D.README_TEXT)
+    write(ROOT / "EXECUTIVE_SUMMARY.md", counts(D.EXECUTIVE_SUMMARY_TEXT))
+    write(ROOT / "FLAGGED_FOR_REVIEW.md", counts(D.FLAGGED_TEXT))
+    write(ROOT / "README.md", counts(D.README_TEXT))
     print("Built {} data files, {} page HTML files, index.html, assets/site.css, .nojekyll and 3 markdown deliverables.".format(
         len(list(DATA.glob("*.json"))), len(list(PAGES.glob("*.html")))
     ))
