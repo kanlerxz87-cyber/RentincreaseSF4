@@ -1,0 +1,110 @@
+PASS canonical source map matches site data - 70 official sources
+PASS flags count matches dashboard - 54 flagged items
+PASS source URLs use official domains - all source URLs checked
+PASS every source has id, title, agency, category and statement
+PASS row IDs are unique across all pages
+PASS owner-supplied case rows are published and labelled - 23 owner-supplied rows (CASE-01, CASE-02, CASE-03 ...)
+PASS every table row has valid official source links - 296 rows checked; 
+PASS unverified rows are blank and flagged - 34 needs-review rows
+PASS every flag is published with official source links
+PASS Flagged for Review page contains all flag IDs
+PASS Flagged for Review page is clearly labeled
+PASS Sources page contains all source IDs and URLs
+PASS data/summary.json exists
+PASS pages/summary.html exists
+PASS data/process.json exists
+PASS pages/process.html exists
+PASS data/fee.json exists
+PASS pages/fee.html exists
+PASS data/requirements.json exists
+PASS pages/requirements.html exists
+PASS data/rates.json exists
+PASS pages/rates.html exists
+PASS data/local.json exists
+PASS pages/local.html exists
+PASS data/state.json exists
+PASS pages/state.html exists
+PASS data/federal.json exists
+PASS pages/federal.html exists
+PASS data/case.json exists
+PASS pages/case.html exists
+PASS data/calculations.json exists
+PASS pages/calculations.html exists
+PASS data/compliance.json exists
+PASS pages/compliance.html exists
+PASS data/reasons.json exists
+PASS pages/reasons.html exists
+PASS data/corporate.json exists
+PASS pages/corporate.html exists
+PASS data/individual.json exists
+PASS pages/individual.html exists
+PASS data/market.json exists
+PASS pages/market.html exists
+PASS data/questions.json exists
+PASS pages/questions.html exists
+PASS data/analysis.json exists
+PASS pages/analysis.html exists
+PASS pages/summary.html in navigation exists
+PASS pages/process.html in navigation exists
+PASS pages/fee.html in navigation exists
+PASS pages/requirements.html in navigation exists
+PASS pages/rates.html in navigation exists
+PASS pages/local.html in navigation exists
+PASS pages/state.html in navigation exists
+PASS pages/federal.html in navigation exists
+PASS pages/case.html in navigation exists
+PASS pages/calculations.html in navigation exists
+PASS pages/compliance.html in navigation exists
+PASS pages/reasons.html in navigation exists
+PASS pages/corporate.html in navigation exists
+PASS pages/individual.html in navigation exists
+PASS pages/market.html in navigation exists
+PASS pages/questions.html in navigation exists
+PASS pages/analysis.html in navigation exists
+PASS pages/sources.html in navigation exists
+PASS pages/flagged.html in navigation exists
+PASS site build files exist
+PASS index explains the badges and leads with the direct answer
+PASS index links to Flagged for Review
+PASS index links to Executive Summary
+PASS executive summary forefront covers Rent Board license for individual owners
+PASS private intake file is excluded from git
+PASS privacy fingerprint baseline present - 6 one-way fingerprints; no private intake required
+PASS no raw tenant identifiers in public files
+PASS no exact street address published
+PASS dates, amounts and placeholder IDs preserved
+PASS no raw initials in the anonymized case files
+PASS conservative compliance checklist wording present
+PASS no attorney approval or guarantee claimed
+PASS no forbidden certification language
+PASS step-by-step license page exists in navigation
+PASS step-by-step license page has all 12 numbered steps
+PASS step-by-step page links Sec. 37.15, Sec. 37.3 and the Housing Inventory
+PASS step-by-step page answers the individual-owner question
+PASS executive summary puts the license answer first - license section precedes the rate bottom line
+PASS executive summary cites the ordinance license condition
+PASS executive summary links the official license pages
+PASS executive summary states no individual-owner exception
+PASS no broken internal links
+PASS no committed merge-conflict markers in public files
+PASS numeric flag IDs are unique and contiguous - 44 numeric flags
+PASS no references to unpublished flag IDs
+PASS Rent Board Fee is distinguished from the license
+PASS retaliation 180-day rule is published
+PASS AB 1482 two-unit owner-occupied exemption is published
+PASS in-law-unit coverage rule is published
+PASS executive summary page renders the narrative, not just tables - 13 headings
+PASS executive summary page has no unrendered markdown
+PASS executive summary states the fee/licence distinction and retaliation rule
+PASS Rent Board Fee page is published and in the navigation
+PASS fee page distinguishes the fee from the licence and states the current amount and deadline
+PASS fee page publishes the 50% recovery and the business-registration rule
+PASS every Rent Board Fee row carries an official source - 28 fee rows
+PASS computed counts substituted - no template placeholders left
+PASS no stale hard-coded source/flag totals
+PASS in-law exemption nuance is published correctly (legal vs illegal)
+PASS executive summary states the fee deadline, exemption window and fee page
+PASS privacy history-exposure flag is published
+PASS no raw tenant identifiers in the fee or new markdown files
+
+Validation PASSED (108 checks, 0 errors). Report: data/validation_report.json
