@@ -207,8 +207,8 @@
           "value": "All flagged items are published with source links",
           "status": "project checked",
           "source_ids": [
-            "S70",
-            "S71"
+            "S75",
+            "S76"
           ],
           "notes": "Project workflow requirement; needs-review items are nonblocking but remain visible.",
           "flag_id": "",
@@ -349,11 +349,11 @@
           "value": "",
           "status": "needs review",
           "source_ids": [
-            "S62",
+            "S71",
             "S35"
           ],
           "notes": "Lease type and express mid-term increase clause not supplied; blank.",
-          "flag_id": "F36",
+          "flag_id": "F45",
           "source_note": ""
         },
         {
@@ -362,11 +362,11 @@
           "value": "Current tree uses placeholders; earlier public Git history/PR exposure is disclosed and not claimed remediated.",
           "status": "project checked",
           "source_ids": [
-            "S69",
-            "S68"
+            "S74",
+            "S73"
           ],
           "notes": "See F26/F38 and research/privacy/HISTORY_EXPOSURE.md.",
-          "flag_id": "F38",
+          "flag_id": "F44",
           "source_note": ""
         }
       ]

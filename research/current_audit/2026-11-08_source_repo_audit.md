@@ -31,23 +31,28 @@ Session `arena-12d86074`, fixed branch `arena/12d86074-rentincreasesf4`. This au
 
 ## Repository defects found and corrected
 
-1. **Stale counts and badges.** Source header, dashboard cards, requirements and flagged markdown used hardcoded 52/55/38/40/30 counts. Counts are now derived from the canonical registry: 72 entries, 71 distinct URLs, 52 flags. Status badges distinguish `rule checked`, `project checked`, `owner supplied`, `analysis`, `needs review`, and `source listed`.
+1. **Stale counts and badges.** Source header, dashboard cards, requirements and flagged markdown used hardcoded 52/55/38/40/30 counts. Counts are now derived from the canonical registry: 72 entries, 76 distinct URLs, 59 flags. Status badges distinguish `rule checked`, `project checked`, `owner supplied`, `analysis`, `needs review`, and `source listed`.
 2. **Irrelevant citations.** Requirements rows cited HUD FMR sources for GitHub Pages/PR/flag-count tasks. They now cite GitHub Docs or the relevant legal rule; a validator check rejects market-source citations on requirements rows.
 3. **Owner rows lacked official links.** Owner-supplied case rows now link governing rules and explicitly say the links are not proof of intake. Missing case facts remain blank and flagged.
 4. **Overbroad legal wording.** License wording now separates effective-date condition from mailing notice; retaliation wording is conditional; banking conflict is visible; fixed-term lease authority is flagged; petition/worksheet wording no longer treats every passthrough as petition-based.
 5. **Unsupported superlatives and invented case values.** Defect-frequency rankings removed. Withdrawn Unit 2 banked total and arbitrary notice/effective-date examples are blank. Fee arithmetic is labeled illustrative and separate from rent.
-6. **Privacy.** Current tree uses placeholders and omits the address. Low-entropy SHA-256 fingerprints were moved out of the public validator into gitignored `internal/`; public scripts no longer contain them. Historical public Git/PR exposure is prominently disclosed as **not remediated** (F26/F38). No raw identifier is reproduced.
+6. **Privacy.** Current tree uses placeholders and omits the address. Low-entropy SHA-256 fingerprints were moved out of the public validator into gitignored `internal/`; public scripts no longer contain them. Historical public Git/PR exposure is prominently disclosed as **not remediated** (F44). No raw identifier is reproduced.
 7. **Conflict markers and merge preservation.** Inherited and merge marker lines were removed while preserving both records. Validator scans public files and scripts for markers. Merge-preserving rebase is required for future pushes.
-8. **Static self-deploy limitation.** A page built before merge cannot truthfully certify its own final merge/deploy. Requirements link to the live site and coordination log; final evidence is appended after merge (F41).
-9. **Navigation/readability.** Grouped navigation, descriptive source links, search, responsive tables, privacy strip and a clearer executive summary were added. Source aliases are retained for continuity but excluded from distinct-URL counts (F40).
+8. **Static self-deploy limitation.** A page built before merge cannot truthfully certify its own final merge/deploy. Requirements link to the live site and coordination log; final evidence is appended after merge (F49).
+9. **Navigation/readability.** Grouped navigation, descriptive source links, search, responsive tables, privacy strip and a clearer executive summary were added. Source aliases are retained for continuity but excluded from distinct-URL counts (F48).
 
 ## Remaining nonblocking flags
 
-All 52 flags are published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`. The most consequential open items are: exact address/coverage/license unverified; lease type and effective date unknown; banking history unknown and SF.gov examples conflict; 94122 SAFMR row not obtained; no federal general private-rent cap; no attorney approval or both-units rule; HUD policy/eCFR tension; historical privacy exposure not remediated; fee/registration case facts unverified; final merge/deploy recorded after merge.
+All 59 flags are published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`. The most consequential open items are: exact address/coverage/license unverified; lease type and effective date unknown; banking history unknown and SF.gov examples conflict; 94122 SAFMR row not obtained; no federal general private-rent cap; no attorney approval or both-units rule; HUD policy/eCFR tension; historical privacy exposure not remediated; fee/registration case facts unverified (F43); final merge/deploy recorded after merge (F49).
 
 ## Verification performed in this pass
 
 - `python3 scripts/build_site.py`
-- `python3 scripts/validate_site.py` — 107 structural/privacy/source-integrity/internal-link checks, 0 errors at the time of this audit.
+- `python3 scripts/validate_site.py` — 111 structural/privacy/source-integrity/internal-link checks, 0 errors at the time of this audit.
 - Generated outputs committed for legacy main/root Pages; CI rebuild/diff check remains the publication gate.
 - No attorney review, no property-record lookup, no raw identifier publication, no history rewrite, and no claim that flagged items are verified.
+
+
+## Current-main integration addendum
+
+While I12 was in progress, `main` advanced through PRs #22–#24 (D16 fee page, B87 notice worksheet/service record kit, N08 QA records). The integration preserves those additions: the dedicated `fee` page and main flags F31–F44 remain; B87/N08 research files are retained. Current-session source additions were renumbered to S71–S77 and new flags to F45–F49 to avoid collisions with main's S62–S70 and F36–F44. Privacy history is main F44; case fee/registration facts are main F43. The in-law-unit wording follows main's corrected legal/illegal distinction (main F36). Final generated counts: 19 pages, 400 rows, 40 needs-review rows, 77 source entries / 76 distinct URLs, 59 flags, 111 structural checks, 0 errors.

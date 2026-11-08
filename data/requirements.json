@@ -18,7 +18,7 @@
           "value": "Published",
           "status": "project checked",
           "source_ids": [
-            "S68"
+            "S73"
           ],
           "notes": "Executive summary page and markdown lead with the individual-owner license/reporting answer.",
           "flag_id": "",
@@ -30,7 +30,7 @@
           "value": "Built at repository root",
           "status": "project checked",
           "source_ids": [
-            "S68"
+            "S73"
           ],
           "notes": "Legacy Pages source main /; root index.html. Final deploy evidence is recorded after merge in COORDINATION.md.",
           "flag_id": "",
@@ -42,7 +42,7 @@
           "value": "Published",
           "status": "project checked",
           "source_ids": [
-            "S70"
+            "S75"
           ],
           "notes": "This requirements ledger plus Questions & Answers; owner instructions are project requirements, not government findings.",
           "flag_id": "",
@@ -56,7 +56,7 @@
           "source_ids": [
             "S01",
             "S27",
-            "S70"
+            "S75"
           ],
           "notes": "Questions page answers each supplied question; unconfirmed case values remain blank.",
           "flag_id": "",
@@ -68,7 +68,7 @@
           "value": "Done",
           "status": "project checked",
           "source_ids": [
-            "S70"
+            "S75"
           ],
           "notes": "REPO_REVIEW.md and research/current_audit/ record code/data review; structural checks are not legal verification.",
           "flag_id": "",
@@ -83,7 +83,7 @@
             "S01",
             "S35",
             "S42",
-            "S70"
+            "S75"
           ],
           "notes": "Every published row links official rule/platform sources; owner intake is explicitly not government-verified.",
           "flag_id": "",
@@ -95,8 +95,8 @@
           "value": "Every row has official rule/platform links; owner intake is distinguished",
           "status": "project checked",
           "source_ids": [
-            "S68",
-            "S70"
+            "S73",
+            "S75"
           ],
           "notes": "Descriptive official links appear in each row and in Sources.",
           "flag_id": "",
@@ -108,8 +108,8 @@
           "value": "All flagged items published with source links",
           "status": "project checked",
           "source_ids": [
-            "S70",
-            "S71"
+            "S75",
+            "S76"
           ],
           "notes": "Flagged for Review publishes all flags dynamically; no stale hardcoded count.",
           "flag_id": "",
@@ -123,7 +123,7 @@
           "source_ids": [
             "S01",
             "S05",
-            "S70"
+            "S75"
           ],
           "notes": "Unconfirmed case values are blank; arithmetic is labeled analysis and conditional.",
           "flag_id": "",
@@ -135,11 +135,11 @@
           "value": "Current tree placeholders; historical exposure disclosed",
           "status": "project checked",
           "source_ids": [
-            "S69",
-            "S68"
+            "S74",
+            "S73"
           ],
           "notes": "Current tree uses placeholders; historical public exposure is disclosed, not claimed remediated.",
-          "flag_id": "F38",
+          "flag_id": "F44",
           "source_note": ""
         },
         {
@@ -148,11 +148,11 @@
           "value": "Tenant A-F placeholders; no exact address in current tree",
           "status": "project checked",
           "source_ids": [
-            "S69",
-            "S68"
+            "S74",
+            "S73"
           ],
           "notes": "Tenant A-F placeholders; no exact address or raw identifiers in the current public tree.",
-          "flag_id": "F38",
+          "flag_id": "F44",
           "source_note": ""
         },
         {
@@ -173,7 +173,7 @@
           "value": "Published",
           "status": "project checked",
           "source_ids": [
-            "S68"
+            "S73"
           ],
           "notes": "Root landing page plus grouped category subpages.",
           "flag_id": "",
@@ -185,7 +185,7 @@
           "value": "Published",
           "status": "project checked",
           "source_ids": [
-            "S68"
+            "S73"
           ],
           "notes": "Grouped navigation, plain-language badges, search and responsive tables.",
           "flag_id": "",
@@ -197,7 +197,7 @@
           "value": "Published",
           "status": "project checked",
           "source_ids": [
-            "S68"
+            "S73"
           ],
           "notes": "Readable tables on category pages; mobile horizontal scroll preserves columns.",
           "flag_id": "",
@@ -210,7 +210,7 @@
           "status": "project checked",
           "source_ids": [
             "S42",
-            "S70"
+            "S75"
           ],
           "notes": "Analysis & Findings separates rule checks, owner facts, analysis and open items.",
           "flag_id": "",
@@ -222,8 +222,8 @@
           "value": "Published",
           "status": "project checked",
           "source_ids": [
-            "S70",
-            "S71"
+            "S75",
+            "S76"
           ],
           "notes": "Flagged for Review page and markdown list every flag with source links.",
           "flag_id": "",
@@ -249,10 +249,10 @@
           "value": "See COORDINATION.md for the current PR/merge record",
           "status": "project checked",
           "source_ids": [
-            "S70"
+            "S75"
           ],
           "notes": "Static build cannot self-certify its own merge. Prior integrated releases were verified; final I12 PR/merge evidence is appended after merge.",
-          "flag_id": "F41",
+          "flag_id": "F49",
           "source_note": ""
         },
         {
@@ -261,10 +261,10 @@
           "value": "https://kanlerxz87-cyber.github.io/RentincreaseSF4/",
           "status": "project checked",
           "source_ids": [
-            "S68"
+            "S73"
           ],
           "notes": "Live site URL. Prior Pages build was verified before this build; final I12 deploy is verified after merge and recorded in COORDINATION.md.",
-          "flag_id": "F41",
+          "flag_id": "F49",
           "source_note": ""
         },
         {
@@ -301,8 +301,8 @@
           "value": "Combined T08/D16 research integrated; current-source audit recorded",
           "status": "project checked",
           "source_ids": [
-            "S70",
-            "S71"
+            "S75",
+            "S76"
           ],
           "notes": "T08/D16 research preserved and current-source audit recorded before final integration.",
           "flag_id": "",
@@ -329,7 +329,7 @@
           "value": "Completed through repository/source research and publication workflow; unresolved facts are flagged, not invented.",
           "status": "project checked",
           "source_ids": [
-            "S70"
+            "S75"
           ],
           "notes": "Owner workflow instruction; no user input requested.",
           "flag_id": "",
@@ -341,8 +341,8 @@
           "value": "COORDINATION.md records I12 claims and stale T08 takeover under the 60-minute rule.",
           "status": "project checked",
           "source_ids": [
-            "S70",
-            "S71"
+            "S75",
+            "S76"
           ],
           "notes": "Preserves parallel-session records.",
           "flag_id": "",
@@ -354,8 +354,8 @@
           "value": "T08 merged with both records preserved; merge-preserving rebase used after a plain rebase attempted to flatten history.",
           "status": "project checked",
           "source_ids": [
-            "S69",
-            "S70"
+            "S74",
+            "S75"
           ],
           "notes": "No force-push or history rewrite.",
           "flag_id": "",
@@ -451,8 +451,8 @@
           "value": "Landing/subpage warning and F26/F38 state current-tree anonymization does not remediate public history.",
           "status": "project checked",
           "source_ids": [
-            "S69",
-            "S68"
+            "S74",
+            "S73"
           ],
           "notes": "Owner remediation options documented.",
           "flag_id": "",
@@ -464,8 +464,8 @@
           "value": "Current audit, source registry, generated site and validator re-run after T08/D16 integration.",
           "status": "project checked",
           "source_ids": [
-            "S70",
-            "S71"
+            "S75",
+            "S76"
           ],
           "notes": "See research/current_audit/ and validation report.",
           "flag_id": "",
@@ -477,11 +477,11 @@
           "value": "Publication operations are logged in COORDINATION.md; final merge/deploy verified after merge.",
           "status": "project checked",
           "source_ids": [
-            "S68",
-            "S70"
+            "S73",
+            "S75"
           ],
           "notes": "Static page cannot self-certify its own final deploy (F41).",
-          "flag_id": "F41",
+          "flag_id": "F49",
           "source_note": ""
         },
         {
@@ -490,7 +490,7 @@
           "value": "Build, validation and browser checks run before merge; CI/Pages checked after merge.",
           "status": "project checked",
           "source_ids": [
-            "S71"
+            "S76"
           ],
           "notes": "Flagged research items are nonblocking; broken build is blocking.",
           "flag_id": "",
@@ -502,8 +502,8 @@
           "value": "All open case/source/project limitations are listed with official links.",
           "status": "project checked",
           "source_ids": [
-            "S70",
-            "S71"
+            "S75",
+            "S76"
           ],
           "notes": "Nonblocking does not mean verified.",
           "flag_id": "",

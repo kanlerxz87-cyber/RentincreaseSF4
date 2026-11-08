@@ -25,7 +25,7 @@ OFFICIAL_DOMAINS = {
     "sf.gov", "media.api.sf.gov", "sfplanninggis.org", "default.sfplanning.org",
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "courts.ca.gov", "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov",
-    "api.github.com", "docs.github.com", "sfrb.org", "sftreasurer.org", "codelibrary.amlegal.com",
+    "api.github.com", "docs.github.com", "github.com", "sfrb.org", "sftreasurer.org", "codelibrary.amlegal.com",
 }
 VALID_ROW_STATUSES = {"rule checked", "project checked", "owner supplied", "analysis", "needs review", "source listed"}
 MARKET_SOURCE_IDS = {"S43", "S44", "S45", "S46", "S47", "S50", "S51", "S52"}
@@ -164,6 +164,7 @@ def main():
     check("site build and disclosure files exist", all(p.exists() for p in required_files))
 
     index_html = (ROOT / "index.html").read_text(encoding="utf-8")
+    check("fee page is generated and linked", (PAGES / "fee.html").exists() and "pages/fee.html" in index_html)
     check("index explains badges and leads with direct answer", "How to read this dashboard" in index_html and "Direct answer" in index_html)
     check("index links to Flagged for Review", "pages/flagged.html" in index_html and "Flagged for Review" in index_html)
     check("index links to Executive Summary", "pages/summary.html" in index_html and "Executive Summary" in index_html or "Executive summary" in index_html)
@@ -174,7 +175,8 @@ def main():
     public_json = sorted(DATA.glob("*.json"))
     public_html = [ROOT / "index.html"] + sorted(PAGES.glob("*.html"))
     public_assets = [ROOT / "assets" / "site.css", ROOT / "assets" / "site.js"]
-    public_files = [p for p in public_md + public_json + public_html + public_assets if p.exists()]
+    public_research = sorted((ROOT / "research").rglob("*.json")) + sorted((ROOT / "research").rglob("*.py")) + sorted((ROOT / "research").rglob("*.mjs")) + sorted((ROOT / "research").rglob("*.log")) + sorted((ROOT / "research").rglob("*.patch"))
+    public_files = [p for p in public_md + public_json + public_html + public_assets + public_research if p.exists()]
 
     # Optional internal-only regression baseline. Low-entropy fingerprints are not
     # published; if absent in CI, placeholder/pattern checks still run.
@@ -244,7 +246,7 @@ def main():
 
     calc_rows = {r["id"]: r for sec in pages["calculations"]["sections"] for r in sec["rows"]}
     check("withdrawn banked total and invented notice dates remain blank", all(calc_rows[rid]["value"] == "" and calc_rows[rid]["status"] == "needs review" for rid in ("CALC-08", "CALC-10", "CALC-11")))
-    check("fixed-term lease gap is flagged and answered", "F36" in flag_ids and any(r["id"] == "Q-22" for _, r in all_rows) and any(r["id"] == "CHK-18" for _, r in all_rows))
+    check("fixed-term lease gap is flagged and answered", "F45" in flag_ids and any(r["id"] == "Q-22" for _, r in all_rows) and any(r["id"] == "CHK-18" for _, r in all_rows))
 
     broken = []
     for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
@@ -269,8 +271,8 @@ def main():
     check("no committed merge-conflict markers in public files or scripts", not marker_hits, "; ".join(marker_hits[:5]))
 
     numeric = [f["id"] for f in flags if re.fullmatch(r"F\d\d", f["id"])]
-    expected_numeric = [f"F{i:02d}" for i in range(1, 43)]
-    check("numeric flag IDs are unique and contiguous F01-F42", numeric == expected_numeric, f"{len(numeric)} numeric flags")
+    expected_numeric = [f"F{i:02d}" for i in range(1, 50)]
+    check("numeric flag IDs are unique and contiguous F01-F49", numeric == expected_numeric, f"{len(numeric)} numeric flags")
 
     stale_refs = []
     for p_ in [ROOT / "SOURCES.md", ROOT / "VERIFICATION.md", ROOT / "EXECUTIVE_SUMMARY.md", ROOT / "FLAGGED_FOR_REVIEW.md"]:
@@ -284,11 +286,11 @@ def main():
     check("Rent Board Fee is distinguished from license", "$59.00" in all_site_text and "separate" in all_site_text.lower())
     check("retaliation 180-day rule is published", ("180 days" in all_site_text or "180-day" in all_site_text) and "1942.5" in all_site_text)
     check("AB 1482 two-unit owner-occupied exemption is published", "ADU" in all_site_text and "principal residence" in all_site_text)
-    check("in-law-unit coverage rule is published", "in-law unit" in all_site_text.lower())
-    check("historical privacy exposure is disclosed, not claimed remediated", ("not remediated" in all_site_text.lower() or "do not erase earlier public" in all_site_text.lower()) and "F26" in all_site_text and "F38" in all_site_text)
+    check("in-law-unit coverage rule is published", "in-law unit" in all_site_text.lower() and "legal in-law" in all_site_text.lower() and "illegal in-law" in all_site_text.lower())
+    check("historical privacy exposure is disclosed, not claimed remediated", ("not remediated" in all_site_text.lower() or "do not erase earlier public" in all_site_text.lower()) and "F44" in all_site_text)
     check("summary page renders narrative, not just tables", summary_html.count("<h2>") >= 8 and "<ol>" in summary_html and "<h2>FOREFRONT" in summary_html, f"{summary_html.count('<h2>')} headings")
     check("summary page has no unrendered markdown", not re.search(r"<p>\s*#|\*\*|\]\(", summary_html))
-    check("summary states fee/license distinction, retaliation and in-law coverage", "$59.00" in summary_html and "1942.5" in summary_html and "in-law unit" in summary_html.lower())
+    check("summary states fee/license distinction, retaliation and in-law coverage", "$59.00" in summary_html and "1942.5" in summary_html and "legal in-law" in summary_html.lower())
     check("responsive tables and search enhancement exist", "@media" in (ROOT / "assets" / "site.css").read_text(encoding="utf-8") and "data-table-search" in (ROOT / "assets" / "site.js").read_text(encoding="utf-8"))
 
     report["status"] = "passed" if not report["errors"] else "failed"

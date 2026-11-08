@@ -34,7 +34,7 @@
             "S42"
           ],
           "notes": "eCFR current as of 11/05/2026. HUD enforcement overview differs in emphasis; see F39.",
-          "flag_id": "F39",
+          "flag_id": "F47",
           "source_note": ""
         },
         {
@@ -116,7 +116,7 @@
             "S41"
           ],
           "notes": "Cite both; do not assume agency policy overrides the regulation. Legal review needed for an actual policy.",
-          "flag_id": "F39",
+          "flag_id": "F47",
           "source_note": ""
         }
       ]

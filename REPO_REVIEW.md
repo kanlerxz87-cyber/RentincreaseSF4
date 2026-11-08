@@ -53,10 +53,10 @@ The repository had moved from `a0591c3` to `cd42189` through PRs #2–#9 by othe
 | Area | Finding | Action |
 | --- | --- | --- |
 | T08 merge | PR #14 was stale/conflicting; shallow history initially lacked a merge-base. | Deepened fetch, merged `07eb1b42`, preserved both COORDINATION records, removed marker lines. Plain rebase flattened the merge; aborted and used `--rebase=merges`. |
-| Counts | Hardcoded source/flag counts disagreed with canonical data. | Dynamic counts: 72 entries, 71 distinct URLs, 52 flags; source aliases excluded from distinct count. |
+| Counts | Hardcoded source/flag counts disagreed with canonical data. | Dynamic counts: 72 entries, 76 distinct URLs, 59 flags; source aliases excluded from distinct count. |
 | Citations | Requirements rows cited HUD FMR sources for project tasks; owner rows lacked governing-rule links. | Requirements cite GitHub Docs/relevant rules; owner rows link rules and say they are not intake proof; validator rejects market citations on requirements. |
 | Legal precision | Overbroad license/retaliation/banking/petition wording; unsupported rankings; invented case dates/banked total. | Effective-date license condition separated from mailing; conditional retaliation; banking conflict visible; fixed-term/effective-date gaps flagged; blank withdrawn values; rankings removed. |
-| Privacy | Public validator contained low-entropy SHA-256 fingerprints of initials; history exposure remained. | Fingerprints moved to gitignored `internal/`; public scripts clean; prominent F26/F38 disclosure that history is not remediated. No raw token reproduced. |
+| Privacy | Public validator contained low-entropy SHA-256 fingerprints of initials; history exposure remained. | Fingerprints moved to gitignored `internal/`; public scripts clean; prominent F44 disclosure that history is not remediated. No raw token reproduced. |
 | UX | Cryptic badges, flat navigation, stale executive rendering. | Grouped nav, descriptive source links, search, responsive tables, privacy strip, rendered narrative and clearer status labels. |
-| Validation | Structural checks could pass while substantive defects remained. | Added source-integrity, privacy-fingerprint, stale-count, unsupported-ranking, blank-case, fixed-term, history-disclosure and responsive/search checks. 107 checks, 0 errors; not legal verification. |
-| Publication | Static page cannot self-certify its own final merge/deploy. | F41 added; final PR/merge/Pages evidence appended to COORDINATION.md after merge. |
+| Validation | Structural checks could pass while substantive defects remained. | Added source-integrity, privacy-fingerprint, stale-count, unsupported-ranking, blank-case, fixed-term, history-disclosure and responsive/search checks. 111 checks, 0 errors; not legal verification. |
+| Publication | Static page cannot self-certify its own final merge/deploy. | F49 added; final PR/merge/Pages evidence appended to COORDINATION.md after merge. |

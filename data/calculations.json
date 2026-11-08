@@ -179,7 +179,7 @@
             "S35"
           ],
           "notes": "No effective date was supplied. Do not invent one; once verified, apply the official 30/90-day rule.",
-          "flag_id": "F37",
+          "flag_id": "F46",
           "source_note": ""
         },
         {
@@ -192,7 +192,7 @@
             "S35"
           ],
           "notes": "No effective date was supplied. Once verified, apply the official notice period plus 5 days for mailing within California.",
-          "flag_id": "F37",
+          "flag_id": "F46",
           "source_note": ""
         }
       ]
@@ -214,10 +214,10 @@
           "status": "analysis",
           "source_ids": [
             "S56",
-            "S64"
+            "S65"
           ],
           "notes": "Not a confirmed bill; official unit count/exemption status unverified. Separate from rent and license.",
-          "flag_id": "F42",
+          "flag_id": "F43",
           "source_note": ""
         },
         {
@@ -230,7 +230,7 @@
             "S63"
           ],
           "notes": "Only after owner pays in full, from qualifying Nov. 1 occupants, no penalties, by compliant method; not a rent increase.",
-          "flag_id": "F42",
+          "flag_id": "F43",
           "source_note": ""
         }
       ]

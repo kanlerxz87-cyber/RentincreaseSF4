@@ -46,9 +46,9 @@ See `research/sources/irregularities.md` and `research/sources/unverified.md` fo
 
 ## Current registry controls — 2026-11-08 (`arena-12d86074`)
 
-This T03 research copy is historical. The current public flag registry is `scripts/site_flags.py` / `data/flags.json`, published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`: 52 flags, F01–F42 plus T03-F01–T03-F10. Where this file conflicts with the current registry, the current registry controls.
+This T03 research copy is historical. The current public flag registry is `scripts/site_flags.py` / `data/flags.json`, published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`: 59 flags, F01–F49 plus T03-F01–T03-F10. Where this file conflicts with the current registry, the current registry controls.
 
 - T03-F01 now means owner intake is distinguished from official governing-rule links; owner rows are not blank merely because they are owner-supplied, and the links are explicitly not intake proof.
-- T03-F02 and current F26/F38 disclose that current-tree anonymization does **not** remediate earlier public Git history/PR exposure. The historical label “F26 — Unit 1 §6.14 notice history” in this file is superseded; the current F26 is the privacy-history flag.
-- New current flags include F36 fixed-term lease authority, F37 no proposed effective date, F38 historical privacy exposure, F39 HUD policy/eCFR tension, F40 duplicate source alias, F41 static self-deploy limitation, and F42 case fee/registration facts.
+- T03-F02 and current F44 disclose that current-tree anonymization does **not** remediate earlier public Git history/PR exposure. F26 remains the historical Unit 1 §6.14 notice-history flag; privacy history is F44.
+- Current additions after the main F01–F44 registry are F45 fixed-term lease authority, F46 no proposed effective date, F47 HUD policy/eCFR tension, F48 duplicate source URL, and F49 static self-deploy limitation. Case fee/registration facts are main F43; privacy history is main F44.
 - Low-entropy privacy fingerprints were moved out of public scripts into gitignored `internal/`; this is current-tree hygiene, not history remediation.

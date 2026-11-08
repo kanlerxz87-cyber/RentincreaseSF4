@@ -34,6 +34,6 @@ GitHub Pages API reported build 1346488563 as built for a0591c3 before this foll
 
 ## Current follow-up — 2026-11-08
 
-The 2026-11-07 fingerprint approach was itself a privacy risk because two-letter initials are low-entropy and publicly brute-forceable. The fingerprints were moved to gitignored `internal/privacy_fingerprints.json`; the public validator now runs placeholder/pattern checks and only loads the internal baseline when present. This does not remediate earlier public history/PR exposure, which remains disclosed in F26/F38 and `research/privacy/HISTORY_EXPOSURE.md`.
+The 2026-11-07 fingerprint approach was itself a privacy risk because two-letter initials are low-entropy and publicly brute-forceable. The fingerprints were moved to gitignored `internal/privacy_fingerprints.json`; the public validator now runs placeholder/pattern checks and only loads the internal baseline when present. This does not remediate earlier public history/PR exposure, which remains disclosed in F44 and `research/privacy/HISTORY_EXPOSURE.md`.
 
-Current generated counts are dynamic: 72 source entries, 71 distinct URLs, 52 flags, 18 pages, 367 generated rows, 37 needs-review rows, 107 structural checks, 0 errors. See `research/current_audit/2026-11-08_source_repo_audit.md` for the fresh source checks and corrections. Structural validation is not legal verification.
+Current generated counts are dynamic: 77 source entries, 76 distinct URLs, 59 flags, 19 pages, 400 generated rows, 40 needs-review rows, 111 structural checks, 0 errors. See `research/current_audit/2026-11-08_source_repo_audit.md` for the fresh source checks and corrections. Structural validation is not legal verification.

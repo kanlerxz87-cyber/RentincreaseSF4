@@ -115,7 +115,7 @@ def privacy_strip():
     return (
         '<div class="privacy-strip"><div class="wrap"><strong>Privacy history warning:</strong> '
         'current placeholders do not erase earlier public Git/PR exposure. '
-        '<a href="pages/flagged.html#F26">Read F26/F38</a> · '
+        '<a href="pages/flagged.html#F44">Read F44</a> · '
         '<a href="research/privacy/HISTORY_EXPOSURE.md">remediation limits</a>.</div></div>'
     )
 
@@ -285,7 +285,7 @@ def sources_section():
             "status": "source listed" if limited else "rule checked",
             "source_ids": [sid],
             "notes": f'{src.get("category", "")} · checked {src.get("checked", D.DATE)}' + (f' · alias of {src["alias_of"]}' if src.get("alias_of") else ""),
-            "flag_id": "F40" if src.get("alias_of") else "",
+            "flag_id": "F48" if sid == "S58" else "",
             "source_note": "",
         })
     return [{"title": "Official sources", "columns": ["Source", "What it supports", "Check status", "Official link", "Category / check date"], "rows": rows}]

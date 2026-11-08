@@ -2,6 +2,7 @@
 
 NAV = [('summary', 'Executive Summary'),
  ('process', 'Step-by-Step License'),
+ ('fee', 'Rent Board Fee'),
  ('requirements', 'Requirements'),
  ('rates', 'Rates'),
  ('local', 'Local Law'),
@@ -19,15 +20,33 @@ NAV = [('summary', 'Executive Summary'),
  ('sources', 'Sources'),
  ('flagged', 'Flagged for Review')]
 
+NAV_GROUPS = [('Start here',
+  [('summary', 'Executive Summary'),
+   ('process', 'Step-by-Step License'),
+   ('fee', 'Rent Board Fee'),
+   ('case', 'Anonymized Case'),
+   ('calculations', 'Calculations')]),
+ ('Rules & notices',
+  [('rates', 'Rates'),
+   ('local', 'Local Law'),
+   ('state', 'State Law'),
+   ('federal', 'Federal Law'),
+   ('reasons', 'Reasonable Reasons'),
+   ('compliance', 'Notice Checklist')]),
+ ('Evidence',
+  [('corporate', 'Corporate Practice'), ('individual', 'Individual Practice'), ('market', 'Market Context'), ('sources', 'Sources')]),
+ ('Review & requirements',
+  [('analysis', 'Analysis & Findings'),
+   ('questions', 'Questions & Answers'),
+   ('requirements', 'Requirements'),
+   ('flagged', 'Flagged for Review')])]
+
 CARDS = [('Individual-owner license', 'Required', 'process', 'Report Housing Inventory and confirm a current license before the effective date.'),
  ('Current local rate', '1.6%', 'rates', 'Effective 3/1/26-2/28/27 for covered units; not an approval for either unit.'),
- ('Illustrative annual math',
-  '2 units',
-  'calculations',
-  'Owner-supplied rents x official rate; eligibility, lease and history unverified.'),
- ('Distinct source URLs', 'auto:sources', 'sources', 'Official government, SEC and GitHub project links; aliases excluded.'),
+ ('Rent Board fee', '$59.00/unit', 'fee', 'Separate from the license; due March 1; up to 50% may be recovered by the statutory method.'),
+ ('Distinct source URLs', 'auto:sources', 'sources', 'Official government, SEC and GitHub project links; duplicate URLs excluded.'),
  ('Flagged items', 'auto:flags', 'flagged', 'Open questions and source conflicts; nonblocking but not ignored.'),
- ('Privacy history', 'Disclosed', 'flagged', 'Current tree anonymized; earlier public history exposure not remediated.')]
+ ('Privacy history', 'Disclosed', 'flagged', 'Current tree anonymized; earlier public history exposure not remediated (F44).')]
 
 FLAGS = [{'id': 'F01',
   'title': 'SF.gov rent-increase example rate conflict',
@@ -124,16 +143,14 @@ FLAGS = [{'id': 'F01',
   'status': 'needs review'},
  {'id': 'F19',
   'title': 'GitHub Pages deployment record',
-  'detail': 'Legacy Pages source is main / and requires root-level site. Prior releases were verified through GitHub PR/Pages APIs; the '
-            'current release cannot self-certify its own merge/deploy at build time. Final evidence is appended to COORDINATION.md after '
-            'merge.',
-  'source_ids': ['S68', 'S70'],
+  'detail': 'Legacy source main / requires root-level site. PR #1 merged at a0591c3; GitHub Pages API confirmed built on 2026-11-07. '
+            'Follow-up publication details are recorded in COORDINATION.md.',
+  'source_ids': ['S73', 'S69', 'S75'],
   'status': 'needs review'},
  {'id': 'F20',
   'title': 'Platform branch constraint',
-  'detail': 'Arena fixes the session branch; exclusive scopes and merge-preserving rebases were used instead of creating additional '
-            'session branches. This is a platform/owner workflow constraint, not a housing-law rule.',
-  'source_ids': ['S70', 'S71'],
+  'detail': 'Requested session branches cannot be created; exclusive file scopes used.',
+  'source_ids': ['S75', 'S76'],
   'status': 'needs review'},
  {'id': 'F21',
   'title': 'Case facts owner-supplied / missing',
@@ -164,12 +181,12 @@ FLAGS = [{'id': 'F01',
   'source_ids': ['S01', 'S07', 'S08'],
   'status': 'needs review'},
  {'id': 'F26',
-  'title': 'Privacy: earlier public Git history/PR exposure is not remediated',
-  'detail': 'Earlier validation output exposed raw tenant identifier tokens in public Git history and PR diffs. The current tree uses '
-            'placeholders and the validator no longer prints tokens, but history/cache/clone exposure remains. This is not claimed '
-            'confidential or remediated. Owner options: coordinate history cleanup and GitHub Support review; see '
-            'research/privacy/HISTORY_EXPOSURE.md. No raw token is reproduced here.',
-  'source_ids': ['S69', 'S68'],
+  'title': 'Privacy: earlier validation report published raw identifier tokens',
+  'detail': 'data/validation_report.json generated 2026-11-06 listed the raw tenant identifier tokens it scanned for, in a check detail. '
+            'Found independently on 2026-11-07 by sessions arena-6f344b80 and arena-2e273eee (PR #2, merged). validate_site.py no longer '
+            'prints raw tokens (count/fingerprint only) and the report was regenerated. Manual review should confirm no other published '
+            'file contains those tokens.',
+  'source_ids': ['S23'],
   'status': 'needs review'},
  {'id': 'F27',
   'title': "Next year's allowable rate not yet published",
@@ -207,8 +224,8 @@ FLAGS = [{'id': 'F01',
  {'id': 'T03-F02',
   'title': 'Personal information anonymized',
   'detail': 'Current tree uses placeholders and excludes raw intake; earlier public history/PR exposure remains and is disclosed '
-            'separately (F26). Anonymization of the current tree does not restore confidentiality.',
-  'source_ids': ['S69', 'S68'],
+            'separately (F44). Anonymization of the current tree does not restore confidentiality.',
+  'source_ids': ['S74', 'S73'],
   'status': 'needs review'},
  {'id': 'T03-F03',
   'title': 'Address / building year / coverage unverified',
@@ -255,7 +272,7 @@ FLAGS = [{'id': 'F01',
   'detail': 'main commit 1d80419 committed raw conflict markers (<<<<<<<, =======, >>>>>>>) into COORDINATION.md and the validator did not '
             "check for them. Found by an independent scan on 2026-11-07, resolved by keeping both sessions' records, and a validator check "
             'was added so it cannot recur silently.',
-  'source_ids': ['S70', 'S71'],
+  'source_ids': ['S75', 'S76'],
   'status': 'needs review'},
  {'id': 'F32',
   'title': 'Flag cross-references in the source ledger were out of sequence',
@@ -275,66 +292,119 @@ FLAGS = [{'id': 'F01',
   'detail': 'AB 1482 exempts a two-unit structure only if the owner occupied one unit as a principal residence at the beginning of the '
             'tenancy and continues in occupancy, and neither unit is an ADU/JADU. Whether the owner ever occupied a unit in this building '
             'was not supplied, so no exemption is asserted.',
-  'source_ids': ['S36', 'S60', 'S59'],
+  'source_ids': ['S58', 'S60', 'S59'],
   'status': 'needs review'},
  {'id': 'F35',
   'title': 'In-law or second structure on the lot changes coverage',
-  'detail': 'SF.gov states a dwelling with a legal or illegal in-law unit is a two-unit building and is not exempt from the Rent Ordinance '
-            'unless both units are rented together as a single tenancy, and a single-family dwelling is not exempt if another residential '
-            'structure is on the same lot. The owner described two units, which is consistent with Rent Ordinance coverage, but the '
-            'official lot and building record was not supplied.',
+  'detail': 'SF.gov states that a single-family dwelling with a LEGAL in-law unit is a two-unit building and is not exempt, that with an '
+            'ILLEGAL in-law unit it is also a two-unit building and is not exempt UNLESS both units are rented together as a single '
+            'tenancy, and that a single-family dwelling is not exempt if another residential structure is on the same lot. The owner '
+            'described two units, which is consistent with Rent Ordinance coverage, but the official lot and building record was not '
+            'supplied. Wording of this detail corrected 2026-11-08 - see F36.',
   'source_ids': ['S60', 'S59', 'S06'],
   'status': 'needs review'},
  {'id': 'F36',
+  'title': 'QA correction: in-law-unit exemption wording was imprecise on this site',
+  'detail': "The site previously summarised SF.gov as saying a dwelling with a legal or illegal in-law unit is not exempt 'unless both "
+            "units are rented together as a single tenancy'. The page applies that exception only to an ILLEGAL in-law unit; a LEGAL "
+            'in-law unit is not exempt at all. Found by line-by-line comparison on 2026-11-08 and corrected in S60, the Local Law row '
+            'LOC-23, Q-20, F35 and the executive summary. No other finding or figure changed.',
+  'source_ids': ['S60'],
+  'status': 'needs review'},
+ {'id': 'F37',
+  'title': 'QA correction: project-management rows cited an unrelated official source',
+  'detail': 'Requirements rows REQ-01/02/04/06/08/13/14/19/20 and analysis row AN-15 cited S43 (HUD Fair Market Rents) as their official '
+            'source, which cannot support any claim about this website, its pull requests or its flag count. Those rows now cite the '
+            'project record (S68 repository, S69 GitHub Pages build API) and their hard-coded totals (a stale flag count and a stale '
+            'source count) were removed in favour of counts computed at build time. No rent, rate or legal finding changed.',
+  'source_ids': ['S68', 'S69'],
+  'status': 'needs review'},
+ {'id': 'F38',
+  'title': 'Referral timing for an unpaid Rent Board fee differs inside the SF.gov fee page',
+  'detail': 'The summary and Section 37A.4 say an unpaid fee is referred to the Bureau of Delinquent Revenue as of June 1, while the same '
+            "page's timeline says outstanding bills become delinquent on June 1, a Notice of Delinquent Payment is mailed in July, and the "
+            'owner then has 30 days before referral. No date is chosen on this site; confirm with the Rent Board (311) before relying on '
+            'either.',
+  'source_ids': ['S56', 'S63'],
+  'status': 'needs review'},
+ {'id': 'F39',
+  'title': "Older SF.gov 'Pay your Rent Board fee' service page still shows 2023 dates",
+  'detail': 'The older service page still refers to March 1, 2023 and June 1, 2023. Only the current fee page, Chapter 37A, Form 573 and '
+            'the 2027 informational notice are used for amounts and dates on this site; the stale page is listed only so a reader who '
+            'finds it can compare.',
+  'source_ids': ['S70', 'S56'],
+  'status': 'needs review'},
+ {'id': 'F40',
+  'title': 'Form 573 fee history: title/row lag and two historical rows do not show a 50% tenant share',
+  'detail': "The Form 573 document is titled '25-26' and has no 7/26-6/27 row, so the 2026-2027 amount comes from the SF.gov fee page. In "
+            'the historical table the 7/03-6/04 row shows a $26.00 fee with a $21.50 tenant amount and the 7/01-6/02 row shows $16.00 with '
+            '$16.00, while the form elsewhere says the tenant share is 50% (half again for residential-hotel guests). No value is inferred '
+            'or corrected here; verify with the Rent Board before relying on any pre-2013 row.',
+  'source_ids': ['S64', 'S56'],
+  'status': 'needs review'},
+ {'id': 'F41',
+  'title': 'No official statement links Rent Board Fee payment to licence validity',
+  'detail': 'Section 37.15(e) conditions the rent increase licence on substantially complying with the reporting obligation, not on paying '
+            'the fee, and none of the fee pages, Chapter 37A or the 2027 notice says an unpaid fee voids an increase. This is recorded as '
+            'an absence of an official statement, not as an official confirmation that the two are unrelated.',
+  'source_ids': ['S56', 'S63', 'S53', 'S65'],
+  'status': 'needs review'},
+ {'id': 'F42',
+  'title': 'How a 50% fee recovery is divided among co-tenants is not stated officially',
+  'detail': 'SF.gov and Section 37A.6 authorise recovering up to 50% of the fee per unit from the tenant(s) in occupancy on November 1 but '
+            'do not say how that amount is allocated when several co-tenants share a unit. The site leaves this blank rather than assuming '
+            'an equal split.',
+  'source_ids': ['S62', 'S63'],
+  'status': 'needs review'},
+ {'id': 'F43',
+  'title': 'Case-specific fee, exemption and business-registration facts are unverified',
+  'detail': 'The unit count, whether both units are in one structure, exemption status, any billing record, other business activity, '
+            'payroll and any existing business registration were not supplied, and the January 2027 annual fee notice does not exist yet. '
+            'Those cells are blank.',
+  'source_ids': ['S56', 'S64', 'S66'],
+  'status': 'needs review'},
+ {'id': 'F44',
+  'title': 'Privacy: the raw tenant identifiers remain in public git history and pull-request diffs',
+  'detail': 'The first generated validation report (2026-11-06, commit 0ede010) printed the six raw tenant identifier tokens in one check '
+            'detail. They were removed from the current tree and the validator now reports counts only, but the commit history, the diffs '
+            'of PRs #1, #2, #4, #5 and #9, and the tips of two finished session branches still contain them in this public repository. '
+            'Removing them requires the owner: history rewrite with git filter-repo and a force-push, a GitHub Support request, deleting '
+            'the two stale branches, or making the repository private. An agent cannot rewrite history or push to another branch, and no '
+            'raw token is published on this site. Full detail: research/privacy/HISTORY_EXPOSURE.md. Current-tree cleanup also moved '
+            'low-entropy SHA-256 fingerprints out of public scripts into gitignored internal/. This is not history remediation; clones, '
+            'forks, cached views and PR diffs may persist. No raw token is reproduced here.',
+  'source_ids': ['S74', 'S73', 'S68'],
+  'status': 'needs review'},
+ {'id': 'F45',
   'title': 'Lease type and mid-term increase authority unverified',
   'detail': 'The supplied facts give lease dates but not fixed-term versus periodic status or an express mid-term increase clause. '
             'California DRE guidance says rent generally cannot be raised during a fixed term unless the agreement expressly allows it. No '
             'effective date or mid-term increase is approved here.',
-  'source_ids': ['S62', 'S35'],
+  'source_ids': ['S71', 'S35'],
   'status': 'needs review'},
- {'id': 'F37',
+ {'id': 'F46',
   'title': 'No proposed effective date supplied',
   'detail': 'No target effective date was supplied for either unit. Notice-deadline cells are blank rather than inventing a date; apply '
             'the 30/90-day and mailing rules once the actual date, lease type and anniversary are verified.',
   'source_ids': ['S35', 'S01'],
   'status': 'needs review'},
- {'id': 'F38',
-  'title': 'Historical privacy exposure remains public',
-  'detail': 'Placeholder names protect the current site only. Earlier public commits/PR diffs exposed raw identifiers; clones, forks and '
-            'cached views may persist. Current-tree cleanup is not history remediation. See F26 and the privacy research file.',
-  'source_ids': ['S69', 'S68'],
-  'status': 'needs review'},
- {'id': 'F39',
+ {'id': 'F47',
   'title': 'HUD enforcement overview vs discriminatory-effect regulation',
   'detail': 'The current HUD overview describes enforcement prioritization toward provable intentional discrimination, while 24 CFR '
             '100.500 still states a discriminatory-effect framework. The site cites both and does not assume agency enforcement policy '
             'overrides the regulation; legal review is needed for any actual policy.',
   'source_ids': ['S40', 'S42', 'S41'],
   'status': 'needs review'},
- {'id': 'F40',
-  'title': 'Duplicate source URL retained as research alias',
-  'detail': 'S58 duplicates S36 (Civil Code 1947.12). S58 is retained as an alias for earlier research continuity; citations now use S36 '
-            'and distinct-URL counts exclude the alias.',
-  'source_ids': ['S36'],
+ {'id': 'F48',
+  'title': 'Duplicate source URL retained as research entry',
+  'detail': 'S58 duplicates the S36 Civil Code 1947.12 URL but is retained as the D16 two-unit exemption research entry. Distinct-URL '
+            'counts exclude the duplicate; citations may use either, but the URL is not counted twice.',
+  'source_ids': ['S36', 'S58'],
   'status': 'needs review'},
- {'id': 'F41',
+ {'id': 'F49',
   'title': 'Static site cannot self-certify its own final merge/deploy',
   'detail': 'Requirements rows link to the live site and coordination log. The final PR merge and Pages build for this release are '
             'verified after merge and recorded in COORDINATION.md; a static page built before merge cannot truthfully display that future '
             'result.',
-  'source_ids': ['S68', 'S70'],
-  'status': 'needs review'},
- {'id': 'F42',
-  'title': 'Case fee, billing and business-registration facts unverified',
-  'detail': 'Two supplied units imply illustrative fee arithmetic only. Official unit count, exemption/billing status, '
-            'single-structure/lot facts, other business activity and payroll were not supplied; no registration exemption or actual bill '
-            'is asserted.',
-  'source_ids': ['S56', 'S63', 'S64', 'S65', 'S66'],
+  'source_ids': ['S73', 'S75'],
   'status': 'needs review'}]
-
-NAV_GROUPS = [
-    ('Start here', [('summary', 'Executive Summary'), ('process', 'Step-by-Step License'), ('case', 'Anonymized Case'), ('calculations', 'Calculations')]),
-    ('Rules & notices', [('rates', 'Rates'), ('local', 'Local Law'), ('state', 'State Law'), ('federal', 'Federal Law'), ('reasons', 'Reasonable Reasons'), ('compliance', 'Notice Checklist')]),
-    ('Evidence', [('corporate', 'Corporate Practice'), ('individual', 'Individual Practice'), ('market', 'Market Context'), ('sources', 'Sources')]),
-    ('Review & requirements', [('analysis', 'Analysis & Findings'), ('questions', 'Questions & Answers'), ('requirements', 'Requirements'), ('flagged', 'Flagged for Review')]),
-]

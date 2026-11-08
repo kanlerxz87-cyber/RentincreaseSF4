@@ -9,8 +9,8 @@ Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 1. `index.html` / `pages/summary.html` — direct license/reporting answer and executive summary.
 2. `pages/process.html` — ordered Housing Inventory, license, tenancy, calculation and notice steps.
 3. `pages/case.html` and `pages/calculations.html` — anonymized owner intake and conditional arithmetic.
-4. `pages/flagged.html` — all 52 open/source/project flags.
-5. `pages/sources.html` and `SOURCES.md` — 72 entries, 71 distinct official URLs.
+4. `pages/flagged.html` — all 59 open/source/project flags.
+5. `pages/sources.html` and `SOURCES.md` — 77 entries, 76 distinct official URLs.
 
 ## Repository map
 
@@ -22,7 +22,7 @@ Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
 ## Privacy
 
-Current public files use Tenant A-F placeholders, preserve supplied dates/amounts and omit the exact address. **Earlier public Git history/PR exposure is not remediated by current-tree anonymization.** See `research/privacy/HISTORY_EXPOSURE.md` and flags F26/F38. Raw intake is internal-only and gitignored; no raw identifier is reproduced in the public site.
+Current public files use Tenant A-F placeholders, preserve supplied dates/amounts and omit the exact address. **Earlier public Git history/PR exposure is not remediated by current-tree anonymization.** See `research/privacy/HISTORY_EXPOSURE.md` and flag F44. Raw intake is internal-only and gitignored; no raw identifier is reproduced in the public site.
 
 ## Build and validate
 

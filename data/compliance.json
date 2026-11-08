@@ -208,7 +208,7 @@
           "source_ids": [
             "S56",
             "S63",
-            "S64"
+            "S65"
           ],
           "notes": "The fee is not part of base rent.",
           "flag_id": "",
@@ -248,11 +248,11 @@
           "value": "Fixed-term rent generally cannot be raised mid-term unless the agreement expressly allows it; periodic tenancies use statutory notice rules.",
           "status": "rule checked",
           "source_ids": [
-            "S62",
+            "S71",
             "S35"
           ],
           "notes": "Actual lease type/clause unverified; no mid-term increase approved.",
-          "flag_id": "F36",
+          "flag_id": "F45",
           "source_note": ""
         },
         {

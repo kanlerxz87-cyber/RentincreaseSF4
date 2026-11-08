@@ -1,6 +1,6 @@
 # Sources
 
-72 entries; 71 distinct URLs. Checked 2026-11-08 unless a limitation is stated.
+77 entries; 76 distinct URLs. Checked 2026-11-08 unless a limitation is stated.
 
 ## S01 — SF Rent Board — Learn about rent increases in San Francisco
 - URL: https://www.sf.gov/learn-about-rent-increases-san-francisco
@@ -259,7 +259,7 @@
 
 ## S52 — HUD — FY2027 Small Area FMR Schedule
 - URL: https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_Small_Area_FMR_Schedule.pdf
-- Category: Federal; checked: 2026-11-08
+- Category: Federal; checked: listed / fetch limitation
 - Supports: Official FY2027 SAFMR schedule fetched 2026-11-08; parser returned only the first 30 pages (Alabama/Alaska/Arizona), not the California/94122 row. ZIP value remains blank.
 
 ## S53 — SF Admin Code — Sec. 37.15 Reporting Obligations; Licensing
@@ -290,8 +290,7 @@
 ## S58 — California Civil Code — CIV 1947.12 (AB 1482) - two-unit exemption text
 - URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV
 - Category: State; checked: 2026-11-08
-- Supports: Retained research alias for S36 (same Civil Code 1947.12 URL): two-unit owner-occupied state-cap exemption and separate-parcel notice/owner conditions. Not counted as a distinct source URL.
-- Alias of S36; not a distinct URL.
+- Supports: The state rent cap does not apply to a property with two separate dwelling units in a single structure where the owner occupied one unit as the principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU or JADU. Exemption for separately alienable property requires the owner notice and that the owner is not a REIT, corporation, or an LLC with at least one corporate member. Verified from the statute text 2026-11-07.
 
 ## S59 — SF Rent Board — Partial Exemption for Newly Constructed Rental Units
 - URL: https://www.sf.gov/information--partial-exemption-newly-constructed-rental-units
@@ -301,64 +300,89 @@
 ## S60 — SF Rent Board — Partial Exemption for Certain Single-Family Homes and Condominiums Under Costa-Hawkins
 - URL: https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins
 - Category: Local; checked: 2026-11-08
-- Supports: Single-family homes and condominiums are exempt from the rent increase limitations only if the tenancy commenced on or after January 1, 1996. A dwelling with a legal or illegal in-law unit constitutes a two-unit building and is NOT exempt unless both units are rented together as a single tenancy. A single-family dwelling is not exempt if another residential structure is on the same lot. Exempted units still owe the annual Rent Board fee. Re-verified 2026-11-07.
+- Supports: As of January 1, 1999, single-family homes and condominiums are generally exempt from the rent increase limitations (but not just cause) only if the tenancy commenced on or after January 1, 1996; a tenancy that commenced before that date stays fully covered. A single-family dwelling with a LEGAL in-law unit constitutes a two-unit building and is not exempt. A single-family dwelling with an ILLEGAL in-law unit also constitutes a two-unit building and is not exempt UNLESS both units are rented together as a single tenancy. A single-family dwelling is not exempt if another residential structure is on the same lot. Exempt units still owe the annual Rent Board fee. Wording corrected 2026-11-08 after line-by-line comparison with the page (see flag F36).
 
 ## S61 — SF Rent Board — Evictions in San Francisco
 - URL: https://www.sf.gov/evictions-san-francisco
 - Category: Local; checked: 2026-11-08
 - Supports: Eviction requires just cause under the Rent Ordinance; the Rent Ordinance generally allows tenants to replace departing roommates and to increase the number of occupants even when a written lease prohibits it; free legal help through the Eviction Defense Collaborative (415-659-9184) on receipt of an unlawful detainer; the 17 just-cause reasons are listed separately. Re-verified 2026-11-07.
 
-## S62 — California DRE / Courts hosted guide — California Tenants guide (Rev. 2022), fixed-term and periodic tenancies
+## S62 — SF Rent Board — Recover part of your Rent Board fee from the tenant
+- URL: https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant
+- Category: Local; checked: 2026-11-08
+- Supports: A landlord who has paid the Rent Board fee in full may collect 50% (excluding late penalties) from the tenant(s) residing in the unit, and only if the tenant resided there on or before November 1 of the year before the fee became due. Recovery is by deducting the amount from the annual security-deposit interest payment, or by billing directly only where there is no or insufficient deposit held or the landlord already pays interest annually. The bill must state the fee amount for each year, any deposit interest owed, that the purpose is to fund the Rent Board, and that the fee is due within 30 days. Unrecovered fees may be banked. A tenant's failure to pay is not a just cause for eviction; collection is through Small Claims Court. Re-verified 2026-11-08.
+
+## S63 — SF Admin Code — Chapter 37A Rent Stabilization and Arbitration Fee (official PDF)
+- URL: https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf
+- Category: Local; checked: 2026-11-08
+- Supports: Sec. 37A.1 makes the chapter apply to all residential units, including units exempt from the Chapter 37 rent-increase limits under Costa-Hawkins or Sec. 37.3(d). Sec. 37A.4: fees are due March 1, with 5% added if unpaid by March 1, a further 5% if unpaid by April 1, and a further 5% if unpaid by May 1; referrals to the Bureau of Delinquent Revenue after June 1. Sec. 37A.6: recovery limited to 50% of the annual fee, exclusive of penalties, from tenants in occupancy on November 1, by deposit-interest deduction or a compliant direct bill, may be banked for fees due after July 25, 1999, and the owner remains liable for the full fee whether or not recovery is sought. Re-verified 2026-11-08.
+
+## S64 — SF Rent Board — Form 573 Rent Board Fee History 25-26 (official PDF)
+- URL: https://media.api.sf.gov/documents/573_Rent_Board_Fee_History_25-26_8.26.pdf
+- Category: Local; checked: 2026-11-08
+- Supports: Fee history table: $59.00 per unit and $29.50 tenant share for each tax year 7/21-6/22 through 7/25-6/26 (the newest row). Earlier rows are $50.00 (7/19-6/21), $45.00, $40.00, $37.00, $36.00, $29.00, $26.00, $22.00, $20.00, $27.00, $19.00 and $16.00. States that owners pay per dwelling unit unless a current exemption is approved, that recovery is 50% by deducting from security-deposit interest, and that the tenant must have been in occupancy on November 1 of the tax year. Title says 25-26 and has no 2026-2027 row (see flag F40). Re-verified 2026-11-08.
+
+## S65 — SF Rent Board — Notification of Rent Board Fee and Housing Inventory Requirements (2027 Informational Notice)
+- URL: https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement
+- Category: Local; checked: 2026-11-08
+- Supports: 2027 informational notice: no payment is required at this time; the assessment is the basis for the Annual Fee Notice mailed in January 2027; vacant units are subject to the fee and do not qualify for an exemption; an exemption request must be submitted every year by Monday, December 14, 2026; requesting a fee exemption does not satisfy Housing Inventory reporting; Housing Inventory reporting is due March 1, 2027 and annually; landlords will not receive a rent increase license until reporting is complete; occupants of unreported units may receive a noncompliance notice; some increases given without a license will be null and void. Re-verified 2026-11-08.
+
+## S66 — SF Treasurer & Tax Collector — Information for Lessors of Residential Real Estate
+- URL: https://sftreasurer.org/information-lessors-residential-real-estate
+- Category: Local; checked: 2026-11-08
+- Supports: A person receiving rental income from one residential structure consisting of fewer than four units (or one residential condominium) is not, by reason of that fact alone, required to obtain a business registration certificate; other business activity or payroll may require one. For the Gross Receipts Tax and Business Registration Fee a lessor is treated as a separate person for each individual building, and the Tax Collector decides what constitutes a separate building and the number of units. A lessor must file a return unless leasing fewer than 4 units in any individual building, and is exempt from the Gross Receipts Tax if leasing fewer than 4 units in any individual building. Re-verified 2026-11-08.
+
+## S67 — SF Rent Board — Security Deposits (interest rate and AB 12 deposit cap)
+- URL: https://www.sf.gov/reports--security-deposits
+- Category: Local; checked: 2026-11-08
+- Supports: The security-deposit interest rate for March 1, 2026 through February 28, 2027 is 4.2%; interest is owed annually on the tenant's annual due date for deposits held over one year and may not be compounded. AB 12 caps a dwelling-unit deposit at one month's rent for deposits collected on or after July 1, 2024, with an exception allowing two months' rent where the owner is a natural person (or an LLC whose members are all natural persons) and owns no more than 2 residential rental properties totalling no more than 4 dwelling units offered for rent. Re-verified 2026-11-08.
+
+## S68 — Project record — Public GitHub repository for this research site
+- URL: https://github.com/kanlerxz87-cyber/RentincreaseSF4
+- Category: Project; checked: 2026-11-08
+- Supports: The repository itself is the authoritative record for project-management rows (published files, data/*.json, validation report, pull requests). It is not a government source and is labelled as the project record, not legal authority.
+
+## S70 — SF Rent Board — Pay your Rent Board fee (older service page - stale dates)
+- URL: https://www.sf.gov/pay-your-rent-board-fee
+- Category: Local; checked: 2026-11-08
+- Supports: Older service page that still refers to 2023 deadlines (for example 'if the fee is not paid in full by March 1, 2023'). It is listed only so a reader who finds it can compare it with the current sf.gov/rent-board-fee page; no amount or deadline on this site is taken from it (flag F39). Checked 2026-11-08.
+
+## S69 — Project record — GitHub Pages build status API (deployment record)
+- URL: https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest
+- Category: Project; checked: 2026-11-08
+- Supports: GitHub's own API endpoint that returns the status of the latest GitHub Pages build for this repository (status, commit and creation time). Used only for deployment claims; not a government source.
+
+## S71 — California DRE / Courts hosted guide — California Tenants guide (Rev. 2022), fixed-term and periodic tenancies
 - URL: https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf
 - Category: State; checked: 2026-11-08
 - Supports: Printed p.22: landlord cannot raise rent during a fixed term unless the rental agreement expressly allows it; periodic tenancies continue until proper notice. Official guide is informational, not legal advice; actual lease terms unverified.
 
-## S63 — SF Administrative Code — Chapter 37A Rent Stabilization and Arbitration Fee (Rent Board PDF 901)
-- URL: https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf
-- Category: Local; checked: 2026-11-08
-- Supports: Scope includes rent-control-exempt units with narrow exemptions; fee due March 1; 5% penalties March/April/May; June 1 referral; paid-in-full owner may recover up to 50% from Nov. 1 occupants, no penalties, by deposit-interest deduction or compliant 30-day bill; owner remains liable.
-
-## S64 — SF Rent Board — Notification of Rent Board Fee and Housing Inventory Requirements (2027)
-- URL: https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement
-- Category: Local; checked: 2026-11-08
-- Supports: 2027 fee exemption requests due Dec. 14, 2026; Annual Fee Notice mailed Jan. 2027; Housing Inventory due March 1, 2027; fee exemption and inventory reporting do not satisfy each other; license required for annual/banked increases.
-
-## S65 — SF Treasurer & Tax Collector — Information for Lessors of Residential Real Estate
-- URL: https://sftreasurer.org/information-lessors-residential-real-estate
-- Category: Local; checked: 2026-11-08
-- Supports: One residential structure with fewer than four units is not, by that fact alone, required to register; other business activity/payroll may require registration. Per-building treatment; fewer-than-four-unit gross-receipts tax exemption and filing rules.
-
-## S66 — SF Treasurer & Tax Collector — Register a Business
+## S72 — SF Treasurer & Tax Collector — Register a Business
 - URL: https://sftreasurer.org/business/register-business
 - Category: Local; checked: 2026-11-08
 - Supports: General business registration within 30 days and annual renewal; exception for only rental income from one residential structure under four units, one condo, or cooperative; public business/ownership data warning.
 
-## S67 — SF Rent Board — Security Deposits
-- URL: https://www.sf.gov/reports--security-deposits
-- Category: Local; checked: 2026-11-08
-- Supports: Deposit interest 4.2% for Mar. 1, 2026-Feb. 28, 2027; annual interest on deposits held over one year; AB 12 one-month cap with natural-person/small-LLC two-property/four-unit exception; deposit disputes are state-law matters.
-
-## S68 — GitHub Docs — Creating a GitHub Pages site
+## S73 — GitHub Docs — Creating a GitHub Pages site
 - URL: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 - Category: Project; checked: 2026-11-08
 - Supports: Pages publishes static files; branch/folder publishing source; root index entry; public-site warning even for private repositories; changes can take up to 10 minutes to publish.
 
-## S69 — GitHub Docs — Removing sensitive data from a repository
+## S74 — GitHub Docs — Removing sensitive data from a repository
 - URL: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
 - Category: Project; checked: 2026-11-08
 - Supports: History rewriting requires coordination; sensitive commits may remain in clones/forks, cached GitHub views and pull requests; GitHub Support may remove cached views/PR references; deleting current files does not erase history.
 
-## S70 — GitHub Docs — Pull requests
+## S75 — GitHub Docs — Pull requests
 - URL: https://docs.github.com/en/pull-requests/reference/pull-requests
 - Category: Project; checked: 2026-11-08
 - Supports: Pull requests propose, review and merge changes; conversation, commits, checks and files-changed views; merge status shows blockers and requirements.
 
-## S71 — GitHub Docs — About protected branches
+## S76 — GitHub Docs — About protected branches
 - URL: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
 - Category: Project; checked: 2026-11-08
 - Supports: Branch protection can require status checks, reviews and other merge requirements; unique job names avoid ambiguous checks; force-push/deletion restrictions.
 
-## S72 — American Legal (official SF code publisher) — SF Administrative Code Chapter 37 index
+## S77 — American Legal (official SF code publisher) — SF Administrative Code Chapter 37 index
 - URL: https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-0-15928
 - Category: Local; checked: 2026-11-08
 - Supports: Official publisher index labeled 2026 S-96 (current). Fetch confirmed title/current-code label; full section text not re-read through this index in this session.

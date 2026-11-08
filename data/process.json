@@ -210,10 +210,10 @@
           "status": "rule checked",
           "source_ids": [
             "S01",
-            "S62"
+            "S71"
           ],
           "notes": "Fixed-term leases need an express increase clause; actual lease type is unverified (F36).",
-          "flag_id": "F36",
+          "flag_id": "F45",
           "source_note": ""
         },
         {
@@ -340,7 +340,7 @@
             "S02"
           ],
           "notes": "Derived timing illustration only; fixed-term clause, anniversary and history unverified.",
-          "flag_id": "F36",
+          "flag_id": "F45",
           "source_note": ""
         },
         {
@@ -368,7 +368,7 @@
             "S02"
           ],
           "notes": "Prior increases were not supplied; no banked amount or current effective date is computed.",
-          "flag_id": "F37",
+          "flag_id": "F46",
           "source_note": ""
         },
         {

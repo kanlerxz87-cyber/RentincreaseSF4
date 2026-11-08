@@ -275,14 +275,14 @@
         {
           "id": "Q-20",
           "label": "Does an in-law unit or a second structure change whether these units are covered?",
-          "value": "It can. SF.gov states that a dwelling with a legal or illegal in-law unit is a two-unit building and is not exempt from the Rent Ordinance unless both units are rented together as a single tenancy, and that a single-family dwelling is not exempt if another residential structure is on the same lot. Two rented units is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
+          "value": "It can. SF.gov states that a single-family dwelling with a legal in-law unit is a two-unit building and is not exempt, that with an illegal in-law unit it is also a two-unit building and is not exempt unless both units are rented together as a single tenancy, and that a single-family dwelling is not exempt if another residential structure is on the same lot. Two rented units is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
           "status": "rule checked",
           "source_ids": [
             "S60",
             "S59",
             "S06"
           ],
-          "notes": "Verify the lot in the Property Information Map; see flag F35.",
+          "notes": "Verify the lot in the Property Information Map; see flags F35 and F36.",
           "flag_id": "",
           "source_note": ""
         },
@@ -320,11 +320,11 @@
           "value": "Generally no, unless the rental agreement expressly allows rent increases; periodic tenancies use statutory notice rules.",
           "status": "rule checked",
           "source_ids": [
-            "S62",
+            "S71",
             "S35"
           ],
           "notes": "Actual lease type/clause unverified; no mid-term increase approved.",
-          "flag_id": "F36",
+          "flag_id": "F45",
           "source_note": ""
         },
         {
@@ -333,11 +333,11 @@
           "value": "Only rental income from one residential structure with fewer than four units generally does not by itself require registration; other business activity/payroll may require it.",
           "status": "rule checked",
           "source_ids": [
-            "S65",
-            "S66"
+            "S66",
+            "S72"
           ],
           "notes": "Structure/lot and other activity unverified; no case exemption asserted.",
-          "flag_id": "F42",
+          "flag_id": "F43",
           "source_note": ""
         },
         {
@@ -346,11 +346,11 @@
           "value": "No. Current placeholders do not rewrite public history, PR diffs, clones or caches; the exposure is disclosed and owner remediation options are listed.",
           "status": "project checked",
           "source_ids": [
-            "S69",
-            "S68"
+            "S74",
+            "S73"
           ],
           "notes": "No raw identifiers are reproduced; see F26/F38.",
-          "flag_id": "F38",
+          "flag_id": "F44",
           "source_note": ""
         }
       ]
