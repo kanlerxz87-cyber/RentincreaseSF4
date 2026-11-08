@@ -181,18 +181,19 @@
   {
     "id": "F19",
     "title": "GitHub Pages deployment record",
-    "detail": "Legacy source main / requires root-level site. PR #1 merged at a0591c3; GitHub Pages API confirmed built on 2026-11-07. Follow-up publication details are recorded in COORDINATION.md.",
+    "detail": "Legacy source main / requires root-level site. Earlier PRs were merged and the GitHub Pages API confirmed status built on 2026-11-07. Current PR and deployment details are recorded in COORDINATION.md; this row is a project record, not a legal source.",
     "source_ids": [
-      "S43"
+      "P01",
+      "P02"
     ],
     "status": "needs review"
   },
   {
     "id": "F20",
     "title": "Platform branch constraint",
-    "detail": "Requested session branches cannot be created; exclusive file scopes used.",
+    "detail": "Requested session branches cannot be created; exclusive file scopes are used instead. This is a platform/project constraint, so it cites the repository record rather than a legal source.",
     "source_ids": [
-      "S20"
+      "P01"
     ],
     "status": "needs review"
   },
@@ -298,6 +299,87 @@
       "S05",
       "S04",
       "S02"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F31",
+    "title": "Merge-conflict markers were committed to COORDINATION.md",
+    "detail": "main commit 1d80419 committed raw conflict markers (<<<<<<<, =======, >>>>>>>) into COORDINATION.md and the validator did not check for them. Found by an independent scan on 2026-11-07, resolved by keeping both sessions' records, and a validator check was added so it cannot recur silently.",
+    "source_ids": [
+      "S20"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F32",
+    "title": "Flag cross-references in the source ledger were out of sequence",
+    "detail": "SOURCES.md attributed the missing next-year rate to F25 and a 25-26 Form 571 link to F28; those are F27 and a separate S03 link defect. Corrected; the substantive findings are unchanged.",
+    "source_ids": [
+      "S02",
+      "S03"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F33",
+    "title": "Rent Board Fee and Rent Increase License are easy to conflate",
+    "detail": "They are separate obligations. The licence comes from Housing Inventory reporting; the fee is a per-unit annual payment (2026-2027: $59.00 per dwelling unit, due March 1). SF.gov states expressly that requesting a fee exemption does not satisfy Housing Inventory reporting, so an owner can be fee-paid and still unlicensed, or licensed and still owe the fee.",
+    "source_ids": [
+      "S56",
+      "S07",
+      "S53"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F34",
+    "title": "Two-unit owner-occupied exemption is conditional and unverified here",
+    "detail": "AB 1482 exempts a two-unit structure only if the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU. Whether the owner ever occupied a unit in this building was not supplied, so no exemption is asserted.",
+    "source_ids": [
+      "S58",
+      "S60",
+      "S59"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F35",
+    "title": "In-law or second structure on the lot changes coverage",
+    "detail": "SF.gov states a dwelling with a legal or illegal in-law unit is a two-unit building and is not exempt from the Rent Ordinance unless both units are rented together as a single tenancy, and a single-family dwelling is not exempt if another residential structure is on the same lot. The owner described two units, which is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
+    "source_ids": [
+      "S60",
+      "S59",
+      "S06"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F36",
+    "title": "Stale counts and mis-cited sources in the requirements table",
+    "detail": "An independent QA pass found that REQ-08 and AN-15 still said '38 flags' (the real figure is 45), that the quick-navigation description said 'All 55 official sources' after the ledger had grown to 61, that FLAGGED_FOR_REVIEW.md said '30 source-quality flags F01-F30', and that eight requirement rows about the site build, PR and deployment cited S43 (HUD Fair Market Rents), which has nothing to do with those facts. All counts are now generated from the data, and project-process rows are labelled project record with P01/P02 instead of borrowing an unrelated government source.",
+    "source_ids": [
+      "P01",
+      "P02"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F37",
+    "title": "Privacy: raw tenant identifiers remain in public git history and PR diffs",
+    "detail": "The 2026-11-06 validation report printed the raw tenant-identifier tokens in one check detail. That file was regenerated and the live site no longer contains them, but the public repository's commit history and the diffs of earlier pull requests still do. Agents cannot rewrite history or force-push under this project's branch rules. Owner action is required if that exposure must be removed (history rewrite or a GitHub Support request to purge the cached commits); the detail is in research/privacy/HISTORY_EXPOSURE.md, which does not itself contain the tokens.",
+    "source_ids": [
+      "P01"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F38",
+    "title": "Invitation Homes percentages not re-verified in the final pass",
+    "detail": "An earlier session reported Invitation Homes 2025 total-portfolio renewal growth of +4.6% and new-lease growth of -0.8% (2024: +4.9% and +1.0%) from the FY2025 Form 10-K. That filing renders as 81 fetch chunks, and a targeted read on 2026-11-08 did not reach the leasing-rate discussion. Under this project's rule, an unconfirmed value is left blank rather than carried forward, so CORP-04 and CORP-05 are blank and need manual review against S49. The verified Independence Realty Trust figures (CORP-01 to CORP-03) remain, and they alone support the point that large portfolios report modest renewal increases.",
+    "source_ids": [
+      "S49",
+      "S48"
     ],
     "status": "needs review"
   },
@@ -409,58 +491,6 @@
       "S07",
       "S35",
       "S42"
-    ],
-    "status": "needs review"
-  },
-  {
-    "id": "F31",
-    "title": "Merge-conflict markers were committed to COORDINATION.md",
-    "detail": "main commit 1d80419 committed raw conflict markers (<<<<<<<, =======, >>>>>>>) into COORDINATION.md and the validator did not check for them. Found by an independent scan on 2026-11-07, resolved by keeping both sessions' records, and a validator check was added so it cannot recur silently.",
-    "source_ids": [
-      "S20"
-    ],
-    "status": "needs review"
-  },
-  {
-    "id": "F32",
-    "title": "Flag cross-references in the source ledger were out of sequence",
-    "detail": "SOURCES.md attributed the missing next-year rate to F25 and a 25-26 Form 571 link to F28; those are F27 and a separate S03 link defect. Corrected; the substantive findings are unchanged.",
-    "source_ids": [
-      "S02",
-      "S03"
-    ],
-    "status": "needs review"
-  },
-  {
-    "id": "F33",
-    "title": "Rent Board Fee and Rent Increase License are easy to conflate",
-    "detail": "They are separate obligations. The licence comes from Housing Inventory reporting; the fee is a per-unit annual payment (2026-2027: $59.00 per dwelling unit, due March 1). SF.gov states expressly that requesting a fee exemption does not satisfy Housing Inventory reporting, so an owner can be fee-paid and still unlicensed, or licensed and still owe the fee.",
-    "source_ids": [
-      "S56",
-      "S07",
-      "S53"
-    ],
-    "status": "needs review"
-  },
-  {
-    "id": "F34",
-    "title": "Two-unit owner-occupied exemption is conditional and unverified here",
-    "detail": "AB 1482 exempts a two-unit structure only if the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU. Whether the owner ever occupied a unit in this building was not supplied, so no exemption is asserted.",
-    "source_ids": [
-      "S58",
-      "S60",
-      "S59"
-    ],
-    "status": "needs review"
-  },
-  {
-    "id": "F35",
-    "title": "In-law or second structure on the lot changes coverage",
-    "detail": "SF.gov states a dwelling with a legal or illegal in-law unit is a two-unit building and is not exempt from the Rent Ordinance unless both units are rented together as a single tenancy, and a single-family dwelling is not exempt if another residential structure is on the same lot. The owner described two units, which is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
-    "source_ids": [
-      "S60",
-      "S59",
-      "S06"
     ],
     "status": "needs review"
   }

@@ -35,6 +35,8 @@ def source_links(ids):
 def badge(status):
     if status == "owner supplied":
         return '<span class="badge owner">owner-supplied</span>'
+    if status == "project record":
+        return '<span class="badge proj">project record</span>'
     cls = {"verified": "verified", "needs review": "review", "analysis": "analysis"}.get(status, "analysis")
     label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis"}.get(status, status)
     return '<span class="badge {}">{}</span>'.format(cls, e(label))
@@ -185,10 +187,12 @@ def page_html(slug, page):
     return "".join(out)
 
 def sources_page_html():
-    out = [header_html("Sources", "All {} official sources used for verification, with manual-review links.".format(len(D.SOURCES)), "sources", True)]
-    out.append('<section class="hero"><h2>Official source ledger</h2><p>Every published table row links to one or more of these official government or SEC sources.</p><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
+    official = {sid: s for sid, s in D.SOURCES.items() if s.get("kind", "official") == "official"}
+    project = {sid: s for sid, s in D.SOURCES.items() if s.get("kind") == "project"}
+    out = [header_html("Sources", "{} official government/SEC sources plus {} project records, with manual-review links.".format(len(official), len(project)), "sources", True)]
+    out.append('<section class="hero"><h2>Source ledger</h2><p>Every substantive table row links to one or more of the official government or SEC sources below. Rows that describe this project itself (build, pull request, deployment, flag inventory) link to a project record instead, and are labelled <em>project record</em> rather than <em>verified</em>.</p><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
     rows = []
-    for sid, src in sorted(D.SOURCES.items()):
+    for sid, src in sorted(official.items()):
         rows.append({
             "id": sid,
             "label": "{} | {}".format(src["agency"], src["title"]),
@@ -199,7 +203,19 @@ def sources_page_html():
             "flag_id": "",
         })
     section = {"title": "Sources", "columns": D.COLUMNS, "rows": rows}
-    out.append("<section><h2>Official sources</h2>{}</section>".format(render_table(section, True)))
+    out.append("<section><h2>Official sources ({} entries)</h2>{}</section>".format(len(official), render_table(section, True)))
+    prows = []
+    for sid, src in sorted(project.items()):
+        prows.append({
+            "id": sid,
+            "label": "{} | {}".format(src["agency"], src["title"]),
+            "value": src["statement"],
+            "status": "project record",
+            "source_ids": [sid],
+            "notes": src["category"],
+            "flag_id": "",
+        })
+    out.append("<section><h2>Project records ({} entries)</h2><p>These are this repository's own primary records, not law. They are used only where a row describes the project itself.</p>{}</section>".format(len(project), render_table({"title": "Project records", "columns": D.COLUMNS, "rows": prows}, True)))
     out.append(footer_html(True))
     return "".join(out)
 
@@ -237,12 +253,12 @@ def index_html():
                '<p>Every finding row carries a <span class="badge verified">verified</span> badge and one or more official source links (SF.gov, the Rent Ordinance, California statute, eCFR, HUD, SEC). '
                '<span class="badge analysis">analysis</span> means a reasoned conclusion drawn from those rules plus the owner-supplied facts. '
                '<span class="badge review">needs review</span> means the value could not be confirmed officially, so the cell is left blank and the item is published on the Flagged for Review page. '
-               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings.</p>'
+               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings. <span class="badge proj">project record</span> marks a fact about this project itself (build, pull request, deployment, flag inventory); those rows link the repository record, not a law.</p>'
                '<p class="small">Start with the Executive Summary for the answer, the Step-by-Step License page for the order of operations, the Anonymized Case for the two units, and the Flagged for Review page for anything still open.</p></section>')
     out.append('<div class="cards">')
     for label, value, slug, desc in D.CARDS:
         if value == "auto:sources":
-            value = str(len(D.SOURCES))
+            value = str(len(D.OFFICIAL_SOURCES))
         elif value == "auto:flags":
             value = str(len(D.FLAGS))
         out.append('<div class="card"><div class="k">{}</div><div class="v">{}</div><div class="d">{}</div><a href="pages/{}.html">Open {} &rarr;</a></div>'.format(
@@ -252,7 +268,7 @@ def index_html():
     out.append('<section><h2>Quick navigation</h2><div class="tablewrap"><table><thead><tr><th>Category</th><th>What it contains</th><th>Official source(s)</th></tr></thead><tbody>')
     for slug, title in D.NAV:
         if slug == "sources":
-            desc = "All 55 official sources with manual-review links."
+            desc = "All {} official sources and {} project records with manual-review links.".format(len(D.OFFICIAL_SOURCES), len(D.PROJECT_SOURCES))
             sids = ["S01", "S07", "S53", "S27", "S43"]
         elif slug == "flagged":
             desc = "Clearly labeled irregularities and unverified items, each with official source links."
@@ -293,7 +309,11 @@ def main():
     write(ROOT / "index.html", index_html())
 
     write(ROOT / "EXECUTIVE_SUMMARY.md", D.EXECUTIVE_SUMMARY_TEXT)
-    write(ROOT / "FLAGGED_FOR_REVIEW.md", D.FLAGGED_TEXT)
+    numeric_flags = [f["id"] for f in D.FLAGS if f["id"].startswith("F") and f["id"][1:].isdigit()]
+    flagged_md = (D.FLAGGED_TEXT
+                  .replace("{{FLAG_COUNT}}", str(len(D.FLAGS)))
+                  .replace("{{FLAG_RANGE}}", "{} numeric flags F01 to F{}".format(len(numeric_flags), numeric_flags[-1][1:])))
+    write(ROOT / "FLAGGED_FOR_REVIEW.md", flagged_md)
     write(ROOT / "README.md", D.README_TEXT)
     print("Built {} data files, {} page HTML files, index.html, assets/site.css, .nojekyll and 3 markdown deliverables.".format(
         len(list(DATA.glob("*.json"))), len(list(PAGES.glob("*.html")))

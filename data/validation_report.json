@@ -1,21 +1,21 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "status": "passed",
   "checks": [
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "61 official sources"
+      "detail": "63 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "45 flagged items"
+      "detail": "48 flagged items"
     },
     {
-      "name": "source URLs use official domains",
+      "name": "source URLs use official or project-record domains",
       "ok": true,
-      "detail": "all source URLs checked"
+      "detail": "61 official sources, 2 project records"
     },
     {
       "name": "every source has id, title, agency, category and statement",
@@ -33,17 +33,17 @@
       "detail": "23 owner-supplied rows (CASE-01, CASE-02, CASE-03 ...)"
     },
     {
-      "name": "every table row has valid official source links",
+      "name": "every table row has a valid official or project-record source link",
       "ok": true,
-      "detail": "268 rows checked; "
+      "detail": "268 rows checked, 20 project records; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "33 needs-review rows"
+      "detail": "35 needs-review rows"
     },
     {
-      "name": "every flag is published with official source links",
+      "name": "every flag is published with a valid official or project-record link",
       "ok": true,
       "detail": ""
     },
@@ -423,7 +423,47 @@
       "detail": ""
     },
     {
+      "name": "flag inventory count in the requirements table is generated from the data",
+      "ok": true,
+      "detail": "48 flagged items published: 38 numeric flags F01-F38 plus 10 case/analysis flags T03-F01-T03-F10"
+    },
+    {
+      "name": "Sources page counts are generated from the data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Flagged page count is generated from the data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "AN-15 flag count is generated from the data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "project records are labelled separately on the Sources page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "project-record rows cite only project records",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "every project record is used by at least one row or flag",
+      "ok": true,
+      "detail": "P01, P02"
+    },
+    {
       "name": "no broken internal links",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no broken internal anchors",
       "ok": true,
       "detail": ""
     },
@@ -435,7 +475,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "35 numeric flags"
+      "detail": "38 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -480,13 +520,13 @@
   ],
   "errors": [],
   "summary": {
-    "sources": 61,
+    "sources": 63,
     "pages": 18,
     "data_files": 20,
     "rows_verified": 268,
-    "needs_review_rows": 33,
-    "flags": 45,
-    "checks": 95,
+    "needs_review_rows": 35,
+    "flags": 48,
+    "checks": 103,
     "errors": 0
   }
 }

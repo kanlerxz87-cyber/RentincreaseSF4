@@ -50,26 +50,26 @@
         },
         {
           "id": "CORP-04",
-          "label": "Invitation Homes 2025 total portfolio",
-          "value": "Renewal +4.6%; new -0.8%",
-          "status": "verified",
+          "label": "Invitation Homes 2025 total portfolio renewal / new-lease rates",
+          "value": "",
+          "status": "needs review",
           "source_ids": [
             "S49"
           ],
-          "notes": "Single-family rental REIT; not SF-specific.",
-          "flag_id": "",
+          "notes": "Single-family rental REIT; not SF-specific. Left blank in the 2026-11-08 pass: the 10-K is an 81-chunk document and the specific renewal/new-lease percentages were not located in a targeted read this session, so the earlier figure is not carried forward without re-checking. See flag F38.",
+          "flag_id": "F38",
           "source_note": ""
         },
         {
           "id": "CORP-05",
-          "label": "Invitation Homes 2024 total portfolio",
-          "value": "Renewal +4.9%; new +1.0%",
-          "status": "verified",
+          "label": "Invitation Homes 2024 total portfolio renewal / new-lease rates",
+          "value": "",
+          "status": "needs review",
           "source_ids": [
             "S49"
           ],
-          "notes": "Not SF-specific.",
-          "flag_id": "",
+          "notes": "Left blank for the same reason as CORP-04; not re-verified on 2026-11-08. See flag F38.",
+          "flag_id": "F38",
           "source_note": ""
         },
         {

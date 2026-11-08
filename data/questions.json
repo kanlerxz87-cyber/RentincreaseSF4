@@ -30,11 +30,10 @@
         {
           "id": "Q-02",
           "label": "How do big real estate corporations handle increases?",
-          "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.",
+          "value": "Public REITs report lease-over-lease rates in SEC filings. Verified example: Independence Realty Trust Q4 2025 same-store renewal leases +2.9%, new leases -3.7%, blended +0.8%. The second REIT example is blank pending re-verification (flag F38). No public source proves what all corporations do, and these are portfolio-level US figures, not SF limits.",
           "status": "verified",
           "source_ids": [
-            "S48",
-            "S49"
+            "S48"
           ],
           "notes": "Portfolio-level, not SF-specific; no generalization.",
           "flag_id": "",

@@ -54,13 +54,13 @@
         {
           "id": "REAS-04",
           "label": "Operating & maintenance petition",
-          "value": "Up to 7% additional base rent; two-year comparison",
+          "value": "Up to 7% additional base rent when expenses rose more than the allowable increase; two-consecutive-year or 24-month comparison; petition before notice",
           "status": "verified",
           "source_ids": [
             "S09",
             "S11"
           ],
-          "notes": "Petition before notice.",
+          "notes": "For units in properties with six or more residential units the total is capped at 7% in any five-year period.",
           "flag_id": "",
           "source_note": ""
         },

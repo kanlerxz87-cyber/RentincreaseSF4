@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 PAGES = ROOT / "pages"
 
+PROJECT_DOMAINS = {"github.com", "kanlerxz87-cyber.github.io"}
+
 OFFICIAL_DOMAINS = {
     "sf.gov", "media.api.sf.gov", "sfplanninggis.org", "default.sfplanning.org",
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
@@ -36,6 +38,16 @@ def check(name, ok, detail=""):
 def official_domain(url):
     host = urlparse(url).netloc.lower()
     return any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS)
+
+def project_domain(url):
+    host = urlparse(url).netloc.lower()
+    return any(host == d or host.endswith("." + d) for d in PROJECT_DOMAINS)
+
+def source_kind(src):
+    return src.get("kind", "official")
+
+def source_url_ok(src):
+    return project_domain(src["url"]) if source_kind(src) == "project" else official_domain(src["url"])
 
 def json_load(path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -62,13 +74,17 @@ def main():
 
     check("canonical source map matches site data", len(source_map) == len(D.SOURCES), "{} official sources".format(len(D.SOURCES)))
     check("flags count matches dashboard", len(flags) == len(D.FLAGS), "{} flagged items".format(len(D.FLAGS)))
-    check("source URLs use official domains", all(official_domain(s["url"]) for s in sources_list), "all source URLs checked")
+    check("source URLs use official or project-record domains", all(source_url_ok(s) for s in sources_list),
+          "{} official sources, {} project records".format(
+              sum(1 for s in sources_list if source_kind(s) == "official"),
+              sum(1 for s in sources_list if source_kind(s) == "project")))
     check("every source has id, title, agency, category and statement",
           all(all(k in s for k in ("id", "title", "agency", "category", "statement", "url")) for s in sources_list))
 
     row_count = 0
     needs_review_count = 0
     owner_rows = []
+    project_rows = []
     row_errors = []
     for slug, page in pages.items():
         for sec in page["sections"]:
@@ -89,8 +105,19 @@ def main():
                 for sid in r["source_ids"]:
                     if sid not in source_map:
                         row_errors.append("{} references unknown source {}".format(rid, sid))
-                    elif not official_domain(source_map[sid]["url"]):
-                        row_errors.append("{} references nonofficial URL for {}".format(rid, sid))
+                    elif not source_url_ok(source_map[sid]):
+                        row_errors.append("{} references a URL outside its source class for {}".format(rid, sid))
+                if r.get("status") == "project record":
+                    project_rows.append(rid)
+                    if not r.get("value"):
+                        row_errors.append("{} is a project record but has no value".format(rid))
+                    for sid in r["source_ids"]:
+                        if sid in source_map and source_kind(source_map[sid]) != "project":
+                            row_errors.append("{} is a project record but cites official source {}".format(rid, sid))
+                    continue
+                for sid in r["source_ids"]:
+                    if sid in source_map and source_kind(source_map[sid]) == "project" and r.get("status") != "needs review":
+                        row_errors.append("{} cites a project record but its status is {}".format(rid, r.get("status")))
                 if r.get("status") not in ("verified", "needs review", "analysis"):
                     row_errors.append("{} has invalid status".format(rid))
                 if r.get("status") == "needs review":
@@ -107,7 +134,9 @@ def main():
     dupes = [i for i, n in _c.Counter(r["id"] for pg in pages.values() for sec in pg["sections"] for r in sec["rows"]).items() if n > 1]
     check("row IDs are unique across all pages", not dupes, ", ".join(dupes[:5]))
     check("owner-supplied case rows are published and labelled", len(owner_rows) >= 10, "{} owner-supplied rows ({} ...)".format(len(owner_rows), ", ".join(owner_rows[:3])))
-    check("every table row has valid official source links", not row_errors, "{} rows checked; {}".format(row_count, "; ".join(row_errors[:5])))
+    row_errors = list(dict.fromkeys(row_errors))
+    check("every table row has a valid official or project-record source link", not row_errors,
+          "{} rows checked, {} project records; {}".format(row_count, len(project_rows), "; ".join(row_errors[:5])))
     check("unverified rows are blank and flagged", needs_review_count > 0, "{} needs-review rows".format(needs_review_count))
 
     flag_errors = []
@@ -119,9 +148,9 @@ def main():
         for sid in f["source_ids"]:
             if sid not in source_map:
                 flag_errors.append("{} references unknown source {}".format(f["id"], sid))
-            elif not official_domain(source_map[sid]["url"]):
-                flag_errors.append("{} references nonofficial URL {}".format(f["id"], sid))
-    check("every flag is published with official source links", not flag_errors, "; ".join(flag_errors[:5]))
+            elif not source_url_ok(source_map[sid]):
+                flag_errors.append("{} references a URL outside its source class for {}".format(f["id"], sid))
+    check("every flag is published with a valid official or project-record link", not flag_errors, "; ".join(flag_errors[:5]))
 
     flagged_html = (PAGES / "flagged.html").read_text(encoding="utf-8")
     sources_html = (PAGES / "sources.html").read_text(encoding="utf-8")
@@ -225,6 +254,36 @@ def main():
     check("executive summary states no individual-owner exception",
           "no individual-owner exception is stated" in exec_md.lower())
 
+    # Counts must be generated from the data, not typed in (F36).
+    req_json = json_load(DATA / "requirements.json")
+    req_rows = {r["id"]: r for sec in req_json["sections"] for r in sec["rows"]}
+    expected_inventory = "{} flagged items published: {} numeric flags F01-F{} plus {} case/analysis flags T03-F01-T03-F10".format(
+        len(D.FLAGS),
+        len([f for f in D.FLAGS if f["id"].startswith("F") and f["id"][1:].isdigit()]),
+        [f["id"] for f in D.FLAGS if f["id"].startswith("F") and f["id"][1:].isdigit()][-1][1:],
+        len([f for f in D.FLAGS if f["id"].startswith("T03")]))
+    check("flag inventory count in the requirements table is generated from the data",
+          req_rows.get("REQ-08", {}).get("value") == expected_inventory, req_rows.get("REQ-08", {}).get("value", ""))
+    check("Sources page counts are generated from the data",
+          "Official sources ({} entries)".format(len(D.OFFICIAL_SOURCES)) in sources_html
+          and "Project records ({} entries)".format(len(D.PROJECT_SOURCES)) in sources_html)
+    check("Flagged page count is generated from the data",
+          "All {} flagged items".format(len(D.FLAGS)) in flagged_html)
+    check("AN-15 flag count is generated from the data",
+          "{} flagged items".format(len(D.FLAGS)) in req_rows.get("AN-15", {}) or "{} flagged items".format(len(D.FLAGS)) in "".join(
+              r.get("value", "") for sec in json_load(DATA / "analysis.json")["sections"] for r in sec["rows"] if r["id"] == "AN-15"))
+
+    check("project records are labelled separately on the Sources page",
+          "Project records" in sources_html_unescaped and "P01" in sources_html_unescaped and "P02" in sources_html_unescaped)
+    project_sourced_rows = [r["id"] for pg in pages.values() for sec in pg["sections"] for r in sec["rows"]
+                            if r.get("status") == "project record" and not all(source_kind(source_map[s]) == "project" for s in r["source_ids"] if s in source_map)]
+    check("project-record rows cite only project records", not project_sourced_rows, ", ".join(project_sourced_rows[:5]))
+    check("every project record is used by at least one row or flag",
+          all(any(sid in r["source_ids"] for pg in pages.values() for sec in pg["sections"] for r in sec["rows"])
+              or any(sid in f["source_ids"] for f in flags)
+              for sid in D.PROJECT_SOURCES),
+          ", ".join(sorted(D.PROJECT_SOURCES)))
+
     broken = []
     for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
         parser = LinkParser()
@@ -239,6 +298,24 @@ def main():
             if not target.exists():
                 broken.append("{} -> {}".format(html_file.relative_to(ROOT), link))
     check("no broken internal links", not broken, "; ".join(broken[:5]))
+
+    # Fragment links must land on a real id.
+    id_map = {}
+    html_files = [ROOT / "index.html"] + sorted(PAGES.glob("*.html"))
+    for f_ in html_files:
+        id_map[f_.resolve()] = set(re.findall(r'id="([^"]+)"', f_.read_text(encoding="utf-8")))
+    bad_fragments = []
+    for f_ in html_files:
+        for href in re.findall(r'href="([^"]+)"', f_.read_text(encoding="utf-8")):
+            if href.startswith(("http://", "https://", "mailto:", "tel:")):
+                continue
+            path_part, _, frag = href.partition("#")
+            if not frag:
+                continue
+            target = (f_.parent / path_part).resolve() if path_part else f_.resolve()
+            if target in id_map and frag not in id_map[target]:
+                bad_fragments.append("{} -> {}".format(f_.relative_to(ROOT), href))
+    check("no broken internal anchors", not bad_fragments, "; ".join(bad_fragments[:5]))
 
     # Guard against defects found by independent review on 2026-11-07 (F31, F32).
     marker_hits = []

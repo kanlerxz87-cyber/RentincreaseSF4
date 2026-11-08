@@ -270,11 +270,10 @@
         {
           "id": "SUM-09",
           "label": "Corporate practice",
-          "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%",
+          "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8% (verified). A second REIT's figures are blank pending re-verification (flag F38).",
           "status": "verified",
           "source_ids": [
-            "S48",
-            "S49"
+            "S48"
           ],
           "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
           "flag_id": "",

@@ -79,3 +79,20 @@ Session `arena-c007d556` re-opened S01, S02, S05, S06, S07, S08, S16, S27 and ne
 ## Rule applied to the public site
 
 Each published finding row carries one or more of these source IDs and the official URL. If a value cannot be confirmed from an official source, the value cell is left blank and the row is marked `needs review` and published on the **Flagged for Review** page. No value is inferred or filled from a nonofficial snippet.
+
+## Project records (not legal sources) — added 2026-11-08
+
+Two source IDs are project records rather than government or SEC sources. They exist so that rows describing the project itself (build, pull request, deployment, flag inventory) do not borrow an unrelated legal citation.
+
+| ID | Record | Link | What it is used for |
+| --- | --- | --- | --- |
+| P01 | This repository (GitHub) | https://github.com/kanlerxz87-cyber/RentincreaseSF4 | Commits, pull requests, merged commit hashes, CI validation runs and Pages deployments. Not a legal source. |
+| P02 | Published site (GitHub Pages) | https://kanlerxz87-cyber.github.io/RentincreaseSF4/ | Confirming that the published pages exist and render. Not a legal source. |
+
+On the public site these appear in a separate **Project records** table under Sources, and rows that use them carry the badge **project record** instead of **verified**.
+
+## Session addendum — 2026-11-08 (final verification)
+
+- **S11 URL canonicalised.** `https://sf.gov/information/topic-no-322-operating-and-maintenance-expense-petitions` redirects to `https://www.sf.gov/information--operating-and-maintenance-expense-petitions`; the canonical URL is now recorded, and the page was re-read on 2026-11-08 (7% cap; two-consecutive-year or 24-month comparison; the 7%-in-five-years limit for properties with six or more units; petition before notice or the notice is void).
+- **Re-opened and re-confirmed on 2026-11-08:** S01, S02, S04, S05, S07, S08, S11, S12, S16, S21, S27, S29, S47, S48, S53, S56, S57, S35 (see `VERIFICATION.md`, R30–R40).
+- **S49 (Invitation Homes 10-K) not re-verified in this pass.** The filing renders as 81 fetch chunks and a targeted read did not reach the leasing-rate discussion. The two rows that relied on it are now blank and flagged (F38) rather than carried forward unverified.

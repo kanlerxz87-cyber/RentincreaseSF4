@@ -204,13 +204,12 @@
         {
           "id": "AN-15",
           "label": "Flagged items do not block",
-          "value": "All 38 flags published with source links",
-          "status": "verified",
+          "value": "All 48 flagged items are published on the Flagged for Review page with their source links",
+          "status": "project record",
           "source_ids": [
-            "S01",
-            "S43"
+            "P02"
           ],
-          "notes": "Needs review does not block merge.",
+          "notes": "Needs review status does not block merge.  Project record, not a legal source.",
           "flag_id": "",
           "source_note": ""
         },

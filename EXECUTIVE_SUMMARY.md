@@ -1,6 +1,6 @@
 # Executive Summary - Rental increase SF
 
-Research ledger dated 2026-11-07 UTC, re-verified independently this session against 22 official pages opened directly rather than carried over from earlier sessions. Informational compliance research, not legal advice.
+Research ledger dated 2026-11-08 UTC. Every headline figure below was re-opened against the official page linked beside it during the 2026-11-06 to 2026-11-08 verification passes, including a final independent pass on 2026-11-08. Informational compliance research, not legal advice.
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 

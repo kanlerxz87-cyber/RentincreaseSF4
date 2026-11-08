@@ -271,11 +271,10 @@
           {
             "id": "SUM-09",
             "label": "Corporate practice",
-            "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%",
+            "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8% (verified). A second REIT's figures are blank pending re-verification (flag F38).",
             "status": "verified",
             "source_ids": [
-              "S48",
-              "S49"
+              "S48"
             ],
             "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
             "flag_id": "",
@@ -776,13 +775,11 @@
             "id": "REQ-01",
             "label": "Executive summary",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S01",
-              "S27",
-              "S43"
+              "P01"
             ],
-            "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
+            "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md; the substantive statements inside it carry their own official law sources.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -790,11 +787,12 @@
             "id": "REQ-02",
             "label": "Public GitHub Pages site",
             "value": "Built at repository root",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S43"
+              "P01",
+              "P02"
             ],
-            "notes": "Legacy Pages source main /.",
+            "notes": "GitHub Pages legacy source main /; checked with gh api.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -802,11 +800,11 @@
             "id": "REQ-03",
             "label": "Collect / organize / analyze full requirements list",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S20"
+              "P01"
             ],
-            "notes": "This page.",
+            "notes": "This page.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -814,13 +812,11 @@
             "id": "REQ-04",
             "label": "Answer all user questions",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S01",
-              "S27",
-              "S43"
+              "P02"
             ],
-            "notes": "Questions & Answers page.",
+            "notes": "Questions & Answers page; each answer carries its own official links.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -828,11 +824,11 @@
             "id": "REQ-05",
             "label": "Review repo line by line",
             "value": "Done",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S20"
+              "P01"
             ],
-            "notes": "REPO_REVIEW.md.",
+            "notes": "REPO_REVIEW.md and git history.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -840,37 +836,35 @@
             "id": "REQ-06",
             "label": "Verify every row against official sources",
             "value": "Done; validation script re-checks",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S01",
-              "S43"
+              "P01"
             ],
-            "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
+            "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.  Enforcement of the rule itself is a project fact, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
           {
             "id": "REQ-07",
             "label": "Provide links for manual review",
-            "value": "Every row has official links",
-            "status": "verified",
+            "value": "Every substantive row carries official links; project-process rows link the repository record",
+            "status": "project record",
             "source_ids": [
-              "S01"
+              "P01"
             ],
-            "notes": "Official source(s) column.",
+            "notes": "Official source(s) column.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
           {
             "id": "REQ-08",
             "label": "Flag irregularities",
-            "value": "38 flags published",
-            "status": "verified",
+            "value": "48 flagged items published: 38 numeric flags F01-F38 plus 10 case/analysis flags T03-F01-T03-F10",
+            "status": "project record",
             "source_ids": [
-              "S01",
-              "S43"
+              "P02"
             ],
-            "notes": "Flagged for Review page.",
+            "notes": "Flagged for Review page.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -878,11 +872,11 @@
             "id": "REQ-09",
             "label": "No hallucinations / no inferred values",
             "value": "Blank cells for unverified values",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S01"
+              "P01"
             ],
-            "notes": "Validation enforces blank + flag.",
+            "notes": "Validation enforces blank + flag.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -890,11 +884,11 @@
             "id": "REQ-10",
             "label": "Personal information top priority",
             "value": "Placeholders only; raw identifiers internal-only",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S23"
+              "P01"
             ],
-            "notes": "Privacy scan in validation.",
+            "notes": "Privacy scan in validation.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -902,11 +896,11 @@
             "id": "REQ-11",
             "label": "Anonymize all personal information",
             "value": "Tenant A-F placeholders",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S23"
+              "P01"
             ],
-            "notes": "No real names, initials, contact details or exact address.",
+            "notes": "No real names, initials, contact details or exact address.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -914,11 +908,11 @@
             "id": "REQ-12",
             "label": "Keep dates and amounts same",
             "value": "Preserved",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S01"
+              "P01"
             ],
-            "notes": "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.",
+            "notes": "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -926,11 +920,11 @@
             "id": "REQ-13",
             "label": "Clean landing page + category subpages",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S43"
+              "P02"
             ],
-            "notes": "index.html and pages/.",
+            "notes": "index.html and pages/.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -938,11 +932,11 @@
             "id": "REQ-14",
             "label": "Simple dashboard UI",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S43"
+              "P02"
             ],
-            "notes": "Cards and status badges.",
+            "notes": "Cards and status badges.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -950,11 +944,11 @@
             "id": "REQ-15",
             "label": "All entries/findings in easy-read tables",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S01"
+              "P02"
             ],
-            "notes": "Tables on every subpage.",
+            "notes": "Tables on every subpage.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -962,11 +956,11 @@
             "id": "REQ-16",
             "label": "Analysis / findings",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S42"
+              "P02"
             ],
-            "notes": "Analysis & Findings page.",
+            "notes": "Analysis & Findings page; its rows carry official law sources.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -974,11 +968,11 @@
             "id": "REQ-17",
             "label": "Clearly labeled Flagged for Review page with source links",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S01"
+              "P02"
             ],
-            "notes": "pages/flagged.html.",
+            "notes": "pages/flagged.html.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -986,11 +980,11 @@
             "id": "REQ-18",
             "label": "Verified source-linked tables",
             "value": "Published",
-            "status": "verified",
+            "status": "project record",
             "source_ids": [
-              "S01"
+              "P02"
             ],
-            "notes": "Sources page.",
+            "notes": "Sources page.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -1000,9 +994,9 @@
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S43"
+              "P01"
             ],
-            "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
+            "notes": "Project record. Prior PRs were merged (see COORDINATION.md and the PR list). Value is left blank by rule: the current session's PR number and merge result cannot be stated by the build that precedes the merge; they are recorded in COORDINATION.md after merge.",
             "flag_id": "F19",
             "source_note": ""
           },
@@ -1012,9 +1006,10 @@
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S43"
+              "P01",
+              "P02"
             ],
-            "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
+            "notes": "Project record. GitHub Pages API reported status built (legacy source main /) for earlier merges. Value is left blank by rule for the same reason as REQ-19.",
             "flag_id": "F19",
             "source_note": ""
           },
@@ -1049,15 +1044,12 @@
           {
             "id": "REQ-24",
             "label": "Independent re-verification of the combined data",
-            "value": "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run",
-            "status": "verified",
+            "value": "Done 2026-11-08 - official pages re-fetched, 61 official sources plus 2 project records, validator re-run",
+            "status": "project record",
             "source_ids": [
-              "S01",
-              "S07",
-              "S53",
-              "S02"
+              "P01"
             ],
-            "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
+            "notes": "Recorded in VERIFICATION.md and COORDINATION.md.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },
@@ -2805,13 +2797,13 @@
           {
             "id": "REAS-04",
             "label": "Operating & maintenance petition",
-            "value": "Up to 7% additional base rent; two-year comparison",
+            "value": "Up to 7% additional base rent when expenses rose more than the allowable increase; two-consecutive-year or 24-month comparison; petition before notice",
             "status": "verified",
             "source_ids": [
               "S09",
               "S11"
             ],
-            "notes": "Petition before notice.",
+            "notes": "For units in properties with six or more residential units the total is capped at 7% in any five-year period.",
             "flag_id": "",
             "source_note": ""
           },
@@ -2951,26 +2943,26 @@
           },
           {
             "id": "CORP-04",
-            "label": "Invitation Homes 2025 total portfolio",
-            "value": "Renewal +4.6%; new -0.8%",
-            "status": "verified",
+            "label": "Invitation Homes 2025 total portfolio renewal / new-lease rates",
+            "value": "",
+            "status": "needs review",
             "source_ids": [
               "S49"
             ],
-            "notes": "Single-family rental REIT; not SF-specific.",
-            "flag_id": "",
+            "notes": "Single-family rental REIT; not SF-specific. Left blank in the 2026-11-08 pass: the 10-K is an 81-chunk document and the specific renewal/new-lease percentages were not located in a targeted read this session, so the earlier figure is not carried forward without re-checking. See flag F38.",
+            "flag_id": "F38",
             "source_note": ""
           },
           {
             "id": "CORP-05",
-            "label": "Invitation Homes 2024 total portfolio",
-            "value": "Renewal +4.9%; new +1.0%",
-            "status": "verified",
+            "label": "Invitation Homes 2024 total portfolio renewal / new-lease rates",
+            "value": "",
+            "status": "needs review",
             "source_ids": [
               "S49"
             ],
-            "notes": "Not SF-specific.",
-            "flag_id": "",
+            "notes": "Left blank for the same reason as CORP-04; not re-verified on 2026-11-08. See flag F38.",
+            "flag_id": "F38",
             "source_note": ""
           },
           {
@@ -3251,11 +3243,10 @@
           {
             "id": "Q-02",
             "label": "How do big real estate corporations handle increases?",
-            "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.",
+            "value": "Public REITs report lease-over-lease rates in SEC filings. Verified example: Independence Realty Trust Q4 2025 same-store renewal leases +2.9%, new leases -3.7%, blended +0.8%. The second REIT example is blank pending re-verification (flag F38). No public source proves what all corporations do, and these are portfolio-level US figures, not SF limits.",
             "status": "verified",
             "source_ids": [
-              "S48",
-              "S49"
+              "S48"
             ],
             "notes": "Portfolio-level, not SF-specific; no generalization.",
             "flag_id": "",
@@ -3745,13 +3736,12 @@
           {
             "id": "AN-15",
             "label": "Flagged items do not block",
-            "value": "All 38 flags published with source links",
-            "status": "verified",
+            "value": "All 48 flagged items are published on the Flagged for Review page with their source links",
+            "status": "project record",
             "source_ids": [
-              "S01",
-              "S43"
+              "P02"
             ],
-            "notes": "Needs review does not block merge.",
+            "notes": "Needs review status does not block merge.  Project record, not a legal source.",
             "flag_id": "",
             "source_note": ""
           },

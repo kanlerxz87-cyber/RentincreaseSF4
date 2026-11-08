@@ -2,7 +2,7 @@
 
 EXECUTIVE_SUMMARY_TEXT = """# Executive Summary - Rental increase SF
 
-Research ledger dated 2026-11-07 UTC, re-verified independently this session against 22 official pages opened directly rather than carried over from earlier sessions. Informational compliance research, not legal advice.
+Research ledger dated 2026-11-08 UTC. Every headline figure below was re-opened against the official page linked beside it during the 2026-11-06 to 2026-11-08 verification passes, including a final independent pass on 2026-11-08. Informational compliance research, not legal advice.
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 
@@ -81,16 +81,16 @@ All 45 irregularities and unverified items are published on the clearly labeled 
 
 FLAGGED_TEXT = """# Flagged for Review
 
-This page is clearly labeled **Flagged for Review**. Status `needs review` means the item is published with official source links for manual review and does **not** block any task or the merge.
+This page is clearly labeled **Flagged for Review**. Status `needs review` means the item is published with its source links (an official government/SEC link, or a project record where the item is a project-process fact) for manual review, and does **not** block any task or the merge.
 
 Full detail is in `research/sources/irregularities.md`, `research/sources/unverified.md`, `research/flags.md` and `pages/flagged.html`.
 
 ## Summary of flags
 
-- 30 source-quality flags F01-F30 (F25: SF.gov license-consequence wording differs — 'may be null/void' vs notice 'not enforceable' without a license on the effective date; F26: earlier validation report published raw identifier tokens in a check detail — fixed 2026-11-07, values withheld): SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, old 1.7% example, F27 (next year's allowable rate not yet published), F28 (Unit 1 Section 6.14 notice history unknown), F29 (correction: the June 2024 source shows 18 capital-improvement petitions / 148 units, not 19 / 148) and F30 (the 13.1% banked figure for Unit 2 is conditional arithmetic, not a finding).
+- {{FLAG_COUNT}} flagged items in total: {{FLAG_RANGE}} are irregularity and source-quality flags, plus the 10 case/analysis flags T03-F01 to T03-F10 below. Each substantive finding behind a flag is linked to its own official source on this page; project-process flags link the repository record instead. Recent entries include F25 (SF.gov licence-consequence wording differs), F26 (an earlier validation report published raw identifier tokens - fixed 2026-11-07, values withheld), F31 (merge-conflict markers were committed to COORDINATION.md - repaired), F33 (the Rent Board Fee is separate from the Rent Increase License), F34 and F35 (AB 1482 two-unit and in-law-unit coverage), F36 (stale counts and mis-cited sources in the requirements table - repaired) and F37 (raw identifiers remain in public git history and earlier PR diffs - owner action required).
 - 10 case/analysis flags T03-F01-T03-F10: owner-supplied facts, anonymization, address/year/coverage, Unit 1 legal status, banked/license/notice history, illustrative arithmetic, 94122 SAFMR blank, no cap/approval/both-units guarantee, narrow corporate/individual evidence, and conservative checklist only.
 
-Every flag on the site includes official source links. Unverified value cells are blank.
+Every substantive flag on the site includes official source links; project-process flags link the repository record instead. Unverified value cells are blank.
 """
 
 README_TEXT = """# RentincreaseSF4
@@ -151,6 +151,7 @@ td.blank{color:var(--muted);font-style:italic}
 .badge.review{background:var(--warnbg);color:var(--warn)}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
 .badge.owner{background:var(--ownerbg);color:var(--owner)}
+.badge.proj{background:#f0f0f4;color:#4a4a58;border:1px solid #d5d5de}
 .owner-src{font-size:.78rem;color:var(--owner)}
 td.blank{color:var(--warn);font-style:italic}
 @media print{nav,.cta{display:none}section,.hero{box-shadow:none}}

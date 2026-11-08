@@ -3,6 +3,14 @@
 COLUMNS = ["Item", "Value / finding", "Status", "Official source(s)", "Notes / flag"]
 OWNER_COLUMNS = ["Item", "Owner-supplied value", "Status", "Source", "Notes / flag"]
 
+from site_flags import FLAGS
+from site_sources import SOURCES
+
+_NUMERIC_FLAGS = [f["id"] for f in FLAGS if f["id"].startswith("F") and f["id"][1:].isdigit()]
+FLAG_INVENTORY = "{} flagged items published: {} numeric flags F01-F{} plus {} case/analysis flags T03-F01-T03-F10".format(
+    len(FLAGS), len(_NUMERIC_FLAGS), _NUMERIC_FLAGS[-1][1:], len(FLAGS) - len(_NUMERIC_FLAGS))
+
+
 def row(id, label, value, status, source_ids, notes="", flag_id="", source_note=""):
     return {"id": id, "label": label, "value": value, "status": status, "source_ids": source_ids,
             "notes": notes, "flag_id": flag_id, "source_note": source_note}
@@ -38,7 +46,7 @@ PAGES = {
                 row("SUM-06", "Banked increases", "Only if >=24 full months without any increase; add percentages, do not compound/prorate", "verified", ["S05"], "No banked amount inferred for this case."),
                 row("SUM-07", "Roommate / additional occupant", "Cannot charge extra rent merely because a new/additional roommate moved in", "verified", ["S01", "S17", "S18", "S19"], "No market-rate reset inferred."),
                 row("SUM-08", "Unit 1 vacancy-decontrol issue", "", "needs review", ["S15", "S16", "S28", "S37"], "Continuing occupant legal status and last-original-occupant facts unverified.", "T03-F04"),
-                row("SUM-09", "Corporate practice", "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%", "verified", ["S48", "S49"], "Portfolio-level, not SF-specific and not a legal benchmark."),
+                row("SUM-09", "Corporate practice", "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8% (verified). A second REIT's figures are blank pending re-verification (flag F38).", "verified", ["S48"], "Portfolio-level, not SF-specific and not a legal benchmark."),
                 row("SUM-10", "Individual practice", "June 2024: 23 landlord petitions/154 units; 73 tenant petitions; 89 eviction notices", "verified", ["S29"], "Narrow formal-petition evidence only."),
                 row("SUM-11", "Conservative approach", "Identical, neutral, license-and-notice-compliant <=1.6% policy on each eligible unit; or less", "analysis", ["S01", "S07", "S35", "S42"], "Compliance checklist capable of tenant-lawyer review; no approval or guarantee."),
                 row("SUM-12", "One unit or both", "", "needs review", ["S41", "S42", "S38"], "No official source requires both; document neutral eligibility reasons if only one is raised.", "F22"),
@@ -90,29 +98,29 @@ PAGES = {
         "description": "Every active requirement, status and official source link.",
         "sections": [
             {"title": "Requirements", "columns": COLUMNS, "rows": [
-                row("REQ-01", "Executive summary", "Published", "verified", ["S01", "S27", "S43"], "Executive Summary page and EXECUTIVE_SUMMARY.md."),
-                row("REQ-02", "Public GitHub Pages site", "Built at repository root", "verified", ["S43"], "Legacy Pages source main /."),
-                row("REQ-03", "Collect / organize / analyze full requirements list", "Published", "verified", ["S20"], "This page."),
-                row("REQ-04", "Answer all user questions", "Published", "verified", ["S01", "S27", "S43"], "Questions & Answers page."),
-                row("REQ-05", "Review repo line by line", "Done", "verified", ["S20"], "REPO_REVIEW.md."),
-                row("REQ-06", "Verify every row against official sources", "Done; validation script re-checks", "verified", ["S01", "S43"], "SOURCES.md, VERIFICATION.md, data/validation_report.json."),
-                row("REQ-07", "Provide links for manual review", "Every row has official links", "verified", ["S01"], "Official source(s) column."),
-                row("REQ-08", "Flag irregularities", "38 flags published", "verified", ["S01", "S43"], "Flagged for Review page."),
-                row("REQ-09", "No hallucinations / no inferred values", "Blank cells for unverified values", "verified", ["S01"], "Validation enforces blank + flag."),
-                row("REQ-10", "Personal information top priority", "Placeholders only; raw identifiers internal-only", "verified", ["S23"], "Privacy scan in validation."),
-                row("REQ-11", "Anonymize all personal information", "Tenant A-F placeholders", "verified", ["S23"], "No real names, initials, contact details or exact address."),
-                row("REQ-12", "Keep dates and amounts same", "Preserved", "verified", ["S01"], "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150."),
-                row("REQ-13", "Clean landing page + category subpages", "Published", "verified", ["S43"], "index.html and pages/."),
-                row("REQ-14", "Simple dashboard UI", "Published", "verified", ["S43"], "Cards and status badges."),
-                row("REQ-15", "All entries/findings in easy-read tables", "Published", "verified", ["S01"], "Tables on every subpage."),
-                row("REQ-16", "Analysis / findings", "Published", "verified", ["S42"], "Analysis & Findings page."),
-                row("REQ-17", "Clearly labeled Flagged for Review page with source links", "Published", "verified", ["S01"], "pages/flagged.html."),
-                row("REQ-18", "Verified source-linked tables", "Published", "verified", ["S01"], "Sources page."),
-                row("REQ-19", "PR from integration branch to main", "", "needs review", ["S43"], "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.", "F19"),
-                row("REQ-20", "Merged PR + successful Pages deployment", "", "needs review", ["S43"], "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.", "F19"),
+                row("REQ-01", "Executive summary", "Published", "project record", ["P01"], "Executive Summary page and EXECUTIVE_SUMMARY.md; the substantive statements inside it carry their own official law sources.  Project record, not a legal source."),
+                row("REQ-02", "Public GitHub Pages site", "Built at repository root", "project record", ["P01", "P02"], "GitHub Pages legacy source main /; checked with gh api.  Project record, not a legal source."),
+                row("REQ-03", "Collect / organize / analyze full requirements list", "Published", "project record", ["P01"], "This page.  Project record, not a legal source."),
+                row("REQ-04", "Answer all user questions", "Published", "project record", ["P02"], "Questions & Answers page; each answer carries its own official links.  Project record, not a legal source."),
+                row("REQ-05", "Review repo line by line", "Done", "project record", ["P01"], "REPO_REVIEW.md and git history.  Project record, not a legal source."),
+                row("REQ-06", "Verify every row against official sources", "Done; validation script re-checks", "project record", ["P01"], "SOURCES.md, VERIFICATION.md, data/validation_report.json.  Enforcement of the rule itself is a project fact, not a legal source."),
+                row("REQ-07", "Provide links for manual review", "Every substantive row carries official links; project-process rows link the repository record", "project record", ["P01"], "Official source(s) column.  Project record, not a legal source."),
+                row("REQ-08", "Flag irregularities", FLAG_INVENTORY, "project record", ["P02"], "Flagged for Review page.  Project record, not a legal source."),
+                row("REQ-09", "No hallucinations / no inferred values", "Blank cells for unverified values", "project record", ["P01"], "Validation enforces blank + flag.  Project record, not a legal source."),
+                row("REQ-10", "Personal information top priority", "Placeholders only; raw identifiers internal-only", "project record", ["P01"], "Privacy scan in validation.  Project record, not a legal source."),
+                row("REQ-11", "Anonymize all personal information", "Tenant A-F placeholders", "project record", ["P01"], "No real names, initials, contact details or exact address.  Project record, not a legal source."),
+                row("REQ-12", "Keep dates and amounts same", "Preserved", "project record", ["P01"], "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.  Project record, not a legal source."),
+                row("REQ-13", "Clean landing page + category subpages", "Published", "project record", ["P02"], "index.html and pages/.  Project record, not a legal source."),
+                row("REQ-14", "Simple dashboard UI", "Published", "project record", ["P02"], "Cards and status badges.  Project record, not a legal source."),
+                row("REQ-15", "All entries/findings in easy-read tables", "Published", "project record", ["P02"], "Tables on every subpage.  Project record, not a legal source."),
+                row("REQ-16", "Analysis / findings", "Published", "project record", ["P02"], "Analysis & Findings page; its rows carry official law sources.  Project record, not a legal source."),
+                row("REQ-17", "Clearly labeled Flagged for Review page with source links", "Published", "project record", ["P02"], "pages/flagged.html.  Project record, not a legal source."),
+                row("REQ-18", "Verified source-linked tables", "Published", "project record", ["P02"], "Sources page.  Project record, not a legal source."),
+                row("REQ-19", "PR from integration branch to main", "", "needs review", ["P01"], "Project record. Prior PRs were merged (see COORDINATION.md and the PR list). Value is left blank by rule: the current session's PR number and merge result cannot be stated by the build that precedes the merge; they are recorded in COORDINATION.md after merge.", "F19"),
+                row("REQ-20", "Merged PR + successful Pages deployment", "", "needs review", ["P01", "P02"], "Project record. GitHub Pages API reported status built (legacy source main /) for earlier merges. Value is left blank by rule for the same reason as REQ-19.", "F19"),
                 row("REQ-22", "Step-by-step licensing and notice process", "Published - pages/process.html with 12 numbered steps", "verified", ["S53", "S01", "S35"], "Every step carries official links."),
                 row("REQ-23", "Ordinance-level license citations", "Published - Sec. 37.3(a)(1), Sec. 37.15 and Form 571", "verified", ["S21", "S53", "S04"], "Licensing condition is in the ordinance itself."),
-                row("REQ-24", "Independent re-verification of the combined data", "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run", "verified", ["S01", "S07", "S53", "S02"], "Recorded in VERIFICATION.md and COORDINATION.md."),
+                row("REQ-24", "Independent re-verification of the combined data", "Done 2026-11-08 - official pages re-fetched, {} official sources plus {} project records, validator re-run".format(len(SOURCES) - 2, 2), "project record", ["P01"], "Recorded in VERIFICATION.md and COORDINATION.md.  Project record, not a legal source."),
                 row("REQ-21", "Conservative compliance checklist capable of tenant-lawyer review", "Published", "analysis", ["S01", "S07", "S35", "S42"], "No attorney approval or guarantee."),
             ]},
         ],
@@ -312,7 +320,7 @@ PAGES = {
                 row("REAS-01", "Annual CPI-based allowable increase", "1.6% effective 3/1/26-2/28/27", "verified", ["S01", "S02", "S04"], "Once every 12 months; license and notice."),
                 row("REAS-02", "Properly banked skipped/partial increases", "24 full months; add percentages", "verified", ["S05"], "No banked amount inferred here."),
                 row("REAS-03", "Capital improvement petition", "Petition before notice; not base rent; discontinue after amortization", "verified", ["S09", "S12"], "Hardship application available."),
-                row("REAS-04", "Operating & maintenance petition", "Up to 7% additional base rent; two-year comparison", "verified", ["S09", "S11"], "Petition before notice."),
+                row("REAS-04", "Operating & maintenance petition", "Up to 7% additional base rent when expenses rose more than the allowable increase; two-consecutive-year or 24-month comparison; petition before notice", "verified", ["S09", "S11"], "For units in properties with six or more residential units the total is capped at 7% in any five-year period."),
                 row("REAS-05", "Comparable-rent special circumstances", "Extraordinary circumstances; mere long-standing below-market rent is NOT enough", "verified", ["S09", "S10"], "One-time tenancy reset; petition before notice."),
                 row("REAS-06", "Utility passthrough", "Dollar-for-dollar; petition/worksheet before notice; 12 months", "verified", ["S09", "S13"], "Not base rent."),
                 row("REAS-07", "Section 1.21 no tenant in occupancy", "Petition before notice; otherwise void", "verified", ["S09", "S14"], "Not applicable if any qualifying tenant resides."),
@@ -330,8 +338,8 @@ PAGES = {
                 row("CORP-01", "Independence Realty Trust Q4 2025", "Same-store new leases -3.7%; renewal 2.9%; blended 0.8%; occupancy 95.4%; retention 61.4%", "verified", ["S48"], "Multifamily REIT; not SF-specific."),
                 row("CORP-02", "Independence Realty Trust Q3 2025", "Same-store new leases -3.5%; renewal 2.6%; blended 0.1%", "verified", ["S48"], "Not SF-specific."),
                 row("CORP-03", "IRT 2025 value-add", "2,003 renovations; average $251/month increase over unrenovated comparables", "verified", ["S48"], "Not SF-specific."),
-                row("CORP-04", "Invitation Homes 2025 total portfolio", "Renewal +4.6%; new -0.8%", "verified", ["S49"], "Single-family rental REIT; not SF-specific."),
-                row("CORP-05", "Invitation Homes 2024 total portfolio", "Renewal +4.9%; new +1.0%", "verified", ["S49"], "Not SF-specific."),
+                row("CORP-04", "Invitation Homes 2025 total portfolio renewal / new-lease rates", "", "needs review", ["S49"], "Single-family rental REIT; not SF-specific. Left blank in the 2026-11-08 pass: the 10-K is an 81-chunk document and the specific renewal/new-lease percentages were not located in a targeted read this session, so the earlier figure is not carried forward without re-checking. See flag F38.", "F38"),
+                row("CORP-05", "Invitation Homes 2024 total portfolio renewal / new-lease rates", "", "needs review", ["S49"], "Left blank for the same reason as CORP-04; not re-verified on 2026-11-08. See flag F38.", "F38"),
                 row("CORP-06", "All large corporations generalization", "", "needs review", ["S48", "S49"], "No official source proves what all large corporations do.", "F23"),
             ]},
         ],
@@ -374,7 +382,7 @@ PAGES = {
         "sections": [
             {"title": "Questions and answers", "columns": ["Question", "Answer", "Status", "Official source(s)", "Notes / flag"], "rows": [
                 row("Q-01", "What are reasonable/normal rental increases under local, state and federal law?", "Local 1.6% for covered units; state-only AB 1482 8.8% does not replace SF limits; no official general federal private-rent cap found. HUD FMR is not a cap.", "verified", ["S01", "S27", "S43", "S44"], "Federal cap blank and flagged."),
-                row("Q-02", "How do big real estate corporations handle increases?", "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.", "verified", ["S48", "S49"], "Portfolio-level, not SF-specific; no generalization."),
+                row("Q-02", "How do big real estate corporations handle increases?", "Public REITs report lease-over-lease rates in SEC filings. Verified example: Independence Realty Trust Q4 2025 same-store renewal leases +2.9%, new leases -3.7%, blended +0.8%. The second REIT example is blank pending re-verification (flag F38). No public source proves what all corporations do, and these are portfolio-level US figures, not SF limits.", "verified", ["S48"], "Portfolio-level, not SF-specific; no generalization."),
                 row("Q-03", "How do individual SF property owners handle increases?", "Official rules require the annual allowable increase, license, 12-month timing and notice; June 2024 Rent Board workload shows 23 landlord petitions/154 units.", "verified", ["S01", "S07", "S29"], "Narrow formal-petition evidence only."),
                 row("Q-04", "What is the correct tenant-notice method?", "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; license first; 827 delivery rules.", "verified", ["S01", "S05", "S35", "S07"], "Conservative checklist capable of lawyer review."),
                 row("Q-05", "What are reasonable reasons for increases?", "Annual CPI-based allowable increase, properly banked skipped/partial increases, and Rent Board-approved petition/worksheet passthroughs; not extra rent merely because a roommate moved in.", "verified", ["S01", "S05", "S09", "S10", "S18"], "Mere long tenure below market is not extraordinary."),
@@ -416,7 +424,7 @@ PAGES = {
                 row("AN-12", "Individual figures", "June 2024 workload is narrow formal-petition evidence", "verified", ["S29"], "No generalization."),
                 row("AN-13", "Tenant-lawyer review", "Checklist capable of review; no approval claimed", "analysis", ["S23", "S24", "S25", "S30", "S31"], "TRC is eviction-focused."),
                 row("AN-14", "Conservative compliance checklist", "At most ordinary 1.6% annual allowable increase (or less) on each eligible unit, identical written neutral policy, license, notice, dates, calculations, recordkeeping", "analysis", ["S01", "S07", "S35", "S42"], "No guarantee of no complaint/lawsuit."),
-                row("AN-15", "Flagged items do not block", "All 38 flags published with source links", "verified", ["S01", "S43"], "Needs review does not block merge."),
+                row("AN-15", "Flagged items do not block", "All {} flagged items are published on the Flagged for Review page with their source links".format(len(FLAGS)), "project record", ["P02"], "Needs review status does not block merge.  Project record, not a legal source."),
                 row("AN-25", "What a tenant-side reviewer would test", "1) current license on the effective date, 2) correct rate for that date, 3) 12 months since the last increase, 4) base rent only and no rounding up, 5) notice contents, lead time and delivery, 6) no extra charge for an added roommate, 7) no retaliation or bad-faith harassment", "analysis", ["S01", "S05", "S07", "S35", "S17", "S22"], "Each item is checkable against the official pages linked here; passing them is not a certification of lawfulness."),
                 row("AN-16", "The license is a precondition, not paperwork", "An increase noticed while the unit is unlicensed may be null and void or unenforceable with refund exposure, and the Rent Board issues noncompliance notices; its January 2026 minutes record more than 23,000 licenses", "verified", ["S08", "S53", "S28"], "Checks should look at the effective date, not today's status."),
                 row("AN-17", "Individual owners are not exempt", "The requirement follows rent-controlled status; there is no owner-size exemption, and buildings under 10 units have reported since March 1, 2023", "verified", ["S07", "S53", "S08"], "Direct answer to the owner's question."),

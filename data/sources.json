@@ -1,5 +1,23 @@
 [
   {
+    "id": "P01",
+    "kind": "project",
+    "agency": "This repository (GitHub)",
+    "title": "Repository history, pull requests, CI runs and Pages deployments",
+    "url": "https://github.com/kanlerxz87-cyber/RentincreaseSF4",
+    "category": "Project record",
+    "statement": "Primary record of this project: commits, pull requests and merged commit hashes, GitHub Actions validation runs, and GitHub Pages deployments. Not a legal source."
+  },
+  {
+    "id": "P02",
+    "kind": "project",
+    "agency": "This repository (GitHub Pages)",
+    "title": "Published site",
+    "url": "https://kanlerxz87-cyber.github.io/RentincreaseSF4/",
+    "category": "Project record",
+    "statement": "The published static site generated from this repository (GitHub Pages legacy source: main /). Used only to verify that the published pages exist and render. Not a legal source."
+  },
+  {
     "id": "S01",
     "agency": "SF Rent Board",
     "title": "Learn about rent increases in San Francisco",
@@ -83,9 +101,9 @@
     "id": "S11",
     "agency": "SF Rent Board",
     "title": "Operating and Maintenance Expense Petitions",
-    "url": "https://sf.gov/information/topic-no-322-operating-and-maintenance-expense-petitions",
+    "url": "https://www.sf.gov/information--operating-and-maintenance-expense-petitions",
     "category": "Local",
-    "statement": "Additional base-rent increase up to 7%; two-year comparison; petition before notice."
+    "statement": "Additional base-rent increase of up to 7% when O&M expenses rose more than the annual allowable increase; two consecutive calendar years or a 24-month comparison; petition must be filed before the rent-increase notice or the notice is void; a landlord is limited to a total O&M increase of 7% in any five-year period for a unit in a property with six or more residential units. Re-verified 2026-11-08 (the older topic-no-322 URL redirects here)."
   },
   {
     "id": "S12",
