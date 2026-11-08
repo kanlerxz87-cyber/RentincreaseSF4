@@ -20,6 +20,7 @@ function arg(name, fallback) {
 }
 const site = path.resolve(arg('--site', '.'));
 const base = arg('--url', 'http://127.0.0.1:8000').replace(/\/$/, '');
+const basePath = new URL(base).pathname.replace(/\/$/, '');
 const out = path.resolve(arg('--out', '.arena/n08-qa/results'));
 await fs.mkdir(out, {recursive: true});
 const files = ['index.html'];
@@ -47,8 +48,8 @@ const external = new Set();
 function classify(href, file) {
   if (!href || href.startsWith(('mailto:')) || href.startsWith('tel:') || href.startsWith('javascript:')) return;
   const u = new URL(href, `${base}/${file}`);
-  if (u.origin !== base) { external.add(u.href); return; }
-  const rel = decodeURIComponent(u.pathname.replace(/^\//, '')) || 'index.html';
+  if (u.origin !== new URL(base).origin || !u.pathname.startsWith(`${basePath}/`)) { external.add(u.href); return; }
+  const rel = decodeURIComponent(u.pathname.slice(basePath.length).replace(/^\//, '')) || 'index.html';
   const key = `${rel}${u.hash}`;
   if (!internal.has(key)) internal.set(key, {file: rel, fragment: u.hash.slice(1), from: []});
   internal.get(key).from.push(file);
@@ -142,13 +143,15 @@ try {
     if (!ok) report.errors.push(`Broken internal link: ${key}`);
   }
   report.externalLinkCount = external.size;
+  const blockingErrors = report.internalLinks.filter(l => !l.ok).length + report.files.reduce((n, f) => n + f.viewports.filter(v => v.httpStatus !== 200 || v.documentOverflow).length, 0);
   report.summary = {
     htmlFiles: report.files.length,
     viewportChecks: report.files.reduce((n, f) => n + f.viewports.length, 0),
     internalLinkTargets: report.internalLinks.length,
     brokenInternalLinks: report.internalLinks.filter(l => !l.ok).length,
     axeViolationInstances: report.files.reduce((n, f) => n + f.viewports.reduce((m, v) => m + v.violations.reduce((k, v) => k + v.nodes.length, 0), 0), 0),
-    errors: report.errors.length
+    reviewFindings: report.errors.length,
+    blockingErrors
   };
 } finally {
   await browser.close();

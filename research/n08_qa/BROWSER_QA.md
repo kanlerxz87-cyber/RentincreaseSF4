@@ -32,3 +32,12 @@ These are requests, not edits to another session's files:
 From this directory, run `npm ci`, then run `node browser_qa.mjs --site /path/to/public-site --url http://127.0.0.1:8000 --out /path/to/results`. Serve only public files; never serve the repository's `.git` directory or private intake. The included Chromium package supplies its browser binary and the small bundled NSS/NSPR library set, so no system package installation is needed. Run `python privacy_check.py` from the repository root or this directory for the count-only privacy check.
 
 No raw tenant identifiers are included in the test fixtures, browser report, screenshots, scripts or findings. Screenshots were used for visual review in scratch space and are not required deliverables.
+
+
+## Follow-up on integrated main and tested proposal
+
+After PR #15/#17 landed, the same read-only test was run on `main` at `fcc7d6b`: 20 HTML files, 40 viewport loads, 40 internal targets, 0 broken links, 0 document overflow, but 84 Axe node instances (82 color-only links and 2 mobile case-table scroll regions). See [main browser report](main-fcc7d6b-browser-report.json). The shared owner had not yet adopted the N08 requests at that snapshot.
+
+A proposed patch was then tested only in an isolated copy: [PATCH_PROOF.md](PATCH_PROOF.md), [patch](proposed_integration.patch), [after-browser report](proposed-fixes-browser-report.json). It reduced automated Axe violations to **0** while retaining 108 passing repository checks, 40 HTTP-200 loads, 40 internal targets and 0 broken links. The patch also tightens the retaliation and license-timing wording. It has **not** been applied to shared files by N08; the active integration owner must apply/reconcile, rebuild, merge and verify deployment.
+
+A direct browser request from this sandbox to github.io was blocked by the outbound-network policy (`ERR_CONNECTION_CLOSED`). Live deployment was instead confirmed through the GitHub Pages API and successful `fetch_page` reads of the deployed index and executive summary; browser measurements above are explicitly local snapshots, not live-browser measurements.

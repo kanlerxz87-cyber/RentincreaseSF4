@@ -1,0 +1,81 @@
+--- a/scripts/build_site.py
++++ b/scripts/build_site.py
+@@ -47,9 +47,9 @@
+ 
+ def render_table(section, in_pages=True):
+     cols = section["columns"]
+-    out = ['<div class="tablewrap"><table><thead><tr>']
++    out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} — scrollable table"><table><thead><tr>'.format(e(section["title"]))]
+     for c in cols:
+-        out.append("<th>{}</th>".format(e(c)))
++        out.append("<th scope=\"col\">{}</th>".format(e(c)))
+     out.append("</tr></thead><tbody>")
+     for r in section["rows"]:
+         value = r.get("value", "")
+--- a/scripts/site_text.py
++++ b/scripts/site_text.py
+@@ -29,7 +29,7 @@
+ 
+ **Two separate obligations - do not conflate them (flag F33).** The *Rent Increase License* is produced by Housing Inventory reporting and there is **no charge** for it. The *Rent Board Fee* is a **separate** per-unit annual payment: **$59.00 per dwelling unit for 2026-2027**, due **March 1, 2027**, with a 5% late penalty added after March 1, April 1 and May 1 (maximum 15%) and referral to the Bureau of Delinquent Revenue after June 1. The exemption window closes **Monday, December 14, 2026**, an exemption must be requested **every year**, and vacant units do not qualify. SF.gov states expressly that *"requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements"*, and the 2027 informational notice states the reverse - so you can pay the fee and still have no license, or be licensed and still owe the fee. If the fee is paid in full you may recover **50% ($29.50 per dwelling unit)** from tenants in occupancy on November 1, by deducting it from the annual security-deposit interest payment (4.2% for 3/1/26-2/28/27) or by a compliant direct bill - show it as a fee recovery, never as part of the rent increase. City business registration is a **third, separate** question: an individual whose only rental income is from one residential structure of fewer than four units is not required to register *by reason of that fact alone*. (https://www.sf.gov/rent-board-fee, https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant, https://sftreasurer.org/information-lessors-residential-real-estate) The full fee tables, calendar and case arithmetic are on the **Rent Board Fee** page (`pages/fee.html`).
+ 
+-**Before you serve any notice, check the retaliation clock (state-law risk, see State Law rows ST-13 to ST-15).** Independently of the Rent Ordinance, Civil Code section 1942.5 bars a rent increase for **180 days** after a tenant who is not in default has requested repairs, given a tenantability notice, or complained to an agency, and separately bars increases that retaliate for tenant organizing or for exercising lawful rights. Remedies include actual damages, **$100-$2,000 punitive damages per retaliatory act**, and the prevailing party's attorney's fees. (https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV)
++**Before you serve any notice, check the retaliation rules (state-law risk, see State Law rows ST-13 to ST-15).** Civil Code section 1942.5(a) bars a rent increase or service reduction within **180 days** of the latest applicable enumerated tenantability event (including a good-faith tenantability notice or oral repair complaint to the landlord, bed-bug notice, qualifying recorded agency complaint, related inspection/citation, proceeding or adverse decision), where the tenant is not in default in rent. That subdivision may not be invoked more than once in any 12-month period. Subdivision (d) separately bars retaliation for lawful tenant organizing or exercise of legal rights. Subdivision (g) preserves action for lawful cause where the notice or pleading states the good-faith ground, subject to proof if controverted. Remedies include actual damages; punitive damages of **$100-$2,000 per retaliatory act only where fraud, oppression or malice is shown**; and, in an action for damages for retaliatory eviction, reasonable attorney's fees to the prevailing party if requested upon initiation. This is a risk check, not a safe harbor to invent a reason. (https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV)
+ 
+ **Your two-unit 1940 building - why coverage is likely but still unconfirmed.** SF.gov: many units built on or before June 13, 1979 have both rent control and eviction protection. A single-family dwelling with a **legal** in-law unit is a **two-unit building** and is **not** exempt; with an **illegal** in-law unit it is also a two-unit building and is not exempt **unless both units are rented together as a single tenancy**; and a single-family dwelling is not exempt if another residential structure is on the same lot. (This sentence was corrected on 2026-11-08 after a line-by-line comparison with the page - flag F36.) Conversely, AB 1482 exempts a two-unit structure only if the owner occupied one unit as a principal residence **at the beginning of the tenancy and continues in occupancy**, and neither unit is an ADU/JADU - a fact you did not supply, so no exemption is asserted (flags F34, F35). Two separately rented units in a pre-1979 building is the paradigm covered case, but confirm the lot and year in the Property Information Map before you rely on it. (https://www.sf.gov/learn-about-san-francisco-rental-laws, https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins, https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV)
+ 
+@@ -118,7 +118,7 @@
+ :root{--ink:#14213d;--muted:#5b6b84;--bg:#f5f7fb;--card:#fff;--line:#dce3ef;--accent:#0b6e4f;--accent2:#1f4e79;--warn:#9a6700;--warnbg:#fff8e1;--okbg:#eaf6ef;--flagbg:#fff1f1;--flag:#a12424;--owner:#5b4b8a;--ownerbg:#f1eefc}
+ *{box-sizing:border-box}
+ body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+-a{color:var(--accent2);text-decoration:none}
++a{color:var(--accent2);text-decoration:underline;text-underline-offset:.15em}
+ a:hover{text-decoration:underline}
+ header{background:linear-gradient(135deg,#0b2545,#134e4a);color:#fff;padding:2.2rem 1rem}
+ header .wrap{max-width:1120px;margin:0 auto}
+@@ -126,7 +126,7 @@
+ header p{margin:.2rem 0;color:#dbeafe}
+ nav{background:#0b2545;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.15)}
+ nav .wrap{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:.15rem;padding:.45rem 1rem}
+-nav a{color:#e8eef8;font-size:.86rem;padding:.35rem .55rem;border-radius:6px}
++nav a{color:#e8eef8;font-size:.86rem;padding:.35rem .55rem;border-radius:6px;text-decoration:none}
+ nav a:hover,nav a.active{background:rgba(255,255,255,.14);text-decoration:none}
+ main{max-width:1120px;margin:0 auto;padding:1.5rem 1rem 3rem}
+ .hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem;margin-bottom:1.4rem;box-shadow:0 2px 10px rgba(15,35,70,.05)}
+@@ -141,6 +141,7 @@
+ section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:1.2rem 0;overflow:hidden}
+ section>h2{margin:0 0 .8rem;font-size:1.2rem}
+ .tablewrap{overflow-x:auto}
++.tablewrap:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+ table{width:100%;border-collapse:collapse;font-size:.9rem}
+ th,td{text-align:left;vertical-align:top;padding:.65rem .6rem;border-bottom:1px solid var(--line)}
+ th{background:#eef3fa;color:#253b5b;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}
+@@ -170,5 +171,5 @@
+ .narrative li{margin:.35rem 0}
+ .narrative a{word-break:break-word}
+ .narrative>h2:first-child{margin-top:0}
+-@media(max-width:700px){header h1{font-size:1.55rem}nav .wrap{padding:.35rem .5rem}main{padding:1rem .6rem 2rem}th,td{padding:.5rem .45rem}}
++@media(max-width:700px){nav{position:static}header h1{font-size:1.55rem}nav .wrap{padding:.35rem .5rem}main{padding:1rem .6rem 2rem}th,td{padding:.5rem .45rem}}
+ """
+--- a/scripts/site_pages.py
++++ b/scripts/site_pages.py
+@@ -22,7 +22,7 @@
+                 row("LIC-02", "Small buildings (1-9 units) timing", "Requirement effective July 1, 2022; March 1, 2023 for condominiums and buildings with 1-9 residential units", "verified", ["S01", "S07"], "A small individual-owned building is therefore covered now (2026)."),
+                 row("LIC-03", "Step 1 - Report to the Rent Board (Housing Inventory)", "All owners of residential property are required to report through the Rent Board Portal; reporting is free, online 24/7, due March 1 every year", "verified", ["S07"], "This reporting is how you 'inform the Rent Board'. Information submitted is public; submit under penalty of perjury."),
+                 row("LIC-04", "Step 2 - License is generated", "Property owners who report a unit as tenant-occupied receive a rent increase license; it is automatically generated for non-owner-occupied units", "verified", ["S07"], "The license does not need to be included with the rent increase notice to tenants."),
+-                row("LIC-05", "Step 3 - License must be current BEFORE the increase takes effect", "A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect; a notice is not enforceable without a license on the effective date", "verified", ["S07", "S01"], "Order matters: Housing Inventory report -> license on file -> then serve tenant notice -> effective date. See flag F25 on consequence wording."),
++                row("LIC-05", "Step 3 - License must be current BEFORE the increase takes effect", "A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect; a notice is not enforceable without a license on the effective date", "verified", ["S07", "S01"], "Legal test: the license must be current on the effective date. Recommended conservative order: report -> confirm license -> serve notice -> effective date. See flag F25 on consequence wording."),
+                 row("LIC-06", "Late reporting", "You can still submit and receive a license after the March 1 deadline; the Rent Board does not assess monetary penalties for late filing - but the increase notice is not enforceable without a license on the effective date", "verified", ["S07"], "Late filing does not cure a notice whose effective date passed without a license; get legal advice on any already-served notice."),
+                 row("LIC-07", "Step 4 - Only then notify tenants", "30-day written notice (90-day if >10% alone/combined in same year; +5 days if mailed) stating dollar amount, percentage and effective date, using the rate in effect on the increase date", "verified", ["S01", "S05", "S35"], "License first, tenant notice second. License alone does not satisfy state/local notice law; you must still comply with all other rent increase laws."),
+                 row("LIC-08", "Can tenants check?", "Tenants can search the Rent Board Portal to see if their landlord is up to date with their rent increase license; if you miss the deadline the Rent Board may notify tenants you are not in compliance", "verified", ["S07", "S08"], "Assume tenants and free tenant-side legal services can and will check this before paying an increase."),
+@@ -232,9 +232,9 @@
+                 row("ST-10", "FEHA retaliation", "Dominant-purpose retaliation/harassment/eviction barred", "verified", ["S38"], "Source-of-income and aggregate-income rules."),
+                 row("ST-11", "Exemption notices", "Required written notice for single-family/condo exemption; REIT/corporate/LLC limits", "verified", ["S27"], "AB 1482 notice language."),
+                 row("ST-12", "Damages", "Injunctive relief, excess rent, attorney fees, up to treble for willful/oppressive/fraud/malice", "verified", ["S27", "S36"], "State court enforcement; Rent Board cannot enforce state law."),
+-                row("ST-13", "Retaliation - 180-day bar", "Where the tenant is not in default and has requested repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent or reduce services within 180 days of that act", "verified", ["S57"], "Separate from any Rent Board question; timing here is unverified."),
++                row("ST-13", "Retaliation - 180-day bar", "Where the tenant is not in default in rent, rent/service changes are barred within 180 days of the latest applicable enumerated tenantability event: good-faith notice/oral complaint to the landlord, bed-bug notice, qualifying recorded agency complaint, related inspection/citation, proceeding or adverse decision", "verified", ["S57"], "Subdivision (a) may not be invoked more than once in 12 months. Subdivision (d) separately bars retaliation for organizing/lawful rights; (g) preserves lawful cause stated in good faith in the notice/pleading, subject to proof. Case timing is unverified."),
+                 row("ST-14", "Retaliation - organizing and lawful rights", "Increasing rent to retaliate because a tenant organized or participated in a tenants' association, or lawfully exercised rights, is unlawful", "verified", ["S57"], "The tenant bears the burden of producing evidence under this subdivision."),
+-                row("ST-15", "Retaliation remedies", "Actual damages; punitive damages of $100-$2,000 per retaliatory act where there is fraud, oppression or malice; the court awards reasonable attorney's fees to the prevailing party on request", "verified", ["S57"], "In addition to any other statutory or decisional remedy."),
++                row("ST-15", "Retaliation remedies", "Actual damages; $100-$2,000 punitive damages per retaliatory act only where fraud, oppression or malice is shown; in an action for damages for retaliatory eviction, reasonable attorney's fees to the prevailing party if requested upon initiation", "verified", ["S57"], "Civil Code 1942.5(h)-(j); other statutory/decisional remedies are preserved. Not an automatic fee award for every rent-increase dispute."),
+                 row("ST-16", "AB 1482 two-unit owner-occupied exemption", "Exempt only for a two-unit structure in a single building where the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU", "verified", ["S58", "S27"], "Owner occupancy of a unit here was not supplied; no exemption asserted (F34)."),
+                 row("ST-17", "AB 1482 separate-parcel exemption conditions", "Requires written tenant notice in the statutory form AND that the owner is not a REIT, a corporation, or an LLC with at least one corporate member", "verified", ["S58", "S27"], "An individual owner can meet the owner test, but the notice is still required."),
+             ]},
