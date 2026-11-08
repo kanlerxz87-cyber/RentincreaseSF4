@@ -458,6 +458,11 @@
       "detail": "P01, P02"
     },
     {
+      "name": "no unrendered template placeholders in the markdown deliverables",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "no broken internal links",
       "ok": true,
       "detail": ""
@@ -526,7 +531,7 @@
     "rows_verified": 268,
     "needs_review_rows": 35,
     "flags": 48,
-    "checks": 103,
+    "checks": 104,
     "errors": 0
   }
 }

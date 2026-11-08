@@ -284,6 +284,11 @@ def main():
               for sid in D.PROJECT_SOURCES),
           ", ".join(sorted(D.PROJECT_SOURCES)))
 
+    placeholder_hits = [str(p_.relative_to(ROOT)) for p_ in
+                        [ROOT / "EXECUTIVE_SUMMARY.md", ROOT / "FLAGGED_FOR_REVIEW.md", ROOT / "README.md"]
+                        if "{{" in p_.read_text(encoding="utf-8")]
+    check("no unrendered template placeholders in the markdown deliverables", not placeholder_hits, "; ".join(placeholder_hits))
+
     broken = []
     for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
         parser = LinkParser()

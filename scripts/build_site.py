@@ -308,12 +308,20 @@ def main():
     write(PAGES / "flagged.html", flagged_page_html())
     write(ROOT / "index.html", index_html())
 
-    write(ROOT / "EXECUTIVE_SUMMARY.md", D.EXECUTIVE_SUMMARY_TEXT)
     numeric_flags = [f["id"] for f in D.FLAGS if f["id"].startswith("F") and f["id"][1:].isdigit()]
-    flagged_md = (D.FLAGGED_TEXT
-                  .replace("{{FLAG_COUNT}}", str(len(D.FLAGS)))
-                  .replace("{{FLAG_RANGE}}", "{} numeric flags F01 to F{}".format(len(numeric_flags), numeric_flags[-1][1:])))
-    write(ROOT / "FLAGGED_FOR_REVIEW.md", flagged_md)
+    substitutions = {
+        "{{FLAG_COUNT}}": str(len(D.FLAGS)),
+        "{{FLAG_RANGE}}": "{} numeric flags F01 to F{}".format(
+            len(numeric_flags), numeric_flags[-1][1:]),
+        "{{OFFICIAL_COUNT}}": str(len(D.OFFICIAL_SOURCES)),
+        "{{PROJECT_COUNT}}": str(len(D.PROJECT_SOURCES)),
+    }
+    def fill(text):
+        for key, value in substitutions.items():
+            text = text.replace(key, value)
+        return text
+    write(ROOT / "EXECUTIVE_SUMMARY.md", fill(D.EXECUTIVE_SUMMARY_TEXT))
+    write(ROOT / "FLAGGED_FOR_REVIEW.md", fill(D.FLAGGED_TEXT))
     write(ROOT / "README.md", D.README_TEXT)
     print("Built {} data files, {} page HTML files, index.html, assets/site.css, .nojekyll and 3 markdown deliverables.".format(
         len(list(DATA.glob("*.json"))), len(list(PAGES.glob("*.html")))
