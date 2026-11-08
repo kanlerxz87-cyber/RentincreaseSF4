@@ -219,7 +219,8 @@ def main():
                     if re.search(r"\b[A-Z]{1,2}\s[A-Z]{1,2}\b", x.read_text(encoding="utf-8"))]
     check("no raw initials in anonymized case files", not initial_hits, "; ".join(initial_hits[:3]))
 
-    all_text = "\n".join(p.read_text(encoding="utf-8") for p in public_files)
+    content_files = [p for p in public_files if p.suffix not in {".py", ".mjs", ".patch", ".log"}]
+    all_text = "\n".join(p.read_text(encoding="utf-8") for p in content_files)
     check("conservative compliance checklist wording present", "conservative compliance checklist capable of tenant-lawyer review" in all_text.lower())
     check("no attorney approval or guarantee claimed", "No attorney approval or guarantee" in all_text or "No attorney has approved" in all_text)
     forbidden = ["approved by a tenant lawyer", "this increase is certified lawful", "guaranteed no lawsuit", "attorney approved this increase", "we certify this increase is lawful"]

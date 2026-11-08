@@ -1,0 +1,2886 @@
+{
+  "checkedAt": "2026-11-08T22:51:08.007Z",
+  "site": null,
+  "base": "http://127.0.0.1:8001",
+  "files": [
+    {
+      "file": "index.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Rental increase SF | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 3,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Rental increase SF | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 3,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/analysis.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Analysis & Findings | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Analysis & Findings | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/calculations.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Illustrative Calculations | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 4,
+          "scopedHeaders": 0,
+          "headerCount": 20,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Illustrative Calculations | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 4,
+          "scopedHeaders": 0,
+          "headerCount": 20,
+          "scrollingTables": 4,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/case.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Anonymized Case Facts | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 3,
+          "scopedHeaders": 0,
+          "headerCount": 15,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Anonymized Case Facts | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 3,
+          "scopedHeaders": 0,
+          "headerCount": 15,
+          "scrollingTables": 3,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            },
+            {
+              "id": "scrollable-region-focusable",
+              "impact": "serious",
+              "help": "Scrollable region must have keyboard access",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/scrollable-region-focusable?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "section:nth-child(2) > .tablewrap"
+                  ],
+                  "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+                },
+                {
+                  "target": [
+                    "section:nth-child(3) > .tablewrap"
+                  ],
+                  "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": [
+          {
+            "tag": "DIV",
+            "text": "ItemOwner-supplied valueStatusSourceNotes / flagLocationCASE-01Outer S",
+            "top": -708.90625,
+            "bottom": 1552.015625,
+            "navBottom": 254.140625,
+            "inNav": false,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "tag": "DIV",
+            "text": "ItemOwner-supplied valueStatusSourceNotes / flagTenant AMAP-1Original ",
+            "top": -23.5,
+            "bottom": 867.03125,
+            "navBottom": 254.140625,
+            "inNav": false,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ]
+      }
+    },
+    {
+      "file": "pages/compliance.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Correct Tenant-Notice Method | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Correct Tenant-Notice Method | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/corporate.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "How Large Real Estate Corporations Handle Increases | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "How Large Real Estate Corporations Handle Increases | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/federal.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Federal Law | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Federal Law | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/fee.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Rent Board Fee & Other Registrations | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 6,
+          "scopedHeaders": 0,
+          "headerCount": 30,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Rent Board Fee & Other Registrations | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 6,
+          "scopedHeaders": 0,
+          "headerCount": 30,
+          "scrollingTables": 6,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/flagged.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Flagged for Review | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 0,
+          "scopedHeaders": 0,
+          "headerCount": 0,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Flagged for Review | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 0,
+          "scopedHeaders": 0,
+          "headerCount": 0,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/individual.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "How Individual SF Property Owners Handle Increases | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "How Individual SF Property Owners Handle Increases | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/local.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Local Law - San Francisco | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Local Law - San Francisco | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/market.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Market Context - HUD FMR / SAFMR | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 2,
+          "scopedHeaders": 0,
+          "headerCount": 10,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Market Context - HUD FMR / SAFMR | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 2,
+          "scopedHeaders": 0,
+          "headerCount": 10,
+          "scrollingTables": 2,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/process.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Step-by-Step: Rent Board License and Notice | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 3,
+          "scopedHeaders": 0,
+          "headerCount": 15,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Step-by-Step: Rent Board License and Notice | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 3,
+          "scopedHeaders": 0,
+          "headerCount": 15,
+          "scrollingTables": 3,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/questions.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "All User Questions Answered | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "All User Questions Answered | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/rates.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Official Allowable Increase Rates | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 2,
+          "scopedHeaders": 0,
+          "headerCount": 10,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Official Allowable Increase Rates | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 2,
+          "scopedHeaders": 0,
+          "headerCount": 10,
+          "scrollingTables": 2,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/reasons.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Reasonable Reasons for an Increase | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Reasonable Reasons for an Increase | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/requirements.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Full Requirements List | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Full Requirements List | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/sources.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Sources | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Sources | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/state.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "State Law - California | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "State Law - California | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 1,
+          "scopedHeaders": 0,
+          "headerCount": 5,
+          "scrollingTables": 1,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    },
+    {
+      "file": "pages/summary.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "httpStatus": 200,
+          "title": "Executive Summary | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 1440,
+          "viewportWidth": 1440,
+          "navHeight": 117.703125,
+          "tableCount": 2,
+          "scopedHeaders": 0,
+          "headerCount": 10,
+          "scrollingTables": 0,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"portal.sfrb.org/\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(7) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(1)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(7) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "li:nth-child(1) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "ul > li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "li:nth-child(3) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(10) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(10)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(11)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(12)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(11) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(8)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(9)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(12) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(10)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(13) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(13) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(28) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(28) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(30) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(1)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(30) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(30) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    ".small > a[href$=\"EXECUTIVE_SUMMARY.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "httpStatus": 200,
+          "title": "Executive Summary | Rental increase SF",
+          "h1Count": 1,
+          "mainCount": 1,
+          "lang": "en",
+          "viewportMeta": true,
+          "documentWidth": 390,
+          "viewportWidth": 390,
+          "navHeight": 254.140625,
+          "tableCount": 2,
+          "scopedHeaders": 0,
+          "headerCount": 10,
+          "scrollingTables": 2,
+          "focusableScrollingTables": 0,
+          "duplicateIds": [],
+          "documentOverflow": false,
+          "violations": [
+            {
+              "id": "link-in-text-block",
+              "impact": "serious",
+              "help": "Links must be distinguishable without relying on color",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+              "nodes": [
+                {
+                  "target": [
+                    "a[href$=\"portal.sfrb.org/\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(7) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(1)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(7) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "li:nth-child(1) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "ul > li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "li:nth-child(3) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(10) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(10)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(11)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(12)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(11) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(8)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(9)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(12) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(10)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(13) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(13) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(28) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(28) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(30) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(1)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(30) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "p:nth-child(30) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.84:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #14213d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    ".small > a[href$=\"EXECUTIVE_SUMMARY.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                },
+                {
+                  "target": [
+                    "a[href$=\"FOLLOWUP_AUDIT.md\"]"
+                  ],
+                  "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.6:1 with the surrounding text. (Minimum contrast is 3:1, link text: #1f4e79, surrounding text: #5b6b84)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboard": {
+        "tabs": 30,
+        "concealedByStickyNav": []
+      }
+    }
+  ],
+  "internalLinks": [
+    {
+      "file": "index.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/summary.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/process.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/fee.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/requirements.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/rates.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/local.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/state.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/federal.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/case.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/calculations.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/compliance.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/reasons.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/corporate.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/individual.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/market.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/questions.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/analysis.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/sources.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "SOURCES.md",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "VERIFICATION.md",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "EXECUTIVE_SUMMARY.md",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "FLAGGED_FOR_REVIEW.md",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "data/validation_report.json",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "FOLLOWUP_AUDIT.md",
+      "fragment": "",
+      "from": [
+        "index.html",
+        "pages/analysis.html",
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/compliance.html",
+        "pages/corporate.html",
+        "pages/federal.html",
+        "pages/fee.html",
+        "pages/flagged.html",
+        "pages/individual.html",
+        "pages/local.html",
+        "pages/market.html",
+        "pages/process.html",
+        "pages/questions.html",
+        "pages/rates.html",
+        "pages/reasons.html",
+        "pages/requirements.html",
+        "pages/sources.html",
+        "pages/state.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": null,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F22",
+      "from": [
+        "pages/analysis.html",
+        "pages/federal.html",
+        "pages/questions.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "T03-F05",
+      "from": [
+        "pages/calculations.html",
+        "pages/case.html",
+        "pages/process.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F30",
+      "from": [
+        "pages/calculations.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "T03-F03",
+      "from": [
+        "pages/case.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "T03-F04",
+      "from": [
+        "pages/case.html",
+        "pages/questions.html",
+        "pages/reasons.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F28",
+      "from": [
+        "pages/case.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F23",
+      "from": [
+        "pages/corporate.html",
+        "pages/individual.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "T03-F07",
+      "from": [
+        "pages/federal.html",
+        "pages/market.html",
+        "pages/summary.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F43",
+      "from": [
+        "pages/fee.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F42",
+      "from": [
+        "pages/fee.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F27",
+      "from": [
+        "pages/process.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "T03-F08",
+      "from": [
+        "pages/questions.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F06",
+      "from": [
+        "pages/rates.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    },
+    {
+      "file": "pages/flagged.html",
+      "fragment": "F19",
+      "from": [
+        "pages/requirements.html"
+      ],
+      "status": 200,
+      "fragmentFound": true,
+      "ok": true
+    }
+  ],
+  "errors": [
+    "index.html: 1 axe rules [link-in-text-block]",
+    "index.html: 1 axe rules [link-in-text-block]",
+    "pages/analysis.html: 1 axe rules [link-in-text-block]",
+    "pages/analysis.html: 1 axe rules [link-in-text-block]",
+    "pages/calculations.html: 1 axe rules [link-in-text-block]",
+    "pages/calculations.html: 1 axe rules [link-in-text-block]",
+    "pages/case.html: 1 axe rules [link-in-text-block]",
+    "pages/case.html: 2 axe rules [link-in-text-block, scrollable-region-focusable]",
+    "pages/compliance.html: 1 axe rules [link-in-text-block]",
+    "pages/compliance.html: 1 axe rules [link-in-text-block]",
+    "pages/corporate.html: 1 axe rules [link-in-text-block]",
+    "pages/corporate.html: 1 axe rules [link-in-text-block]",
+    "pages/federal.html: 1 axe rules [link-in-text-block]",
+    "pages/federal.html: 1 axe rules [link-in-text-block]",
+    "pages/fee.html: 1 axe rules [link-in-text-block]",
+    "pages/fee.html: 1 axe rules [link-in-text-block]",
+    "pages/flagged.html: 1 axe rules [link-in-text-block]",
+    "pages/flagged.html: 1 axe rules [link-in-text-block]",
+    "pages/individual.html: 1 axe rules [link-in-text-block]",
+    "pages/individual.html: 1 axe rules [link-in-text-block]",
+    "pages/local.html: 1 axe rules [link-in-text-block]",
+    "pages/local.html: 1 axe rules [link-in-text-block]",
+    "pages/market.html: 1 axe rules [link-in-text-block]",
+    "pages/market.html: 1 axe rules [link-in-text-block]",
+    "pages/process.html: 1 axe rules [link-in-text-block]",
+    "pages/process.html: 1 axe rules [link-in-text-block]",
+    "pages/questions.html: 1 axe rules [link-in-text-block]",
+    "pages/questions.html: 1 axe rules [link-in-text-block]",
+    "pages/rates.html: 1 axe rules [link-in-text-block]",
+    "pages/rates.html: 1 axe rules [link-in-text-block]",
+    "pages/reasons.html: 1 axe rules [link-in-text-block]",
+    "pages/reasons.html: 1 axe rules [link-in-text-block]",
+    "pages/requirements.html: 1 axe rules [link-in-text-block]",
+    "pages/requirements.html: 1 axe rules [link-in-text-block]",
+    "pages/sources.html: 1 axe rules [link-in-text-block]",
+    "pages/sources.html: 1 axe rules [link-in-text-block]",
+    "pages/state.html: 1 axe rules [link-in-text-block]",
+    "pages/state.html: 1 axe rules [link-in-text-block]",
+    "pages/summary.html: 1 axe rules [link-in-text-block]",
+    "pages/summary.html: 1 axe rules [link-in-text-block]"
+  ],
+  "notes": [
+    "Read-only test; no site files changed.",
+    "Axe automated WCAG 2 A/AA and 2.1 A/AA rules only; not a complete accessibility conformance assessment.",
+    "External source content is verified separately against official sources; this test checks links, not legal truth.",
+    "No raw identifier values are recorded."
+  ],
+  "externalLinkCount": 69,
+  "summary": {
+    "htmlFiles": 20,
+    "viewportChecks": 40,
+    "internalLinkTargets": 40,
+    "brokenInternalLinks": 0,
+    "axeViolationInstances": 84,
+    "reviewFindings": 40,
+    "blockingErrors": 0
+  }
+}

@@ -52,3 +52,20 @@ This T03 research copy is historical. The current public flag registry is `scrip
 - T03-F02 and current F44 disclose that current-tree anonymization does **not** remediate earlier public Git history/PR exposure. F26 remains the historical Unit 1 §6.14 notice-history flag; privacy history is F44.
 - Current additions after the main F01–F44 registry are F45 fixed-term lease authority, F46 no proposed effective date, F47 HUD policy/eCFR tension, F48 duplicate source URL, and F49 static self-deploy limitation. Case fee/registration facts are main F43; privacy history is main F44.
 - Low-entropy privacy fingerprints were moved out of public scripts into gitignored `internal/`; this is current-tree hygiene, not history remediation.
+## T09 additions (2026-11-08, session `arena-abb34cd1`)
+
+| ID | Flag | Detail | Source / record |
+| --- | --- | --- | --- |
+| F31 | Fee-page collection timing differs inside one SF.gov page | Summary and Sec. 37A.4 say referral after June 1; the same page's timeline says a July Notice of Delinquent Payment then 30 days | S56, S58 |
+| F32 | No official statement links fee payment to a rent increase's validity | Absence finding across S56, S57, S58 and Sec. 37.15; the license turns on the reporting obligation | S53, S56, S57, S58 |
+| F33 | Case fee billing/exemption/unit-count facts unverified | No Annual Notice, exemption status or portal data; $118.00 / $59.00 / $17.70 are conditional arithmetic | S56, S59, S60 |
+| F34 | Form 573 covers 7/1999-6/2026 and is titled 25-26 | 2026-27 amount comes from the SF.gov fee page, not the form | S56, S59 |
+| F35 | Older fee service page still shows 2023 dates | "March 1, 2023" / "June 1, 2023" on `sf.gov/pay-your-rent-board-fee` | S56, S60 |
+| F36 | Raw identifier tokens remain reachable in public git history | Commits from the 2026-11-06 report to the fix, PR diffs #1/#2/#4/#5/#9, two branch tips; agents cannot rewrite history | `research/privacy/HISTORY_EXPOSURE.md` |
+| F37 | Published merge-conflict markers | Three marker lines were committed in `COORDINATION.md` at `d63dee4`; repaired, validator hardened | `COORDINATION.md` |
+| F38 | Project-deliverable rows cite repository artifacts, not official sources | No government source can confirm a website build or a PR; labelled `project record` | `pages/requirements.html` |
+
+
+## Final current-registry note (I12, 2026-11-08)
+
+The historical T09 flag labels above are preserved as research records. The current public registry is `data/flags.json` / `pages/flagged.html`: F01–F49 plus T03-F01–T03-F10. Current meanings: F31 conflict markers, F32 source cross-references, F33 fee/license distinction, F34 two-unit exemption, F35 in-law coverage, F36 in-law wording QA, F37 project citations QA, F38 fee referral timing, F39 stale fee service page, F40 Form 573 history, F41 no official fee/license validity link, F42 co-tenant fee split, F43 case fee facts, F44 privacy history, F45 fixed-term lease, F46 effective date, F47 HUD/eCFR tension, F48 duplicate source URL, F49 static self-deploy limit.
