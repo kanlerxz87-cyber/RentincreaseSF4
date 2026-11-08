@@ -291,3 +291,5 @@ Claim scope note: this session edits only the files listed above. Shared table d
 ### I12 handoff / conflict resolution (2026-11-08)
 
 Took over stale T08 under the 60-minute rule and merged PR #14 commit `07eb1b42` into the fixed current branch, preserving its source additions S56–S61, flags F31–F35, new legal rows, narrative renderer and checks. The shallow checkout initially lacked a common ancestor; deepened fetch history (no branch changes), then merged. Only COORDINATION.md conflicted. Kept both the current claim and all T08/prior-session records, removed inherited and merge marker lines without deleting substantive content. T08 publication is superseded by I12-P; its research is not discarded. D16 findings will be integrated after fresh checks.
+
+- Push safeguard: a plain `git pull --rebase` attempted to flatten the preserved T08 merge and replay its commits, conflicting in this file. Immediately aborted without discarding either side; repeated with `--rebase=merges`, which retained the reconciled merge ancestry, then pushed. Future integration pushes use merge-preserving rebase.
