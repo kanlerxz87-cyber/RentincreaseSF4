@@ -307,6 +307,23 @@ Claim scope note: this session edits only the files listed above. Shared table d
 
 **PR, merge and deployment result.** Recorded in the follow-up entry below once the PR is opened, merged and the Pages build is verified, so this file states results rather than predictions.
 
+### PR #15 merge, Pages deployment and completion record — session `arena-18eafb4c`, 2026-11-08
+
+| Item | Result | Evidence |
+| --- | --- | --- |
+| PR #15 (fee page, T08 takeover, QA corrections, privacy flag) | `MERGED` 2026-11-08T22:47:29Z, merge commit `8f8edb20cd4dc3c80454e49dff3f5c35e7835e40` | `gh pr merge 15 --merge`; `gh pr view 15`; PR state `MERGED` |
+| CI on PR #15 | `validate` passed (6s) | `gh pr checks 15` |
+| GitHub Pages deployment of `8f8edb2` | `status: built`, commit `8f8edb2`, created 2026-11-08T22:47:30Z | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Live verification | `index.html` shows 70 official sources, 54 flagged items, the new Rent Board Fee card and both CTAs; `pages/fee.html` is live with the fee tables, the $59.00 amount, the March 1 deadline and the December 14, 2026 exemption window | cache-busted fetch of the deployed HTML |
+| PR #14 (abandoned T08 branch) | `MERGED` — GitHub reports it merged because its commits are now in `main` through PR #15; nothing was discarded | `gh pr view 14` |
+| Local gate | **108 checks, 0 errors** | `python3 scripts/validate_site.py`; `data/validation_report.json` |
+
+**Task status.** T08-takeover, D16-B and D16-C are `done`. Open items are unchanged in kind and are published on the Flagged for Review page: F27 (3/1/27-2/28/28 rate not yet published), F28 (Unit 1 §6.14 notice history), F43 (case fee/exemption/business-registration facts), F44 (owner-only git-history remediation) and the earlier unverified case facts.
+
+**Handoff notes.** (1) Edit `scripts/site_*.py` and rebuild; never hand-edit `pages/*.html` or `data/*.json`. (2) Every source/flag total is computed at build time - do not type one. (3) The validator now fails on committed conflict markers, unresolved `{{...}}` placeholders, stale totals, unpublished flag references and missing fee/retaliation/coverage content. (4) `git pull --rebase` conflicts on this repository's merge commits; fetch and fast-forward instead. (5) Do not add the raw tenant identifiers to any file, commit message, issue or PR text.
+
+This file records results, including the deploy status of the commit that carries it: that status is read back from the Pages API immediately after the merge and reported in the session summary, and can be re-checked at any time at `api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`.
+
 ## Session 2026-11-08 — `arena-abb34cd1` (T09): independent QA, duplicate-work reconciliation, PR + merge
 
 | ID | Task | Status | Owner | File scope | Sources / verification | Irregularities / flags |
