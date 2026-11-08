@@ -445,54 +445,118 @@
     "title": "The Rent Board Fee",
     "url": "https://www.sf.gov/rent-board-fee",
     "category": "Local",
-    "statement": "Every owner of a residential dwelling unit or guest unit pays a per-unit fee unless a current exemption is on file; 2026-2027 tax year $59.00 per dwelling unit and $29.50 per guest unit; due March 1 each year; 5% penalty each month after March 1 up to 15%; unpaid fees referred to the Bureau of Delinquent Revenue after June 1; exemption-request deadline for the 2027 fee is December 14, 2026; reporting into the Housing Inventory does not satisfy a fee-exemption request. Re-fetched 2026-11-08."
+    "statement": "Separate from the Rent Increase License: every residential dwelling unit owner must pay a per-unit Rent Board Fee unless exempt. 2026-2027: $59.00 per dwelling unit, $29.50 per guest unit. Due March 1 each year; 5% monthly late penalty to a 15% maximum; unpaid balances referred to the Bureau of Delinquent Revenue after June 1. If the fee is paid in full, 50% ($29.50 per dwelling unit) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered. 'Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements.' Re-verified 2026-11-07."
   },
   {
     "id": "S57",
-    "agency": "SF Rent Board",
-    "title": "Recover part of your Rent Board fee from the tenant",
-    "url": "https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant",
-    "category": "Local",
-    "statement": "An owner who has paid the fee in full may collect 50% (excluding penalties) from tenants residing in the unit on or before November 1 of the year before the fee became due; by deducting it from security-deposit interest or, only if there is no or insufficient deposit or interest is already paid annually, by direct bill stating the amount, that the purpose is to fund the Rent Board and that it is due within 30 days; fees may be banked; non-payment is not a just cause for eviction and is collected in Small Claims Court. Re-fetched 2026-11-08."
+    "agency": "California Civil Code",
+    "title": "CIV 1942.5 (retaliation)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV",
+    "category": "State",
+    "statement": "If the lessee is not in default and has exercised repair/tenantability rights or complained to an agency, the lessor may not increase the rent (or decrease services) within 180 days of the triggering act; separate bar on retaliating for tenant organizing or exercising lawful rights; remedy is actual damages plus punitive damages of $100-$2,000 per retaliatory act for fraud/oppression/malice, and the court awards attorney's fees to the prevailing party if requested. Operative October 1, 2021. Re-verified 2026-11-07."
   },
   {
     "id": "S58",
-    "agency": "SF Admin Code",
-    "title": "Chapter 37A Rent Stabilization and Arbitration Fee (PDF)",
-    "url": "https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf",
-    "category": "Local",
-    "statement": "Sec. 37A.1 applies the fee to all residential units, including units exempt from the rent-increase limits under Costa-Hawkins, with narrow exemptions (37A.1(a)-(f)) including an owner-occupied unit not rented at any time with an affidavit on file; Sec. 37A.4 requires payment by March 1 with 5% penalties at March 1, April 1 and May 1 and referral to the Bureau of Delinquent Revenue after June 1; Sec. 37A.6 sets the 50% recovery cap, deduction/billing method, banking and continued owner liability. Re-fetched 2026-11-08."
+    "agency": "California Civil Code",
+    "title": "CIV 1947.12 (AB 1482) - two-unit exemption text",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV",
+    "category": "State",
+    "statement": "The state rent cap does not apply to a property with two separate dwelling units in a single structure where the owner occupied one unit as the principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU or JADU. Exemption for separately alienable property requires the owner notice and that the owner is not a REIT, corporation, or an LLC with at least one corporate member. Verified from the statute text 2026-11-07."
   },
   {
     "id": "S59",
     "agency": "SF Rent Board",
-    "title": "Form 573 Rent Board Fee History 25-26",
-    "url": "https://www.sf.gov/documents/29484/573_Rent_Board_Fee_History_25-26_8.26.pdf",
+    "title": "Partial Exemption for Newly Constructed Rental Units",
+    "url": "https://www.sf.gov/information--partial-exemption-newly-constructed-rental-units",
     "category": "Local",
-    "statement": "Fee history 7/1999-6/2026 in table form; $59.00 per unit and $29.50 tenant share for each tax year 7/21-6/22 through 7/25-6/26 (the newest row); no 7/26-6/27 row yet. Re-fetched 2026-11-08."
+    "statement": "Units whose first Certificate of Occupancy issued after June 13, 1979 are exempt from the rent increase limitations only; they keep just-cause eviction protection and the annual Rent Board fee is collected for them. The exemption needs both a post-June-13-1979 first Certificate of Occupancy and no residential use before it. Re-verified 2026-11-07."
   },
   {
     "id": "S60",
     "agency": "SF Rent Board",
-    "title": "Notification of Rent Board Fee and Housing Inventory Requirements (2027 Informational Notice)",
-    "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement",
+    "title": "Partial Exemption for Certain Single-Family Homes and Condominiums Under Costa-Hawkins",
+    "url": "https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins",
     "category": "Local",
-    "statement": "2027 assessment notice: no payment required at this time; exemption request deadline Monday, December 14, 2026; an exemption request is required every year; requesting a fee exemption does not satisfy Housing Inventory reporting and inventory reporting does not satisfy a fee-exemption request; Housing Inventory report due March 1, 2027; 'Some rent increases given without a license will be null and void.' Re-fetched 2026-11-08."
+    "statement": "As of January 1, 1999, single-family homes and condominiums are generally exempt from the rent increase limitations (but not just cause) only if the tenancy commenced on or after January 1, 1996; a tenancy that commenced before that date stays fully covered. A single-family dwelling with a LEGAL in-law unit constitutes a two-unit building and is not exempt. A single-family dwelling with an ILLEGAL in-law unit also constitutes a two-unit building and is not exempt UNLESS both units are rented together as a single tenancy. A single-family dwelling is not exempt if another residential structure is on the same lot. Exempt units still owe the annual Rent Board fee. Wording corrected 2026-11-08 after line-by-line comparison with the page (see flag F36)."
   },
   {
     "id": "S61",
-    "agency": "SF Treasurer & Tax Collector",
-    "title": "Register a Business",
-    "url": "https://sftreasurer.org/business/register-business",
+    "agency": "SF Rent Board",
+    "title": "Evictions in San Francisco",
+    "url": "https://www.sf.gov/evictions-san-francisco",
     "category": "Local",
-    "statement": "Business registration is required generally for persons engaging in business in San Francisco, but 'you do not need to register if your only business is the receipt of rental income in connection with the operation of ... One residential structure consisting of fewer than four units'. Re-fetched 2026-11-08."
+    "statement": "Eviction requires just cause under the Rent Ordinance; the Rent Ordinance generally allows tenants to replace departing roommates and to increase the number of occupants even when a written lease prohibits it; free legal help through the Eviction Defense Collaborative (415-659-9184) on receipt of an unlawful detainer; the 17 just-cause reasons are listed separately. Re-verified 2026-11-07."
   },
   {
     "id": "S62",
+    "agency": "SF Rent Board",
+    "title": "Recover part of your Rent Board fee from the tenant",
+    "url": "https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant",
+    "category": "Local",
+    "statement": "A landlord who has paid the Rent Board fee in full may collect 50% (excluding late penalties) from the tenant(s) residing in the unit, and only if the tenant resided there on or before November 1 of the year before the fee became due. Recovery is by deducting the amount from the annual security-deposit interest payment, or by billing directly only where there is no or insufficient deposit held or the landlord already pays interest annually. The bill must state the fee amount for each year, any deposit interest owed, that the purpose is to fund the Rent Board, and that the fee is due within 30 days. Unrecovered fees may be banked. A tenant's failure to pay is not a just cause for eviction; collection is through Small Claims Court. Re-verified 2026-11-08."
+  },
+  {
+    "id": "S63",
+    "agency": "SF Admin Code",
+    "title": "Chapter 37A Rent Stabilization and Arbitration Fee (official PDF)",
+    "url": "https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf",
+    "category": "Local",
+    "statement": "Sec. 37A.1 makes the chapter apply to all residential units, including units exempt from the Chapter 37 rent-increase limits under Costa-Hawkins or Sec. 37.3(d). Sec. 37A.4: fees are due March 1, with 5% added if unpaid by March 1, a further 5% if unpaid by April 1, and a further 5% if unpaid by May 1; referrals to the Bureau of Delinquent Revenue after June 1. Sec. 37A.6: recovery limited to 50% of the annual fee, exclusive of penalties, from tenants in occupancy on November 1, by deposit-interest deduction or a compliant direct bill, may be banked for fees due after July 25, 1999, and the owner remains liable for the full fee whether or not recovery is sought. Re-verified 2026-11-08."
+  },
+  {
+    "id": "S64",
+    "agency": "SF Rent Board",
+    "title": "Form 573 Rent Board Fee History 25-26 (official PDF)",
+    "url": "https://media.api.sf.gov/documents/573_Rent_Board_Fee_History_25-26_8.26.pdf",
+    "category": "Local",
+    "statement": "Fee history table: $59.00 per unit and $29.50 tenant share for each tax year 7/21-6/22 through 7/25-6/26 (the newest row). Earlier rows are $50.00 (7/19-6/21), $45.00, $40.00, $37.00, $36.00, $29.00, $26.00, $22.00, $20.00, $27.00, $19.00 and $16.00. States that owners pay per dwelling unit unless a current exemption is approved, that recovery is 50% by deducting from security-deposit interest, and that the tenant must have been in occupancy on November 1 of the tax year. Title says 25-26 and has no 2026-2027 row (see flag F40). Re-verified 2026-11-08."
+  },
+  {
+    "id": "S65",
+    "agency": "SF Rent Board",
+    "title": "Notification of Rent Board Fee and Housing Inventory Requirements (2027 Informational Notice)",
+    "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement",
+    "category": "Local",
+    "statement": "2027 informational notice: no payment is required at this time; the assessment is the basis for the Annual Fee Notice mailed in January 2027; vacant units are subject to the fee and do not qualify for an exemption; an exemption request must be submitted every year by Monday, December 14, 2026; requesting a fee exemption does not satisfy Housing Inventory reporting; Housing Inventory reporting is due March 1, 2027 and annually; landlords will not receive a rent increase license until reporting is complete; occupants of unreported units may receive a noncompliance notice; some increases given without a license will be null and void. Re-verified 2026-11-08."
+  },
+  {
+    "id": "S66",
     "agency": "SF Treasurer & Tax Collector",
     "title": "Information for Lessors of Residential Real Estate",
     "url": "https://sftreasurer.org/information-lessors-residential-real-estate",
     "category": "Local",
-    "statement": "A person receiving rental income from one residential structure of fewer than four units is not, by reason of that fact alone, required to obtain a business registration certificate; a lessor is treated as a separate person for each individual building; the Tax Collector determines what is a separate building and the number of units; Gross Receipts Tax filing not required below 4 units in a building. Re-fetched 2026-11-08."
+    "statement": "A person receiving rental income from one residential structure consisting of fewer than four units (or one residential condominium) is not, by reason of that fact alone, required to obtain a business registration certificate; other business activity or payroll may require one. For the Gross Receipts Tax and Business Registration Fee a lessor is treated as a separate person for each individual building, and the Tax Collector decides what constitutes a separate building and the number of units. A lessor must file a return unless leasing fewer than 4 units in any individual building, and is exempt from the Gross Receipts Tax if leasing fewer than 4 units in any individual building. Re-verified 2026-11-08."
+  },
+  {
+    "id": "S67",
+    "agency": "SF Rent Board",
+    "title": "Security Deposits (interest rate and AB 12 deposit cap)",
+    "url": "https://www.sf.gov/reports--security-deposits",
+    "category": "Local",
+    "statement": "The security-deposit interest rate for March 1, 2026 through February 28, 2027 is 4.2%; interest is owed annually on the tenant's annual due date for deposits held over one year and may not be compounded. AB 12 caps a dwelling-unit deposit at one month's rent for deposits collected on or after July 1, 2024, with an exception allowing two months' rent where the owner is a natural person (or an LLC whose members are all natural persons) and owns no more than 2 residential rental properties totalling no more than 4 dwelling units offered for rent. Re-verified 2026-11-08."
+  },
+  {
+    "id": "S68",
+    "agency": "Project record",
+    "title": "Public GitHub repository for this research site",
+    "url": "https://github.com/kanlerxz87-cyber/RentincreaseSF4",
+    "category": "Project",
+    "statement": "The repository itself is the authoritative record for project-management rows (published files, data/*.json, validation report, pull requests). It is not a government source and is labelled as the project record, not legal authority."
+  },
+  {
+    "id": "S69",
+    "agency": "Project record",
+    "title": "GitHub Pages build status API (deployment record)",
+    "url": "https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest",
+    "category": "Project",
+    "statement": "GitHub's own API endpoint that returns the status of the latest GitHub Pages build for this repository (status, commit and creation time). Used only for deployment claims; not a government source."
+  },
+  {
+    "id": "S70",
+    "agency": "SF Rent Board",
+    "title": "Pay your Rent Board fee (older service page - stale dates)",
+    "url": "https://www.sf.gov/pay-your-rent-board-fee",
+    "category": "Local",
+    "statement": "Older service page that still refers to 2023 deadlines (for example 'if the fee is not paid in full by March 1, 2023'). It is listed only so a reader who finds it can compare it with the current sf.gov/rent-board-fee page; no amount or deadline on this site is taken from it (flag F39). Checked 2026-11-08."
   }
 ]

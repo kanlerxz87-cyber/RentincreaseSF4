@@ -1,28 +1,38 @@
-# T09 — QA and integration of the D16 outputs (session `arena-abb34cd1`, 2026-11-08)
+# T09 — Independent second-pair-of-eyes QA after the D16 integration (session `arena-abb34cd1`, 2026-11-08)
 
-Scope: take over the stale D16-B (QA) and D16-C (integration) claims, integrate the Rent Board Fee research and the privacy-history finding into the published site, repair the inherited defects, re-verify every changed row against a freshly fetched official page, and publish through a PR to `main`.
+## What happened (honest account of duplicate work)
 
-## Inherited QA findings and their disposition
+This session claimed T09 at 2026-11-08 UTC after finding the D16-B/D16-C claims stale on `main` (`d63dee4`). It then independently built a Rent Board Fee integration of its own (sources S56–S62, flags F31–F38, a 26-row fee page, a `project record` row status, dynamic counts and a validator conflict-marker check).
 
-| # | Finding (inherited from D16-B) | Where it was | Fix | Verified by |
-| --- | --- | --- | --- | --- |
-| Q1 | Flag count stale: "38 flags" while the registry held 40 | `REQ-08`, `AN-15` | Both now compute `len(FLAGS)` at build time (`scripts/site_pages.py`) | Validator check "dashboard flag count matches the flag registry" |
-| Q2 | Source count stale: "All 52 official sources" while the registry held 55 | `pages/sources.html` header (`scripts/build_site.py`) | Header and the landing-page quick-navigation description now compute `len(D.SOURCES)` | Validator check "Sources page header count is generated, not hardcoded" |
-| Q3 | "30 source-quality flags F01-F30" was stale and mis-described the later flags | `FLAGGED_FOR_REVIEW.md` (`scripts/site_text.py`) | Rewritten: total computed, flags grouped F01-F24, F25-F38, T03-F01-F10, plus "what the owner must still do" | Rebuild diff; `FLAGGED_FOR_REVIEW.md` |
-| Q4 | Rows about the project's own deliverables cited S43 (HUD Fair Market Rents) as their official source | `REQ-01/02/04/06/08/13/14/19/20`, `AN-15` | New `project record` status: no official source IDs, a repository-artifact link instead, labelled on the page and disclosed as F38 | Validator rejects a project row that carries official source IDs |
-| Q5 | Rent Board Fee research merged into the repo but absent from the site | `research/rent_board_fee/README.md` on `main` | New `pages/fee.html` with 26 source-linked rows, new nav entry, new dashboard card, new executive-summary section, sources S56-S62 | Every value re-fetched 2026-11-08 (`VERIFICATION.md` R25-R31) |
-| Q6 | Privacy-history finding merged into the repo but absent from the site | `research/privacy/HISTORY_EXPOSURE.md` on `main` | Published as flag F36 with the file as its repository record | File exists; flag visible on `pages/flagged.html` |
-| Q7 | Unresolved Git conflict markers were committed inside the published `COORDINATION.md` | `COORDINATION.md` at `d63dee4` | Both sides of the record kept verbatim; the three marker lines removed; validator now fails the build on any marker in a published file | Validator check "no merge-conflict markers in published files" |
+**While that work was in review, a parallel session (`arena-18eafb4c`) landed the same integration on `main` through PR #15** — a fuller fee page (28 rows, including exemptions, deposit-interest and business-registration rows), sources S56–S69 and flags F31–F44, plus its own fixes for the same inherited defects (dynamic counts, the S43 mis-citation, the committed conflict markers).
 
-## Structural verification performed
+**Resolution:** `origin/main` was merged into this branch and its implementation was kept as the single source of truth. This session's duplicate fee page, its S56–S62 numbering and its F31–F38 numbering were dropped rather than merged, so the site has one fee page, one numbering and no competing claims. Nothing from the parallel session was reverted or overwritten. What this session kept is the *independent verification* recorded below, because a second pass over the same official pages is exactly what the D16-B QA task was for.
 
-- `python3 scripts/build_site.py` then `python3 scripts/validate_site.py`: 21 data files, 19 page HTML files, 62 official sources, 48 flags, 269 table rows (23 owner-supplied, 21 project records, 46 needs-review rows). Result: **99 checks, 0 errors**.
-- Every fee row's source IDs are constrained by a validator check to the fee block (S56-S62) plus S53/S07 (business-registration-number field) and S02 (deposit-interest rate), so no fee claim can silently borrow an unrelated source.
-- Privacy: the fingerprint regression test still runs with no private intake present, and the initials scan of `data/case.json` / `pages/case.html` still passes.
+## Independent verification performed on 2026-11-08 (fresh fetches, before the merge)
 
-## Limits of this QA pass
+Every item was read directly from the official page or PDF; the published rows that depend on them are named.
 
-- This is structural and source-word verification, not legal advice and not an attorney review. No attorney has approved any increase.
-- The fee arithmetic ($118.00 / $59.00 / $17.70) is conditional on owner-supplied unit counts; the January 2027 Annual Notice does not exist yet (F33).
-- The absence finding in F32 ("no official page links fee payment to a valid increase") is an absence, not an official statement that the two are unrelated.
-- Two surfaces cannot be checked from inside a session: the deploy status of the commit that contains this very file, and the residual copies of the raw tokens outside GitHub (F36).
+| Official page | What was checked | Result against the published site |
+| --- | --- | --- |
+| [sf.gov/rent-board-fee](https://www.sf.gov/rent-board-fee) | $59.00 per dwelling unit / $29.50 per guest unit for 2026-2027; March 1 deadline; 5% per month to 15%; June 1 referral; December 14, 2026 exemption deadline; payment channels; $50 payment-failure fee; October/December/January/March-May-June-July timeline | Matches FEE-01/02/03/05/07/08/09/10/11 |
+| [sf.gov recover-part-your-rent-board-fee-tenant](https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant) | 50% cap excluding penalties; November 1 occupancy test; deposit-interest deduction vs direct bill; bill contents; banking; not a just cause for eviction; Small Claims | Matches FEE-16/17/18/19/21/22 |
+| [Admin Code Ch. 37A (PDF)](https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf) | Sec. 37A.1 scope and (a)-(f) exclusions including the owner-occupied affidavit; Sec. 37A.4 March 1 + 5% at March 1/April 1/May 1 + June 1 referral; Sec. 37A.6 50% cap, methods, banking, (d) owner remains liable | Matches FEE-06/07/08/13/14/16/17/18/19 |
+| [Form 573 (PDF)](https://www.sf.gov/documents/29484/573_Rent_Board_Fee_History_25-26_8.26.pdf) | Newest row 7/25-6/26 at $59.00 / $29.50; no 7/26-6/27 row; two oldest rows (7/01-6/02, 7/00-6/01) do not show a 50% tenant share | Matches FEE-03 and flag F40 |
+| [2027 Informational Notice](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement) | "No payment is required at this time"; annual exemption request; Monday, December 14, 2026 deadline; March 1, 2027 reporting; the two filings do not satisfy each other; "Some rent increases given without a license will be null and void." | Matches FEE-04/10 and flag F41 |
+| [sf.gov/pay-your-rent-board-fee](https://www.sf.gov/pay-your-rent-board-fee) | Still carries "March 1, 2023" and "June 1, 2023" | Confirms flag F39 |
+| [Treasurer — Register a Business](https://sftreasurer.org/business/register-business) and [lessor page](https://sftreasurer.org/information-lessors-residential-real-estate) | Fewer-than-four-units exemption, "by reason of that fact alone", per-building treatment, Tax Collector's authority to define a building | Matches FEE-23/24/25 |
+| [Civil Code 1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV) | 180-day bar on increasing rent after a repair request/complaint; organizing barred under (d); remedies (h)(1)-(2) and attorney's fees (i) | Matches ST-13/ST-14/ST-15 and CHK-14 |
+| [sf.gov security deposits](https://www.sf.gov/reports--security-deposits) | 4.2% for 3/1/26-2/28/27; annual interest on the tenant's annual due date; AB 12 one-month cap with the two-month exception for a natural person owning no more than 2 properties / 4 units | Matches FEE-20 |
+| [Rent Ordinance Sec. 37.3](https://www.sf.gov/information--sec-373-rent-limitations) | 37.3(a)(1) 60% of CPI, never more than 7%; 37.3(a)(2) banking subject to 37.15 | Matches RATE-09 and PRC-02 |
+| [AB 1482 page](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482) | 8.8% for 8/1/26-7/31/27; "This does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance"; two-unit and single-family exemption conditions | Matches ST-01, ST-16, ST-17, F34 |
+| [Sec. 37.15](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing), [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory), [Noncompliance](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory), [banked increases](https://www.sf.gov/information--banked-rent-increases), [current rates](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) | License condition, 1-9-unit March 1, 2023 start, no monetary penalty for late filing, 24-full-month banking, 1.6%/1.4%/1.7% and 4.2% rates, no 2027-28 row | Matches the license rows, RATE-01 to RATE-08, SUM-06 and flag F27 |
+
+## Result of the merged build
+
+`python3 scripts/build_site.py` then `python3 scripts/validate_site.py` on the merged tree: **108 checks, 0 errors**, 70 sources and 54 flags (F01-F44 plus T03-F01-F10), no broken internal links, no conflict markers, privacy scans passing.
+
+## Limits
+
+- Structural and wording verification only; not legal advice, and no attorney has approved any increase.
+- The fee arithmetic is conditional on owner-supplied unit counts; the January 2027 Annual Notice does not exist yet (F43).
+- No agent can verify the deploy status of the commit that contains this file, or remove the raw tokens from git history (F44).

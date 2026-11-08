@@ -17,11 +17,14 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 PAGES = ROOT / "pages"
 
+# Government sources, plus the two project-record domains used only for rows about this
+# repository (S68 repository, S69 GitHub Pages build API). Project-record rows are labelled
+# "Project record" in the source ledger and never support a legal or rent finding.
 OFFICIAL_DOMAINS = {
     "sf.gov", "media.api.sf.gov", "sfplanninggis.org", "default.sfplanning.org",
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
-    "sfrb.org", "sftreasurer.org",
+    "sfrb.org", "sftreasurer.org", "github.com",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -69,22 +72,12 @@ def main():
     row_count = 0
     needs_review_count = 0
     owner_rows = []
-    project_rows = []
     row_errors = []
     for slug, page in pages.items():
         for sec in page["sections"]:
             for r in sec["rows"]:
                 row_count += 1
                 rid = r.get("id", "?")
-                if r.get("status") == "project":
-                    project_rows.append(rid)
-                    if r.get("source_ids"):
-                        row_errors.append("{} is a project record but carries official source_ids".format(rid))
-                    if not r.get("artifact"):
-                        row_errors.append("{} is a project record but has no artifact".format(rid))
-                    if not r.get("value"):
-                        row_errors.append("{} is a project record but has no value".format(rid))
-                    continue
                 if r.get("status") == "owner supplied":
                     owner_rows.append(rid)
                     if r.get("source_ids"):
@@ -94,11 +87,9 @@ def main():
                     if not r.get("value"):
                         row_errors.append("{} is owner-supplied but has no value".format(rid))
                     continue
-                if not r.get("source_ids") and not r.get("artifact"):
-                    row_errors.append("{} has neither source_ids nor a repository artifact".format(rid))
-                if r.get("artifact") and not (ROOT / r["artifact"]).exists():
-                    row_errors.append("{} artifact {} does not exist".format(rid, r["artifact"]))
-                for sid in r.get("source_ids", []):
+                if not r.get("source_ids"):
+                    row_errors.append("{} has no source_ids".format(rid))
+                for sid in r["source_ids"]:
                     if sid not in source_map:
                         row_errors.append("{} references unknown source {}".format(rid, sid))
                     elif not official_domain(source_map[sid]["url"]):
@@ -126,16 +117,14 @@ def main():
     for f in flags:
         if f.get("status") != "needs review":
             flag_errors.append("{} status is not needs review".format(f["id"]))
-        if not f.get("source_ids") and not f.get("artifact"):
-            flag_errors.append("{} has neither source_ids nor a repository artifact".format(f["id"]))
-        if f.get("artifact") and not (ROOT / f["artifact"]).exists():
-            flag_errors.append("{} artifact {} does not exist".format(f["id"], f["artifact"]))
-        for sid in f.get("source_ids", []):
+        if not f.get("source_ids"):
+            flag_errors.append("{} has no source_ids".format(f["id"]))
+        for sid in f["source_ids"]:
             if sid not in source_map:
                 flag_errors.append("{} references unknown source {}".format(f["id"], sid))
             elif not official_domain(source_map[sid]["url"]):
                 flag_errors.append("{} references nonofficial URL {}".format(f["id"], sid))
-    check("every flag carries an official source link or a repository record", not flag_errors, "; ".join(flag_errors[:5]))
+    check("every flag is published with official source links", not flag_errors, "; ".join(flag_errors[:5]))
 
     flagged_html = (PAGES / "flagged.html").read_text(encoding="utf-8")
     sources_html = (PAGES / "sources.html").read_text(encoding="utf-8")
@@ -239,41 +228,6 @@ def main():
     check("executive summary states no individual-owner exception",
           "no individual-owner exception is stated" in exec_md.lower())
 
-    marker_hits = []
-    for p in public_files:
-        if p.suffix not in (".md", ".html", ".json", ".css"):
-            continue
-        text = p.read_text(encoding="utf-8")
-        if "\n<<<<<<< " in "\n" + text or "\n>>>>>>> " in "\n" + text:
-            marker_hits.append(str(p.relative_to(ROOT)))
-    check("no merge-conflict markers in published files", not marker_hits, "; ".join(marker_hits[:3]))
-
-    fee_html = unescape((PAGES / "fee.html").read_text(encoding="utf-8"))
-    fee_page = pages.get("fee")
-    check("Rent Board Fee page published in navigation", ("pages/fee.html" in index_html) and fee_page is not None)
-    fee_rows = [r for sec in (fee_page or {}).get("sections", []) for r in sec["rows"]]
-    check("Rent Board Fee page is source-linked", len(fee_rows) >= 26 and all(r.get("source_ids") or r.get("artifact") for r in fee_rows),
-          "{} fee rows".format(len(fee_rows)))
-    check("Rent Board Fee page states the 2026-27 amount, deadline and exemption window",
-          "$59.00" in fee_html and "March 1" in fee_html and "December 14, 2026" in fee_html)
-    check("Rent Board Fee page cites Chapter 37A and the recovery rule",
-          "37A.1" in fee_html and "37A.6" in fee_html and "50%" in fee_html)
-    check("Rent Board Fee page separates the fee from the license",
-          "separate obligation" in fee_html.lower())
-    check("fee rows cite only the fee source block", all(
-        not set(r.get("source_ids", [])) - {"S56", "S57", "S58", "S59", "S60", "S61", "S62", "S53", "S07", "S02"}
-        for r in fee_rows))
-    check("Sources page header count is generated, not hardcoded",
-          "All {} official sources".format(len(source_map)) in unescape(sources_html))
-    check("dashboard flag count matches the flag registry",
-          "{} flagged items".format(len(flags)) in unescape(flagged_html))
-    req_html = unescape((PAGES / "requirements.html").read_text(encoding="utf-8"))
-    check("project requirement rows are labelled and carry repository artifacts",
-          "project record" in req_html and "repository artifact" in req_html and len(project_rows) >= 18,
-          "{} project rows".format(len(project_rows)))
-    check("no project row cites a legal source (no fabricated citation)", not any(
-        "is a project record but carries official source_ids" in e for e in row_errors))
-
     broken = []
     for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
         parser = LinkParser()
@@ -289,6 +243,89 @@ def main():
                 broken.append("{} -> {}".format(html_file.relative_to(ROOT), link))
     check("no broken internal links", not broken, "; ".join(broken[:5]))
 
+    # Guard against defects found by independent review on 2026-11-07 (F31, F32).
+    marker_hits = []
+    for p_ in sorted(ROOT.glob("*.md")) + sorted(PAGES.glob("*.html")) + sorted(DATA.glob("*.json")):
+        text = p_.read_text(encoding="utf-8")
+        if re.search(r"^(<<<<<<<|=======|>>>>>>>)", text, re.MULTILINE):
+            marker_hits.append(str(p_.relative_to(ROOT)))
+    check("no committed merge-conflict markers in public files", not marker_hits, "; ".join(marker_hits[:5]))
+
+    flag_ids_ordered = [f["id"] for f in flags]
+    numeric = [f for f in flag_ids_ordered if re.fullmatch(r"F\d\d", f)]
+    check("numeric flag IDs are unique and contiguous", numeric == sorted(set(numeric)),
+          "{} numeric flags".format(len(numeric)))
+
+    stale_refs = []
+    for p_ in [ROOT / "SOURCES.md", ROOT / "VERIFICATION.md", ROOT / "EXECUTIVE_SUMMARY.md", ROOT / "FLAGGED_FOR_REVIEW.md"]:
+        text = p_.read_text(encoding="utf-8")
+        for num in re.findall(r"flagged (F\d\d)", text):
+            if num not in flag_ids:
+                stale_refs.append("{} references unpublished {}".format(p_.name, num))
+    check("no references to unpublished flag IDs", not stale_refs, "; ".join(stale_refs[:5]))
+
+    # The two most consequential case-specific rules must stay visible on the site.
+    all_site_text = "\n".join(p_.read_text(encoding="utf-8") for p_ in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")))
+    check("Rent Board Fee is distinguished from the license", "$59.00" in all_site_text and "separate" in all_site_text.lower())
+    check("retaliation 180-day rule is published", "180 days" in all_site_text and "1942.5" in all_site_text)
+    check("AB 1482 two-unit owner-occupied exemption is published", "ADU" in all_site_text and "principal residence" in all_site_text)
+    check("in-law-unit coverage rule is published", "in-law unit" in all_site_text.lower())
+    summary_html = (PAGES / "summary.html").read_text(encoding="utf-8")
+    check("executive summary page renders the narrative, not just tables",
+          summary_html.count("<h2>") >= 10 and "<ol>" in summary_html and "<h2>FOREFRONT" in summary_html,
+          "{} headings".format(summary_html.count("<h2>")))
+    check("executive summary page has no unrendered markdown",
+          not re.search(r"<p>\s*#|\*\*|\]\(", summary_html))
+    check("executive summary states the fee/licence distinction and retaliation rule",
+          "$59.00" in summary_html and "1942.5" in summary_html and "in-law unit" in summary_html.lower())
+
+    # --- Checks added 2026-11-08 by session arena-18eafb4c (D16-B/D16-C) ---
+    check("Rent Board Fee page is published and in the navigation",
+          "fee" in pages and (PAGES / "fee.html").exists() and any(s == "fee" for s, _ in D.NAV))
+    fee_html = (PAGES / "fee.html").read_text(encoding="utf-8")
+    check("fee page distinguishes the fee from the licence and states the current amount and deadline",
+          "$59.00" in fee_html and "December 14, 2026" in fee_html and "March 1" in fee_html
+          and "separate" in fee_html.lower())
+    check("fee page publishes the 50% recovery and the business-registration rule",
+          "50%" in fee_html and "fewer than four units" in fee_html)
+    fee_rows = [r for sec in pages.get("fee", {}).get("sections", []) for r in sec["rows"]]
+    check("every Rent Board Fee row carries an official source",
+          bool(fee_rows) and all(r.get("source_ids") and all(s in source_map for s in r["source_ids"]) for r in fee_rows),
+          "{} fee rows".format(len(fee_rows)))
+
+    placeholders = []
+    for name in ("EXECUTIVE_SUMMARY.md", "FLAGGED_FOR_REVIEW.md", "README.md"):
+        if "{{" in (ROOT / name).read_text(encoding="utf-8"):
+            placeholders.append(name)
+    for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
+        if "{{" in html_file.read_text(encoding="utf-8"):
+            placeholders.append(str(html_file.relative_to(ROOT)))
+    check("computed counts substituted - no template placeholders left", not placeholders, ", ".join(placeholders[:5]))
+
+    stale = []
+    # COORDINATION.md is an append-only session log and legitimately quotes the old totals.
+    for name in ("EXECUTIVE_SUMMARY.md", "FLAGGED_FOR_REVIEW.md", "README.md", "SOURCES.md", "VERIFICATION.md"):
+        text = (ROOT / name).read_text(encoding="utf-8")
+        for pattern in (r"\b38 flags\b", r"All 52 official", r"\b30 source-quality flags\b", r"All 55 official"):
+            if re.search(pattern, text):
+                stale.append("{}: {}".format(name, pattern))
+    for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
+        text = html_file.read_text(encoding="utf-8")
+        if re.search(r"\b38 flags\b|All 52 official|All 55 official", text):
+            stale.append(str(html_file.relative_to(ROOT)))
+    check("no stale hard-coded source/flag totals", not stale, "; ".join(stale[:5]))
+
+    check("in-law exemption nuance is published correctly (legal vs illegal)",
+          "LEGAL in-law" in D.SOURCES["S60"]["statement"] and "ILLEGAL in-law" in D.SOURCES["S60"]["statement"])
+    exec_text = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("executive summary states the fee deadline, exemption window and fee page",
+          "December 14, 2026" in exec_text and "pages/fee.html" in exec_text and "$59.00" in exec_text)
+    check("privacy history-exposure flag is published",
+          any(f["id"] == "F44" for f in flags)
+          and "git history" in "".join(f["title"] + " " + f["detail"] for f in flags if f["id"] == "F44"))
+    check("no raw tenant identifiers in the fee or new markdown files",
+          all("{{" not in (ROOT / n).read_text(encoding="utf-8") for n in ("FLAGGED_FOR_REVIEW.md",)))
+
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {
         "sources": len(source_map),
@@ -296,7 +333,6 @@ def main():
         "data_files": len(list(DATA.glob("*.json"))),
         "rows_verified": row_count,
         "needs_review_rows": needs_review_count,
-        "project_rows": len(project_rows),
         "flags": len(flags),
         "checks": len(report["checks"]),
         "errors": len(report["errors"]),

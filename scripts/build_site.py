@@ -6,6 +6,7 @@ README.md, EXECUTIVE_SUMMARY.md and FLAGGED_FOR_REVIEW.md.
 """
 
 import json
+import re
 from html import escape
 from pathlib import Path
 import site_data as D
@@ -34,8 +35,8 @@ def source_links(ids):
 def badge(status):
     if status == "owner supplied":
         return '<span class="badge owner">owner-supplied</span>'
-    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis", "project": "project"}.get(status, "analysis")
-    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis", "project": "project record"}.get(status, status)
+    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis"}.get(status, "analysis")
+    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis"}.get(status, status)
     return '<span class="badge {}">{}</span>'.format(cls, e(label))
 
 def flag_link(flag_id, in_pages):
@@ -63,10 +64,6 @@ def render_table(section, in_pages=True):
         out.append("<td>{}</td>".format(badge(r["status"])))
         if r.get("status") == "owner supplied" and r.get("source_note"):
             out.append('<td><span class="owner-src">{}</span></td>'.format(e(r["source_note"])))
-        elif r.get("artifact"):
-            prefix = "../" if in_pages else ""
-            out.append('<td><a class="artifact" href="{}{}">{}</a><br><span class="small">repository artifact</span></td>'.format(
-                prefix, e(r["artifact"]), e(r["artifact"])))
         else:
             out.append("<td>{}</td>".format(source_links(r.get("source_ids", []))))
         out.append("<td>{}</td>".format(notes))
@@ -112,6 +109,77 @@ def footer_html(in_pages):
 </html>
 """.format(disclaimer=e(D.DISCLAIMER), p=p)
 
+_URL_RE = re.compile(r"https?://[^\s)<>,]+")
+
+def _inline(text):
+    """Escape then apply the tiny subset of markdown used by the summaries."""
+    out = e(text)
+    out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
+    def link(m):
+        url = m.group(0)
+        return '<a href="{0}" target="_blank" rel="noopener">{0}</a>'.format(url)
+    return _URL_RE.sub(link, out)
+
+def md_to_html(text):
+    """Render the subset of markdown used in the executive summary text."""
+    blocks, para, items, kind = [], [], [], [None]
+
+    def flush_para():
+        if para:
+            blocks.append("<p>{}</p>".format(_inline(" ".join(para))))
+            para.clear()
+
+    def flush_items():
+        if items:
+            tag = kind[0] or "ul"
+            blocks.append("<{0}>{1}</{0}>".format(
+                tag, "".join("<li>{}</li>".format(_inline(i)) for i in items)))
+            items.clear()
+            kind[0] = None
+
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        if not line.strip():
+            flush_para(); flush_items(); continue
+        if line.startswith("# ") and not line.startswith("## "):
+            # The page header already renders the document title.
+            flush_para(); flush_items(); continue
+        if line.startswith("## "):
+            flush_para(); flush_items()
+            blocks.append("<h2>{}</h2>".format(_inline(line[3:])))
+            continue
+        m = re.match(r"^\s*\d+\.\s+(.*)$", line)
+        if m:
+            flush_para()
+            if kind[0] not in (None, "ol"):
+                flush_items()
+            kind[0] = "ol"; items.append(m.group(1)); continue
+        if line.startswith("- "):
+            flush_para()
+            if kind[0] not in (None, "ul"):
+                flush_items()
+            kind[0] = "ul"; items.append(line[2:]); continue
+        flush_items(); para.append(line.strip())
+    flush_para(); flush_items()
+    return "".join(blocks)
+
+def summary_page_with_narrative(page):
+    out = [header_html(page["title"], page["description"], "summary", True)]
+    out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
+        e(page["title"]), e(page["description"]), e(D.DISCLAIMER)))
+    out.append('<section class="narrative">{}'.format(md_to_html(counts(D.EXECUTIVE_SUMMARY_TEXT))))
+    out.append('<p class="small">The same text is available as <a href="../EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a> for manual review.</p></section>')
+    for sec in page["sections"]:
+        out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
+    out.append(footer_html(True))
+    return "".join(out)
+
+def counts(text):
+    """Substitute the computed source/flag counts so no total is ever typed by hand."""
+    return (text.replace("{{SOURCES}}", str(len(D.SOURCES)))
+                .replace("{{FLAGS}}", str(len(D.FLAGS)))
+                .replace("{{SOURCE_FLAGS}}", str(len([f for f in D.FLAGS if not f["id"].startswith("T03-")]))))
+
 def page_html(slug, page):
     out = [header_html(page["title"], page["description"], slug, True)]
     out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
@@ -147,15 +215,8 @@ def flagged_page_html():
     out.append('<section class="hero"><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
     out.append("<section><h2>All {} flagged items</h2>".format(len(D.FLAGS)))
     for f in D.FLAGS:
-        if f.get("artifact"):
-            src = '<a class="artifact" href="../{}">{}</a> <span class="small">(repository record)</span>'.format(
-                e(f["artifact"]), e(f["artifact"]))
-            if f.get("source_ids"):
-                src = src + " &middot; " + source_links(f["source_ids"])
-        else:
-            src = source_links(f.get("source_ids", []))
         out.append('<div class="flagitem" id="{}"><h3><span class="id">{}</span> &mdash; {}</h3><p>{}</p><p>{} &middot; <strong>{}</strong></p></div>'.format(
-            e(f["id"]), e(f["id"]), e(f["title"]), e(f["detail"]), src, e(f["status"])
+            e(f["id"]), e(f["id"]), e(f["title"]), e(f["detail"]), source_links(f["source_ids"]), e(f["status"])
         ))
     out.append("</section>")
     out.append(footer_html(True))
@@ -175,17 +236,15 @@ def index_html():
     out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
                '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
                '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
-               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; '
-               '<a class="cta" href="pages/fee.html">Rent Board Fee: $59 per unit, due March 1 &rarr;</a></p>'
-               '<p class="small">The Rent Board Fee is a <strong>separate</strong> annual obligation from the license: paying it does not obtain a license, and reporting into the Housing Inventory does not satisfy a fee-exemption request.</p>'
+               '<p>A second, separate Rent Board obligation also applies: the annual <strong>Rent Board Fee</strong> - <strong>$59.00 per dwelling unit for 2026-2027</strong>, due March 1, with an exemption window closing December 14, 2026. Paying it does not create a license, and a license does not pay it.</p>'
+               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; <a class="cta" href="pages/fee.html">Rent Board Fee, penalties and tenant recovery &rarr;</a></p>'
                '<div class="disclaimer">{}</div></section>'.format(
                    source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
     out.append('<section class="hero"><h2>How to read this dashboard</h2>'
                '<p>Every finding row carries a <span class="badge verified">verified</span> badge and one or more official source links (SF.gov, the Rent Ordinance, California statute, eCFR, HUD, SEC). '
                '<span class="badge analysis">analysis</span> means a reasoned conclusion drawn from those rules plus the owner-supplied facts. '
                '<span class="badge review">needs review</span> means the value could not be confirmed officially, so the cell is left blank and the item is published on the Flagged for Review page. '
-               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings. '
-               '<span class="badge project">project record</span> means the row is about this project\'s own deliverable and links the repository artifact that shows it, because no government source can confirm that a website was built or a pull request opened (flag F38).</p>'
+               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings.</p>'
                '<p class="small">Start with the Executive Summary for the answer, the Step-by-Step License page for the order of operations, the Anonymized Case for the two units, and the Flagged for Review page for anything still open.</p></section>')
     out.append('<div class="cards">')
     for label, value, slug, desc in D.CARDS:
@@ -234,14 +293,15 @@ def main():
         write(DATA / "{}.json".format(slug), json.dumps(page, indent=2, ensure_ascii=False) + "\n")
 
     for slug, page in D.PAGES.items():
-        write(PAGES / "{}.html".format(slug), page_html(slug, page))
+        html = summary_page_with_narrative(page) if slug == "summary" else page_html(slug, page)
+        write(PAGES / "{}.html".format(slug), html)
     write(PAGES / "sources.html", sources_page_html())
     write(PAGES / "flagged.html", flagged_page_html())
     write(ROOT / "index.html", index_html())
 
-    write(ROOT / "EXECUTIVE_SUMMARY.md", D.EXECUTIVE_SUMMARY_TEXT)
-    write(ROOT / "FLAGGED_FOR_REVIEW.md", D.FLAGGED_TEXT)
-    write(ROOT / "README.md", D.README_TEXT)
+    write(ROOT / "EXECUTIVE_SUMMARY.md", counts(D.EXECUTIVE_SUMMARY_TEXT))
+    write(ROOT / "FLAGGED_FOR_REVIEW.md", counts(D.FLAGGED_TEXT))
+    write(ROOT / "README.md", counts(D.README_TEXT))
     print("Built {} data files, {} page HTML files, index.html, assets/site.css, .nojekyll and 3 markdown deliverables.".format(
         len(list(DATA.glob("*.json"))), len(list(PAGES.glob("*.html")))
     ))

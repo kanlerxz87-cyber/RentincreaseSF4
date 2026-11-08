@@ -191,6 +191,66 @@
           "source_note": ""
         },
         {
+          "id": "LOC-20",
+          "label": "Rent Board Fee is separate from the license",
+          "value": "Every residential dwelling unit owner pays a per-unit fee unless exempt: 2026-2027 is $59.00 per dwelling unit, due March 1, 5% late penalty per month to a 15% maximum; a fee exemption does not satisfy Housing Inventory reporting",
+          "status": "verified",
+          "source_ids": [
+            "S56"
+          ],
+          "notes": "Two separate obligations; see flag F33.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LOC-21",
+          "label": "Recovering half the fee",
+          "value": "If the fee is paid in full, 50% ($29.50 per dwelling unit for 2026-2027) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered",
+          "status": "verified",
+          "source_ids": [
+            "S56"
+          ],
+          "notes": "Not a rent increase; identify it separately on any statement.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LOC-22",
+          "label": "Units built after June 13, 1979",
+          "value": "Exempt from the rent increase limitations only, if the first Certificate of Occupancy issued after June 13, 1979 and there was no prior residential use; just-cause eviction protection and the Rent Board fee still apply",
+          "status": "verified",
+          "source_ids": [
+            "S59"
+          ],
+          "notes": "The owner-supplied 1940 year would fall before the cutoff if confirmed.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LOC-23",
+          "label": "In-law unit or second structure on the lot",
+          "value": "A single-family dwelling with a LEGAL in-law unit is a two-unit building and is not exempt. With an ILLEGAL in-law unit it is also a two-unit building and is not exempt UNLESS both units are rented together as a single tenancy. A single-family dwelling is not exempt if another residential structure is on the same lot",
+          "status": "verified",
+          "source_ids": [
+            "S60"
+          ],
+          "notes": "Wording corrected 2026-11-08 against the page; two rented units is consistent with coverage (flags F35, F36).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LOC-24",
+          "label": "30-day update duty",
+          "value": "A change in the owner or designated manager name or business contact information must be reported within 30 days",
+          "status": "verified",
+          "source_ids": [
+            "S53"
+          ],
+          "notes": "Separate from the annual March 1 update.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
           "id": "LOC-15",
           "label": "License scope",
           "value": "License rules apply only to rent-controlled units; SF.gov says the license is not required for 6.14/Costa-Hawkins increases or petition-based passthroughs",
