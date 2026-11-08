@@ -1,8 +1,11 @@
 # COORDINATION.md — shared task board
 
-Session ID: `arena-fce57ebb-rentincreasesf4`
-Branch: `arena/fce57ebb-rentincreasesf4`
-Last updated: 2026-11-07 UTC
+Session ID (most recent update): `arena-8337b6e1-rentincreasesf4`
+Branch (most recent update): `arena/8337b6e1-rentincreasesf4`
+Last updated: 2026-11-08 UTC
+
+Prior session records are retained verbatim below; this file is append-only with respect to other
+sessions' entries. See "Session `arena-8337b6e1` — T09 final integration" near the end of this file.
 
 ## Status legend
 
@@ -262,3 +265,20 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 - **Privacy (D16-P).** `research/privacy/HISTORY_EXPOSURE.md` records that the raw tokens from the earlier validation report remain reachable in git history, in the diffs of PRs #1, #2, #4, #5 and #9, and at the tips of `arena/73f5f1a2-rentincreasesf4` and `arena/fce57ebb-rentincreasesf4`. F26 on the site does not say that; D16-C adds a flag. Agents cannot rewrite history; owner options are listed in that file. The file itself contains no raw identifier.
 - **QA findings already known to D16-B (not yet fixed on `main`, no claim on those lines by anyone but T08's scope):** `REQ-08` and `AN-15` say "38 flags" (actual 40); `pages/sources.html` header says "All 52 official sources" (actual 55; `scripts/build_site.py` line ~122); requirements rows `REQ-01/02/04/06/08/13/14/19/20` and `AN-15` cite S43 (HUD Fair Market Rents) as their "official source", which has nothing to do with a GitHub Pages / PR / flag-count requirement; `FLAGGED_FOR_REVIEW.md` says "30 source-quality flags F01-F30". If T08 is already fixing these, ignore; otherwise D16-C will after T08 finishes.
 - **Independently re-verified by D16-B on 2026-11-07 (fresh `fetch_page`, no change needed):** Admin Code §37.15(e) text; §37.3(a)(1)-(2) (60% of CPI, 7% cap, banking); SF.gov banked-increase page (24 full months; sum not compounded); Civil Code §1947.12 (a)(1), (a)(2), (d)(3); Gov. Code §12955(a), (f); 24 CFR 100.500 (eCFR current as of 11/05/2026; last amended 3/31/2023, 88 FR 19500).
+
+## Session `arena-8337b6e1` — T09 final integration (claimed 2026-11-08 UTC)
+
+Branch `arena/8337b6e1-rentincreasesf4`, created from `d63dee4` (= `main` at claim time, PR #13 merge).
+Claim taken **only** because every other claim on this board is `done` or stale: the last commit by any
+other session was 2026-11-07T20:20Z and `git ls-remote` on 2026-11-08 shows `origin` carries **only
+`main`** — every `arena/*` session branch has been deleted, and PR #14 (`arena-ea02333c`, T08) is still
+`OPEN` / `CONFLICTING` with no commits since 2026-11-07T20:20:05Z. That is > 60 minutes with no commits,
+so per the handoff rule this session takes over the outstanding D16-C integration duty and T08's open work.
+
+| ID | Task | Status | Owner | File scope (exclusive) | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T09 | Final integration: merge T08's PR #14 branch content (nothing discarded), repair the conflict markers committed on `main` in `COORDINATION.md`, integrate D16-A Rent Board Fee + D16-P git-history privacy findings into the generator scripts and published pages, clear the D16-B QA defects (stale flag/source counts, `S43` HUD-FMR citations on unrelated requirement rows, `FLAGGED_FOR_REVIEW.md` count text), re-verify the headline figures against official sources fetched fresh on 2026-11-08, rebuild, validate, PR to `main`, merge, confirm GitHub Pages | `in progress` | `arena-8337b6e1` (claimed 2026-11-08 UTC) | `COORDINATION.md`, `scripts/`, `data/`, `pages/`, `index.html`, `assets/site.css`, `README.md`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`, `REPO_REVIEW.md`, `research/` (except T08-only research dirs, which are kept as-is) | Official sources re-fetched directly on 2026-11-08 (recorded in `VERIFICATION.md`); PR #14 head fetched via `gh api`/`git fetch origin pull/14/head`; history exposure independently reproduced with `gh api .../contents/data/validation_report.json?ref=0ede010` and `?ref=a0591c3` (token printed once, in `checks[62].detail`; absent at `d63dee4`) | New flags for anything not confirmed from an official source; flagged items never block the merge |
+
+Handoff notes for other sessions: this session will **not** renumber any existing flag (F01–F35 keep their
+meanings); new flags take the next free IDs on the merged tree. T08's PR #14 commits are merged in, so its
+attribution and content survive; PR #14 itself can be closed once T09 lands.
