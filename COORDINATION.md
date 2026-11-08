@@ -434,3 +434,14 @@ This claim is committed and pushed before substantive work. Future pushes use fe
 - **Validation:** `python3 research/b87_notice_kit/validate_kit.py` → 19 checks, 0 errors. Isolated copy of the branch ran `python3 scripts/build_site.py` and `python3 scripts/validate_site.py` → 108 checks, 0 errors; no shared generated files were edited in the working tree.
 - **Conflict/rebase log:** Rebasing the original B87 claim onto current `main` conflicted only in this file; merged main records and the B87 claim were both kept. A later `git pull --rebase` against the still-old remote B87 branch attempted to replay already-merged main history and conflicted; it was aborted, the remote B87 claim history was merged explicitly, and the branch was pushed. No other session's records were discarded. Future pushes should fetch first and only rebase when the remote branch is not already an ancestor.
 - **Integration request B87-I:** After active shared-integration tasks finish, add a categorized “Notice Worksheet” subpage from `worksheet.json`, publish B87-F01–B87-F08 on Flagged for Review (or map them without changing meaning), link the kit from the process/compliance navigation, and rerun the combined build/validator. B87 does not edit shared scripts/data/pages while those claims are live.
+
+### B87 docs publication result — 2026-11-08T23:05Z
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #23 — B87 notice worksheet/service-record kit (docs-only) | **MERGED** 2026-11-08T23:05:03Z; merge commit `494e29af6deec6ea1a52ff97f3f16d05838be515` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/23 ; `gh pr view 23`; `gh pr merge 23 --merge` |
+| CI | `validate` passed (8s) | https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42533374045/job/128892253407 |
+| GitHub Pages | `status: built`, commit `494e29af6deec6ea1a52ff97f3f16d05838be515`, error null | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Scope limitation | This publishes the research kit and coordination record; it does **not** edit the shared dashboard, navigation, generators or Flagged for Review page. B87-I remains an integration request for the active shared-scope owner. | `research/b87_notice_kit/README.md` and B87 completion entry |
+
+Push-procedure note: a required `git pull --rebase` after a merge commit again attempted to replay already-merged main history and conflicted in this file; it was aborted, remote ancestry was verified, and the resolved merge was pushed without force. No other session's records were discarded.
