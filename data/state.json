@@ -160,6 +160,68 @@
           "notes": "State court enforcement; Rent Board cannot enforce state law.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "ST-13",
+          "label": "Retaliation - 180-day bar",
+          "value": "Where the tenant is not in default and has requested repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent or reduce services within 180 days of that act",
+          "status": "verified",
+          "source_ids": [
+            "S57"
+          ],
+          "notes": "Separate from any Rent Board question; timing here is unverified.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "ST-14",
+          "label": "Retaliation - organizing and lawful rights",
+          "value": "Increasing rent to retaliate because a tenant organized or participated in a tenants' association, or lawfully exercised rights, is unlawful",
+          "status": "verified",
+          "source_ids": [
+            "S57"
+          ],
+          "notes": "The tenant bears the burden of producing evidence under this subdivision.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "ST-15",
+          "label": "Retaliation remedies",
+          "value": "Actual damages; punitive damages of $100-$2,000 per retaliatory act where there is fraud, oppression or malice; the court awards reasonable attorney's fees to the prevailing party on request",
+          "status": "verified",
+          "source_ids": [
+            "S57"
+          ],
+          "notes": "In addition to any other statutory or decisional remedy.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "ST-16",
+          "label": "AB 1482 two-unit owner-occupied exemption",
+          "value": "Exempt only for a two-unit structure in a single building where the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU",
+          "status": "verified",
+          "source_ids": [
+            "S58",
+            "S27"
+          ],
+          "notes": "Owner occupancy of a unit here was not supplied; no exemption asserted (F34).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "ST-17",
+          "label": "AB 1482 separate-parcel exemption conditions",
+          "value": "Requires written tenant notice in the statutory form AND that the owner is not a REIT, a corporation, or an LLC with at least one corporate member",
+          "status": "verified",
+          "source_ids": [
+            "S58",
+            "S27"
+          ],
+          "notes": "An individual owner can meet the owner test, but the notice is still required.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

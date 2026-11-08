@@ -205,6 +205,102 @@
           "source_note": ""
         },
         {
+          "id": "Q-15",
+          "label": "Is the Rent Board Fee the same thing as the Rent Increase License?",
+          "value": "No. They are separate obligations. The license comes from Housing Inventory reporting and there is no charge for that reporting; the fee is a separate per-unit annual payment (2026-2027: $59.00 per dwelling unit, due March 1, with a 5% monthly late penalty to a 15% maximum). SF.gov states expressly that requesting a fee exemption does not satisfy Housing Inventory reporting.",
+          "status": "verified",
+          "source_ids": [
+            "S56",
+            "S07",
+            "S53"
+          ],
+          "notes": "Paying the fee is not a substitute for the license; see flag F33.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-16",
+          "label": "Can part of the Rent Board Fee be charged to the tenants?",
+          "value": "Yes, if the fee is paid in full: 50% of the fee, i.e. $29.50 per dwelling unit for 2026-2027, may be recovered from tenants in occupancy as of November 1 of the applicable tax year. Penalties may not be recovered.",
+          "status": "verified",
+          "source_ids": [
+            "S56"
+          ],
+          "notes": "This is a fee recovery, not a rent increase; keep it separately identified.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-17",
+          "label": "How long do I have to report a Housing Inventory change, and what if I already served a notice?",
+          "value": "Unit information is updated annually by March 1, and a change in the owner or manager name or business contact information must be updated within 30 days. If a notice already went out with no license on file, report first, then re-serve the notice so the effective date falls after the license is on file: a notice is unenforceable for an effective date on which no license was on file, and an unlicensed increase may be null and void.",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S07",
+            "S08"
+          ],
+          "notes": "Whether any notice has already been served here is unverified.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-18",
+          "label": "Can an increase during a repair dispute or after a complaint be retaliatory?",
+          "value": "Yes, that is a separate state-law risk. If the tenant is not in default and has asked for repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent within 180 days of that act; retaliation for tenant organizing or for exercising lawful rights is separately barred. Remedies include actual damages, punitive damages of $100-$2,000 per retaliatory act, and attorney's fees.",
+          "status": "verified",
+          "source_ids": [
+            "S57",
+            "S22",
+            "S42"
+          ],
+          "notes": "Timing versus any open habitability complaint is unverified; this is not a legal opinion.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-19",
+          "label": "Are these two units exempt from AB 1482 because the owner lives in one?",
+          "value": "Only if the owner occupied one unit as a principal residence when the tenancy began and continues in occupancy, and neither unit is an ADU/JADU. That fact was not supplied, so no exemption is asserted. Independently, AB 1482's rent cap does not apply where the unit is already under the SF Rent Ordinance limits, which are stricter.",
+          "status": "verified",
+          "source_ids": [
+            "S58",
+            "S60",
+            "S27"
+          ],
+          "notes": "Conditional; see flags F34 and F35.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-20",
+          "label": "Does an in-law unit or a second structure change whether these units are covered?",
+          "value": "It can. SF.gov states that a single-family dwelling with a legal in-law unit is a two-unit building and is not exempt, that with an illegal in-law unit it is also a two-unit building and is not exempt unless both units are rented together as a single tenancy, and that a single-family dwelling is not exempt if another residential structure is on the same lot. Two rented units is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
+          "status": "verified",
+          "source_ids": [
+            "S60",
+            "S59",
+            "S06"
+          ],
+          "notes": "Verify the lot in the Property Information Map; see flags F35 and F36.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-21",
+          "label": "Do the tenants have to keep accepting increases, or can they challenge each one?",
+          "value": "They can challenge. A tenant may file an unlawful-rent-increase petition with no filing fee and no time limit, and the matter can go to an Administrative Law Judge. Tenant-side free legal help is documented for eviction proceedings (Eviction Defense Collaborative line and Tenant Right to Counsel), not as a general pre-approval service for rent increases.",
+          "status": "verified",
+          "source_ids": [
+            "S25",
+            "S61",
+            "S30"
+          ],
+          "notes": "No official source offers approval of an increase before it is served.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
           "id": "Q-10",
           "label": "Is any increase guaranteed lawful or lawsuit-proof?",
           "value": "No. No attorney approval or guarantee of no complaint/inquiry/lawsuit is claimed.",

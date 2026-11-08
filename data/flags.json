@@ -411,5 +411,148 @@
       "S42"
     ],
     "status": "needs review"
+  },
+  {
+    "id": "F31",
+    "title": "Merge-conflict markers were committed to COORDINATION.md",
+    "detail": "main commit 1d80419 committed raw conflict markers (<<<<<<<, =======, >>>>>>>) into COORDINATION.md and the validator did not check for them. Found by an independent scan on 2026-11-07, resolved by keeping both sessions' records, and a validator check was added so it cannot recur silently.",
+    "source_ids": [
+      "S20"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F32",
+    "title": "Flag cross-references in the source ledger were out of sequence",
+    "detail": "SOURCES.md attributed the missing next-year rate to F25 and a 25-26 Form 571 link to F28; those are F27 and a separate S03 link defect. Corrected; the substantive findings are unchanged.",
+    "source_ids": [
+      "S02",
+      "S03"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F33",
+    "title": "Rent Board Fee and Rent Increase License are easy to conflate",
+    "detail": "They are separate obligations. The licence comes from Housing Inventory reporting; the fee is a per-unit annual payment (2026-2027: $59.00 per dwelling unit, due March 1). SF.gov states expressly that requesting a fee exemption does not satisfy Housing Inventory reporting, so an owner can be fee-paid and still unlicensed, or licensed and still owe the fee.",
+    "source_ids": [
+      "S56",
+      "S07",
+      "S53"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F34",
+    "title": "Two-unit owner-occupied exemption is conditional and unverified here",
+    "detail": "AB 1482 exempts a two-unit structure only if the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU. Whether the owner ever occupied a unit in this building was not supplied, so no exemption is asserted.",
+    "source_ids": [
+      "S58",
+      "S60",
+      "S59"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F35",
+    "title": "In-law or second structure on the lot changes coverage",
+    "detail": "SF.gov states that a single-family dwelling with a LEGAL in-law unit is a two-unit building and is not exempt, that with an ILLEGAL in-law unit it is also a two-unit building and is not exempt UNLESS both units are rented together as a single tenancy, and that a single-family dwelling is not exempt if another residential structure is on the same lot. The owner described two units, which is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied. Wording of this detail corrected 2026-11-08 - see F36.",
+    "source_ids": [
+      "S60",
+      "S59",
+      "S06"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F36",
+    "title": "QA correction: in-law-unit exemption wording was imprecise on this site",
+    "detail": "The site previously summarised SF.gov as saying a dwelling with a legal or illegal in-law unit is not exempt 'unless both units are rented together as a single tenancy'. The page applies that exception only to an ILLEGAL in-law unit; a LEGAL in-law unit is not exempt at all. Found by line-by-line comparison on 2026-11-08 and corrected in S60, the Local Law row LOC-23, Q-20, F35 and the executive summary. No other finding or figure changed.",
+    "source_ids": [
+      "S60"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F37",
+    "title": "QA correction: project-management rows cited an unrelated official source",
+    "detail": "Requirements rows REQ-01/02/04/06/08/13/14/19/20 and analysis row AN-15 cited S43 (HUD Fair Market Rents) as their official source, which cannot support any claim about this website, its pull requests or its flag count. Those rows now cite the project record (S68 repository, S69 GitHub Pages build API) and their hard-coded totals (a stale flag count and a stale source count) were removed in favour of counts computed at build time. No rent, rate or legal finding changed.",
+    "source_ids": [
+      "S68",
+      "S69"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F38",
+    "title": "Referral timing for an unpaid Rent Board fee differs inside the SF.gov fee page",
+    "detail": "The summary and Section 37A.4 say an unpaid fee is referred to the Bureau of Delinquent Revenue as of June 1, while the same page's timeline says outstanding bills become delinquent on June 1, a Notice of Delinquent Payment is mailed in July, and the owner then has 30 days before referral. No date is chosen on this site; confirm with the Rent Board (311) before relying on either.",
+    "source_ids": [
+      "S56",
+      "S63"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F39",
+    "title": "Older SF.gov 'Pay your Rent Board fee' service page still shows 2023 dates",
+    "detail": "The older service page still refers to March 1, 2023 and June 1, 2023. Only the current fee page, Chapter 37A, Form 573 and the 2027 informational notice are used for amounts and dates on this site; the stale page is listed only so a reader who finds it can compare.",
+    "source_ids": [
+      "S70",
+      "S56"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F40",
+    "title": "Form 573 fee history: title/row lag and two historical rows do not show a 50% tenant share",
+    "detail": "The Form 573 document is titled '25-26' and has no 7/26-6/27 row, so the 2026-2027 amount comes from the SF.gov fee page. In the historical table the 7/03-6/04 row shows a $26.00 fee with a $21.50 tenant amount and the 7/01-6/02 row shows $16.00 with $16.00, while the form elsewhere says the tenant share is 50% (half again for residential-hotel guests). No value is inferred or corrected here; verify with the Rent Board before relying on any pre-2013 row.",
+    "source_ids": [
+      "S64",
+      "S56"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F41",
+    "title": "No official statement links Rent Board Fee payment to licence validity",
+    "detail": "Section 37.15(e) conditions the rent increase licence on substantially complying with the reporting obligation, not on paying the fee, and none of the fee pages, Chapter 37A or the 2027 notice says an unpaid fee voids an increase. This is recorded as an absence of an official statement, not as an official confirmation that the two are unrelated.",
+    "source_ids": [
+      "S56",
+      "S63",
+      "S53",
+      "S65"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F42",
+    "title": "How a 50% fee recovery is divided among co-tenants is not stated officially",
+    "detail": "SF.gov and Section 37A.6 authorise recovering up to 50% of the fee per unit from the tenant(s) in occupancy on November 1 but do not say how that amount is allocated when several co-tenants share a unit. The site leaves this blank rather than assuming an equal split.",
+    "source_ids": [
+      "S62",
+      "S63"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F43",
+    "title": "Case-specific fee, exemption and business-registration facts are unverified",
+    "detail": "The unit count, whether both units are in one structure, exemption status, any billing record, other business activity, payroll and any existing business registration were not supplied, and the January 2027 annual fee notice does not exist yet. Those cells are blank.",
+    "source_ids": [
+      "S56",
+      "S64",
+      "S66"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F44",
+    "title": "Privacy: the raw tenant identifiers remain in public git history and pull-request diffs",
+    "detail": "The first generated validation report (2026-11-06, commit 0ede010) printed the six raw tenant identifier tokens in one check detail. They were removed from the current tree and the validator now reports counts only, but the commit history, the diffs of PRs #1, #2, #4, #5 and #9, and the tips of two finished session branches still contain them in this public repository. Removing them requires the owner: history rewrite with git filter-repo and a force-push, a GitHub Support request, deleting the two stale branches, or making the repository private. An agent cannot rewrite history or push to another branch, and no raw token is published on this site. Full detail: research/privacy/HISTORY_EXPOSURE.md.",
+    "source_ids": [
+      "S68"
+    ],
+    "status": "needs review"
   }
 ]
