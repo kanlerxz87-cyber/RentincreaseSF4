@@ -1,0 +1,830 @@
+{
+  "session": "arena-b87bd80b",
+  "date": "2026-11-08",
+  "status": "research complete; shared integration requested",
+  "disclaimer": "Worksheet only. No attorney approval or guarantee. Blank unit values are needs review.",
+  "sources": [
+    {
+      "id": "B87-S01",
+      "title": "SF: Learn about rent increases",
+      "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco"
+    },
+    {
+      "id": "B87-S02",
+      "title": "SF: Rent Board Housing Inventory",
+      "url": "https://www.sf.gov/rent-board-housing-inventory"
+    },
+    {
+      "id": "B87-S03",
+      "title": "SF: Rule Part XIII / 13.14",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent"
+    },
+    {
+      "id": "B87-S04",
+      "title": "SF Admin Code §37.3, official publisher",
+      "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-0-70881"
+    },
+    {
+      "id": "B87-S05",
+      "title": "SF: §37.15 reporting/licensing",
+      "url": "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing"
+    },
+    {
+      "id": "B87-S06",
+      "title": "SF Admin Code §37.15, official publisher",
+      "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-0-16540"
+    },
+    {
+      "id": "B87-S07",
+      "title": "Rent Board Rules complete PDF, effective Jan. 13, 2026",
+      "url": "https://media.api.sf.gov/documents/625_RR_Complete_1-13-26.pdf"
+    },
+    {
+      "id": "B87-S08",
+      "title": "SF: Rules Part IV",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring"
+    },
+    {
+      "id": "B87-S09",
+      "title": "Civil Code §827",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV"
+    },
+    {
+      "id": "B87-S10",
+      "title": "CCP §1013",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013.&lawCode=CCP"
+    },
+    {
+      "id": "B87-S11",
+      "title": "DRE 2026 California Tenants guide PDF",
+      "url": "https://www.dre.ca.gov/publications/ResourceGuidebook/2026_Landlord_Tenant_Guide.pdf"
+    },
+    {
+      "id": "B87-S12",
+      "title": "DRE: Living in the Rental Unit / rent increases",
+      "url": "https://www.dre.ca.gov/publications/ResourceGuidebook/gb08_living.html"
+    },
+    {
+      "id": "B87-S13",
+      "title": "Form 571: Allowable Annual Increases 2026–27",
+      "url": "https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf"
+    },
+    {
+      "id": "B87-S14",
+      "title": "SF: Current Rates",
+      "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit"
+    },
+    {
+      "id": "B87-S15",
+      "title": "SF: Banked rent increases",
+      "url": "https://www.sf.gov/information--banked-rent-increases"
+    },
+    {
+      "id": "B87-S16",
+      "title": "SF: Annual rent increase for multiple years",
+      "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years"
+    },
+    {
+      "id": "B87-S17",
+      "title": "SF: Landlord petitions and passthroughs",
+      "url": "https://www.sf.gov/landlord-petitions-and-passthroughs"
+    },
+    {
+      "id": "B87-S18",
+      "title": "SF: Capital improvement petitions",
+      "url": "https://www.sf.gov/information--capital-improvement-petitions"
+    },
+    {
+      "id": "B87-S19",
+      "title": "SF: O&M petitions",
+      "url": "https://www.sf.gov/information--operating-and-maintenance-expense-petitions"
+    },
+    {
+      "id": "B87-S20",
+      "title": "SF: Comparable-unit special circumstances petitions",
+      "url": "https://www.sf.gov/information--special-circumstances-petitions-based-rents-comparable-units"
+    },
+    {
+      "id": "B87-S21",
+      "title": "SF: Utility passthroughs (gas, electricity, steam heat)",
+      "url": "https://www.sf.gov/information--utility-passthroughs-gas-electricity-and-steam-heat"
+    },
+    {
+      "id": "B87-S22",
+      "title": "SF: §6.14 and Costa-Hawkins",
+      "url": "https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins"
+    },
+    {
+      "id": "B87-S23",
+      "title": "Civil Code §1942.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV"
+    },
+    {
+      "id": "B87-S24",
+      "title": "SF: Failure to repair and maintain petitions",
+      "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions"
+    },
+    {
+      "id": "B87-S25",
+      "title": "SF: Report unlawful rent increase / rent history review",
+      "url": "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history"
+    },
+    {
+      "id": "B87-S26",
+      "title": "SF: Speak with a Rent Board counselor",
+      "url": "https://www.sf.gov/speak-rent-board-counselor"
+    },
+    {
+      "id": "B87-S27",
+      "title": "SF: Forms Center",
+      "url": "https://www.sf.gov/rent-board-forms-forms-center"
+    },
+    {
+      "id": "B87-S28",
+      "title": "SF: Rental laws / coverage",
+      "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws"
+    },
+    {
+      "id": "B87-S29",
+      "title": "SF: Rent Board Fee",
+      "url": "https://www.sf.gov/rent-board-fee"
+    },
+    {
+      "id": "B87-S30",
+      "title": "SF: Notice of owner noncompliance with Housing Inventory",
+      "url": "https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory"
+    }
+  ],
+  "flags": [
+    {
+      "id": "B87-F01",
+      "title": "Case-specific notice facts unverified",
+      "detail": "Keep unit cells blank; do not infer eligibility, base rent, anniversary, license, lease permission, banking, petition, subsidy, repair/retaliation or service facts.",
+      "source_ids": [
+        "B87-S01",
+        "B87-S02",
+        "B87-S07"
+      ],
+      "status": "needs review"
+    },
+    {
+      "id": "B87-F02",
+      "title": "License timing is effective-date based",
+      "detail": "Rule 13.14 uses the effective date, not service date; confirming license before service is conservative practice only.",
+      "source_ids": [
+        "B87-S03"
+      ],
+      "status": "needs review"
+    },
+    {
+      "id": "B87-F03",
+      "title": "Banking summary wording differs",
+      "detail": "SF guidance says 24 full months; Rule 4.12 says a full 12 months from when an increase could have been imposed. Require full history; no case banking inferred.",
+      "source_ids": [
+        "B87-S15",
+        "B87-S07"
+      ],
+      "status": "needs review"
+    },
+    {
+      "id": "B87-F04",
+      "title": "Notice-nullity wording differs",
+      "detail": "Include full §37.3(b) breakdown and Rule 4.12 banked dates conservatively; do not rely on limited exceptions without review.",
+      "source_ids": [
+        "B87-S04",
+        "B87-S07"
+      ],
+      "status": "needs review"
+    },
+    {
+      "id": "B87-F05",
+      "title": "Form 583 / annual template not verified as annual-notice filing duty",
+      "detail": "Form 583 is described for case documents; keep private service record; no mandatory annual-notice template verified in reviewed Forms Center sections.",
+      "source_ids": [
+        "B87-S27"
+      ],
+      "status": "needs review"
+    },
+    {
+      "id": "B87-F06",
+      "title": "Official examples contain date/rate inconsistencies",
+      "detail": "Use operative Current Rates/Form 571 schedule and statute/rules, not inconsistent examples.",
+      "source_ids": [
+        "B87-S01",
+        "B87-S16",
+        "B87-S13"
+      ],
+      "status": "needs review"
+    },
+    {
+      "id": "B87-F07",
+      "title": "Fixed-term mid-term permission unknown",
+      "detail": "DRE guide verifies general rule; actual lease clause/end date blank and flagged.",
+      "source_ids": [
+        "B87-S11"
+      ],
+      "status": "needs review"
+    },
+    {
+      "id": "B87-F08",
+      "title": "No attorney approval or challenge immunity",
+      "detail": "Conservative checklist capable of tenant-lawyer review only; neutral wording is not a retaliation/discrimination safe harbor.",
+      "source_ids": [
+        "B87-S23",
+        "B87-S25"
+      ],
+      "status": "needs review"
+    }
+  ],
+  "rows": [
+    {
+      "id": "B87-IN-01",
+      "label": "Unit 1 owner input",
+      "rule": "Last lease start February 1, 2025; $3,995; initial Tenant A/B/C. Official verification blank.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S01"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": "Owner-supplied, anonymized; not official finding."
+    },
+    {
+      "id": "B87-IN-02",
+      "label": "Unit 1 continuing input",
+      "rule": "April 1, 2026; $3,995; Tenant A/D. Official verification blank.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S01",
+        "B87-S22"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": "Owner-supplied; no new-tenancy or reset inference."
+    },
+    {
+      "id": "B87-IN-03",
+      "label": "Unit 2 owner input",
+      "rule": "June 1, 2019; $3,150; Tenant E/F. Official verification blank.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S01"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": "Owner-supplied, anonymized."
+    },
+    {
+      "id": "B87-IN-04",
+      "label": "Location/building input",
+      "rule": "Outer Sunset, ZIP 94122; reportedly 1940; two units described as rent-controlled. Official verification blank.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S28"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": "Owner-supplied; coverage unverified."
+    },
+    {
+      "id": "B87-G01",
+      "label": "Coverage gate",
+      "rule": "Many pre-June 14, 1979 units covered; exemptions exist; check PIM.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S28"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G02",
+      "label": "Housing Inventory gate",
+      "rule": "All residential owners report; tenant-occupied covered units receive license; March 1 annual update.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S02"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G03",
+      "label": "License effective-date gate",
+      "rule": "Rule 13.14 null/void if unlicensed on effective date; effective date not service date controls.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S03"
+      ],
+      "flag_ids": [
+        "B87-F01",
+        "B87-F02"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G04",
+      "label": "Lease term gate",
+      "rule": "Fixed-term mid-term increase only if agreement expressly allows; actual lease unknown.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S11"
+      ],
+      "flag_ids": [
+        "B87-F01",
+        "B87-F07"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G05",
+      "label": "Lawful base rent gate",
+      "rule": "Calculate on base rent; exclude temporary passthroughs; owner rent not verified lawful base.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S01",
+        "B87-S16"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G06",
+      "label": "Anniversary gate",
+      "rule": "Rule 1.11 anniversary is date current rent became effective; next increase >=1 year; later increase resets.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S07"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G07",
+      "label": "Rate gate",
+      "rule": "1.6% effective 3/1/26-2/28/27; use rate on effective date.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S14",
+        "B87-S13"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G08",
+      "label": "Banking gate",
+      "rule": "SF 24-month summary vs Rule 4.12 12-month formulation; no case banking inferred.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S15",
+        "B87-S07"
+      ],
+      "flag_ids": [
+        "B87-F01",
+        "B87-F03"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G09",
+      "label": "Petition/passthrough gate",
+      "rule": "Annual/banked no petition; other routes have pre-notice filing rules.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S13",
+        "B87-S17"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G10",
+      "label": "Subsidy gate",
+      "rule": "Tenant-based assistance may add notice requirements; status unknown.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S04"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G11",
+      "label": "Repair/retaliation gate",
+      "rule": "Civil Code 1942.5 restrictions; neutral policy not safe harbor.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S23",
+        "B87-S24"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-G12",
+      "label": "Occupant-change gate",
+      "rule": "No extra rent merely for added occupant; 6.14/Costa-Hawkins facts not inferred.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S22",
+        "B87-S04"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N01",
+      "label": "Written notice",
+      "rule": "Civil Code 827 written notice; SF dollar/percentage/effective date.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S09",
+        "B87-S01"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N02",
+      "label": "Current/new base rent",
+      "rule": "State verified current and new base rent.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S01"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N03",
+      "label": "Dollar/percentage",
+      "rule": "State dollar increase and percentage.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S01"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N04",
+      "label": "Effective date",
+      "rule": "State effective date; rate and anniversary apply.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S01",
+        "B87-S07"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N05",
+      "label": "Annual/banked breakdown",
+      "rule": "37.3(b)(1) written annual/banked portion.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S04"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N06",
+      "label": "Banked dates",
+      "rule": "Rule 4.12(b)(2) dates; include conservatively despite nullity wording differences.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S07",
+        "B87-S04"
+      ],
+      "flag_ids": [
+        "B87-F01",
+        "B87-F04"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N07",
+      "label": "Other components",
+      "rule": "Identify/explain O&M, comps, capital, utility, bond, RAP components if any.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S04"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N08",
+      "label": "Notice period",
+      "rule": "30 days <=10%; 90 days >10% combined; CA mail +5; longer periods control.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S09",
+        "B87-S10",
+        "B87-S12"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N09",
+      "label": "No rounding up",
+      "rule": "Base rent x allowed percentage; no rounding up.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S01",
+        "B87-S13"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-N10",
+      "label": "Neutral reason",
+      "rule": "Neutral annual-increase statement is drafting practice, not statutory reason requirement or safe harbor.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S04",
+        "B87-S23"
+      ],
+      "flag_ids": [
+        "B87-F01",
+        "B87-F08"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-C01",
+      "label": "Unit 1 conditional arithmetic",
+      "rule": "$3,995 x 1.6% = $63.92; total $4,058.92. Conditional only.",
+      "value": "$4,058.92",
+      "status": "analysis",
+      "source_ids": [
+        "B87-S14",
+        "B87-S13"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": "Assumes verified base, annual-only, rate window, no bars; unverified."
+    },
+    {
+      "id": "B87-C02",
+      "label": "Unit 2 conditional arithmetic",
+      "rule": "$3,150 x 1.6% = $50.40; total $3,200.40. Conditional only.",
+      "value": "$3,200.40",
+      "status": "analysis",
+      "source_ids": [
+        "B87-S14",
+        "B87-S13"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": "Assumes verified base, annual-only, rate window, no bars; unverified."
+    },
+    {
+      "id": "B87-SV01",
+      "label": "Service method",
+      "rule": "Personal delivery or CCP 1013 mail; no email/text/door/portal substitute in this kit.",
+      "value": "",
+      "status": "verified rule",
+      "source_ids": [
+        "B87-S09"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-SV02",
+      "label": "Mail extension",
+      "rule": "+5 CA, +10 elsewhere US, +20 outside US; DRE 35/95 examples.",
+      "value": "",
+      "status": "verified rule",
+      "source_ids": [
+        "B87-S10",
+        "B87-S12"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-SV03",
+      "label": "Mail mechanics",
+      "rule": "Sealed, postage paid, proper address; complete on deposit; tracking optional evidence.",
+      "value": "",
+      "status": "verified rule",
+      "source_ids": [
+        "B87-S10"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-SV04",
+      "label": "Mailed copy notation",
+      "rule": "Date/place of mailing or unsigned affidavit/certificate.",
+      "value": "",
+      "status": "verified rule",
+      "source_ids": [
+        "B87-S10"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-SV05",
+      "label": "Separate tenant records",
+      "rule": "Conservative separate copy/log per tenant; no numeric copy-count rule verified.",
+      "value": "",
+      "status": "analysis",
+      "source_ids": [
+        "B87-S09",
+        "B87-S10"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-SV06",
+      "label": "Proof retention / Form 583",
+      "rule": "Keep notice/log/license; Form 583 case-document purpose; no annual filing duty verified.",
+      "value": "",
+      "status": "analysis",
+      "source_ids": [
+        "B87-S27",
+        "B87-S02"
+      ],
+      "flag_ids": [
+        "B87-F05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-SV07",
+      "label": "Effective-date license recheck",
+      "rule": "Rule 13.14 effective date controls.",
+      "value": "",
+      "status": "verified rule",
+      "source_ids": [
+        "B87-S03"
+      ],
+      "flag_ids": [
+        "B87-F02"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-SV08",
+      "label": "Tenant challenge routes",
+      "rule": "Failure-to-repair <=60 days; unlawful-rent petition free/no time limit.",
+      "value": "",
+      "status": "verified rule",
+      "source_ids": [
+        "B87-S24",
+        "B87-S25"
+      ],
+      "flag_ids": [
+        "B87-F08"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-LOG01",
+      "label": "Unit 1 Tenant A service log",
+      "rule": "Blank service record; placeholder roster unverified.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S09",
+        "B87-S10"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-LOG02",
+      "label": "Unit 1 Tenant D service log",
+      "rule": "Blank service record; placeholder roster unverified.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S09",
+        "B87-S10"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-LOG03",
+      "label": "Unit 2 Tenant E service log",
+      "rule": "Blank service record; placeholder roster unverified.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S09",
+        "B87-S10"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "B87-LOG04",
+      "label": "Unit 2 Tenant F service log",
+      "rule": "Blank service record; placeholder roster unverified.",
+      "value": "",
+      "status": "needs review",
+      "source_ids": [
+        "B87-S09",
+        "B87-S10"
+      ],
+      "flag_ids": [
+        "B87-F01"
+      ],
+      "notes": ""
+    }
+  ]
+}
