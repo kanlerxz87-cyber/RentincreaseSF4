@@ -220,7 +220,6 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 
 **Handoff notes for the next session.** (1) No conflicting claims were found at merge time; prior sessions' F25/F26 meanings, CI workflow, `FOLLOWUP_AUDIT.md` and `TENANT_ASSISTANCE_RESEARCH.md` are preserved. (2) Outstanding `needs review` items are unchanged in kind: F27 (2027–28 rate not yet published) and F28 (Unit 1 §6.14 notice history) need owner facts or a later SF.gov publication, not more research. (3) Public-page flag section headers are regenerated from `scripts/site_flags.py`; edit that file and rebuild rather than editing `pages/*.html`.
 
-<<<<<<< HEAD
 ### Final publication status (session `arena-c007d556`, 2026-11-07)
 
 | Item | Result | Evidence |
@@ -232,7 +231,6 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 | Local gate before every merge | 82 checks, 0 errors | `python3 scripts/validate_site.py`; `data/validation_report.json` |
 
 Any later commit's deployment status can be re-checked with `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`. This file records results rather than predicting them; the deploy status of this very commit is therefore verified via that API and reported in the session summary.
-=======
 ## Session 2026-11-07 — `arena-5cbd3f13` (T07)
 
 Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto the then-current `main` (`cd42189`) before any delta was re-applied. No other session's files were overwritten; this session re-applied only the changes listed below on top of `main`.
@@ -253,7 +251,6 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 
 - The base commit `a0591c3` was far behind `origin/main` (`cd42189`, PRs #2–#9). Rather than merge conflicting rewrites of the same generator files, this session took `main` as the base and re-applied its deltas on top; the earlier WIP commit on this branch is superseded and adds nothing to `main`. Nothing from another session was discarded.
 - T05 (PR #1) was already merged and Pages already built before this session started; T07 does not re-claim T05.
->>>>>>> origin/main
 
 ### D16 coordination note to `arena-ea02333c` (T08) and any later session — added 2026-11-07 ~20:20 UTC
 
@@ -262,3 +259,19 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 - **Privacy (D16-P).** `research/privacy/HISTORY_EXPOSURE.md` records that the raw tokens from the earlier validation report remain reachable in git history, in the diffs of PRs #1, #2, #4, #5 and #9, and at the tips of `arena/73f5f1a2-rentincreasesf4` and `arena/fce57ebb-rentincreasesf4`. F26 on the site does not say that; D16-C adds a flag. Agents cannot rewrite history; owner options are listed in that file. The file itself contains no raw identifier.
 - **QA findings already known to D16-B (not yet fixed on `main`, no claim on those lines by anyone but T08's scope):** `REQ-08` and `AN-15` say "38 flags" (actual 40); `pages/sources.html` header says "All 52 official sources" (actual 55; `scripts/build_site.py` line ~122); requirements rows `REQ-01/02/04/06/08/13/14/19/20` and `AN-15` cite S43 (HUD Fair Market Rents) as their "official source", which has nothing to do with a GitHub Pages / PR / flag-count requirement; `FLAGGED_FOR_REVIEW.md` says "30 source-quality flags F01-F30". If T08 is already fixing these, ignore; otherwise D16-C will after T08 finishes.
 - **Independently re-verified by D16-B on 2026-11-07 (fresh `fetch_page`, no change needed):** Admin Code §37.15(e) text; §37.3(a)(1)-(2) (60% of CPI, 7% cap, banking); SF.gov banked-increase page (24 full months; sum not compounded); Civil Code §1947.12 (a)(1), (a)(2), (d)(3); Gov. Code §12955(a), (f); 24 CFR 100.500 (eCFR current as of 11/05/2026; last amended 3/31/2023, 88 FR 19500).
+
+## Session 2026-11-08 — `arena-41af5e64` (T09, final integration)
+
+Branch `arena/41af5e64-rentincreasesf4`, started from `main` at `d63dee4` (PR #13 merged). This is the **final integration session** described in the brief: it merges the outstanding work of the other sessions, re-verifies the combined data line by line against official sources, confirms the site builds with no broken links, opens the PR to `main`, merges it without waiting for approval, and confirms GitHub Pages deploys.
+
+**Stale-claim check performed before claiming (2026-11-08 UTC).** Repository fetched with full history (`git fetch --unshallow`). Open/merged PRs checked with `gh pr list --state all`. Outcome: every other session's claim is either merged into `main` or has not moved for more than 60 minutes with no commits, so the 60-minute takeover rule in the brief applies and nothing is being edited concurrently.
+
+| ID | Task | Status | Owner | File scope (exclusive) | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T09 | Final integration: merge T08 (PR #14) + D16 research into `main`, publish the Rent Board Fee and privacy-history findings, forward-port `COORDINATION.md` without conflict markers, re-verify the combined data line by line, rebuild, validate, PR to `main`, merge, confirm Pages deploy | `in progress` | `arena-41af5e64` (claimed 2026-11-08 UTC) | all `scripts/site_*.py`, `scripts/build_site.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `assets/site.css`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `README.md`, `VERIFICATION.md`, `SOURCES.md`, `REPO_REVIEW.md`, `research/`, `COORDINATION.md` | Taking over `T08`/`arena-ea02333c` (PR #14 opened 2026-11-07 20:20 UTC, `mergeable: CONFLICTING`, no commits since) and `D16-C`/`arena-d16cbfc8` (research landed in `main` via PR #13; integration step never claimed). | Re-verification results recorded below. |
+
+### Handoff log for T09
+
+- **PR #14 (`arena-ea02333c`, T08) taken over, not discarded.** It was `CONFLICTING` because PR #13 (D16 docs) landed on `main` after it. Resolution rule: merge `main` into the integration branch and keep **both** sides of the `COORDINATION.md` conflict — T08's record and the D16 record. No content from either session is dropped.
+- **D16-C (integration step) taken over.** `arena-d16cbfc8`'s research (`research/rent_board_fee/README.md`, `research/privacy/HISTORY_EXPOSURE.md`) is on `main` but was never integrated into the site generator, so the published site still does not show the Rent Board Fee, the business-registration rule, or the git-history privacy exposure. T09 integrates them.
+- **A defect already on `main`:** `COORDINATION.md` at `d63dee4` contains raw merge-conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) committed by PR #13's merge. T09 removes only the marker lines and one duplicated heading; both sessions' records are preserved verbatim. The validator already fails the build if conflict markers appear in any published file.
