@@ -466,3 +466,13 @@ Branch `arena/44eac0b7-rentincreasesf4` (fixed by Arena; replaces `session-<id>/
    - Repaired Flag `F19` source IDs from `["S43"]` (HUD FMR) to `["S68", "S69"]` (GitHub repository and Pages builds API project records).
    - Repaired Flags `F20` and `F31` source IDs from `["S20"]` (SF Rent Ordinance) to `["S68"]` (GitHub repository project record).
 3. Added Flag `F45` (`SF.gov Current Rates page (S02) link labeled '575 Cap. Imp. Labor Rates' points to Form 574 PDF`) verified by direct `fetch_page` on 2026-11-08 in `T44-A`, and reconciled `arena-abb34cd1`'s pre-merge local flag table in `research/flags.md` with the canonical `F31`–`F45` registry.
+
+### T44-A / T44-B PR #26 merge and Pages deployment record — 2026-11-08 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #26 — 27-source 2026-11-08 audit (`T44-A`), N08 accessibility/legal patch integration, `F19`/`F20`/`F31` citation repairs, `DATE = "2026-11-08"`, and Flag `F45` (`T44-B`) | **MERGED** 2026-11-08T23:10:06Z; merge commit `acb4afbba72cabab5f392d077d4cb863007d451e` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/26 ; `gh pr view 26`; `gh pr merge 26 --merge` |
+| CI | `validate` passed (8s) | https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42533795157/job/128893537412 |
+| GitHub Pages | `status: built`, build `1352721128`, commit `acb4afbba72cabab5f392d077d4cb863007d451e`, duration `18500` ms, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Pre-merge local gates | `scripts/validate_site.py`: **110 checks, 0 errors** (70 sources, 55 flags, 296 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/n08_qa/privacy_check.py`: **0 fingerprint matches** across 98 scanned files in current tree | `data/validation_report.json` |
+
