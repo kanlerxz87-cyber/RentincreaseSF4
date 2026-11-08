@@ -445,3 +445,24 @@ This claim is committed and pushed before substantive work. Future pushes use fe
 | Scope limitation | This publishes the research kit and coordination record; it does **not** edit the shared dashboard, navigation, generators or Flagged for Review page. B87-I remains an integration request for the active shared-scope owner. | `research/b87_notice_kit/README.md` and B87 completion entry |
 
 Push-procedure note: a required `git pull --rebase` after a merge commit again attempted to replay already-merged main history and conflicted in this file; it was aborted, remote ancestry was verified, and the resolved merge was pushed without force. No other session's records were discarded.
+
+---
+
+## Session 2026-11-08 — `arena-44eac0b7` (T44-A independent 27-source verification & T44-B final post-N08/B87 integration)
+
+Branch `arena/44eac0b7-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Read `COORDINATION.md`, `origin/main` (`1264330`, after PRs #14, #15, #16, #17, #20, #21, #22, #23, #24 merged), and all `origin/arena/*` branches.
+
+| ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T44-A | Independent 2026-11-08 official-source line-by-line verification and gap audit across 27 local, state, federal, corporate/individual landlord practice, notice service, roommate/subtenant (§6.14), and tenant legal-review sources | `done` | `arena-44eac0b7` | `research/t44_audit/README.md` + append-only `VERIFICATION.md`, `REPO_REVIEW.md`, `research/flags.md`, `COORDINATION.md` | Direct `fetch_page` verification of 27 official SF.gov, CA Legislative Information, eCFR, HUD USER, SEC EDGAR, and SFTreasurer pages (`T44-V01` through `T44-V27` in `research/t44_audit/README.md`). | Confirmed F01–F44 and T03-F01–T03-F10; discovered `F45` (`S02` link labeled `575 Cap. Imp. Labor Rates` points to `574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf`). |
+| T44-B | Post-completion integration of `N08`'s tested patch (`research/n08_qa/proposed_integration.patch`), project-record citation repairs (`F19`, `F20`, `F31`), build-date update (`2026-11-08`), and Flag `F45` into the shared site generator; rebuild, validate, open PR to `main`, merge, and confirm GitHub Pages deployment | `done` | `arena-44eac0b7` | `scripts/build_site.py`, `scripts/site_pages.py`, `scripts/site_text.py`, `scripts/site_flags.py`, `scripts/site_sources.py`, `scripts/validate_site.py`, generated `index.html`, `pages/*.html`, `data/*.json`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `COORDINATION.md` | Full rebuild (`python3 scripts/build_site.py`) + validator (`python3 scripts/validate_site.py` -> 110 checks, 0 errors; 70 sources, 55 flags) + `python3 research/n08_qa/privacy_check.py` (0 fingerprint matches in current tree) + `python3 research/b87_notice_kit/validate_kit.py` (19 checks, 0 errors). | All 55 flags (`F01`–`F45`, `T03-F01`–`T03-F10`) published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`; do not block the merge. |
+
+**Summary of T44-B integration (preserving 100% of all merged sessions' work on `origin/main` at `1264330`):**
+1. Applied `research/n08_qa/proposed_integration.patch` handed off by `arena-7152099a` (`N08` PR #21):
+   - Refined `LIC-05`, `ST-13`, `ST-15`, and `EXECUTIVE_SUMMARY.md` to state the exact `Cal. Civ. Code § 1942.5` enumerated tenantability triggers, non-default condition, once-per-12-months limit, subdivision `(g)` good-faith ground statement rule, fraud/oppression/malice requirement for `$100–$2,000` punitive damages, and the distinction between the statutory effective-date license requirement and the recommended conservative order (report -> confirm license -> serve notice -> effective date).
+   - Applied the tested CSS and table-wrapper accessibility fixes (`a{text-decoration:underline;text-underline-offset:.15em}`, `nav a{text-decoration:none}`, `tabindex="0" role="region" aria-label="... — scrollable table"`, `<th scope="col">`, `.tablewrap:focus-visible`, and mobile `nav{position:static}`).
+2. Repaired the remaining source-integrity and date consistency items identified in `research/n08_qa/BROWSER_QA.md`:
+   - Updated `DATE = "2026-11-08"` in `scripts/site_sources.py`.
+   - Repaired Flag `F19` source IDs from `["S43"]` (HUD FMR) to `["S68", "S69"]` (GitHub repository and Pages builds API project records).
+   - Repaired Flags `F20` and `F31` source IDs from `["S20"]` (SF Rent Ordinance) to `["S68"]` (GitHub repository project record).
+3. Added Flag `F45` (`SF.gov Current Rates page (S02) link labeled '575 Cap. Imp. Labor Rates' points to Form 574 PDF`) verified by direct `fetch_page` on 2026-11-08 in `T44-A`, and reconciled `arena-abb34cd1`'s pre-merge local flag table in `research/flags.md` with the canonical `F31`–`F45` registry.

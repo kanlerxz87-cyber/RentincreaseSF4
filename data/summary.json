@@ -71,7 +71,7 @@
             "S07",
             "S01"
           ],
-          "notes": "Order matters: Housing Inventory report -> license on file -> then serve tenant notice -> effective date. See flag F25 on consequence wording.",
+          "notes": "Legal test: the license must be current on the effective date. Recommended conservative order: report -> confirm license -> serve notice -> effective date. See flag F25 on consequence wording.",
           "flag_id": "",
           "source_note": ""
         },

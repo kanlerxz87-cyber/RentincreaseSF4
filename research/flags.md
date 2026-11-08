@@ -56,3 +56,28 @@ See `research/sources/irregularities.md` and `research/sources/unverified.md` fo
 | F36 | Raw identifier tokens remain reachable in public git history | Commits from the 2026-11-06 report to the fix, PR diffs #1/#2/#4/#5/#9, two branch tips; agents cannot rewrite history | `research/privacy/HISTORY_EXPOSURE.md` |
 | F37 | Published merge-conflict markers | Three marker lines were committed in `COORDINATION.md` at `d63dee4`; repaired, validator hardened | `COORDINATION.md` |
 | F38 | Project-deliverable rows cite repository artifacts, not official sources | No government source can confirm a website build or a PR; labelled `project record` | `pages/requirements.html` |
+
+## T44-A / T44-B canonical flag-ID reconciliation and F45 addition (2026-11-08, session `arena-44eac0b7`)
+
+The `T09 additions` table above recorded session `arena-abb34cd1`'s pre-reconciliation local numbering (`F31`–`F38`). In the canonical published registry (`scripts/site_flags.py`, `data/flags.json`, `pages/flagged.html`, and `FLAGGED_FOR_REVIEW.md`), the merged numbering is `F31`–`F45`:
+
+| Canonical Flag ID | Published Title & Scope | Source IDs |
+| --- | --- | --- |
+| F19 | GitHub Pages deployment record (repaired in T44-B from `S43` HUD FMR to project records `S68`, `S69`) | S68, S69 |
+| F20 | Platform branch constraint (repaired in T44-B from `S20` SF Rent Ordinance to project record `S68`) | S68 |
+| F31 | Merge-conflict markers were committed to `COORDINATION.md` (repaired in T44-B from `S20` to `S68`) | S68 |
+| F32 | Flag cross-references in `SOURCES.md` were out of sequence | S02, S03 |
+| F33 | Rent Board Fee and Rent Increase License are separate obligations | S56, S07, S53 |
+| F34 | Two-unit owner-occupied AB 1482 exemption is conditional and unverified here | S58, S60, S59 |
+| F35 | In-law or second structure on the lot changes coverage | S60, S59, S06 |
+| F36 | QA correction: in-law-unit exemption wording (legal vs. illegal in-law unit) | S60 |
+| F37 | QA correction: project-management rows cited HUD FMR (`S43`) instead of project records (`S68`, `S69`) | S68, S69 |
+| F38 | Referral timing for an unpaid Rent Board Fee differs inside the SF.gov fee page | S56, S63 |
+| F39 | Older SF.gov "Pay your Rent Board fee" service page still shows 2023 dates | S70, S56 |
+| F40 | Form 573 fee history title/row lag and two historical rows (`7/03-6/04` and `7/01-6/02`) not showing a 50% tenant share | S64, S56 |
+| F41 | No official statement links Rent Board Fee payment to licence validity | S56, S63, S53, S65 |
+| F42 | How a 50% fee recovery is divided among co-tenants is not stated officially | S62, S63 |
+| F43 | Case-specific fee, exemption, and business-registration facts are unverified | S56, S64, S66 |
+| F44 | Privacy: raw tenant identifiers remain in public git history and pull-request diffs (owner-only remediation) | S68 |
+| F45 | SF.gov Current Rates page (`S02`) link labeled `575 Cap. Imp. Labor Rates` points to `574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf` (Form 574 Imputed Interest instead of Form 575) | S02 |
+

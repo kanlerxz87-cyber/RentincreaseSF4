@@ -325,6 +325,13 @@ def main():
           and "git history" in "".join(f["title"] + " " + f["detail"] for f in flags if f["id"] == "F44"))
     check("no raw tenant identifiers in the fee or new markdown files",
           all("{{" not in (ROOT / n).read_text(encoding="utf-8") for n in ("FLAGGED_FOR_REVIEW.md",)))
+    check("table regions and inline links meet accessibility standards",
+          'tabindex="0" role="region"' in (PAGES / "case.html").read_text(encoding="utf-8")
+          and '<th scope="col">' in (PAGES / "case.html").read_text(encoding="utf-8")
+          and "text-decoration:underline" in (ROOT / "assets" / "site.css").read_text(encoding="utf-8"))
+    check("project-record flags cite project records and S02 link defect is flagged",
+          all(f["source_ids"] != ["S43"] and f["source_ids"] != ["S20"] for f in flags if f["id"] in ("F19", "F20", "F31"))
+          and any(f["id"] == "F45" and "S02" in f["source_ids"] for f in flags))
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

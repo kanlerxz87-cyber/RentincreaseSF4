@@ -181,9 +181,10 @@
   {
     "id": "F19",
     "title": "GitHub Pages deployment record",
-    "detail": "Legacy source main / requires root-level site. PR #1 merged at a0591c3; GitHub Pages API confirmed built on 2026-11-07. Follow-up publication details are recorded in COORDINATION.md.",
+    "detail": "Legacy source main / requires root-level site. PR #1 merged at a0591c3; GitHub Pages API confirmed built on 2026-11-07 and re-verified on 2026-11-08. Follow-up publication details are recorded in COORDINATION.md.",
     "source_ids": [
-      "S43"
+      "S68",
+      "S69"
     ],
     "status": "needs review"
   },
@@ -192,7 +193,7 @@
     "title": "Platform branch constraint",
     "detail": "Requested session branches cannot be created; exclusive file scopes used.",
     "source_ids": [
-      "S20"
+      "S68"
     ],
     "status": "needs review"
   },
@@ -417,7 +418,7 @@
     "title": "Merge-conflict markers were committed to COORDINATION.md",
     "detail": "main commit 1d80419 committed raw conflict markers (<<<<<<<, =======, >>>>>>>) into COORDINATION.md and the validator did not check for them. Found by an independent scan on 2026-11-07, resolved by keeping both sessions' records, and a validator check was added so it cannot recur silently.",
     "source_ids": [
-      "S20"
+      "S68"
     ],
     "status": "needs review"
   },
@@ -552,6 +553,15 @@
     "detail": "The first generated validation report (2026-11-06, commit 0ede010) printed the six raw tenant identifier tokens in one check detail. They were removed from the current tree and the validator now reports counts only, but the commit history, the diffs of PRs #1, #2, #4, #5 and #9, and the tips of two finished session branches still contain them in this public repository. Removing them requires the owner: history rewrite with git filter-repo and a force-push, a GitHub Support request, deleting the two stale branches, or making the repository private. An agent cannot rewrite history or push to another branch, and no raw token is published on this site. Full detail: research/privacy/HISTORY_EXPOSURE.md.",
     "source_ids": [
       "S68"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F45",
+    "title": "SF.gov Current Rates page (S02) link labeled '575 Cap. Imp. Labor Rates' points to Form 574 PDF",
+    "detail": "On https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit, the link labeled '575 Cap. Imp. Labor Rates' under Capital Improvement Petitions points to https://www.sf.gov/documents/34916/574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf (Form 574 Imputed Interest 26-27) instead of Form 575. Confirmed by direct fetch_page on 2026-11-08 (T44-A); recorded as an official SF.gov hyperlink defect and not relied upon for any calculation.",
+    "source_ids": [
+      "S02"
     ],
     "status": "needs review"
   }
