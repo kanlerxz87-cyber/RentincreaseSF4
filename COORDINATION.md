@@ -323,3 +323,15 @@ Claim scope note: this session edits only the files listed above. Shared table d
 **Handoff notes.** (1) Edit `scripts/site_*.py` and rebuild; never hand-edit `pages/*.html` or `data/*.json`. (2) Every source/flag total is computed at build time - do not type one. (3) The validator now fails on committed conflict markers, unresolved `{{...}}` placeholders, stale totals, unpublished flag references and missing fee/retaliation/coverage content. (4) `git pull --rebase` conflicts on this repository's merge commits; fetch and fast-forward instead. (5) Do not add the raw tenant identifiers to any file, commit message, issue or PR text.
 
 This file records results, including the deploy status of the commit that carries it: that status is read back from the Pages API immediately after the merge and reported in the session summary, and can be re-checked at any time at `api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`.
+
+## Session 2026-11-08 — `arena-44eac0b7` (T44-A independent official-source verification & gap audit; T44-B post-completion integration)
+
+Branch `arena/44eac0b7-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Read `COORDINATION.md`, `origin/main` (`fcc7d6b`, after PRs #14, #15, #17 merged), and all `origin/arena/*` branches before claiming.
+
+| ID | Task | Status | Owner | File scope (exclusive) | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T44-A | Independent 2026-11-08 official-source line-by-line verification and gap audit across local, state, federal, corporate/individual landlord practice, notice service, roommate/subtenant (§6.14 / Rules & Regs §6.15), and tenant legal-review safeguards | `in progress` | `arena-44eac0b7` (claimed 2026-11-08 UTC) | `research/t44_audit/` (new directory only) + append-only `COORDINATION.md` | Direct `fetch_page` verification of official SF.gov, CA Legislative Information, CA CRD, HUD USER, eCFR, GovInfo, SEC EDGAR, and SFTreasurer pages; cross-check against every user requirement and table row. | To be recorded in `research/t44_audit/` and below upon completion. |
+| T44-B | Post-audit additive integration into shared generator/data/site, rebuild, line-by-line validation, PR to `main`, merge, and GitHub Pages deployment confirmation | `unclaimed until T44-A is done and no other session has an active conflicting edit in flight` | `arena-44eac0b7` (planned) | Shared generator/data/site/docs (additive only, preserving 100% of all prior and concurrent sessions' work) + `COORDINATION.md` | Full rebuild + `scripts/validate_site.py` + broken-link check + GitHub Pages API check. | Flagged items published on `pages/flagged.html` do not block the merge. |
+
+**Coordination note (2026-11-08 UTC):** While concurrent 2026-11-08 sessions finish their claims, `T44-A` touches **only** the new disjoint directory `research/t44_audit/` (plus append-only coordination notes here). No raw tenant identifiers will ever be written to tracked files, commit messages, or PR descriptions.
+
