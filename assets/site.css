@@ -35,6 +35,8 @@ td.blank{color:var(--muted);font-style:italic}
 .badge.review{background:var(--warnbg);color:var(--warn)}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
 .badge.owner{background:var(--ownerbg);color:var(--owner)}
+.badge.project{background:#eef7fb;color:#155e75}
+.artifact{font-size:.78rem;color:#155e75}
 .owner-src{font-size:.78rem;color:var(--owner)}
 td.blank{color:var(--warn);font-style:italic}
 @media print{nav,.cta{display:none}section,.hero{box-shadow:none}}

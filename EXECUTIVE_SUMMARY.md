@@ -1,6 +1,6 @@
 # Executive Summary - Rental increase SF
 
-Date: 2026-11-07 UTC (Rent Board license pages re-verified 2026-11-07). Informational compliance research, not legal advice.
+Date: 2026-11-08 UTC (Rent Board license, Housing Inventory, banked-increase and Rent Board Fee pages re-fetched and re-verified 2026-11-08). Informational compliance research, not legal advice.
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 
@@ -29,6 +29,18 @@ Official links for manual review: SF.gov "Learn about rent increases in San Fran
 
 **Full step-by-step tables:** the site's Step-by-Step License page (`pages/process.html`) carries 12 numbered steps with an official link on every step, the ordinance text, and the case application for both units. For this case, Housing Inventory reporting and a current license for either unit are **unconfirmed** (blank, flagged T03-F05) — no increase should be treated as effective until that is confirmed.
 
+
+## Separate obligation: the annual Rent Board Fee (this is not the license)
+
+Paying the Rent Board Fee does **not** replace the Housing Inventory report, and reporting into the Housing Inventory does **not** satisfy a fee-exemption request. Every owner of a residential unit owes a per-unit fee unless a current exemption is on file.
+
+- **Amount for the 2026-2027 tax year:** **$59.00 per dwelling unit** ($29.50 per guest/SRO room) - https://www.sf.gov/rent-board-fee
+- **Deadline:** **March 1 each year** (next: March 1, 2027), with a 5% penalty each month after March 1, capped at 15%; unpaid fees are referred to the Bureau of Delinquent Revenue after June 1. Ordinance text (Sec. 37A.1, 37A.4, 37A.6): https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf
+- **Exemption window for the 2027 fee:** request by **December 14, 2026**; an exemption request is required every year, and only an owner-occupied unit that is not rented at any time qualifies (with an Assessor Homeowners' Exemption or a Rent Board affidavit). - https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement
+- **Recovering 50% from the tenant:** after paying in full, up to **$29.50 per dwelling unit** for the 2026-27 fee, only from tenants in occupancy on November 1, never penalties; by deducting it from the security-deposit interest payment (4.2% for 3/1/26-2/28/27) or, only where SF.gov allows it, by a bill stating the amount, the purpose and a 30-day due date. - https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant
+- **City business registration:** an individual whose only San Francisco business is rental income from one residential structure consisting of fewer than four units is not, by reason of that fact alone, required to register. - https://sftreasurer.org/information-lessors-residential-real-estate
+
+**No official page states that fee payment affects whether a rent increase is valid.** The license under Sec. 37.15(e) turns on substantially complying with the reporting obligation. That absence is published as flag F32; pay the fee on time regardless, because it has its own penalties and collection route. Conditional arithmetic for the two units (2 x $59.00 = $118.00; maximum recovery $59.00) is on the Rent Board Fee page and flagged F33 - the January 2027 Annual Notice, which is the actual bill, does not exist yet.
 
 ## Bottom line
 
@@ -64,8 +76,8 @@ Extra rent for an additional occupant is unlawful, and adding an occupant is not
 
 ## Flagged for Review
 
-All 40 irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), Unit 1's unknown Section 6.14 notice history (F28), a corrected capital-improvement petition count (F29), and the conditional (not asserted) banked-increase illustration (F30). Flagged items do not block the site or merge.
+All 48 irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), Unit 1's unknown Section 6.14 notice history (F28), a corrected capital-improvement petition count (F29), the conditional (not asserted) banked-increase illustration (F30), the fee-page collection-timing difference (F31), the absence of any official statement linking fee payment to a rent increase's validity (F32), unverified fee billing details for this case (F33), Form 573 period metadata (F34), a stale 2023 date on an older fee service page (F35), the residual presence of raw identifier tokens in public git history (F36), published merge-conflict markers that were repaired (F37), and the use of repository artifacts rather than official sources for rows about this project's own deliverables (F38). Flagged items do not block the site or merge.
 
 ## Sources
 
-55 official sources are catalogued in SOURCES.md and on the Sources page. Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.
+62 official sources are catalogued in SOURCES.md and on the Sources page. Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.

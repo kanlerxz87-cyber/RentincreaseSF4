@@ -438,5 +438,61 @@
     "url": "https://portal.sfrb.org/",
     "category": "Local",
     "statement": "Official portal to create an owner account, report into the Housing Inventory and check Rent Increase License status by address or APN."
+  },
+  {
+    "id": "S56",
+    "agency": "SF Rent Board",
+    "title": "The Rent Board Fee",
+    "url": "https://www.sf.gov/rent-board-fee",
+    "category": "Local",
+    "statement": "Every owner of a residential dwelling unit or guest unit pays a per-unit fee unless a current exemption is on file; 2026-2027 tax year $59.00 per dwelling unit and $29.50 per guest unit; due March 1 each year; 5% penalty each month after March 1 up to 15%; unpaid fees referred to the Bureau of Delinquent Revenue after June 1; exemption-request deadline for the 2027 fee is December 14, 2026; reporting into the Housing Inventory does not satisfy a fee-exemption request. Re-fetched 2026-11-08."
+  },
+  {
+    "id": "S57",
+    "agency": "SF Rent Board",
+    "title": "Recover part of your Rent Board fee from the tenant",
+    "url": "https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant",
+    "category": "Local",
+    "statement": "An owner who has paid the fee in full may collect 50% (excluding penalties) from tenants residing in the unit on or before November 1 of the year before the fee became due; by deducting it from security-deposit interest or, only if there is no or insufficient deposit or interest is already paid annually, by direct bill stating the amount, that the purpose is to fund the Rent Board and that it is due within 30 days; fees may be banked; non-payment is not a just cause for eviction and is collected in Small Claims Court. Re-fetched 2026-11-08."
+  },
+  {
+    "id": "S58",
+    "agency": "SF Admin Code",
+    "title": "Chapter 37A Rent Stabilization and Arbitration Fee (PDF)",
+    "url": "https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf",
+    "category": "Local",
+    "statement": "Sec. 37A.1 applies the fee to all residential units, including units exempt from the rent-increase limits under Costa-Hawkins, with narrow exemptions (37A.1(a)-(f)) including an owner-occupied unit not rented at any time with an affidavit on file; Sec. 37A.4 requires payment by March 1 with 5% penalties at March 1, April 1 and May 1 and referral to the Bureau of Delinquent Revenue after June 1; Sec. 37A.6 sets the 50% recovery cap, deduction/billing method, banking and continued owner liability. Re-fetched 2026-11-08."
+  },
+  {
+    "id": "S59",
+    "agency": "SF Rent Board",
+    "title": "Form 573 Rent Board Fee History 25-26",
+    "url": "https://www.sf.gov/documents/29484/573_Rent_Board_Fee_History_25-26_8.26.pdf",
+    "category": "Local",
+    "statement": "Fee history 7/1999-6/2026 in table form; $59.00 per unit and $29.50 tenant share for each tax year 7/21-6/22 through 7/25-6/26 (the newest row); no 7/26-6/27 row yet. Re-fetched 2026-11-08."
+  },
+  {
+    "id": "S60",
+    "agency": "SF Rent Board",
+    "title": "Notification of Rent Board Fee and Housing Inventory Requirements (2027 Informational Notice)",
+    "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement",
+    "category": "Local",
+    "statement": "2027 assessment notice: no payment required at this time; exemption request deadline Monday, December 14, 2026; an exemption request is required every year; requesting a fee exemption does not satisfy Housing Inventory reporting and inventory reporting does not satisfy a fee-exemption request; Housing Inventory report due March 1, 2027; 'Some rent increases given without a license will be null and void.' Re-fetched 2026-11-08."
+  },
+  {
+    "id": "S61",
+    "agency": "SF Treasurer & Tax Collector",
+    "title": "Register a Business",
+    "url": "https://sftreasurer.org/business/register-business",
+    "category": "Local",
+    "statement": "Business registration is required generally for persons engaging in business in San Francisco, but 'you do not need to register if your only business is the receipt of rental income in connection with the operation of ... One residential structure consisting of fewer than four units'. Re-fetched 2026-11-08."
+  },
+  {
+    "id": "S62",
+    "agency": "SF Treasurer & Tax Collector",
+    "title": "Information for Lessors of Residential Real Estate",
+    "url": "https://sftreasurer.org/information-lessors-residential-real-estate",
+    "category": "Local",
+    "statement": "A person receiving rental income from one residential structure of fewer than four units is not, by reason of that fact alone, required to obtain a business registration certificate; a lessor is treated as a separate person for each individual building; the Tax Collector determines what is a separate building and the number of units; Gross Receipts Tax filing not required below 4 units in a building. Re-fetched 2026-11-08."
   }
 ]

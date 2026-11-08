@@ -1,8 +1,11 @@
 """Standalone markdown deliverables and stylesheet for the static site."""
 
+from site_flags import FLAGS
+from site_sources import SOURCES
+
 EXECUTIVE_SUMMARY_TEXT = """# Executive Summary - Rental increase SF
 
-Date: 2026-11-07 UTC (Rent Board license pages re-verified 2026-11-07). Informational compliance research, not legal advice.
+Date: 2026-11-08 UTC (Rent Board license, Housing Inventory, banked-increase and Rent Board Fee pages re-fetched and re-verified 2026-11-08). Informational compliance research, not legal advice.
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 
@@ -31,6 +34,18 @@ Official links for manual review: SF.gov "Learn about rent increases in San Fran
 
 **Full step-by-step tables:** the site's Step-by-Step License page (`pages/process.html`) carries 12 numbered steps with an official link on every step, the ordinance text, and the case application for both units. For this case, Housing Inventory reporting and a current license for either unit are **unconfirmed** (blank, flagged T03-F05) — no increase should be treated as effective until that is confirmed.
 
+
+## Separate obligation: the annual Rent Board Fee (this is not the license)
+
+Paying the Rent Board Fee does **not** replace the Housing Inventory report, and reporting into the Housing Inventory does **not** satisfy a fee-exemption request. Every owner of a residential unit owes a per-unit fee unless a current exemption is on file.
+
+- **Amount for the 2026-2027 tax year:** **$59.00 per dwelling unit** ($29.50 per guest/SRO room) - https://www.sf.gov/rent-board-fee
+- **Deadline:** **March 1 each year** (next: March 1, 2027), with a 5% penalty each month after March 1, capped at 15%; unpaid fees are referred to the Bureau of Delinquent Revenue after June 1. Ordinance text (Sec. 37A.1, 37A.4, 37A.6): https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf
+- **Exemption window for the 2027 fee:** request by **December 14, 2026**; an exemption request is required every year, and only an owner-occupied unit that is not rented at any time qualifies (with an Assessor Homeowners' Exemption or a Rent Board affidavit). - https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement
+- **Recovering 50% from the tenant:** after paying in full, up to **$29.50 per dwelling unit** for the 2026-27 fee, only from tenants in occupancy on November 1, never penalties; by deducting it from the security-deposit interest payment (4.2% for 3/1/26-2/28/27) or, only where SF.gov allows it, by a bill stating the amount, the purpose and a 30-day due date. - https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant
+- **City business registration:** an individual whose only San Francisco business is rental income from one residential structure consisting of fewer than four units is not, by reason of that fact alone, required to register. - https://sftreasurer.org/information-lessors-residential-real-estate
+
+**No official page states that fee payment affects whether a rent increase is valid.** The license under Sec. 37.15(e) turns on substantially complying with the reporting obligation. That absence is published as flag F32; pay the fee on time regardless, because it has its own penalties and collection route. Conditional arithmetic for the two units (2 x $59.00 = $118.00; maximum recovery $59.00) is on the Rent Board Fee page and flagged F33 - the January 2027 Annual Notice, which is the actual bill, does not exist yet.
 
 ## Bottom line
 
@@ -66,25 +81,32 @@ Extra rent for an additional occupant is unlawful, and adding an occupant is not
 
 ## Flagged for Review
 
-All 40 irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), Unit 1's unknown Section 6.14 notice history (F28), a corrected capital-improvement petition count (F29), and the conditional (not asserted) banked-increase illustration (F30). Flagged items do not block the site or merge.
+All __FLAGCOUNT__ irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), Unit 1's unknown Section 6.14 notice history (F28), a corrected capital-improvement petition count (F29), the conditional (not asserted) banked-increase illustration (F30), the fee-page collection-timing difference (F31), the absence of any official statement linking fee payment to a rent increase's validity (F32), unverified fee billing details for this case (F33), Form 573 period metadata (F34), a stale 2023 date on an older fee service page (F35), the residual presence of raw identifier tokens in public git history (F36), published merge-conflict markers that were repaired (F37), and the use of repository artifacts rather than official sources for rows about this project's own deliverables (F38). Flagged items do not block the site or merge.
 
 ## Sources
 
-55 official sources are catalogued in SOURCES.md and on the Sources page. Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.
+__SRCCOUNT__ official sources are catalogued in SOURCES.md and on the Sources page. Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.
 """
 
 FLAGGED_TEXT = """# Flagged for Review
 
-This page is clearly labeled **Flagged for Review**. Status `needs review` means the item is published with official source links for manual review and does **not** block any task or the merge.
+This page is clearly labeled **Flagged for Review**. Status `needs review` means the item is published for manual review with source links or a repository record and does **not** block any task or the merge.
 
-Full detail is in `research/sources/irregularities.md`, `research/sources/unverified.md`, `research/flags.md` and `pages/flagged.html`.
+Full detail is in `research/sources/irregularities.md`, `research/sources/unverified.md`, `research/flags.md`, `research/rent_board_fee/README.md`, `research/privacy/HISTORY_EXPOSURE.md` and `pages/flagged.html`.
 
 ## Summary of flags
 
-- 30 source-quality flags F01-F30 (F25: SF.gov license-consequence wording differs — 'may be null/void' vs notice 'not enforceable' without a license on the effective date; F26: earlier validation report published raw identifier tokens in a check detail — fixed 2026-11-07, values withheld): SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, old 1.7% example, F27 (next year's allowable rate not yet published), F28 (Unit 1 Section 6.14 notice history unknown), F29 (correction: the June 2024 source shows 18 capital-improvement petitions / 148 units, not 19 / 148) and F30 (the 13.1% banked figure for Unit 2 is conditional arithmetic, not a finding).
-- 10 case/analysis flags T03-F01-T03-F10: owner-supplied facts, anonymization, address/year/coverage, Unit 1 legal status, banked/license/notice history, illustrative arithmetic, 94122 SAFMR blank, no cap/approval/both-units guarantee, narrow corporate/individual evidence, and conservative checklist only.
+All **__FLAGCOUNT__** flagged items are published on `pages/flagged.html`, each with official source links or an explicit repository artifact.
 
-Every flag on the site includes official source links. Unverified value cells are blank.
+**Source-quality and legal-interpretation flags F01-F24:** SF.gov example inconsistencies (rates in worked examples versus Form 571), Form 571 PDF title metadata, the SF 37.10B Larson footnote, the temporary CPI methodology adopted in the January 2026 Commission minutes, stale search snippets, a chunk-split artifact, 404 URL variants, GovInfo substitution for a failed U.S. Code page, the HUD Fair Housing Act redirect, FY2026/FY2027 HUD effective dates, unparsed 94122 SAFMR data, the SEC Equity Residential dead end, a duplicated block on the tenant-petition page, the Rent Ordinance not being the official record, the Tenant Right to Counsel report 404, the GitHub Pages root source, and the platform branch constraint.
+
+**Case, privacy and process flags F25-F38:** F25 differing SF.gov wording on the consequence of an unlicensed increase; F26 the earlier validation report that published raw identifier tokens (fixed); F27 next year's allowable rate not yet published; F28 Unit 1's unknown Section 6.14 notice history; F29 a corrected capital-improvement petition count (18 petitions / 148 units, not 19 / 148); F30 the 13.1% banked figure for Unit 2 being conditional arithmetic rather than a finding; F31 the fee page's collection-referral timing differing inside one page (June 1 versus a July notice plus 30 days); F32 the absence of any official statement linking Rent Board Fee payment to the validity of a rent increase; F33 this case's fee billing, exemption and unit-count facts being unverified; F34 Form 573 covering 7/1999-6/2026 only; F35 a stale 2023 date on the older fee service page; F36 raw identifier tokens still reachable in public git history and PR diffs; F37 unresolved merge-conflict markers that were published and have been repaired; F38 rows about this project's own deliverables citing repository artifacts instead of official sources.
+
+**Case and analysis flags T03-F01 to T03-F10:** owner-supplied facts, anonymization, the unverified address/year/coverage, Unit 1's unknown legal status, unknown banked/license/notice history, illustrative arithmetic, the blank 94122 SAFMR row, the absence of any cap/attorney-approval/both-units rule, narrow corporate and individual evidence, and the conservative-checklist framing.
+
+**What the owner must still do:** confirm the property's coverage and official records; confirm Housing Inventory reporting and Rent Increase License status for both units; confirm any prior increases and notice history; and confirm the fee billing record when the January 2027 Annual Notice arrives. None of these can be established from the sources read here.
+
+Unverified value cells are blank. Nothing on this site is legal advice, and no attorney has approved any increase.
 """
 
 README_TEXT = """# RentincreaseSF4
@@ -94,8 +116,8 @@ Public GitHub Pages research site for "Rental increase SF": executive summary, o
 Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
 - `index.html` - clean landing page / dashboard.
-- `pages/` - category subpages with easy-read tables.
-- `data/` - JSON source of truth; every row has official source IDs.
+- `pages/` - category subpages with easy-read tables, including `pages/fee.html` (Rent Board Fee) and `pages/process.html` (step-by-step license).
+- `data/` - JSON source of truth; every legal/fee finding row has official source IDs, and rows about this project's own deliverables link a repository artifact and are labelled `project record`.
 - `SOURCES.md` / `VERIFICATION.md` / `research/` - official source ledger and line-by-line verification.
 - `EXECUTIVE_SUMMARY.md` - standalone executive summary.
 - `FLAGGED_FOR_REVIEW.md` / `pages/flagged.html` - flagged irregularities with links.
@@ -145,6 +167,8 @@ td.blank{color:var(--muted);font-style:italic}
 .badge.review{background:var(--warnbg);color:var(--warn)}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
 .badge.owner{background:var(--ownerbg);color:var(--owner)}
+.badge.project{background:#eef7fb;color:#155e75}
+.artifact{font-size:.78rem;color:#155e75}
 .owner-src{font-size:.78rem;color:var(--owner)}
 td.blank{color:var(--warn);font-style:italic}
 @media print{nav,.cta{display:none}section,.hero{box-shadow:none}}
@@ -160,3 +184,11 @@ footer .wrap{max-width:1120px;margin:0 auto}
 ul{margin:.4rem 0 .4rem 1.2rem}
 @media(max-width:700px){header h1{font-size:1.55rem}nav .wrap{padding:.35rem .5rem}main{padding:1rem .6rem 2rem}th,td{padding:.5rem .45rem}}
 """
+
+# Counts are generated from the registries so they cannot go stale (QA finding fixed 2026-11-08).
+_COUNT_SUBS = {"__FLAGCOUNT__": str(len(FLAGS)), "__SRCCOUNT__": str(len(SOURCES))}
+for _name in ("EXECUTIVE_SUMMARY_TEXT", "FLAGGED_TEXT", "README_TEXT"):
+    _text = globals()[_name]
+    for _key, _value in _COUNT_SUBS.items():
+        _text = _text.replace(_key, _value)
+    globals()[_name] = _text

@@ -758,12 +758,12 @@
       }
     ]
   },
-  "requirements": {
-    "title": "Full Requirements List",
-    "description": "Every active requirement, status and official source link.",
+  "fee": {
+    "title": "Rent Board Fee - a second, separate obligation",
+    "description": "The annual Rent Board Fee under Administrative Code Chapter 37A: who pays, the 2026-27 amount, deadlines, penalties, exemptions and the 50% tenant recovery. Every row re-verified 2026-11-08.",
     "sections": [
       {
-        "title": "Requirements",
+        "title": "Who pays, how much, and when",
         "columns": [
           "Item",
           "Value / finding",
@@ -773,262 +773,617 @@
         ],
         "rows": [
           {
-            "id": "REQ-01",
-            "label": "Executive summary",
-            "value": "Published",
+            "id": "FEE-01",
+            "label": "Who pays the Rent Board Fee",
+            "value": "The owner of every residential dwelling unit or guest unit pays a Rent Board Fee each year unless a current Rent Board exemption or an Assessor-Recorder Homeowners' Exemption is on file",
             "status": "verified",
             "source_ids": [
-              "S01",
-              "S27",
-              "S43"
+              "S56",
+              "S58"
             ],
-            "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
+            "notes": "This fee is a separate obligation from the Rent Increase License; paying one does not satisfy the other. Sec. 37A.1 and Sec. 37A.4 of the Administrative Code.",
             "flag_id": "",
             "source_note": ""
+          },
+          {
+            "id": "FEE-02",
+            "label": "Which units are charged",
+            "value": "All residential units unless currently exempt, including single-family homes and condominiums, units built after 1979, vacant units, units occupied by friends or family, and units exempt from the rent-increase limits under Costa-Hawkins",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S58"
+            ],
+            "notes": "A tenant-occupied unit is not covered by the owner-occupied exemption, which Sec. 37A.1(f) limits to an owner-occupied unit not rented at any time with an affidavit on file.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-03",
+            "label": "Amount for the 2026-2027 tax year",
+            "value": "$59.00 per dwelling unit; $29.50 per guest unit (SRO / residential hotel room)",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S59"
+            ],
+            "notes": "The 2026-27 figure is the one published on the SF.gov fee page; Form 573's newest row is tax year 7/25-6/26 and also shows $59.00 (flag F34).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-04",
+            "label": "Deadline and late penalty",
+            "value": "Due March 1 each year; a 5% penalty is added each month after March 1, capped at 15%",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S58"
+            ],
+            "notes": "Same March 1 date as the Housing Inventory report, but a separate filing.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-05",
+            "label": "If the fee is still unpaid after June 1",
+            "value": "Unpaid fees are referred to the Bureau of Delinquent Revenue with additional costs added to the principal charge",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S58"
+            ],
+            "notes": "The same SF.gov page's timeline describes a July Notice of Delinquent Payment and 30 days to pay first - wording differs (flag F31).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-06",
+            "label": "How to pay",
+            "value": "Online by credit card or eCheck through the Rent Board Portal (preferred), in person at the Treasurer and Tax Collector, City Hall Room 140, or by mail to San Francisco Rent Board, PO Box 7429, San Francisco, CA 94120-7429; a dishonored payment adds a $50.00 Payment Failure Fee",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "No payments are accepted at the Rent Board office.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-07",
+            "label": "Exemption request window for the 2027 fee",
+            "value": "Request for Exemption due December 14, 2026; units without a valid and approved exemption are billed for the fee, due March 1, 2027",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S60"
+            ],
+            "notes": "The January 2027 Annual Notice is the invoice; the October 2026 notice is informational only.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-08",
+            "label": "An exemption request is annual and is not inventory reporting",
+            "value": "An exemption request must be submitted every year; requesting a fee exemption does not satisfy Housing Inventory reporting and reporting into the Housing Inventory does not satisfy a fee-exemption request",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S60"
+            ],
+            "notes": "Two separate filings, two separate consequences.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-09",
+            "label": "Owner-occupied exemption is narrow",
+            "value": "Available only for an owner-occupied unit that is not rented at any time, supported by a Homeowners' Exemption or an affidavit filed with the Rent Board; vacant units and units occupied only by relatives not on title do not qualify",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S58"
+            ],
+            "notes": "Not available for either rented unit in this case.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Recovering 50% from the tenant",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-10",
+            "label": "Maximum recoverable from the tenant",
+            "value": "Up to 50% of the annual fee, excluding penalties, and only from tenants in occupancy on November 1 of the applicable tax year, and only after the owner has paid the fee in full",
+            "status": "verified",
+            "source_ids": [
+              "S57",
+              "S58"
+            ],
+            "notes": "Sec. 37A.6 sets the cap; for the 2026-27 fee that is up to $29.50 per dwelling unit.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-11",
+            "label": "How the 50% may be collected",
+            "value": "By deducting it from the next security-deposit interest payment; a direct bill is allowed only where there is no or insufficient deposit, or where interest is already paid annually, and the bill must state the amount, that the purpose is to fund the Rent Board, and that it is due within 30 days",
+            "status": "verified",
+            "source_ids": [
+              "S57",
+              "S58"
+            ],
+            "notes": "Sec. 37A.6(b) allows banking; the same method then applies.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-12",
+            "label": "Consequences if the tenant does not pay",
+            "value": "Failure to pay the Rent Board fee is not a just cause for eviction; the owner must go to Small Claims Court, and the owner remains liable to the Rent Board whether or not any part is recovered",
+            "status": "verified",
+            "source_ids": [
+              "S57",
+              "S58"
+            ],
+            "notes": "Sec. 37A.6(d): the owner stays liable for the full fee.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-13",
+            "label": "Security-deposit interest rate that applies to a deduction",
+            "value": "4.2% for the period March 1, 2026 through February 28, 2027",
+            "status": "verified",
+            "source_ids": [
+              "S02"
+            ],
+            "notes": "Only relevant if the fee is recovered by deducting it from deposit interest.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Relationship to a rent increase and to business registration",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-14",
+            "label": "Does an unpaid or unpaid-in-part fee invalidate a rent increase?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S56",
+              "S57",
+              "S58",
+              "S53"
+            ],
+            "notes": "No official page read states that fee payment affects the validity or enforceability of an annual or banked increase; the license under Sec. 37.15(e) turns on substantially complying with the reporting obligation. Absence of a statement is not an official confirmation (flag F32).",
+            "flag_id": "F32",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-15",
+            "label": "Is the business registration number mandatory in the Housing Inventory filing?",
+            "value": "The ordinance requires 'the business registration number for the unit, if any'; the filing does not create a registration requirement by itself",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S07"
+            ],
+            "notes": "Answer 'if any' honestly rather than inventing a number.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-16",
+            "label": "City business registration for a small residential owner",
+            "value": "A person whose only San Francisco business is rental income from one residential structure consisting of fewer than four units is not, by reason of that fact alone, required to obtain a business registration certificate",
+            "status": "verified",
+            "source_ids": [
+              "S61",
+              "S62"
+            ],
+            "notes": "Whether both units are in one structure, and whether the owner has other business activity or payroll, is owner-supplied or unknown (flag F33).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-17",
+            "label": "Per-building treatment",
+            "value": "For business registration and gross receipts purposes a lessor is treated as a separate person for each individual building, and the Tax Collector decides what constitutes a separate building and how many units it has",
+            "status": "verified",
+            "source_ids": [
+              "S62"
+            ],
+            "notes": "Applies only if registration turns out to be required.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Applying the fee rules to the two anonymized units (conditional arithmetic)",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-18",
+            "label": "Fee for two rented units, 2026-27",
+            "value": "$118.00 (2 x $59.00) only if both units are billed at the 2026-27 rate",
+            "status": "analysis",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "The unit count is owner-supplied and the January 2027 Annual Notice (the actual bill) does not exist yet; not a finding (flag F33).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-19",
+            "label": "Maximum recoverable from the two units' tenants",
+            "value": "$59.00 in total ($29.50 per unit) only after the fee is paid in full and only from tenants in occupancy on November 1, 2026",
+            "status": "analysis",
+            "source_ids": [
+              "S57"
+            ],
+            "notes": "Conditional arithmetic; whether each tenant qualifies is unverified (flag F33).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-20",
+            "label": "Maximum late penalty on those two units",
+            "value": "$17.70 (15% x $118.00)",
+            "status": "analysis",
+            "source_ids": [
+              "S56",
+              "S58"
+            ],
+            "notes": "Statutory maximum illustration only; penalties are never recoverable from the tenant.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-21",
+            "label": "This case: fee billing and exemption status",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S56",
+              "S60"
+            ],
+            "notes": "No billing record, exemption status or portal data was supplied; blank rather than assumed (flag F33).",
+            "flag_id": "F33",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "2026-2027 compliance calendar",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "FEE-22",
+            "label": "October 2026",
+            "value": "Informational Notices mailed; the exemption window opens",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S60"
+            ],
+            "notes": "No payment is required with the informational notice.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-23",
+            "label": "December 14, 2026",
+            "value": "Deadline to submit a Request for Exemption for the 2027 fee",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S60"
+            ],
+            "notes": "Missed the window - the unit is billed and the fee is due.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-24",
+            "label": "January 2027",
+            "value": "Annual Notice (Rent Board Fee invoice) mailed",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S60"
+            ],
+            "notes": "Owners with a current exemption should not receive it.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-25",
+            "label": "March 1, 2027",
+            "value": "Rent Board Fee due without penalty; Housing Inventory report and update also due",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S07"
+            ],
+            "notes": "The license needed for a rent increase is generated from the Housing Inventory report, not from fee payment.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "FEE-26",
+            "label": "May 31, 2027",
+            "value": "Last day to pay with the full 15% penalty; on June 1 the bill is delinquent",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S58"
+            ],
+            "notes": "See flag F31 on the referral timing.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": {
+    "title": "Full Requirements List",
+    "description": "Every requirement, its status, and either an official source link or the repository record that shows the work.",
+    "sections": [
+      {
+        "title": "Project deliverables (repository records, not legal findings)",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Verification record",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "REQ-01",
+            "label": "Executive summary",
+            "value": "Published, with the Rent Board license answer first",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Also written out in EXECUTIVE_SUMMARY.md.",
+            "flag_id": "",
+            "artifact": "pages/summary.html"
           },
           {
             "id": "REQ-02",
             "label": "Public GitHub Pages site",
-            "value": "Built at repository root",
-            "status": "verified",
-            "source_ids": [
-              "S43"
-            ],
-            "notes": "Legacy Pages source main /.",
+            "value": "Built at the repository root (the existing Pages source is main /)",
+            "status": "project",
+            "source_ids": [],
+            "notes": "See flag F19 for the deploy record.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "index.html"
           },
           {
             "id": "REQ-03",
-            "label": "Collect / organize / analyze full requirements list",
+            "label": "Collect, organize and analyze a full requirements list",
             "value": "Published",
-            "status": "verified",
-            "source_ids": [
-              "S20"
-            ],
+            "status": "project",
+            "source_ids": [],
             "notes": "This page.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/requirements.html"
           },
           {
             "id": "REQ-04",
-            "label": "Answer all user questions",
+            "label": "Answer every user question",
             "value": "Published",
-            "status": "verified",
-            "source_ids": [
-              "S01",
-              "S27",
-              "S43"
-            ],
-            "notes": "Questions & Answers page.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Each answer carries an official source link or is blank and flagged.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/questions.html"
           },
           {
             "id": "REQ-05",
-            "label": "Review repo line by line",
+            "label": "Review the repository line by line",
             "value": "Done",
-            "status": "verified",
-            "source_ids": [
-              "S20"
-            ],
-            "notes": "REPO_REVIEW.md.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Re-review table appended 2026-11-08.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "REPO_REVIEW.md"
           },
           {
             "id": "REQ-06",
-            "label": "Verify every row against official sources",
-            "value": "Done; validation script re-checks",
-            "status": "verified",
-            "source_ids": [
-              "S01",
-              "S43"
-            ],
-            "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
+            "label": "Verify every row against an official source",
+            "value": "Done - re-run on every build",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Structural validation only; it is not legal verification.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "data/validation_report.json"
           },
           {
             "id": "REQ-07",
             "label": "Provide links for manual review",
-            "value": "Every row has official links",
-            "status": "verified",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Official source(s) column.",
+            "value": "Every finding row carries official links",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Category filter: the Sources page lists all sources.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/sources.html"
           },
           {
             "id": "REQ-08",
             "label": "Flag irregularities",
-            "value": "38 flags published",
-            "status": "verified",
-            "source_ids": [
-              "S01",
-              "S43"
-            ],
-            "notes": "Flagged for Review page.",
+            "value": "48 flags published",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Count is generated from the flag registry at build time.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/flagged.html"
           },
           {
             "id": "REQ-09",
-            "label": "No hallucinations / no inferred values",
-            "value": "Blank cells for unverified values",
-            "status": "verified",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Validation enforces blank + flag.",
+            "label": "No hallucinations and no inferred values",
+            "value": "Unconfirmed values are blank and flagged",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Validation fails the build if a needs-review row has a value.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "scripts/validate_site.py"
           },
           {
             "id": "REQ-10",
-            "label": "Personal information top priority",
-            "value": "Placeholders only; raw identifiers internal-only",
-            "status": "verified",
-            "source_ids": [
-              "S23"
-            ],
-            "notes": "Privacy scan in validation.",
+            "label": "Personal information is the top priority",
+            "value": "Placeholders only; raw identifiers are internal-only",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Privacy fingerprint scan plus an initials scan of the case files.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "scripts/validate_site.py"
           },
           {
             "id": "REQ-11",
             "label": "Anonymize all personal information",
             "value": "Tenant A-F placeholders",
-            "status": "verified",
-            "source_ids": [
-              "S23"
-            ],
-            "notes": "No real names, initials, contact details or exact address.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "No real names, initials, contact details or exact street address.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "data/case.json"
           },
           {
             "id": "REQ-12",
-            "label": "Keep dates and amounts same",
-            "value": "Preserved",
-            "status": "verified",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.",
+            "label": "Keep dates and amounts unchanged",
+            "value": "Preserved exactly",
+            "status": "project",
+            "source_ids": [],
+            "notes": "February 1, 2025; $3,995; April 1, 2026; $3,995; June 1, 2019; $3,150.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "data/case.json"
           },
           {
             "id": "REQ-13",
-            "label": "Clean landing page + category subpages",
+            "label": "Clean landing page plus subpages organized by category",
             "value": "Published",
-            "status": "verified",
-            "source_ids": [
-              "S43"
-            ],
-            "notes": "index.html and pages/.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Navigation lists every category page.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "index.html"
           },
           {
             "id": "REQ-14",
-            "label": "Simple dashboard UI",
+            "label": "Simple, dashboard-style user interface",
             "value": "Published",
-            "status": "verified",
-            "source_ids": [
-              "S43"
-            ],
-            "notes": "Cards and status badges.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Cards, status badges and a quick-navigation table.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "index.html"
           },
           {
             "id": "REQ-15",
-            "label": "All entries/findings in easy-read tables",
+            "label": "All entries and findings in easy-to-read tables",
             "value": "Published",
-            "status": "verified",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Tables on every subpage.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Every category page is a table.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/summary.html"
           },
           {
             "id": "REQ-16",
-            "label": "Analysis / findings",
+            "label": "Analysis and findings",
             "value": "Published",
-            "status": "verified",
-            "source_ids": [
-              "S42"
-            ],
-            "notes": "Analysis & Findings page.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Includes the one-unit-versus-both-units finding.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/analysis.html"
           },
           {
             "id": "REQ-17",
             "label": "Clearly labeled Flagged for Review page with source links",
             "value": "Published",
-            "status": "verified",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "pages/flagged.html.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Flagged items do not block the merge.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/flagged.html"
           },
           {
             "id": "REQ-18",
-            "label": "Verified source-linked tables",
+            "label": "Source-linked tables",
             "value": "Published",
-            "status": "verified",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Sources page.",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Every finding row shows its source IDs as links.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/sources.html"
           },
           {
             "id": "REQ-19",
-            "label": "PR from integration branch to main",
+            "label": "Pull request from the integration branch to main",
             "value": "",
             "status": "needs review",
-            "source_ids": [
-              "S43"
-            ],
-            "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
+            "source_ids": [],
+            "notes": "A page cannot cite its own merge; the PR link and merge result are recorded in COORDINATION.md and on data/validation_report.json. Earlier PRs (#1-#13) were merged and are recorded there.",
             "flag_id": "F19",
-            "source_note": ""
+            "artifact": "COORDINATION.md"
           },
           {
             "id": "REQ-20",
-            "label": "Merged PR + successful Pages deployment",
+            "label": "Merged PR and successful GitHub Pages deployment",
             "value": "",
             "status": "needs review",
-            "source_ids": [
-              "S43"
-            ],
-            "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
+            "source_ids": [],
+            "notes": "GitHub Pages API status is recorded in COORDINATION.md for each merge; a deployment of this very commit cannot be self-certified in the same commit.",
             "flag_id": "F19",
-            "source_note": ""
+            "artifact": "COORDINATION.md"
           },
           {
             "id": "REQ-22",
             "label": "Step-by-step licensing and notice process",
-            "value": "Published - pages/process.html with 12 numbered steps",
+            "value": "Published - 12 numbered steps, each with official links",
             "status": "verified",
             "source_ids": [
               "S53",
               "S01",
               "S35"
             ],
-            "notes": "Every step carries official links.",
+            "notes": "See the Step-by-Step License page.",
             "flag_id": "",
             "source_note": ""
           },
@@ -1042,25 +1397,37 @@
               "S53",
               "S04"
             ],
-            "notes": "Licensing condition is in the ordinance itself.",
+            "notes": "The licensing condition is in the ordinance itself.",
             "flag_id": "",
             "source_note": ""
           },
           {
             "id": "REQ-24",
-            "label": "Independent re-verification of the combined data",
-            "value": "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run",
+            "label": "Rent Board Fee integrated as a separate obligation",
+            "value": "Published - who pays, $59.00 for 2026-27, deadlines, 50% recovery",
             "status": "verified",
             "source_ids": [
-              "S01",
-              "S07",
-              "S53",
-              "S02"
+              "S56",
+              "S57",
+              "S58",
+              "S60"
             ],
-            "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
+            "notes": "Re-verified 2026-11-08; see the Rent Board Fee page.",
             "flag_id": "",
             "source_note": ""
-          },
+          }
+        ]
+      },
+      {
+        "title": "Content requirements verified against official sources",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
           {
             "id": "REQ-21",
             "label": "Conservative compliance checklist capable of tenant-lawyer review",
@@ -3474,15 +3841,12 @@
           {
             "id": "AN-15",
             "label": "Flagged items do not block",
-            "value": "All 38 flags published with source links",
-            "status": "verified",
-            "source_ids": [
-              "S01",
-              "S43"
-            ],
-            "notes": "Needs review does not block merge.",
+            "value": "All 48 flags are published with links",
+            "status": "project",
+            "source_ids": [],
+            "notes": "Needs review does not block the merge.",
             "flag_id": "",
-            "source_note": ""
+            "artifact": "pages/flagged.html"
           },
           {
             "id": "AN-20",

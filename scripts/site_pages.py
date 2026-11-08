@@ -1,7 +1,10 @@
 """Page definitions: every row has source_ids, status, value, notes and optional flag_id."""
 
+from site_flags import FLAGS
+
 COLUMNS = ["Item", "Value / finding", "Status", "Official source(s)", "Notes / flag"]
 OWNER_COLUMNS = ["Item", "Owner-supplied value", "Status", "Source", "Notes / flag"]
+PROJECT_COLUMNS = ["Item", "Value / finding", "Status", "Verification record", "Notes / flag"]
 
 def row(id, label, value, status, source_ids, notes="", flag_id="", source_note=""):
     return {"id": id, "label": label, "value": value, "status": status, "source_ids": source_ids,
@@ -11,6 +14,16 @@ def owned(id, label, value, notes=""):
     """Owner-supplied case fact: published, anonymized, and explicitly not an official source."""
     return {"id": id, "label": label, "value": value, "status": "owner supplied", "source_ids": [],
             "notes": notes, "flag_id": "", "source_note": "Owner intake (anonymized)"}
+
+def project(id, label, value, artifact, notes=""):
+    """This project's own deliverable: checked against a repository artifact, not a legal source.
+
+    No official government source can confirm that a website exists or that a pull request was
+    opened, so citing one would be a fabricated citation. The artifact path is published instead
+    and the row is labelled `project record` (see flag F37).
+    """
+    return {"id": id, "label": label, "value": value, "status": "project", "source_ids": [],
+            "notes": notes, "flag_id": "", "artifact": artifact}
 
 PAGES = {
     "summary": {
@@ -85,34 +98,80 @@ PAGES = {
             ]},
         ],
     },
+    "fee": {
+        "title": "Rent Board Fee - a second, separate obligation",
+        "description": "The annual Rent Board Fee under Administrative Code Chapter 37A: who pays, the 2026-27 amount, deadlines, penalties, exemptions and the 50% tenant recovery. Every row re-verified 2026-11-08.",
+        "sections": [
+            {"title": "Who pays, how much, and when", "columns": COLUMNS, "rows": [
+                row("FEE-01", "Who pays the Rent Board Fee", "The owner of every residential dwelling unit or guest unit pays a Rent Board Fee each year unless a current Rent Board exemption or an Assessor-Recorder Homeowners' Exemption is on file", "verified", ["S56", "S58"], "This fee is a separate obligation from the Rent Increase License; paying one does not satisfy the other. Sec. 37A.1 and Sec. 37A.4 of the Administrative Code."),
+                row("FEE-02", "Which units are charged", "All residential units unless currently exempt, including single-family homes and condominiums, units built after 1979, vacant units, units occupied by friends or family, and units exempt from the rent-increase limits under Costa-Hawkins", "verified", ["S56", "S58"], "A tenant-occupied unit is not covered by the owner-occupied exemption, which Sec. 37A.1(f) limits to an owner-occupied unit not rented at any time with an affidavit on file."),
+                row("FEE-03", "Amount for the 2026-2027 tax year", "$59.00 per dwelling unit; $29.50 per guest unit (SRO / residential hotel room)", "verified", ["S56", "S59"], "The 2026-27 figure is the one published on the SF.gov fee page; Form 573's newest row is tax year 7/25-6/26 and also shows $59.00 (flag F34)."),
+                row("FEE-04", "Deadline and late penalty", "Due March 1 each year; a 5% penalty is added each month after March 1, capped at 15%", "verified", ["S56", "S58"], "Same March 1 date as the Housing Inventory report, but a separate filing."),
+                row("FEE-05", "If the fee is still unpaid after June 1", "Unpaid fees are referred to the Bureau of Delinquent Revenue with additional costs added to the principal charge", "verified", ["S56", "S58"], "The same SF.gov page's timeline describes a July Notice of Delinquent Payment and 30 days to pay first - wording differs (flag F31)."),
+                row("FEE-06", "How to pay", "Online by credit card or eCheck through the Rent Board Portal (preferred), in person at the Treasurer and Tax Collector, City Hall Room 140, or by mail to San Francisco Rent Board, PO Box 7429, San Francisco, CA 94120-7429; a dishonored payment adds a $50.00 Payment Failure Fee", "verified", ["S56"], "No payments are accepted at the Rent Board office."),
+                row("FEE-07", "Exemption request window for the 2027 fee", "Request for Exemption due December 14, 2026; units without a valid and approved exemption are billed for the fee, due March 1, 2027", "verified", ["S56", "S60"], "The January 2027 Annual Notice is the invoice; the October 2026 notice is informational only."),
+                row("FEE-08", "An exemption request is annual and is not inventory reporting", "An exemption request must be submitted every year; requesting a fee exemption does not satisfy Housing Inventory reporting and reporting into the Housing Inventory does not satisfy a fee-exemption request", "verified", ["S56", "S60"], "Two separate filings, two separate consequences."),
+                row("FEE-09", "Owner-occupied exemption is narrow", "Available only for an owner-occupied unit that is not rented at any time, supported by a Homeowners' Exemption or an affidavit filed with the Rent Board; vacant units and units occupied only by relatives not on title do not qualify", "verified", ["S56", "S58"], "Not available for either rented unit in this case."),
+            ]},
+            {"title": "Recovering 50% from the tenant", "columns": COLUMNS, "rows": [
+                row("FEE-10", "Maximum recoverable from the tenant", "Up to 50% of the annual fee, excluding penalties, and only from tenants in occupancy on November 1 of the applicable tax year, and only after the owner has paid the fee in full", "verified", ["S57", "S58"], "Sec. 37A.6 sets the cap; for the 2026-27 fee that is up to $29.50 per dwelling unit."),
+                row("FEE-11", "How the 50% may be collected", "By deducting it from the next security-deposit interest payment; a direct bill is allowed only where there is no or insufficient deposit, or where interest is already paid annually, and the bill must state the amount, that the purpose is to fund the Rent Board, and that it is due within 30 days", "verified", ["S57", "S58"], "Sec. 37A.6(b) allows banking; the same method then applies."),
+                row("FEE-12", "Consequences if the tenant does not pay", "Failure to pay the Rent Board fee is not a just cause for eviction; the owner must go to Small Claims Court, and the owner remains liable to the Rent Board whether or not any part is recovered", "verified", ["S57", "S58"], "Sec. 37A.6(d): the owner stays liable for the full fee."),
+                row("FEE-13", "Security-deposit interest rate that applies to a deduction", "4.2% for the period March 1, 2026 through February 28, 2027", "verified", ["S02"], "Only relevant if the fee is recovered by deducting it from deposit interest."),
+            ]},
+            {"title": "Relationship to a rent increase and to business registration", "columns": COLUMNS, "rows": [
+                row("FEE-14", "Does an unpaid or unpaid-in-part fee invalidate a rent increase?", "", "needs review", ["S56", "S57", "S58", "S53"], "No official page read states that fee payment affects the validity or enforceability of an annual or banked increase; the license under Sec. 37.15(e) turns on substantially complying with the reporting obligation. Absence of a statement is not an official confirmation (flag F32).", "F32"),
+                row("FEE-15", "Is the business registration number mandatory in the Housing Inventory filing?", "The ordinance requires 'the business registration number for the unit, if any'; the filing does not create a registration requirement by itself", "verified", ["S53", "S07"], "Answer 'if any' honestly rather than inventing a number."),
+                row("FEE-16", "City business registration for a small residential owner", "A person whose only San Francisco business is rental income from one residential structure consisting of fewer than four units is not, by reason of that fact alone, required to obtain a business registration certificate", "verified", ["S61", "S62"], "Whether both units are in one structure, and whether the owner has other business activity or payroll, is owner-supplied or unknown (flag F33)."),
+                row("FEE-17", "Per-building treatment", "For business registration and gross receipts purposes a lessor is treated as a separate person for each individual building, and the Tax Collector decides what constitutes a separate building and how many units it has", "verified", ["S62"], "Applies only if registration turns out to be required."),
+            ]},
+            {"title": "Applying the fee rules to the two anonymized units (conditional arithmetic)", "columns": COLUMNS, "rows": [
+                row("FEE-18", "Fee for two rented units, 2026-27", "$118.00 (2 x $59.00) only if both units are billed at the 2026-27 rate", "analysis", ["S56"], "The unit count is owner-supplied and the January 2027 Annual Notice (the actual bill) does not exist yet; not a finding (flag F33)."),
+                row("FEE-19", "Maximum recoverable from the two units' tenants", "$59.00 in total ($29.50 per unit) only after the fee is paid in full and only from tenants in occupancy on November 1, 2026", "analysis", ["S57"], "Conditional arithmetic; whether each tenant qualifies is unverified (flag F33)."),
+                row("FEE-20", "Maximum late penalty on those two units", "$17.70 (15% x $118.00)", "analysis", ["S56", "S58"], "Statutory maximum illustration only; penalties are never recoverable from the tenant."),
+                row("FEE-21", "This case: fee billing and exemption status", "", "needs review", ["S56", "S60"], "No billing record, exemption status or portal data was supplied; blank rather than assumed (flag F33).", "F33"),
+            ]},
+            {"title": "2026-2027 compliance calendar", "columns": COLUMNS, "rows": [
+                row("FEE-22", "October 2026", "Informational Notices mailed; the exemption window opens", "verified", ["S56", "S60"], "No payment is required with the informational notice."),
+                row("FEE-23", "December 14, 2026", "Deadline to submit a Request for Exemption for the 2027 fee", "verified", ["S56", "S60"], "Missed the window - the unit is billed and the fee is due."),
+                row("FEE-24", "January 2027", "Annual Notice (Rent Board Fee invoice) mailed", "verified", ["S56", "S60"], "Owners with a current exemption should not receive it."),
+                row("FEE-25", "March 1, 2027", "Rent Board Fee due without penalty; Housing Inventory report and update also due", "verified", ["S56", "S07"], "The license needed for a rent increase is generated from the Housing Inventory report, not from fee payment."),
+                row("FEE-26", "May 31, 2027", "Last day to pay with the full 15% penalty; on June 1 the bill is delinquent", "verified", ["S56", "S58"], "See flag F31 on the referral timing."),
+            ]},
+        ],
+    },
     "requirements": {
         "title": "Full Requirements List",
-        "description": "Every active requirement, status and official source link.",
+        "description": "Every requirement, its status, and either an official source link or the repository record that shows the work.",
         "sections": [
-            {"title": "Requirements", "columns": COLUMNS, "rows": [
-                row("REQ-01", "Executive summary", "Published", "verified", ["S01", "S27", "S43"], "Executive Summary page and EXECUTIVE_SUMMARY.md."),
-                row("REQ-02", "Public GitHub Pages site", "Built at repository root", "verified", ["S43"], "Legacy Pages source main /."),
-                row("REQ-03", "Collect / organize / analyze full requirements list", "Published", "verified", ["S20"], "This page."),
-                row("REQ-04", "Answer all user questions", "Published", "verified", ["S01", "S27", "S43"], "Questions & Answers page."),
-                row("REQ-05", "Review repo line by line", "Done", "verified", ["S20"], "REPO_REVIEW.md."),
-                row("REQ-06", "Verify every row against official sources", "Done; validation script re-checks", "verified", ["S01", "S43"], "SOURCES.md, VERIFICATION.md, data/validation_report.json."),
-                row("REQ-07", "Provide links for manual review", "Every row has official links", "verified", ["S01"], "Official source(s) column."),
-                row("REQ-08", "Flag irregularities", "38 flags published", "verified", ["S01", "S43"], "Flagged for Review page."),
-                row("REQ-09", "No hallucinations / no inferred values", "Blank cells for unverified values", "verified", ["S01"], "Validation enforces blank + flag."),
-                row("REQ-10", "Personal information top priority", "Placeholders only; raw identifiers internal-only", "verified", ["S23"], "Privacy scan in validation."),
-                row("REQ-11", "Anonymize all personal information", "Tenant A-F placeholders", "verified", ["S23"], "No real names, initials, contact details or exact address."),
-                row("REQ-12", "Keep dates and amounts same", "Preserved", "verified", ["S01"], "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150."),
-                row("REQ-13", "Clean landing page + category subpages", "Published", "verified", ["S43"], "index.html and pages/."),
-                row("REQ-14", "Simple dashboard UI", "Published", "verified", ["S43"], "Cards and status badges."),
-                row("REQ-15", "All entries/findings in easy-read tables", "Published", "verified", ["S01"], "Tables on every subpage."),
-                row("REQ-16", "Analysis / findings", "Published", "verified", ["S42"], "Analysis & Findings page."),
-                row("REQ-17", "Clearly labeled Flagged for Review page with source links", "Published", "verified", ["S01"], "pages/flagged.html."),
-                row("REQ-18", "Verified source-linked tables", "Published", "verified", ["S01"], "Sources page."),
-                row("REQ-19", "PR from integration branch to main", "", "needs review", ["S43"], "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.", "F19"),
-                row("REQ-20", "Merged PR + successful Pages deployment", "", "needs review", ["S43"], "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.", "F19"),
-                row("REQ-22", "Step-by-step licensing and notice process", "Published - pages/process.html with 12 numbered steps", "verified", ["S53", "S01", "S35"], "Every step carries official links."),
-                row("REQ-23", "Ordinance-level license citations", "Published - Sec. 37.3(a)(1), Sec. 37.15 and Form 571", "verified", ["S21", "S53", "S04"], "Licensing condition is in the ordinance itself."),
-                row("REQ-24", "Independent re-verification of the combined data", "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run", "verified", ["S01", "S07", "S53", "S02"], "Recorded in VERIFICATION.md and COORDINATION.md."),
+            {"title": "Project deliverables (repository records, not legal findings)", "columns": PROJECT_COLUMNS, "rows": [
+                project("REQ-01", "Executive summary", "Published, with the Rent Board license answer first", "pages/summary.html", "Also written out in EXECUTIVE_SUMMARY.md."),
+                project("REQ-02", "Public GitHub Pages site", "Built at the repository root (the existing Pages source is main /)", "index.html", "See flag F19 for the deploy record."),
+                project("REQ-03", "Collect, organize and analyze a full requirements list", "Published", "pages/requirements.html", "This page."),
+                project("REQ-04", "Answer every user question", "Published", "pages/questions.html", "Each answer carries an official source link or is blank and flagged."),
+                project("REQ-05", "Review the repository line by line", "Done", "REPO_REVIEW.md", "Re-review table appended 2026-11-08."),
+                project("REQ-06", "Verify every row against an official source", "Done - re-run on every build", "data/validation_report.json", "Structural validation only; it is not legal verification."),
+                project("REQ-07", "Provide links for manual review", "Every finding row carries official links", "pages/sources.html", "Category filter: the Sources page lists all sources."),
+                project("REQ-08", "Flag irregularities", "{} flags published".format(len(FLAGS)), "pages/flagged.html", "Count is generated from the flag registry at build time."),
+                project("REQ-09", "No hallucinations and no inferred values", "Unconfirmed values are blank and flagged", "scripts/validate_site.py", "Validation fails the build if a needs-review row has a value."),
+                project("REQ-10", "Personal information is the top priority", "Placeholders only; raw identifiers are internal-only", "scripts/validate_site.py", "Privacy fingerprint scan plus an initials scan of the case files."),
+                project("REQ-11", "Anonymize all personal information", "Tenant A-F placeholders", "data/case.json", "No real names, initials, contact details or exact street address."),
+                project("REQ-12", "Keep dates and amounts unchanged", "Preserved exactly", "data/case.json", "February 1, 2025; $3,995; April 1, 2026; $3,995; June 1, 2019; $3,150."),
+                project("REQ-13", "Clean landing page plus subpages organized by category", "Published", "index.html", "Navigation lists every category page."),
+                project("REQ-14", "Simple, dashboard-style user interface", "Published", "index.html", "Cards, status badges and a quick-navigation table."),
+                project("REQ-15", "All entries and findings in easy-to-read tables", "Published", "pages/summary.html", "Every category page is a table."),
+                project("REQ-16", "Analysis and findings", "Published", "pages/analysis.html", "Includes the one-unit-versus-both-units finding."),
+                project("REQ-17", "Clearly labeled Flagged for Review page with source links", "Published", "pages/flagged.html", "Flagged items do not block the merge."),
+                project("REQ-18", "Source-linked tables", "Published", "pages/sources.html", "Every finding row shows its source IDs as links."),
+                {"id": "REQ-19", "label": "Pull request from the integration branch to main", "value": "", "status": "needs review", "source_ids": [],
+                 "notes": "A page cannot cite its own merge; the PR link and merge result are recorded in COORDINATION.md and on data/validation_report.json. Earlier PRs (#1-#13) were merged and are recorded there.", "flag_id": "F19", "artifact": "COORDINATION.md"},
+                {"id": "REQ-20", "label": "Merged PR and successful GitHub Pages deployment", "value": "", "status": "needs review", "source_ids": [],
+                 "notes": "GitHub Pages API status is recorded in COORDINATION.md for each merge; a deployment of this very commit cannot be self-certified in the same commit.", "flag_id": "F19", "artifact": "COORDINATION.md"},
+                row("REQ-22", "Step-by-step licensing and notice process", "Published - 12 numbered steps, each with official links", "verified", ["S53", "S01", "S35"], "See the Step-by-Step License page."),
+                row("REQ-23", "Ordinance-level license citations", "Published - Sec. 37.3(a)(1), Sec. 37.15 and Form 571", "verified", ["S21", "S53", "S04"], "The licensing condition is in the ordinance itself."),
+                row("REQ-24", "Rent Board Fee integrated as a separate obligation", "Published - who pays, $59.00 for 2026-27, deadlines, 50% recovery", "verified", ["S56", "S57", "S58", "S60"], "Re-verified 2026-11-08; see the Rent Board Fee page."),
+            ]},
+            {"title": "Content requirements verified against official sources", "columns": COLUMNS, "rows": [
                 row("REQ-21", "Conservative compliance checklist capable of tenant-lawyer review", "Published", "analysis", ["S01", "S07", "S35", "S42"], "No attorney approval or guarantee."),
             ]},
         ],
@@ -395,7 +454,7 @@ PAGES = {
                 row("AN-12", "Individual figures", "June 2024 workload is narrow formal-petition evidence", "verified", ["S29"], "No generalization."),
                 row("AN-13", "Tenant-lawyer review", "Checklist capable of review; no approval claimed", "analysis", ["S23", "S24", "S25", "S30", "S31"], "TRC is eviction-focused."),
                 row("AN-14", "Conservative compliance checklist", "At most ordinary 1.6% annual allowable increase (or less) on each eligible unit, identical written neutral policy, license, notice, dates, calculations, recordkeeping", "analysis", ["S01", "S07", "S35", "S42"], "No guarantee of no complaint/lawsuit."),
-                row("AN-15", "Flagged items do not block", "All 38 flags published with source links", "verified", ["S01", "S43"], "Needs review does not block merge."),
+                project("AN-15", "Flagged items do not block", "All {} flags are published with links".format(len(FLAGS)), "pages/flagged.html", "Needs review does not block the merge."),
                 row("AN-20", "What a tenant-side reviewer would test", "1) current license on the effective date, 2) correct rate for that date, 3) 12 months since the last increase, 4) base rent only and no rounding up, 5) notice contents, lead time and delivery, 6) no extra charge for an added roommate, 7) no retaliation or bad-faith harassment", "analysis", ["S01", "S05", "S07", "S35", "S17", "S22"], "Each item is checkable against the official pages linked here; passing them is not a certification of lawfulness."),
                 row("AN-16", "The license is a precondition, not paperwork", "An increase noticed while the unit is unlicensed may be null and void or unenforceable with refund exposure, and the Rent Board issues noncompliance notices; its January 2026 minutes record more than 23,000 licenses", "verified", ["S08", "S53", "S28"], "Checks should look at the effective date, not today's status."),
                 row("AN-17", "Individual owners are not exempt", "The requirement follows rent-controlled status; there is no owner-size exemption, and buildings under 10 units have reported since March 1, 2023", "verified", ["S07", "S53", "S08"], "Direct answer to the owner's question."),

@@ -411,5 +411,82 @@
       "S42"
     ],
     "status": "needs review"
+  },
+  {
+    "id": "F31",
+    "title": "Fee-page collection timing differs inside one SF.gov page",
+    "detail": "The summary text and Administrative Code Sec. 37A.4 refer unpaid fees to the Bureau of Delinquent Revenue as of June 1, while the same page's timeline says the June 1 bill becomes delinquent, a Notice of Delinquent Payment is mailed in July, and the owner then has 30 days before referral. Both readings are published; neither is chosen. Confirm with the Rent Board (311) before relying on a date.",
+    "source_ids": [
+      "S56",
+      "S58"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F32",
+    "title": "No official statement links fee payment to a rent increase's validity",
+    "detail": "No sentence on the Rent Board Fee page, the recovery page, Chapter 37A or Sec. 37.15 states that an unpaid or partly unpaid Rent Board Fee affects the validity or enforceability of an annual or banked increase; the license under Sec. 37.15(e) turns on substantially complying with the reporting obligation. This is an absence finding, not an official confirmation that the two are unrelated. The fee is published as its own obligation with its own penalties and liens-free collection route.",
+    "source_ids": [
+      "S56",
+      "S57",
+      "S58",
+      "S53"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F33",
+    "title": "This case's fee billing, exemption and unit-count facts are unverified",
+    "detail": "The 2-unit count, whether both units are in one structure, exemption status, the January 2027 Annual Notice (the actual bill and PIN) and any other business activity or payroll are owner-supplied or unknown. The $118.00 / $59.00 / $17.70 figures are conditional arithmetic on the official $59.00 rate, not findings about this property.",
+    "source_ids": [
+      "S56",
+      "S59",
+      "S60"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F34",
+    "title": "Form 573 covers 7/1999-6/2026 and is titled 25-26",
+    "detail": "The form's newest row is tax year 7/25-6/26 at $59.00 per unit and there is no 7/26-6/27 row yet, so the 2026-2027 amount ($59.00) is taken from the SF.gov Rent Board Fee page rather than from the form. The document title also says 25-26 while the published URL path carries an older period; this is a metadata mismatch, not a rate conflict.",
+    "source_ids": [
+      "S59",
+      "S56"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F35",
+    "title": "Older 'Pay your Rent Board fee' service page still shows 2023 dates",
+    "detail": "The service page at sf.gov/pay-your-rent-board-fee still says 'If the fee is not paid in full by March 1, 2023' and 'June 1, 2023'. Only the current fee page (sf.gov/rent-board-fee) and the 2027 Informational Notice are used for amounts and dates on this site. Manual review should treat any 2023 date on that page as stale.",
+    "source_ids": [
+      "S56",
+      "S60"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F36",
+    "title": "Privacy: the earlier raw identifier tokens remain reachable in public git history",
+    "detail": "Removing the tokens from the current validation report did not remove them from the public repository. An audit recorded that every commit from the 2026-11-06 report until the fix still contains them, that the diffs of PRs #1, #2, #4, #5 and #9 show them, and that two session branch tips still carry them. Agents cannot rewrite history or delete branches under this session's rules; the owner options (delete the two merged session branches, rewrite history with git filter-repo, ask GitHub Support, or make the repository private) are listed in research/privacy/HISTORY_EXPOSURE.md. The file itself contains no raw identifier.",
+    "source_ids": [],
+    "artifact": "research/privacy/HISTORY_EXPOSURE.md",
+    "status": "needs review"
+  },
+  {
+    "id": "F37",
+    "title": "Repository-integrity defect: merged conflict markers were published",
+    "detail": "The merge that produced commit d63dee4 left three unresolved Git conflict markers (a 'less-than' marker line reading HEAD, an equals marker line, and a 'greater-than' marker line reading origin/main) inside COORDINATION.md in the public repository. Both sides of the conflicted record were kept and only the marker lines were removed on 2026-11-08. The validator now fails the build if any published file contains a conflict marker, so the defect cannot recur silently.",
+    "source_ids": [],
+    "artifact": "COORDINATION.md",
+    "status": "needs review"
+  },
+  {
+    "id": "F38",
+    "title": "Rows about this project's own deliverables cite repository artifacts, not official sources",
+    "detail": "A requirement such as 'a GitHub Pages site was built' or 'a pull request was opened' cannot be confirmed by any government source, and citing one (for example HUD Fair Market Rents) would be a fabricated citation. Those rows are labelled 'project record' and link the repository artifact that shows the work. Every legal, rate, notice and fee finding still carries official source links. This is a deliberate, visible deviation from 'every row links an official site', disclosed so it can be reviewed.",
+    "source_ids": [],
+    "artifact": "pages/requirements.html",
+    "status": "needs review"
   }
 ]

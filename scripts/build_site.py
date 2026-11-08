@@ -34,8 +34,8 @@ def source_links(ids):
 def badge(status):
     if status == "owner supplied":
         return '<span class="badge owner">owner-supplied</span>'
-    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis"}.get(status, "analysis")
-    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis"}.get(status, status)
+    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis", "project": "project"}.get(status, "analysis")
+    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis", "project": "project record"}.get(status, status)
     return '<span class="badge {}">{}</span>'.format(cls, e(label))
 
 def flag_link(flag_id, in_pages):
@@ -63,6 +63,10 @@ def render_table(section, in_pages=True):
         out.append("<td>{}</td>".format(badge(r["status"])))
         if r.get("status") == "owner supplied" and r.get("source_note"):
             out.append('<td><span class="owner-src">{}</span></td>'.format(e(r["source_note"])))
+        elif r.get("artifact"):
+            prefix = "../" if in_pages else ""
+            out.append('<td><a class="artifact" href="{}{}">{}</a><br><span class="small">repository artifact</span></td>'.format(
+                prefix, e(r["artifact"]), e(r["artifact"])))
         else:
             out.append("<td>{}</td>".format(source_links(r.get("source_ids", []))))
         out.append("<td>{}</td>".format(notes))
@@ -119,7 +123,7 @@ def page_html(slug, page):
     return "".join(out)
 
 def sources_page_html():
-    out = [header_html("Sources", "All 52 official sources used for verification, with manual-review links.", "sources", True)]
+    out = [header_html("Sources", "All {} official sources used for verification, with manual-review links.".format(len(D.SOURCES)), "sources", True)]
     out.append('<section class="hero"><h2>Official source ledger</h2><p>Every published table row links to one or more of these official government or SEC sources.</p><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
     rows = []
     for sid, src in sorted(D.SOURCES.items()):
@@ -143,8 +147,15 @@ def flagged_page_html():
     out.append('<section class="hero"><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
     out.append("<section><h2>All {} flagged items</h2>".format(len(D.FLAGS)))
     for f in D.FLAGS:
+        if f.get("artifact"):
+            src = '<a class="artifact" href="../{}">{}</a> <span class="small">(repository record)</span>'.format(
+                e(f["artifact"]), e(f["artifact"]))
+            if f.get("source_ids"):
+                src = src + " &middot; " + source_links(f["source_ids"])
+        else:
+            src = source_links(f.get("source_ids", []))
         out.append('<div class="flagitem" id="{}"><h3><span class="id">{}</span> &mdash; {}</h3><p>{}</p><p>{} &middot; <strong>{}</strong></p></div>'.format(
-            e(f["id"]), e(f["id"]), e(f["title"]), e(f["detail"]), source_links(f["source_ids"]), e(f["status"])
+            e(f["id"]), e(f["id"]), e(f["title"]), e(f["detail"]), src, e(f["status"])
         ))
     out.append("</section>")
     out.append(footer_html(True))
@@ -164,14 +175,17 @@ def index_html():
     out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
                '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
                '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
-               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a></p>'
+               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; '
+               '<a class="cta" href="pages/fee.html">Rent Board Fee: $59 per unit, due March 1 &rarr;</a></p>'
+               '<p class="small">The Rent Board Fee is a <strong>separate</strong> annual obligation from the license: paying it does not obtain a license, and reporting into the Housing Inventory does not satisfy a fee-exemption request.</p>'
                '<div class="disclaimer">{}</div></section>'.format(
                    source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
     out.append('<section class="hero"><h2>How to read this dashboard</h2>'
                '<p>Every finding row carries a <span class="badge verified">verified</span> badge and one or more official source links (SF.gov, the Rent Ordinance, California statute, eCFR, HUD, SEC). '
                '<span class="badge analysis">analysis</span> means a reasoned conclusion drawn from those rules plus the owner-supplied facts. '
                '<span class="badge review">needs review</span> means the value could not be confirmed officially, so the cell is left blank and the item is published on the Flagged for Review page. '
-               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings.</p>'
+               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings. '
+               '<span class="badge project">project record</span> means the row is about this project\'s own deliverable and links the repository artifact that shows it, because no government source can confirm that a website was built or a pull request opened (flag F38).</p>'
                '<p class="small">Start with the Executive Summary for the answer, the Step-by-Step License page for the order of operations, the Anonymized Case for the two units, and the Flagged for Review page for anything still open.</p></section>')
     out.append('<div class="cards">')
     for label, value, slug, desc in D.CARDS:
@@ -186,7 +200,7 @@ def index_html():
     out.append('<section><h2>Quick navigation</h2><div class="tablewrap"><table><thead><tr><th>Category</th><th>What it contains</th><th>Official source(s)</th></tr></thead><tbody>')
     for slug, title in D.NAV:
         if slug == "sources":
-            desc = "All 55 official sources with manual-review links."
+            desc = "All {} official sources with manual-review links.".format(len(D.SOURCES))
             sids = ["S01", "S07", "S53", "S27", "S43"]
         elif slug == "flagged":
             desc = "Clearly labeled irregularities and unverified items, each with official source links."

@@ -5,8 +5,8 @@ Public GitHub Pages research site for "Rental increase SF": executive summary, o
 Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
 - `index.html` - clean landing page / dashboard.
-- `pages/` - category subpages with easy-read tables.
-- `data/` - JSON source of truth; every row has official source IDs.
+- `pages/` - category subpages with easy-read tables, including `pages/fee.html` (Rent Board Fee) and `pages/process.html` (step-by-step license).
+- `data/` - JSON source of truth; every legal/fee finding row has official source IDs, and rows about this project's own deliverables link a repository artifact and are labelled `project record`.
 - `SOURCES.md` / `VERIFICATION.md` / `research/` - official source ledger and line-by-line verification.
 - `EXECUTIVE_SUMMARY.md` - standalone executive summary.
 - `FLAGGED_FOR_REVIEW.md` / `pages/flagged.html` - flagged irregularities with links.

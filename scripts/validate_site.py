@@ -21,7 +21,7 @@ OFFICIAL_DOMAINS = {
     "sf.gov", "media.api.sf.gov", "sfplanninggis.org", "default.sfplanning.org",
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
-    "sfrb.org",
+    "sfrb.org", "sftreasurer.org",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -69,12 +69,22 @@ def main():
     row_count = 0
     needs_review_count = 0
     owner_rows = []
+    project_rows = []
     row_errors = []
     for slug, page in pages.items():
         for sec in page["sections"]:
             for r in sec["rows"]:
                 row_count += 1
                 rid = r.get("id", "?")
+                if r.get("status") == "project":
+                    project_rows.append(rid)
+                    if r.get("source_ids"):
+                        row_errors.append("{} is a project record but carries official source_ids".format(rid))
+                    if not r.get("artifact"):
+                        row_errors.append("{} is a project record but has no artifact".format(rid))
+                    if not r.get("value"):
+                        row_errors.append("{} is a project record but has no value".format(rid))
+                    continue
                 if r.get("status") == "owner supplied":
                     owner_rows.append(rid)
                     if r.get("source_ids"):
@@ -84,9 +94,11 @@ def main():
                     if not r.get("value"):
                         row_errors.append("{} is owner-supplied but has no value".format(rid))
                     continue
-                if not r.get("source_ids"):
-                    row_errors.append("{} has no source_ids".format(rid))
-                for sid in r["source_ids"]:
+                if not r.get("source_ids") and not r.get("artifact"):
+                    row_errors.append("{} has neither source_ids nor a repository artifact".format(rid))
+                if r.get("artifact") and not (ROOT / r["artifact"]).exists():
+                    row_errors.append("{} artifact {} does not exist".format(rid, r["artifact"]))
+                for sid in r.get("source_ids", []):
                     if sid not in source_map:
                         row_errors.append("{} references unknown source {}".format(rid, sid))
                     elif not official_domain(source_map[sid]["url"]):
@@ -114,14 +126,16 @@ def main():
     for f in flags:
         if f.get("status") != "needs review":
             flag_errors.append("{} status is not needs review".format(f["id"]))
-        if not f.get("source_ids"):
-            flag_errors.append("{} has no source_ids".format(f["id"]))
-        for sid in f["source_ids"]:
+        if not f.get("source_ids") and not f.get("artifact"):
+            flag_errors.append("{} has neither source_ids nor a repository artifact".format(f["id"]))
+        if f.get("artifact") and not (ROOT / f["artifact"]).exists():
+            flag_errors.append("{} artifact {} does not exist".format(f["id"], f["artifact"]))
+        for sid in f.get("source_ids", []):
             if sid not in source_map:
                 flag_errors.append("{} references unknown source {}".format(f["id"], sid))
             elif not official_domain(source_map[sid]["url"]):
                 flag_errors.append("{} references nonofficial URL {}".format(f["id"], sid))
-    check("every flag is published with official source links", not flag_errors, "; ".join(flag_errors[:5]))
+    check("every flag carries an official source link or a repository record", not flag_errors, "; ".join(flag_errors[:5]))
 
     flagged_html = (PAGES / "flagged.html").read_text(encoding="utf-8")
     sources_html = (PAGES / "sources.html").read_text(encoding="utf-8")
@@ -225,6 +239,41 @@ def main():
     check("executive summary states no individual-owner exception",
           "no individual-owner exception is stated" in exec_md.lower())
 
+    marker_hits = []
+    for p in public_files:
+        if p.suffix not in (".md", ".html", ".json", ".css"):
+            continue
+        text = p.read_text(encoding="utf-8")
+        if "\n<<<<<<< " in "\n" + text or "\n>>>>>>> " in "\n" + text:
+            marker_hits.append(str(p.relative_to(ROOT)))
+    check("no merge-conflict markers in published files", not marker_hits, "; ".join(marker_hits[:3]))
+
+    fee_html = unescape((PAGES / "fee.html").read_text(encoding="utf-8"))
+    fee_page = pages.get("fee")
+    check("Rent Board Fee page published in navigation", ("pages/fee.html" in index_html) and fee_page is not None)
+    fee_rows = [r for sec in (fee_page or {}).get("sections", []) for r in sec["rows"]]
+    check("Rent Board Fee page is source-linked", len(fee_rows) >= 26 and all(r.get("source_ids") or r.get("artifact") for r in fee_rows),
+          "{} fee rows".format(len(fee_rows)))
+    check("Rent Board Fee page states the 2026-27 amount, deadline and exemption window",
+          "$59.00" in fee_html and "March 1" in fee_html and "December 14, 2026" in fee_html)
+    check("Rent Board Fee page cites Chapter 37A and the recovery rule",
+          "37A.1" in fee_html and "37A.6" in fee_html and "50%" in fee_html)
+    check("Rent Board Fee page separates the fee from the license",
+          "separate obligation" in fee_html.lower())
+    check("fee rows cite only the fee source block", all(
+        not set(r.get("source_ids", [])) - {"S56", "S57", "S58", "S59", "S60", "S61", "S62", "S53", "S07", "S02"}
+        for r in fee_rows))
+    check("Sources page header count is generated, not hardcoded",
+          "All {} official sources".format(len(source_map)) in unescape(sources_html))
+    check("dashboard flag count matches the flag registry",
+          "{} flagged items".format(len(flags)) in unescape(flagged_html))
+    req_html = unescape((PAGES / "requirements.html").read_text(encoding="utf-8"))
+    check("project requirement rows are labelled and carry repository artifacts",
+          "project record" in req_html and "repository artifact" in req_html and len(project_rows) >= 18,
+          "{} project rows".format(len(project_rows)))
+    check("no project row cites a legal source (no fabricated citation)", not any(
+        "is a project record but carries official source_ids" in e for e in row_errors))
+
     broken = []
     for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
         parser = LinkParser()
@@ -247,6 +296,7 @@ def main():
         "data_files": len(list(DATA.glob("*.json"))),
         "rows_verified": row_count,
         "needs_review_rows": needs_review_count,
+        "project_rows": len(project_rows),
         "flags": len(flags),
         "checks": len(report["checks"]),
         "errors": len(report["errors"]),

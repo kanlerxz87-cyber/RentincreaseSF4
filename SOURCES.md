@@ -73,3 +73,19 @@ Session `arena-c007d556` re-opened S01, S02, S05, S06, S07, S08, S16, S27 and ne
 ## Rule applied to the public site
 
 Each published finding row carries one or more of these source IDs and the official URL. If a value cannot be confirmed from an official source, the value cell is left blank and the row is marked `needs review` and published on the **Flagged for Review** page. No value is inferred or filled from a nonofficial snippet.
+
+## Session addendum — 2026-11-08 (session `arena-abb34cd1`): Rent Board Fee source block S56-S62
+
+Each of the seven additions below was opened directly on 2026-11-08 and is quoted in `VERIFICATION.md` (R19-R26). Every fee row on `pages/fee.html` cites only these IDs (plus S53/S07 for the business-registration-number field and S02 for the deposit-interest rate).
+
+| ID | Agency | Official page / document | What it supports |
+| --- | --- | --- | --- |
+| S56 | SF Rent Board | [The Rent Board Fee](https://www.sf.gov/rent-board-fee) | Who pays; 2026-2027 amount $59.00 per dwelling unit and $29.50 per guest unit; March 1 deadline; 5%-per-month penalty to 15%; June 1 referral; December 14, 2026 exemption deadline; payment methods and $50 payment-failure fee; fee cycle timeline |
+| S57 | SF Rent Board | [Recover part of your Rent Board fee from the tenant](https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant) | 50% recovery cap, November 1 occupancy test, deduction from deposit interest versus direct bill, required bill contents, banking, no just-cause eviction, Small Claims |
+| S58 | SF Admin Code | [Chapter 37A Rent Stabilization and Arbitration Fee (PDF)](https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf) | Sec. 37A.1 scope and exemptions (including 37A.1(f) owner-occupied affidavit); Sec. 37A.4 payment date and penalties; Sec. 37A.6 recovery, banking and continued owner liability |
+| S59 | SF Rent Board | [Form 573 Rent Board Fee History 25-26](https://www.sf.gov/documents/29484/573_Rent_Board_Fee_History_25-26_8.26.pdf) | Fee history 7/1999-6/2026; $59.00 per unit and $29.50 tenant share for 7/21-6/22 through 7/25-6/26 |
+| S60 | SF Rent Board | [Notification of Rent Board Fee and Housing Inventory Requirements](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement) | 2027 assessment notice: December 14, 2026 exemption deadline, annual exemption request, separation from Housing Inventory reporting, March 1, 2027 reporting, "Some rent increases given without a license will be null and void" |
+| S61 | SF Treasurer & Tax Collector | [Register a Business](https://sftreasurer.org/business/register-business) | Business registration exemption for rental income from one residential structure of fewer than four units |
+| S62 | SF Treasurer & Tax Collector | [Information for Lessors of Residential Real Estate](https://sftreasurer.org/information-lessors-residential-real-estate) | Same narrow exemption in the lessor context; per-building treatment; Tax Collector's authority to define a building and its unit count |
+
+Domain note: `sftreasurer.org` is the official site of the City and County of San Francisco Treasurer & Tax Collector and was added to the validator's official-domain allowlist in this session.

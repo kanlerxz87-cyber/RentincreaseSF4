@@ -43,3 +43,16 @@ See `research/sources/irregularities.md` and `research/sources/unverified.md` fo
 - F29 — **Correction, capital-improvement petition count.** The June 2024 workload statistics show 18 capital-improvement petitions covering 148 units; the 19 / 149 subtotal includes one Costa-Hawkins petition. The site previously published "19 petitions / 148 units", which mixed the subtotal with the capital-improvement unit count. Corrected in `data/individual.json`, `pages/individual.html` and the executive summary. Source: S29.
 - F30 — **Banked-increase illustration is conditional.** A 13.1% total for Unit 2 (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 skipped years, plus 1.6% current = 13.1%, i.e. $412.65 on $3,150) is published as arithmetic only. It assumes no increase since June 1, 2019, which the owner has not confirmed, and it would require 90 days' written notice. It is not a recommendation and is not relied on elsewhere. Sources: S05, S04, S02.
 - Case facts are published as `owner-supplied` rows (anonymized) rather than blank cells; the official-verification rows for the same facts stay blank and flagged. No raw initials are published: the validator now scans `data/case.json` and `pages/case.html` for initial patterns.
+
+## T09 additions (2026-11-08, session `arena-abb34cd1`)
+
+| ID | Flag | Detail | Source / record |
+| --- | --- | --- | --- |
+| F31 | Fee-page collection timing differs inside one SF.gov page | Summary and Sec. 37A.4 say referral after June 1; the same page's timeline says a July Notice of Delinquent Payment then 30 days | S56, S58 |
+| F32 | No official statement links fee payment to a rent increase's validity | Absence finding across S56, S57, S58 and Sec. 37.15; the license turns on the reporting obligation | S53, S56, S57, S58 |
+| F33 | Case fee billing/exemption/unit-count facts unverified | No Annual Notice, exemption status or portal data; $118.00 / $59.00 / $17.70 are conditional arithmetic | S56, S59, S60 |
+| F34 | Form 573 covers 7/1999-6/2026 and is titled 25-26 | 2026-27 amount comes from the SF.gov fee page, not the form | S56, S59 |
+| F35 | Older fee service page still shows 2023 dates | "March 1, 2023" / "June 1, 2023" on `sf.gov/pay-your-rent-board-fee` | S56, S60 |
+| F36 | Raw identifier tokens remain reachable in public git history | Commits from the 2026-11-06 report to the fix, PR diffs #1/#2/#4/#5/#9, two branch tips; agents cannot rewrite history | `research/privacy/HISTORY_EXPOSURE.md` |
+| F37 | Published merge-conflict markers | Three marker lines were committed in `COORDINATION.md` at `d63dee4`; repaired, validator hardened | `COORDINATION.md` |
+| F38 | Project-deliverable rows cite repository artifacts, not official sources | No government source can confirm a website build or a PR; labelled `project record` | `pages/requirements.html` |
