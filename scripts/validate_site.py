@@ -240,6 +240,42 @@ def main():
                 broken.append("{} -> {}".format(html_file.relative_to(ROOT), link))
     check("no broken internal links", not broken, "; ".join(broken[:5]))
 
+    # Guard against defects found by independent review on 2026-11-07 (F31, F32).
+    marker_hits = []
+    for p_ in sorted(ROOT.glob("*.md")) + sorted(PAGES.glob("*.html")) + sorted(DATA.glob("*.json")):
+        text = p_.read_text(encoding="utf-8")
+        if re.search(r"^(<<<<<<<|=======|>>>>>>>)", text, re.MULTILINE):
+            marker_hits.append(str(p_.relative_to(ROOT)))
+    check("no committed merge-conflict markers in public files", not marker_hits, "; ".join(marker_hits[:5]))
+
+    flag_ids_ordered = [f["id"] for f in flags]
+    numeric = [f for f in flag_ids_ordered if re.fullmatch(r"F\d\d", f)]
+    check("numeric flag IDs are unique and contiguous", numeric == sorted(set(numeric)),
+          "{} numeric flags".format(len(numeric)))
+
+    stale_refs = []
+    for p_ in [ROOT / "SOURCES.md", ROOT / "VERIFICATION.md", ROOT / "EXECUTIVE_SUMMARY.md", ROOT / "FLAGGED_FOR_REVIEW.md"]:
+        text = p_.read_text(encoding="utf-8")
+        for num in re.findall(r"flagged (F\d\d)", text):
+            if num not in flag_ids:
+                stale_refs.append("{} references unpublished {}".format(p_.name, num))
+    check("no references to unpublished flag IDs", not stale_refs, "; ".join(stale_refs[:5]))
+
+    # The two most consequential case-specific rules must stay visible on the site.
+    all_site_text = "\n".join(p_.read_text(encoding="utf-8") for p_ in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")))
+    check("Rent Board Fee is distinguished from the license", "$59.00" in all_site_text and "separate" in all_site_text.lower())
+    check("retaliation 180-day rule is published", "180 days" in all_site_text and "1942.5" in all_site_text)
+    check("AB 1482 two-unit owner-occupied exemption is published", "ADU" in all_site_text and "principal residence" in all_site_text)
+    check("in-law-unit coverage rule is published", "in-law unit" in all_site_text.lower())
+    summary_html = (PAGES / "summary.html").read_text(encoding="utf-8")
+    check("executive summary page renders the narrative, not just tables",
+          summary_html.count("<h2>") >= 10 and "<ol>" in summary_html and "<h2>FOREFRONT" in summary_html,
+          "{} headings".format(summary_html.count("<h2>")))
+    check("executive summary page has no unrendered markdown",
+          not re.search(r"<p>\s*#|\*\*|\]\(", summary_html))
+    check("executive summary states the fee/licence distinction and retaliation rule",
+          "$59.00" in summary_html and "1942.5" in summary_html and "in-law unit" in summary_html.lower())
+
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {
         "sources": len(source_map),

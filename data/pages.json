@@ -1444,6 +1444,66 @@
             "source_note": ""
           },
           {
+            "id": "LOC-20",
+            "label": "Rent Board Fee is separate from the license",
+            "value": "Every residential dwelling unit owner pays a per-unit fee unless exempt: 2026-2027 is $59.00 per dwelling unit, due March 1, 5% late penalty per month to a 15% maximum; a fee exemption does not satisfy Housing Inventory reporting",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "Two separate obligations; see flag F33.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-21",
+            "label": "Recovering half the fee",
+            "value": "If the fee is paid in full, 50% ($29.50 per dwelling unit for 2026-2027) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "Not a rent increase; identify it separately on any statement.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-22",
+            "label": "Units built after June 13, 1979",
+            "value": "Exempt from the rent increase limitations only, if the first Certificate of Occupancy issued after June 13, 1979 and there was no prior residential use; just-cause eviction protection and the Rent Board fee still apply",
+            "status": "verified",
+            "source_ids": [
+              "S59"
+            ],
+            "notes": "The owner-supplied 1940 year would fall before the cutoff if confirmed.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-23",
+            "label": "In-law unit or second structure on the lot",
+            "value": "A dwelling with a legal or illegal in-law unit is a two-unit building and is not exempt unless both units are rented together as a single tenancy; a single-family dwelling is not exempt if another residential structure is on the same lot",
+            "status": "verified",
+            "source_ids": [
+              "S60"
+            ],
+            "notes": "Two rented units is consistent with coverage; see flag F35.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-24",
+            "label": "30-day update duty",
+            "value": "A change in the owner or designated manager name or business contact information must be reported within 30 days",
+            "status": "verified",
+            "source_ids": [
+              "S53"
+            ],
+            "notes": "Separate from the annual March 1 update.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
             "id": "LOC-15",
             "label": "License scope",
             "value": "License rules apply only to rent-controlled units; SF.gov says the license is not required for 6.14/Costa-Hawkins increases or petition-based passthroughs",
@@ -1659,6 +1719,68 @@
               "S36"
             ],
             "notes": "State court enforcement; Rent Board cannot enforce state law.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-13",
+            "label": "Retaliation - 180-day bar",
+            "value": "Where the tenant is not in default and has requested repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent or reduce services within 180 days of that act",
+            "status": "verified",
+            "source_ids": [
+              "S57"
+            ],
+            "notes": "Separate from any Rent Board question; timing here is unverified.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-14",
+            "label": "Retaliation - organizing and lawful rights",
+            "value": "Increasing rent to retaliate because a tenant organized or participated in a tenants' association, or lawfully exercised rights, is unlawful",
+            "status": "verified",
+            "source_ids": [
+              "S57"
+            ],
+            "notes": "The tenant bears the burden of producing evidence under this subdivision.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-15",
+            "label": "Retaliation remedies",
+            "value": "Actual damages; punitive damages of $100-$2,000 per retaliatory act where there is fraud, oppression or malice; the court awards reasonable attorney's fees to the prevailing party on request",
+            "status": "verified",
+            "source_ids": [
+              "S57"
+            ],
+            "notes": "In addition to any other statutory or decisional remedy.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-16",
+            "label": "AB 1482 two-unit owner-occupied exemption",
+            "value": "Exempt only for a two-unit structure in a single building where the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU",
+            "status": "verified",
+            "source_ids": [
+              "S58",
+              "S27"
+            ],
+            "notes": "Owner occupancy of a unit here was not supplied; no exemption asserted (F34).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-17",
+            "label": "AB 1482 separate-parcel exemption conditions",
+            "value": "Requires written tenant notice in the statutory form AND that the owner is not a REIT, a corporation, or an LLC with at least one corporate member",
+            "status": "verified",
+            "source_ids": [
+              "S58",
+              "S27"
+            ],
+            "notes": "An individual owner can meet the owner test, but the notice is still required.",
             "flag_id": "",
             "source_note": ""
           }
@@ -2569,6 +2691,59 @@
             "notes": "A correctly banked total can exceed 10%.",
             "flag_id": "",
             "source_note": ""
+          },
+          {
+            "id": "CHK-14",
+            "label": "Check the retaliation clock",
+            "value": "Before serving any notice, confirm the tenant has no unresolved repair request or agency complaint from the prior 180 days",
+            "status": "verified",
+            "source_ids": [
+              "S57",
+              "S22"
+            ],
+            "notes": "A rent increase inside that window is barred if the tenant is not in default.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CHK-15",
+            "label": "Keep the fee separate",
+            "value": "Pay or confirm the Rent Board Fee ($59.00 per dwelling unit for 2026-2027, due March 1) and, if recovering 50%, show it as a separate fee recovery rather than folding it into the rent increase",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "The fee is not part of base rent.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CHK-16",
+            "label": "Match each notice to a license on its effective date",
+            "value": "Check the portal license status for the specific effective date of each notice, for each unit, including any prior year",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S08",
+              "S55"
+            ],
+            "notes": "A license now does not cure a notice effective before it existed.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CHK-17",
+            "label": "Re-serve rather than backdate",
+            "value": "If a notice went out unlicensed, report, confirm the license, and serve a new notice with a compliant effective date",
+            "status": "analysis",
+            "source_ids": [
+              "S08",
+              "S53",
+              "S35"
+            ],
+            "notes": "Do not treat an unenforceable notice as effective.",
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -3251,6 +3426,102 @@
             "source_note": ""
           },
           {
+            "id": "Q-15",
+            "label": "Is the Rent Board Fee the same thing as the Rent Increase License?",
+            "value": "No. They are separate obligations. The license comes from Housing Inventory reporting and there is no charge for that reporting; the fee is a separate per-unit annual payment (2026-2027: $59.00 per dwelling unit, due March 1, with a 5% monthly late penalty to a 15% maximum). SF.gov states expressly that requesting a fee exemption does not satisfy Housing Inventory reporting.",
+            "status": "verified",
+            "source_ids": [
+              "S56",
+              "S07",
+              "S53"
+            ],
+            "notes": "Paying the fee is not a substitute for the license; see flag F33.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-16",
+            "label": "Can part of the Rent Board Fee be charged to the tenants?",
+            "value": "Yes, if the fee is paid in full: 50% of the fee, i.e. $29.50 per dwelling unit for 2026-2027, may be recovered from tenants in occupancy as of November 1 of the applicable tax year. Penalties may not be recovered.",
+            "status": "verified",
+            "source_ids": [
+              "S56"
+            ],
+            "notes": "This is a fee recovery, not a rent increase; keep it separately identified.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-17",
+            "label": "How long do I have to report a Housing Inventory change, and what if I already served a notice?",
+            "value": "Unit information is updated annually by March 1, and a change in the owner or manager name or business contact information must be updated within 30 days. If a notice already went out with no license on file, report first, then re-serve the notice so the effective date falls after the license is on file: a notice is unenforceable for an effective date on which no license was on file, and an unlicensed increase may be null and void.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S07",
+              "S08"
+            ],
+            "notes": "Whether any notice has already been served here is unverified.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-18",
+            "label": "Can an increase during a repair dispute or after a complaint be retaliatory?",
+            "value": "Yes, that is a separate state-law risk. If the tenant is not in default and has asked for repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent within 180 days of that act; retaliation for tenant organizing or for exercising lawful rights is separately barred. Remedies include actual damages, punitive damages of $100-$2,000 per retaliatory act, and attorney's fees.",
+            "status": "verified",
+            "source_ids": [
+              "S57",
+              "S22",
+              "S42"
+            ],
+            "notes": "Timing versus any open habitability complaint is unverified; this is not a legal opinion.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-19",
+            "label": "Are these two units exempt from AB 1482 because the owner lives in one?",
+            "value": "Only if the owner occupied one unit as a principal residence when the tenancy began and continues in occupancy, and neither unit is an ADU/JADU. That fact was not supplied, so no exemption is asserted. Independently, AB 1482's rent cap does not apply where the unit is already under the SF Rent Ordinance limits, which are stricter.",
+            "status": "verified",
+            "source_ids": [
+              "S58",
+              "S60",
+              "S27"
+            ],
+            "notes": "Conditional; see flags F34 and F35.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-20",
+            "label": "Does an in-law unit or a second structure change whether these units are covered?",
+            "value": "It can. SF.gov states that a dwelling with a legal or illegal in-law unit is a two-unit building and is not exempt from the Rent Ordinance unless both units are rented together as a single tenancy, and that a single-family dwelling is not exempt if another residential structure is on the same lot. Two rented units is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
+            "status": "verified",
+            "source_ids": [
+              "S60",
+              "S59",
+              "S06"
+            ],
+            "notes": "Verify the lot in the Property Information Map; see flag F35.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-21",
+            "label": "Do the tenants have to keep accepting increases, or can they challenge each one?",
+            "value": "They can challenge. A tenant may file an unlawful-rent-increase petition with no filing fee and no time limit, and the matter can go to an Administrative Law Judge. Tenant-side free legal help is documented for eviction proceedings (Eviction Defense Collaborative line and Tenant Right to Counsel), not as a general pre-approval service for rent increases.",
+            "status": "verified",
+            "source_ids": [
+              "S25",
+              "S61",
+              "S30"
+            ],
+            "notes": "No official source offers approval of an increase before it is served.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
             "id": "Q-10",
             "label": "Is any increase guaranteed lawful or lawsuit-proof?",
             "value": "No. No attorney approval or guarantee of no complaint/inquiry/lawsuit is claimed.",
@@ -3485,7 +3756,7 @@
             "source_note": ""
           },
           {
-            "id": "AN-20",
+            "id": "AN-25",
             "label": "What a tenant-side reviewer would test",
             "value": "1) current license on the effective date, 2) correct rate for that date, 3) 12 months since the last increase, 4) base rent only and no rounding up, 5) notice contents, lead time and delivery, 6) no extra charge for an added roommate, 7) no retaliation or bad-faith harassment",
             "status": "analysis",
@@ -3553,6 +3824,63 @@
               "S53"
             ],
             "notes": "Privacy consideration; the filing is still required for a license.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-26",
+            "label": "Two distinct registrations with the Rent Board",
+            "value": "Housing Inventory reporting produces the license at no charge; the Rent Board Fee is a separate $59.00-per-unit annual payment. Confusing them is the most likely cause of an unlicensed increase",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S56",
+              "S07"
+            ],
+            "notes": "Both are due around March 1 but are not interchangeable (F33).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-27",
+            "label": "Timing is the second-most-common defect",
+            "value": "A license that exists today does not validate a notice whose effective date preceded it, and a notice inside the 180-day retaliation window is separately barred",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S08",
+              "S57"
+            ],
+            "notes": "Check the effective date, not the date of the check.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-28",
+            "label": "This building is very likely covered",
+            "value": "Two rented units in a pre-1979 building is the paradigm Rent Ordinance case; the in-law-unit rule and the 1979 cutoff both point toward coverage rather than exemption",
+            "status": "analysis",
+            "source_ids": [
+              "S06",
+              "S59",
+              "S60"
+            ],
+            "notes": "Owner-supplied facts only; confirm in the Property Information Map.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-29",
+            "label": "Cheapest compliant path",
+            "value": "Ordinary annual increase at or under 1.6%, license on file first, 30-day written notice, no additional-occupant charge, and an identical written standard applied to both units",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35",
+              "S42"
+            ],
+            "notes": "Still not a guarantee against a petition.",
             "flag_id": "",
             "source_note": ""
           }
