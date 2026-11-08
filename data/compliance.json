@@ -16,7 +16,7 @@
           "id": "CHK-01",
           "label": "Verify coverage",
           "value": "Check exact address in SF Planning PIM; confirm exemptions",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S06",
             "S32"
@@ -29,7 +29,7 @@
           "id": "CHK-02",
           "label": "Verify license",
           "value": "Current Rent Increase License on effective date",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S07",
@@ -43,7 +43,7 @@
           "id": "CHK-03",
           "label": "Verify 12 months / anniversary",
           "value": "At least 12 months since last increase",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01"
           ],
@@ -54,20 +54,20 @@
         {
           "id": "CHK-04",
           "label": "Verify banked amounts",
-          "value": "Only if >=24 full months without any increase; add percentages; no compounding/prorating",
-          "status": "verified",
+          "value": "Verify history before banking; SF.gov says 24 full months but examples conflict; add percentages, no compounding/prorating",
+          "status": "rule checked",
           "source_ids": [
             "S05"
           ],
-          "notes": "Not inferred here.",
-          "flag_id": "",
+          "notes": "No case banked amount inferred.",
+          "flag_id": "F03",
           "source_note": ""
         },
         {
           "id": "CHK-05",
           "label": "Written notice timing",
           "value": "30 days; 90 days if >10% alone/combined in same year; +5 days if mailed",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S05",
@@ -81,7 +81,7 @@
           "id": "CHK-06",
           "label": "Notice contents",
           "value": "Dollar amount, percentage, effective date; banked portion if any",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S05"
@@ -94,7 +94,7 @@
           "id": "CHK-07",
           "label": "Delivery",
           "value": "Personal delivery or mail under Civil Code 827 / CCP 1013",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S35"
           ],
@@ -106,7 +106,7 @@
           "id": "CHK-08",
           "label": "Petition grounds",
           "value": "Petition/worksheet before notice when required",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S09",
             "S10",
@@ -148,15 +148,15 @@
         },
         {
           "id": "CHK-11",
-          "label": "License before notice",
-          "value": "Report into the Housing Inventory and confirm a current license for each unit and each effective date",
-          "status": "verified",
+          "label": "License before effective date; report before relying on it",
+          "value": "Complete Housing Inventory and confirm a current license for the unit before the increase effective date; safest practice is before serving notice.",
+          "status": "rule checked",
           "source_ids": [
             "S53",
             "S07",
             "S55"
           ],
-          "notes": "Unlicensed notices may be void or unenforceable.",
+          "notes": "Official pages require the effective-date license; no express separate pre-mailing Board notice for ordinary annual/banked increases was found.",
           "flag_id": "",
           "source_note": ""
         },
@@ -177,7 +177,7 @@
           "id": "CHK-13",
           "label": "90-day notice if the total exceeds 10%",
           "value": "90 days when the increase alone or combined with another increase in the same year is more than 10%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S05",
@@ -190,13 +190,13 @@
         {
           "id": "CHK-14",
           "label": "Check the retaliation clock",
-          "value": "Before serving any notice, confirm the tenant has no unresolved repair request or agency complaint from the prior 180 days",
-          "status": "verified",
+          "value": "Review Civil Code 1942.5 triggers, timing, causation and good-faith cause exceptions before serving notice.",
+          "status": "rule checked",
           "source_ids": [
             "S57",
             "S22"
           ],
-          "notes": "A rent increase inside that window is barred if the tenant is not in default.",
+          "notes": "The 180-day provisions are conditional and fact-specific; not every repair request automatically bars an increase.",
           "flag_id": "",
           "source_note": ""
         },
@@ -204,9 +204,11 @@
           "id": "CHK-15",
           "label": "Keep the fee separate",
           "value": "Pay or confirm the Rent Board Fee ($59.00 per dwelling unit for 2026-2027, due March 1) and, if recovering 50%, show it as a separate fee recovery rather than folding it into the rent increase",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
-            "S56"
+            "S56",
+            "S63",
+            "S64"
           ],
           "notes": "The fee is not part of base rent.",
           "flag_id": "",
@@ -216,7 +218,7 @@
           "id": "CHK-16",
           "label": "Match each notice to a license on its effective date",
           "value": "Check the portal license status for the specific effective date of each notice, for each unit, including any prior year",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S53",
             "S08",
@@ -236,8 +238,49 @@
             "S53",
             "S35"
           ],
-          "notes": "Do not treat an unenforceable notice as effective.",
+          "notes": "Do not backdate or assume retroactive cure; obtain legal advice on any already-served notice.",
           "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CHK-18",
+          "label": "Check fixed-term versus periodic lease",
+          "value": "Fixed-term rent generally cannot be raised mid-term unless the agreement expressly allows it; periodic tenancies use statutory notice rules.",
+          "status": "rule checked",
+          "source_ids": [
+            "S62",
+            "S35"
+          ],
+          "notes": "Actual lease type/clause unverified; no mid-term increase approved.",
+          "flag_id": "F36",
+          "source_note": ""
+        },
+        {
+          "id": "CHK-19",
+          "label": "One unit versus both",
+          "value": "No official rule found requiring both units to be raised. Apply neutral unit-based criteria and document eligibility/anniversary reasons.",
+          "status": "analysis",
+          "source_ids": [
+            "S41",
+            "S42",
+            "S38",
+            "S57"
+          ],
+          "notes": "Raising both does not immunize discrimination or retaliation; consider less discriminatory alternatives.",
+          "flag_id": "F22",
+          "source_note": ""
+        },
+        {
+          "id": "CHK-20",
+          "label": "Keep fee recovery separate from rent",
+          "value": "Up to 50% of the paid annual fee may be recovered by deposit-interest deduction or compliant bill; penalties are not recoverable.",
+          "status": "rule checked",
+          "source_ids": [
+            "S63",
+            "S56"
+          ],
+          "notes": "Not base rent and not an ordinary rent increase; tenant nonpayment is not just cause for eviction.",
+          "flag_id": "F33",
           "source_note": ""
         }
       ]

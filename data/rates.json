@@ -16,7 +16,7 @@
           "id": "RATE-01",
           "label": "3/1/26 - 2/28/27",
           "value": "1.6%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S02",
@@ -31,7 +31,7 @@
           "id": "RATE-02",
           "label": "3/1/25 - 2/28/26",
           "value": "1.4%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S02",
             "S04"
@@ -44,7 +44,7 @@
           "id": "RATE-03",
           "label": "3/1/24 - 2/28/25",
           "value": "1.7%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S02",
             "S04"
@@ -57,7 +57,7 @@
           "id": "RATE-04",
           "label": "3/1/23 - 2/29/24",
           "value": "3.6%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S04"
           ],
@@ -69,7 +69,7 @@
           "id": "RATE-05",
           "label": "3/1/22 - 2/28/23",
           "value": "2.3%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S04"
           ],
@@ -81,7 +81,7 @@
           "id": "RATE-06",
           "label": "3/1/21 - 2/28/22",
           "value": "0.7%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S04"
           ],
@@ -93,7 +93,7 @@
           "id": "RATE-07",
           "label": "3/1/20 - 2/28/21",
           "value": "1.8%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S04"
           ],
@@ -105,7 +105,7 @@
           "id": "RATE-08",
           "label": "3/1/19 - 2/29/20",
           "value": "2.6%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S04"
           ],
@@ -129,7 +129,7 @@
           "id": "RATE-09",
           "label": "Local formula",
           "value": "60% of Bay Area CPI-U increase; max 7%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S21"
@@ -141,13 +141,13 @@
         {
           "id": "RATE-10",
           "label": "Temporary CPI methodology",
-          "value": "",
-          "status": "needs review",
+          "value": "Jan. 13, 2026 minutes adopted Version 1 temporary CPI methodology for the 2026 and 2027 rate calculations.",
+          "status": "rule checked",
           "source_ids": [
             "S28",
             "S01"
           ],
-          "notes": "Jan. 13, 2026 minutes adopted Version 1 temporary methodology.",
+          "notes": "Official minutes confirmed; the published 1.6% rate remains the operative amount for 3/1/26-2/28/27.",
           "flag_id": "F06",
           "source_note": ""
         },
@@ -155,7 +155,7 @@
           "id": "RATE-11",
           "label": "Calculation",
           "value": "Base rent x rate; no rounding up",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S03",

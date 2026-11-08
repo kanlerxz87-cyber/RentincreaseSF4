@@ -16,12 +16,12 @@
           "id": "MKT-01",
           "label": "San Francisco, CA HMFA 0 BR",
           "value": "$2,574",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S47",
             "S43"
           ],
-          "notes": "FY2027 FMR; current federal FY on 2026-11-06.",
+          "notes": "FY2027 FMR; current federal FY on 2026-11-08. Not a private rent cap.",
           "flag_id": "",
           "source_note": ""
         },
@@ -29,12 +29,12 @@
           "id": "MKT-02",
           "label": "San Francisco, CA HMFA 1 BR",
           "value": "$3,003",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S47",
             "S43"
           ],
-          "notes": "FY2027 FMR.",
+          "notes": "FY2027 FMR. Not a private rent cap.",
           "flag_id": "",
           "source_note": ""
         },
@@ -42,12 +42,12 @@
           "id": "MKT-03",
           "label": "San Francisco, CA HMFA 2 BR",
           "value": "$3,697",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S47",
             "S43"
           ],
-          "notes": "FY2027 FMR.",
+          "notes": "FY2027 FMR. Not a private rent cap.",
           "flag_id": "",
           "source_note": ""
         },
@@ -55,12 +55,12 @@
           "id": "MKT-04",
           "label": "San Francisco, CA HMFA 3 BR",
           "value": "$4,832",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S47",
             "S43"
           ],
-          "notes": "FY2027 FMR.",
+          "notes": "FY2027 FMR. Not a private rent cap.",
           "flag_id": "",
           "source_note": ""
         },
@@ -68,12 +68,12 @@
           "id": "MKT-05",
           "label": "San Francisco, CA HMFA 4 BR",
           "value": "$5,439",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S47",
             "S43"
           ],
-          "notes": "FY2027 FMR.",
+          "notes": "FY2027 FMR. Not a private rent cap.",
           "flag_id": "",
           "source_note": ""
         }
@@ -93,12 +93,12 @@
           "id": "MKT-06",
           "label": "San Francisco, CA HMFA 0-4 BR",
           "value": "$2,485 / $2,977 / $3,604 / $4,604 / $4,772",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S45",
             "S43"
           ],
-          "notes": "FY2026 revised effective May 21, 2026; historical as of 2026-11-06.",
+          "notes": "FY2026 historical values from the official schedule fetched 2026-11-08; not a private rent cap.",
           "flag_id": "",
           "source_note": ""
         },
@@ -113,7 +113,7 @@
             "S51"
           ],
           "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07",
+          "flag_id": "F13",
           "source_note": ""
         },
         {
@@ -126,15 +126,15 @@
             "S50",
             "S52"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07",
+          "notes": "Official PDF parse stopped before California; xlsx fetch failed; blank.",
+          "flag_id": "F13",
           "source_note": ""
         },
         {
           "id": "MKT-09",
           "label": "FMR/SAFMR as rent cap",
           "value": "No - voucher payment standards only",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S43",
             "S44"

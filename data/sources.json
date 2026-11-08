@@ -5,7 +5,9 @@
     "title": "Learn about rent increases in San Francisco",
     "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
     "category": "Local",
-    "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants."
+    "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S02",
@@ -13,7 +15,9 @@
     "title": "Current Rates",
     "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
     "category": "Local",
-    "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Page checked 2026-11-07: no 3/1/27-2/28/28 rate published yet."
+    "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Page checked 2026-11-07: no 3/1/27-2/28/28 rate published yet.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S03",
@@ -21,7 +25,9 @@
     "title": "Annual Rent Increase 3/1/26-2/28/27 Announced",
     "url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
     "category": "Local",
-    "statement": "Jan. 14, 2026 announcement: 1.6%; $2,000 x .016 = $32.00; prior 1.4%."
+    "statement": "Jan. 14, 2026 announcement: 1.6%; $2,000 x .016 = $32.00; prior 1.4%.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S04",
@@ -29,7 +35,9 @@
     "title": "Form 571 Allowable Annual Increases 26-27",
     "url": "https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf",
     "category": "Local",
-    "statement": "Historical rates 1982-2027; 2019-2027 series 2.6, 1.8, 0.7, 2.3, 3.6, 1.7, 1.4, 1.6%. Tool title displays 517 - flagged."
+    "statement": "Historical rates 1982-2027; 2019-2027 series 2.6, 1.8, 0.7, 2.3, 3.6, 1.7, 1.4, 1.6%. Tool title displays 517 - flagged.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S05",
@@ -37,7 +45,9 @@
     "title": "Banked rent increases",
     "url": "https://www.sf.gov/information--banked-rent-increases",
     "category": "Local",
-    "statement": "24 full months; no compounding/prorating; add percentages; license; notice states banked portion; example inconsistency flagged."
+    "statement": "SF.gov says a skipped increase is banked only after 24 full months without any increase, but examples describe 12 months since a skipped opportunity; add percentages, no compounding/prorating, no new-tenant carryover, notice banked portion. Conflict flagged; no case banked total asserted.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S06",
@@ -45,7 +55,9 @@
     "title": "Learn about San Francisco rental laws",
     "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws",
     "category": "Local",
-    "statement": "June 13, 1979 cutoff; PIM; partial exemptions; free counseling."
+    "statement": "June 13, 1979 cutoff; PIM; partial exemptions; free counseling.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S07",
@@ -53,7 +65,9 @@
     "title": "The Rent Board Housing Inventory",
     "url": "https://www.sf.gov/rent-board-housing-inventory",
     "category": "Local",
-    "statement": "Annual March 1 reporting; license; current license before annual/banked increase; no monetary penalty but notice unenforceable."
+    "statement": "All residential owners report annually by March 1; free portal; license auto-generated for non-owner-occupied units; current license before the increase effective date; late filing has no monetary penalty; inventory data public; fee exemption is not inventory reporting.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S08",
@@ -61,7 +75,9 @@
     "title": "Notice of Owner Noncompliance with Housing Inventory",
     "url": "https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory",
     "category": "Local",
-    "statement": "Unlicensed increase may be null/void; tenant may be entitled to refund; portal check."
+    "statement": "Unlicensed increase may be null/void; tenant may be entitled to refund; portal check.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S09",
@@ -69,7 +85,9 @@
     "title": "Landlord Petitions and Passthroughs",
     "url": "https://www.sf.gov/landlord-petitions-and-passthroughs",
     "category": "Local",
-    "statement": "Six petition grounds; petition before notice; no payment until approval; no filing charge."
+    "statement": "Six petition grounds; petition before notice; no payment until approval; no filing charge.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S10",
@@ -77,7 +95,9 @@
     "title": "Special Circumstances Petitions Based on Rents for Comparable Units",
     "url": "https://www.sf.gov/information--special-circumstances-petitions-based-rents-comparable-units",
     "category": "Local",
-    "statement": "Mere long-standing below-market rent is not extraordinary; petition before notice; one-time tenancy reset."
+    "statement": "Mere long-standing below-market rent is not extraordinary; petition before notice; one-time tenancy reset.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S11",
@@ -85,7 +105,9 @@
     "title": "Operating and Maintenance Expense Petitions",
     "url": "https://sf.gov/information/topic-no-322-operating-and-maintenance-expense-petitions",
     "category": "Local",
-    "statement": "Additional base-rent increase up to 7%; two-year comparison; petition before notice."
+    "statement": "Additional base-rent increase up to 7%; two-year comparison; petition before notice.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S12",
@@ -93,7 +115,9 @@
     "title": "Capital Improvement Petitions",
     "url": "https://www.sf.gov/information--capital-improvement-petitions",
     "category": "Local",
-    "statement": "Petition before notice; not base rent; discontinue after amortization; 5-year deadline."
+    "statement": "Petition before notice; not base rent; discontinue after amortization; 5-year deadline.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S13",
@@ -101,7 +125,9 @@
     "title": "Utility Passthroughs",
     "url": "https://www.sf.gov/information--utility-passthroughs-gas-electricity-and-steam-heat",
     "category": "Local",
-    "statement": "Petition/worksheet before notice; not base rent; 12-month duration."
+    "statement": "Petition/worksheet before notice; not base rent; 12-month duration.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S14",
@@ -109,7 +135,9 @@
     "title": "Tenant In Occupancy Petitions",
     "url": "https://www.sf.gov/information--tenant-occupancy-petitions",
     "category": "Local",
-    "statement": "Section 1.21 petition before notice; notice before petition is void."
+    "statement": "Section 1.21 petition before notice; notice before petition is void.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S15",
@@ -117,7 +145,9 @@
     "title": "Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins",
     "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
     "category": "Local",
-    "statement": "Petition optional; legal advice strongly encouraged; 60-day notice generally reasonable; co-tenant excluded."
+    "statement": "Petition optional; legal advice strongly encouraged; 60-day notice generally reasonable; co-tenant excluded.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S16",
@@ -125,7 +155,9 @@
     "title": "Rent Increases Under Section 6.14 And Costa-Hawkins",
     "url": "https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins",
     "category": "Local",
-    "statement": "Unlimited increase conditions; 6.14 notice; subtenant/assignee vs co-tenant; tenant petition."
+    "statement": "Unlimited increase conditions; 6.14 notice; subtenant/assignee vs co-tenant; tenant petition.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S17",
@@ -133,7 +165,9 @@
     "title": "Roommates and subletting",
     "url": "https://www.sf.gov/roommates-and-subletting",
     "category": "Local",
-    "statement": "Additional occupant rent prohibited; legal advice recommended; proportional share."
+    "statement": "Additional occupant rent prohibited; legal advice recommended; proportional share.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S18",
@@ -141,7 +175,9 @@
     "title": "Charging for Additional Occupants Prohibited",
     "url": "https://www.sf.gov/information--charging-additional-occupants-prohibited",
     "category": "Local",
-    "statement": "Cannot charge more rent solely because tenant added occupant; O&M/utility petition possible."
+    "statement": "Cannot charge more rent solely because tenant added occupant; O&M/utility petition possible.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S19",
@@ -149,7 +185,9 @@
     "title": "Other landlord and tenant issues",
     "url": "https://www.sf.gov/information--other-landlord-and-tenant-issues",
     "category": "Local",
-    "statement": "Additional occupant prohibition; new housing services; temporary rent reduction; illegal units still covered."
+    "statement": "Inherited source entry; direct fetch failed 2026-11-08. Not used for new conclusions; additional-occupant rule supported by S17/S18.",
+    "checked": "listed / fetch limitation",
+    "check_note": "Retained for transparency; not used as proof of an unconfirmed case value."
   },
   {
     "id": "S20",
@@ -157,7 +195,9 @@
     "title": "The Rent Ordinance",
     "url": "https://www.sf.gov/reports--rent-ordinance",
     "category": "Local",
-    "statement": "Chapter 37; last amended 11/2/26; Rent Board version not official record."
+    "statement": "Chapter 37; last amended 11/2/26; Rent Board version not official record.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S21",
@@ -165,7 +205,9 @@
     "title": "Sec. 37.3 Rent Limitations",
     "url": "https://www.sf.gov/information--sec-373-rent-limitations",
     "category": "Local",
-    "statement": "Annual increase <=60% CPI and <=7%; banking; capital improvement/utility/water authority."
+    "statement": "Annual increase <=60% CPI and <=7%; banking; capital improvement/utility/water authority.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S22",
@@ -173,7 +215,9 @@
     "title": "Sec. 37.10B Tenant Harassment",
     "url": "https://www.sf.gov/information--sec-3710b-tenant-harassment",
     "category": "Local",
-    "statement": "Bad-faith harassment prohibitions; civil remedies; Larson footnote inconsistency flagged."
+    "statement": "Bad-faith harassment prohibitions; civil remedies; Larson footnote inconsistency flagged.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S23",
@@ -181,7 +225,9 @@
     "title": "Tenant and Landlord Resources",
     "url": "https://www.sf.gov/tenant-and-landlord-resources",
     "category": "Review",
-    "statement": "Free legal help for eviction court papers; tenant counselors; mediation; landlord resources."
+    "statement": "Free legal help for eviction court papers; tenant counselors; mediation; landlord resources.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S24",
@@ -189,7 +235,9 @@
     "title": "Speak with a Rent Board counselor",
     "url": "https://www.sf.gov/speak-rent-board-counselor",
     "category": "Review",
-    "statement": "Free counseling; cannot give legal advice; multilingual; time limits."
+    "statement": "Free counseling; cannot give legal advice; multilingual; time limits.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S25",
@@ -197,7 +245,9 @@
     "title": "Report an unlawful rent increase",
     "url": "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history",
     "category": "Review",
-    "statement": "No charge; no time limit; hearing before ALJ; attorney optional."
+    "statement": "No charge; no time limit; hearing before ALJ; attorney optional.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S26",
@@ -205,7 +255,9 @@
     "title": "Rent Board Forms Center",
     "url": "https://www.sf.gov/reports--rent-board-forms-forms-center",
     "category": "Review",
-    "statement": "516C, 518, 516D and other official forms."
+    "statement": "516C, 518, 516D and other official forms.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S27",
@@ -213,7 +265,9 @@
     "title": "California Tenant Protection Act of 2019 (AB 1482)",
     "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482",
     "category": "State",
-    "statement": "SF state-only cap 8.8% 8/1/26-7/31/27; does NOT apply to SF Rent Ordinance units; 5%+CPI or 10%; just cause; Rent Board no legal advice/enforcement."
+    "statement": "SF state-only cap 8.8% 8/1/26-7/31/27; does NOT apply to SF Rent Ordinance units; 5%+CPI or 10%; just cause; Rent Board no legal advice/enforcement.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S28",
@@ -221,7 +275,9 @@
     "title": "January 13, 2026 Commission minutes",
     "url": "https://media.api.sf.gov/documents/minutes_011326.pdf",
     "category": "Local",
-    "statement": "Denied appeal AL250074; license/overpayment case; temporary Version 1 CPI methodology; >23,000 licenses."
+    "statement": "Denied appeal AL250074; license/overpayment case; temporary Version 1 CPI methodology; >23,000 licenses.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S29",
@@ -229,7 +285,9 @@
     "title": "Workload Statistics June 2024",
     "url": "https://www.sf.gov/file/workload-stats-june-2024pdf",
     "category": "Individual",
-    "statement": "23 landlord petitions/154 units; 19 capital-improvement/148 units; 73 tenant petitions; 89 eviction notices."
+    "statement": "June 2024: 23 total landlord petitions / 154 units; capital improvements line 18 petitions / 148 units; subtotal 19 / 149 includes 1 Costa-Hawkins; 73 tenant petitions / 73 units; 89 eviction notices.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S30",
@@ -237,7 +295,9 @@
     "title": "MOHCD / OCEIA presentation May 2026",
     "url": "https://media.api.sf.gov/documents/MOHCD_-_OCEIA_Presentation_-_2026.05.11.pdf",
     "category": "Review",
-    "statement": "Tenant Right to Counsel funds free legal representation for tenants in eviction proceedings."
+    "statement": "Tenant Right to Counsel funds free legal representation for tenants in eviction proceedings.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S31",
@@ -245,7 +305,9 @@
     "title": "Housing Trust Fund Five-Year Report 2019-2023",
     "url": "https://media.api.sf.gov/documents/120882_-_Housing_Trust_Fund_Five-Year_Report_-_2018-2023.pdf",
     "category": "Review",
-    "statement": "TRC free legal assistance for residents facing eviction and free full-scope legal assistance for eligible cases."
+    "statement": "TRC free legal assistance for residents facing eviction and free full-scope legal assistance for eligible cases.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S32",
@@ -253,7 +315,9 @@
     "title": "San Francisco Property Information Map",
     "url": "https://sfplanninggis.org/PIM/",
     "category": "Case",
-    "statement": "Search by address; general information only; exact property address not supplied."
+    "statement": "Search by address; general information only; exact property address not supplied.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S33",
@@ -261,7 +325,9 @@
     "title": "2010.0778C Executive Summary",
     "url": "https://default.sfplanning.org/meetingarchive/planning_dept/sf-planning.org/ftp/files/Commission/cpcpackets/2010.0778C.pdf",
     "category": "Case",
-    "statement": "Project described as in the Outer Sunset Neighborhood; no property-specific address published."
+    "statement": "Excluded from case verification: generic Outer Sunset planning document, no supplied address match. Retained only to document prior research scope.",
+    "checked": "listed / fetch limitation",
+    "check_note": "Retained for transparency; not used as proof of an unconfirmed case value."
   },
   {
     "id": "S34",
@@ -269,7 +335,9 @@
     "title": "2017-006758DRP Discretionary Review",
     "url": "https://commissions.sfplanning.org/cpcpackets/2017-006758DRP.pdf",
     "category": "Case",
-    "statement": "27th Avenue project in Outer Sunset neighborhood; public-notice list includes 94122 addresses."
+    "statement": "Excluded from case verification: generic Outer Sunset planning document, no supplied address match. Retained only to document prior research scope.",
+    "checked": "listed / fetch limitation",
+    "check_note": "Retained for transparency; not used as proof of an unconfirmed case value."
   },
   {
     "id": "S35",
@@ -277,7 +345,9 @@
     "title": "CIV 827",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
     "category": "State",
-    "statement": "30 days <=10%; 90 days >10%; personal delivery/mail; 827(c) longer notice controls."
+    "statement": "30 days <=10%; 90 days >10%; personal delivery/mail; 827(c) longer notice controls.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S36",
@@ -285,7 +355,9 @@
     "title": "CIV 1947.12",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV",
     "category": "State",
-    "statement": "5%+CPI or 10% lower; two increases/12 months; local more-restrictive exemption; CPI method; 827 notice; damages; 2030 repeal."
+    "statement": "5%+CPI or 10% lower; two increases/12 months; local more-restrictive exemption; CPI method; 827 notice; damages; 2030 repeal.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S37",
@@ -293,7 +365,9 @@
     "title": "CIV 1954.53",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53.&lawCode=CIV",
     "category": "State",
-    "statement": "Costa-Hawkins; initial rent; d(2) unlimited increase; d(3) partial occupancy protected; d(4) waiver; f code violations."
+    "statement": "Costa-Hawkins; initial rent; d(2) unlimited increase; d(3) partial occupancy protected; d(4) waiver; f code violations.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S38",
@@ -301,7 +375,9 @@
     "title": "GOV 12955",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12955.&lawCode=GOV",
     "category": "State",
-    "statement": "FEHA protected classes; source of income; retaliation; aggregate income; perception/association."
+    "statement": "FEHA protected classes; source of income; retaliation; aggregate income; perception/association.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S39",
@@ -309,7 +385,9 @@
     "title": "Housing discrimination",
     "url": "https://calcivilrights.ca.gov/housing/",
     "category": "State",
-    "statement": "FEHA protected characteristics, source-of-income terms and retaliation rules."
+    "statement": "FEHA protected characteristics, source-of-income terms and retaliation rules.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S40",
@@ -317,7 +395,9 @@
     "title": "Fair Housing Act overview",
     "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
     "category": "Federal",
-    "statement": "Federal protected classes; rental/terms discrimination; page redirected - flagged."
+    "statement": "Federal protected classes and rental/terms discrimination. Current overview also describes enforcement prioritization toward provable intentional discrimination; read alongside the statute and 24 CFR 100.500, not as a substitute for them.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S41",
@@ -325,7 +405,9 @@
     "title": "42 USC 3604 (GovInfo PDF)",
     "url": "https://www.govinfo.gov/link/uscode/42/3604",
     "category": "Federal",
-    "statement": "3603(b) exemptions; 3604(a)-(f) rental/terms/services discrimination and disability; 3605."
+    "statement": "3603(b) exemptions; 3604(a)-(f) rental/terms/services discrimination and disability; 3605.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S42",
@@ -333,7 +415,9 @@
     "title": "24 CFR 100.500 Discriminatory effect",
     "url": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-I/part-100/subpart-G/section-100.500",
     "category": "Federal",
-    "statement": "Current as of 11/04/2026; liability without intent; substantial legitimate nondiscriminatory interest; no less discriminatory alternative."
+    "statement": "eCFR current as of 11/05/2026: discriminatory effect can create liability without intent; substantial legitimate nondiscriminatory interest and less discriminatory alternative framework. Authoritative compilation, not legal advice.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S43",
@@ -341,7 +425,9 @@
     "title": "Fair Market Rents",
     "url": "https://www.huduser.gov/portal/datasets/fmr.html",
     "category": "Federal",
-    "statement": "40th-percentile gross rents; voucher payment standards; federal fiscal-year start generally Oct. 1; FY2027 docs; FY2026 revised May 21, 2026."
+    "statement": "40th-percentile gross rents; voucher payment standards; federal fiscal-year start generally Oct. 1; FY2027 docs; FY2026 revised May 21, 2026.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S44",
@@ -349,7 +435,9 @@
     "title": "Small Area Fair Market Rents",
     "url": "https://www.huduser.gov/portal/datasets/fmr/smallarea/index.html",
     "category": "Federal",
-    "statement": "ZIP-code FMRs; designated/optional areas; exception payment standards up to 110%; FY2026/FY2027 data links."
+    "statement": "ZIP-code FMRs; designated/optional areas; exception payment standards up to 110%; FY2026/FY2027 data links.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S45",
@@ -357,7 +445,9 @@
     "title": "FY2026 FMR Schedule",
     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_FMR_Schedule.pdf",
     "category": "Federal",
-    "statement": "San Francisco HMFA 0-4 BR: 2485 / 2977 / 3604 / 4604 / 4772."
+    "statement": "San Francisco HMFA 0-4 BR: 2485 / 2977 / 3604 / 4604 / 4772.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S46",
@@ -365,7 +455,9 @@
     "title": "FY2026 Small Area FMR Schedule",
     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_Small_Area_FMR_Schedule.pdf",
     "category": "Federal",
-    "statement": "Official chunks fetched covered AL/AK/AZ only; no 94122 row obtained."
+    "statement": "Inherited FY2026 SAFMR schedule; prior fetch chunks did not reach California/94122. Not re-fetched successfully 2026-11-08; ZIP value blank.",
+    "checked": "listed / fetch limitation",
+    "check_note": "Retained for transparency; not used as proof of an unconfirmed case value."
   },
   {
     "id": "S47",
@@ -373,7 +465,9 @@
     "title": "FY2027 FMR Schedule",
     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_FMR_Schedule.pdf",
     "category": "Federal",
-    "statement": "San Francisco HMFA 0-4 BR: 2574 / 3003 / 3697 / 4832 / 5439."
+    "statement": "San Francisco HMFA 0-4 BR: 2574 / 3003 / 3697 / 4832 / 5439.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S48",
@@ -381,7 +475,9 @@
     "title": "Independence Realty Trust Q4/FY 2025 earnings release exhibit",
     "url": "https://www.sec.gov/Archives/edgar/data/1466085/000143774926003792/ex_895776.htm",
     "category": "Corporate",
-    "statement": "Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8%; Q3 2025 new -3.5%, renewal 2.6%, blended 0.1%; 2,003 renovations, $251/month."
+    "statement": "Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8%; Q3 2025 new -3.5%, renewal 2.6%, blended 0.1%; 2,003 renovations, $251/month.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S49",
@@ -389,7 +485,9 @@
     "title": "Invitation Homes 2025 Form 10-K",
     "url": "https://www.sec.gov/Archives/edgar/data/1687229/000168722926000016/invh-20251231.htm",
     "category": "Corporate",
-    "statement": "2025 total portfolio renewal +4.6%, new -0.8%; 2024 renewal +4.9%, new +1.0%; not SF-specific."
+    "statement": "2025 total portfolio renewal +4.6%, new -0.8%; 2024 renewal +4.9%, new +1.0%; not SF-specific.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S50",
@@ -397,7 +495,9 @@
     "title": "FY2027 Small Area FMR data (xlsx)",
     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY27_safmrs.xlsx",
     "category": "Federal",
-    "statement": "Official xlsx listed; not parsed successfully; 94122 row left blank."
+    "statement": "Official FY2027 SAFMR xlsx listed by HUD; fetch failed 2026-11-08. No 94122 row parsed; ZIP value blank.",
+    "checked": "listed / fetch limitation",
+    "check_note": "Retained for transparency; not used as proof of an unconfirmed case value."
   },
   {
     "id": "S51",
@@ -405,7 +505,9 @@
     "title": "FY2026 revised Small Area FMR data (xlsx)",
     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/fy2026_safmrs_revised.xlsx",
     "category": "Federal",
-    "statement": "Fetch returned HTTP 500; 94122 row left blank."
+    "statement": "Official FY2026 revised SAFMR xlsx listed by HUD; prior fetch failed. No 94122 row parsed; ZIP value blank.",
+    "checked": "listed / fetch limitation",
+    "check_note": "Retained for transparency; not used as proof of an unconfirmed case value."
   },
   {
     "id": "S52",
@@ -413,7 +515,9 @@
     "title": "FY2027 Small Area FMR Schedule",
     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_Small_Area_FMR_Schedule.pdf",
     "category": "Federal",
-    "statement": "Official schedule listed; 94122 row not parsed; blank."
+    "statement": "Official FY2027 SAFMR schedule fetched 2026-11-08; parser returned only the first 30 pages (Alabama/Alaska/Arizona), not the California/94122 row. ZIP value remains blank.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S53",
@@ -421,7 +525,9 @@
     "title": "Sec. 37.15 Reporting Obligations; Licensing",
     "url": "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing",
     "category": "Local",
-    "statement": "Owners must report unit data under penalty of perjury; condominiums and units in buildings with fewer than 10 units report from March 1, 2023 and annually by March 1; substantially compliant owners receive a license to impose rent increases; otherwise the license is suspended and the tenant is not obligated to pay the increased rent for months during the suspension. Added by Ord. 265-20."
+    "statement": "Owners report under penalty of perjury; condominiums and buildings under 10 units report from March 1, 2023 and annually by March 1; substantially compliant owners receive a license; otherwise license suspended and tenant not obligated to pay increased rent during suspension; contact changes within 30 days.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S54",
@@ -429,7 +535,9 @@
     "title": "Annual rent increase for multiple years",
     "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years",
     "category": "Local",
-    "statement": "Increase for two or more years by adding the allowable percentages; increases cannot be compounded; no petition required for these increases; no rounding up; 30-day notice (35 if mailed); base rent only."
+    "statement": "Increase for two or more years by adding the allowable percentages; increases cannot be compounded; no petition required for these increases; no rounding up; 30-day notice (35 if mailed); base rent only.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S55",
@@ -437,7 +545,9 @@
     "title": "Rent Board Portal",
     "url": "https://portal.sfrb.org/",
     "category": "Local",
-    "statement": "Official portal to create an owner account, report into the Housing Inventory and check Rent Increase License status by address or APN."
+    "statement": "Official portal to create an owner account, report into the Housing Inventory and check Rent Increase License status by address or APN.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S56",
@@ -445,7 +555,9 @@
     "title": "The Rent Board Fee",
     "url": "https://www.sf.gov/rent-board-fee",
     "category": "Local",
-    "statement": "Separate from the Rent Increase License: every residential dwelling unit owner must pay a per-unit Rent Board Fee unless exempt. 2026-2027: $59.00 per dwelling unit, $29.50 per guest unit. Due March 1 each year; 5% monthly late penalty to a 15% maximum; unpaid balances referred to the Bureau of Delinquent Revenue after June 1. If the fee is paid in full, 50% ($29.50 per dwelling unit) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered. 'Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements.' Re-verified 2026-11-07."
+    "statement": "Separate from the Rent Increase License: every residential dwelling unit owner must pay a per-unit Rent Board Fee unless exempt. 2026-2027: $59.00 per dwelling unit, $29.50 per guest unit. Due March 1 each year; 5% monthly late penalty to a 15% maximum; unpaid balances referred to the Bureau of Delinquent Revenue after June 1. If the fee is paid in full, 50% ($29.50 per dwelling unit) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered. 'Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements.' Re-verified 2026-11-07.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S57",
@@ -453,7 +565,9 @@
     "title": "CIV 1942.5 (retaliation)",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV",
     "category": "State",
-    "statement": "If the lessee is not in default and has exercised repair/tenantability rights or complained to an agency, the lessor may not increase the rent (or decrease services) within 180 days of the triggering act; separate bar on retaliating for tenant organizing or exercising lawful rights; remedy is actual damages plus punitive damages of $100-$2,000 per retaliatory act for fraud/oppression/malice, and the court awards attorney's fees to the prevailing party if requested. Operative October 1, 2021. Re-verified 2026-11-07."
+    "statement": "Civil Code 1942.5: 180-day retaliation provisions with conditions and once-per-12-month limit; broader lawful-rights/organizing protection; good-faith stated cause exception; actual/punitive damages; attorney fees in retaliatory eviction actions. Fact-specific, not an automatic bar for every repair request.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S58",
@@ -461,7 +575,10 @@
     "title": "CIV 1947.12 (AB 1482) - two-unit exemption text",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV",
     "category": "State",
-    "statement": "The state rent cap does not apply to a property with two separate dwelling units in a single structure where the owner occupied one unit as the principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU or JADU. Exemption for separately alienable property requires the owner notice and that the owner is not a REIT, corporation, or an LLC with at least one corporate member. Verified from the statute text 2026-11-07."
+    "statement": "Retained research alias for S36 (same Civil Code 1947.12 URL): two-unit owner-occupied state-cap exemption and separate-parcel notice/owner conditions. Not counted as a distinct source URL.",
+    "alias_of": "S36",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S59",
@@ -469,7 +586,9 @@
     "title": "Partial Exemption for Newly Constructed Rental Units",
     "url": "https://www.sf.gov/information--partial-exemption-newly-constructed-rental-units",
     "category": "Local",
-    "statement": "Units whose first Certificate of Occupancy issued after June 13, 1979 are exempt from the rent increase limitations only; they keep just-cause eviction protection and the annual Rent Board fee is collected for them. The exemption needs both a post-June-13-1979 first Certificate of Occupancy and no residential use before it. Re-verified 2026-11-07."
+    "statement": "Units whose first Certificate of Occupancy issued after June 13, 1979 are exempt from the rent increase limitations only; they keep just-cause eviction protection and the annual Rent Board fee is collected for them. The exemption needs both a post-June-13-1979 first Certificate of Occupancy and no residential use before it. Re-verified 2026-11-07.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S60",
@@ -477,7 +596,9 @@
     "title": "Partial Exemption for Certain Single-Family Homes and Condominiums Under Costa-Hawkins",
     "url": "https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins",
     "category": "Local",
-    "statement": "Single-family homes and condominiums are exempt from the rent increase limitations only if the tenancy commenced on or after January 1, 1996. A dwelling with a legal or illegal in-law unit constitutes a two-unit building and is NOT exempt unless both units are rented together as a single tenancy. A single-family dwelling is not exempt if another residential structure is on the same lot. Exempted units still owe the annual Rent Board fee. Re-verified 2026-11-07."
+    "statement": "Single-family homes and condominiums are exempt from the rent increase limitations only if the tenancy commenced on or after January 1, 1996. A dwelling with a legal or illegal in-law unit constitutes a two-unit building and is NOT exempt unless both units are rented together as a single tenancy. A single-family dwelling is not exempt if another residential structure is on the same lot. Exempted units still owe the annual Rent Board fee. Re-verified 2026-11-07.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   },
   {
     "id": "S61",
@@ -485,6 +606,118 @@
     "title": "Evictions in San Francisco",
     "url": "https://www.sf.gov/evictions-san-francisco",
     "category": "Local",
-    "statement": "Eviction requires just cause under the Rent Ordinance; the Rent Ordinance generally allows tenants to replace departing roommates and to increase the number of occupants even when a written lease prohibits it; free legal help through the Eviction Defense Collaborative (415-659-9184) on receipt of an unlawful detainer; the 17 just-cause reasons are listed separately. Re-verified 2026-11-07."
+    "statement": "Eviction requires just cause under the Rent Ordinance; the Rent Ordinance generally allows tenants to replace departing roommates and to increase the number of occupants even when a written lease prohibits it; free legal help through the Eviction Defense Collaborative (415-659-9184) on receipt of an unlawful detainer; the 17 just-cause reasons are listed separately. Re-verified 2026-11-07.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S62",
+    "agency": "California DRE / Courts hosted guide",
+    "title": "California Tenants guide (Rev. 2022), fixed-term and periodic tenancies",
+    "url": "https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf",
+    "category": "State",
+    "statement": "Printed p.22: landlord cannot raise rent during a fixed term unless the rental agreement expressly allows it; periodic tenancies continue until proper notice. Official guide is informational, not legal advice; actual lease terms unverified.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S63",
+    "agency": "SF Administrative Code",
+    "title": "Chapter 37A Rent Stabilization and Arbitration Fee (Rent Board PDF 901)",
+    "url": "https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf",
+    "category": "Local",
+    "statement": "Scope includes rent-control-exempt units with narrow exemptions; fee due March 1; 5% penalties March/April/May; June 1 referral; paid-in-full owner may recover up to 50% from Nov. 1 occupants, no penalties, by deposit-interest deduction or compliant 30-day bill; owner remains liable.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S64",
+    "agency": "SF Rent Board",
+    "title": "Notification of Rent Board Fee and Housing Inventory Requirements (2027)",
+    "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement",
+    "category": "Local",
+    "statement": "2027 fee exemption requests due Dec. 14, 2026; Annual Fee Notice mailed Jan. 2027; Housing Inventory due March 1, 2027; fee exemption and inventory reporting do not satisfy each other; license required for annual/banked increases.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S65",
+    "agency": "SF Treasurer & Tax Collector",
+    "title": "Information for Lessors of Residential Real Estate",
+    "url": "https://sftreasurer.org/information-lessors-residential-real-estate",
+    "category": "Local",
+    "statement": "One residential structure with fewer than four units is not, by that fact alone, required to register; other business activity/payroll may require registration. Per-building treatment; fewer-than-four-unit gross-receipts tax exemption and filing rules.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S66",
+    "agency": "SF Treasurer & Tax Collector",
+    "title": "Register a Business",
+    "url": "https://sftreasurer.org/business/register-business",
+    "category": "Local",
+    "statement": "General business registration within 30 days and annual renewal; exception for only rental income from one residential structure under four units, one condo, or cooperative; public business/ownership data warning.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S67",
+    "agency": "SF Rent Board",
+    "title": "Security Deposits",
+    "url": "https://www.sf.gov/reports--security-deposits",
+    "category": "Local",
+    "statement": "Deposit interest 4.2% for Mar. 1, 2026-Feb. 28, 2027; annual interest on deposits held over one year; AB 12 one-month cap with natural-person/small-LLC two-property/four-unit exception; deposit disputes are state-law matters.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S68",
+    "agency": "GitHub Docs",
+    "title": "Creating a GitHub Pages site",
+    "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site",
+    "category": "Project",
+    "statement": "Pages publishes static files; branch/folder publishing source; root index entry; public-site warning even for private repositories; changes can take up to 10 minutes to publish.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S69",
+    "agency": "GitHub Docs",
+    "title": "Removing sensitive data from a repository",
+    "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository",
+    "category": "Project",
+    "statement": "History rewriting requires coordination; sensitive commits may remain in clones/forks, cached GitHub views and pull requests; GitHub Support may remove cached views/PR references; deleting current files does not erase history.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S70",
+    "agency": "GitHub Docs",
+    "title": "Pull requests",
+    "url": "https://docs.github.com/en/pull-requests/reference/pull-requests",
+    "category": "Project",
+    "statement": "Pull requests propose, review and merge changes; conversation, commits, checks and files-changed views; merge status shows blockers and requirements.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S71",
+    "agency": "GitHub Docs",
+    "title": "About protected branches",
+    "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+    "category": "Project",
+    "statement": "Branch protection can require status checks, reviews and other merge requirements; unique job names avoid ambiguous checks; force-push/deletion restrictions.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
+  },
+  {
+    "id": "S72",
+    "agency": "American Legal (official SF code publisher)",
+    "title": "SF Administrative Code Chapter 37 index",
+    "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-0-15928",
+    "category": "Local",
+    "statement": "Official publisher index labeled 2026 S-96 (current). Fetch confirmed title/current-code label; full section text not re-read through this index in this session.",
+    "checked": "2026-11-08",
+    "check_note": "Direct official fetch or official document parse on 2026-11-08 unless a limitation is stated."
   }
 ]

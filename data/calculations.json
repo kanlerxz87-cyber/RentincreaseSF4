@@ -23,8 +23,8 @@
             "S03",
             "S04"
           ],
-          "notes": "Eligibility, license, notice and anniversary unverified.",
-          "flag_id": "",
+          "notes": "Illustration only: owner-supplied rent x official 1.6%. Coverage, license, lease type, anniversary and history unverified; not an approved increase.",
+          "flag_id": "T03-F06",
           "source_note": ""
         },
         {
@@ -38,8 +38,8 @@
             "S03",
             "S04"
           ],
-          "notes": "Eligibility, license, notice and anniversary unverified.",
-          "flag_id": "",
+          "notes": "Illustration only: owner-supplied last-lease rent x official 1.6%. Current rent, coverage, license, lease type, anniversary and history unverified; not an approved increase.",
+          "flag_id": "T03-F06",
           "source_note": ""
         }
       ]
@@ -109,7 +109,7 @@
           "id": "CALC-06",
           "label": "Rounding",
           "value": "No rounding up; base rent only",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01"
           ],
@@ -121,7 +121,7 @@
           "id": "CALC-07",
           "label": "Official rate series behind any banked amount",
           "value": "1.8% (3/1/20-2/28/21), 0.7% (3/1/21-2/28/22), 2.3% (3/1/22-2/28/23), 3.6% (3/1/23-2/29/24), 1.7% (3/1/24-2/28/25), 1.4% (3/1/25-2/28/26), 1.6% (3/1/26-2/28/27)",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S04",
             "S02"
@@ -132,15 +132,15 @@
         },
         {
           "id": "CALC-08",
-          "label": "Unit 2 - conditional maximum if nothing was ever raised",
-          "value": "11.5% of skipped years (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4) plus 1.6% = 13.1%; $3,150 x 13.1% = $412.65, or $3,562.65",
-          "status": "analysis",
+          "label": "Unit 2 - banked total",
+          "value": "",
+          "status": "needs review",
           "source_ids": [
             "S05",
             "S04",
             "S02"
           ],
-          "notes": "Conditional arithmetic only: it assumes no increase since June 1, 2019, which the owner has not confirmed. A combined increase above 10% also requires 90 days' written notice, and the effective date must fall on or before 2/28/2027 for the 1.6% component to be the published rate.",
+          "notes": "Earlier conditional illustration withdrawn. No banked total is asserted without complete history, anniversary, banking eligibility and the rate for the actual effective date.",
           "flag_id": "F30",
           "source_note": ""
         },
@@ -153,14 +153,14 @@
             "S05",
             "S01"
           ],
-          "notes": "The lease began February 1, 2025 and no notice history was supplied, so nothing can yet satisfy the 24-full-month banking rule.",
+          "notes": "Lease date and missing notice history do not establish banking eligibility; blank.",
           "flag_id": "T03-F05",
           "source_note": ""
         }
       ]
     },
     {
-      "title": "Notice deadlines if the increase is 1.6%",
+      "title": "Notice deadlines (proposed effective date not supplied)",
       "columns": [
         "Item",
         "Value / finding",
@@ -171,28 +171,66 @@
       "rows": [
         {
           "id": "CALC-10",
-          "label": "Effective February 1, 2027, served in person",
-          "value": "Notice delivered by January 2, 2027",
-          "status": "analysis",
+          "label": "Proposed effective date / personal-delivery deadline",
+          "value": "",
+          "status": "needs review",
           "source_ids": [
             "S01",
             "S35"
           ],
-          "notes": "30 days before the effective date; the 1.6% rate is in effect through 2/28/2027.",
-          "flag_id": "",
+          "notes": "No effective date was supplied. Do not invent one; once verified, apply the official 30/90-day rule.",
+          "flag_id": "F37",
           "source_note": ""
         },
         {
           "id": "CALC-11",
-          "label": "Effective February 1, 2027, served by mail",
-          "value": "Notice mailed by December 28, 2026",
-          "status": "analysis",
+          "label": "Proposed effective date / mailed notice deadline",
+          "value": "",
+          "status": "needs review",
           "source_ids": [
             "S01",
             "S35"
           ],
-          "notes": "Mailed notice gets 5 extra days and Civil Code 1013 extension rules apply.",
-          "flag_id": "",
+          "notes": "No effective date was supplied. Once verified, apply the official notice period plus 5 days for mailing within California.",
+          "flag_id": "F37",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Separate Rent Board Fee arithmetic (not rent)",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "CALC-12",
+          "label": "Illustrative annual Rent Board Fee for two supplied dwelling units",
+          "value": "$118.00 = 2 x $59.00 (2026-2027 tax year; due March 1, 2027)",
+          "status": "analysis",
+          "source_ids": [
+            "S56",
+            "S64"
+          ],
+          "notes": "Not a confirmed bill; official unit count/exemption status unverified. Separate from rent and license.",
+          "flag_id": "F42",
+          "source_note": ""
+        },
+        {
+          "id": "CALC-13",
+          "label": "Illustrative maximum tenant fee recovery",
+          "value": "$59.00 total = 50% x $118.00; $29.50 per unit",
+          "status": "analysis",
+          "source_ids": [
+            "S56",
+            "S63"
+          ],
+          "notes": "Only after owner pays in full, from qualifying Nov. 1 occupants, no penalties, by compliant method; not a rent increase.",
+          "flag_id": "F42",
           "source_note": ""
         }
       ]

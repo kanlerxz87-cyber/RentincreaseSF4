@@ -1,174 +1,234 @@
-"""Standalone markdown deliverables and stylesheet for the static site."""
+"""Standalone markdown deliverables, stylesheet and progressive-enhancement script."""
 
-EXECUTIVE_SUMMARY_TEXT = """# Executive Summary - Rental increase SF
+from site_sources import SOURCES
+from site_flags import FLAGS
 
-Research ledger dated 2026-11-07 UTC, re-verified independently this session against 22 official pages opened directly rather than carried over from earlier sessions. Informational compliance research, not legal advice.
+SOURCE_COUNT = len({s["url"] for s in SOURCES.values()})
+SOURCE_ENTRY_COUNT = len(SOURCES)
+FLAG_COUNT = len(FLAGS)
 
-## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
+EXECUTIVE_SUMMARY_TEXT = f"""# Executive Summary - Rental increase SF
 
-**Question:** "I am just an individual property owner and not part of a corporation — do I still need to apply for the license and inform the Rent Board before notifying tenants of a rent increase?"
+Research ledger dated 2026-11-08 UTC. Informational compliance research, not legal advice. No attorney has approved a proposed increase; this is a conservative compliance checklist capable of tenant-lawyer review, not a guarantee against a petition, complaint or lawsuit.
 
-**Answer: Yes.** SF.gov states: "A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases on a tenant." No individual-owner exception is stated. The requirement has applied since July 1, 2022 — and since **March 1, 2023 for condominiums and buildings with 1-9 residential units** — so a small individual-owned building in San Francisco is covered now. "Informing the Rent Board" and "getting the license" are the same process: you report into the **Rent Board Housing Inventory**, and the license is generated from that report.
+## FOREFRONT: the individual-owner Rent Board answer
 
-**Step by step (do these in order, before any tenant notice takes effect):**
+**Yes — an individual owner of a covered rent-controlled unit must use the Rent Board Housing Inventory/licensing process before an annual or banked increase takes effect.** There is no individual-owner or small-building exemption on the official pages reviewed. The official condition is a current license **before the increase's effective date**; the pages do not expressly require a separate Board filing before mailing an ordinary annual/banked notice. The safest order is: report, verify the license, check the tenancy, then serve a compliant notice.
 
-1. **Confirm the unit is covered** by the SF Rent Ordinance (check the property in the SF Planning Property Information Map; many units built on/before June 13, 1979 are covered — the owner-supplied "built in 1940" fact is unverified, see Flagged for Review).
-2. **Report into the Rent Board Housing Inventory** via the Rent Board Portal (https://portal.sfrb.org/). SF.gov: "All owners of residential property are required to report." Reporting is free, online 24/7, due **March 1 every year**, and is submitted under penalty of perjury. The information entered is public.
-3. **Receive the Rent Increase License.** Owners who report a unit as tenant-occupied receive a rent increase license; it is **automatically generated for non-owner-occupied units**. The license does **not** need to be included with your notice to tenants.
-4. **Check the license is current and on file before the increase's effective date.** SF.gov: "A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect," and a rent increase notice "will not be enforceable without having a rent increase license on the effective date of the notice." Tenants can search the Portal to check whether you are up to date; if you miss the deadline, the Rent Board may notify your tenants that you are not in compliance. (Exact consequence wording differs between SF.gov pages - see flag F25; the ordinance itself says the license is suspended and the tenant is not obligated to pay the increased rent during the suspension.)
-5. **Late?** You can still report and receive a license after March 1; the Rent Board assesses **no monetary penalty** for late filing — but that does not make a notice enforceable for an effective date on which no license was on file.
-6. **Only then notify tenants**, in writing: 30 days (90 days if the increase, alone or combined with another increase in the same year, exceeds 10%; +5 days if mailed), stating the dollar amount, percentage, and effective date, using the rate in effect on the increase date. Complying with the license rule does not replace any other local or state rent-increase law.
+1. **Confirm coverage privately.** Use the SF Planning Property Information Map and the Rent Board Portal with the exact address/APN. The public site intentionally omits the address. The supplied 1940 year and two-unit description point toward coverage but are not an official determination. In-law unit/ADU and separate-parcel facts can change state and local coverage; verify them before relying on any exemption.
+2. **Report each residential unit into the Housing Inventory.** Use https://portal.sfrb.org/. Reporting is free, due annually by March 1, and submitted under penalty of perjury. Inventory information is public, including owner/business contact information.
+3. **Verify the Rent Increase License.** For non-owner-occupied units the license is generated from the inventory report. Check that it is current for the unit and the intended effective date. Keep a dated portal record.
+4. **Check the tenancy before calculating.** Confirm fixed-term versus periodic status, any express mid-term increase clause, anniversary date, prior increases, base rent, occupant status and retaliation/discrimination risk. Do not infer a market reset from a roommate change.
+5. **Calculate only what is supported.** The current ordinary annual rate is 1.6% for increases effective March 1, 2026 through February 28, 2027. Multiply base rent by the rate; do not round up. No banked total is asserted here because history and banking eligibility are unverified and SF.gov's banking text/examples conflict.
+6. **Serve and document the notice.** For a periodic tenancy, give at least 30 days' written notice, or 90 days if the increase alone or combined with another increase in the prior 12 months exceeds 10%; mailing within California adds 5 days. State the dollar amount, percentage, effective date and any banked portion. Use personal delivery or mail as Civil Code 827/CCP 1013 require, and keep proof.
 
-Official links for manual review: SF.gov "Learn about rent increases in San Francisco" (https://www.sf.gov/learn-about-rent-increases-san-francisco) and SF.gov "The Rent Board Housing Inventory" (https://www.sf.gov/rent-board-housing-inventory).
+Official links: https://www.sf.gov/learn-about-rent-increases-san-francisco ; https://www.sf.gov/rent-board-housing-inventory ; https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory ; https://www.sf.gov/information--sec-3715-reporting-obligations-licensing ; https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV .
 
-**What the Rent Ordinance itself says:**
+**Ordinance basis.** Sec. 37.3(a)(1) ties the annual increase license to reporting under Sec. 37.15; Sec. 37.15(e) suspends the license during noncompliance and says the tenant is not obligated to pay the increased rent during suspension. Form 571 says the ordinary annual increase may be imposed without a Rent Board petition. SF.gov's Rent Board text is a convenience version; American Legal is the official code publisher.
 
-- **Sec. 37.3(a)(1):** "A landlord who has reported the required information about their rental unit to the Rent Board as set forth in Section 37.15 shall have a license to impose annually a rent increase which does not exceed a tenant's base rent by more than 60% of said published increase. In no event, however, shall the allowable annual increase be greater than 7%." - https://www.sf.gov/information--sec-373-rent-limitations
-- **Sec. 37.15(e):** a substantially compliant owner "shall receive a license to impose rent increases"; if not, "the license to impose rent increases shall be temporarily suspended ... but a tenant shall not be obligated to pay the increased rent for months during the period of suspension." Added by Ord. 265-20. - https://www.sf.gov/information--sec-3715-reporting-obligations-licensing
-- **Form 571 (Rent Board):** the annual increase may be imposed "without filing a petition at the Rent Board." - https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf
+**Do not confuse the license with the Rent Board Fee.** The fee is separate: $59.00 per dwelling unit for the 2026-2027 tax year, due March 1, 2027, with narrow exemptions and a December 14, 2026 exemption-request deadline for that cycle. A fee exemption does not satisfy Housing Inventory reporting. If the owner pays the fee in full, up to 50% ($29.50 per dwelling unit) may be recovered from qualifying November 1 occupants by the statutory deposit-interest/billing method; penalties are not recoverable. This is not base rent. For two supplied units the illustrative fee is $118.00 and the illustrative maximum recovery is $59.00 total, not a confirmed bill.
 
-**Two separate obligations - do not conflate them (flag F33).** The *Rent Increase License* is produced by Housing Inventory reporting and there is **no charge** for it. The *Rent Board Fee* is a **separate** per-unit annual payment: **$59.00 per dwelling unit for 2026-2027**, due **March 1**, with a 5% late penalty per month (maximum 15%) and referral to the Bureau of Delinquent Revenue after June 1. SF.gov states expressly that *"requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements."* You can pay the fee and still have no license. If the fee is paid in full you may recover **50% ($29.50 per dwelling unit)** from tenants in occupancy as of November 1 of the tax year - show it as a fee recovery, not as part of the rent increase. (https://www.sf.gov/rent-board-fee)
+## Bottom line for the two anonymized units
 
-**Before you serve any notice, check the retaliation clock (state-law risk, see State Law rows ST-13 to ST-15).** Independently of the Rent Ordinance, Civil Code section 1942.5 bars a rent increase for **180 days** after a tenant who is not in default has requested repairs, given a tenantability notice, or complained to an agency, and separately bars increases that retaliate for tenant organizing or for exercising lawful rights. Remedies include actual damages, **$100-$2,000 punitive damages per retaliatory act**, and the prevailing party's attorney's fees. (https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV)
+- **Unit 1:** supplied rent $3,995. $3,995 x 1.6% = $63.92, giving $4,058.92 as an illustration only.
+- **Unit 2:** supplied last-lease rent $3,150. $3,150 x 1.6% = $50.40, giving $3,200.40 as an illustration only.
 
-**Your two-unit 1940 building - why coverage is likely but still unconfirmed.** SF.gov: many units built on or before June 13, 1979 have both rent control and eviction protection. A dwelling with a legal or illegal in-law unit is a **two-unit building** and is **not** exempt unless both units are rented together as a single tenancy, and a single-family dwelling is not exempt if another residential structure is on the same lot. Conversely, AB 1482 exempts a two-unit structure only if the owner occupied one unit as a principal residence **at the beginning of the tenancy and continues in occupancy**, and neither unit is an ADU/JADU - a fact you did not supply, so no exemption is asserted (flags F34, F35). Two separately rented units in a pre-1979 building is the paradigm covered case, but confirm the lot and year in the Property Information Map before you rely on it. (https://www.sf.gov/learn-about-san-francisco-rental-laws, https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins, https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV)
+These are **not approved amounts or effective dates**. Coverage, license status, current base rent, lease type, anniversary, prior notices, occupant status and retaliation history are unverified. No proposed effective date was supplied, so notice-deadline cells are blank rather than invented. California's state-only AB 1482 cap is 8.8% for San Francisco for August 1, 2026 through July 31, 2027, but it does not replace the stricter SF rent-control cap for covered units. No general federal private-rent cap was found; HUD FMR/SAFMR figures are voucher standards, not a lawful increase benchmark.
 
-**Scope limits:** SF.gov states the license rules apply ONLY to rent-controlled units, and that the license is not required for Section 6.14/Costa-Hawkins increases or for passthroughs allowed under the Rent Ordinance (https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory, https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins). The Housing Inventory information you submit is **public**, including the owner's name and business contact information.
+## Privacy warning — current anonymization is not history remediation
 
-**Full step-by-step tables:** the site's Step-by-Step License page (`pages/process.html`) carries 12 numbered steps with an official link on every step, the ordinance text, and the case application for both units. For this case, Housing Inventory reporting and a current license for either unit are **unconfirmed** (blank, flagged T03-F05) — no increase should be treated as effective until that is confirmed.
+The current public tree uses Tenant A-F placeholders, preserves the supplied dates/amounts, and omits the exact address. **Earlier public Git history and PR diffs exposed raw identifier tokens. That exposure is not remediated by cleaning the current tree.** Clones, forks, cached views and low-entropy fingerprints may persist. The site does not claim confidentiality has been restored. Owner options and limits are documented in research/privacy/HISTORY_EXPOSURE.md and GitHub's sensitive-data guidance: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository .
 
+## Roommates, banking and fixed-term leases
 
-## Bottom line
+Extra rent merely because a roommate was added is unlawful, even if the lease says otherwise. A Section 6.14 increase requires the last original occupant to have vacated and a timely written 6.14 notice to subsequent occupants; generally 60 days is considered reasonable. Costa-Hawkins has different lawful-subtenant/assignee conditions and does not apply to co-tenants. The April 1, 2026 continuing-tenancy facts do not establish either route. No market-rate reset is recommended.
 
-For a unit covered by the San Francisco Rent Ordinance, the current ordinary annual allowable increase is **1.6% effective 3/1/26-2/28/27**, once every 12 months on the tenant's anniversary date. A current Rent Increase License must be on file before the increase takes effect; the increase is calculated on base rent only, is not rounded up, and requires written notice. California's state-only AB 1482 cap is **8.8% for San Francisco 8/1/26-7/31/27**, but SF.gov says it does **not** apply to units already under the SF Rent Ordinance's rent-increase limits. No official general federal private-rent cap was found; HUD FMR/SAFMR figures are voucher payment standards, not rent caps.
+Banking is not computed. SF.gov says a skipped increase is banked only after 24 full months without any increase, but its examples describe 12 months since a skipped opportunity. Percentages are added, not compounded or prorated, and do not carry to a new tenant. Verify the actual history and obtain counselor/legal review before relying on any banked amount. An earlier conditional Unit 2 banked illustration was withdrawn.
 
-## Case handling
+The California DRE guide says rent generally cannot be raised during a fixed term unless the agreement expressly allows it. The supplied lease dates do not establish lease type or a mid-term clause, so that issue is flagged.
 
-The owner-supplied case facts are anonymized. Dates and dollar amounts are preserved: Unit 1 last lease start February 1, 2025 at $3,995; Unit 1 continuing tenancy/current tenants April 1, 2026 at $3,995; Unit 2 last lease start June 1, 2019 at $3,150. Tenant identifiers are replaced with placeholders Tenant A-F. No exact street address, real name, initial, or contact detail is published. The case facts themselves are now published in full on the site as clearly labelled **owner-supplied (anonymized)** rows - ZIP 94122, 1940, two units, lease dates and rents, Tenant A-F - because you asked for the entries to be readable; they are explicitly not official findings. The separate official-verification rows stay blank and flagged: exact-address coverage, the official building-year record, license status, prior increases and notice history, whether the April 1, 2026 continuation restarted the anniversary date, and the legal status of the continuing occupants were not official-verified.
+## Discrimination, retaliation and one versus both units
 
-Arithmetic using owner-supplied amounts and official rates only: Unit 1 $3,995 x 1.6% = $63.92 -> $4,058.92; Unit 2 $3,150 x 1.6% = $50.40 -> $3,200.40. These are illustrative only, not a recommendation or eligibility determination. No banked increase is inferred.
+No official rule requiring both units to be raised was found. Use neutral, unit-based eligibility criteria and document anniversary/history reasons if only one unit is raised. Raising both units does not immunize discrimination or retaliation. Federal Fair Housing Act rules, California FEHA, SF tenant-harassment rules and Civil Code 1942.5 all matter. The eCFR discriminatory-effect regulation remains in the source ledger even though the current HUD overview describes a different enforcement emphasis; do not assume agency policy overrides the regulation.
 
-Unit 1's roommate change does not by itself permit extra rent. SF.gov prohibits charging more rent merely because a new/additional roommate moved in. Section 6.14 / Costa-Hawkins market-rate reset rules require specific facts about the last original occupant and the continuing occupant's legal status; those facts are unverified. SF.gov and the Rent Board strongly encourage legal advice, and Jan. 13, 2026 minutes denied an appeal because the landlord did not prove the last original occupant no longer permanently resides. No market-rate reset is recommended.
+Civil Code 1942.5 has conditional 180-day retaliation provisions and broader protection for tenant organizing/lawful rights. It is not an automatic bar for every repair request: statutory triggers, tenant default, causation, good-faith stated cause and the once-per-12-month limit require fact review. No repair/complaint history was supplied here.
 
-## Notice checklist
+## Corporate and individual evidence
 
-Verify coverage in SF Planning PIM; obtain a current Rent Increase License after Housing Inventory reporting; verify 12-month/anniversary eligibility; use the rate in effect on the increase date; give written 30-day notice (90-day if >10% alone/combined in same year, +5 days if mailed) with dollar amount, percentage, effective date and banked portion if any; follow Civil Code 827 delivery rules; file any required petition/worksheet before notice; keep identical neutral records for each eligible unit.
-
-## Discrimination and one-vs-both
-
-The federal FHA, 24 CFR 100.500 disparate-impact rule, California FEHA and SF tenant-harassment rules apply. Intent is not required for a discriminatory-effect claim; a substantial legitimate nondiscriminatory interest and no less discriminatory alternative matter. No official source requires raising both units, but an identical written neutral policy applied to each eligible unit is the conservative approach. If only one unit is raised, document neutral eligibility/anniversary reasons, not tenant identity. Nothing here claims attorney approval or guarantees that no complaint, inquiry or lawsuit will occur.
-
-## Corporate / individual evidence
-
-SEC filings show IRT Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8% and Invitation Homes 2025 total-portfolio renewal +4.6%, new -0.8%. These are portfolio-level, not SF-specific and not legal benchmarks. SF Rent Board June 2024 workload stats show 23 landlord petitions/154 units (18 capital-improvement petitions covering 148 units) and 73 tenant petitions/73 units; this is narrow formal-petition evidence only. An earlier draft listed 19 capital-improvement petitions / 148 units - the unit count belonged to the capital-improvement line while the 19 was the subtotal including one Costa-Hawkins petition; corrected and flagged as F29. No official source proves what all large corporations or all individual SF owners do.
-
-## Banked increases and the 10% notice threshold
-
-A skipped increase is only banked if at least 24 full months pass without any rent increase; banked percentages are added, never compounded or prorated, and never carry over to a new tenant. Two-or-more-year increases are imposed by adding the allowable percentages and need no Rent Board petition. If a correctly banked total plus the current annual rate exceeds 10%, the notice must be 90 days rather than 30 days. No banked amount is asserted for either unit here, because neither rent history was supplied - both are blank and flagged. **Conditional arithmetic only (not a finding, not a recommendation):** if literally no increase had been imposed on Unit 2 since June 1, 2019, the official rates for the skipped years (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 = 11.5%) plus the current 1.6% would total 13.1%, i.e. $412.65 on $3,150, or $3,562.65; a combined increase above 10% requires 90 days' written notice. Because the increase history is unconfirmed, this figure is flagged (F30) and is not relied on anywhere. (https://www.sf.gov/information--banked-rent-increases, https://www.sf.gov/information--annual-rent-increase-multiple-years)
-
-## Unit 1, Section 6.14 and privacy
-
-Extra rent for an additional occupant is unlawful, and adding an occupant is not a market-rate reset. A Section 6.14 or Costa-Hawkins unlimited increase requires the last original occupant to have vacated plus a timely written 6.14 notice (served within a reasonable time, generally 60 days, after the landlord knew or should have known of the occupancy); co-tenants are not subject to a Costa-Hawkins increase at all. Whether a 6.14 notice was served on the April 2026 occupant, and whether that occupant is a co-tenant or a subtenant, was not supplied - blank and flagged (F28). Separately: replacing tenant identifiers with Tenant A-F, keeping dates and amounts, withholding any street address, and keeping the raw-identifier intake out of git is this project's privacy rule; the Rent Board's own inventory filing is public by design. (https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins, https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53.&lawCode=CIV, https://www.sf.gov/rent-board-housing-inventory)
+SEC filings show IRT Q4 2025 same-store new leases -3.7%, renewals +2.9%, blended +0.8%, and Invitation Homes 2025 total-portfolio renewals +4.6%, new leases -0.8%. These are portfolio-level, not SF-specific and not legal benchmarks. June 2024 Rent Board workload statistics show 23 total landlord petitions/154 units, including 18 capital-improvement petitions/148 units; the 19/149 subtotal includes one Costa-Hawkins petition. This is narrow formal-petition evidence, not proof of what all individual owners do.
 
 ## Flagged for Review
 
-All 45 irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), Unit 1's unknown Section 6.14 notice history (F28), a corrected capital-improvement petition count (F29), and the conditional (not asserted) banked-increase illustration (F30), conflict markers that `main` commit `1d80419` had committed into `COORDINATION.md` and which the validator did not catch (F31), out-of-sequence flag cross-references in `SOURCES.md` (F32), the fee-versus-license conflation (F33), the conditional and unverified two-unit owner-occupied exemption (F34), and the in-law-unit / second-structure coverage question (F35). Flagged items do not block the site or merge.
+All {FLAG_COUNT} flags are published on the Flagged for Review page with official links. They include source conflicts, unverified case facts, the missing 94122 SAFMR row, no federal cap/attorney approval/both-units rule, historical privacy exposure, fixed-term/effective-date gaps, fee/registration gaps, and the static site's inability to self-certify its own final merge/deploy. Flagged items are nonblocking for publication, but they are not treated as verified.
 
-## Sources
+## Sources and verification limits
 
-61 official sources are catalogued in SOURCES.md and on the Sources page. Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.
+{SOURCE_ENTRY_COUNT} source entries ({SOURCE_COUNT} distinct URLs) are catalogued in SOURCES.md and on the Sources page. Every published table row links to official rule or project-platform sources; owner-supplied rows say explicitly that the links are governing rules, not proof of intake. Structural validation checks generated files, links, privacy patterns and consistency. It is not legal verification and does not confirm the owner's property records.
 """
 
-FLAGGED_TEXT = """# Flagged for Review
+def _md_escape(text):
+    return str(text).replace("|", "\\|").replace("\n", " ")
 
-This page is clearly labeled **Flagged for Review**. Status `needs review` means the item is published with official source links for manual review and does **not** block any task or the merge.
+_flag_rows = "\n".join(
+    "| {id} | {title} | {detail} | {sources} |".format(
+        id=_md_escape(f["id"]),
+        title=_md_escape(f["title"]),
+        detail=_md_escape(f["detail"]),
+        sources="; ".join("[{sid}]({url})".format(sid=sid, url=SOURCES[sid]["url"]) for sid in f["source_ids"]),
+    )
+    for f in FLAGS
+)
+FLAGGED_TEXT = f"""# Flagged for Review
 
-Full detail is in `research/sources/irregularities.md`, `research/sources/unverified.md`, `research/flags.md` and `pages/flagged.html`.
+This page is clearly labeled **Flagged for Review**. Status `needs review` means the item is published with official source links for manual review and does **not** block publication. Unverified case value cells are blank. Nonblocking does not mean verified.
 
-## Summary of flags
+| Flag | Issue | Detail | Official source(s) |
+| --- | --- | --- | --- |
+{_flag_rows}
 
-- 30 source-quality flags F01-F30 (F25: SF.gov license-consequence wording differs — 'may be null/void' vs notice 'not enforceable' without a license on the effective date; F26: earlier validation report published raw identifier tokens in a check detail — fixed 2026-11-07, values withheld): SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, old 1.7% example, F27 (next year's allowable rate not yet published), F28 (Unit 1 Section 6.14 notice history unknown), F29 (correction: the June 2024 source shows 18 capital-improvement petitions / 148 units, not 19 / 148) and F30 (the 13.1% banked figure for Unit 2 is conditional arithmetic, not a finding).
-- 10 case/analysis flags T03-F01-T03-F10: owner-supplied facts, anonymization, address/year/coverage, Unit 1 legal status, banked/license/notice history, illustrative arithmetic, 94122 SAFMR blank, no cap/approval/both-units guarantee, narrow corporate/individual evidence, and conservative checklist only.
-
-Every flag on the site includes official source links. Unverified value cells are blank.
+See also `pages/flagged.html`, `research/flags.md`, `research/sources/irregularities.md`, `research/sources/unverified.md` and `research/current_audit/`.
 """
 
-README_TEXT = """# RentincreaseSF4
+README_TEXT = f"""# RentincreaseSF4
 
-Public GitHub Pages research site for "Rental increase SF": executive summary, official-source-linked tables, anonymized case dashboard, analysis, and a clearly labeled Flagged for Review page.
+Public GitHub Pages research dashboard for "Rental increase SF": an individual-owner Rent Board action plan, official-source-linked tables, anonymized two-unit case, analysis, and a clearly labeled Flagged for Review page.
 
 Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
-- `index.html` - clean landing page / dashboard.
-- `pages/` - category subpages with easy-read tables.
-- `data/` - JSON source of truth; every row has official source IDs.
-- `SOURCES.md` / `VERIFICATION.md` / `research/` - official source ledger and line-by-line verification.
-- `EXECUTIVE_SUMMARY.md` - standalone executive summary.
-- `FLAGGED_FOR_REVIEW.md` / `pages/flagged.html` - flagged irregularities with links.
-- `REPO_REVIEW.md` - line-by-line repository review.
-- `COORDINATION.md` - shared task board, PR and merge record.
-- `scripts/build_site.py` / `scripts/validate_site.py` - static site build and validation.
+## Read first
 
-Privacy: personal information is anonymized with placeholders; raw identifiers are internal-only and excluded from git and the published site. Dates and dollar amounts are preserved. No exact address is published.
+1. `index.html` / `pages/summary.html` — direct license/reporting answer and executive summary.
+2. `pages/process.html` — ordered Housing Inventory, license, tenancy, calculation and notice steps.
+3. `pages/case.html` and `pages/calculations.html` — anonymized owner intake and conditional arithmetic.
+4. `pages/flagged.html` — all {FLAG_COUNT} open/source/project flags.
+5. `pages/sources.html` and `SOURCES.md` — {SOURCE_ENTRY_COUNT} entries, {SOURCE_COUNT} distinct official URLs.
+
+## Repository map
+
+- `scripts/site_*.py` — canonical source registry, rows, flags, text and styles.
+- `scripts/build_site.py` — generates `data/`, `pages/`, `index.html`, CSS/JS and markdown deliverables.
+- `scripts/validate_site.py` — structural, privacy, source-integrity and internal-link checks; writes `data/validation_report.json`.
+- `VERIFICATION.md`, `REPO_REVIEW.md`, `research/current_audit/` — verification limits and current audit.
+- `COORDINATION.md` — shared claims, stale takeover, PR/merge/deploy record.
+
+## Privacy
+
+Current public files use Tenant A-F placeholders, preserve supplied dates/amounts and omit the exact address. **Earlier public Git history/PR exposure is not remediated by current-tree anonymization.** See `research/privacy/HISTORY_EXPOSURE.md` and flags F26/F38. Raw intake is internal-only and gitignored; no raw identifier is reproduced in the public site.
+
+## Build and validate
+
+```bash
+python3 scripts/build_site.py
+python3 scripts/validate_site.py
+git diff --exit-code
+```
 
 Not legal advice. No attorney approval or guarantee of no complaint/lawsuit is claimed. Any increase is framed as a conservative compliance checklist capable of tenant-lawyer review.
 """
 
 CSS_TEXT = r"""
-:root{--ink:#14213d;--muted:#5b6b84;--bg:#f5f7fb;--card:#fff;--line:#dce3ef;--accent:#0b6e4f;--accent2:#1f4e79;--warn:#9a6700;--warnbg:#fff8e1;--okbg:#eaf6ef;--flagbg:#fff1f1;--flag:#a12424;--owner:#5b4b8a;--ownerbg:#f1eefc}
+:root{--ink:#17233b;--muted:#5c6b82;--bg:#f6f7f9;--card:#fff;--line:#d9e0ea;--accent:#0b6e4f;--accent2:#24527a;--warn:#8a5a00;--warnbg:#fff6df;--okbg:#e8f5ee;--flagbg:#fff0f0;--flag:#a12626;--owner:#5b4b8a;--ownerbg:#f0edfa;--project:#e8eefc;--radius:12px;--max:1160px}
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-a{color:var(--accent2);text-decoration:none}
-a:hover{text-decoration:underline}
-header{background:linear-gradient(135deg,#0b2545,#134e4a);color:#fff;padding:2.2rem 1rem}
-header .wrap{max-width:1120px;margin:0 auto}
-header h1{margin:0 0 .35rem;font-size:2rem;letter-spacing:-.02em}
-header p{margin:.2rem 0;color:#dbeafe}
-nav{background:#0b2545;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.15)}
-nav .wrap{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:.15rem;padding:.45rem 1rem}
-nav a{color:#e8eef8;font-size:.86rem;padding:.35rem .55rem;border-radius:6px}
-nav a:hover,nav a.active{background:rgba(255,255,255,.14);text-decoration:none}
-main{max-width:1120px;margin:0 auto;padding:1.5rem 1rem 3rem}
-.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem;margin-bottom:1.4rem;box-shadow:0 2px 10px rgba(15,35,70,.05)}
-.hero h2{margin-top:0;font-size:1.5rem}
-.disclaimer{background:var(--warnbg);border-left:4px solid var(--warn);padding:.8rem 1rem;border-radius:6px;font-size:.92rem;margin:1rem 0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.2rem 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;box-shadow:0 2px 10px rgba(15,35,70,.04)}
-.card .k{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-.card .v{font-size:1.7rem;font-weight:700;margin:.2rem 0;color:var(--accent2)}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:var(--accent2)}
+a:hover{text-decoration-thickness:2px}
+.skip-link{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:.6rem;z-index:100}
+.skip-link:focus{left:0}
+header{background:#12263f;color:#fff;padding:1.6rem 1rem 1.2rem}
+.wrap,main,footer .wrap{max-width:var(--max);margin:0 auto}
+header h1{margin:0 0 .3rem;font-size:clamp(1.5rem,3vw,2.15rem);letter-spacing:-.02em}
+header p{margin:.2rem 0;color:#dbe6f5}
+.meta{font-size:.84rem;color:#c7d5e8}
+.privacy-strip{background:#fff0f0;border-bottom:1px solid #efc7c7;color:#7a1f1f;padding:.65rem 1rem;font-size:.9rem}
+.privacy-strip .wrap{display:flex;gap:.6rem;align-items:flex-start}
+.privacy-strip a{color:#7a1f1f;font-weight:700}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;padding:.55rem 1rem}
+nav a{font-size:.88rem;text-decoration:none;padding:.35rem .55rem;border-radius:7px}
+nav a:hover,nav a.active{background:#eaf0f7}
+.nav-groups{position:relative}
+.nav-groups summary{cursor:pointer;font-size:.88rem;font-weight:700;color:var(--accent2);padding:.35rem .55rem}
+.nav-panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.8rem;padding:.8rem 1rem;border-top:1px solid var(--line);background:#fbfcfe}
+.nav-panel h3{margin:0 0 .35rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.nav-panel a{display:block;padding:.22rem 0}
+main{padding:1.2rem 1rem 3rem}
+.hero,.panel,section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.1rem;margin:1rem 0;box-shadow:0 1px 5px rgba(20,35,60,.04)}
+.hero h2{margin:0 0 .6rem;font-size:1.35rem}
+.hero ol{margin:.6rem 0 .8rem 1.3rem;padding:0}
+.hero li{margin:.4rem 0}
+.disclaimer{background:var(--warnbg);border-left:4px solid var(--warn);padding:.75rem .9rem;border-radius:8px;font-size:.9rem;margin:.9rem 0}
+.cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:.6rem .9rem;border-radius:8px;margin:.35rem .4rem .35rem 0}
+.cta.secondary{background:#fff;color:var(--accent2);border:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.9rem;margin:1rem 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1rem}
+.card .k{font-size:.76rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.card .v{font-size:1.45rem;font-weight:750;margin:.2rem 0;color:var(--accent2)}
 .card .d{font-size:.88rem;color:var(--muted)}
-.card a{font-weight:600}
-section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:1.2rem 0;overflow:hidden}
-section>h2{margin:0 0 .8rem;font-size:1.2rem}
-.tablewrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:.9rem}
-th,td{text-align:left;vertical-align:top;padding:.65rem .6rem;border-bottom:1px solid var(--line)}
-th{background:#eef3fa;color:#253b5b;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}
-tr:last-child td{border-bottom:0}
-td.blank{color:var(--muted);font-style:italic}
-.badge{display:inline-block;padding:.15rem .45rem;border-radius:999px;font-size:.72rem;font-weight:700;white-space:nowrap}
+.card a{font-weight:700}
+.unit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}
+.unit{border:1px solid var(--line);border-radius:var(--radius);padding:1rem;background:#fbfcfe}
+.unit h3{margin:0 0 .4rem}
+.unit .amount{font-size:1.35rem;font-weight:750;color:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.badge{display:inline-block;padding:.16rem .5rem;border-radius:999px;font-size:.73rem;font-weight:750;white-space:nowrap}
 .badge.verified{background:var(--okbg);color:var(--accent)}
+.badge.project{background:var(--project);color:var(--accent2)}
 .badge.review{background:var(--warnbg);color:var(--warn)}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
 .badge.owner{background:var(--ownerbg);color:var(--owner)}
-.owner-src{font-size:.78rem;color:var(--owner)}
+.badge.listed{background:#eef1f5;color:var(--muted)}
+.searchbar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:.8rem 0}
+.searchbar input{flex:1;min-width:220px;padding:.6rem .75rem;border:1px solid var(--line);border-radius:8px;font:inherit}
+.searchbar .count{font-size:.85rem;color:var(--muted)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:760px}
+th,td{text-align:left;vertical-align:top;padding:.65rem .6rem;border-bottom:1px solid var(--line)}
+th{background:#eef3fa;color:#253b5b;font-size:.76rem;text-transform:uppercase;letter-spacing:.04em}
+tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:#fbfcfe}
 td.blank{color:var(--warn);font-style:italic}
-@media print{nav,.cta{display:none}section,.hero{box-shadow:none}}
-.src a{display:inline-block;margin:0 .25rem .2rem 0;font-size:.78rem;background:#eef3fa;border:1px solid #d3ddef;padding:.1rem .35rem;border-radius:5px}
-.flaglink{font-weight:700;color:var(--flag)}
-.flagged-banner{background:var(--flagbg);border:1px solid #f0c2c2;border-left:5px solid var(--flag);padding:1rem;border-radius:10px;margin:1rem 0}
-.flagitem{border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;margin:.7rem 0;background:#fff}
-.flagitem h3{margin:0 0 .25rem;font-size:1rem}
-.flagitem .id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--flag);font-weight:700}
-footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padding:1.2rem;text-align:center}
-footer .wrap{max-width:1120px;margin:0 auto}
-.small{font-size:.82rem;color:var(--muted)}
-ul{margin:.4rem 0 .4rem 1.2rem}
-.narrative h2{margin:1.4rem 0 .5rem;font-size:1.18rem;color:var(--accent2);border-bottom:1px solid var(--line);padding-bottom:.35rem}
+.src a{display:inline-block;margin:0 .3rem .3rem 0;font-size:.78rem;background:#eef3fa;border:1px solid #d3ddef;padding:.15rem .4rem;border-radius:6px;text-decoration:none;max-width:340px}
+.src a:hover{background:#e2ebf6}
+.src-id{color:var(--muted);font-size:.72rem}
+.owner-src{font-size:.8rem;color:var(--owner);display:block;margin-bottom:.3rem}
+.flaglink{font-weight:750;color:var(--flag)}
+.flagged-banner{background:var(--flagbg);border:1px solid #efc7c7;border-left:5px solid var(--flag);padding:1rem;border-radius:var(--radius);margin:1rem 0}
+.small{font-size:.83rem;color:var(--muted)}
+.narrative h2{margin:1.3rem 0 .5rem;font-size:1.16rem;color:var(--accent2);border-bottom:1px solid var(--line);padding-bottom:.3rem}
 .narrative p{margin:.6rem 0}
 .narrative ol,.narrative ul{margin:.5rem 0 .9rem 1.3rem;padding:0}
 .narrative li{margin:.35rem 0}
 .narrative a{word-break:break-word}
-.narrative>h2:first-child{margin-top:0}
-@media(max-width:700px){header h1{font-size:1.55rem}nav .wrap{padding:.35rem .5rem}main{padding:1rem .6rem 2rem}th,td{padding:.5rem .45rem}}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padding:1.2rem;text-align:center}
+footer a{color:var(--accent2)}
+[hidden]{display:none!important}
+@media(max-width:700px){header{padding:1.2rem .8rem .9rem}main{padding:.8rem .6rem 2rem}.hero,.panel,section{padding:.85rem}.privacy-strip .wrap{display:block}table{min-width:680px;font-size:.84rem}th,td{padding:.5rem .45rem}.src a{max-width:240px}}
+@media print{nav,.cta,.searchbar,.privacy-strip{display:none}section,.hero{box-shadow:none;break-inside:avoid}body{background:#fff}}
+"""
+
+JS_TEXT = r"""
+(function () {
+  var input = document.querySelector('[data-table-search]');
+  if (!input) return;
+  var tables = Array.prototype.slice.call(document.querySelectorAll('main table'));
+  var count = document.querySelector('[data-search-count]');
+  function filter() {
+    var q = input.value.trim().toLowerCase();
+    var visible = 0, total = 0;
+    tables.forEach(function (table) {
+      Array.prototype.forEach.call(table.tBodies, function (body) {
+        Array.prototype.forEach.call(body.rows, function (row) {
+          total += 1;
+          var show = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+          row.hidden = !show;
+          if (show) visible += 1;
+        });
+      });
+    });
+    if (count) count.textContent = q ? visible + ' of ' + total + ' rows match' : total + ' rows';
+  }
+  input.addEventListener('input', filter);
+  filter();
+})();
 """

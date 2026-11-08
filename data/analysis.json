@@ -16,7 +16,7 @@
           "id": "AN-01",
           "label": "Normal local increase",
           "value": "1.6% or less on each eligible unit",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S02"
@@ -29,7 +29,7 @@
           "id": "AN-02",
           "label": "State cap is not a substitute",
           "value": "AB 1482 8.8% does not apply to SF Rent Ordinance rent-controlled units",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S27",
             "S36"
@@ -57,7 +57,7 @@
           "id": "AN-04",
           "label": "Disparate-impact risk",
           "value": "Liability can exist without intent; neutral criteria and no less discriminatory alternative matter",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S42"
           ],
@@ -69,7 +69,7 @@
           "id": "AN-05",
           "label": "FEHA broader classes",
           "value": "Source of income, retaliation, perception/association and aggregate-income rules apply",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S38",
             "S39"
@@ -82,7 +82,7 @@
           "id": "AN-06",
           "label": "Local harassment overlay",
           "value": "Bad-faith coercion/discrimination prohibited",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S22"
           ],
@@ -94,7 +94,7 @@
           "id": "AN-07",
           "label": "Unit 1 roommate change",
           "value": "Not a basis for extra rent; vacancy-decontrol eligibility unverified",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S17",
@@ -125,7 +125,7 @@
           "id": "AN-09",
           "label": "Unit 2 long tenure",
           "value": "Mere below-market rent is not extraordinary circumstances",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S10"
           ],
@@ -137,7 +137,7 @@
           "id": "AN-10",
           "label": "Banked increases",
           "value": "Cannot be inferred because rent history is unverified",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S05"
           ],
@@ -149,7 +149,7 @@
           "id": "AN-11",
           "label": "Corporate figures",
           "value": "Portfolio-level disclosures are evidence of practice, not legal benchmarks",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S48",
             "S49"
@@ -162,7 +162,7 @@
           "id": "AN-12",
           "label": "Individual figures",
           "value": "June 2024 workload is narrow formal-petition evidence",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S29"
           ],
@@ -204,13 +204,13 @@
         {
           "id": "AN-15",
           "label": "Flagged items do not block",
-          "value": "All 38 flags published with source links",
-          "status": "verified",
+          "value": "All flagged items are published with source links",
+          "status": "project checked",
           "source_ids": [
-            "S01",
-            "S43"
+            "S70",
+            "S71"
           ],
-          "notes": "Needs review does not block merge.",
+          "notes": "Project workflow requirement; needs-review items are nonblocking but remain visible.",
           "flag_id": "",
           "source_note": ""
         },
@@ -235,7 +235,7 @@
           "id": "AN-16",
           "label": "The license is a precondition, not paperwork",
           "value": "An increase noticed while the unit is unlicensed may be null and void or unenforceable with refund exposure, and the Rent Board issues noncompliance notices; its January 2026 minutes record more than 23,000 licenses",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S08",
             "S53",
@@ -249,7 +249,7 @@
           "id": "AN-17",
           "label": "Individual owners are not exempt",
           "value": "The requirement follows rent-controlled status; there is no owner-size exemption, and buildings under 10 units have reported since March 1, 2023",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S07",
             "S53",
@@ -263,7 +263,7 @@
           "id": "AN-18",
           "label": "A banked total can exceed 10%",
           "value": "Adding a correctly banked percentage to the current annual increase can push one notice above 10%, which then needs 90-day notice",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S05",
@@ -277,7 +277,7 @@
           "id": "AN-19",
           "label": "The filing itself is public",
           "value": "Housing Inventory information is public, so reporting publishes the owner's name and business contact information",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S07",
             "S53"
@@ -289,49 +289,49 @@
         {
           "id": "AN-26",
           "label": "Two distinct registrations with the Rent Board",
-          "value": "Housing Inventory reporting produces the license at no charge; the Rent Board Fee is a separate $59.00-per-unit annual payment. Confusing them is the most likely cause of an unlicensed increase",
-          "status": "verified",
+          "value": "Housing Inventory reporting produces the license at no charge; the Rent Board Fee is a separate $59.00-per-unit annual payment.",
+          "status": "rule checked",
           "source_ids": [
             "S53",
             "S56",
             "S07"
           ],
-          "notes": "Both are due around March 1 but are not interchangeable (F33).",
+          "notes": "Both have March 1 timing but are not interchangeable; no ranking of defect frequency is claimed.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "AN-27",
-          "label": "Timing is the second-most-common defect",
-          "value": "A license that exists today does not validate a notice whose effective date preceded it, and a notice inside the 180-day retaliation window is separately barred",
-          "status": "verified",
+          "label": "Effective-date and retaliation checks",
+          "value": "Check the license on the effective date and review Civil Code 1942.5 retaliation risk separately.",
+          "status": "rule checked",
           "source_ids": [
             "S53",
             "S08",
             "S57"
           ],
-          "notes": "Check the effective date, not the date of the check.",
+          "notes": "No unsupported frequency ranking is claimed.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "AN-28",
-          "label": "This building is very likely covered",
-          "value": "Two rented units in a pre-1979 building is the paradigm Rent Ordinance case; the in-law-unit rule and the 1979 cutoff both point toward coverage rather than exemption",
+          "label": "Coverage is conditional, not confirmed",
+          "value": "Owner-supplied 1940/two-unit facts point toward coverage, but official lot/year/exemption records are unverified.",
           "status": "analysis",
           "source_ids": [
             "S06",
             "S59",
             "S60"
           ],
-          "notes": "Owner-supplied facts only; confirm in the Property Information Map.",
-          "flag_id": "",
+          "notes": "Do not treat this as an official coverage determination.",
+          "flag_id": "F35",
           "source_note": ""
         },
         {
           "id": "AN-29",
-          "label": "Cheapest compliant path",
-          "value": "Ordinary annual increase at or under 1.6%, license on file first, 30-day written notice, no additional-occupant charge, and an identical written standard applied to both units",
+          "label": "Lowest-friction ordinary path",
+          "value": "For an eligible covered unit: ordinary annual increase at or under 1.6%, license before effective date, compliant notice, no additional-occupant charge, neutral records.",
           "status": "analysis",
           "source_ids": [
             "S01",
@@ -339,8 +339,34 @@
             "S35",
             "S42"
           ],
-          "notes": "Still not a guarantee against a petition.",
+          "notes": "Conditional analysis, not a guarantee or approval; lease/history/retaliation checks still required.",
           "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "AN-30",
+          "label": "Fixed-term lease authority",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S62",
+            "S35"
+          ],
+          "notes": "Lease type and express mid-term increase clause not supplied; blank.",
+          "flag_id": "F36",
+          "source_note": ""
+        },
+        {
+          "id": "AN-31",
+          "label": "Current-tree privacy versus public history",
+          "value": "Current tree uses placeholders; earlier public Git history/PR exposure is disclosed and not claimed remediated.",
+          "status": "project checked",
+          "source_ids": [
+            "S69",
+            "S68"
+          ],
+          "notes": "See F26/F38 and research/privacy/HISTORY_EXPOSURE.md.",
+          "flag_id": "F38",
           "source_note": ""
         }
       ]

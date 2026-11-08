@@ -1,46 +1,51 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "status": "passed",
   "checks": [
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "61 official sources"
+      "detail": "72 source entries"
     },
     {
-      "name": "flags count matches dashboard",
+      "name": "distinct source URL count is dynamic and excludes aliases",
       "ok": true,
-      "detail": "45 flagged items"
+      "detail": "71 distinct URLs"
     },
     {
-      "name": "source URLs use official domains",
+      "name": "flags count matches canonical registry",
       "ok": true,
-      "detail": "all source URLs checked"
+      "detail": "52 flagged items"
     },
     {
-      "name": "every source has id, title, agency, category and statement",
-      "ok": true,
-      "detail": ""
-    },
-    {
-      "name": "row IDs are unique across all pages",
+      "name": "source URLs use official or official-publisher domains",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "owner-supplied case rows are published and labelled",
+      "name": "every source has id, title, agency, category, statement, url and check date",
       "ok": true,
-      "detail": "23 owner-supplied rows (CASE-01, CASE-02, CASE-03 ...)"
+      "detail": ""
     },
     {
-      "name": "every table row has valid official source links",
+      "name": "row IDs are unique across generated pages",
       "ok": true,
-      "detail": "268 rows checked; "
+      "detail": ""
+    },
+    {
+      "name": "owner-supplied case rows are labelled and linked to governing rules",
+      "ok": true,
+      "detail": "20 owner-supplied rows"
+    },
+    {
+      "name": "every table row has valid status and official source links",
+      "ok": true,
+      "detail": "367 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "33 needs-review rows"
+      "detail": "37 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -53,12 +58,17 @@
       "detail": ""
     },
     {
-      "name": "Flagged for Review page is clearly labeled",
+      "name": "Flagged for Review page is clearly labeled nonblocking",
       "ok": true,
       "detail": ""
     },
     {
       "name": "Sources page contains all source IDs and URLs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Sources page states distinct URL count",
       "ok": true,
       "detail": ""
     },
@@ -223,102 +233,122 @@
       "detail": ""
     },
     {
-      "name": "pages/summary.html in navigation exists",
+      "name": "data/sources.json exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/process.html in navigation exists",
+      "name": "pages/sources.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/requirements.html in navigation exists",
+      "name": "data/flagged.json exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/rates.html in navigation exists",
+      "name": "pages/flagged.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/local.html in navigation exists",
+      "name": "navigation target pages/summary.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/state.html in navigation exists",
+      "name": "navigation target pages/process.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/federal.html in navigation exists",
+      "name": "navigation target pages/requirements.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/case.html in navigation exists",
+      "name": "navigation target pages/rates.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/calculations.html in navigation exists",
+      "name": "navigation target pages/local.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/compliance.html in navigation exists",
+      "name": "navigation target pages/state.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/reasons.html in navigation exists",
+      "name": "navigation target pages/federal.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/corporate.html in navigation exists",
+      "name": "navigation target pages/case.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/individual.html in navigation exists",
+      "name": "navigation target pages/calculations.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/market.html in navigation exists",
+      "name": "navigation target pages/compliance.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/questions.html in navigation exists",
+      "name": "navigation target pages/reasons.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/analysis.html in navigation exists",
+      "name": "navigation target pages/corporate.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/sources.html in navigation exists",
+      "name": "navigation target pages/individual.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "pages/flagged.html in navigation exists",
+      "name": "navigation target pages/market.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "site build files exist",
+      "name": "navigation target pages/questions.html exists",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "index explains the badges and leads with the direct answer",
+      "name": "navigation target pages/analysis.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "navigation target pages/sources.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "navigation target pages/flagged.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "site build and disclosure files exist",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index explains badges and leads with direct answer",
       "ok": true,
       "detail": ""
     },
@@ -333,22 +363,22 @@
       "detail": ""
     },
     {
-      "name": "executive summary forefront covers Rent Board license for individual owners",
+      "name": "executive summary forefront covers individual-owner license",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "private intake file is excluded from git",
+      "name": "privacy regression baseline is internal-only",
       "ok": true,
-      "detail": ""
-    },
-    {
-      "name": "privacy fingerprint baseline present",
-      "ok": true,
-      "detail": "6 one-way fingerprints; no private intake required"
+      "detail": "internal baseline optional and gitignored; public placeholder/pattern scans run in every checkout"
     },
     {
       "name": "no raw tenant identifiers in public files",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no low-entropy privacy fingerprints in public files or scripts",
       "ok": true,
       "detail": ""
     },
@@ -363,7 +393,7 @@
       "detail": ""
     },
     {
-      "name": "no raw initials in the anonymized case files",
+      "name": "no raw initials in anonymized case files",
       "ok": true,
       "detail": ""
     },
@@ -383,6 +413,11 @@
       "detail": ""
     },
     {
+      "name": "no unsupported defect-frequency rankings",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "step-by-step license page exists in navigation",
       "ok": true,
       "detail": ""
@@ -393,32 +428,47 @@
       "detail": ""
     },
     {
-      "name": "step-by-step page links Sec. 37.15, Sec. 37.3 and the Housing Inventory",
+      "name": "step-by-step page links Sec. 37.15, Sec. 37.3 and Housing Inventory",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "step-by-step page answers the individual-owner question",
+      "name": "step-by-step page answers individual-owner question",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "executive summary puts the license answer first",
-      "ok": true,
-      "detail": "license section precedes the rate bottom line"
-    },
-    {
-      "name": "executive summary cites the ordinance license condition",
+      "name": "executive summary puts license answer first",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "executive summary links the official license pages",
+      "name": "executive summary cites ordinance license condition",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "executive summary states no individual-owner exception",
+      "name": "executive summary links official license pages",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "executive summary states no individual-owner exemption",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "executive summary publishes dynamic flag count",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "withdrawn banked total and invented notice dates remain blank",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "fixed-term lease gap is flagged and answered",
       "ok": true,
       "detail": ""
     },
@@ -428,14 +478,14 @@
       "detail": ""
     },
     {
-      "name": "no committed merge-conflict markers in public files",
+      "name": "no committed merge-conflict markers in public files or scripts",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "numeric flag IDs are unique and contiguous",
+      "name": "numeric flag IDs are unique and contiguous F01-F42",
       "ok": true,
-      "detail": "35 numeric flags"
+      "detail": "42 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -443,7 +493,7 @@
       "detail": ""
     },
     {
-      "name": "Rent Board Fee is distinguished from the license",
+      "name": "Rent Board Fee is distinguished from license",
       "ok": true,
       "detail": ""
     },
@@ -463,30 +513,42 @@
       "detail": ""
     },
     {
-      "name": "executive summary page renders the narrative, not just tables",
-      "ok": true,
-      "detail": "13 headings"
-    },
-    {
-      "name": "executive summary page has no unrendered markdown",
+      "name": "historical privacy exposure is disclosed, not claimed remediated",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "executive summary states the fee/licence distinction and retaliation rule",
+      "name": "summary page renders narrative, not just tables",
+      "ok": true,
+      "detail": "12 headings"
+    },
+    {
+      "name": "summary page has no unrendered markdown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "summary states fee/license distinction, retaliation and in-law coverage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "responsive tables and search enhancement exist",
       "ok": true,
       "detail": ""
     }
   ],
   "errors": [],
   "summary": {
-    "sources": 61,
+    "source_entries": 72,
+    "distinct_source_urls": 71,
     "pages": 18,
-    "data_files": 20,
-    "rows_verified": 268,
-    "needs_review_rows": 33,
-    "flags": 45,
-    "checks": 95,
-    "errors": 0
+    "data_files": 21,
+    "rows_checked": 367,
+    "needs_review_rows": 37,
+    "flags": 52,
+    "checks": 107,
+    "errors": 0,
+    "legal_verification": false
   }
 }

@@ -16,7 +16,7 @@
           "id": "FED-01",
           "label": "FHA 3604",
           "value": "Discrimination in rental/terms/services because of race, color, religion, sex, familial status, national origin; disability provisions",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S41",
             "S40"
@@ -29,12 +29,12 @@
           "id": "FED-02",
           "label": "Disparate impact",
           "value": "Liability can exist without intent; substantial legitimate nondiscriminatory interest and no less discriminatory alternative",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S42"
           ],
-          "notes": "Current as of 11/04/2026.",
-          "flag_id": "",
+          "notes": "eCFR current as of 11/05/2026. HUD enforcement overview differs in emphasis; see F39.",
+          "flag_id": "F39",
           "source_note": ""
         },
         {
@@ -56,7 +56,7 @@
           "id": "FED-04",
           "label": "HUD FMR definition",
           "value": "40th-percentile gross rents for standard-quality units",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S43",
             "S44"
@@ -69,11 +69,11 @@
           "id": "FED-05",
           "label": "FMR effective date",
           "value": "Federal fiscal-year start, generally October 1",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S43"
           ],
-          "notes": "FY2027 is current on 2026-11-06.",
+          "notes": "FY2027 is current on 2026-11-08.",
           "flag_id": "",
           "source_note": ""
         },
@@ -81,7 +81,7 @@
           "id": "FED-06",
           "label": "SAFMR definition",
           "value": "ZIP-code FMRs; designated/optional areas; exception payment standards up to 110%",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S44"
           ],
@@ -101,8 +101,22 @@
             "S51",
             "S52"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07",
+          "notes": "Official PDF parse stopped before California; xlsx fetch failed. No 94122 row or bedroom count inferred.",
+          "flag_id": "F13",
+          "source_note": ""
+        },
+        {
+          "id": "FED-08",
+          "label": "HUD enforcement overview and discriminatory-effect rule",
+          "value": "HUD overview describes enforcement prioritization; 24 CFR 100.500 still states the discriminatory-effect framework.",
+          "status": "rule checked",
+          "source_ids": [
+            "S40",
+            "S42",
+            "S41"
+          ],
+          "notes": "Cite both; do not assume agency policy overrides the regulation. Legal review needed for an actual policy.",
+          "flag_id": "F39",
           "source_note": ""
         }
       ]

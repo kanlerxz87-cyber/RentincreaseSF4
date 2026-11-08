@@ -1,81 +1,364 @@
-# SOURCES.md — official source ledger
+# Sources
 
-Verified by session `arena-73f5f1a2` on 2026-11-06 UTC; re-verified and extended by session `arena-c007d556` on 2026-11-07 UTC (S53–S55 added, S02 re-checked); independently re-verified and extended by session `arena-ea02333c` on 2026-11-07 UTC (S56–S61 added, and S01–S08, S09, S16, S17, S21, S22, S25, S27, S35–S38, S42, S47, S53 reopened directly). Every URL below is an official government or SEC source that was opened directly with `fetch_page` (including PDF/HTML chunks) during this task. Search snippets were used only to locate official pages, never as the final authority. Detailed quotes, chunk numbers and line-by-line claims are in `research/sources/official_sources.md`, `research/verification/line_by_line.md` and `VERIFICATION.md`.
+72 entries; 71 distinct URLs. Checked 2026-11-08 unless a limitation is stated.
 
-## Official domains used
+## S01 — SF Rent Board — Learn about rent increases in San Francisco
+- URL: https://www.sf.gov/learn-about-rent-increases-san-francisco
+- Category: Local; checked: 2026-11-08
+- Supports: 1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants.
 
-`sf.gov`, `media.api.sf.gov`, `sfplanninggis.org`, `default.sfplanning.org`, `commissions.sfplanning.org`, `leginfo.legislature.ca.gov`, `calcivilrights.ca.gov`, `hud.gov`, `huduser.gov`, `ecfr.gov`, `govinfo.gov`, `sec.gov`, `portal.sfrb.org` (Rent Board Portal).
+## S02 — SF Rent Board — Current Rates
+- URL: https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit
+- Category: Local; checked: 2026-11-08
+- Supports: 1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Page checked 2026-11-07: no 3/1/27-2/28/28 rate published yet.
 
-## Source table
+## S03 — SF Rent Board — Annual Rent Increase 3/1/26-2/28/27 Announced
+- URL: https://www.sf.gov/news--annual-rent-increase-3126-22827-announced
+- Category: Local; checked: 2026-11-08
+- Supports: Jan. 14, 2026 announcement: 1.6%; $2,000 x .016 = $32.00; prior 1.4%.
 
-| ID | Agency / category | Official source (manual review link) | Verified statement used |
-| --- | --- | --- | --- |
-| S01 | SF Rent Board — local increases | [Learn about rent increases in San Francisco](https://www.sf.gov/learn-about-rent-increases-san-francisco) | 1.6% effective 3/1/26–2/28/27; once every 12 months; "A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases"; effective 7/1/2022, or 3/1/2023 for condominiums and buildings with 1-9 residential units; 60% Bay Area CPI-U; base rent only; no rounding up; 30/90-day written notice; +5 days if mailed; notice contents; use rate in effect on increase date; additional occupant rule; anniversary date. Re-verified 2026-11-07. |
-| S02 | SF Rent Board — rates | [Current Rates](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) | 1.6% 3/1/26–2/28/27; 1.4% 3/1/25–2/28/26; 1.7% 3/1/24–2/28/25. Re-checked 2026-11-07: no 3/1/27–2/28/28 rate published yet (flag F27). |
-| S03 | SF Rent Board — announcement | [Annual Rent Increase for 3/1/26 – 2/28/27 Announced](https://www.sf.gov/news--annual-rent-increase-3126-22827-announced) | Jan. 14, 2026 announcement: 1.6%; $2,000 × .016 = $32.00; prior 1.4%. Its "complete list" link points to a 25-26 Form 571 download rather than the 26-27 form — flagged F32. Re-verified 2026-11-07. |
-| S04 | SF Rent Board — Form 571 | [571 Allowable Annual Increases 26-27](https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf) | Historical rates 1982–2027; 2019–2027: 2.6%, 1.8%, 0.7%, 2.3%, 3.6%, 1.7%, 1.4%, 1.6%. Tool title displays “517” — flagged. |
-| S05 | SF Rent Board — banking | [Banked rent increases](https://www.sf.gov/information--banked-rent-increases) | Banked only if ≥24 full months without any increase; no compounding/prorating; add percentages then multiply current base rent; license; notice must state banked portion; example date inconsistency flagged. |
-| S06 | SF Rent Board — coverage | [Learn about San Francisco rental laws](https://www.sf.gov/learn-about-san-francisco-rental-laws) | Many units built on/before June 13, 1979 have rent control and eviction protection; verify with Property Information Map; partial exemptions; free counseling. |
-| S07 | SF Rent Board — Housing Inventory | [The Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory) | "All owners of residential property are required to report"; "most owners are required to do this even if you are not a landlord"; license auto-generated for tenant-occupied/non-owner-occupied units; current license on file before any annual/banked increase; notice "not enforceable" without a license on the effective date; March 1 deadline; free; no monetary penalty for late filing; inventory information is public. Re-verified 2026-11-07. |
-| S08 | SF Rent Board — noncompliance | [Notice of Owner Noncompliance with Housing Inventory](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory) | Unlicensed increase may be null and void (possibly for multiple years); tenant may be entitled to a refund; owners of condos and buildings under 10 units report since March 1, 2023 and every March after; license applies only to rent-controlled units and is not required for §6.14/Costa-Hawkins or passthrough increases; portal license check by address/APN; tenant petition steps. |
-| S09 | SF Rent Board — petitions | [Landlord Petitions and Passthroughs](https://www.sf.gov/landlord-petitions-and-passthroughs) | Six petition-based increase types; petition before notice; no tenant payment until approval; approved increase can be retroactive to valid notice; no filing charge. |
-| S10 | SF Rent Board — comparable rents | [Special Circumstances Petitions](https://www.sf.gov/information--special-circumstances-petitions-based-rents-comparable-units) | Mere long-standing below-market rent is not extraordinary; petition before notice; one-time tenancy reset; evidence of comparable units. |
-| S11 | SF Rent Board — O&M | [Operating and Maintenance Expense Petitions](https://sf.gov/information/topic-no-322-operating-and-maintenance-expense-petitions) | Additional base-rent increase up to 7%; two-year comparison; petition before notice; anniversary date only. |
-| S12 | SF Rent Board — capital improvement | [Capital Improvement Petitions](https://www.sf.gov/information--capital-improvement-petitions) | Petition before notice; not part of base rent; must be discontinued after amortization; 5-year filing deadline; hardship application. |
-| S13 | SF Rent Board — utility | [Utility Passthroughs](https://www.sf.gov/information--utility-passthroughs-gas-electricity-and-steam-heat) | Petition/worksheet before notice; dollar-for-dollar; not base rent; 12-month duration; hardship application. |
-| S14 | SF Rent Board — §1.21 | [Tenant In Occupancy Petitions](https://www.sf.gov/information--tenant-occupancy-petitions) | Unlimited increase only when no tenant in occupancy; petition before notice; notice before petition is void. |
-| S15 | SF Rent Board — §6.14/Costa-Hawkins petition | [Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) | Petition optional; legal advice strongly encouraged; §6.14 60-day notice generally reasonable; Costa-Hawkins does not reach co-tenants. |
-| S16 | SF Rent Board — §6.14/Costa-Hawkins | [Rent Increases Under Section 6.14 And Costa-Hawkins](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) | Unlimited increase conditions; written 6.14 notice; subtenant/assignee vs co-tenant distinction; tenant petition; legal advice. |
-| S17 | SF Rent Board — roommates | [Roommates and subletting](https://www.sf.gov/roommates-and-subletting) | Additional occupant rent prohibited; legal advice recommended; master-tenant proportional-share rules. |
-| S18 | SF Rent Board — additional occupants | [Charging for Additional Occupants Prohibited](https://www.sf.gov/information--charging-additional-occupants-prohibited) | Cannot charge more rent solely because a tenant added an occupant; O&M or utility petition possible. |
-| S19 | SF Rent Board — other issues | [Other landlord and tenant issues](https://www.sf.gov/information--other-landlord-and-tenant-issues) | Additional occupant prohibition; new housing services; temporary rent reduction; unpermitted units still subject to Rent Ordinance. |
-| S20 | SF Rent Board — ordinance | [The Rent Ordinance](https://www.sf.gov/reports--rent-ordinance) | Chapter 37 table of contents; last amended 11/2/26; Rent Board version is not official record; American Legal is official publisher. |
-| S21 | SF Admin Code §37.3 | [Sec. 37.3 — Rent Limitations](https://www.sf.gov/information--sec-373-rent-limitations) | Annual increase ≤60% of published CPI and ≤7%; banking; capital improvement, utility and water passthrough authority. |
-| S22 | SF Admin Code §37.10B | [Sec. 37.10B — Tenant Harassment](https://www.sf.gov/information--sec-3710b-tenant-harassment) | Bad-faith harassment prohibitions; civil action, treble/statutory damages, attorney fees, injunction, misdemeanor; Larson footnote inconsistency flagged. |
-| S23 | SF MOHCD — resources | [Tenant and Landlord Resources](https://www.sf.gov/tenant-and-landlord-resources) | Free legal help for tenants with eviction court papers; tenant counselors; mediation; landlord resources. |
-| S24 | SF Rent Board — counseling | [Speak with a Rent Board counselor](https://www.sf.gov/speak-rent-board-counselor) | Free counseling; cannot give legal advice; multilingual; time limits. |
-| S25 | SF Rent Board — tenant petition | [Report an unlawful rent increase](https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history) | No charge; no time limit; hearing before ALJ; attorney optional; duplicate eligibility text flagged as page artifact. |
-| S26 | SF Rent Board — forms | [Rent Board Forms Center](https://www.sf.gov/reports--rent-board-forms-forms-center) | 516C unlawful rent increase, 518 tenant summary petition, 516D passthrough challenge and other official forms. |
-| S27 | SF Rent Board — AB 1482 | [California Tenant Protection Act of 2019 (AB 1482)](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482) | SF state-only cap 8.8% 8/1/26–7/31/27; does NOT apply to units under SF Rent Ordinance limits; 5% + CPI or 10%; just cause; exemptions; notices; damages; Rent Board cannot give legal advice or enforce state law. |
-| S28 | SF Rent Board — minutes | [January 13, 2026 Commission minutes](https://media.api.sf.gov/documents/minutes_011326.pdf) | Denied appeal AL250074 (last original occupant not proved to no longer permanently reside); license/overpayment case; adopted Version 1 temporary CPI methodology after missing Oct. 2025 CPI; >23,000 licenses issued. |
-| S29 | SF Rent Board — workload | [Workload Statistics June 2024](https://www.sf.gov/file/workload-stats-june-2024pdf) | 23 landlord petitions/154 units total; capital improvements 18 petitions/148 units (subtotal 19/149 includes 1 Costa-Hawkins petition); 73 tenant petitions/73 units; 89 eviction notices. Re-verified 2026-11-07 — the earlier "19 capital-improvement/148" reading was a transcription error (F29). |
-| S30 | SF MOHCD — presentation | [MOHCD / OCEIA presentation, May 2026](https://media.api.sf.gov/documents/MOHCD_-_OCEIA_Presentation_-_2026.05.11.pdf) | Tenant Right to Counsel funds free legal representation for tenants in eviction proceedings. |
-| S31 | SF MOHCD — Housing Trust Fund report | [Housing Trust Fund Five-Year Report 2019-2023](https://media.api.sf.gov/documents/120882_-_Housing_Trust_Fund_Five-Year_Report_-_2018-2023.pdf) | TRC provides free legal assistance for residents facing eviction and free full-scope legal assistance for eligible cases; not a general rent-increase approval service. |
-| S32 | SF Planning — PIM | [San Francisco Property Information Map](https://sfplanninggis.org/PIM/) | Search by address; general information only; exact property address not supplied in this case. |
-| S33 | SF Planning — Outer Sunset | [2010.0778C Executive Summary](https://default.sfplanning.org/meetingarchive/planning_dept/sf-planning.org/ftp/files/Commission/cpcpackets/2010.0778C.pdf) | Project described as in the Outer Sunset Neighborhood; no property-specific address published. |
-| S34 | SF Planning — 94122 context | [2017-006758DRP Discretionary Review](https://commissions.sfplanning.org/cpcpackets/2017-006758DRP.pdf) | 27th Avenue project described as in Outer Sunset neighborhood; public-notice list in same official packet includes 94122 addresses. |
-| S35 | California Civil Code §827 | [CIV 827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) | 30 days ≤10%; 90 days >10%; personal delivery/mail; §827(c) longer notice controls. |
-| S36 | California Civil Code §1947.12 | [CIV 1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV) | 5% + CPI or 10% lower; max two increases/12 months; more-restrictive local control exemption; CPI method; §827 notice; damages; 2030 repeal. |
-| S37 | California Civil Code §1954.53 | [CIV 1954.53](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53.&lawCode=CIV) | Costa-Hawkins; initial rent; disability accommodation; §(d)(2) unlimited increase only to qualifying sublessee/assignee; §(d)(3) partial occupancy changes protected; §(d)(4) waiver; §(f) code violations. |
-| S38 | California Gov Code §12955 | [GOV 12955](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12955.&lawCode=GOV) | FEHA protected classes, source of income, retaliation, aggregate income, perception/association. |
-| S39 | California Civil Rights Department | [Housing discrimination](https://calcivilrights.ca.gov/housing/) | FEHA housing protections, protected characteristics, source-of-income terms and retaliation rules. |
-| S40 | HUD — FHA overview | [Fair Housing Act overview](https://www.hud.gov/helping-americans/fair-housing-act-overview) | Federal protected classes and rental/terms discrimination; page redirected — flagged. |
-| S41 | U.S. Code — 42 USC 3604 | [Official U.S. Code PDF (GovInfo)](https://www.govinfo.gov/link/uscode/42/3604) | §3603(b) narrow exemptions; §3604(a)–(f) rental/terms/services discrimination and disability provisions; §3605. |
-| S42 | eCFR — 24 CFR 100.500 | [Discriminatory effect](https://www.ecfr.gov/current/title-24/subtitle-B/chapter-I/part-100/subpart-G/section-100.500) | Current as of 11/04/2026; liability without intent; substantial legitimate nondiscriminatory interest and no less discriminatory alternative; burden shifting. |
-| S43 | HUD USER — FMR | [Fair Market Rents](https://www.huduser.gov/portal/datasets/fmr.html) | 40th-percentile gross rents; voucher payment standards; 42 USC 1437f posting; effective at federal fiscal-year start, generally Oct. 1; FY2027 docs; FY2026 revised effective May 21, 2026. |
-| S44 | HUD USER — SAFMR | [Small Area FMRs](https://www.huduser.gov/portal/datasets/fmr/smallarea/index.html) | SAFMRs are ZIP-code FMRs; required in designated areas; optional elsewhere; exception payment standards up to 110%; FY2027/FY2026 data links. |
-| S45 | HUD — FY2026 FMR schedule | [FY2026 FMR Schedule](https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_FMR_Schedule.pdf) | San Francisco, CA HMFA: 0 BR $2,485; 1 BR $2,977; 2 BR $3,604; 3 BR $4,604; 4 BR $4,772. |
-| S46 | HUD — FY2026 SAFMR schedule | [FY2026 Small Area FMR Schedule](https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_Small_Area_FMR_Schedule.pdf) | Official schedule fetched; available chunks covered AL/AK/AZ only; no 94122/CA row obtained. |
-| S47 | HUD — FY2027 FMR schedule | [FY2027 FMR Schedule](https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_FMR_Schedule.pdf) | San Francisco, CA HMFA: 0 BR $2,574; 1 BR $3,003; 2 BR $3,697; 3 BR $4,832; 4 BR $5,439. |
-| S48 | SEC — Independence Realty Trust | [IRT Q4/FY 2025 earnings release exhibit](https://www.sec.gov/Archives/edgar/data/1466085/000143774926003792/ex_895776.htm) | Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8%; Q3 2025 new -3.5%, renewal 2.6%, blended 0.1%; 2025 value-add 2,003 units, avg. $251/month increase over unrenovated comparables. |
-| S49 | SEC — Invitation Homes | [2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/1687229/000168722926000016/invh-20251231.htm) | 2025 total portfolio renewal +4.6%, new -0.8%; 2024 renewal +4.9%, new +1.0%; same-store 2025 renewal +4.6%, new -0.6%; 2024 renewal +4.9%, new +0.9%. Not SF-specific. |
-| S50 | HUD — FY2027 SAFMR data | [FY27_safmrs.xlsx](https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY27_safmrs.xlsx) | Official data file listed on S44; not parsed successfully; 94122 row left blank. |
-| S51 | HUD — FY2026 revised SAFMR data | [fy2026_safmrs_revised.xlsx](https://www.huduser.gov/portal/datasets/fmr/fmr2026/fy2026_safmrs_revised.xlsx) | Official data file listed on S43/S44; fetch returned HTTP 500; 94122 row left blank. |
-| S52 | HUD — FY2027 SAFMR schedule | [FY2027 Small Area FMR Schedule](https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_Small_Area_FMR_Schedule.pdf) | Official schedule listed on S43; not parsed successfully for 94122; row left blank. |
-| S53 | SF Admin Code §37.15 | [Sec. 37.15 Reporting Obligations; Licensing](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing) | Owners report under penalty of perjury; condominiums and units in buildings with fewer than 10 units report from March 1, 2023 and annually by March 1; substantially compliant owners receive a license to impose rent increases; otherwise the license is suspended and "a tenant shall not be obligated to pay the increased rent for months during the period of suspension"; information is not used as a registry under Civil Code 1947.7–1947.8. Added by Ord. 265-20, effective January 18, 2021. | 
-| S54 | SF Rent Board — multiple years | [Annual rent increase for multiple years](https://www.sf.gov/information--annual-rent-increase-multiple-years) | Two-or-more-year increases by adding the allowable percentages; increases cannot be compounded; landlords are not required to file a petition for these increases; no rounding up; at least 30 days' notice (35 if mailed); base rent only. | 
-| S55 | SF Rent Board — portal | [Rent Board Portal](https://portal.sfrb.org/) | Official portal: create an owner account, report into the Housing Inventory, and look up Rent Increase License status by address or Assessor's Parcel Number; paper filings accepted by email or office drop-off (per S08). | 
-| S56 | SF Rent Board — fee | [The Rent Board Fee](https://www.sf.gov/rent-board-fee) | Separate from the Rent Increase License. Every residential dwelling unit owner pays a per-unit fee unless exempt: 2026-2027 $59.00 per dwelling unit, $29.50 per guest unit. Due March 1; 5% late penalty per month to a 15% maximum; unpaid balances referred to the Bureau of Delinquent Revenue after June 1; $50 payment-failure fee. If paid in full, 50% ($29.50 per dwelling unit) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered. "Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements." Re-verified 2026-11-07. |
-| S57 | California Civil Code — retaliation | [CIV 1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV) | If the lessee is not in default and has given a repair/tenantability notice or complained to an agency, the lessor may not increase the rent or decrease services within 180 days of the triggering act; separate bar on retaliating for tenant organizing or for exercising lawful rights; actual damages plus $100-$2,000 punitive damages per retaliatory act for fraud/oppression/malice; attorney's fees to the prevailing party on request; operative October 1, 2021. Re-verified 2026-11-07. |
-| S58 | California Civil Code — AB 1482 two-unit text | [CIV 1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV) | §1947.12(d)(6): the state cap does not apply to "a property containing two separate dwelling units within a single structure in which the owner occupied one of the units as the owner's principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit." §1947.12(d)(5) separately-aliable exemption requires the statutory tenant notice and that the owner is not a REIT, corporation, or an LLC with at least one corporate member. Verified from the statute text 2026-11-07. |
-| S59 | SF Rent Board — new construction exemption | [Partial Exemption for Newly Constructed Rental Units](https://www.sf.gov/information--partial-exemption-newly-constructed-rental-units) | Units whose first Certificate of Occupancy issued after June 13, 1979 are exempt from the rent increase limitations only; they retain just-cause eviction protection and the annual Rent Board fee is collected for them. Requires both a post-6/13/1979 first Certificate of Occupancy and no residential use before it (plus, for live/work units, no residential occupancy in the building in that period). Re-verified 2026-11-07. |
-| S60 | SF Rent Board — single-family / condo exemption | [Partial Exemption for Certain Single-Family Homes and Condominiums Under Costa-Hawkins](https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins) | Exemption applies only if the tenancy commenced on or after January 1, 1996. "A single-family dwelling with a legal in-law unit constitutes a two-unit building and is not exempt from the Ordinance. A single-family dwelling with an illegal in-law unit also constitutes a two-unit building and is not exempt, unless both units are rented together as a single tenancy." A single-family dwelling is not exempt if another residential structure is on the same lot. Exempted units still owe the annual Rent Board fee. Re-verified 2026-11-07. |
-| S61 | SF Rent Board — evictions | [Evictions in San Francisco](https://www.sf.gov/evictions-san-francisco) | Just cause required for most residential tenancies; the Rent Ordinance generally allows tenants to replace departing roommates and to increase the number of occupants, "even when prohibited by a written lease"; free legal help via the Eviction Defense Collaborative (415-659-9184) once an unlawful detainer is received; 17 just-cause reasons listed separately. Re-verified 2026-11-07. |
+## S04 — SF Rent Board — Form 571 Allowable Annual Increases 26-27
+- URL: https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf
+- Category: Local; checked: 2026-11-08
+- Supports: Historical rates 1982-2027; 2019-2027 series 2.6, 1.8, 0.7, 2.3, 3.6, 1.7, 1.4, 1.6%. Tool title displays 517 - flagged.
 
-## Session addendum — 2026-11-07 (re-verification)
+## S05 — SF Rent Board — Banked rent increases
+- URL: https://www.sf.gov/information--banked-rent-increases
+- Category: Local; checked: 2026-11-08
+- Supports: SF.gov says a skipped increase is banked only after 24 full months without any increase, but examples describe 12 months since a skipped opportunity; add percentages, no compounding/prorating, no new-tenant carryover, notice banked portion. Conflict flagged; no case banked total asserted.
 
-Session `arena-c007d556` re-opened S01, S02, S05, S06, S07, S08, S16, S27 and newly opened S53, S54 and S55 on 2026-11-07 UTC. Findings confirmed unchanged; the licensing answer (individual owners included, buildings under 10 units since March 1, 2023, no separate increase-notice filing described) is now the first section of `EXECUTIVE_SUMMARY.md` and the new `pages/process.html`. Two new flags were added: F25 (no 3/1/27–2/28/28 rate published yet) and F26 (Unit 1 §6.14 notice history unknown).
+## S06 — SF Rent Board — Learn about San Francisco rental laws
+- URL: https://www.sf.gov/learn-about-san-francisco-rental-laws
+- Category: Local; checked: 2026-11-08
+- Supports: June 13, 1979 cutoff; PIM; partial exemptions; free counseling.
 
-## Rule applied to the public site
+## S07 — SF Rent Board — The Rent Board Housing Inventory
+- URL: https://www.sf.gov/rent-board-housing-inventory
+- Category: Local; checked: 2026-11-08
+- Supports: All residential owners report annually by March 1; free portal; license auto-generated for non-owner-occupied units; current license before the increase effective date; late filing has no monetary penalty; inventory data public; fee exemption is not inventory reporting.
 
-Each published finding row carries one or more of these source IDs and the official URL. If a value cannot be confirmed from an official source, the value cell is left blank and the row is marked `needs review` and published on the **Flagged for Review** page. No value is inferred or filled from a nonofficial snippet.
+## S08 — SF Rent Board — Notice of Owner Noncompliance with Housing Inventory
+- URL: https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory
+- Category: Local; checked: 2026-11-08
+- Supports: Unlicensed increase may be null/void; tenant may be entitled to refund; portal check.
+
+## S09 — SF Rent Board — Landlord Petitions and Passthroughs
+- URL: https://www.sf.gov/landlord-petitions-and-passthroughs
+- Category: Local; checked: 2026-11-08
+- Supports: Six petition grounds; petition before notice; no payment until approval; no filing charge.
+
+## S10 — SF Rent Board — Special Circumstances Petitions Based on Rents for Comparable Units
+- URL: https://www.sf.gov/information--special-circumstances-petitions-based-rents-comparable-units
+- Category: Local; checked: 2026-11-08
+- Supports: Mere long-standing below-market rent is not extraordinary; petition before notice; one-time tenancy reset.
+
+## S11 — SF Rent Board — Operating and Maintenance Expense Petitions
+- URL: https://sf.gov/information/topic-no-322-operating-and-maintenance-expense-petitions
+- Category: Local; checked: 2026-11-08
+- Supports: Additional base-rent increase up to 7%; two-year comparison; petition before notice.
+
+## S12 — SF Rent Board — Capital Improvement Petitions
+- URL: https://www.sf.gov/information--capital-improvement-petitions
+- Category: Local; checked: 2026-11-08
+- Supports: Petition before notice; not base rent; discontinue after amortization; 5-year deadline.
+
+## S13 — SF Rent Board — Utility Passthroughs
+- URL: https://www.sf.gov/information--utility-passthroughs-gas-electricity-and-steam-heat
+- Category: Local; checked: 2026-11-08
+- Supports: Petition/worksheet before notice; not base rent; 12-month duration.
+
+## S14 — SF Rent Board — Tenant In Occupancy Petitions
+- URL: https://www.sf.gov/information--tenant-occupancy-petitions
+- Category: Local; checked: 2026-11-08
+- Supports: Section 1.21 petition before notice; notice before petition is void.
+
+## S15 — SF Rent Board — Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins
+- URL: https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins
+- Category: Local; checked: 2026-11-08
+- Supports: Petition optional; legal advice strongly encouraged; 60-day notice generally reasonable; co-tenant excluded.
+
+## S16 — SF Rent Board — Rent Increases Under Section 6.14 And Costa-Hawkins
+- URL: https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins
+- Category: Local; checked: 2026-11-08
+- Supports: Unlimited increase conditions; 6.14 notice; subtenant/assignee vs co-tenant; tenant petition.
+
+## S17 — SF Rent Board — Roommates and subletting
+- URL: https://www.sf.gov/roommates-and-subletting
+- Category: Local; checked: 2026-11-08
+- Supports: Additional occupant rent prohibited; legal advice recommended; proportional share.
+
+## S18 — SF Rent Board — Charging for Additional Occupants Prohibited
+- URL: https://www.sf.gov/information--charging-additional-occupants-prohibited
+- Category: Local; checked: 2026-11-08
+- Supports: Cannot charge more rent solely because tenant added occupant; O&M/utility petition possible.
+
+## S19 — SF Rent Board — Other landlord and tenant issues
+- URL: https://www.sf.gov/information--other-landlord-and-tenant-issues
+- Category: Local; checked: listed / fetch limitation
+- Supports: Inherited source entry; direct fetch failed 2026-11-08. Not used for new conclusions; additional-occupant rule supported by S17/S18.
+
+## S20 — SF Rent Board — The Rent Ordinance
+- URL: https://www.sf.gov/reports--rent-ordinance
+- Category: Local; checked: 2026-11-08
+- Supports: Chapter 37; last amended 11/2/26; Rent Board version not official record.
+
+## S21 — SF Admin Code — Sec. 37.3 Rent Limitations
+- URL: https://www.sf.gov/information--sec-373-rent-limitations
+- Category: Local; checked: 2026-11-08
+- Supports: Annual increase <=60% CPI and <=7%; banking; capital improvement/utility/water authority.
+
+## S22 — SF Admin Code — Sec. 37.10B Tenant Harassment
+- URL: https://www.sf.gov/information--sec-3710b-tenant-harassment
+- Category: Local; checked: 2026-11-08
+- Supports: Bad-faith harassment prohibitions; civil remedies; Larson footnote inconsistency flagged.
+
+## S23 — SF MOHCD — Tenant and Landlord Resources
+- URL: https://www.sf.gov/tenant-and-landlord-resources
+- Category: Review; checked: 2026-11-08
+- Supports: Free legal help for eviction court papers; tenant counselors; mediation; landlord resources.
+
+## S24 — SF Rent Board — Speak with a Rent Board counselor
+- URL: https://www.sf.gov/speak-rent-board-counselor
+- Category: Review; checked: 2026-11-08
+- Supports: Free counseling; cannot give legal advice; multilingual; time limits.
+
+## S25 — SF Rent Board — Report an unlawful rent increase
+- URL: https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history
+- Category: Review; checked: 2026-11-08
+- Supports: No charge; no time limit; hearing before ALJ; attorney optional.
+
+## S26 — SF Rent Board — Rent Board Forms Center
+- URL: https://www.sf.gov/reports--rent-board-forms-forms-center
+- Category: Review; checked: 2026-11-08
+- Supports: 516C, 518, 516D and other official forms.
+
+## S27 — SF Rent Board — California Tenant Protection Act of 2019 (AB 1482)
+- URL: https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482
+- Category: State; checked: 2026-11-08
+- Supports: SF state-only cap 8.8% 8/1/26-7/31/27; does NOT apply to SF Rent Ordinance units; 5%+CPI or 10%; just cause; Rent Board no legal advice/enforcement.
+
+## S28 — SF Rent Board — January 13, 2026 Commission minutes
+- URL: https://media.api.sf.gov/documents/minutes_011326.pdf
+- Category: Local; checked: 2026-11-08
+- Supports: Denied appeal AL250074; license/overpayment case; temporary Version 1 CPI methodology; >23,000 licenses.
+
+## S29 — SF Rent Board — Workload Statistics June 2024
+- URL: https://www.sf.gov/file/workload-stats-june-2024pdf
+- Category: Individual; checked: 2026-11-08
+- Supports: June 2024: 23 total landlord petitions / 154 units; capital improvements line 18 petitions / 148 units; subtotal 19 / 149 includes 1 Costa-Hawkins; 73 tenant petitions / 73 units; 89 eviction notices.
+
+## S30 — SF MOHCD — MOHCD / OCEIA presentation May 2026
+- URL: https://media.api.sf.gov/documents/MOHCD_-_OCEIA_Presentation_-_2026.05.11.pdf
+- Category: Review; checked: 2026-11-08
+- Supports: Tenant Right to Counsel funds free legal representation for tenants in eviction proceedings.
+
+## S31 — SF MOHCD — Housing Trust Fund Five-Year Report 2019-2023
+- URL: https://media.api.sf.gov/documents/120882_-_Housing_Trust_Fund_Five-Year_Report_-_2018-2023.pdf
+- Category: Review; checked: 2026-11-08
+- Supports: TRC free legal assistance for residents facing eviction and free full-scope legal assistance for eligible cases.
+
+## S32 — SF Planning — San Francisco Property Information Map
+- URL: https://sfplanninggis.org/PIM/
+- Category: Case; checked: 2026-11-08
+- Supports: Search by address; general information only; exact property address not supplied.
+
+## S33 — SF Planning — 2010.0778C Executive Summary
+- URL: https://default.sfplanning.org/meetingarchive/planning_dept/sf-planning.org/ftp/files/Commission/cpcpackets/2010.0778C.pdf
+- Category: Case; checked: listed / fetch limitation
+- Supports: Excluded from case verification: generic Outer Sunset planning document, no supplied address match. Retained only to document prior research scope.
+
+## S34 — SF Planning — 2017-006758DRP Discretionary Review
+- URL: https://commissions.sfplanning.org/cpcpackets/2017-006758DRP.pdf
+- Category: Case; checked: listed / fetch limitation
+- Supports: Excluded from case verification: generic Outer Sunset planning document, no supplied address match. Retained only to document prior research scope.
+
+## S35 — California Civil Code — CIV 827
+- URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV
+- Category: State; checked: 2026-11-08
+- Supports: 30 days <=10%; 90 days >10%; personal delivery/mail; 827(c) longer notice controls.
+
+## S36 — California Civil Code — CIV 1947.12
+- URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV
+- Category: State; checked: 2026-11-08
+- Supports: 5%+CPI or 10% lower; two increases/12 months; local more-restrictive exemption; CPI method; 827 notice; damages; 2030 repeal.
+
+## S37 — California Civil Code — CIV 1954.53
+- URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53.&lawCode=CIV
+- Category: State; checked: 2026-11-08
+- Supports: Costa-Hawkins; initial rent; d(2) unlimited increase; d(3) partial occupancy protected; d(4) waiver; f code violations.
+
+## S38 — California Gov Code — GOV 12955
+- URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12955.&lawCode=GOV
+- Category: State; checked: 2026-11-08
+- Supports: FEHA protected classes; source of income; retaliation; aggregate income; perception/association.
+
+## S39 — California Civil Rights Department — Housing discrimination
+- URL: https://calcivilrights.ca.gov/housing/
+- Category: State; checked: 2026-11-08
+- Supports: FEHA protected characteristics, source-of-income terms and retaliation rules.
+
+## S40 — HUD — Fair Housing Act overview
+- URL: https://www.hud.gov/helping-americans/fair-housing-act-overview
+- Category: Federal; checked: 2026-11-08
+- Supports: Federal protected classes and rental/terms discrimination. Current overview also describes enforcement prioritization toward provable intentional discrimination; read alongside the statute and 24 CFR 100.500, not as a substitute for them.
+
+## S41 — U.S. Code — 42 USC 3604 (GovInfo PDF)
+- URL: https://www.govinfo.gov/link/uscode/42/3604
+- Category: Federal; checked: 2026-11-08
+- Supports: 3603(b) exemptions; 3604(a)-(f) rental/terms/services discrimination and disability; 3605.
+
+## S42 — eCFR — 24 CFR 100.500 Discriminatory effect
+- URL: https://www.ecfr.gov/current/title-24/subtitle-B/chapter-I/part-100/subpart-G/section-100.500
+- Category: Federal; checked: 2026-11-08
+- Supports: eCFR current as of 11/05/2026: discriminatory effect can create liability without intent; substantial legitimate nondiscriminatory interest and less discriminatory alternative framework. Authoritative compilation, not legal advice.
+
+## S43 — HUD USER — Fair Market Rents
+- URL: https://www.huduser.gov/portal/datasets/fmr.html
+- Category: Federal; checked: 2026-11-08
+- Supports: 40th-percentile gross rents; voucher payment standards; federal fiscal-year start generally Oct. 1; FY2027 docs; FY2026 revised May 21, 2026.
+
+## S44 — HUD USER — Small Area Fair Market Rents
+- URL: https://www.huduser.gov/portal/datasets/fmr/smallarea/index.html
+- Category: Federal; checked: 2026-11-08
+- Supports: ZIP-code FMRs; designated/optional areas; exception payment standards up to 110%; FY2026/FY2027 data links.
+
+## S45 — HUD — FY2026 FMR Schedule
+- URL: https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_FMR_Schedule.pdf
+- Category: Federal; checked: 2026-11-08
+- Supports: San Francisco HMFA 0-4 BR: 2485 / 2977 / 3604 / 4604 / 4772.
+
+## S46 — HUD — FY2026 Small Area FMR Schedule
+- URL: https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_Small_Area_FMR_Schedule.pdf
+- Category: Federal; checked: listed / fetch limitation
+- Supports: Inherited FY2026 SAFMR schedule; prior fetch chunks did not reach California/94122. Not re-fetched successfully 2026-11-08; ZIP value blank.
+
+## S47 — HUD — FY2027 FMR Schedule
+- URL: https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_FMR_Schedule.pdf
+- Category: Federal; checked: 2026-11-08
+- Supports: San Francisco HMFA 0-4 BR: 2574 / 3003 / 3697 / 4832 / 5439.
+
+## S48 — SEC — Independence Realty Trust Q4/FY 2025 earnings release exhibit
+- URL: https://www.sec.gov/Archives/edgar/data/1466085/000143774926003792/ex_895776.htm
+- Category: Corporate; checked: 2026-11-08
+- Supports: Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8%; Q3 2025 new -3.5%, renewal 2.6%, blended 0.1%; 2,003 renovations, $251/month.
+
+## S49 — SEC — Invitation Homes 2025 Form 10-K
+- URL: https://www.sec.gov/Archives/edgar/data/1687229/000168722926000016/invh-20251231.htm
+- Category: Corporate; checked: 2026-11-08
+- Supports: 2025 total portfolio renewal +4.6%, new -0.8%; 2024 renewal +4.9%, new +1.0%; not SF-specific.
+
+## S50 — HUD — FY2027 Small Area FMR data (xlsx)
+- URL: https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY27_safmrs.xlsx
+- Category: Federal; checked: listed / fetch limitation
+- Supports: Official FY2027 SAFMR xlsx listed by HUD; fetch failed 2026-11-08. No 94122 row parsed; ZIP value blank.
+
+## S51 — HUD — FY2026 revised Small Area FMR data (xlsx)
+- URL: https://www.huduser.gov/portal/datasets/fmr/fmr2026/fy2026_safmrs_revised.xlsx
+- Category: Federal; checked: listed / fetch limitation
+- Supports: Official FY2026 revised SAFMR xlsx listed by HUD; prior fetch failed. No 94122 row parsed; ZIP value blank.
+
+## S52 — HUD — FY2027 Small Area FMR Schedule
+- URL: https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_Small_Area_FMR_Schedule.pdf
+- Category: Federal; checked: 2026-11-08
+- Supports: Official FY2027 SAFMR schedule fetched 2026-11-08; parser returned only the first 30 pages (Alabama/Alaska/Arizona), not the California/94122 row. ZIP value remains blank.
+
+## S53 — SF Admin Code — Sec. 37.15 Reporting Obligations; Licensing
+- URL: https://www.sf.gov/information--sec-3715-reporting-obligations-licensing
+- Category: Local; checked: 2026-11-08
+- Supports: Owners report under penalty of perjury; condominiums and buildings under 10 units report from March 1, 2023 and annually by March 1; substantially compliant owners receive a license; otherwise license suspended and tenant not obligated to pay increased rent during suspension; contact changes within 30 days.
+
+## S54 — SF Rent Board — Annual rent increase for multiple years
+- URL: https://www.sf.gov/information--annual-rent-increase-multiple-years
+- Category: Local; checked: 2026-11-08
+- Supports: Increase for two or more years by adding the allowable percentages; increases cannot be compounded; no petition required for these increases; no rounding up; 30-day notice (35 if mailed); base rent only.
+
+## S55 — SF Rent Board — Rent Board Portal
+- URL: https://portal.sfrb.org/
+- Category: Local; checked: 2026-11-08
+- Supports: Official portal to create an owner account, report into the Housing Inventory and check Rent Increase License status by address or APN.
+
+## S56 — SF Rent Board — The Rent Board Fee
+- URL: https://www.sf.gov/rent-board-fee
+- Category: Local; checked: 2026-11-08
+- Supports: Separate from the Rent Increase License: every residential dwelling unit owner must pay a per-unit Rent Board Fee unless exempt. 2026-2027: $59.00 per dwelling unit, $29.50 per guest unit. Due March 1 each year; 5% monthly late penalty to a 15% maximum; unpaid balances referred to the Bureau of Delinquent Revenue after June 1. If the fee is paid in full, 50% ($29.50 per dwelling unit) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered. 'Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements.' Re-verified 2026-11-07.
+
+## S57 — California Civil Code — CIV 1942.5 (retaliation)
+- URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV
+- Category: State; checked: 2026-11-08
+- Supports: Civil Code 1942.5: 180-day retaliation provisions with conditions and once-per-12-month limit; broader lawful-rights/organizing protection; good-faith stated cause exception; actual/punitive damages; attorney fees in retaliatory eviction actions. Fact-specific, not an automatic bar for every repair request.
+
+## S58 — California Civil Code — CIV 1947.12 (AB 1482) - two-unit exemption text
+- URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV
+- Category: State; checked: 2026-11-08
+- Supports: Retained research alias for S36 (same Civil Code 1947.12 URL): two-unit owner-occupied state-cap exemption and separate-parcel notice/owner conditions. Not counted as a distinct source URL.
+- Alias of S36; not a distinct URL.
+
+## S59 — SF Rent Board — Partial Exemption for Newly Constructed Rental Units
+- URL: https://www.sf.gov/information--partial-exemption-newly-constructed-rental-units
+- Category: Local; checked: 2026-11-08
+- Supports: Units whose first Certificate of Occupancy issued after June 13, 1979 are exempt from the rent increase limitations only; they keep just-cause eviction protection and the annual Rent Board fee is collected for them. The exemption needs both a post-June-13-1979 first Certificate of Occupancy and no residential use before it. Re-verified 2026-11-07.
+
+## S60 — SF Rent Board — Partial Exemption for Certain Single-Family Homes and Condominiums Under Costa-Hawkins
+- URL: https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins
+- Category: Local; checked: 2026-11-08
+- Supports: Single-family homes and condominiums are exempt from the rent increase limitations only if the tenancy commenced on or after January 1, 1996. A dwelling with a legal or illegal in-law unit constitutes a two-unit building and is NOT exempt unless both units are rented together as a single tenancy. A single-family dwelling is not exempt if another residential structure is on the same lot. Exempted units still owe the annual Rent Board fee. Re-verified 2026-11-07.
+
+## S61 — SF Rent Board — Evictions in San Francisco
+- URL: https://www.sf.gov/evictions-san-francisco
+- Category: Local; checked: 2026-11-08
+- Supports: Eviction requires just cause under the Rent Ordinance; the Rent Ordinance generally allows tenants to replace departing roommates and to increase the number of occupants even when a written lease prohibits it; free legal help through the Eviction Defense Collaborative (415-659-9184) on receipt of an unlawful detainer; the 17 just-cause reasons are listed separately. Re-verified 2026-11-07.
+
+## S62 — California DRE / Courts hosted guide — California Tenants guide (Rev. 2022), fixed-term and periodic tenancies
+- URL: https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf
+- Category: State; checked: 2026-11-08
+- Supports: Printed p.22: landlord cannot raise rent during a fixed term unless the rental agreement expressly allows it; periodic tenancies continue until proper notice. Official guide is informational, not legal advice; actual lease terms unverified.
+
+## S63 — SF Administrative Code — Chapter 37A Rent Stabilization and Arbitration Fee (Rent Board PDF 901)
+- URL: https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf
+- Category: Local; checked: 2026-11-08
+- Supports: Scope includes rent-control-exempt units with narrow exemptions; fee due March 1; 5% penalties March/April/May; June 1 referral; paid-in-full owner may recover up to 50% from Nov. 1 occupants, no penalties, by deposit-interest deduction or compliant 30-day bill; owner remains liable.
+
+## S64 — SF Rent Board — Notification of Rent Board Fee and Housing Inventory Requirements (2027)
+- URL: https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement
+- Category: Local; checked: 2026-11-08
+- Supports: 2027 fee exemption requests due Dec. 14, 2026; Annual Fee Notice mailed Jan. 2027; Housing Inventory due March 1, 2027; fee exemption and inventory reporting do not satisfy each other; license required for annual/banked increases.
+
+## S65 — SF Treasurer & Tax Collector — Information for Lessors of Residential Real Estate
+- URL: https://sftreasurer.org/information-lessors-residential-real-estate
+- Category: Local; checked: 2026-11-08
+- Supports: One residential structure with fewer than four units is not, by that fact alone, required to register; other business activity/payroll may require registration. Per-building treatment; fewer-than-four-unit gross-receipts tax exemption and filing rules.
+
+## S66 — SF Treasurer & Tax Collector — Register a Business
+- URL: https://sftreasurer.org/business/register-business
+- Category: Local; checked: 2026-11-08
+- Supports: General business registration within 30 days and annual renewal; exception for only rental income from one residential structure under four units, one condo, or cooperative; public business/ownership data warning.
+
+## S67 — SF Rent Board — Security Deposits
+- URL: https://www.sf.gov/reports--security-deposits
+- Category: Local; checked: 2026-11-08
+- Supports: Deposit interest 4.2% for Mar. 1, 2026-Feb. 28, 2027; annual interest on deposits held over one year; AB 12 one-month cap with natural-person/small-LLC two-property/four-unit exception; deposit disputes are state-law matters.
+
+## S68 — GitHub Docs — Creating a GitHub Pages site
+- URL: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+- Category: Project; checked: 2026-11-08
+- Supports: Pages publishes static files; branch/folder publishing source; root index entry; public-site warning even for private repositories; changes can take up to 10 minutes to publish.
+
+## S69 — GitHub Docs — Removing sensitive data from a repository
+- URL: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+- Category: Project; checked: 2026-11-08
+- Supports: History rewriting requires coordination; sensitive commits may remain in clones/forks, cached GitHub views and pull requests; GitHub Support may remove cached views/PR references; deleting current files does not erase history.
+
+## S70 — GitHub Docs — Pull requests
+- URL: https://docs.github.com/en/pull-requests/reference/pull-requests
+- Category: Project; checked: 2026-11-08
+- Supports: Pull requests propose, review and merge changes; conversation, commits, checks and files-changed views; merge status shows blockers and requirements.
+
+## S71 — GitHub Docs — About protected branches
+- URL: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
+- Category: Project; checked: 2026-11-08
+- Supports: Branch protection can require status checks, reviews and other merge requirements; unique job names avoid ambiguous checks; force-push/deletion restrictions.
+
+## S72 — American Legal (official SF code publisher) — SF Administrative Code Chapter 37 index
+- URL: https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-0-15928
+- Category: Local; checked: 2026-11-08
+- Supports: Official publisher index labeled 2026 S-96 (current). Fetch confirmed title/current-code label; full section text not re-read through this index in this session.

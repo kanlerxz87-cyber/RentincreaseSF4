@@ -43,3 +43,12 @@ See `research/sources/irregularities.md` and `research/sources/unverified.md` fo
 - F29 — **Correction, capital-improvement petition count.** The June 2024 workload statistics show 18 capital-improvement petitions covering 148 units; the 19 / 149 subtotal includes one Costa-Hawkins petition. The site previously published "19 petitions / 148 units", which mixed the subtotal with the capital-improvement unit count. Corrected in `data/individual.json`, `pages/individual.html` and the executive summary. Source: S29.
 - F30 — **Banked-increase illustration is conditional.** A 13.1% total for Unit 2 (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 skipped years, plus 1.6% current = 13.1%, i.e. $412.65 on $3,150) is published as arithmetic only. It assumes no increase since June 1, 2019, which the owner has not confirmed, and it would require 90 days' written notice. It is not a recommendation and is not relied on elsewhere. Sources: S05, S04, S02.
 - Case facts are published as `owner-supplied` rows (anonymized) rather than blank cells; the official-verification rows for the same facts stay blank and flagged. No raw initials are published: the validator now scans `data/case.json` and `pages/case.html` for initial patterns.
+
+## Current registry controls — 2026-11-08 (`arena-12d86074`)
+
+This T03 research copy is historical. The current public flag registry is `scripts/site_flags.py` / `data/flags.json`, published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`: 52 flags, F01–F42 plus T03-F01–T03-F10. Where this file conflicts with the current registry, the current registry controls.
+
+- T03-F01 now means owner intake is distinguished from official governing-rule links; owner rows are not blank merely because they are owner-supplied, and the links are explicitly not intake proof.
+- T03-F02 and current F26/F38 disclose that current-tree anonymization does **not** remediate earlier public Git history/PR exposure. The historical label “F26 — Unit 1 §6.14 notice history” in this file is superseded; the current F26 is the privacy-history flag.
+- New current flags include F36 fixed-term lease authority, F37 no proposed effective date, F38 historical privacy exposure, F39 HUD policy/eCFR tension, F40 duplicate source alias, F41 static self-deploy limitation, and F42 case fee/registration facts.
+- Low-entropy privacy fingerprints were moved out of public scripts into gitignored `internal/`; this is current-tree hygiene, not history remediation.

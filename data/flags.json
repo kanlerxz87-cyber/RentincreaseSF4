@@ -23,7 +23,7 @@
   {
     "id": "F03",
     "title": "Banking examples may conflict on 12 vs 24 months",
-    "detail": "Learn-about examples and banked-increases page describe elapsed months differently.",
+    "detail": "SF.gov banked-increase text says 24 full months without any increase, while examples describe 12 months since a skipped opportunity. Do not assert a case banked total without verified history and counselor/legal review.",
     "source_ids": [
       "S01",
       "S05"
@@ -120,7 +120,7 @@
   {
     "id": "F13",
     "title": "94122 SAFMR row not obtained",
-    "detail": "SAFMR schedule chunks did not include CA/94122; xlsx fetch failed or not parsed; ZIP value left blank.",
+    "detail": "FY2027 SAFMR PDF parse stopped after 30 pages before California; xlsx fetch failed; no official 94122 row obtained. ZIP value left blank; no bedroom count or market rent inferred.",
     "source_ids": [
       "S44",
       "S46",
@@ -181,18 +181,20 @@
   {
     "id": "F19",
     "title": "GitHub Pages deployment record",
-    "detail": "Legacy source main / requires root-level site. PR #1 merged at a0591c3; GitHub Pages API confirmed built on 2026-11-07. Follow-up publication details are recorded in COORDINATION.md.",
+    "detail": "Legacy Pages source is main / and requires root-level site. Prior releases were verified through GitHub PR/Pages APIs; the current release cannot self-certify its own merge/deploy at build time. Final evidence is appended to COORDINATION.md after merge.",
     "source_ids": [
-      "S43"
+      "S68",
+      "S70"
     ],
     "status": "needs review"
   },
   {
     "id": "F20",
     "title": "Platform branch constraint",
-    "detail": "Requested session branches cannot be created; exclusive file scopes used.",
+    "detail": "Arena fixes the session branch; exclusive scopes and merge-preserving rebases were used instead of creating additional session branches. This is a platform/owner workflow constraint, not a housing-law rule.",
     "source_ids": [
-      "S20"
+      "S70",
+      "S71"
     ],
     "status": "needs review"
   },
@@ -253,10 +255,11 @@
   },
   {
     "id": "F26",
-    "title": "Privacy: earlier validation report published raw identifier tokens",
-    "detail": "data/validation_report.json generated 2026-11-06 listed the raw tenant identifier tokens it scanned for, in a check detail. Found independently on 2026-11-07 by sessions arena-6f344b80 and arena-2e273eee (PR #2, merged). validate_site.py no longer prints raw tokens (count/fingerprint only) and the report was regenerated. Manual review should confirm no other published file contains those tokens.",
+    "title": "Privacy: earlier public Git history/PR exposure is not remediated",
+    "detail": "Earlier validation output exposed raw tenant identifier tokens in public Git history and PR diffs. The current tree uses placeholders and the validator no longer prints tokens, but history/cache/clone exposure remains. This is not claimed confidential or remediated. Owner options: coordinate history cleanup and GitHub Support review; see research/privacy/HISTORY_EXPOSURE.md. No raw token is reproduced here.",
     "source_ids": [
-      "S23"
+      "S69",
+      "S68"
     ],
     "status": "needs review"
   },
@@ -293,7 +296,7 @@
   {
     "id": "F30",
     "title": "Banked-increase illustration is conditional, not a finding",
-    "detail": "The 13.1% figure for Unit 2 applies only if no increase was imposed since June 1, 2019 and every skipped year banked. The owner has not supplied rent history, so no banked amount is asserted, recommended or relied on anywhere on this site.",
+    "detail": "An earlier draft showed a conditional Unit 2 banked total. It is withdrawn from case calculations because rent history, anniversary and banking eligibility are unverified and SF.gov banking guidance conflicts. Case banked cells are blank.",
     "source_ids": [
       "S05",
       "S04",
@@ -304,7 +307,7 @@
   {
     "id": "T03-F01",
     "title": "Case facts not official-verified",
-    "detail": "Dates and amounts preserved; official source cells blank.",
+    "detail": "Owner intake is anonymized and distinguished from official rule links; property-specific verification rows remain blank where unconfirmed.",
     "source_ids": [
       "S06",
       "S07",
@@ -315,9 +318,10 @@
   {
     "id": "T03-F02",
     "title": "Personal information anonymized",
-    "detail": "Placeholders only; raw identifiers internal-only and gitignored.",
+    "detail": "Current tree uses placeholders and excludes raw intake; earlier public history/PR exposure remains and is disclosed separately (F26). Anonymization of the current tree does not restore confidentiality.",
     "source_ids": [
-      "S23"
+      "S69",
+      "S68"
     ],
     "status": "needs review"
   },
@@ -417,7 +421,8 @@
     "title": "Merge-conflict markers were committed to COORDINATION.md",
     "detail": "main commit 1d80419 committed raw conflict markers (<<<<<<<, =======, >>>>>>>) into COORDINATION.md and the validator did not check for them. Found by an independent scan on 2026-11-07, resolved by keeping both sessions' records, and a validator check was added so it cannot recur silently.",
     "source_ids": [
-      "S20"
+      "S70",
+      "S71"
     ],
     "status": "needs review"
   },
@@ -447,7 +452,7 @@
     "title": "Two-unit owner-occupied exemption is conditional and unverified here",
     "detail": "AB 1482 exempts a two-unit structure only if the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU/JADU. Whether the owner ever occupied a unit in this building was not supplied, so no exemption is asserted.",
     "source_ids": [
-      "S58",
+      "S36",
       "S60",
       "S59"
     ],
@@ -461,6 +466,79 @@
       "S60",
       "S59",
       "S06"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F36",
+    "title": "Lease type and mid-term increase authority unverified",
+    "detail": "The supplied facts give lease dates but not fixed-term versus periodic status or an express mid-term increase clause. California DRE guidance says rent generally cannot be raised during a fixed term unless the agreement expressly allows it. No effective date or mid-term increase is approved here.",
+    "source_ids": [
+      "S62",
+      "S35"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F37",
+    "title": "No proposed effective date supplied",
+    "detail": "No target effective date was supplied for either unit. Notice-deadline cells are blank rather than inventing a date; apply the 30/90-day and mailing rules once the actual date, lease type and anniversary are verified.",
+    "source_ids": [
+      "S35",
+      "S01"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F38",
+    "title": "Historical privacy exposure remains public",
+    "detail": "Placeholder names protect the current site only. Earlier public commits/PR diffs exposed raw identifiers; clones, forks and cached views may persist. Current-tree cleanup is not history remediation. See F26 and the privacy research file.",
+    "source_ids": [
+      "S69",
+      "S68"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F39",
+    "title": "HUD enforcement overview vs discriminatory-effect regulation",
+    "detail": "The current HUD overview describes enforcement prioritization toward provable intentional discrimination, while 24 CFR 100.500 still states a discriminatory-effect framework. The site cites both and does not assume agency enforcement policy overrides the regulation; legal review is needed for any actual policy.",
+    "source_ids": [
+      "S40",
+      "S42",
+      "S41"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F40",
+    "title": "Duplicate source URL retained as research alias",
+    "detail": "S58 duplicates S36 (Civil Code 1947.12). S58 is retained as an alias for earlier research continuity; citations now use S36 and distinct-URL counts exclude the alias.",
+    "source_ids": [
+      "S36"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F41",
+    "title": "Static site cannot self-certify its own final merge/deploy",
+    "detail": "Requirements rows link to the live site and coordination log. The final PR merge and Pages build for this release are verified after merge and recorded in COORDINATION.md; a static page built before merge cannot truthfully display that future result.",
+    "source_ids": [
+      "S68",
+      "S70"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F42",
+    "title": "Case fee, billing and business-registration facts unverified",
+    "detail": "Two supplied units imply illustrative fee arithmetic only. Official unit count, exemption/billing status, single-structure/lot facts, other business activity and payroll were not supplied; no registration exemption or actual bill is asserted.",
+    "source_ids": [
+      "S56",
+      "S63",
+      "S64",
+      "S65",
+      "S66"
     ],
     "status": "needs review"
   }

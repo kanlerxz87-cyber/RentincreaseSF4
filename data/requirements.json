@@ -16,13 +16,11 @@
           "id": "REQ-01",
           "label": "Executive summary",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S01",
-            "S27",
-            "S43"
+            "S68"
           ],
-          "notes": "Executive Summary page and EXECUTIVE_SUMMARY.md.",
+          "notes": "Executive summary page and markdown lead with the individual-owner license/reporting answer.",
           "flag_id": "",
           "source_note": ""
         },
@@ -30,11 +28,11 @@
           "id": "REQ-02",
           "label": "Public GitHub Pages site",
           "value": "Built at repository root",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S43"
+            "S68"
           ],
-          "notes": "Legacy Pages source main /.",
+          "notes": "Legacy Pages source main /; root index.html. Final deploy evidence is recorded after merge in COORDINATION.md.",
           "flag_id": "",
           "source_note": ""
         },
@@ -42,11 +40,11 @@
           "id": "REQ-03",
           "label": "Collect / organize / analyze full requirements list",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S20"
+            "S70"
           ],
-          "notes": "This page.",
+          "notes": "This requirements ledger plus Questions & Answers; owner instructions are project requirements, not government findings.",
           "flag_id": "",
           "source_note": ""
         },
@@ -54,13 +52,13 @@
           "id": "REQ-04",
           "label": "Answer all user questions",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
             "S01",
             "S27",
-            "S43"
+            "S70"
           ],
-          "notes": "Questions & Answers page.",
+          "notes": "Questions page answers each supplied question; unconfirmed case values remain blank.",
           "flag_id": "",
           "source_note": ""
         },
@@ -68,97 +66,104 @@
           "id": "REQ-05",
           "label": "Review repo line by line",
           "value": "Done",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S20"
+            "S70"
           ],
-          "notes": "REPO_REVIEW.md.",
+          "notes": "REPO_REVIEW.md and research/current_audit/ record code/data review; structural checks are not legal verification.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "REQ-06",
           "label": "Verify every row against official sources",
-          "value": "Done; validation script re-checks",
-          "status": "verified",
+          "value": "Source-linked rows; structural validation is separate from legal review",
+          "status": "project checked",
           "source_ids": [
             "S01",
-            "S43"
+            "S35",
+            "S42",
+            "S70"
           ],
-          "notes": "SOURCES.md, VERIFICATION.md, data/validation_report.json.",
+          "notes": "Every published row links official rule/platform sources; owner intake is explicitly not government-verified.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "REQ-07",
           "label": "Provide links for manual review",
-          "value": "Every row has official links",
-          "status": "verified",
+          "value": "Every row has official rule/platform links; owner intake is distinguished",
+          "status": "project checked",
           "source_ids": [
-            "S01"
+            "S68",
+            "S70"
           ],
-          "notes": "Official source(s) column.",
+          "notes": "Descriptive official links appear in each row and in Sources.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "REQ-08",
           "label": "Flag irregularities",
-          "value": "38 flags published",
-          "status": "verified",
+          "value": "All flagged items published with source links",
+          "status": "project checked",
           "source_ids": [
-            "S01",
-            "S43"
+            "S70",
+            "S71"
           ],
-          "notes": "Flagged for Review page.",
+          "notes": "Flagged for Review publishes all flags dynamically; no stale hardcoded count.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "REQ-09",
           "label": "No hallucinations / no inferred values",
-          "value": "Blank cells for unverified values",
-          "status": "verified",
+          "value": "Unconfirmed case values blank; arithmetic labeled analysis",
+          "status": "project checked",
           "source_ids": [
-            "S01"
+            "S01",
+            "S05",
+            "S70"
           ],
-          "notes": "Validation enforces blank + flag.",
+          "notes": "Unconfirmed case values are blank; arithmetic is labeled analysis and conditional.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "REQ-10",
           "label": "Personal information top priority",
-          "value": "Placeholders only; raw identifiers internal-only",
-          "status": "verified",
+          "value": "Current tree placeholders; historical exposure disclosed",
+          "status": "project checked",
           "source_ids": [
-            "S23"
+            "S69",
+            "S68"
           ],
-          "notes": "Privacy scan in validation.",
-          "flag_id": "",
+          "notes": "Current tree uses placeholders; historical public exposure is disclosed, not claimed remediated.",
+          "flag_id": "F38",
           "source_note": ""
         },
         {
           "id": "REQ-11",
           "label": "Anonymize all personal information",
-          "value": "Tenant A-F placeholders",
-          "status": "verified",
+          "value": "Tenant A-F placeholders; no exact address in current tree",
+          "status": "project checked",
           "source_ids": [
-            "S23"
+            "S69",
+            "S68"
           ],
-          "notes": "No real names, initials, contact details or exact address.",
-          "flag_id": "",
+          "notes": "Tenant A-F placeholders; no exact address or raw identifiers in the current public tree.",
+          "flag_id": "F38",
           "source_note": ""
         },
         {
           "id": "REQ-12",
           "label": "Keep dates and amounts same",
           "value": "Preserved",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
             "S01"
           ],
-          "notes": "February 1, 2025; $3,995; April 1, 2026; June 1, 2019; $3,150.",
+          "notes": "Supplied dates/amounts preserved exactly; official links are rules, not intake verification.",
           "flag_id": "",
           "source_note": ""
         },
@@ -166,11 +171,11 @@
           "id": "REQ-13",
           "label": "Clean landing page + category subpages",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S43"
+            "S68"
           ],
-          "notes": "index.html and pages/.",
+          "notes": "Root landing page plus grouped category subpages.",
           "flag_id": "",
           "source_note": ""
         },
@@ -178,11 +183,11 @@
           "id": "REQ-14",
           "label": "Simple dashboard UI",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S43"
+            "S68"
           ],
-          "notes": "Cards and status badges.",
+          "notes": "Grouped navigation, plain-language badges, search and responsive tables.",
           "flag_id": "",
           "source_note": ""
         },
@@ -190,11 +195,11 @@
           "id": "REQ-15",
           "label": "All entries/findings in easy-read tables",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S01"
+            "S68"
           ],
-          "notes": "Tables on every subpage.",
+          "notes": "Readable tables on category pages; mobile horizontal scroll preserves columns.",
           "flag_id": "",
           "source_note": ""
         },
@@ -202,11 +207,12 @@
           "id": "REQ-16",
           "label": "Analysis / findings",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S42"
+            "S42",
+            "S70"
           ],
-          "notes": "Analysis & Findings page.",
+          "notes": "Analysis & Findings separates rule checks, owner facts, analysis and open items.",
           "flag_id": "",
           "source_note": ""
         },
@@ -214,11 +220,12 @@
           "id": "REQ-17",
           "label": "Clearly labeled Flagged for Review page with source links",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S01"
+            "S70",
+            "S71"
           ],
-          "notes": "pages/flagged.html.",
+          "notes": "Flagged for Review page and markdown list every flag with source links.",
           "flag_id": "",
           "source_note": ""
         },
@@ -226,49 +233,51 @@
           "id": "REQ-18",
           "label": "Verified source-linked tables",
           "value": "Published",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
-            "S01"
+            "S01",
+            "S35",
+            "S42"
           ],
-          "notes": "Sources page.",
+          "notes": "Sources ledger records agency, URL, statement, check date and limitations.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "REQ-19",
           "label": "PR from integration branch to main",
-          "value": "",
-          "status": "needs review",
+          "value": "See COORDINATION.md for the current PR/merge record",
+          "status": "project checked",
           "source_ids": [
-            "S43"
+            "S70"
           ],
-          "notes": "Prior PR #1 merged 2026-11-06 (verified via gh pr view 1, merge commit a0591c3). Value blank by rule: this session T06 PR was pending at build time; its link/merge result is recorded in COORDINATION.md after merge and the site row is not self-updated.",
-          "flag_id": "F19",
+          "notes": "Static build cannot self-certify its own merge. Prior integrated releases were verified; final I12 PR/merge evidence is appended after merge.",
+          "flag_id": "F41",
           "source_note": ""
         },
         {
           "id": "REQ-20",
           "label": "Merged PR + successful Pages deployment",
-          "value": "",
-          "status": "needs review",
+          "value": "https://kanlerxz87-cyber.github.io/RentincreaseSF4/",
+          "status": "project checked",
           "source_ids": [
-            "S43"
+            "S68"
           ],
-          "notes": "Pages API status built (legacy source main /) for PR #1, re-checked 2026-11-07 via GitHub API. Value blank by rule: T06 deploy confirmation is recorded in COORDINATION.md after merge.",
-          "flag_id": "F19",
+          "notes": "Live site URL. Prior Pages build was verified before this build; final I12 deploy is verified after merge and recorded in COORDINATION.md.",
+          "flag_id": "F41",
           "source_note": ""
         },
         {
           "id": "REQ-22",
           "label": "Step-by-step licensing and notice process",
           "value": "Published - pages/process.html with 12 numbered steps",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
             "S53",
             "S01",
             "S35"
           ],
-          "notes": "Every step carries official links.",
+          "notes": "Process page gives ordered steps with official links.",
           "flag_id": "",
           "source_note": ""
         },
@@ -276,28 +285,26 @@
           "id": "REQ-23",
           "label": "Ordinance-level license citations",
           "value": "Published - Sec. 37.3(a)(1), Sec. 37.15 and Form 571",
-          "status": "verified",
+          "status": "project checked",
           "source_ids": [
             "S21",
             "S53",
             "S04"
           ],
-          "notes": "Licensing condition is in the ordinance itself.",
+          "notes": "Ordinance-level license citations included; SF.gov convenience text distinguished from official publisher.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "REQ-24",
           "label": "Independent re-verification of the combined data",
-          "value": "Done 2026-11-07 - official pages re-fetched, sources expanded to 55, validator re-run",
-          "status": "verified",
+          "value": "Combined T08/D16 research integrated; current-source audit recorded",
+          "status": "project checked",
           "source_ids": [
-            "S01",
-            "S07",
-            "S53",
-            "S02"
+            "S70",
+            "S71"
           ],
-          "notes": "Recorded in VERIFICATION.md and COORDINATION.md.",
+          "notes": "T08/D16 research preserved and current-source audit recorded before final integration.",
           "flag_id": "",
           "source_note": ""
         },
@@ -307,12 +314,198 @@
           "value": "Published",
           "status": "analysis",
           "source_ids": [
-            "S01",
-            "S07",
-            "S35",
+            "S23",
+            "S24",
+            "S25",
             "S42"
           ],
-          "notes": "No attorney approval or guarantee.",
+          "notes": "Checklist designed for tenant-side scrutiny; no attorney approval or lawsuit guarantee.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-25",
+          "label": "Finish autonomously without manual questions",
+          "value": "Completed through repository/source research and publication workflow; unresolved facts are flagged, not invented.",
+          "status": "project checked",
+          "source_ids": [
+            "S70"
+          ],
+          "notes": "Owner workflow instruction; no user input requested.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-26",
+          "label": "Read/update coordination board; claim scopes; stale takeover logged",
+          "value": "COORDINATION.md records I12 claims and stale T08 takeover under the 60-minute rule.",
+          "status": "project checked",
+          "source_ids": [
+            "S70",
+            "S71"
+          ],
+          "notes": "Preserves parallel-session records.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-27",
+          "label": "Preserve other sessions on conflicts; pull --rebase before pushes",
+          "value": "T08 merged with both records preserved; merge-preserving rebase used after a plain rebase attempted to flatten history.",
+          "status": "project checked",
+          "source_ids": [
+            "S69",
+            "S70"
+          ],
+          "notes": "No force-push or history rewrite.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-28",
+          "label": "Lead with individual-owner Rent Board process",
+          "value": "Executive summary and landing page answer license/reporting first.",
+          "status": "project checked",
+          "source_ids": [
+            "S07",
+            "S53"
+          ],
+          "notes": "Effective-date license condition distinguished from mailing notice.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-29",
+          "label": "Research reasonable increases for both anonymized units",
+          "value": "Conditional 1.6% arithmetic and blank banked/effective-date cells published.",
+          "status": "project checked",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S35"
+          ],
+          "notes": "No approved amount or date asserted.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-30",
+          "label": "Corporate versus individual practices",
+          "value": "SEC portfolio evidence and Rent Board workload counts published with scope limits.",
+          "status": "project checked",
+          "source_ids": [
+            "S48",
+            "S49",
+            "S29"
+          ],
+          "notes": "No all-owner generalization.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-31",
+          "label": "Notice methods, reasons and petition grounds",
+          "value": "Notice, reasons, process and local-law tables cover delivery, contents and petition/worksheet grounds.",
+          "status": "project checked",
+          "source_ids": [
+            "S35",
+            "S09"
+          ],
+          "notes": "Fixed-term clause and effective date remain flagged.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-32",
+          "label": "Tenant-lawyer scrutiny and no guarantee",
+          "value": "Compliance checklist and official counseling/petition resources published; no attorney approval claimed.",
+          "status": "project checked",
+          "source_ids": [
+            "S23",
+            "S24",
+            "S25",
+            "S42"
+          ],
+          "notes": "Structural validation is not legal approval.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-33",
+          "label": "Discrimination, retaliation and one-versus-both",
+          "value": "Federal/state/local overlays and neutral-policy analysis published.",
+          "status": "project checked",
+          "source_ids": [
+            "S41",
+            "S42",
+            "S38",
+            "S57"
+          ],
+          "notes": "Raising both units is not immunity.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-34",
+          "label": "Disclose historical privacy exposure prominently",
+          "value": "Landing/subpage warning and F26/F38 state current-tree anonymization does not remediate public history.",
+          "status": "project checked",
+          "source_ids": [
+            "S69",
+            "S68"
+          ],
+          "notes": "Owner remediation options documented.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-35",
+          "label": "Final integration re-verifies combined data and links",
+          "value": "Current audit, source registry, generated site and validator re-run after T08/D16 integration.",
+          "status": "project checked",
+          "source_ids": [
+            "S70",
+            "S71"
+          ],
+          "notes": "See research/current_audit/ and validation report.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-36",
+          "label": "PR to main, merge, verify Pages, record result",
+          "value": "Publication operations are logged in COORDINATION.md; final merge/deploy verified after merge.",
+          "status": "project checked",
+          "source_ids": [
+            "S68",
+            "S70"
+          ],
+          "notes": "Static page cannot self-certify its own final deploy (F41).",
+          "flag_id": "F41",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-37",
+          "label": "Do not merge a broken site; retry/fix failures",
+          "value": "Build, validation and browser checks run before merge; CI/Pages checked after merge.",
+          "status": "project checked",
+          "source_ids": [
+            "S71"
+          ],
+          "notes": "Flagged research items are nonblocking; broken build is blocking.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-38",
+          "label": "Publish unresolved items on Flagged for Review",
+          "value": "All open case/source/project limitations are listed with official links.",
+          "status": "project checked",
+          "source_ids": [
+            "S70",
+            "S71"
+          ],
+          "notes": "Nonblocking does not mean verified.",
           "flag_id": "",
           "source_note": ""
         }

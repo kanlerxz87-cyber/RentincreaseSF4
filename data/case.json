@@ -17,170 +17,217 @@
           "label": "Location",
           "value": "Outer Sunset, San Francisco, CA 94122",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S06",
+            "S32"
+          ],
           "notes": "ZIP and neighbourhood only; no street address is published.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-02",
           "label": "Exact street address",
-          "value": "Withheld - not published",
+          "value": "Withheld for privacy",
           "status": "owner supplied",
-          "source_ids": [],
-          "notes": "Privacy rule: no exact address appears anywhere on this site or in the repository.",
+          "source_ids": [
+            "S69",
+            "S68"
+          ],
+          "notes": "Project privacy rule; no exact street address is published. This is a disclosure choice, not a government-verified property fact.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-03",
           "label": "Building year",
           "value": "1940",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S06",
+            "S59"
+          ],
           "notes": "Before the June 13, 1979 coverage cutoff; a property-specific check is still required.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-04",
           "label": "Residential units in the building",
           "value": "2",
           "status": "owner supplied",
-          "source_ids": [],
-          "notes": "Owner describes Unit 1 and Unit 2.",
+          "source_ids": [
+            "S60",
+            "S65"
+          ],
+          "notes": "Owner describes two units; whether they are one structure, an in-law configuration or separate lot structures is not confirmed.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-05",
           "label": "Rent-controlled status",
           "value": "Owner states both units are rent controlled",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S06"
+          ],
           "notes": "Owner statement, not an official determination.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-06",
           "label": "Rent Increase License / Housing Inventory status",
-          "value": "Not supplied",
-          "status": "owner supplied",
-          "source_ids": [],
-          "notes": "Confirm in the Rent Board Portal before serving any notice.",
-          "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S07",
+            "S55"
+          ],
+          "notes": "Not supplied; blank rather than inferred. Official links identify the rule to check, not the case value.",
+          "flag_id": "T03-F05",
+          "source_note": ""
         },
         {
           "id": "CASE-07",
           "label": "Prior increases, notices, petitions",
-          "value": "Not supplied",
-          "status": "owner supplied",
-          "source_ids": [],
-          "notes": "No banked amount is inferred.",
-          "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "notes": "Not supplied; blank rather than inferred. Official links identify the rule to check, not the case value.",
+          "flag_id": "T03-F05",
+          "source_note": ""
         },
         {
           "id": "CASE-08",
           "label": "Unit 1 - last lease start",
           "value": "February 1, 2025",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S01",
+            "S62"
+          ],
           "notes": "Date preserved exactly.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-09",
           "label": "Unit 1 - rent at last lease start",
           "value": "$3,995 per month",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S01"
+          ],
           "notes": "Amount preserved exactly.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-10",
           "label": "Unit 1 - initial lease tenants",
           "value": "Tenant A, Tenant B, Tenant C",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S16",
+            "S37"
+          ],
           "notes": "Placeholders replace all three original initials.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-11",
           "label": "Unit 1 - continuing tenancy / current tenants",
           "value": "Tenant A and Tenant D",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S16",
+            "S37"
+          ],
           "notes": "Placeholders; no inference about legal status.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-12",
           "label": "Unit 1 - current tenancy date",
           "value": "April 1, 2026",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S01",
+            "S62"
+          ],
           "notes": "Date preserved exactly.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-13",
           "label": "Unit 1 - rent on April 1, 2026",
           "value": "$3,995 per month",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S01"
+          ],
           "notes": "Unchanged from the last lease start.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-14",
           "label": "Unit 2 - last lease start",
           "value": "June 1, 2019",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S01",
+            "S62"
+          ],
           "notes": "Date preserved exactly.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-15",
           "label": "Unit 2 - rent at last lease start",
           "value": "$3,150 per month",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S01"
+          ],
           "notes": "Amount preserved exactly.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-16",
           "label": "Unit 2 - tenants",
           "value": "Tenant E and Tenant F",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S16",
+            "S37"
+          ],
           "notes": "Placeholders replace both initials.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "CASE-17",
           "label": "Unit 2 - current rent",
-          "value": "Not supplied",
-          "status": "owner supplied",
-          "source_ids": [],
-          "notes": "No current figure is assumed.",
-          "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "notes": "Not supplied; blank rather than inferred. Official links identify the rule to check, not the case value.",
+          "flag_id": "T03-F05",
+          "source_note": ""
         }
       ]
     },
@@ -199,60 +246,78 @@
           "label": "Tenant A",
           "value": "Original Unit 1 tenant, still listed on the continuing tenancy",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S16",
+            "S37"
+          ],
           "notes": "Role only.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "MAP-2",
           "label": "Tenant B",
           "value": "Original Unit 1 tenant, not on the continuing tenancy",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S16",
+            "S37"
+          ],
           "notes": "Role only.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "MAP-3",
           "label": "Tenant C",
           "value": "Original Unit 1 tenant, not on the continuing tenancy",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S16",
+            "S37"
+          ],
           "notes": "Role only.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "MAP-4",
           "label": "Tenant D",
           "value": "Unit 1 tenant on the April 1, 2026 tenancy",
           "status": "owner supplied",
-          "source_ids": [],
+          "source_ids": [
+            "S16",
+            "S37"
+          ],
           "notes": "Role only.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "MAP-5",
           "label": "Tenant E",
-          "value": "Unit 2 tenant since June 1, 2019",
+          "value": "Listed on Unit 2 lease dated June 1, 2019",
           "status": "owner supplied",
-          "source_ids": [],
-          "notes": "Role only.",
+          "source_ids": [
+            "S01",
+            "S62"
+          ],
+          "notes": "Role only; actual occupancy/start beyond the supplied lease listing is not inferred.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         },
         {
           "id": "MAP-6",
           "label": "Tenant F",
-          "value": "Unit 2 tenant since June 1, 2019",
+          "value": "Listed on Unit 2 lease dated June 1, 2019",
           "status": "owner supplied",
-          "source_ids": [],
-          "notes": "Role only.",
+          "source_ids": [
+            "S01",
+            "S62"
+          ],
+          "notes": "Role only; actual occupancy/start beyond the supplied lease listing is not inferred.",
           "flag_id": "",
-          "source_note": "Owner intake (anonymized)"
+          "source_note": "Owner intake (anonymized), not government-verified. Official links are governing rules, not proof of this fact."
         }
       ]
     },
@@ -380,15 +445,15 @@
           "source_ids": [
             "S05"
           ],
-          "notes": "Needs 24 full months without any increase; history unknown.",
-          "flag_id": "T03-F05",
+          "notes": "SF.gov banking text/examples conflict and history is unknown; no banked eligibility is asserted.",
+          "flag_id": "F03",
           "source_note": ""
         },
         {
           "id": "CASE-V10",
           "label": "Privacy of the Housing Inventory filing",
           "value": "Inventory submission information is public, including owner name and business contact information",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S07",
             "S53"

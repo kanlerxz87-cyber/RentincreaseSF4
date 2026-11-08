@@ -16,7 +16,7 @@
           "id": "REAS-01",
           "label": "Annual CPI-based allowable increase",
           "value": "1.6% effective 3/1/26-2/28/27",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S02",
@@ -29,20 +29,20 @@
         {
           "id": "REAS-02",
           "label": "Properly banked skipped/partial increases",
-          "value": "24 full months; add percentages",
-          "status": "verified",
+          "value": "Banking requires verified history; SF.gov says 24 full months but examples conflict; add percentages",
+          "status": "rule checked",
           "source_ids": [
             "S05"
           ],
           "notes": "No banked amount inferred here.",
-          "flag_id": "",
+          "flag_id": "F03",
           "source_note": ""
         },
         {
           "id": "REAS-03",
           "label": "Capital improvement petition",
           "value": "Petition before notice; not base rent; discontinue after amortization",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S09",
             "S12"
@@ -55,7 +55,7 @@
           "id": "REAS-04",
           "label": "Operating & maintenance petition",
           "value": "Up to 7% additional base rent; two-year comparison",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S09",
             "S11"
@@ -68,7 +68,7 @@
           "id": "REAS-05",
           "label": "Comparable-rent special circumstances",
           "value": "Extraordinary circumstances; mere long-standing below-market rent is NOT enough",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S09",
             "S10"
@@ -81,7 +81,7 @@
           "id": "REAS-06",
           "label": "Utility passthrough",
           "value": "Dollar-for-dollar; petition/worksheet before notice; 12 months",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S09",
             "S13"
@@ -94,7 +94,7 @@
           "id": "REAS-07",
           "label": "Section 1.21 no tenant in occupancy",
           "value": "Petition before notice; otherwise void",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S09",
             "S14"
@@ -106,12 +106,12 @@
         {
           "id": "REAS-08",
           "label": "Proposition I rent history / bond / water revenue bond passthroughs",
-          "value": "Rent Board petition/worksheet grounds",
-          "status": "verified",
+          "value": "Proposition I rent-history petition; bond/water passthroughs use specific worksheet rules",
+          "status": "rule checked",
           "source_ids": [
             "S09"
           ],
-          "notes": "Follow specific form instructions.",
+          "notes": "Do not assume every passthrough requires a petition; follow the official form instructions.",
           "flag_id": "",
           "source_note": ""
         },

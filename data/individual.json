@@ -16,7 +16,7 @@
           "id": "IND-01",
           "label": "Ordinary path",
           "value": "Annual allowable increase, license, 12-month anniversary, written notice",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S07",
@@ -30,7 +30,7 @@
           "id": "IND-02",
           "label": "Formal petitions June 2024",
           "value": "23 landlord petitions / 154 units",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S29"
           ],
@@ -42,7 +42,7 @@
           "id": "IND-03",
           "label": "Capital improvement petitions June 2024",
           "value": "18 petitions / 148 units",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S29"
           ],
@@ -54,7 +54,7 @@
           "id": "IND-04",
           "label": "Tenant petitions / eviction notices June 2024",
           "value": "73 tenant petitions / 73 units; 89 eviction notices",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S29"
           ],

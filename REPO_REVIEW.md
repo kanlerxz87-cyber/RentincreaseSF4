@@ -46,3 +46,17 @@ The repository had moved from `a0591c3` to `cd42189` through PRs #2–#9 by othe
 | `scripts/site_flags.py` — `CARDS` | Dashboard totals were typed in by hand. | Code read. | Cards resolve `auto:sources` / `auto:flags` at build time. |
 | `.github/workflows/validate.yml` | CI rebuilds and fails if generated outputs are not committed. | `git diff --exit-code` after a rebuild returns clean. | Rebuild outputs are committed with each change. |
 | `pages/*.html`, `data/*.json` | Generated files changed by other sessions between this branch's base and `main`. | `git diff --stat a0591c3 origin/main`. | Not merged blindly; branch rebased onto `main` first. |
+
+
+## Current integration review — 2026-11-08 (session `arena-12d86074`)
+
+| Area | Finding | Action |
+| --- | --- | --- |
+| T08 merge | PR #14 was stale/conflicting; shallow history initially lacked a merge-base. | Deepened fetch, merged `07eb1b42`, preserved both COORDINATION records, removed marker lines. Plain rebase flattened the merge; aborted and used `--rebase=merges`. |
+| Counts | Hardcoded source/flag counts disagreed with canonical data. | Dynamic counts: 72 entries, 71 distinct URLs, 52 flags; source aliases excluded from distinct count. |
+| Citations | Requirements rows cited HUD FMR sources for project tasks; owner rows lacked governing-rule links. | Requirements cite GitHub Docs/relevant rules; owner rows link rules and say they are not intake proof; validator rejects market citations on requirements. |
+| Legal precision | Overbroad license/retaliation/banking/petition wording; unsupported rankings; invented case dates/banked total. | Effective-date license condition separated from mailing; conditional retaliation; banking conflict visible; fixed-term/effective-date gaps flagged; blank withdrawn values; rankings removed. |
+| Privacy | Public validator contained low-entropy SHA-256 fingerprints of initials; history exposure remained. | Fingerprints moved to gitignored `internal/`; public scripts clean; prominent F26/F38 disclosure that history is not remediated. No raw token reproduced. |
+| UX | Cryptic badges, flat navigation, stale executive rendering. | Grouped nav, descriptive source links, search, responsive tables, privacy strip, rendered narrative and clearer status labels. |
+| Validation | Structural checks could pass while substantive defects remained. | Added source-integrity, privacy-fingerprint, stale-count, unsupported-ranking, blank-case, fixed-term, history-disclosure and responsive/search checks. 107 checks, 0 errors; not legal verification. |
+| Publication | Static page cannot self-certify its own final merge/deploy. | F41 added; final PR/merge/Pages evidence appended to COORDINATION.md after merge. |

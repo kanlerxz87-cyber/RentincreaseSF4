@@ -1,303 +1,335 @@
-"""Build the static GitHub Pages site from canonical site_data.
+#!/usr/bin/env python3
+"""Build the static GitHub Pages site, JSON exports and markdown deliverables.
 
 Run: python3 scripts/build_site.py
-Generates data/*.json, index.html, pages/*.html, assets/site.css, .nojekyll,
-README.md, EXECUTIVE_SUMMARY.md and FLAGGED_FOR_REVIEW.md.
+The generated files are committed so legacy main/root GitHub Pages works without CI.
 """
-
 import json
 import re
 from html import escape
 from pathlib import Path
+
 import site_data as D
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
-PAGES = ROOT / "pages"
-ASSETS = ROOT / "assets"
+PAGES_DIR = ROOT / "pages"
+DATA_DIR = ROOT / "data"
+ASSETS_DIR = ROOT / "assets"
 
-def e(value):
+BADGE = {
+    "rule checked": ("verified", "rule checked"),
+    "verified": ("verified", "rule checked"),
+    "project checked": ("project", "project checked"),
+    "owner supplied": ("owner", "owner supplied"),
+    "analysis": ("analysis", "analysis"),
+    "needs review": ("review", "needs review"),
+    "source listed": ("listed", "source listed"),
+}
+
+
+def esc(value):
     return escape(str(value), quote=True)
 
-def source_links(ids):
-    parts = []
-    for sid in ids:
-        src = D.SOURCES.get(sid)
-        if not src:
-            continue
-        parts.append(
-            '<a href="{}" target="_blank" rel="noopener" title="{}">{}</a>'.format(
-                e(src["url"]), e(src["title"]), e(sid)
-            )
-        )
-    return '<span class="src">' + " ".join(parts) + "</span>"
 
 def badge(status):
-    if status == "owner supplied":
-        return '<span class="badge owner">owner-supplied</span>'
-    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis"}.get(status, "analysis")
-    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis"}.get(status, status)
-    return '<span class="badge {}">{}</span>'.format(cls, e(label))
+    cls, label = BADGE.get(status, ("listed", status))
+    return f'<span class="badge {cls}">{esc(label)}</span>'
 
-def flag_link(flag_id, in_pages):
-    if not flag_id:
-        return ""
-    href = "flagged.html#{}".format(e(flag_id)) if in_pages else "pages/flagged.html#{}".format(e(flag_id))
-    return '<a class="flaglink" href="{}">{}</a>'.format(href, e(flag_id))
 
-def render_table(section, in_pages=True):
-    cols = section["columns"]
-    out = ['<div class="tablewrap"><table><thead><tr>']
-    for c in cols:
-        out.append("<th>{}</th>".format(e(c)))
-    out.append("</tr></thead><tbody>")
+def source_links(source_ids, source_note=""):
+    parts = []
+    if source_note:
+        parts.append(f'<span class="owner-src">{esc(source_note)}</span>')
+    for sid in source_ids:
+        src = D.SOURCES.get(sid)
+        if not src:
+            parts.append(f'<span class="src-id">{esc(sid)}</span>')
+            continue
+        parts.append(
+            f'<a href="{esc(src["url"])}" target="_blank" rel="noopener" title="{esc(src["agency"])} — {esc(src["title"])}">'
+            f'{esc(src["title"])} <span class="src-id">({esc(sid)})</span></a>'
+        )
+    return '<div class="src">' + "".join(parts) + "</div>"
+
+
+def render_table(section):
+    cols = section.get("columns", ["Item", "Value / finding", "Status", "Official source(s)", "Notes / flag"])
+    head = "".join(f"<th>{esc(c)}</th>" for c in cols)
+    body = []
     for r in section["rows"]:
         value = r.get("value", "")
-        value_cell = '<td class="blank">(blank - not officially confirmed)</td>' if value == "" else "<td>{}</td>".format(e(value))
-        notes = e(r.get("notes", ""))
-        fl = flag_link(r.get("flag_id", ""), in_pages)
-        if fl:
-            notes = "{} &nbsp; {}".format(notes, fl) if notes else fl
-        out.append("<tr>")
-        out.append("<td><strong>{}</strong><br><span class=\"small\">{}</span></td>".format(e(r["label"]), e(r["id"])))
-        out.append(value_cell)
-        out.append("<td>{}</td>".format(badge(r["status"])))
-        if r.get("status") == "owner supplied" and r.get("source_note"):
-            out.append('<td><span class="owner-src">{}</span></td>'.format(e(r["source_note"])))
+        if r.get("status") == "needs review" and not value:
+            value_cell = '<td class="blank">(blank — not confirmed)</td>'
         else:
-            out.append("<td>{}</td>".format(source_links(r.get("source_ids", []))))
-        out.append("<td>{}</td>".format(notes))
-        out.append("</tr>")
-    out.append("</tbody></table></div>")
-    return "".join(out)
+            value_cell = f"<td>{esc(value)}</td>"
+        notes = esc(r.get("notes", ""))
+        if r.get("flag_id"):
+            notes += f' <a class="flaglink" href="flagged.html#{esc(r["flag_id"])}">{esc(r["flag_id"])}</a>'
+        body.append(
+            "<tr>"
+            f'<td><strong>{esc(r["label"])}</strong><div class="small">{esc(r["id"])}</div></td>'
+            f"{value_cell}"
+            f'<td>{badge(r.get("status", ""))}</td>'
+            f'<td>{source_links(r.get("source_ids", []), r.get("source_note", ""))}</td>'
+            f"<td>{notes}</td>"
+            "</tr>"
+        )
+    return f'<div class="tablewrap"><table><thead><tr>{head}</tr></thead><tbody>{"".join(body)}</tbody></table></div>'
 
-def nav_html(active, in_pages):
-    prefix = "" if in_pages else "pages/"
-    home = "../index.html" if in_pages else "index.html"
-    parts = ['<div class="wrap"><a href="{}">Home</a>'.format(home)]
-    for slug, title in D.NAV:
-        cls = ' class="active"' if slug == active else ""
-        parts.append('<a{} href="{}{}.html">{}</a>'.format(cls, prefix, e(slug), e(title)))
-    parts.append("</div>")
-    return "".join(parts)
 
-def header_html(title, subtitle, active, in_pages):
-    css = "../assets/site.css" if in_pages else "assets/site.css"
-    return """<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{title} | Rental increase SF</title>
-<link rel="stylesheet" href="{css}">
-</head>
-<body>
-<header><div class="wrap"><h1>{title}</h1><p>{subtitle}</p><p class="small">Research ledger dated {date} UTC &middot; official-source-linked research</p></div></header>
-<nav>{nav}</nav>
-<main>
-""".format(title=e(title), subtitle=e(subtitle), date=e(D.DATE), css=css, nav=nav_html(active, in_pages))
-
-def footer_html(in_pages):
-    p = "../" if in_pages else ""
-    return """</main>
-<footer><div class="wrap">
-<p>{disclaimer}</p>
-<p>Manual review: <a href="{p}SOURCES.md">SOURCES.md</a> &middot; <a href="{p}VERIFICATION.md">VERIFICATION.md</a> &middot; <a href="{p}EXECUTIVE_SUMMARY.md">Executive summary</a> &middot; <a href="{p}FLAGGED_FOR_REVIEW.md">Flagged for Review</a> &middot; <a href="{p}data/validation_report.json">Validation report</a></p>
-<p class="small">Unverified values are blank and flagged. Personal information uses placeholders. Structural validation is not legal verification. See <a href="{p}FOLLOWUP_AUDIT.md">follow-up audit and verification limits</a>.</p>
-</div></footer>
-</body>
-</html>
-""".format(disclaimer=e(D.DISCLAIMER), p=p)
-
-_URL_RE = re.compile(r"https?://[^\s)<>,]+")
-
-def _inline(text):
-    """Escape then apply the tiny subset of markdown used by the summaries."""
-    out = e(text)
-    out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
-    def link(m):
-        url = m.group(0)
-        return '<a href="{0}" target="_blank" rel="noopener">{0}</a>'.format(url)
-    return _URL_RE.sub(link, out)
-
-def md_to_html(text):
-    """Render the subset of markdown used in the executive summary text."""
-    blocks, para, items, kind = [], [], [], [None]
-
-    def flush_para():
-        if para:
-            blocks.append("<p>{}</p>".format(_inline(" ".join(para))))
-            para.clear()
-
-    def flush_items():
-        if items:
-            tag = kind[0] or "ul"
-            blocks.append("<{0}>{1}</{0}>".format(
-                tag, "".join("<li>{}</li>".format(_inline(i)) for i in items)))
-            items.clear()
-            kind[0] = None
-
-    for raw in text.splitlines():
-        line = raw.rstrip()
-        if not line.strip():
-            flush_para(); flush_items(); continue
-        if line.startswith("# ") and not line.startswith("## "):
-            # The page header already renders the document title.
-            flush_para(); flush_items(); continue
-        if line.startswith("## "):
-            flush_para(); flush_items()
-            blocks.append("<h2>{}</h2>".format(_inline(line[3:])))
-            continue
-        m = re.match(r"^\s*\d+\.\s+(.*)$", line)
-        if m:
-            flush_para()
-            if kind[0] not in (None, "ol"):
-                flush_items()
-            kind[0] = "ol"; items.append(m.group(1)); continue
-        if line.startswith("- "):
-            flush_para()
-            if kind[0] not in (None, "ul"):
-                flush_items()
-            kind[0] = "ul"; items.append(line[2:]); continue
-        flush_items(); para.append(line.strip())
-    flush_para(); flush_items()
-    return "".join(blocks)
-
-def summary_page_with_narrative(page):
-    out = [header_html(page["title"], page["description"], "summary", True)]
-    out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
-        e(page["title"]), e(page["description"]), e(D.DISCLAIMER)))
-    out.append('<section class="narrative">{}'.format(md_to_html(D.EXECUTIVE_SUMMARY_TEXT)))
-    out.append('<p class="small">The same text is available as <a href="../EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a> for manual review.</p></section>')
-    for sec in page["sections"]:
-        out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
-    out.append(footer_html(True))
-    return "".join(out)
-
-def page_html(slug, page):
-    out = [header_html(page["title"], page["description"], slug, True)]
-    out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
-        e(page["title"]), e(page["description"]), e(D.DISCLAIMER)
-    ))
-    for sec in page["sections"]:
-        out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
-    out.append(footer_html(True))
-    return "".join(out)
-
-def sources_page_html():
-    out = [header_html("Sources", "All {} official sources used for verification, with manual-review links.".format(len(D.SOURCES)), "sources", True)]
-    out.append('<section class="hero"><h2>Official source ledger</h2><p>Every published table row links to one or more of these official government or SEC sources.</p><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
-    rows = []
-    for sid, src in sorted(D.SOURCES.items()):
-        rows.append({
-            "id": sid,
-            "label": "{} | {}".format(src["agency"], src["title"]),
-            "value": src["statement"],
-            "status": "verified",
-            "source_ids": [sid],
-            "notes": src["category"],
-            "flag_id": "",
-        })
-    section = {"title": "Sources", "columns": D.COLUMNS, "rows": rows}
-    out.append("<section><h2>Official sources</h2>{}</section>".format(render_table(section, True)))
-    out.append(footer_html(True))
-    return "".join(out)
-
-def flagged_page_html():
-    out = [header_html("Flagged for Review", "Clearly labeled irregularities and unverified items with official source links.", "flagged", True)]
-    out.append('<div class="flagged-banner"><h2>Flagged for Review</h2><p>Status <strong>needs review</strong> means the item is published with official source links for manual review and does <strong>not</strong> block any task or the merge. Unverified value cells are blank.</p></div>')
-    out.append('<section class="hero"><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
-    out.append("<section><h2>All {} flagged items</h2>".format(len(D.FLAGS)))
+def render_flag_table():
+    head = "".join(f"<th>{esc(c)}</th>" for c in ["Flag", "Issue", "Detail", "Status", "Official source(s)"])
+    body = []
     for f in D.FLAGS:
-        out.append('<div class="flagitem" id="{}"><h3><span class="id">{}</span> &mdash; {}</h3><p>{}</p><p>{} &middot; <strong>{}</strong></p></div>'.format(
-            e(f["id"]), e(f["id"]), e(f["title"]), e(f["detail"]), source_links(f["source_ids"]), e(f["status"])
-        ))
-    out.append("</section>")
-    out.append(footer_html(True))
-    return "".join(out)
+        body.append(
+            f'<tr id="{esc(f["id"])}"><td><strong>{esc(f["id"])}</strong></td>'
+            f'<td>{esc(f["title"])}</td><td>{esc(f["detail"])}</td>'
+            f'<td>{badge("needs review")}</td><td>{source_links(f["source_ids"])}</td></tr>'
+        )
+    return f'<div class="tablewrap"><table><thead><tr>{head}</tr></thead><tbody>{"".join(body)}</tbody></table></div>'
 
-def page_sources(page):
-    ids = []
-    for sec in page.get("sections", []):
-        for r in sec["rows"]:
-            for sid in r["source_ids"]:
-                if sid not in ids:
-                    ids.append(sid)
-    return ids
+
+def nav_html(active=""):
+    quick = ['<a href="../index.html">Home</a>']
+    for slug, title in [("summary", "Summary"), ("process", "License steps"), ("flagged", "Flagged"), ("sources", "Sources")]:
+        cls = ' class="active"' if active == slug else ""
+        quick.append(f'<a href="{slug}.html"{cls}>{esc(title)}</a>')
+    groups = []
+    for title, items in D.NAV_GROUPS:
+        links = []
+        for slug, label in items:
+            cls = ' class="active"' if active == slug else ""
+            links.append(f'<a href="{slug}.html"{cls}>{esc(label)}</a>')
+        links = "".join(links)
+        groups.append(f'<div><h3>{esc(title)}</h3>{links}</div>')
+    return (
+        '<nav aria-label="Site navigation"><div class="wrap">'
+        + "".join(quick)
+        + '<details class="nav-groups"><summary>All categories</summary><div class="nav-panel">'
+        + "".join(groups)
+        + "</div></details></div></nav>"
+    )
+
+
+def privacy_strip():
+    return (
+        '<div class="privacy-strip"><div class="wrap"><strong>Privacy history warning:</strong> '
+        'current placeholders do not erase earlier public Git/PR exposure. '
+        '<a href="pages/flagged.html#F26">Read F26/F38</a> · '
+        '<a href="research/privacy/HISTORY_EXPOSURE.md">remediation limits</a>.</div></div>'
+    )
+
+
+def page_shell(title, body, active="", root=False):
+    prefix = "" if root else "../"
+    nav = '<nav aria-label="Site navigation"><div class="wrap"><a href="index.html">Home</a></div></nav>' if root else nav_html(active)
+    strip = privacy_strip() if root else privacy_strip().replace('href="pages/', 'href="').replace('href="research/', 'href="../research/')
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(title)} · Rental increase SF</title><link rel="stylesheet" href="{prefix}assets/site.css"></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header><div class="wrap"><h1>{esc(title)}</h1><p>Rental increase SF · official-source-linked compliance research</p>
+<p class="meta">Ledger date {esc(D.DATE)} UTC · {D.SOURCE_COUNT} distinct official URLs · {D.FLAG_COUNT} flagged items · not legal advice</p></div></header>
+{strip}{nav}<main id="main" class="wrap">{body}</main>
+<footer><div class="wrap">Informational research, not legal advice. No attorney approval or guarantee.
+<a href="{prefix}pages/sources.html">Sources</a> · <a href="{prefix}SOURCES.md">SOURCES.md</a> ·
+<a href="{prefix}data/validation_report.json">Validation report</a> · <a href="{prefix}COORDINATION.md">Coordination</a> ·
+<a href="{prefix}research/privacy/HISTORY_EXPOSURE.md">Privacy history</a></div></footer>
+<script src="{prefix}assets/site.js"></script></body></html>"""
+
+
+def inline_md(raw):
+    tokens = []
+
+    def stash(html):
+        token = f"\x00{len(tokens)}\x00"
+        tokens.append(html)
+        return token
+
+    def md_link(m):
+        label, url = m.group(1), m.group(2)
+        return stash(f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(label)}</a>')
+
+    def bare_link(m):
+        url = m.group(0)
+        trailing = ""
+        while url and url[-1] in ".,;:)":
+            trailing = url[-1] + trailing
+            url = url[:-1]
+        return stash(f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(url)}</a>') + trailing
+
+    raw = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", md_link, raw)
+    raw = re.sub(r"https?://[^\s<>]+", bare_link, raw)
+    out = esc(raw)
+    out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
+    for i, html in enumerate(tokens):
+        out = out.replace(f"\x00{i}\x00", html)
+    return out
+
+
+def render_summary_narrative():
+    parts = ['<article class="narrative panel" aria-label="Executive summary narrative">']
+    list_type = None
+
+    def close_list():
+        nonlocal list_type
+        if list_type:
+            parts.append(f"</{list_type}>")
+            list_type = None
+
+    for line in D.EXECUTIVE_SUMMARY_TEXT.splitlines():
+        s = line.strip()
+        if not s:
+            close_list()
+            continue
+        if s.startswith("# ") and not s.startswith("## "):
+            close_list()
+            continue
+        if s.startswith("## "):
+            close_list()
+            parts.append(f"<h2>{inline_md(s[3:])}</h2>")
+        elif s.startswith("- "):
+            if list_type != "ul":
+                close_list()
+                parts.append("<ul>")
+                list_type = "ul"
+            parts.append(f"<li>{inline_md(s[2:])}</li>")
+        elif re.match(r"^\d+\.\s", s):
+            if list_type != "ol":
+                close_list()
+                parts.append("<ol>")
+                list_type = "ol"
+            item = re.sub(r"^\d+\.\s", "", s)
+            parts.append(f"<li>{inline_md(item)}</li>")
+        else:
+            close_list()
+            parts.append(f"<p>{inline_md(s)}</p>")
+    close_list()
+    parts.append("</article>")
+    return "\n".join(parts)
+
+
+def search_bar():
+    return (
+        '<div class="searchbar"><label for="table-search">Search this page</label>'
+        '<input id="table-search" type="search" data-table-search placeholder="Filter rows by keyword, source or flag">'
+        '<span class="count" data-search-count aria-live="polite"></span></div>'
+    )
+
+
+def page_html(slug, page=None):
+    page = page or D.PAGES[slug]
+    parts = [f'<div class="hero"><h2>{esc(page["title"])}</h2><p>{esc(page.get("intro", "Official-source-linked tables for this category."))}</p>',
+             f'<div class="disclaimer">{esc(D.DISCLAIMER)}</div></div>']
+    if slug == "summary":
+        parts.append(render_summary_narrative())
+        parts.append("<h2>Evidence tables</h2>")
+    elif slug == "flagged":
+        parts.append('<div class="flagged-banner"><strong>Flagged for Review.</strong> These items do <strong>not</strong> block publication. Unverified case cells are blank; nonblocking does not mean verified.</div>')
+    parts.append(search_bar())
+    if slug == "flagged":
+        parts.append(f"<section><h2>All {D.FLAG_COUNT} flags</h2>{render_flag_table()}</section>")
+    elif slug == "sources":
+        parts.append(f'<section><h2>Source registry</h2><p>{D.SOURCE_ENTRY_COUNT} entries, {D.SOURCE_COUNT} distinct URLs. Duplicate research aliases are retained for continuity but not counted as separate sources.</p>{render_table(page["sections"][0])}</section>')
+    else:
+        for sec in page["sections"]:
+            parts.append(f'<section><h2>{esc(sec["title"])}</h2>{render_table(sec)}</section>')
+    return page_shell(page["title"], "\n".join(parts), active=slug)
+
+
+def card_value(raw):
+    if raw == "auto:sources":
+        return str(D.SOURCE_COUNT)
+    if raw == "auto:flags":
+        return str(D.FLAG_COUNT)
+    return raw
+
 
 def index_html():
-    out = [header_html("Rental increase SF", "Executive-summary dashboard for an anonymized San Francisco rent-increase case.", "", False)]
-    out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
-               '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
-               '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
-               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a></p>'
-               '<div class="disclaimer">{}</div></section>'.format(
-                   source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
-    out.append('<section class="hero"><h2>How to read this dashboard</h2>'
-               '<p>Every finding row carries a <span class="badge verified">verified</span> badge and one or more official source links (SF.gov, the Rent Ordinance, California statute, eCFR, HUD, SEC). '
-               '<span class="badge analysis">analysis</span> means a reasoned conclusion drawn from those rules plus the owner-supplied facts. '
-               '<span class="badge review">needs review</span> means the value could not be confirmed officially, so the cell is left blank and the item is published on the Flagged for Review page. '
-               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings.</p>'
-               '<p class="small">Start with the Executive Summary for the answer, the Step-by-Step License page for the order of operations, the Anonymized Case for the two units, and the Flagged for Review page for anything still open.</p></section>')
-    out.append('<div class="cards">')
-    for label, value, slug, desc in D.CARDS:
-        if value == "auto:sources":
-            value = str(len(D.SOURCES))
-        elif value == "auto:flags":
-            value = str(len(D.FLAGS))
-        out.append('<div class="card"><div class="k">{}</div><div class="v">{}</div><div class="d">{}</div><a href="pages/{}.html">Open {} &rarr;</a></div>'.format(
-            e(label), e(value), e(desc), e(slug), e(label)
-        ))
-    out.append("</div>")
-    out.append('<section><h2>Quick navigation</h2><div class="tablewrap"><table><thead><tr><th>Category</th><th>What it contains</th><th>Official source(s)</th></tr></thead><tbody>')
-    for slug, title in D.NAV:
-        if slug == "sources":
-            desc = "All 55 official sources with manual-review links."
-            sids = ["S01", "S07", "S53", "S27", "S43"]
-        elif slug == "flagged":
-            desc = "Clearly labeled irregularities and unverified items, each with official source links."
-            sids = ["S01", "S07", "S08", "S02"]
-        else:
-            page = D.PAGES[slug]
-            desc = page["description"]
-            sids = page_sources(page)[:6]
-        out.append('<tr><td><a href="pages/{}.html">{}</a></td><td>{}</td><td>{}</td></tr>'.format(
-            e(slug), e(title), e(desc), source_links(sids)
-        ))
-    out.append("</tbody></table></div></section>")
-    out.append(footer_html(False))
-    return "".join(out)
+    cards = []
+    for title, value, slug, desc in D.CARDS:
+        cards.append(
+            f'<div class="card"><div class="k">{esc(title)}</div><div class="v">{esc(card_value(value))}</div>'
+            f'<div class="d">{esc(desc)}</div><a href="pages/{slug}.html">Open {esc(title)}</a></div>'
+        )
+    groups = []
+    for title, items in D.NAV_GROUPS:
+        links = "".join(f'<li><a href="pages/{slug}.html">{esc(label)}</a></li>' for slug, label in items)
+        groups.append(f'<div class="card"><div class="k">{esc(title)}</div><ul>{links}</ul></div>')
+    body = f"""
+<div class="hero"><h2>Direct answer: individual owners use the Housing Inventory and license process</h2>
+<p>For a covered rent-controlled unit, an individual owner must report into the Housing Inventory and have a current Rent Increase License before an annual or banked increase takes effect. No individual-owner or small-building exemption was found on the official pages reviewed. The official condition is the effective date; the safest order is report, verify license, check the tenancy, then serve notice.</p>
+<ol><li>Confirm coverage privately with the exact address/APN.</li><li>Report each unit at the Rent Board Portal.</li><li>Verify the license for the intended effective date.</li><li>Check lease type, anniversary, history, base rent and retaliation risk.</li><li>Calculate only supported amounts; serve and document a compliant notice.</li></ol>
+<a class="cta" href="pages/process.html">Step-by-step license process</a><a class="cta secondary" href="pages/summary.html">Executive summary</a><a class="cta secondary" href="pages/flagged.html">Flagged for Review</a>
+<div class="disclaimer">{esc(D.DISCLAIMER)}</div></div>
+<div class="cards">{''.join(cards)}</div>
+<section><h2>Two anonymized units — illustrations, not approvals</h2><div class="unit-grid">
+<div class="unit"><h3>Unit 1</h3><p>Supplied rent $3,995 × 1.6% = $63.92</p><div class="amount">$4,058.92 illustration</div><p class="small">Coverage, license, lease, anniversary and history unverified.</p><a href="pages/calculations.html">Calculations</a></div>
+<div class="unit"><h3>Unit 2</h3><p>Supplied last-lease rent $3,150 × 1.6% = $50.40</p><div class="amount">$3,200.40 illustration</div><p class="small">Current rent, banking and effective date unverified; banked cells blank.</p><a href="pages/case.html">Anonymized case</a></div>
+</div></section>
+<section><h2>How to read this dashboard</h2><div class="legend">{badge('rule checked')} official rule text fetched/checked · {badge('project checked')} repository/platform workflow checked · {badge('owner supplied')} anonymized intake, not government-verified · {badge('analysis')} derived, conditional · {badge('needs review')} blank/unconfirmed, flagged · {badge('source listed')} listed with fetch limitation.</div>
+<p class="small">Every table row links to official rule or project-platform sources. Owner rows say explicitly that the links are governing rules, not proof of intake. Structural validation is not legal verification.</p></section>
+<section><h2>Browse by category</h2><div class="cards">{''.join(groups)}</div></section>
+"""
+    return page_shell("Rental increase SF", body, root=True)
 
-def write(path, text):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
+
+def sources_section():
+    rows = []
+    for sid, src in D.SOURCES.items():
+        limited = src.get("checked") == "listed / fetch limitation" or src.get("alias_of")
+        rows.append({
+            "id": sid,
+            "label": f'{src["agency"]} — {src["title"]}',
+            "value": src["statement"],
+            "status": "source listed" if limited else "rule checked",
+            "source_ids": [sid],
+            "notes": f'{src.get("category", "")} · checked {src.get("checked", D.DATE)}' + (f' · alias of {src["alias_of"]}' if src.get("alias_of") else ""),
+            "flag_id": "F40" if src.get("alias_of") else "",
+            "source_note": "",
+        })
+    return [{"title": "Official sources", "columns": ["Source", "What it supports", "Check status", "Official link", "Category / check date"], "rows": rows}]
+
+
+def write_json(name, obj):
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    (DATA_DIR / name).write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
 
 def main():
-    for d in (DATA, PAGES, ASSETS):
-        d.mkdir(parents=True, exist_ok=True)
-    (ROOT / ".nojekyll").write_text("", encoding="utf-8")
-    write(ASSETS / "site.css", D.CSS_TEXT)
+    PAGES_DIR.mkdir(exist_ok=True)
+    DATA_DIR.mkdir(exist_ok=True)
+    ASSETS_DIR.mkdir(exist_ok=True)
+    pages = dict(D.PAGES)
+    pages["sources"] = {"title": "Sources", "intro": "Official source registry with check dates and limitations.", "sections": sources_section()}
+    pages["flagged"] = {"title": "Flagged for Review", "intro": "Open questions, source conflicts and project limitations.", "sections": []}
+    write_json("pages.json", pages)
+    for slug, page in pages.items():
+        write_json(f"{slug}.json", page)
+        if slug != "flagged":
+            (PAGES_DIR / f"{slug}.html").write_text(page_html(slug, page), encoding="utf-8")
+    (PAGES_DIR / "flagged.html").write_text(page_html("flagged", pages["flagged"]), encoding="utf-8")
+    write_json("sources.json", [{"id": sid, **src} for sid, src in D.SOURCES.items()])
+    write_json("flags.json", D.FLAGS)
+    write_json("summary.json", {"date": D.DATE, "source_entries": D.SOURCE_ENTRY_COUNT, "distinct_source_urls": D.SOURCE_COUNT, "flags": D.FLAG_COUNT, "pages": len(pages)})
+    (ROOT / "index.html").write_text(index_html(), encoding="utf-8")
+    (ASSETS_DIR / "site.css").write_text(D.CSS_TEXT, encoding="utf-8")
+    (ASSETS_DIR / "site.js").write_text(D.JS_TEXT, encoding="utf-8")
+    (ROOT / "EXECUTIVE_SUMMARY.md").write_text(D.EXECUTIVE_SUMMARY_TEXT, encoding="utf-8")
+    (ROOT / "FLAGGED_FOR_REVIEW.md").write_text(D.FLAGGED_TEXT, encoding="utf-8")
+    (ROOT / "README.md").write_text(D.README_TEXT, encoding="utf-8")
+    sources_md = ["# Sources", "", f"{D.SOURCE_ENTRY_COUNT} entries; {D.SOURCE_COUNT} distinct URLs. Checked 2026-11-08 unless a limitation is stated.", ""]
+    for sid, src in D.SOURCES.items():
+        sources_md.append(f'## {sid} — {src["agency"]} — {src["title"]}')
+        sources_md.append(f'- URL: {src["url"]}')
+        sources_md.append(f'- Category: {src.get("category", "")}; checked: {src.get("checked", D.DATE)}')
+        sources_md.append(f'- Supports: {src["statement"]}')
+        if src.get("alias_of"):
+            sources_md.append(f'- Alias of {src["alias_of"]}; not a distinct URL.')
+        sources_md.append("")
+    (ROOT / "SOURCES.md").write_text("\n".join(sources_md), encoding="utf-8")
+    print(f"Built {len(pages)} pages, {D.SOURCE_ENTRY_COUNT} source entries ({D.SOURCE_COUNT} distinct URLs), {D.FLAG_COUNT} flags.")
 
-    sources_json = [dict(id=sid, **src) for sid, src in sorted(D.SOURCES.items())]
-    write(DATA / "sources.json", json.dumps(sources_json, indent=2, ensure_ascii=False) + "\n")
-    write(DATA / "flags.json", json.dumps(D.FLAGS, indent=2, ensure_ascii=False) + "\n")
-    write(DATA / "pages.json", json.dumps(D.PAGES, indent=2, ensure_ascii=False) + "\n")
-    for slug, page in D.PAGES.items():
-        write(DATA / "{}.json".format(slug), json.dumps(page, indent=2, ensure_ascii=False) + "\n")
-
-    for slug, page in D.PAGES.items():
-        html = summary_page_with_narrative(page) if slug == "summary" else page_html(slug, page)
-        write(PAGES / "{}.html".format(slug), html)
-    write(PAGES / "sources.html", sources_page_html())
-    write(PAGES / "flagged.html", flagged_page_html())
-    write(ROOT / "index.html", index_html())
-
-    write(ROOT / "EXECUTIVE_SUMMARY.md", D.EXECUTIVE_SUMMARY_TEXT)
-    write(ROOT / "FLAGGED_FOR_REVIEW.md", D.FLAGGED_TEXT)
-    write(ROOT / "README.md", D.README_TEXT)
-    print("Built {} data files, {} page HTML files, index.html, assets/site.css, .nojekyll and 3 markdown deliverables.".format(
-        len(list(DATA.glob("*.json"))), len(list(PAGES.glob("*.html")))
-    ))
 
 if __name__ == "__main__":
     main()

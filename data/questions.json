@@ -16,7 +16,7 @@
           "id": "Q-01",
           "label": "What are reasonable/normal rental increases under local, state and federal law?",
           "value": "Local 1.6% for covered units; state-only AB 1482 8.8% does not replace SF limits; no official general federal private-rent cap found. HUD FMR is not a cap.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S27",
@@ -31,7 +31,7 @@
           "id": "Q-02",
           "label": "How do big real estate corporations handle increases?",
           "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S48",
             "S49"
@@ -44,7 +44,7 @@
           "id": "Q-03",
           "label": "How do individual SF property owners handle increases?",
           "value": "Official rules require the annual allowable increase, license, 12-month timing and notice; June 2024 Rent Board workload shows 23 landlord petitions/154 units.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S07",
@@ -58,7 +58,7 @@
           "id": "Q-04",
           "label": "What is the correct tenant-notice method?",
           "value": "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; license first; 827 delivery rules.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S05",
@@ -73,7 +73,7 @@
           "id": "Q-05",
           "label": "What are reasonable reasons for increases?",
           "value": "Annual CPI-based allowable increase, properly banked skipped/partial increases, and Rent Board-approved petition/worksheet passthroughs; not extra rent merely because a roommate moved in.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S05",
@@ -89,7 +89,7 @@
           "id": "Q-06",
           "label": "What tenant-friendly advocate/lawyer scrutiny exists?",
           "value": "Free Rent Board counseling (not legal advice), tenant counselors, eviction-court free legal help, Tenant Right to Counsel for eviction proceedings, and tenant petitions before an ALJ.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S23",
             "S24",
@@ -148,29 +148,29 @@
         {
           "id": "Q-11",
           "label": "Do individual owners (not corporations) need to apply for the Rent Board license and inform the Rent Board before notifying tenants?",
-          "value": "Yes. A current Rent Increase License must be on file before an annual or banked increase takes effect, and all owners must report into the Housing Inventory first; no individual-owner or small-building exemption was found (buildings under 10 units report from March 1, 2023).",
-          "status": "verified",
+          "value": "Yes for covered annual/banked increases: report into the Housing Inventory and have a current license before the effective date. No individual-owner exemption was found. The pages do not expressly require a separate Board filing before mailing an ordinary notice.",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S07",
             "S08",
             "S53"
           ],
-          "notes": "See the Step-by-Step License page.",
+          "notes": "Safest sequence is report/verify license before serving notice; petition-based increases have separate pre-notice filing rules.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "Q-12",
           "label": "Is there a separate form to tell the Rent Board about each individual increase?",
-          "value": "The official pages describe only the annual Housing Inventory report as the route to the license; no separate filing of the increase notice is described, and the license need not be included with the notice.",
-          "status": "verified",
+          "value": "No separate pre-notice Board filing requirement was found for ordinary annual/banked increases; the license arises from Housing Inventory reporting. Petition/worksheet-based increases differ.",
+          "status": "analysis",
           "source_ids": [
             "S07",
             "S53",
             "S01"
           ],
-          "notes": "Absence of a stated requirement; counselor confirmation suggested.",
+          "notes": "Absence of a stated requirement, not an official confirmation; confirm with a counselor.",
           "flag_id": "",
           "source_note": ""
         },
@@ -178,7 +178,7 @@
           "id": "Q-13",
           "label": "What happens if a notice goes out without a current license?",
           "value": "The increase may be null and void, the tenant may be entitled to a refund and may petition the Rent Board, which can schedule an Administrative Law Judge hearing.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S08",
             "S53",
@@ -192,15 +192,15 @@
         {
           "id": "Q-14",
           "label": "Does the added roommate allow a market-rate reset?",
-          "value": "No, not by itself: extra rent for an additional occupant is unlawful, and a 6.14/Costa-Hawkins increase requires specific facts plus a timely written 6.14 notice. Those facts are unverified here.",
-          "status": "verified",
+          "value": "Not by itself. Extra rent for an added occupant is unlawful. A 6.14 increase requires last-original-occupant vacancy plus timely 6.14 notice; Costa-Hawkins has different subtenant/assignee conditions and does not require a 6.14 notice.",
+          "status": "rule checked",
           "source_ids": [
             "S01",
             "S18",
             "S16",
             "S37"
           ],
-          "notes": "No reset recommended; see flag F28.",
+          "notes": "Continuing occupant status and residency facts are unverified; no reset recommended.",
           "flag_id": "",
           "source_note": ""
         },
@@ -208,7 +208,7 @@
           "id": "Q-15",
           "label": "Is the Rent Board Fee the same thing as the Rent Increase License?",
           "value": "No. They are separate obligations. The license comes from Housing Inventory reporting and there is no charge for that reporting; the fee is a separate per-unit annual payment (2026-2027: $59.00 per dwelling unit, due March 1, with a 5% monthly late penalty to a 15% maximum). SF.gov states expressly that requesting a fee exemption does not satisfy Housing Inventory reporting.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S56",
             "S07",
@@ -222,7 +222,7 @@
           "id": "Q-16",
           "label": "Can part of the Rent Board Fee be charged to the tenants?",
           "value": "Yes, if the fee is paid in full: 50% of the fee, i.e. $29.50 per dwelling unit for 2026-2027, may be recovered from tenants in occupancy as of November 1 of the applicable tax year. Penalties may not be recovered.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S56"
           ],
@@ -233,28 +233,28 @@
         {
           "id": "Q-17",
           "label": "How long do I have to report a Housing Inventory change, and what if I already served a notice?",
-          "value": "Unit information is updated annually by March 1, and a change in the owner or manager name or business contact information must be updated within 30 days. If a notice already went out with no license on file, report first, then re-serve the notice so the effective date falls after the license is on file: a notice is unenforceable for an effective date on which no license was on file, and an unlicensed increase may be null and void.",
-          "status": "verified",
+          "value": "Report and verify the license, then obtain legal advice on any already-served notice; do not backdate or assume a later license retroactively cures it.",
+          "status": "analysis",
           "source_ids": [
             "S53",
             "S07",
             "S08"
           ],
-          "notes": "Whether any notice has already been served here is unverified.",
+          "notes": "Unit information updates annually by March 1; owner/manager contact changes within 30 days.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "Q-18",
           "label": "Can an increase during a repair dispute or after a complaint be retaliatory?",
-          "value": "Yes, that is a separate state-law risk. If the tenant is not in default and has asked for repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent within 180 days of that act; retaliation for tenant organizing or for exercising lawful rights is separately barred. Remedies include actual damages, punitive damages of $100-$2,000 per retaliatory act, and attorney's fees.",
-          "status": "verified",
+          "value": "It can be. Civil Code 1942.5 has conditional 180-day provisions and broader protection against retaliation for organizing or lawful rights; good-faith cause and other statutory conditions require fact review.",
+          "status": "rule checked",
           "source_ids": [
             "S57",
             "S22",
             "S42"
           ],
-          "notes": "Timing versus any open habitability complaint is unverified; this is not a legal opinion.",
+          "notes": "No timing or repair/complaint history was supplied; this is not a legal opinion.",
           "flag_id": "",
           "source_note": ""
         },
@@ -262,9 +262,9 @@
           "id": "Q-19",
           "label": "Are these two units exempt from AB 1482 because the owner lives in one?",
           "value": "Only if the owner occupied one unit as a principal residence when the tenancy began and continues in occupancy, and neither unit is an ADU/JADU. That fact was not supplied, so no exemption is asserted. Independently, AB 1482's rent cap does not apply where the unit is already under the SF Rent Ordinance limits, which are stricter.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
-            "S58",
+            "S36",
             "S60",
             "S27"
           ],
@@ -276,7 +276,7 @@
           "id": "Q-20",
           "label": "Does an in-law unit or a second structure change whether these units are covered?",
           "value": "It can. SF.gov states that a dwelling with a legal or illegal in-law unit is a two-unit building and is not exempt from the Rent Ordinance unless both units are rented together as a single tenancy, and that a single-family dwelling is not exempt if another residential structure is on the same lot. Two rented units is consistent with Rent Ordinance coverage, but the official lot and building record was not supplied.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S60",
             "S59",
@@ -290,7 +290,7 @@
           "id": "Q-21",
           "label": "Do the tenants have to keep accepting increases, or can they challenge each one?",
           "value": "They can challenge. A tenant may file an unlawful-rent-increase petition with no filing fee and no time limit, and the matter can go to an Administrative Law Judge. Tenant-side free legal help is documented for eviction proceedings (Eviction Defense Collaborative line and Tenant Right to Counsel), not as a general pre-approval service for rent increases.",
-          "status": "verified",
+          "status": "rule checked",
           "source_ids": [
             "S25",
             "S61",
@@ -312,6 +312,45 @@
           ],
           "notes": "Conservative compliance checklist only.",
           "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-22",
+          "label": "Can rent be raised during a fixed-term lease?",
+          "value": "Generally no, unless the rental agreement expressly allows rent increases; periodic tenancies use statutory notice rules.",
+          "status": "rule checked",
+          "source_ids": [
+            "S62",
+            "S35"
+          ],
+          "notes": "Actual lease type/clause unverified; no mid-term increase approved.",
+          "flag_id": "F36",
+          "source_note": ""
+        },
+        {
+          "id": "Q-23",
+          "label": "Does an individual two-unit owner need City business registration?",
+          "value": "Only rental income from one residential structure with fewer than four units generally does not by itself require registration; other business activity/payroll may require it.",
+          "status": "rule checked",
+          "source_ids": [
+            "S65",
+            "S66"
+          ],
+          "notes": "Structure/lot and other activity unverified; no case exemption asserted.",
+          "flag_id": "F42",
+          "source_note": ""
+        },
+        {
+          "id": "Q-24",
+          "label": "Does anonymizing the current site erase earlier public exposure?",
+          "value": "No. Current placeholders do not rewrite public history, PR diffs, clones or caches; the exposure is disclosed and owner remediation options are listed.",
+          "status": "project checked",
+          "source_ids": [
+            "S69",
+            "S68"
+          ],
+          "notes": "No raw identifiers are reproduced; see F26/F38.",
+          "flag_id": "F38",
           "source_note": ""
         }
       ]
