@@ -356,3 +356,16 @@ Resolution rule applied: **`origin/main` became the base and its implementation 
 Note on this record: it is landed by a follow-up docs-only PR from the same branch, because a commit cannot cite its own merge commit. The deployment status of any later commit can be re-checked with `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`.
 
 **Open items for the owner (do not block the site):** F41-F44 (fee/licence relationship not stated officially, co-tenant allocation of the 50% recovery, this case's fee billing record, and the raw-token exposure in public git history) plus the earlier F01-F40 and T03-F01-T03-F10, all published on the Flagged for Review page. The only item that needs the owner rather than more research is F44 (delete the two merged session branches, rewrite history with `git filter-repo`, ask GitHub Support, or make the repository private — see `research/privacy/HISTORY_EXPOSURE.md`).
+
+## B87 — independent notice-kit source verification (2026-11-08T22:43:28Z)
+
+Session: `arena-b87bd80b`. Fixed branch: `arena/b87bd80b-rentincreasesf4`, based on `main` at `d63dee4`. Arena prohibits switching, creating or pushing other branches; this fixed branch replaces the requested session-task branch naming.
+
+| ID | Task | Status | Owner | Exclusive file scope | Verification / handoff |
+| --- | --- | --- | --- | --- | --- |
+| B87-N | Independently verify a plain-language annual rent-increase notice worksheet and service-record checklist against official sources | in progress | arena-b87bd80b | New `research/b87_notice_kit/` only, plus append-only coordination records | Read the board, remote tips and open PR #14 before claiming. This is a separate reusable worksheet, not a re-generation or audit of the existing site. Use placeholders only; do not infer owner facts or legal coverage. |
+| B87-I | Request integration of the completed worksheet after all other tasks finish | unclaimed by B87; shared scope yielded | Active integration owners | No existing scripts, data, HTML, assets, workflows, summaries or other research files | Log an integration request here; do not edit another live claim. No publication result is asserted before actual deployment evidence. |
+
+**Simultaneous-session reconciliation.** The initial local board was behind concurrent pushes. A full remote check found live integration claims from `arena-41af5e64`, `arena-12d86074`, `arena-1e8c70fc` and `arena-18eafb4c`, plus the complementary QA scope of `arena-7152099a`, all created around 22:41–22:43 UTC on 2026-11-08. B87 does not take over their work or edit their scopes. Its new directory is disjoint from `research/current_audit/`, `research/n08_qa/`, `research/qa/` and the shared generator/site. The earlier T08/D16 claims are stale, but their takeover belongs to the already-live integration claims, not B87. Existing committed conflict markers are left untouched and already logged by those owners.
+
+This claim is committed and pushed before substantive work. Future pushes use fetch/pull-rebase and retain other sessions' records. No raw tenant identifiers will be written to tracked files, test fixtures, logs, commits or PRs. Historical exposure remains unresolved unless separately verified; current-tree anonymization is not a history purge.
