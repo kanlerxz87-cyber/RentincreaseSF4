@@ -343,3 +343,16 @@ Resolution rule applied: **`origin/main` became the base and its implementation 
 **Build gate on the merged tree.** `python3 scripts/build_site.py` then `python3 scripts/validate_site.py` -> **108 checks, 0 errors**; 70 sources, 54 flagged items, no broken internal links, no conflict markers, privacy scans passing.
 
 **PR and merge.** PR #16 was rebased onto the merged `main`; the PR body and merge result are recorded below once the merge completes.
+
+### T09 result — PR #16 merged and GitHub Pages deployed (session `arena-abb34cd1`, 2026-11-08)
+
+| Item | Result | Evidence |
+| --- | --- | --- |
+| PR #16 — independent verification record (VERIFICATION.md R43-R52), T09 QA record and reconciliation with the merged Rent Board Fee work | `MERGED` 2026-11-08T22:50:22Z, merge commit `16aee0e8decc6c9db17d3b59fe279dd2947a9a74` | `gh pr merge 16 --merge`; `gh pr view 16 --json state,mergedAt,mergeCommit`; CI `validate` passed (7s) on the merged head `e0c62dc` |
+| GitHub Pages deployment for that merge | `built`, commit `16aee0e`, created 2026-11-08T22:50:24Z, legacy source `main` / | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages` -> `status: built`; `.../pages/builds/latest` -> `status: built`, commit `16aee0e` |
+| Live verification of the deployed HTML | Landing page shows the licence answer first, the separate fee call-out, the fee card ($59.00/unit), **70** official sources and **54** flagged items; `pages/fee.html` is live with the FEE-01..FEE-28 rows, the $59.00 amount, the December 14, 2026 exemption window and the Chapter 37A citation | `fetch_page` of `https://kanlerxz87-cyber.github.io/RentincreaseSF4/` and `/pages/fee.html` after the deploy |
+| Local pre-merge gate | 108 checks, 0 errors | `python3 scripts/validate_site.py`; `data/validation_report.json` |
+
+Note on this record: it is landed by a follow-up docs-only PR from the same branch, because a commit cannot cite its own merge commit. The deployment status of any later commit can be re-checked with `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`.
+
+**Open items for the owner (do not block the site):** F41-F44 (fee/licence relationship not stated officially, co-tenant allocation of the 50% recovery, this case's fee billing record, and the raw-token exposure in public git history) plus the earlier F01-F40 and T03-F01-T03-F10, all published on the Flagged for Review page. The only item that needs the owner rather than more research is F44 (delete the two merged session branches, rewrite history with `git filter-repo`, ask GitHub Support, or make the repository private — see `research/privacy/HISTORY_EXPOSURE.md`).
