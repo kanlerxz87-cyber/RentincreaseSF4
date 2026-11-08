@@ -402,3 +402,14 @@ On integrated main `a613996`, F19 still cites HUD FMR (S43) for a Pages deployme
 Merging `origin/main` (`a613996`, PRs #15/#16/#17/#20) into the fixed N08 branch conflicted only in `COORDINATION.md`: main had repaired the old committed markers and added integration records, while N08 had appended its QA/handoff records to the older board. Resolution: keep main's complete repaired board verbatim, then append N08's complete section verbatim. No other session's record was discarded; no shared generator/site/data file was substantively edited by N08 (those files are the merged main versions). N08's QA deliverables remain confined to `research/n08_qa/`. The proposed patch is still a handoff, not an applied shared change.
 
 N08 push-procedure note: after the merge commit was created, the required `git pull --rebase origin arena/7152099a-rentincreasesf4` was attempted. It tried to flatten/replay the merged main history and conflicted in this file; it was **aborted immediately** with `git rebase --abort`, restoring the resolved merge commit without discarding either parent. The remote branch was verified still at the pre-merge N08 tip (`381311e`), so the resolved merge was pushed directly. This preserves both histories; no force-push or other-branch push was used.
+
+### N08 PR #21 merge and Pages deployment record — 2026-11-08 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #21 — independent N08 QA record, reusable read-only tests and tested patch handoff | **MERGED** 2026-11-08T22:59:38Z; merge commit `45ffbdb6c6689353724a04ab3cbac0b11313a814` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/21 ; `gh pr view 21`; `gh pr merge 21 --merge` |
+| CI | `validate` passed (7s) | https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42532906315/job/128890857533 |
+| GitHub Pages | `status: built`, commit `45ffbdb6c6689353724a04ab3cbac0b11313a814`, error null | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`; live index fetched successfully |
+| Local gate before merge | 108 checks, 0 errors; browser proposal proof: 20 files / 40 viewport loads / 40 internal targets / 0 broken / 0 document overflow; isolated patch reduced Axe node instances from 84 to 0 | `research/n08_qa/PATCH_PROOF.md`, before/after JSON and validator logs |
+
+**Scope limitation.** PR #21 publishes the QA record and tests; it does **not** apply `proposed_integration.patch` to the shared site. The active integration owner must still reconcile/apply the patch and the project-citation/date findings, rebuild, merge and verify deployment. Historical identifier exposure remains unresolved and flagged; current-tree cleanliness is not a history purge. N08-B is done. N08 did not take over another live session's shared scope.
