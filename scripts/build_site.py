@@ -6,6 +6,7 @@ README.md, EXECUTIVE_SUMMARY.md and FLAGGED_FOR_REVIEW.md.
 """
 
 import json
+import re
 from html import escape
 from pathlib import Path
 import site_data as D
@@ -108,6 +109,71 @@ def footer_html(in_pages):
 </html>
 """.format(disclaimer=e(D.DISCLAIMER), p=p)
 
+_URL_RE = re.compile(r"https?://[^\s)<>,]+")
+
+def _inline(text):
+    """Escape then apply the tiny subset of markdown used by the summaries."""
+    out = e(text)
+    out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
+    def link(m):
+        url = m.group(0)
+        return '<a href="{0}" target="_blank" rel="noopener">{0}</a>'.format(url)
+    return _URL_RE.sub(link, out)
+
+def md_to_html(text):
+    """Render the subset of markdown used in the executive summary text."""
+    blocks, para, items, kind = [], [], [], [None]
+
+    def flush_para():
+        if para:
+            blocks.append("<p>{}</p>".format(_inline(" ".join(para))))
+            para.clear()
+
+    def flush_items():
+        if items:
+            tag = kind[0] or "ul"
+            blocks.append("<{0}>{1}</{0}>".format(
+                tag, "".join("<li>{}</li>".format(_inline(i)) for i in items)))
+            items.clear()
+            kind[0] = None
+
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        if not line.strip():
+            flush_para(); flush_items(); continue
+        if line.startswith("# ") and not line.startswith("## "):
+            # The page header already renders the document title.
+            flush_para(); flush_items(); continue
+        if line.startswith("## "):
+            flush_para(); flush_items()
+            blocks.append("<h2>{}</h2>".format(_inline(line[3:])))
+            continue
+        m = re.match(r"^\s*\d+\.\s+(.*)$", line)
+        if m:
+            flush_para()
+            if kind[0] not in (None, "ol"):
+                flush_items()
+            kind[0] = "ol"; items.append(m.group(1)); continue
+        if line.startswith("- "):
+            flush_para()
+            if kind[0] not in (None, "ul"):
+                flush_items()
+            kind[0] = "ul"; items.append(line[2:]); continue
+        flush_items(); para.append(line.strip())
+    flush_para(); flush_items()
+    return "".join(blocks)
+
+def summary_page_with_narrative(page):
+    out = [header_html(page["title"], page["description"], "summary", True)]
+    out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
+        e(page["title"]), e(page["description"]), e(D.DISCLAIMER)))
+    out.append('<section class="narrative">{}'.format(md_to_html(D.EXECUTIVE_SUMMARY_TEXT)))
+    out.append('<p class="small">The same text is available as <a href="../EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a> for manual review.</p></section>')
+    for sec in page["sections"]:
+        out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
+    out.append(footer_html(True))
+    return "".join(out)
+
 def page_html(slug, page):
     out = [header_html(page["title"], page["description"], slug, True)]
     out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
@@ -119,7 +185,7 @@ def page_html(slug, page):
     return "".join(out)
 
 def sources_page_html():
-    out = [header_html("Sources", "All 52 official sources used for verification, with manual-review links.", "sources", True)]
+    out = [header_html("Sources", "All {} official sources used for verification, with manual-review links.".format(len(D.SOURCES)), "sources", True)]
     out.append('<section class="hero"><h2>Official source ledger</h2><p>Every published table row links to one or more of these official government or SEC sources.</p><div class="disclaimer">{}</div></section>'.format(e(D.DISCLAIMER)))
     rows = []
     for sid, src in sorted(D.SOURCES.items()):
@@ -220,7 +286,8 @@ def main():
         write(DATA / "{}.json".format(slug), json.dumps(page, indent=2, ensure_ascii=False) + "\n")
 
     for slug, page in D.PAGES.items():
-        write(PAGES / "{}.html".format(slug), page_html(slug, page))
+        html = summary_page_with_narrative(page) if slug == "summary" else page_html(slug, page)
+        write(PAGES / "{}.html".format(slug), html)
     write(PAGES / "sources.html", sources_page_html())
     write(PAGES / "flagged.html", flagged_page_html())
     write(ROOT / "index.html", index_html())

@@ -220,7 +220,6 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 
 **Handoff notes for the next session.** (1) No conflicting claims were found at merge time; prior sessions' F25/F26 meanings, CI workflow, `FOLLOWUP_AUDIT.md` and `TENANT_ASSISTANCE_RESEARCH.md` are preserved. (2) Outstanding `needs review` items are unchanged in kind: F27 (2027–28 rate not yet published) and F28 (Unit 1 §6.14 notice history) need owner facts or a later SF.gov publication, not more research. (3) Public-page flag section headers are regenerated from `scripts/site_flags.py`; edit that file and rebuild rather than editing `pages/*.html`.
 
-<<<<<<< HEAD
 ### Final publication status (session `arena-c007d556`, 2026-11-07)
 
 | Item | Result | Evidence |
@@ -232,7 +231,11 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 | Local gate before every merge | 82 checks, 0 errors | `python3 scripts/validate_site.py`; `data/validation_report.json` |
 
 Any later commit's deployment status can be re-checked with `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`. This file records results rather than predicting them; the deploy status of this very commit is therefore verified via that API and reported in the session summary.
-=======
+
+### Session 2026-11-07 - `arena-5cbd3f13` (T07)
+
+> Reconciliation note (session `arena-ea02333c`, 2026-11-07): the two blocks below/above were committed to `main` inside unresolved conflict markers by commit `1d80419`. Both are kept verbatim; only the marker lines were removed. No content from either session was discarded. Logged as flag F31.
+
 ## Session 2026-11-07 — `arena-5cbd3f13` (T07)
 
 Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto the then-current `main` (`cd42189`) before any delta was re-applied. No other session's files were overwritten; this session re-applied only the changes listed below on top of `main`.
@@ -253,7 +256,6 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 
 - The base commit `a0591c3` was far behind `origin/main` (`cd42189`, PRs #2–#9). Rather than merge conflicting rewrites of the same generator files, this session took `main` as the base and re-applied its deltas on top; the earlier WIP commit on this branch is superseded and adds nothing to `main`. Nothing from another session was discarded.
 - T05 (PR #1) was already merged and Pages already built before this session started; T07 does not re-claim T05.
->>>>>>> origin/main
 
 ### D16 coordination note to `arena-ea02333c` (T08) and any later session — added 2026-11-07 ~20:20 UTC
 
@@ -272,3 +274,20 @@ Branch `arena/5cbd3f13-rentincreasesf4`, created from `a0591c3` and rebased onto
 | I12-P | Final PR from the fixed Arena branch, merge, verify deployed site and record result | in progress | arena-12d86074 | Publication operations and this board |
 
 Claim timestamp: 2026-11-08T22:41:18Z. Checked all remote branches and open PRs: only PR #14 (T08), last commit 2026-11-07T20:20:05Z, more than 26 hours old and conflicting. D16 research landed in PR #13; its integration was planned, not completed. The >60-minute/no-commit handoff rule applies to the stale T08 claim; the current session will preserve its research and log the reconciliation, not overwrite its work blindly. No live competing session found. Platform requires all work on `arena/12d86074-rentincreasesf4`; no other branches will be created or pushed. Shared-output integration is claimed now because all other active claims are stale or complete. Public files will use placeholders only; private case facts remain owner-supplied, not government-verified. Existing history exposure will remain prominently flagged. Fresh official-source audit precedes final publication.
+
+---
+
+## Session 2026-11-07 — `arena-ea02333c` (T08) — independent re-verification + case-specific compliance gaps
+
+Branch `arena/ea02333c-rentincreasesf4`, based at `a0591c3`, merged forward from `origin/main` `cd51aee` (PR #12) before any edit. No other session's file scope is claimed; no competing live claim found at start.
+
+| ID | Task | Status | Owner | File scope (exclusive) | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T08 | (a) Repair committed merge-conflict markers in this file, left by `main` commit `1d80419`; (b) independently re-verify the published rate/licence/notice/state/federal headlines, not inherited; (c) add the case-specific compliance rows this 2-unit 1940 building needs and that were still missing (Rent Board Fee is separate from the licence; §37.15(e) suspension remedy; Civil Code §1942.5 retaliation bar; AB 1482 two-unit exemption scope; in-law-unit coverage); (d) rebuild, re-validate, PR, merge, confirm Pages | `in progress` | `arena-ea02333c` (claimed 2026-11-07 UTC) | `COORDINATION.md`, `scripts/site_sources.py`, `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/build_site.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `README.md`, `SOURCES.md`, `VERIFICATION.md` | Re-opened directly with `fetch_page` this session: S01, S02, S04, S05, S06, S07, S08, S09, S16, S17, S21, S22, S25, S27, S35, S36, S37, S38, S42, S47, S53, plus SF `rent-board-fee`, `evictions-san-francisco`, `information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins`, and FY2027 FMR schedule p.1 (San Francisco HMFA row). Independent verification confirmed the published 1.6% / 8.8% / 60%-CPI-7%-cap / 24-month banking / 30-90-day notice / FMR figures and found **no** incorrect published figure. | **F31 (new, process):** `COORDINATION.md` on `main` contained raw merge-conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) committed by `1d80419`; validator did not detect them. Fixed and added a validator check. **F32 (new, privacy):** `SOURCES.md` S03/S28 cross-references were out of sequence (S03 pointed to "F28", which is the Unit 1 6.14 flag); corrected. Flagged items do not block. |
+
+Claim scope note: this session edits only the files listed above. Shared table data and site navigation are regenerated by `scripts/build_site.py` from the canonical scripts; the regeneration is additive and does not remove any other session's rows.
+
+
+### I12 handoff / conflict resolution (2026-11-08)
+
+Took over stale T08 under the 60-minute rule and merged PR #14 commit `07eb1b42` into the fixed current branch, preserving its source additions S56–S61, flags F31–F35, new legal rows, narrative renderer and checks. The shallow checkout initially lacked a common ancestor; deepened fetch history (no branch changes), then merged. Only COORDINATION.md conflicted. Kept both the current claim and all T08/prior-session records, removed inherited and merge marker lines without deleting substantive content. T08 publication is superseded by I12-P; its research is not discarded. D16 findings will be integrated after fresh checks.
