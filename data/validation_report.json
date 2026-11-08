@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "status": "passed",
   "checks": [
     {
@@ -10,7 +10,7 @@
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "54 flagged items"
+      "detail": "55 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -450,7 +450,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "44 numeric flags"
+      "detail": "45 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -541,6 +541,16 @@
       "name": "no raw tenant identifiers in the fee or new markdown files",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "table regions and inline links meet accessibility standards",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "project-record flags cite project records and S02 link defect is flagged",
+      "ok": true,
+      "detail": ""
     }
   ],
   "errors": [],
@@ -550,8 +560,8 @@
     "data_files": 21,
     "rows_verified": 296,
     "needs_review_rows": 34,
-    "flags": 54,
-    "checks": 108,
+    "flags": 55,
+    "checks": 110,
     "errors": 0
   }
 }

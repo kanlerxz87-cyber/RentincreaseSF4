@@ -47,9 +47,9 @@ def flag_link(flag_id, in_pages):
 
 def render_table(section, in_pages=True):
     cols = section["columns"]
-    out = ['<div class="tablewrap"><table><thead><tr>']
+    out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} — scrollable table"><table><thead><tr>'.format(e(section["title"]))]
     for c in cols:
-        out.append("<th>{}</th>".format(e(c)))
+        out.append("<th scope=\"col\">{}</th>".format(e(c)))
     out.append("</tr></thead><tbody>")
     for r in section["rows"]:
         value = r.get("value", "")

@@ -324,14 +324,114 @@ Claim scope note: this session edits only the files listed above. Shared table d
 
 This file records results, including the deploy status of the commit that carries it: that status is read back from the Pages API immediately after the merge and reported in the session summary, and can be re-checked at any time at `api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`.
 
-## Session 2026-11-08 — `arena-44eac0b7` (T44-A independent official-source verification & gap audit; T44-B post-completion integration)
+## Session 2026-11-08 — `arena-abb34cd1` (T09): independent QA, duplicate-work reconciliation, PR + merge
 
-Branch `arena/44eac0b7-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Read `COORDINATION.md`, `origin/main` (`fcc7d6b`, after PRs #14, #15, #17 merged), and all `origin/arena/*` branches before claiming.
-
-| ID | Task | Status | Owner | File scope (exclusive) | Sources / verification performed | Irregularities / flags |
+| ID | Task | Status | Owner | File scope | Sources / verification | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
-| T44-A | Independent 2026-11-08 official-source line-by-line verification and gap audit across local, state, federal, corporate/individual landlord practice, notice service, roommate/subtenant (§6.14 / Rules & Regs §6.15), and tenant legal-review safeguards | `in progress` | `arena-44eac0b7` (claimed 2026-11-08 UTC) | `research/t44_audit/` (new directory only) + append-only `COORDINATION.md` | Direct `fetch_page` verification of official SF.gov, CA Legislative Information, CA CRD, HUD USER, eCFR, GovInfo, SEC EDGAR, and SFTreasurer pages; cross-check against every user requirement and table row. | To be recorded in `research/t44_audit/` and below upon completion. |
-| T44-B | Post-audit additive integration into shared generator/data/site, rebuild, line-by-line validation, PR to `main`, merge, and GitHub Pages deployment confirmation | `unclaimed until T44-A is done and no other session has an active conflicting edit in flight` | `arena-44eac0b7` (planned) | Shared generator/data/site/docs (additive only, preserving 100% of all prior and concurrent sessions' work) + `COORDINATION.md` | Full rebuild + `scripts/validate_site.py` + broken-link check + GitHub Pages API check. | Flagged items published on `pages/flagged.html` do not block the merge. |
+| T09 | Take over the stale D16-B/D16-C claims; integrate the Rent Board Fee research and the privacy-history finding; repair inherited defects; independently re-verify every load-bearing page; publish through a PR | `done` | `arena-abb34cd1` | `COORDINATION.md`, `VERIFICATION.md`, `research/qa/T09_QA.md` (final scope after reconciliation; see below) | Twelve official pages/PDFs fetched directly on 2026-11-08 and recorded in `VERIFICATION.md` R43-R52 and `research/qa/T09_QA.md` | See the duplicate-work reconciliation below; no flag raised against the merged data, which matched every official text checked |
 
-**Coordination note (2026-11-08 UTC):** While concurrent 2026-11-08 sessions finish their claims, `T44-A` touches **only** the new disjoint directory `research/t44_audit/` (plus append-only coordination notes here). No raw tenant identifiers will ever be written to tracked files, commit messages, or PR descriptions.
+**Claim and takeover.** `arena-abb34cd1` claimed T09 on 2026-11-08 UTC after finding the D16-B/D16-C claims from `arena-d16cbfc8` (2026-11-07 ~20:16 UTC) still open with no commits for more than 60 minutes. The claim commit is `10ccf68`.
+
+**Defect repaired in the claim commit.** `main` at `d63dee4` published three unresolved Git conflict-marker lines inside this file. Both sides of the record were kept verbatim and only the marker lines were removed. (The parallel session independently reports the same defect as flag F31 on the site.)
+
+**Duplicate work, and how it was resolved (nothing discarded).** This session independently built a Rent Board Fee integration (sources S56-S62, flags F31-F38, a 26-row fee page, a `project record` row status, build-time counts and a validator conflict-marker check) and opened PR #16. While that PR was open, session `arena-18eafb4c` landed the same integration on `main` through **PR #15**, with a fuller fee page (28 rows including exemptions, deposit-interest and business-registration rows), sources S56-S69 and flags F31-F44, plus its own fixes for the same inherited defects (dynamic counts, the S43 mis-citation, the conflict markers).
+
+Resolution rule applied: **`origin/main` became the base and its implementation was kept as the single source of truth.** This session's duplicate fee page, its S56-S62 numbering and its F31-F38 numbering were dropped rather than merged, so the published site has one fee page, one numbering and no competing claims. Nothing from `arena-18eafb4c` was reverted, overwritten or renumbered. A merge conflict in this file, in `VERIFICATION.md` and in the generated files was resolved by taking the merged implementation and re-applying only this session's additive verification record (R43-R52 here; `research/qa/T09_QA.md`), which is precisely the second-pair-of-eyes job that D16-B existed to do.
+
+**Independent verification performed (fresh fetches on 2026-11-08, before the merge).** Rent Board Fee page, the 50% recovery page, Administrative Code Chapter 37A (both PDF chunks), Form 573, the 2027 Informational Notice, the older "Pay your Rent Board fee" service page, both SF Treasurer & Tax Collector pages, Civil Code 1942.5 (both chunks), the SF.gov Security Deposits report, Rent Ordinance Sec. 37.3(a)(1)-(2), Sec. 37.15, the Housing Inventory page, the Noncompliance page, the banked-increase page, the Current Rates page and the AB 1482 page. Every published fee, notice, rate, licensing, retaliation and deposit row agreed with the official text. Rows that could not be confirmed officially are blank and flagged (F41 fee/licence relationship, F42 co-tenant allocation, F43 this case's billing record, F44 privacy history).
+
+**Build gate on the merged tree.** `python3 scripts/build_site.py` then `python3 scripts/validate_site.py` -> **108 checks, 0 errors**; 70 sources, 54 flagged items, no broken internal links, no conflict markers, privacy scans passing.
+
+**PR and merge.** PR #16 was rebased onto the merged `main`; the PR body and merge result are recorded below once the merge completes.
+
+### T09 result — PR #16 merged and GitHub Pages deployed (session `arena-abb34cd1`, 2026-11-08)
+
+| Item | Result | Evidence |
+| --- | --- | --- |
+| PR #16 — independent verification record (VERIFICATION.md R43-R52), T09 QA record and reconciliation with the merged Rent Board Fee work | `MERGED` 2026-11-08T22:50:22Z, merge commit `16aee0e8decc6c9db17d3b59fe279dd2947a9a74` | `gh pr merge 16 --merge`; `gh pr view 16 --json state,mergedAt,mergeCommit`; CI `validate` passed (7s) on the merged head `e0c62dc` |
+| GitHub Pages deployment for that merge | `built`, commit `16aee0e`, created 2026-11-08T22:50:24Z, legacy source `main` / | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages` -> `status: built`; `.../pages/builds/latest` -> `status: built`, commit `16aee0e` |
+| Live verification of the deployed HTML | Landing page shows the licence answer first, the separate fee call-out, the fee card ($59.00/unit), **70** official sources and **54** flagged items; `pages/fee.html` is live with the FEE-01..FEE-28 rows, the $59.00 amount, the December 14, 2026 exemption window and the Chapter 37A citation | `fetch_page` of `https://kanlerxz87-cyber.github.io/RentincreaseSF4/` and `/pages/fee.html` after the deploy |
+| Local pre-merge gate | 108 checks, 0 errors | `python3 scripts/validate_site.py`; `data/validation_report.json` |
+
+Note on this record: it is landed by a follow-up docs-only PR from the same branch, because a commit cannot cite its own merge commit. The deployment status of any later commit can be re-checked with `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`.
+
+**Open items for the owner (do not block the site):** F41-F44 (fee/licence relationship not stated officially, co-tenant allocation of the 50% recovery, this case's fee billing record, and the raw-token exposure in public git history) plus the earlier F01-F40 and T03-F01-T03-F10, all published on the Flagged for Review page. The only item that needs the owner rather than more research is F44 (delete the two merged session branches, rewrite history with `git filter-repo`, ask GitHub Support, or make the repository private — see `research/privacy/HISTORY_EXPOSURE.md`).
+
+---
+
+## Active integration — session `arena-7152099a` (2026-11-08 UTC)
+
+Current checked-at: **2026-11-08T22:41:08Z**. Fixed working branch: **`arena/7152099a-rentincreasesf4`**, based on `main` at `d63dee4`. Arena prohibits creating, switching to, or pushing another session branch; all work stays on this branch. Read this board, all remote tips and open PR #14 before claiming.
+
+| ID | Task | Status | Owner | Exclusive file scope | Verification / handoff |
+| --- | --- | --- | --- | --- | --- |
+| N08-A | Initial stale-task takeover; released shared integration after simultaneous live claims appeared | done | arena-7152099a | COORDINATION.md status/append only | D16 last commit 2026-11-07T20:20Z, merged via PR #13; T08/PR #14 last commit 2026-11-07T20:20:05Z, no activity for >26h. Both exceed the user's 60-minute stale threshold. Preserve other sessions' records and additions; no branch deletion, history rewrite or force-push. |
+| N08-B | Independent browser/accessibility, privacy-regression and deployment QA; report findings for the integration owner | in progress | arena-7152099a | New `research/n08_qa/` only, plus this board; no existing generator, shared data, site, research or workflow files | Check official pages directly, distinguish fresh checks from inherited research, never treat owner facts as official records, preserve dates/amounts and placeholder identities. Unknown values stay blank/flagged. |
+| N08-C | Final integration and publication | unclaimed by N08; yielded to active integration owner | arena-41af5e64 / competing simultaneous integrators | Shared site/generator scope; N08 will not edit or merge it | Do not claim a future deployment has already succeeded. Record actual PR/merge/API evidence. Historical privacy exposure remains an explicit unresolved flag; current-tree cleanliness is not a claim that history was purged. |
+
+No new raw tenant identifiers will be written to tracked files, test fixtures, logs, commit messages or PR descriptions. Existing privacy fingerprint regression checks are retained. This claim is committed and pushed before substantive work begins. Later sessions: these scopes are active; log requests here rather than editing the shared generator concurrently.
+
+### N08 simultaneous-claim reconciliation — 2026-11-08T22:43Z
+
+Immediately after the first push, a full-refspec fetch revealed three **live** claims created within seconds of this one: `arena-41af5e64` (commit 22:41:23Z), `arena-12d86074` (22:41:28Z; recorded claim 22:41:18Z), and `arena-1e8c70fc` (22:41:34Z). Their initial pushes were concurrent with N08, not stale. To honor the no-overlap rule, **N08 releases the shared generator/site/data integration and publication scope** and will not take over PR #14 or merge another session's work. The earliest live integration claims must reconcile among themselves; N08 makes no ownership decision for them.
+
+N08 retains a complementary, non-overlapping scope: **`research/n08_qa/` only** (new), for browser/responsive/accessibility checks, safe privacy-regression evidence, and a focused legal-risk QA note for the integration owner. This does not edit `research/current_audit/`, the generators, shared outputs, or existing research. Findings/requests will be logged here for the final integrator. No raw identifiers are included. The initial broad N08 scope above is superseded by this note and the updated task rows.
+
+### N08 QA findings delivered — 2026-11-08 UTC (read-only complementary scope)
+
+- **Deliverables:** `research/n08_qa/LEGAL_QA.md`, `BROWSER_QA.md`, `browser_qa.mjs`, `privacy_check.py`, pinned npm manifest/lockfile, `baseline-browser-report.json`, `privacy-result.json`. No shared generator/site/data file was edited.
+- **Focused official-source checks:** re-opened SF Housing Inventory, rent-increase guidance, noncompliance, §37.15, banked increases, Rent Board Fee, AB 1482 guidance, §6.14/Costa-Hawkins, and California Civil Code §§827, 1942.5, 1947.12 directly on 2026-11-08. Requests N08-L01–L08 distinguish license-before-effective-date from the recommended license-before-service workflow; qualify the 180-day retaliation triggers and punitive/fee remedies; keep fee recovery separate from base rent; preserve conditional state exemption/banking and Unit 1 occupant unknowns. Every legal QA row has an official source link.
+- **Browser baseline (`main` d63dee4, isolated copy):** 19 HTML files, 38 desktop/mobile loads, all HTTP 200; 37 internal link targets, 0 broken; 0 whole-document overflow. Axe found 40 node instances: 38 color-only footer-link findings and 2 mobile case-table keyboard-scroll findings. Mobile sticky nav is ~254px of an 844px viewport; 27 table wrappers scroll horizontally. Requests: underline inline links, focusable/named table scroll regions, scoped headers, compact mobile navigation. These are review findings, not broken-link/build failures.
+- **Privacy:** count-only scan of 76 tracked/new QA files found 0 fingerprint matches; the known historical report read into memory still yields 6 matches. No values printed or written. Current-tree cleanliness is not a history purge; historical exposure remains unresolved and must stay flagged.
+- **Integration request:** active shared-scope owners should incorporate the actionable wording/accessibility/privacy requests, then re-run the included QA on the final tree and deployed Pages URL. N08 does not claim their integration or publication result. N08-B research/QA is done; N08 will independently check the final live result when available without editing shared files.
+
+### N08 post-integration check — 2026-11-08T22:50Z
+
+`main` advanced to `fcc7d6b` (PR #17; integration PR #15 merged). Pages API latest build is `built`, error null, commit `fcc7d6b4a36357e2a8bb943f4389c920aee111f3`; live index and executive summary were fetched successfully. An isolated rebuild of this main snapshot passes 108 existing checks. The N08 legal wording and browser accessibility requests above were delivered after that integration's last commit and are **not yet reflected** in this snapshot: ST-13/ST-15 still use the overbroad retaliation/remedy shorthand, and the shared CSS/table renderer is unchanged. Posted the same actionable findings as comments on open PRs #16, #18 and #19 so their active owners can incorporate them without N08 editing shared files. N08 makes no claim that those PRs are merged or that its requests have been adopted.
+
+### N08 tested patch handoff — 2026-11-08 UTC
+
+N08 prepared `research/n08_qa/proposed_integration.patch` **without editing shared files**. Tested in an isolated copy of main `fcc7d6b`: existing validator 108 checks/0 errors; browser 20 files/40 viewport loads/40 internal targets/0 broken/0 document overflow; Axe node violations reduced from 84 to **0**. The patch also qualifies Civil Code §1942.5 triggers/remedies and distinguishes license-before-effective-date from the recommended workflow. Proof: `research/n08_qa/PATCH_PROOF.md`, before/after browser JSON and validator logs. Active integration owners: apply/reconcile this patch only in your claimed scope, rebuild, re-run QA, then merge/deploy. N08 has not applied it to the shared tree and does not claim adoption. Direct sandbox browser access to github.io is blocked; live deployment was checked via Pages API and fetch_page instead.
+
+### N08 additional source-integrity handoff — 2026-11-08 UTC
+
+On integrated main `a613996`, F19 still cites HUD FMR (S43) for a Pages deployment fact; F20/F31 cite the Rent Ordinance (S20) for platform/coordination facts; shared DATE/validation-report date remain 2026-11-07 despite 2026-11-08 narrative checks. PR #18 addresses some project-record citations but reuses F37 for a different privacy finding than main. Details and official/project links are in `research/n08_qa/BROWSER_QA.md`. N08's tested patch still applies cleanly to current main generator files and does not touch flag/source registries; final owner should reconcile IDs and citations, rebuild and re-verify. No shared file was edited by N08.
+
+### N08 merge reconciliation — 2026-11-08 UTC
+
+Merging `origin/main` (`a613996`, PRs #15/#16/#17/#20) into the fixed N08 branch conflicted only in `COORDINATION.md`: main had repaired the old committed markers and added integration records, while N08 had appended its QA/handoff records to the older board. Resolution: keep main's complete repaired board verbatim, then append N08's complete section verbatim. No other session's record was discarded; no shared generator/site/data file was substantively edited by N08 (those files are the merged main versions). N08's QA deliverables remain confined to `research/n08_qa/`. The proposed patch is still a handoff, not an applied shared change.
+
+N08 push-procedure note: after the merge commit was created, the required `git pull --rebase origin arena/7152099a-rentincreasesf4` was attempted. It tried to flatten/replay the merged main history and conflicted in this file; it was **aborted immediately** with `git rebase --abort`, restoring the resolved merge commit without discarding either parent. The remote branch was verified still at the pre-merge N08 tip (`381311e`), so the resolved merge was pushed directly. This preserves both histories; no force-push or other-branch push was used.
+
+### N08 PR #21 merge and Pages deployment record — 2026-11-08 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #21 — independent N08 QA record, reusable read-only tests and tested patch handoff | **MERGED** 2026-11-08T22:59:38Z; merge commit `45ffbdb6c6689353724a04ab3cbac0b11313a814` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/21 ; `gh pr view 21`; `gh pr merge 21 --merge` |
+| CI | `validate` passed (7s) | https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42532906315/job/128890857533 |
+| GitHub Pages | `status: built`, commit `45ffbdb6c6689353724a04ab3cbac0b11313a814`, error null | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`; live index fetched successfully |
+| Local gate before merge | 108 checks, 0 errors; browser proposal proof: 20 files / 40 viewport loads / 40 internal targets / 0 broken / 0 document overflow; isolated patch reduced Axe node instances from 84 to 0 | `research/n08_qa/PATCH_PROOF.md`, before/after JSON and validator logs |
+
+**Scope limitation.** PR #21 publishes the QA record and tests; it does **not** apply `proposed_integration.patch` to the shared site. The active integration owner must still reconcile/apply the patch and the project-citation/date findings, rebuild, merge and verify deployment. Historical identifier exposure remains unresolved and flagged; current-tree cleanliness is not a history purge. N08-B is done. N08 did not take over another live session's shared scope.
+
+---
+
+## Session 2026-11-08 — `arena-44eac0b7` (T44-A independent 27-source verification & T44-B final post-N08 integration)
+
+Branch `arena/44eac0b7-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Read `COORDINATION.md`, `origin/main` (`8d51455`, after PRs #14, #15, #16, #17, #20, #21, #22 merged), and all `origin/arena/*` branches.
+
+| ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T44-A | Independent 2026-11-08 official-source line-by-line verification and gap audit across 27 local, state, federal, corporate/individual landlord practice, notice service, roommate/subtenant (§6.14), and tenant legal-review sources | `done` | `arena-44eac0b7` | `research/t44_audit/README.md` + append-only `VERIFICATION.md`, `REPO_REVIEW.md`, `research/flags.md`, `COORDINATION.md` | Direct `fetch_page` verification of 27 official SF.gov, CA Legislative Information, eCFR, HUD USER, SEC EDGAR, and SFTreasurer pages (`T44-V01` through `T44-V27` in `research/t44_audit/README.md`). | Confirmed F01–F44 and T03-F01–T03-F10; discovered `F45` (`S02` link labeled `575 Cap. Imp. Labor Rates` points to `574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf`). |
+| T44-B | Post-completion integration of `N08`'s tested patch (`research/n08_qa/proposed_integration.patch`), project-record citation repairs (`F19`, `F20`, `F31`), build-date update (`2026-11-08`), and Flag `F45` into the shared site generator; rebuild, validate, open PR to `main`, merge, and confirm GitHub Pages deployment | `done` | `arena-44eac0b7` | `scripts/build_site.py`, `scripts/site_pages.py`, `scripts/site_text.py`, `scripts/site_flags.py`, `scripts/site_sources.py`, `scripts/validate_site.py`, generated `index.html`, `pages/*.html`, `data/*.json`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `COORDINATION.md` | Full rebuild (`python3 scripts/build_site.py`) + validator (`python3 scripts/validate_site.py` -> 110 checks, 0 errors; 70 sources, 55 flags) + `python3 research/n08_qa/privacy_check.py` (0 fingerprint matches in current tree). | All 55 flags (`F01`–`F45`, `T03-F01`–`T03-F10`) published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`; do not block the merge. |
+
+**Summary of T44-B integration (preserving 100% of all merged sessions' work on `origin/main` at `8d51455`):**
+1. Applied `research/n08_qa/proposed_integration.patch` handed off by `arena-7152099a` (`N08` PR #21):
+   - Refined `LIC-05`, `ST-13`, `ST-15`, and `EXECUTIVE_SUMMARY.md` to state the exact `Cal. Civ. Code § 1942.5` enumerated tenantability triggers, non-default condition, once-per-12-months limit, subdivision `(g)` good-faith ground statement rule, fraud/oppression/malice requirement for `$100–$2,000` punitive damages, and the distinction between the statutory effective-date license requirement and the recommended conservative order (report -> confirm license -> serve notice -> effective date).
+   - Applied the tested CSS and table-wrapper accessibility fixes (`a{text-decoration:underline;text-underline-offset:.15em}`, `nav a{text-decoration:none}`, `tabindex="0" role="region" aria-label="... — scrollable table"`, `<th scope="col">`, `.tablewrap:focus-visible`, and mobile `nav{position:static}`).
+2. Repaired the remaining source-integrity and date consistency items identified in `research/n08_qa/BROWSER_QA.md`:
+   - Updated `DATE = "2026-11-08"` in `scripts/site_sources.py`.
+   - Repaired Flag `F19` source IDs from `["S43"]` (HUD FMR) to `["S68", "S69"]` (GitHub repository and Pages builds API project records).
+   - Repaired Flags `F20` and `F31` source IDs from `["S20"]` (SF Rent Ordinance) to `["S68"]` (GitHub repository project record).
+3. Added Flag `F45` (`SF.gov Current Rates page (S02) link labeled '575 Cap. Imp. Labor Rates' points to Form 574 PDF`) verified by direct `fetch_page` on 2026-11-08 in `T44-A`, and reconciled `arena-abb34cd1`'s pre-merge local flag table in `research/flags.md` with the canonical `F31`–`F45` registry.
 

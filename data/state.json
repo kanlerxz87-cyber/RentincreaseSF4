@@ -164,12 +164,12 @@
         {
           "id": "ST-13",
           "label": "Retaliation - 180-day bar",
-          "value": "Where the tenant is not in default and has requested repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent or reduce services within 180 days of that act",
+          "value": "Where the tenant is not in default in rent, rent/service changes are barred within 180 days of the latest applicable enumerated tenantability event: good-faith notice/oral complaint to the landlord, bed-bug notice, qualifying recorded agency complaint, related inspection/citation, proceeding or adverse decision",
           "status": "verified",
           "source_ids": [
             "S57"
           ],
-          "notes": "Separate from any Rent Board question; timing here is unverified.",
+          "notes": "Subdivision (a) may not be invoked more than once in 12 months. Subdivision (d) separately bars retaliation for organizing/lawful rights; (g) preserves lawful cause stated in good faith in the notice/pleading, subject to proof. Case timing is unverified.",
           "flag_id": "",
           "source_note": ""
         },
@@ -188,12 +188,12 @@
         {
           "id": "ST-15",
           "label": "Retaliation remedies",
-          "value": "Actual damages; punitive damages of $100-$2,000 per retaliatory act where there is fraud, oppression or malice; the court awards reasonable attorney's fees to the prevailing party on request",
+          "value": "Actual damages; $100-$2,000 punitive damages per retaliatory act only where fraud, oppression or malice is shown; in an action for damages for retaliatory eviction, reasonable attorney's fees to the prevailing party if requested upon initiation",
           "status": "verified",
           "source_ids": [
             "S57"
           ],
-          "notes": "In addition to any other statutory or decisional remedy.",
+          "notes": "Civil Code 1942.5(h)-(j); other statutory/decisional remedies are preserved. Not an automatic fee award for every rent-increase dispute.",
           "flag_id": "",
           "source_note": ""
         },
