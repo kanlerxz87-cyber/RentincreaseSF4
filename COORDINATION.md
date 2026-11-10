@@ -566,3 +566,20 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 **Verification and build gate.** `python3 scripts/build_site.py` and `python3 scripts/validate_site.py` on the merged tree: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows). `research/b87_notice_kit/validate_kit.py`: 19 checks, 0 errors. `research/n08_qa/privacy_check.py`: 0 fingerprint matches in the current tree (it does not clear historical exposure, F44). No raw tenant identifier is written to any file, commit message or PR text by this session.
 
 **PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.
+
+### T47 PR #32 merge and GitHub Pages deployment record — 2026-11-10 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #32 — T47 independent verification record (`research/reverify_2026-11-10/README.md`) and this coordination record | **MERGED** 2026-11-10T00:44:56Z, merge commit `50cb2a657b2e51e9306249555c0025aaf5eae888` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/32 ; `gh pr view 32 --json state,mergedAt,mergeCommit`; `gh pr merge 32 --merge` |
+| CI on the merged head | `validate` passed (7s) | https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42730545984/job/129547130881 |
+| Merged tree reproduced locally (clean worktree of `origin/main` at `50cb2a6`) | `build_site.py` + `validate_site.py`: **112 checks, 0 errors**; 72 sources (72 unique IDs), 57 flags (57 unique IDs) | `/tmp/mainwt` worktree run of both scripts; `data/validation_report.json` |
+| GitHub Pages deployment of `50cb2a6` | `status: built`, commit `50cb2a657b2e51e9306249555c0025aaf5eae888`, created 2026-11-10T00:44:57Z, duration 85,244 ms, error `null`; source `main` / `/` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`; `.../pages` |
+| Live verification after deploy | Dashboard shows **72** official sources and **57** flagged items; `pages/rates.html` shows RATE-12/RATE-13 with the S71 Legistar link and F46 | cache-busted `fetch_page` of `https://kanlerxz87-cyber.github.io/RentincreaseSF4/index.html` and `/pages/rates.html` |
+
+**Reconciliation with the other 2026-11-10 merges.** Between this session's claim and its merge, PR #29 (`arena-dcda2a4b`) and PRs #30/#31/#33 (`arena-dee8db41`, `arena-5c09f807`) landed. The combined tree now carries **S71** (Legistar File 261020) and **S72** (the 2026-11-09 notice as posted on S01/S02) plus **F46** (proposed cap, not enacted) and **F47** (the notice and the Legistar record do not align on retroactivity, duration or how the 10% is measured). These are complementary, not duplicates: S71/S72 are two different official records, F46 states the proposal, F47 records the inconsistency between them. Source and flag IDs are unique (verified by `validate_site.py` and by an explicit duplicate-ID count on the merged tree). No session's work was reverted, renumbered or discarded.
+
+**Follow-up for a future integration (not done here, to avoid touching another owner's scope):**
+1. The `arena-5c09f807` T46 section appears twice in this file; dedupe recommended.
+2. The **Local Law** page (`pages/local.html`) still does not carry a File 261020 row — the proposal is currently published on the dashboard card, Executive Summary, Rates (RATE-12/RATE-13), Calculations (CALC-08 caution) and Flagged for Review (F46/F47). Adding a LOC row is a small, safe improvement for a reader who goes straight to the local-rules page.
+3. Open PRs #18, #19 and #25 remain open and conflicting (see T47 note); their owners should rebase or close.
