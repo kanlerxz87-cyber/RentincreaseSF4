@@ -535,6 +535,14 @@ Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/
 - **Reasonable and normal increases:** Confirmed allowable rate is 1.6% (March 1, 2026 – February 28, 2027) calculated on base rent only without rounding up. Corporate and individual landlord practices, reasonable notice procedures, retaliation safeguards (Civil Code § 1942.5), and one-unit vs. both-units anti-discrimination principles are thoroughly analyzed with official links.
 - **Live site:** GitHub Pages live site is fully deployed at https://kanlerxz87-cyber.github.io/RentincreaseSF4/ .
 
+### T46 PR #31 merge and Pages deployment record — 2026-11-10 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #31 — T46: record PR #28 merge and confirm verified Pages deployment | **MERGED** 2026-11-10T00:42:16Z; merge commit `211ff3faec7b1b72985c4d2b492dae0d20da35a5` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/31 ; `gh pr view 31`; `gh pr merge 31 --merge` |
+| GitHub Pages | `status: built`, build `1355773506`, commit `211ff3faec7b1b72985c4d2b492dae0d20da35a5`, duration `20052` ms, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Pre-merge local gates | `scripts/validate_site.py`: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/n08_qa/privacy_check.py`: **0 fingerprint matches** across 98 scanned files in current tree | `data/validation_report.json` |
+
 ---
 
 ## Session 2026-11-10 — `arena-7dafb029` (T47: independent re-verification record; integration review of T45/PR #28)
