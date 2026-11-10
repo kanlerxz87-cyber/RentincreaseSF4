@@ -234,3 +234,17 @@ In `T44-B`, after `arena-7152099a` (`N08`), `arena-abb34cd1` (`T09`), and `arena
 2. **Accessibility improvements (`scripts/build_site.py`, `scripts/site_text.py`):** Underlined inline links (`a{color:var(--accent2);text-decoration:underline;text-underline-offset:.15em}`) while keeping nav links un-underlined, added `tabindex="0" role="region" aria-label="... — scrollable table"` and `.tablewrap:focus-visible` to all horizontally scrollable table wrappers, added `<th scope="col">`, and set `@media(max-width:700px){nav{position:static}}` (verified by `N08` in `research/n08_qa/PATCH_PROOF.md` to reduce automated Axe violations from 84 to **0**).
 3. **Source-citation and build-date repairs (`scripts/site_flags.py`, `scripts/site_sources.py`):** Updated `DATE` to `"2026-11-08"`; repaired `F19` (from `S43` HUD FMR to project records `S68`, `S69`) and `F20`/`F31` (from `S20` SF Rent Ordinance to project record `S68`); and added Flag `F45` documenting that on `S02` (`https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit`), the hyperlink labeled `575 Cap. Imp. Labor Rates` points to `574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf` (Form 574 Imputed Interest instead of Form 575).
 
+
+## T45 — focused re-verification, 2026-11-10
+
+This is a focused update, not a claim that every historical source was rechecked today. Each source retains its individual verification date.
+
+| Source | Directly rechecked and outcome |
+| --- | --- |
+| [S01](https://www.sf.gov/learn-about-rent-increases-san-francisco), [S02](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) | The 1.6% rate remains in effect March 1, 2026 through February 28, 2027; new November 9 notice identifies proposed File 261020. |
+| [S05](https://www.sf.gov/information--banked-rent-increases) | November 9 notice says proposed 10% combined banked/capital improvement cap, not enacted and subject to change; if enacted as currently proposed, applies to banked notices and capital-improvement petitions on or after September 15, 2026. Existing banking and notice explanation retained. |
+| [S71](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) | Version 1 pending committee action, no final action or enactment; three-year proposal. F46 records uncertainty and case impact is blank. |
+| [S06](https://www.sf.gov/learn-about-san-francisco-rental-laws), [S07](https://www.sf.gov/rent-board-housing-inventory), [S08](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory), [S53](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing) | Rechecked coverage, reporting, effective-date license requirement, and noncompliance wording; no new case-specific license or coverage facts established. |
+| [S56](https://www.sf.gov/rent-board-fee) | Rechecked separate fee and deadlines; $59 per dwelling and $29.50 per guest for 2026–27 remain published. |
+
+Regression: the conditional Unit 2 13.1% calculation is arithmetic only, not a finding or recommendation; it now explicitly points to F46. 90-day notice is not proof of lawfulness. Earlier source and privacy flags remain open.

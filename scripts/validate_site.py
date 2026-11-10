@@ -24,7 +24,7 @@ OFFICIAL_DOMAINS = {
     "sf.gov", "media.api.sf.gov", "sfplanninggis.org", "default.sfplanning.org",
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
-    "sfrb.org", "sftreasurer.org", "github.com",
+    "sfrb.org", "sftreasurer.org", "github.com", "sfgov.legistar.com",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -274,6 +274,10 @@ def main():
     check("executive summary page renders the narrative, not just tables",
           summary_html.count("<h2>") >= 10 and "<ol>" in summary_html and "<h2>FOREFRONT" in summary_html,
           "{} headings".format(summary_html.count("<h2>")))
+    check("pending cap is distinguished from current law and calculation is cautioned",
+          "File 261020" in summary_html and "not current law" in summary_html.lower()
+          and "F46" in flagged_html and "F46" in (PAGES / "calculations.html").read_text(encoding="utf-8")
+          and "S71" in source_map and official_domain(source_map["S71"]["url"]))
     check("executive summary page has no unrendered markdown",
           not re.search(r"<p>\s*#|\*\*|\]\(", summary_html))
     check("executive summary states the fee/licence distinction and retaliation rule",
