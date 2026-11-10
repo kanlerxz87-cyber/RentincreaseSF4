@@ -476,3 +476,11 @@ Branch `arena/44eac0b7-rentincreasesf4` (fixed by Arena; replaces `session-<id>/
 | GitHub Pages | `status: built`, build `1352721128`, commit `acb4afbba72cabab5f392d077d4cb863007d451e`, duration `18500` ms, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
 | Pre-merge local gates | `scripts/validate_site.py`: **110 checks, 0 errors** (70 sources, 55 flags, 296 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/n08_qa/privacy_check.py`: **0 fingerprint matches** across 98 scanned files in current tree | `data/validation_report.json` |
 
+
+## Session 2026-11-10 — `arena-dee8db41` (T45 fresh verification + File 261020 proposed-cap update + final integration)
+
+Branch `arena/dee8db41-rentincreasesf4` (fixed by Arena; exclusive file scope below). Read `COORDINATION.md`, `origin/main` (`73c88f1`, after PR #27), and open PRs #18, #19, #25 (all stale/conflicting, superseded by PR #27 on `main`).
+
+| ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T45 | 2026-11-10 fresh line-by-line re-verification of load-bearing official pages; publish new File 261020 proposed 10% banked/capital-improvement cap notice (posted 2026-11-09, not enacted) as new source S71 + flag F46; update build date to 2026-11-10; rebuild, validate, PR to `main`, merge, confirm GitHub Pages; close stale PRs #18/#19/#25 as superseded | `in progress` | `arena-dee8db41` (claimed 2026-11-10 UTC) | `COORDINATION.md`, `scripts/site_sources.py`, `scripts/site_flags.py`, `scripts/site_pages.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `index.html`, `pages/`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`, `research/flags.md` | Direct `fetch_page` 2026-11-10: S01, S02, S05, S06, S07, S08, S53, S56 (rent-board-fee), Legistar File 261020. All published figures held (1.6%, $59.00 fee, license rule, 24-month banking, 30/90-day notice). New: File 261020 notice on S01/S02/S05 + Legistar status Pending Committee Action, introduced 9/15/2026, no enactment. | New flag F46 (proposed, not enacted; legal effect blank). Stale PRs #18/#19/#25 to be closed as superseded by PR #27 + T45. Flagged items do not block. |
