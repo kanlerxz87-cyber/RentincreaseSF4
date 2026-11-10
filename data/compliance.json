@@ -183,8 +183,8 @@
             "S05",
             "S35"
           ],
-          "notes": "A correctly banked total can exceed 10%.",
-          "flag_id": "",
+          "notes": "The 90-day notice rule is not permission to impose an increase: pending File 261020 could affect banked increases (F46).",
+          "flag_id": "F46",
           "source_note": ""
         },
         {

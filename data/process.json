@@ -380,8 +380,8 @@
             "S05",
             "S35"
           ],
-          "notes": "No banked percentage is asserted for either unit.",
-          "flag_id": "",
+          "notes": "No banked percentage is asserted for either unit. Proposed File 261020 could limit banked increases; see F46 before relying on this timing rule.",
+          "flag_id": "F46",
           "source_note": ""
         },
         {

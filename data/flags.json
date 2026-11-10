@@ -567,20 +567,18 @@
   },
   {
     "id": "F46",
-    "title": "Pending legislation File No. 261020 would cap banked plus capital improvement increases at 10% per year — not yet law",
-    "detail": "SF.gov posted a notice on 2026-11-09 stating that the Board of Supervisors is considering File No. 261020, which would temporarily limit the combined amount of banked rent increases and capital improvement rent increases on rent-controlled units to 10% per year. The Legistar record fetched 2026-11-10 shows the ordinance was introduced 9/15/2026, is in the Land Use and Transportation Committee, and has status 'Pending Committee Action' with no final action, no enactment date and no enactment number. It is therefore NOT law on 2026-11-10 and creates no current limit; the 1.6% annual rate and the existing banked-increase rules are unchanged. A conditional banked-increase calculation is published for Unit 2 only as flagged arithmetic (F30) and does not assume the proposed cap. Re-check the status before serving any banked or capital improvement notice.",
+    "title": "Pending legislation could affect banked and capital-improvement increases",
+    "detail": "On November 9, 2026 the Rent Board posted a notice about Board File 261020. The proposal would temporarily limit combined banked and capital-improvement increases to 10% per year; if enacted as currently proposed, it would apply to banked increases noticed on or after September 15, 2026 and capital-improvement increases based on petitions filed on or after that date. Legistar showed Pending Committee Action and no enactment on November 10. This is not current law and may change. A 90-day notice does not establish that an increase is lawful. Check the current status and seek advice before relying on a banked calculation or serving notice; its effect on either unit is unverified.",
     "source_ids": [
-      "S71",
-      "S72",
-      "S01",
-      "S02"
+      "S05",
+      "S71"
     ],
     "status": "needs review"
   },
   {
     "id": "F47",
-    "title": "The proposed cap notice and the Legistar record do not align on retroactivity, duration and title",
-    "detail": "The Rent Board notice says the proposal would apply to banked rent increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026 - a start date earlier than the November 9, 2026 posting and earlier than any enactment. The notice also calls the measure temporary, while the Legistar title says the cap applies 'for the next three years'. Neither page states whether an increase noticed between 9/15/2026 and enactment would be affected, how the 10% is measured against the annual allowable increase, or how it interacts with an increase already in effect. No official page resolves these points, so nothing is inferred here and no case-specific banked or capital improvement amount is asserted.",
+    "title": "The proposed-cap notice and the Legistar record do not align on retroactivity, duration or how the 10% is measured",
+    "detail": "Verified 2026-11-10 from two official pages about the same proposal. (1) Retroactivity: the November 9, 2026 notice says the proposal would apply to banked increases noticed on or after September 15, 2026, a date earlier than the notice itself and earlier than any possible enactment; the Legistar record shows the ordinance was only introduced on 9/15/2026. Neither page says whether an increase noticed between 9/15/2026 and enactment would be caught. (2) Duration: the notice calls the measure temporary, while the Legistar title says the cap applies 'for the next three years'. (3) Measurement: no page states how the 10% is measured, how it interacts with the separate annual allowable increase, or how it applies to a banked increase already imposed. Nothing is inferred here, and no case-specific banked or capital-improvement amount is asserted for either unit.",
     "source_ids": [
       "S71",
       "S72"

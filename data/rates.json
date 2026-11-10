@@ -1,6 +1,6 @@
 {
   "title": "Official Allowable Increase Rates",
-  "description": "SF Rent Board rates re-checked 2026-11-10, historical context, and the proposed (not enacted) 10% cap on combined banked and capital improvement increases.",
+  "description": "SF Rent Board rates effective on 2026-11-10 and historical context.",
   "sections": [
     {
       "title": "Current and recent rates",
@@ -167,76 +167,91 @@
         },
         {
           "id": "RATE-12",
-          "label": "3/1/27 - 2/28/28 rate",
+          "label": "Proposed banked and capital-improvement cap, File 261020",
+          "value": "Not enacted as of November 10, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
+          "status": "verified",
+          "source_ids": [
+            "S05",
+            "S71"
+          ],
+          "notes": "If enacted as currently proposed, applicability would include banked notices and capital-improvement petitions from September 15, 2026. Check current status; see F46.",
+          "flag_id": "F46",
+          "source_note": ""
+        },
+        {
+          "id": "RATE-13",
+          "label": "Effect of proposed cap on either unit",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S05",
+            "S71"
+          ],
+          "notes": "Not enacted and case-specific histories are unverified; do not treat the proposal as current law.",
+          "flag_id": "F46",
+          "source_note": ""
+        },
+        {
+          "id": "RATE-14",
+          "label": "Exact Legistar record at fetch (2026-11-10)",
+          "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
+          "status": "verified",
+          "source_ids": [
+            "S71"
+          ],
+          "notes": "History rows are procedural only: 9/15/2026 assigned under 30-day rule; 9/18/2026 and 9/30/2026 referred to department; 10/7/2026 Youth Commission response received.",
+          "flag_id": "F47",
+          "source_note": ""
+        },
+        {
+          "id": "RATE-15",
+          "label": "Proposed applicability date vs posting date",
+          "value": "Notice posted November 9, 2026 says the proposal would apply to banked increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026",
+          "status": "verified",
+          "source_ids": [
+            "S72",
+            "S71"
+          ],
+          "notes": "The applicability date precedes both the posting date and the 9/15/2026 introduction. Nothing official says how a notice served between 9/15/2026 and enactment would be treated.",
+          "flag_id": "F47",
+          "source_note": ""
+        },
+        {
+          "id": "RATE-16",
+          "label": "Duration wording disagrees",
+          "value": "Notice: 'temporarily limit'. Legistar title: 'for the next three years'",
+          "status": "verified",
+          "source_ids": [
+            "S72",
+            "S71"
+          ],
+          "notes": "Recorded as an inconsistency; neither wording is preferred here.",
+          "flag_id": "F47",
+          "source_note": ""
+        },
+        {
+          "id": "RATE-17",
+          "label": "Next-year rate (3/1/27 - 2/28/28)",
           "value": "",
           "status": "needs review",
           "source_ids": [
             "S02",
             "S01"
           ],
-          "notes": "No next-year rate was published on either official page when re-checked 2026-11-10; no estimate is substituted. An increase effective on or after 3/1/27 needs the published rate.",
+          "notes": "Still not published on either official page when re-checked 2026-11-10; blank rather than estimated.",
           "flag_id": "F27",
           "source_note": ""
-        }
-      ]
-    },
-    {
-      "title": "Pending legislation - proposed, NOT law (checked 2026-11-10)",
-      "columns": [
-        "Item",
-        "Value / finding",
-        "Status",
-        "Official source(s)",
-        "Notes / flag"
-      ],
-      "rows": [
-        {
-          "id": "RATE-13",
-          "label": "10% proposed cap on banked + capital improvement increases",
-          "value": "Proposed: combined banked and capital improvement increases on rent-controlled units limited to 10% per year for the next three years",
-          "status": "verified",
-          "source_ids": [
-            "S72",
-            "S71"
-          ],
-          "notes": "SF.gov notice posted November 9, 2026 on the rent-increase page (S01) and the Current Rates page (S02).",
-          "flag_id": "F46",
-          "source_note": ""
         },
         {
-          "id": "RATE-14",
-          "label": "Current legal status of File No. 261020",
-          "value": "'Pending Committee Action'; Land Use and Transportation Committee; no final action, no enactment date, no enactment number",
-          "status": "verified",
-          "source_ids": [
-            "S71"
-          ],
-          "notes": "Introduced 9/15/2026; referred to department 9/18/2026 and 9/30/2026; Youth Commission response received 10/7/2026. Not enacted, so it creates no limit today.",
-          "flag_id": "F46",
-          "source_note": ""
-        },
-        {
-          "id": "RATE-15",
-          "label": "Proposed applicability date",
-          "value": "If enacted as proposed: banked increases noticed on or after September 15, 2026, and capital improvement increases based on petitions filed on or after September 15, 2026",
-          "status": "verified",
-          "source_ids": [
-            "S72"
-          ],
-          "notes": "SF.gov states 'This legislation has not been enacted and is subject to change.' How a notice served before enactment would be treated is not stated.",
-          "flag_id": "F47",
-          "source_note": ""
-        },
-        {
-          "id": "RATE-16",
-          "label": "Effect on this case",
+          "id": "RATE-18",
+          "label": "How the proposed 10% is measured",
           "value": "",
           "status": "needs review",
           "source_ids": [
             "S71",
             "S72"
           ],
-          "notes": "No banked or capital improvement increase is asserted for either unit, so the proposal changes no published figure. Re-check the status before serving any banked or capital improvement notice.",
+          "notes": "No official page states whether the 10% includes or excludes the separate annual allowable increase, or how it treats a banked increase already imposed; blank, not inferred.",
           "flag_id": "F47",
           "source_note": ""
         }
