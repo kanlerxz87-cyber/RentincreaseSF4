@@ -574,5 +574,15 @@
       "S71"
     ],
     "status": "needs review"
+  },
+  {
+    "id": "F47",
+    "title": "The proposed-cap notice and the Legistar record do not align on retroactivity, duration or how the 10% is measured",
+    "detail": "Verified 2026-11-10 from two official pages about the same proposal. (1) Retroactivity: the November 9, 2026 notice says the proposal would apply to banked increases noticed on or after September 15, 2026, a date earlier than the notice itself and earlier than any possible enactment; the Legistar record shows the ordinance was only introduced on 9/15/2026. Neither page says whether an increase noticed between 9/15/2026 and enactment would be caught. (2) Duration: the notice calls the measure temporary, while the Legistar title says the cap applies 'for the next three years'. (3) Measurement: no page states how the 10% is measured, how it interacts with the separate annual allowable increase, or how it applies to a banked increase already imposed. Nothing is inferred here, and no case-specific banked or capital-improvement amount is asserted for either unit.",
+    "source_ids": [
+      "S71",
+      "S72"
+    ],
+    "status": "needs review"
   }
 ]

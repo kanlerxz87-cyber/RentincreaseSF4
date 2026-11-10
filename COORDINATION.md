@@ -518,25 +518,33 @@ Correction to the claim: PRs #18, #19 and #25 were described as stale and supers
 - [Pages build and deployment](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42730018559) succeeded; Pages latest-build API reported `built` for the same commit at 00:40:19 UTC. Live URL: https://kanlerxz87-cyber.github.io/RentincreaseSF4/.
 - Remaining caution: source-validation checks establish structural consistency, not legal conclusions; owner-supplied case facts are not official records, and privacy exposure in public history remains unresolved (F44).
 
+### T-A4B merge-conflict reconciliation with session `arena-dee8db41` (T45) — 2026-11-10
+
+While PR #29 was open, session `arena/dee8db41` merged **PR #28** and **PR #30** into `main` (tip `1bf2911`), covering the *same* new development independently (File No. 261020 + the November 9, 2026 notice). It claimed `F46`, `RATE-12`, `RATE-13` and `SUM-14`, and `sfgov.legistar.com` in the validator domain list.
+
+**This is a duplicate-work collision, logged as required.** Per the shared-board rule (never discard another session's work), `main`'s versions were taken as the base (`git checkout --theirs` for `scripts/`, `COORDINATION.md`, `VERIFICATION.md`) and this session **re-applied only its net-new findings on top**, renumbered so no ID is duplicated:
+
+| Kept from T45 (`main`) | Re-applied from T-A4B after the ID renumber |
+| --- | --- |
+| `F46` (proposed cap could affect banked/capital-improvement increases) | `F47` (retroactivity start date vs posting/introduction date; "temporary" vs "for the next three years"; no published method for measuring the 10%) |
+| `RATE-12` (proposed cap, not enacted), `RATE-13` (effect on either unit — left blank) | `RATE-14` (exact Legistar field record), `RATE-15` (proposed applicability date vs posting date), `RATE-16` (duration wording), `RATE-17` (next-year rate still blank), `RATE-18` (how the 10% is measured — blank) |
+| `SUM-14` (pending banked-increase legislation) | `REQ-25`, `LOC-25` |
+| `S71` (Legistar File 261020) | `S71` statement extended with the field-by-field fetch record; new `S72` with the notice's exact quoted wording |
+| T45's executive-summary paragraph "Pending legislation — not current law" | An added analysis paragraph: what the proposal does and does not change for these two units (annual 1.6% outside it; stacked banked increases are its target; no banked figure asserted), the two unanswered questions, and the cheap dated-record step |
+
+No T45 content was removed or reworded to change meaning. No other session's records were discarded. Post-merge gates: `build_site.py` + `validate_site.py` → **112 checks, 0 errors**; broken internal links **0**; privacy scan **0** current-tree identifier matches across 98 files. This supersedes the "113 checks" figure quoted in the PR body; the count changed because the two branches' validator guards were reconciled, not because any check was dropped.
 ---
-
 ## Session 2026-11-10 — `arena-5c09f807` (T46 final compliance audit, verification & PR/deployment confirmation)
-
 Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Working tree based on `main` at `1bf2911` (after PR #28 and PR #30).
-
 | ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
 | T46 | Final compliance verification across all prompt requirements; line-by-line verification of official source links, rate calculations, privacy boundary, and forefront executive summary; confirm site build and GitHub Pages deployment | `done` | `arena-5c09f807` | `COORDINATION.md`, `README.md` | `python3 scripts/validate_site.py` (111 checks, 0 errors; 71 sources, 56 flags, 299 rows); `python3 research/b87_notice_kit/validate_kit.py` (19 checks, 0 errors); `python3 research/n08_qa/privacy_check.py` (0 fingerprint matches in current tree); `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages` (status built, URL https://kanlerxz87-cyber.github.io/RentincreaseSF4/). | Confirmed flags F01–F46 and T03-F01–T03-F10 remain published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`; do not block the merge. |
-
 ### T46 verification and publication record — 2026-11-10 UTC
-
 - **Executive summary forefront:** Confirmed that the executive summary forefront explicitly answers the individual owner's question ("Yes, individual owners of 1–9 residential units must report to the Housing Inventory and obtain a Rent Increase License before imposing annual/banked increases under SF Admin Code §§ 37.3(a)(1) and 37.15"). Step-by-step process with verified links is featured prominently.
 - **Privacy boundary:** Confirmed all personal names are anonymized with placeholders (`Tenant A` through `Tenant F`), dates (`February 1, 2025`, `April 1, 2026`, `June 1, 2019`) and amounts (`$3,995`, `$3,150`) are preserved exactly, and no exact street address is published. Zero raw tenant identifiers in the current tree.
 - **Reasonable and normal increases:** Confirmed allowable rate is 1.6% (March 1, 2026 – February 28, 2027) calculated on base rent only without rounding up. Corporate and individual landlord practices, reasonable notice procedures, retaliation safeguards (Civil Code § 1942.5), and one-unit vs. both-units anti-discrimination principles are thoroughly analyzed with official links.
 - **Live site:** GitHub Pages live site is fully deployed at https://kanlerxz87-cyber.github.io/RentincreaseSF4/ .
-
 ### T46 PR #31 merge and Pages deployment record — 2026-11-10 UTC
-
 | Item | Verified result | Evidence |
 | --- | --- | --- |
 | PR #31 — T46: record PR #28 merge and confirm verified Pages deployment | **MERGED** 2026-11-10T00:42:16Z; merge commit `211ff3faec7b1b72985c4d2b492dae0d20da35a5` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/31 ; `gh pr view 31`; `gh pr merge 31 --merge` |
