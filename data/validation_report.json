@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "status": "failed",
+  "status": "passed",
   "checks": [
     {
       "name": "canonical source map matches site data",
@@ -444,8 +444,8 @@
     },
     {
       "name": "no committed merge-conflict markers in public files",
-      "ok": false,
-      "detail": "COORDINATION.md"
+      "ok": true,
+      "detail": ""
     },
     {
       "name": "numeric flag IDs are unique and contiguous",
@@ -558,9 +558,7 @@
       "detail": ""
     }
   ],
-  "errors": [
-    "no committed merge-conflict markers in public files: COORDINATION.md"
-  ],
+  "errors": [],
   "summary": {
     "sources": 71,
     "pages": 19,
@@ -569,6 +567,6 @@
     "needs_review_rows": 35,
     "flags": 56,
     "checks": 111,
-    "errors": 1
+    "errors": 0
   }
 }

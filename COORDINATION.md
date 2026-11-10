@@ -499,7 +499,6 @@ Branch `arena/dee8db41-rentincreasesf4` (fixed by Arena; exclusive file scope be
 
 Correction to the claim: PRs #18, #19 and #25 were described as stale and superseded before their full contents were compared. PR #25 in particular describes distinct audit, UI and legal-precision work not demonstrated to be incorporated in main, and #18 discusses an independent verification gap; they are **left open**, not closed or merged, to preserve that work. Their conflicts and outstanding differences remain a follow-up for a future integration. This T45 task is **done**, with the PR and Pages evidence to be recorded separately. No merge conflict occurred in this session.
 
-<<<<<<< HEAD
 ---
 
 ## Session 2026-11-10 — `arena-7dafb029` (independent re-verification; integration of the concurrent T45 update)
