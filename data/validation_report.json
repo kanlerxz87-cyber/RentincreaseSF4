@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-10",
   "status": "passed",
   "checks": [
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "70 official sources"
+      "detail": "72 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "55 flagged items"
+      "detail": "57 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -35,12 +35,12 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "296 rows checked; "
+      "detail": "303 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "34 needs-review rows"
+      "detail": "36 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -450,7 +450,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "45 numeric flags"
+      "detail": "47 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -480,7 +480,7 @@
     {
       "name": "executive summary page renders the narrative, not just tables",
       "ok": true,
-      "detail": "13 headings"
+      "detail": "14 headings"
     },
     {
       "name": "executive summary page has no unrendered markdown",
@@ -551,17 +551,32 @@
       "name": "project-record flags cite project records and S02 link defect is flagged",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "pending legislation is published and never presented as enacted law",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "next-year rate stays blank and flagged until officially published",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "2026-11-10 re-check date and new sources are recorded",
+      "ok": true,
+      "detail": ""
     }
   ],
   "errors": [],
   "summary": {
-    "sources": 70,
+    "sources": 72,
     "pages": 19,
     "data_files": 21,
-    "rows_verified": 296,
-    "needs_review_rows": 34,
-    "flags": 55,
-    "checks": 110,
+    "rows_verified": 303,
+    "needs_review_rows": 36,
+    "flags": 57,
+    "checks": 113,
     "errors": 0
   }
 }

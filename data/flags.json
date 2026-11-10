@@ -564,5 +564,27 @@
       "S02"
     ],
     "status": "needs review"
+  },
+  {
+    "id": "F46",
+    "title": "Pending legislation File No. 261020 would cap banked plus capital improvement increases at 10% per year — not yet law",
+    "detail": "SF.gov posted a notice on 2026-11-09 stating that the Board of Supervisors is considering File No. 261020, which would temporarily limit the combined amount of banked rent increases and capital improvement rent increases on rent-controlled units to 10% per year. The Legistar record fetched 2026-11-10 shows the ordinance was introduced 9/15/2026, is in the Land Use and Transportation Committee, and has status 'Pending Committee Action' with no final action, no enactment date and no enactment number. It is therefore NOT law on 2026-11-10 and creates no current limit; the 1.6% annual rate and the existing banked-increase rules are unchanged. A conditional banked-increase calculation is published for Unit 2 only as flagged arithmetic (F30) and does not assume the proposed cap. Re-check the status before serving any banked or capital improvement notice.",
+    "source_ids": [
+      "S71",
+      "S72",
+      "S01",
+      "S02"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F47",
+    "title": "The proposed cap notice and the Legistar record do not align on retroactivity, duration and title",
+    "detail": "The Rent Board notice says the proposal would apply to banked rent increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026 - a start date earlier than the November 9, 2026 posting and earlier than any enactment. The notice also calls the measure temporary, while the Legistar title says the cap applies 'for the next three years'. Neither page states whether an increase noticed between 9/15/2026 and enactment would be affected, how the 10% is measured against the annual allowable increase, or how it interacts with an increase already in effect. No official page resolves these points, so nothing is inferred here and no case-specific banked or capital improvement amount is asserted.",
+    "source_ids": [
+      "S71",
+      "S72"
+    ],
+    "status": "needs review"
   }
 ]

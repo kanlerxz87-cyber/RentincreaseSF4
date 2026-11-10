@@ -160,12 +160,13 @@ PAGES = {
                 row("REQ-23", "Ordinance-level license citations", "Published - Sec. 37.3(a)(1), Sec. 37.15 and Form 571", "verified", ["S21", "S53", "S04"], "Licensing condition is in the ordinance itself."),
                 row("REQ-24", "Independent re-verification of the combined data", "Done 2026-11-08 - official pages for the fee, retaliation, exemption and coverage rules re-fetched, sources expanded, validator re-run", "verified", ["S01", "S07", "S53", "S02", "S56", "S57", "S60"], "Recorded in VERIFICATION.md and COORDINATION.md; the source count is computed, not hard-coded."),
                 row("REQ-21", "Conservative compliance checklist capable of tenant-lawyer review", "Published", "analysis", ["S01", "S07", "S35", "S42"], "No attorney approval or guarantee."),
+                row("REQ-25", "Re-check for pending legislation before serving a banked or capital improvement notice", "Checked 2026-11-10 - File No. 261020 is 'Pending Committee Action' and is not law; the 1.6% annual rate is unchanged", "verified", ["S71", "S72", "S01"], "Published on the Rates page as RATE-13 to RATE-16 and flagged F46/F47. Re-check the Legistar record before relying on this status."),
             ]},
         ],
     },
     "rates": {
         "title": "Official Allowable Increase Rates",
-        "description": "SF Rent Board rates effective on 2026-11-06 and historical context.",
+        "description": "SF Rent Board rates re-checked 2026-11-10, historical context, and the proposed (not enacted) 10% cap on combined banked and capital improvement increases.",
         "sections": [
             {"title": "Current and recent rates", "columns": COLUMNS, "rows": [
                 row("RATE-01", "3/1/26 - 2/28/27", "1.6%", "verified", ["S01", "S02", "S03", "S04"], "Current local rate."),
@@ -181,6 +182,13 @@ PAGES = {
                 row("RATE-09", "Local formula", "60% of Bay Area CPI-U increase; max 7%", "verified", ["S01", "S21"], "SF Admin Code 37.3."),
                 row("RATE-10", "Temporary CPI methodology", "", "needs review", ["S28", "S01"], "Jan. 13, 2026 minutes adopted Version 1 temporary methodology.", "F06"),
                 row("RATE-11", "Calculation", "Base rent x rate; no rounding up", "verified", ["S01", "S03", "S04"], "Temporary passthroughs excluded."),
+                row("RATE-12", "3/1/27 - 2/28/28 rate", "", "needs review", ["S02", "S01"], "No next-year rate was published on either official page when re-checked 2026-11-10; no estimate is substituted. An increase effective on or after 3/1/27 needs the published rate.", "F27"),
+            ]},
+            {"title": "Pending legislation - proposed, NOT law (checked 2026-11-10)", "columns": COLUMNS, "rows": [
+                row("RATE-13", "10% proposed cap on banked + capital improvement increases", "Proposed: combined banked and capital improvement increases on rent-controlled units limited to 10% per year for the next three years", "verified", ["S72", "S71"], "SF.gov notice posted November 9, 2026 on the rent-increase page (S01) and the Current Rates page (S02).", "F46"),
+                row("RATE-14", "Current legal status of File No. 261020", "'Pending Committee Action'; Land Use and Transportation Committee; no final action, no enactment date, no enactment number", "verified", ["S71"], "Introduced 9/15/2026; referred to department 9/18/2026 and 9/30/2026; Youth Commission response received 10/7/2026. Not enacted, so it creates no limit today.", "F46"),
+                row("RATE-15", "Proposed applicability date", "If enacted as proposed: banked increases noticed on or after September 15, 2026, and capital improvement increases based on petitions filed on or after September 15, 2026", "verified", ["S72"], "SF.gov states 'This legislation has not been enacted and is subject to change.' How a notice served before enactment would be treated is not stated.", "F47"),
+                row("RATE-16", "Effect on this case", "", "needs review", ["S71", "S72"], "No banked or capital improvement increase is asserted for either unit, so the proposal changes no published figure. Re-check the status before serving any banked or capital improvement notice.", "F47"),
             ]},
         ],
     },
@@ -197,6 +205,7 @@ PAGES = {
                 row("LOC-06", "Housing Inventory", "Annual report by March 1; license auto-generated for non-owner-occupied units", "verified", ["S07"], "No monetary penalty, but notice unenforceable without license."),
                 row("LOC-07", "Banking", "24 full months; add percentages; no compounding/prorating; license", "verified", ["S05"], "Notice must state banked portion."),
                 row("LOC-08", "Additional occupants", "No extra rent merely because new/additional roommate moved in", "verified", ["S01", "S17", "S18"], "Even if lease says otherwise."),
+                row("LOC-25", "Pending legislation (not law)", "File No. 261020 would cap combined banked plus capital improvement increases at 10% per year for three years; status 'Pending Committee Action' on 2026-11-10", "verified", ["S71", "S72"], "Proposed only - no current effect. See Rates page RATE-13 to RATE-16 and flags F46/F47.", "F46"),
                 row("LOC-09", "Petition grounds", "Capital improvement, O&M, comparable rents, Proposition I, utility, 1.21, bond/water passthroughs", "verified", ["S09"], "Petition/worksheet before notice."),
                 row("LOC-10", "Section 6.14", "Unlimited increase only when last original occupant vacates plus timely 6.14 notice", "verified", ["S15", "S16"], "60 days generally reasonable."),
                 row("LOC-11", "Costa-Hawkins local view", "Co-tenants not subject; qualifying post-1995 subtenant/assignee only", "verified", ["S15", "S16"], "Legal advice strongly encouraged."),

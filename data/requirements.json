@@ -320,6 +320,20 @@
           "notes": "No attorney approval or guarantee.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "REQ-25",
+          "label": "Re-check for pending legislation before serving a banked or capital improvement notice",
+          "value": "Checked 2026-11-10 - File No. 261020 is 'Pending Committee Action' and is not law; the 1.6% annual rate is unchanged",
+          "status": "verified",
+          "source_ids": [
+            "S71",
+            "S72",
+            "S01"
+          ],
+          "notes": "Published on the Rates page as RATE-13 to RATE-16 and flagged F46/F47. Re-check the Legistar record before relying on this status.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

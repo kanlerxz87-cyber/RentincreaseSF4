@@ -115,6 +115,19 @@
           "source_note": ""
         },
         {
+          "id": "LOC-25",
+          "label": "Pending legislation (not law)",
+          "value": "File No. 261020 would cap combined banked plus capital improvement increases at 10% per year for three years; status 'Pending Committee Action' on 2026-11-10",
+          "status": "verified",
+          "source_ids": [
+            "S71",
+            "S72"
+          ],
+          "notes": "Proposed only - no current effect. See Rates page RATE-13 to RATE-16 and flags F46/F47.",
+          "flag_id": "F46",
+          "source_note": ""
+        },
+        {
           "id": "LOC-09",
           "label": "Petition grounds",
           "value": "Capital improvement, O&M, comparable rents, Proposition I, utility, 1.21, bond/water passthroughs",

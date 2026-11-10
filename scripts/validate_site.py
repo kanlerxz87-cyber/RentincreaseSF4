@@ -25,6 +25,10 @@ OFFICIAL_DOMAINS = {
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
     "sfrb.org", "sftreasurer.org", "github.com",
+    # Official City and County of San Francisco Board of Supervisors legislative
+    # record (Legistar/Granicus host). Exact host only, so no other city's
+    # legistar instance can ever satisfy this check.
+    "sfgov.legistar.com",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -332,6 +336,20 @@ def main():
     check("project-record flags cite project records and S02 link defect is flagged",
           all(f["source_ids"] != ["S43"] and f["source_ids"] != ["S20"] for f in flags if f["id"] in ("F19", "F20", "F31"))
           and any(f["id"] == "F45" and "S02" in f["source_ids"] for f in flags))
+
+    pend = [r for pg in D.PAGES.values() for sec in pg["sections"] for r in sec["rows"] if r["id"].startswith("RATE-1")]
+    check("pending legislation is published and never presented as enacted law",
+          any(r["id"] == "RATE-14" and "Pending Committee Action" in r["value"] for r in pend)
+          and any(r["id"] == "RATE-13" and "Proposed" in r["value"] for r in pend)
+          and "not been enacted" in D.SOURCES["S72"]["statement"]
+          and any(f["id"] == "F46" and "not yet law" in f["title"] for f in flags))
+    check("next-year rate stays blank and flagged until officially published",
+          any(r["id"] == "RATE-12" and r["value"] == "" and r["status"] == "needs review" for r in pend)
+          and any(f["id"] == "F27" and f["status"] == "needs review" for f in flags))
+    check("2026-11-10 re-check date and new sources are recorded",
+          D.DATE == "2026-11-10" and "2026-11-10" in D.SOURCES["S71"]["statement"]
+          and "2026-11-10" in D.SOURCES["S72"]["statement"]
+          and official_domain(D.SOURCES["S71"]["url"]))
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {
