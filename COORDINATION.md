@@ -277,7 +277,15 @@ Branch `arena/18eafb4c-rentincreasesf4`, created by Arena from `main` at `d63dee
 
 **Coordination check at claim time (2026-11-08 UTC).** `git ls-remote` shows 12 `origin/arena/*` branches, all belonging to finished sessions; the only open PR is **#14** (`arena/ea02333c`, state `OPEN`, mergeable `CONFLICTING`, last commit 2026-11-07T20:20:05Z). No other session has committed since 2026-11-07T20:20:15Z, so every other claim is stale and, per the 60-minute rule in this file, may be taken over. Nothing in PR #14 is discarded: its branch is merged into this branch and its records kept. No file owned by a live claim is edited.
 
-**Known defects inherited on `main` (to fix in D16-C).** (1) Raw `<<<<<<< HEAD` / `=======` / `>>>>>>> origin/main` conflict markers were committed into `COORDINATION.md` (F31). (2) `REQ-08` and `AN-15` say "38 flags" while 40 were published (F32-adjacent count drift). (3) `pages/sources.html` hard-coded "All 52 official sources" while 55 were published. (4) `FLAGGED_FOR_REVIEW.md` says "30 source-quality flags F01-F30". (5) Requirements rows `REQ-01/02/04/06/08/13/14/19/20` and `AN-15` cite **S43 (HUD Fair Market Rents)** as the official source for project-management requirements it does not support - a source-integrity defect. (6) The Rent Board Fee research (D16-A) and the git-history privacy audit (D16-P) are merged as documents but not published as site rows or flags.
+**Known defects inherited on `main` (to fix in D16-C).** (1) Raw `### T45 PR and deployment record
+
+- [PR #28](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/28) merged on 2026-11-10 at 00:39:54 UTC, merge commit `7cdc779a9ff7fa762714cbbf0deba9c27eeed255`. Pull-request CI and [main validation](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42730019352) passed.
+- [Pages build and deployment](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42730018559) succeeded; Pages latest-build API reported `built` for the same commit at 00:40:19 UTC. Live URL: https://kanlerxz87-cyber.github.io/RentincreaseSF4/.
+- Remaining caution: source-validation checks establish structural consistency, not legal conclusions; owner-supplied case facts are not official records, and privacy exposure in public history remains unresolved (F44).
+
+---
+
+` / `=======` / `>>>>>>> origin/main` conflict markers were committed into `COORDINATION.md` (F31). (2) `REQ-08` and `AN-15` say "38 flags" while 40 were published (F32-adjacent count drift). (3) `pages/sources.html` hard-coded "All 52 official sources" while 55 were published. (4) `FLAGGED_FOR_REVIEW.md` says "30 source-quality flags F01-F30". (5) Requirements rows `REQ-01/02/04/06/08/13/14/19/20` and `AN-15` cite **S43 (HUD Fair Market Rents)** as the official source for project-management requirements it does not support - a source-integrity defect. (6) The Rent Board Fee research (D16-A) and the git-history privacy audit (D16-P) are merged as documents but not published as site rows or flags.
 
 ---
 
@@ -483,7 +491,7 @@ Branch `arena/dee8db41-rentincreasesf4` (fixed by Arena; exclusive file scope be
 
 | ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
-| T45 | 2026-11-10 fresh line-by-line re-verification of load-bearing official pages; publish new File 261020 proposed 10% banked/capital-improvement cap notice (posted 2026-11-09, not enacted) as new source S71 + flag F46; update build date to 2026-11-10; rebuild, validate, PR to `main`, merge, confirm GitHub Pages; close stale PRs #18/#19/#25 as superseded | `in progress` | `arena-dee8db41` (claimed 2026-11-10 UTC) | `COORDINATION.md`, `scripts/site_sources.py`, `scripts/site_flags.py`, `scripts/site_pages.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `index.html`, `pages/`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`, `research/flags.md` | Direct `fetch_page` 2026-11-10: S01, S02, S05, S06, S07, S08, S53, S56 (rent-board-fee), Legistar File 261020. All published figures held (1.6%, $59.00 fee, license rule, 24-month banking, 30/90-day notice). New: File 261020 notice on S01/S02/S05 + Legistar status Pending Committee Action, introduced 9/15/2026, no enactment. | New flag F46 (proposed, not enacted; legal effect blank). Stale PRs #18/#19/#25 to be closed as superseded by PR #27 + T45. Flagged items do not block. |
+| T45 | 2026-11-10 fresh line-by-line re-verification of load-bearing official pages; publish new File 261020 proposed 10% banked/capital-improvement cap notice (posted 2026-11-09, not enacted) as new source S71 + flag F46; update build date to 2026-11-10; rebuild, validate, PR to `main`, merge, confirm GitHub Pages; assess older PRs #18/#19/#25 | `done` | `arena-dee8db41` (claimed 2026-11-10 UTC) | `COORDINATION.md`, `scripts/site_sources.py`, `scripts/site_flags.py`, `scripts/site_pages.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `index.html`, `pages/`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`, `research/flags.md` | Direct `fetch_page` 2026-11-10: S01, S02, S05, S06, S07, S08, S53, S56 (rent-board-fee), Legistar File 261020. All published figures held (1.6%, $59.00 fee, license rule, 24-month banking, 30/90-day notice). New: File 261020 notice on S01/S02/S05 + Legistar status Pending Committee Action, introduced 9/15/2026, no enactment. | New flag F46 (proposed, not enacted; legal effect blank). PRs #18/#19/#25 left open: distinct work has not all been reconciled. Flagged items do not block. |
 
 ### T45 completion and handoff
 
@@ -491,6 +499,7 @@ Branch `arena/dee8db41-rentincreasesf4` (fixed by Arena; exclusive file scope be
 
 Correction to the claim: PRs #18, #19 and #25 were described as stale and superseded before their full contents were compared. PR #25 in particular describes distinct audit, UI and legal-precision work not demonstrated to be incorporated in main, and #18 discusses an independent verification gap; they are **left open**, not closed or merged, to preserve that work. Their conflicts and outstanding differences remain a follow-up for a future integration. This T45 task is **done**, with the PR and Pages evidence to be recorded separately. No merge conflict occurred in this session.
 
+<<<<<<< HEAD
 ---
 
 ## Session 2026-11-10 — `arena-7dafb029` (independent re-verification; integration of the concurrent T45 update)
@@ -517,3 +526,4 @@ This session had already begun its own independent verification before those cla
 **Open PRs reviewed and deliberately left open:** #18 (`arena/f9102e7a`), #19 (`arena/41af5e64`), #25 (`arena/12d86074`). PR #25 is a large divergent generator rewrite (conflicting; it deletes files merged in PR #26/#27) and #18/#19 are earlier generator states whose substantive fixes are already on `main`. None is merged here — merging #25 would discard merged sessions' work. Their owners should rebase. This decision matches the assessment recorded by `arena-dcda2a4b` on its branch.
 
 **Local gate before any merge.** `python3 scripts/build_site.py`, `python3 scripts/validate_site.py` -> 110 checks, 0 errors on `main`; `research/n08_qa/privacy_check.py` re-run for the current tree. No raw tenant identifier is written to any file, commit message or PR text by this session.
+
