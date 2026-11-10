@@ -518,25 +518,33 @@ Correction to the claim: PRs #18, #19 and #25 were described as stale and supers
 - [Pages build and deployment](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42730018559) succeeded; Pages latest-build API reported `built` for the same commit at 00:40:19 UTC. Live URL: https://kanlerxz87-cyber.github.io/RentincreaseSF4/.
 - Remaining caution: source-validation checks establish structural consistency, not legal conclusions; owner-supplied case facts are not official records, and privacy exposure in public history remains unresolved (F44).
 
+### T-A4B merge-conflict reconciliation with session `arena-dee8db41` (T45) — 2026-11-10
+
+While PR #29 was open, session `arena/dee8db41` merged **PR #28** and **PR #30** into `main` (tip `1bf2911`), covering the *same* new development independently (File No. 261020 + the November 9, 2026 notice). It claimed `F46`, `RATE-12`, `RATE-13` and `SUM-14`, and `sfgov.legistar.com` in the validator domain list.
+
+**This is a duplicate-work collision, logged as required.** Per the shared-board rule (never discard another session's work), `main`'s versions were taken as the base (`git checkout --theirs` for `scripts/`, `COORDINATION.md`, `VERIFICATION.md`) and this session **re-applied only its net-new findings on top**, renumbered so no ID is duplicated:
+
+| Kept from T45 (`main`) | Re-applied from T-A4B after the ID renumber |
+| --- | --- |
+| `F46` (proposed cap could affect banked/capital-improvement increases) | `F47` (retroactivity start date vs posting/introduction date; "temporary" vs "for the next three years"; no published method for measuring the 10%) |
+| `RATE-12` (proposed cap, not enacted), `RATE-13` (effect on either unit — left blank) | `RATE-14` (exact Legistar field record), `RATE-15` (proposed applicability date vs posting date), `RATE-16` (duration wording), `RATE-17` (next-year rate still blank), `RATE-18` (how the 10% is measured — blank) |
+| `SUM-14` (pending banked-increase legislation) | `REQ-25`, `LOC-25` |
+| `S71` (Legistar File 261020) | `S71` statement extended with the field-by-field fetch record; new `S72` with the notice's exact quoted wording |
+| T45's executive-summary paragraph "Pending legislation — not current law" | An added analysis paragraph: what the proposal does and does not change for these two units (annual 1.6% outside it; stacked banked increases are its target; no banked figure asserted), the two unanswered questions, and the cheap dated-record step |
+
+No T45 content was removed or reworded to change meaning. No other session's records were discarded. Post-merge gates: `build_site.py` + `validate_site.py` → **112 checks, 0 errors**; broken internal links **0**; privacy scan **0** current-tree identifier matches across 98 files. This supersedes the "113 checks" figure quoted in the PR body; the count changed because the two branches' validator guards were reconciled, not because any check was dropped.
 ---
-
 ## Session 2026-11-10 — `arena-5c09f807` (T46 final compliance audit, verification & PR/deployment confirmation)
-
 Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Working tree based on `main` at `1bf2911` (after PR #28 and PR #30).
-
 | ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
 | T46 | Final compliance verification across all prompt requirements; line-by-line verification of official source links, rate calculations, privacy boundary, and forefront executive summary; confirm site build and GitHub Pages deployment | `done` | `arena-5c09f807` | `COORDINATION.md`, `README.md` | `python3 scripts/validate_site.py` (111 checks, 0 errors; 71 sources, 56 flags, 299 rows); `python3 research/b87_notice_kit/validate_kit.py` (19 checks, 0 errors); `python3 research/n08_qa/privacy_check.py` (0 fingerprint matches in current tree); `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages` (status built, URL https://kanlerxz87-cyber.github.io/RentincreaseSF4/). | Confirmed flags F01–F46 and T03-F01–T03-F10 remain published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`; do not block the merge. |
-
 ### T46 verification and publication record — 2026-11-10 UTC
-
 - **Executive summary forefront:** Confirmed that the executive summary forefront explicitly answers the individual owner's question ("Yes, individual owners of 1–9 residential units must report to the Housing Inventory and obtain a Rent Increase License before imposing annual/banked increases under SF Admin Code §§ 37.3(a)(1) and 37.15"). Step-by-step process with verified links is featured prominently.
 - **Privacy boundary:** Confirmed all personal names are anonymized with placeholders (`Tenant A` through `Tenant F`), dates (`February 1, 2025`, `April 1, 2026`, `June 1, 2019`) and amounts (`$3,995`, `$3,150`) are preserved exactly, and no exact street address is published. Zero raw tenant identifiers in the current tree.
 - **Reasonable and normal increases:** Confirmed allowable rate is 1.6% (March 1, 2026 – February 28, 2027) calculated on base rent only without rounding up. Corporate and individual landlord practices, reasonable notice procedures, retaliation safeguards (Civil Code § 1942.5), and one-unit vs. both-units anti-discrimination principles are thoroughly analyzed with official links.
 - **Live site:** GitHub Pages live site is fully deployed at https://kanlerxz87-cyber.github.io/RentincreaseSF4/ .
-
 ### T46 PR #31 merge and Pages deployment record — 2026-11-10 UTC
-
 | Item | Verified result | Evidence |
 | --- | --- | --- |
 | PR #31 — T46: record PR #28 merge and confirm verified Pages deployment | **MERGED** 2026-11-10T00:42:16Z; merge commit `211ff3faec7b1b72985c4d2b492dae0d20da35a5` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/31 ; `gh pr view 31`; `gh pr merge 31 --merge` |
@@ -545,7 +553,7 @@ Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/
 
 ---
 
-## Session 2026-11-10 — `arena-3dc8a405` (T47: B87-I worksheet integration + final verification + publication)
+## Session 2026-11-10 — `arena-3dc8a405` (T48: B87-I worksheet integration + final verification + publication)
 
 Branch `arena/3dc8a405-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
 
@@ -553,8 +561,30 @@ Branch `arena/3dc8a405-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 
 | ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
-| T47 | Integrate the B87-I notice-worksheet subpage (explicitly yielded, unclaimed); final line-by-line re-verification of the combined tree after live claims settle; rebuild + validate + privacy scan; PR to `main`, merge, confirm Pages, record result; close stale PRs #18/#19/#25 as superseded **only after** their owner T45's claim window is done or stale (>60 min, currently T45 last pushed 00:37Z so not yet stale) | `in progress` (claimed 2026-11-10 UTC) | `arena-3dc8a405` | `research/t47_final_qa/` (new, read-only verification while waiting), then `scripts/site_pages.py`, `scripts/site_sources.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `README.md`, `COORDINATION.md` — **only after PR #29 and PR #32 settle** (merged or stale); until then no shared generator/site file is edited and requests are logged here | To be recorded on completion | Flagged items do not block |
+| T48 | Integrate the B87-I notice-worksheet subpage (explicitly yielded, unclaimed); final line-by-line re-verification of the combined tree after live claims settle; rebuild + validate + privacy scan; PR to `main`, merge, confirm Pages, record result; close stale PRs #18/#19/#25 as superseded **only after** their owner T45's claim window is done or stale (>60 min, currently T45 last pushed 00:37Z so not yet stale) | `in progress` (claimed 2026-11-10 UTC) | `arena-3dc8a405` | `research/t48_final_qa/` (new, read-only verification while waiting), then `scripts/site_pages.py`, `scripts/site_sources.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `README.md`, `COORDINATION.md` — **only after PR #29 and PR #32 settle** (merged or stale); until then no shared generator/site file is edited and requests are logged here | To be recorded on completion | Flagged items do not block |
 
 **Coordination rules this session follows:** (1) does not edit any file while PR #29/#32 owners are live; (2) B87-I is the only integration request on the board that no live claim covers — this claim takes it; (3) stale PR closure (#18/#19/#25) was named in T45's claim, so this session takes it over only if T45 goes stale without doing it, and will log the handoff; (4) no raw tenant identifiers in any tracked file, commit message or PR text; (5) `git pull --rebase` (or fetch + fast-forward on merge commits, as prior handoff notes require) before every push.
 
-This claim is committed and pushed before substantive work begins.
+This claim is committed and pushed before substantive work begins. Renumbered **T48** during the merge with `origin/main`: session `arena-7dafb029` had already used **T47** for its independent re-verification record (below). Both records are kept; no content is discarded.
+
+## Session 2026-11-10 — `arena-7dafb029` (T47: independent re-verification record; integration review of T45/PR #28)
+
+Branch `arena/7dafb029-rentincreasesf4` (fixed by Arena; the requested `session-<id>/<task>` branches cannot be created, so this session uses an exclusive, non-overlapping file scope).
+
+**Board read and concurrent claims.** `origin/main` at start: `73c88f1` (PR #27). Local build reproduced clean (110 checks, 0 errors) before any edit. Two other sessions claimed the shared generator scope minutes later: `arena-dee8db41` (T45, claim `6a6f4c0`, work `5895213`, **PR #28**) and `arena-dcda2a4b` (T-A4B, claim `9161d90`). This session had already begun its own independent verification before those claims were visible; that ordering is recorded here honestly rather than backdated.
+
+Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`), **this session claims none of it** and edits only the two files below.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T47 | Independent 2026-11-10 re-verification of the load-bearing official sources; line-by-line review of the concurrent T45 PR #28; record the duplicate-work reconciliation and the deployment evidence | `done` | `arena-7dafb029` (claimed 2026-11-10 UTC) | `research/reverify_2026-11-10/` (new directory only) + this file | 14 sources opened directly with `fetch_page` on 2026-11-10: S01 (chunks 0–1), S02, S04, S05, S07, S21, S27, S35, S36 (0–1), S42 (0–1), S53, S56, S57 (0–1), S71. Verbatim fragments and the per-row result are in `research/reverify_2026-11-10/README.md`. | No factual conflict with PR #28 found. F27 (no 3/1/27–2/28/28 rate) remains open. T46 was already used by `arena-5c09f807`, so this task is numbered T47. |
+
+**Duplicate-work reconciliation (nothing discarded).** This session independently built the same update before PR #28 was visible: S71 for the Legistar File 261020 record, F46 for the proposed 10% combined banked + capital-improvement cap, Local Law rows LOC-25/LOC-26, a calculation caution row, a dashboard card and five validator checks (locally 71 sources, 56 flags, 115 checks, 0 errors). PR #28 published the same finding at the same identifiers with a superset of rows (SUM-14, RATE-12, RATE-13, CALC-08 caution, executive-summary paragraph). To keep one source numbering, one flag numbering and one implementation, this session **dropped its own generator/site edits in favour of PR #28** and reviewed that PR against its independent captures before it was merged. Nothing in PR #28 was reverted or renumbered. This mirrors the T09 precedent.
+
+**Irregularity observed on `main` (process, not legal):** the `arena-5c09f807` T46 section appears **twice** in this file (around lines 288 and 523 of `main` at `211ff3f`). It is left in place rather than silently deleted, because it is another session's record; a dedupe pass is recommended. It does not affect the published site. The literal conflict-marker strings quoted in the F31 paragraph are prose, not unresolved markers; `validate_site.py` checks line-start markers and passes.
+
+**Open PRs reviewed and deliberately left open:** #18 (`arena/f9102e7a`), #19 (`arena/41af5e64`), #25 (`arena/12d86074`). PR #25 is a divergent generator rewrite (conflicting; it deletes files merged in PR #26/#27) and #18/#19 are earlier generator states whose substantive fixes are already on `main`; merging #25 would discard merged sessions' work. Their owners should rebase.
+
+**Verification and build gate.** `python3 scripts/build_site.py` and `python3 scripts/validate_site.py` on the merged tree: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows). `research/b87_notice_kit/validate_kit.py`: 19 checks, 0 errors. `research/n08_qa/privacy_check.py`: 0 fingerprint matches in the current tree (it does not clear historical exposure, F44). No raw tenant identifier is written to any file, commit message or PR text by this session.
+
+**PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.

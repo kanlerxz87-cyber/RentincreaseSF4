@@ -1527,6 +1527,19 @@
             "notes": "No attorney approval or guarantee.",
             "flag_id": "",
             "source_note": ""
+          },
+          {
+            "id": "REQ-25",
+            "label": "Re-check the committee status of File 261020 before serving any banked or capital improvement notice",
+            "value": "Checked 2026-11-10 - 'Pending Committee Action' in the Land Use and Transportation Committee; not law, no enactment",
+            "status": "verified",
+            "source_ids": [
+              "S71",
+              "S72"
+            ],
+            "notes": "Published on the Rates page as RATE-12 to RATE-18 and flagged F46/F47. Re-check the Legistar record before relying on this status.",
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       }
@@ -1724,6 +1737,70 @@
             "notes": "Not enacted and case-specific histories are unverified; do not treat the proposal as current law.",
             "flag_id": "F46",
             "source_note": ""
+          },
+          {
+            "id": "RATE-14",
+            "label": "Exact Legistar record at fetch (2026-11-10)",
+            "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
+            "status": "verified",
+            "source_ids": [
+              "S71"
+            ],
+            "notes": "History rows are procedural only: 9/15/2026 assigned under 30-day rule; 9/18/2026 and 9/30/2026 referred to department; 10/7/2026 Youth Commission response received.",
+            "flag_id": "F47",
+            "source_note": ""
+          },
+          {
+            "id": "RATE-15",
+            "label": "Proposed applicability date vs posting date",
+            "value": "Notice posted November 9, 2026 says the proposal would apply to banked increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026",
+            "status": "verified",
+            "source_ids": [
+              "S72",
+              "S71"
+            ],
+            "notes": "The applicability date precedes both the posting date and the 9/15/2026 introduction. Nothing official says how a notice served between 9/15/2026 and enactment would be treated.",
+            "flag_id": "F47",
+            "source_note": ""
+          },
+          {
+            "id": "RATE-16",
+            "label": "Duration wording disagrees",
+            "value": "Notice: 'temporarily limit'. Legistar title: 'for the next three years'",
+            "status": "verified",
+            "source_ids": [
+              "S72",
+              "S71"
+            ],
+            "notes": "Recorded as an inconsistency; neither wording is preferred here.",
+            "flag_id": "F47",
+            "source_note": ""
+          },
+          {
+            "id": "RATE-17",
+            "label": "Next-year rate (3/1/27 - 2/28/28)",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S02",
+              "S01"
+            ],
+            "notes": "Still not published on either official page when re-checked 2026-11-10; blank rather than estimated.",
+            "flag_id": "F27",
+            "source_note": ""
+          },
+          {
+            "id": "RATE-18",
+            "label": "How the proposed 10% is measured",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S71",
+              "S72"
+            ],
+            "notes": "No official page states whether the 10% includes or excludes the separate annual allowable increase, or how it treats a banked increase already imposed; blank, not inferred.",
+            "flag_id": "F47",
+            "source_note": ""
           }
         ]
       }
@@ -1843,6 +1920,19 @@
             ],
             "notes": "Even if lease says otherwise.",
             "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LOC-25",
+            "label": "Pending legislation (proposed, not law)",
+            "value": "File 261020 would cap combined banked plus capital improvement increases at 10% per year; version 1, 'Pending Committee Action' on 2026-11-10",
+            "status": "verified",
+            "source_ids": [
+              "S71",
+              "S72"
+            ],
+            "notes": "Proposed only - creates no current limit. See Rates page RATE-12 to RATE-18 and flags F46/F47.",
+            "flag_id": "F46",
             "source_note": ""
           },
           {
