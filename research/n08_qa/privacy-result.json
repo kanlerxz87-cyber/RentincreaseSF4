@@ -3,8 +3,8 @@
   "files_scanned": 98,
   "current_tree_matching_candidates": 0,
   "current_tree_files_with_matches": [],
-  "historical_fixture_matching_candidates": null,
-  "historical_fixture_note": "Not available in this checkout; no history conclusion drawn.",
+  "historical_fixture_matching_candidates": 6,
+  "historical_fixture_note": "Known historical report read into memory only; detector count recorded, values withheld.",
   "privacy_values_printed": false,
   "scope_limit": "Current-tree cleanliness does not remove git history, PR diffs, other branches, forks, caches or prior downloads."
 }
