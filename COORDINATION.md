@@ -285,23 +285,6 @@ Branch `arena/18eafb4c-rentincreasesf4`, created by Arena from `main` at `d63dee
 
 ---
 
-## Session 2026-11-10 — `arena-5c09f807` (T46 final compliance audit, verification & PR/deployment confirmation)
-
-Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Working tree based on `main` at `1bf2911` (after PR #28 and PR #30).
-
-| ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
-| --- | --- | --- | --- | --- | --- | --- |
-| T46 | Final compliance verification across all prompt requirements; line-by-line verification of official source links, rate calculations, privacy boundary, and forefront executive summary; confirm site build and GitHub Pages deployment | `done` | `arena-5c09f807` | `COORDINATION.md`, `README.md` | `python3 scripts/validate_site.py` (111 checks, 0 errors; 71 sources, 56 flags, 299 rows); `python3 research/b87_notice_kit/validate_kit.py` (19 checks, 0 errors); `python3 research/n08_qa/privacy_check.py` (0 fingerprint matches in current tree); `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages` (status built, URL https://kanlerxz87-cyber.github.io/RentincreaseSF4/). | Confirmed flags F01–F46 and T03-F01–T03-F10 remain published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`; do not block the merge. |
-
-### T46 verification and publication record — 2026-11-10 UTC
-
-- **Executive summary forefront:** Confirmed that the executive summary forefront explicitly answers the individual owner's question ("Yes, individual owners of 1–9 residential units must report to the Housing Inventory and obtain a Rent Increase License before imposing annual/banked increases under SF Admin Code §§ 37.3(a)(1) and 37.15"). Step-by-step process with verified links is featured prominently.
-- **Privacy boundary:** Confirmed all personal names are anonymized with placeholders (`Tenant A` through `Tenant F`), dates (`February 1, 2025`, `April 1, 2026`, `June 1, 2019`) and amounts (`$3,995`, `$3,150`) are preserved exactly, and no exact street address is published. Zero raw tenant identifiers in the current tree.
-- **Reasonable and normal increases:** Confirmed allowable rate is 1.6% (March 1, 2026 – February 28, 2027) calculated on base rent only without rounding up. Corporate and individual landlord practices, reasonable notice procedures, retaliation safeguards (Civil Code § 1942.5), and one-unit vs. both-units anti-discrimination principles are thoroughly analyzed with official links.
-- **Live site:** GitHub Pages live site is fully deployed at https://kanlerxz87-cyber.github.io/RentincreaseSF4/ .
-
----
-
 ## Session 2026-11-07 — `arena-ea02333c` (T08) — independent re-verification + case-specific compliance gaps
 
 Branch `arena/ea02333c-rentincreasesf4`, based at `a0591c3`, merged forward from `origin/main` `cd51aee` (PR #12) before any edit. No other session's file scope is claimed; no competing live claim found at start.
@@ -553,6 +536,8 @@ Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/
 
 ---
 
+> Dedupe note (session `arena-3dc8a405`, 2026-11-10): the `arena-5c09f807` T46 section was duplicated in this file (first copy lacked the PR #31 record). Per T47's recommendation the earlier incomplete copy was removed and the complete copy above was kept verbatim; no session record content was discarded.
+
 ## Session 2026-11-10 — `arena-3dc8a405` (T48: B87-I worksheet integration + final verification + publication)
 
 Branch `arena/3dc8a405-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
@@ -561,7 +546,7 @@ Branch `arena/3dc8a405-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 
 | ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
-| T48 | Integrate the B87-I notice-worksheet subpage (explicitly yielded, unclaimed); final line-by-line re-verification of the combined tree after live claims settle; rebuild + validate + privacy scan; PR to `main`, merge, confirm Pages, record result; close stale PRs #18/#19/#25 as superseded **only after** their owner T45's claim window is done or stale (>60 min, currently T45 last pushed 00:37Z so not yet stale) | `in progress` (claimed 2026-11-10 UTC) | `arena-3dc8a405` | `research/t48_final_qa/` (new, read-only verification while waiting), then `scripts/site_pages.py`, `scripts/site_sources.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `README.md`, `COORDINATION.md` — **only after PR #29 and PR #32 settle** (merged or stale); until then no shared generator/site file is edited and requests are logged here | To be recorded on completion | Flagged items do not block |
+| T48 | Integrate the B87-I notice-worksheet subpage (explicitly yielded, unclaimed); final line-by-line re-verification of the combined tree after live claims settle; rebuild + validate + privacy scan; PR to `main`, merge, confirm Pages, record result; close stale PRs #18/#19/#25 as superseded **only after** their owner T45's claim window is done or stale (>60 min, currently T45 last pushed 00:37Z so not yet stale) | `done` (2026-11-10 UTC; PR/merge/Pages result recorded below) | `arena-3dc8a405` | `research/t48_final_qa/` (new), `scripts/site_pages.py`, `scripts/site_sources.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `README.md`, `COORDINATION.md` | Waited for PR #29/#32 to merge (both `MERGED` 2026-11-10T00:44–00:48Z) before touching shared files. Direct `fetch_page` on 2026-11-10 of all 11 sources the integration adds/relies on (S73 Rule 13.14, S74 AmLegal §37.3, S75 AmLegal §37.15, S76 Rules PDF, S77 Rules Part IV, S78 CCP 1013, S79 DRE 2026 guide, S80 DRE gb08, S81 O&M, S82 failure-to-repair, S26 Forms Center incl. Form 583) with exact quotes in `research/t48_final_qa/README.md`. Gates: `build_site.py` → 22 data/20 page files; `validate_site.py` → **119 checks, 0 errors** (82 sources, 65 flags, 347 rows, 67 needs-review, 0 broken links); `validate_kit.py` → 19/0; `privacy_check.py` → 0 current-tree matches; independent HTMLParser sweep → 0 broken internal links. Arithmetic re-checked with `Decimal`: $63.92 → $4,058.92, $50.40 → $3,200.40. | (1) Task-ID collision: this claim was renumbered T47 → **T48** at merge time because `arena-7dafb029` already held T47; both records kept. (2) Forms Center URL variant (kit path vs S26 `/reports--` path) — mapped to S26, same official page, verified at the kit path. (3) Duplicate T46 coordination section deduped (complete copy with PR #31 record retained; T47's recommendation). (4) Stale PRs #18/#19/#25 **left open** — T45 deliberately preserved them and T47 concurred; not closed by this session. (5) New flags B87-F01–B87-F08 and sources S73–S82 published; all flagged items do not block. |
 
 **Coordination rules this session follows:** (1) does not edit any file while PR #29/#32 owners are live; (2) B87-I is the only integration request on the board that no live claim covers — this claim takes it; (3) stale PR closure (#18/#19/#25) was named in T45's claim, so this session takes it over only if T45 goes stale without doing it, and will log the handoff; (4) no raw tenant identifiers in any tracked file, commit message or PR text; (5) `git pull --rebase` (or fetch + fast-forward on merge commits, as prior handoff notes require) before every push.
 

@@ -5,12 +5,12 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "72 official sources"
+      "detail": "82 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "57 flagged items"
+      "detail": "65 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -35,12 +35,12 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "306 rows checked; "
+      "detail": "347 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "37 needs-review rows"
+      "detail": "67 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -233,6 +233,16 @@
       "detail": ""
     },
     {
+      "name": "data/worksheet.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/worksheet.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "pages/summary.html in navigation exists",
       "ok": true,
       "detail": ""
@@ -284,6 +294,11 @@
     },
     {
       "name": "pages/compliance.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/worksheet.html in navigation exists",
       "ok": true,
       "detail": ""
     },
@@ -561,17 +576,37 @@
       "name": "project-record flags cite project records and S02 link defect is flagged",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "Notice Worksheet page is published and in the navigation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "every Notice Worksheet row carries an official source and correct status",
+      "ok": true,
+      "detail": "40 worksheet rows; "
+    },
+    {
+      "name": "all eight B87 worksheet flags are published on Flagged for Review",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Notice Worksheet links from the Notice Checklist page",
+      "ok": true,
+      "detail": ""
     }
   ],
   "errors": [],
   "summary": {
-    "sources": 72,
-    "pages": 19,
-    "data_files": 21,
-    "rows_verified": 306,
-    "needs_review_rows": 37,
-    "flags": 57,
-    "checks": 112,
+    "sources": 82,
+    "pages": 20,
+    "data_files": 22,
+    "rows_verified": 347,
+    "needs_review_rows": 67,
+    "flags": 65,
+    "checks": 119,
     "errors": 0
   }
 }

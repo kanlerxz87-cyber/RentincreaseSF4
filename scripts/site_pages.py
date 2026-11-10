@@ -1,5 +1,8 @@
 """Page definitions: every row has source_ids, status, value, notes and optional flag_id."""
 
+import json
+from pathlib import Path
+
 COLUMNS = ["Item", "Value / finding", "Status", "Official source(s)", "Notes / flag"]
 OWNER_COLUMNS = ["Item", "Owner-supplied value", "Status", "Source", "Notes / flag"]
 
@@ -357,6 +360,7 @@ PAGES = {
                 row("CHK-15", "Keep the fee separate", "Pay or confirm the Rent Board Fee ($59.00 per dwelling unit for 2026-2027, due March 1) and, if recovering 50%, show it as a separate fee recovery rather than folding it into the rent increase", "verified", ["S56"], "The fee is not part of base rent."),
                 row("CHK-16", "Match each notice to a license on its effective date", "Check the portal license status for the specific effective date of each notice, for each unit, including any prior year", "verified", ["S53", "S08", "S55"], "A license now does not cure a notice effective before it existed."),
                 row("CHK-17", "Re-serve rather than backdate", "If a notice went out unlicensed, report, confirm the license, and serve a new notice with a compliant effective date", "analysis", ["S08", "S53", "S35"], "Do not treat an unenforceable notice as effective."),
+                row("CHK-18", "Work through the Notice Worksheet", "The Notice Worksheet page lists the pre-service gates, required notice contents, service rules and a per-tenant service log, each row linked to its official source", "verified", ["S01", "S35", "S78"], "Published from the B87 official-source kit (research/b87_notice_kit); case cells stay blank until verified."),
             ]},
         ],
     },
@@ -486,3 +490,62 @@ PAGES = {
         ],
     },
 }
+
+# ---------------------------------------------------------------------------
+# Notice Worksheet page (B87-I integration, 2026-11-10).
+# Loaded from the verified B87 kit JSON so the kit stays the single source of
+# truth; B87 source IDs are mapped to the site's canonical source IDs.
+
+_WORKSHEET_JSON = Path(__file__).resolve().parent.parent / "research" / "b87_notice_kit" / "worksheet.json"
+
+B87_SOURCE_MAP = {
+    "B87-S01": "S01", "B87-S02": "S07", "B87-S03": "S73", "B87-S04": "S74",
+    "B87-S05": "S53", "B87-S06": "S75", "B87-S07": "S76", "B87-S08": "S77",
+    "B87-S09": "S35", "B87-S10": "S78", "B87-S11": "S79", "B87-S12": "S80",
+    "B87-S13": "S04", "B87-S14": "S02", "B87-S15": "S05", "B87-S16": "S54",
+    "B87-S17": "S09", "B87-S18": "S12", "B87-S19": "S81", "B87-S20": "S10",
+    "B87-S21": "S13", "B87-S22": "S16", "B87-S23": "S57", "B87-S24": "S82",
+    "B87-S25": "S25", "B87-S26": "S24", "B87-S27": "S26", "B87-S28": "S06",
+    "B87-S29": "S56", "B87-S30": "S08",
+}
+
+def _worksheet_row(r):
+    """Map one B87 kit row onto the site row schema without changing meaning."""
+    status = "verified" if r["status"] == "verified rule" else r["status"]
+    flags = r.get("flag_ids") or []
+    flag_id = flags[0] if flags else ""
+    notes_parts = []
+    if status == "needs review":
+        value = ""  # validator: unverified cells stay blank
+        if r.get("rule"):
+            notes_parts.append(r["rule"])
+    else:
+        value = r.get("value") or r.get("rule") or ""
+    if r.get("notes"):
+        notes_parts.append(r["notes"])
+    if len(flags) > 1:
+        notes_parts.append("See also " + ", ".join(flags[1:]) + ".")
+    source_ids = [B87_SOURCE_MAP[s] for s in r["source_ids"]]
+    return row(r["id"], r["label"], value, status, source_ids, " ".join(notes_parts), flag_id)
+
+def _worksheet_page():
+    kit = json.loads(_WORKSHEET_JSON.read_text(encoding="utf-8"))
+    groups = [
+        ("Owner inputs (case facts - not official findings)", ("B87-IN-",)),
+        ("Pre-service gates - every cell blank until verified", ("B87-G",)),
+        ("Required notice contents", ("B87-N",)),
+        ("Conditional arithmetic (illustrative only)", ("B87-C",)),
+        ("Service record rules", ("B87-SV",)),
+        ("Tenant service log (blank until a notice is served)", ("B87-LOG",)),
+    ]
+    sections = []
+    for title, prefixes in groups:
+        rows = [_worksheet_row(r) for r in kit["rows"] if r["id"].startswith(prefixes)]
+        sections.append({"title": title, "columns": COLUMNS, "rows": rows})
+    return {
+        "title": "Notice Worksheet",
+        "description": "Pre-service worksheet and per-tenant service record for an annual rent-increase notice, from the B87 official-source kit. Case cells stay blank until verified.",
+        "sections": sections,
+    }
+
+PAGES["worksheet"] = _worksheet_page()
