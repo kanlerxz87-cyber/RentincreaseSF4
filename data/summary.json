@@ -322,6 +322,19 @@
           "source_note": ""
         },
         {
+          "id": "SUM-14",
+          "label": "Pending banked-increase legislation",
+          "value": "File 261020 is proposed, not enacted; it could limit combined banked and capital-improvement increases to 10% per year.",
+          "status": "verified",
+          "source_ids": [
+            "S05",
+            "S71"
+          ],
+          "notes": "If enacted as proposed, it would apply to banked notices and capital-improvement petitions from September 15, 2026; check status before relying on a banked calculation. F46.",
+          "flag_id": "F46",
+          "source_note": ""
+        },
+        {
           "id": "SUM-13",
           "label": "94122 Small Area FMR",
           "value": "",

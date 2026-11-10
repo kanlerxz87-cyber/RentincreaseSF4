@@ -269,8 +269,8 @@
             "S05",
             "S54"
           ],
-          "notes": "No banked amount is asserted for either unit.",
-          "flag_id": "",
+          "notes": "No banked amount is asserted for either unit; pending File 261020 could affect banked increases (F46).",
+          "flag_id": "F46",
           "source_note": ""
         },
         {
@@ -289,7 +289,7 @@
         {
           "id": "AN-26",
           "label": "Two distinct registrations with the Rent Board",
-          "value": "Housing Inventory reporting produces the license at no charge; the Rent Board Fee is a separate $59.00-per-unit annual payment. Confusing them is the most likely cause of an unlicensed increase",
+          "value": "Housing Inventory reporting produces the license at no charge; the Rent Board Fee is a separate $59.00-per-unit annual payment. Paying the fee does not replace reporting.",
           "status": "verified",
           "source_ids": [
             "S53",
@@ -302,15 +302,15 @@
         },
         {
           "id": "AN-27",
-          "label": "Timing is the second-most-common defect",
-          "value": "A license that exists today does not validate a notice whose effective date preceded it, and a notice inside the 180-day retaliation window is separately barred",
+          "label": "License timing and retaliation risk",
+          "value": "A license that exists today does not validate a notice whose effective date preceded it. California Civil Code section 1942.5 separately limits rent increases after qualifying tenantability events, subject to its conditions and exceptions.",
           "status": "verified",
           "source_ids": [
             "S53",
             "S08",
             "S57"
           ],
-          "notes": "Check the effective date, not the date of the check.",
+          "notes": "Check the effective date and the statutory conditions; no ranking of defects is established.",
           "flag_id": "",
           "source_note": ""
         },
@@ -330,7 +330,7 @@
         },
         {
           "id": "AN-29",
-          "label": "Cheapest compliant path",
+          "label": "Conservative approach",
           "value": "Ordinary annual increase at or under 1.6%, license on file first, 30-day written notice, no additional-occupant charge, and an identical written standard applied to both units",
           "status": "analysis",
           "source_ids": [

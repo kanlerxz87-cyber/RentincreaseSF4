@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-10",
   "status": "passed",
   "checks": [
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "70 official sources"
+      "detail": "71 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "55 flagged items"
+      "detail": "56 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -35,12 +35,12 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "296 rows checked; "
+      "detail": "299 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "34 needs-review rows"
+      "detail": "35 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -450,7 +450,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "45 numeric flags"
+      "detail": "46 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -481,6 +481,11 @@
       "name": "executive summary page renders the narrative, not just tables",
       "ok": true,
       "detail": "13 headings"
+    },
+    {
+      "name": "pending cap is distinguished from current law and calculation is cautioned",
+      "ok": true,
+      "detail": ""
     },
     {
       "name": "executive summary page has no unrendered markdown",
@@ -555,13 +560,13 @@
   ],
   "errors": [],
   "summary": {
-    "sources": 70,
+    "sources": 71,
     "pages": 19,
     "data_files": 21,
-    "rows_verified": 296,
-    "needs_review_rows": 34,
-    "flags": 55,
-    "checks": 110,
+    "rows_verified": 299,
+    "needs_review_rows": 35,
+    "flags": 56,
+    "checks": 111,
     "errors": 0
   }
 }
