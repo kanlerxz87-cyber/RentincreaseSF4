@@ -584,5 +584,84 @@
       "S72"
     ],
     "status": "needs review"
+  },
+  {
+    "id": "B87-F01",
+    "title": "Notice worksheet: case-specific notice facts unverified",
+    "detail": "Worksheet unit cells stay blank; do not infer eligibility, base rent, anniversary, license, lease permission, banking, petition, subsidy, repair/retaliation or service facts. Owner-supplied dates and amounts are preserved but are not official findings. From the B87 notice kit (research/b87_notice_kit), integrated 2026-11-10.",
+    "source_ids": [
+      "S01",
+      "S07",
+      "S76"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F02",
+    "title": "Notice worksheet: licence timing is effective-date based",
+    "detail": "Rent Board Rule 13.14 uses the effective date of the increase, not the date of service, to test whether the landlord was licensed; confirming the licence before service is conservative practice only, not the stated legal test. Sources re-fetched 2026-11-10.",
+    "source_ids": [
+      "S73"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F03",
+    "title": "Notice worksheet: banking summary wording differs between SF guidance and Rule 4.12",
+    "detail": "SF.gov banked-increase guidance says a skipped increase banks only after 24 full months without an increase, while Rule 4.12 of the Rules PDF describes a full 12 months from when an increase could have been imposed. Require the full rent history; no banking is inferred for either unit.",
+    "source_ids": [
+      "S05",
+      "S76"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F04",
+    "title": "Notice worksheet: notice-nullity wording differs across official texts",
+    "detail": "Sec. 37.3(b) requires a written breakdown of the increase components and makes a nonconforming increase null and void; Rule 4.12 requires the banked portion and dates. Include the full breakdown and banked dates conservatively; do not rely on limited exceptions without review.",
+    "source_ids": [
+      "S74",
+      "S76"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F05",
+    "title": "Notice worksheet: Form 583 not verified as an annual-notice filing duty",
+    "detail": "The Forms Center describes Form 583 as a proof-of-service form 'used to share a list of specific documents that you delivered to the other parties in your case'. No mandatory annual rent-increase notice template or annual filing duty was verified on the Forms Center (re-fetched 2026-11-10); keep a private service record.",
+    "source_ids": [
+      "S26"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F06",
+    "title": "Notice worksheet: official examples contain date/rate inconsistencies",
+    "detail": "The SF.gov rent-increase examples use dates and rates that conflict with the operative Current Rates/Form 571 schedule (see F01, F02). Use the operative Current Rates/Form 571 schedule and the statute/rules, not the examples.",
+    "source_ids": [
+      "S01",
+      "S54",
+      "S04"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F07",
+    "title": "Notice worksheet: fixed-term mid-term increase permission unknown",
+    "detail": "The DRE 2026 guide states a landlord cannot raise rent during a fixed-term tenancy unless the rental agreement expressly allows rent increases. The actual lease clause and end date for these units were not supplied; the cell stays blank and flagged.",
+    "source_ids": [
+      "S79"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F08",
+    "title": "Notice worksheet: no attorney approval or challenge immunity",
+    "detail": "The worksheet is a conservative checklist capable of tenant-lawyer review only. Neutral wording is not a retaliation or discrimination safe harbor, and no attorney has approved any notice. Sources re-verified 2026-11-10.",
+    "source_ids": [
+      "S57",
+      "S25"
+    ],
+    "status": "needs review"
   }
 ]

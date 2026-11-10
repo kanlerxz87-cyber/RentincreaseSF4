@@ -25,6 +25,10 @@ OFFICIAL_DOMAINS = {
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
     "sfrb.org", "sftreasurer.org", "github.com", "sfgov.legistar.com",
+    # American Legal Publishing is the official publisher of the San Francisco
+    # Administrative Code (see flag F17); dre.ca.gov is the California Department
+    # of Real Estate. Both added 2026-11-10 for the B87 worksheet sources S74/S75/S79/S80.
+    "codelibrary.amlegal.com", "dre.ca.gov",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -342,6 +346,34 @@ def main():
     check("project-record flags cite project records and S02 link defect is flagged",
           all(f["source_ids"] != ["S43"] and f["source_ids"] != ["S20"] for f in flags if f["id"] in ("F19", "F20", "F31"))
           and any(f["id"] == "F45" and "S02" in f["source_ids"] for f in flags))
+
+    # --- Checks added 2026-11-10 by session arena-3dc8a405 (T48, B87-I integration) ---
+    check("Notice Worksheet page is published and in the navigation",
+          "worksheet" in pages and (PAGES / "worksheet.html").exists()
+          and any(s == "worksheet" for s, _ in D.NAV))
+    worksheet_rows = [r for sec in pages.get("worksheet", {}).get("sections", []) for r in sec["rows"]]
+    worksheet_errors = []
+    for r in worksheet_rows:
+        if not r.get("source_ids"):
+            worksheet_errors.append("{} has no source_ids".format(r.get("id", "?")))
+        for sid in r.get("source_ids", []):
+            if sid not in source_map:
+                worksheet_errors.append("{} references unknown source {}".format(r.get("id", "?"), sid))
+            elif not official_domain(source_map[sid]["url"]):
+                worksheet_errors.append("{} references nonofficial URL for {}".format(r.get("id", "?"), sid))
+        if r.get("status") not in ("verified", "needs review", "analysis", "owner supplied"):
+            worksheet_errors.append("{} invalid status".format(r.get("id", "?")))
+        if r.get("status") == "needs review" and (r.get("value", "") != "" or not r.get("flag_id")):
+            worksheet_errors.append("{} needs-review cell not blank/flagged".format(r.get("id", "?")))
+    check("every Notice Worksheet row carries an official source and correct status",
+          len(worksheet_rows) == 40 and not worksheet_errors,
+          "{} worksheet rows; {}".format(len(worksheet_rows), "; ".join(worksheet_errors[:5])))
+    b87_flag_ids = ["B87-F01", "B87-F02", "B87-F03", "B87-F04", "B87-F05", "B87-F06", "B87-F07", "B87-F08"]
+    check("all eight B87 worksheet flags are published on Flagged for Review",
+          all(any(f["id"] == bid for f in flags) for bid in b87_flag_ids)
+          and all(bid in flagged_html for bid in b87_flag_ids))
+    check("Notice Worksheet links from the Notice Checklist page",
+          "worksheet.html" in (PAGES / "compliance.html").read_text(encoding="utf-8"))
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

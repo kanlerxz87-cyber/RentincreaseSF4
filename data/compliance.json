@@ -239,6 +239,20 @@
           "notes": "Do not treat an unenforceable notice as effective.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "CHK-18",
+          "label": "Work through the Notice Worksheet",
+          "value": "The Notice Worksheet page lists the pre-service gates, required notice contents, service rules and a per-tenant service log, each row linked to its official source",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S35",
+            "S78"
+          ],
+          "notes": "Published from the B87 official-source kit (research/b87_notice_kit); case cells stay blank until verified.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

@@ -205,7 +205,7 @@
     "title": "Rent Board Forms Center",
     "url": "https://www.sf.gov/reports--rent-board-forms-forms-center",
     "category": "Review",
-    "statement": "516C, 518, 516D and other official forms."
+    "statement": "516C, 518, 516D and other official forms. Re-verified 2026-11-10: the Forms Center also lists 516A, 516B, 517 and Form 583 Proof of Service ('used to share a list of specific documents that you delivered to the other parties in your case'); no mandatory annual rent-increase notice template was found on the Forms Center."
   },
   {
     "id": "S27",
@@ -574,5 +574,85 @@
     "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
     "category": "Local - proposed legislation",
     "statement": "Notice present on BOTH the rent-increase page (S01) and the Current Rates page (S02), posted November 9, 2026. Quotes: 'The San Francisco Board of Supervisors is considering legislation (File No. 261020) that would temporarily limit the combined amount of banked rent increases and capital improvement rent increases that may be imposed on rent-controlled units to 10% per year.' 'If enacted as currently proposed, the legislation would apply to banked rent increases noticed on or after September 15, 2026, and capital improvement rent increases based on petitions filed with the Rent Board on or after September 15, 2026.' 'This legislation has not been enacted and is subject to change.' Direct fetch_page of both pages 2026-11-10."
+  },
+  {
+    "id": "S73",
+    "agency": "SF Rent Board",
+    "title": "Rent Board Rules Part XIII - Sec. 37.15 reporting; Rule 13.14 licensing",
+    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-10: Rule 13.14 - an increase under Sec. 37.3(a)(1)-(2) 'purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void; provided, however, that the effective date of the rent increase, not the date of service, shall be used to determine whether or not the increase conforms'; applies to increases effective on or after July 1, 2022, and for condominiums and buildings with fewer than 10 residential units to increases effective on or after March 1, 2023."
+  },
+  {
+    "id": "S74",
+    "agency": "SF Admin Code (official publisher)",
+    "title": "Sec. 37.3 Rent Limitations (American Legal Publishing, official publisher)",
+    "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-0-70881",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-10 (chunk 18): 'SEC. 37.3. RENT LIMITATIONS.' text located, including the annual-increase subsection opening 'On March 1 of each year, the Board shall publish the increase in the CPI for the preceding 12 months'. American Legal Publishing is the official publisher of the San Francisco Administrative Code (the SF.gov Rent Board version is an administrative convenience - see flag F17)."
+  },
+  {
+    "id": "S75",
+    "agency": "SF Admin Code (official publisher)",
+    "title": "Sec. 37.15 Reporting Obligations; Licensing (American Legal Publishing, official publisher)",
+    "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-0-16540",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-10 (chunk 15): 'SEC. 37.15. REPORTING OBLIGATIONS; LICENSING.' - owners report under penalty of perjury; tenant-occupied units report base rent in $250 increments; units in buildings with fewer than 10 units report commencing March 1, 2023 and annually by March 1; owner/manager contact changes updated within 30 days; (e) a substantially compliant landlord 'shall receive a license to impose rent increases'."
+  },
+  {
+    "id": "S76",
+    "agency": "SF Rent Board",
+    "title": "Rent Board Rules and Regulations, complete PDF, effective January 13, 2026",
+    "url": "https://media.api.sf.gov/documents/625_RR_Complete_1-13-26.pdf",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-10 (chunk 0): cover states 'Effective Date: January 13, 2026'; the table of contents confirms Rule 1.11 Anniversary Date, Rule 1.12 Annual Rent Increase (amended 1/13/26 for the missing October 2025 CPI), Rule 4.10 Notice, Rule 4.12 Banking and Rule 13.14 Licensing - Notice of Rent Increase."
+  },
+  {
+    "id": "S77",
+    "agency": "SF Rent Board",
+    "title": "Rent Board Rules Part IV - rent increases not requiring approval",
+    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-10: Rule 4.10(a) requires written notice stating which portion of the increase reflects the annual increase and/or banked amount (and the other listed components); 4.10(b) a nonconforming increase renders the entire increase null and void unless the amount equals no more than the allowable annual and banked increase(s), with a good-faith readjustment tolerance of one-half of one percent of the prior base rent."
+  },
+  {
+    "id": "S78",
+    "agency": "CA Legislature",
+    "title": "Code of Civil Procedure section 1013 - service by mail",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013.&lawCode=CCP",
+    "category": "State",
+    "statement": "Direct fetch_page 2026-11-10: service by mail is complete at the time of deposit; notice periods are extended 5 calendar days if both the place of address and the place of mailing are within California, 10 calendar days if either is outside California but within the United States, and 20 calendar days if either is outside the United States; the mailed copy 'shall bear a notation of the date and place of mailing or be accompanied by an unsigned copy of the affidavit or certificate of mailing' (subd. (b))."
+  },
+  {
+    "id": "S79",
+    "agency": "CA Department of Real Estate",
+    "title": "California Tenants: A Guide to Residential Tenants' and Landlords' Rights and Responsibilities (2026)",
+    "url": "https://www.dre.ca.gov/publications/ResourceGuidebook/2026_Landlord_Tenant_Guide.pdf",
+    "category": "State",
+    "statement": "Direct fetch_page 2026-11-10 (chunk 9): for a fixed-term tenancy 'the landlord cannot raise the tenant's rent during the tenancy, unless the rental agreement expressly allows rent increases.'"
+  },
+  {
+    "id": "S80",
+    "agency": "CA Department of Real Estate",
+    "title": "DRE Landlords' and Tenants' Rights Guide - Living in the Rental Unit",
+    "url": "https://www.dre.ca.gov/publications/ResourceGuidebook/gb08_living.html",
+    "category": "State",
+    "statement": "Direct fetch_page 2026-11-10 (chunk 2): a notice of rent increase must be in writing; it may be delivered personally or sent by first-class mail with proper postage addressed to the rental unit; mailing adds 5 days from within California (10 from outside California, 20 from outside the United States), giving the 35-day and 95-day mailed-notice examples; 'If the rental unit is subject to a local rent stabilization ordinance instead of the Tenant Protection Act, the local ordinance may impose stricter rent limits and additional requirements on the landlord.'"
+  },
+  {
+    "id": "S81",
+    "agency": "SF Rent Board",
+    "title": "Operating and Maintenance Expense Petitions",
+    "url": "https://www.sf.gov/information--operating-and-maintenance-expense-petitions",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-10: petition for an additional base rent increase of up to 7%; 'The landlord must file the O&M petition before serving the notice of increase'; 'If the notice is issued before the petition is filed, the notice is void and cannot be the basis for a lawful O&M increase'; a granted O&M increase becomes part of base rent and 'can only be imposed on the tenant's anniversary date and only after serving the tenant with a proper written notice of rent increase'."
+  },
+  {
+    "id": "S82",
+    "agency": "SF Rent Board",
+    "title": "Failure to Repair and Maintain Petitions",
+    "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-10: a tenant may petition to defer an annual rent increase when requested repairs required by law were not made; 'The petition must be filed no later than 60 days following the tenant's receipt of the rent increase notice'; the tenant pays the disputed increase until the ALJ decision and is refunded if the petition is granted; 'The tenant's anniversary date is not affected by the deferral of the increase.'"
   }
 ]
