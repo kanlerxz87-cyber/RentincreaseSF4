@@ -1,5 +1,7 @@
 """Page definitions: every row has source_ids, status, value, notes and optional flag_id."""
 
+from site_b87 import build_worksheet_page
+
 COLUMNS = ["Item", "Value / finding", "Status", "Official source(s)", "Notes / flag"]
 OWNER_COLUMNS = ["Item", "Owner-supplied value", "Status", "Source", "Notes / flag"]
 
@@ -75,6 +77,7 @@ PAGES = {
                 row("STP-10", "Step 10 - Serve written notice with the required contents", "At least 30 days' written notice, or 90 days if the increase by itself or combined with another increase in the same year is more than 10%; add 5 days if mailed. State the dollar amount, the percentage, the effective date and any banked portion.", "verified", ["S01", "S05", "S35"], "Civil Code 827 requires longer notice in some cases."),
                 row("STP-11", "Step 11 - Deliver it properly and keep proof", "Personal delivery or mail under Civil Code 827 and Code of Civil Procedure 1013; keep the notice, proof of service and the license record with the unit file.", "verified", ["S35", "S08", "S55"], "The license need not be attached to the notice."),
                 row("STP-12", "Step 12 - Expect tenant-side review and apply the same rule to each unit", "Tenant petitions are free and have no filing deadline for an unlawful increase; a tenant may search the portal for license status. Apply the same written, neutral, dated process to every eligible unit.", "verified", ["S25", "S26", "S08", "S42"], "No rule requires raising both units - see Analysis."),
+                row("STP-13", "Step 13 - Complete the source-linked Notice Worksheet before service", "Work through the Notice Worksheet's eligibility gates, blank case-value cells, notice contents, service record and tenant-challenge checks; the official-rule column links to the governing SF and California sources.", "analysis", ["S72", "S35", "S75", "S07"], "Case values remain blank and flagged until officially confirmed; the worksheet is not an approval or a filed notice."),
             ]},
             {"title": "How this applies to the two anonymized units", "columns": COLUMNS, "rows": [
                 row("APP-01", "Unit 1 - earliest annual increase under the stated lease date", "With a February 1, 2025 lease start, the first annual increase could have been given on February 1, 2026; any later increase date uses the rate in effect on that date.", "analysis", ["S01", "S02"], "Derived from the official timing rule plus the owner-supplied date; no increase history was supplied."),
@@ -350,6 +353,7 @@ PAGES = {
                 row("CHK-15", "Keep the fee separate", "Pay or confirm the Rent Board Fee ($59.00 per dwelling unit for 2026-2027, due March 1) and, if recovering 50%, show it as a separate fee recovery rather than folding it into the rent increase", "verified", ["S56"], "The fee is not part of base rent."),
                 row("CHK-16", "Match each notice to a license on its effective date", "Check the portal license status for the specific effective date of each notice, for each unit, including any prior year", "verified", ["S53", "S08", "S55"], "A license now does not cure a notice effective before it existed."),
                 row("CHK-17", "Re-serve rather than backdate", "If a notice went out unlicensed, report, confirm the license, and serve a new notice with a compliant effective date", "analysis", ["S08", "S53", "S35"], "Do not treat an unenforceable notice as effective."),
+                row("CHK-18", "Use the Notice Worksheet and keep its service record", "Complete the categorized Notice Worksheet (pages/worksheet.html) before service; Rule 13.14 tests the license on the effective date, while confirming before service is a conservative practice only. Keep a private proof-of-service record.", "analysis", ["S72", "S35", "S75", "S26"], "B87-F05: no Form 583 annual-notice filing duty was verified. Blank case values stay flagged; no challenge immunity is claimed."),
             ]},
         ],
     },
@@ -479,3 +483,6 @@ PAGES = {
         ],
     },
 }
+
+# Independently verified B87 notice worksheet, mapped to canonical official sources.
+PAGES["worksheet"] = build_worksheet_page()

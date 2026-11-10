@@ -1,5 +1,7 @@
 """Flagged items, navigation and dashboard cards."""
 
+from site_b87 import B87_FLAGS
+
 NAV = [
     ("summary", "Executive Summary"),
     ("process", "Step-by-Step License"),
@@ -12,6 +14,7 @@ NAV = [
     ("case", "Anonymized Case"),
     ("calculations", "Calculations"),
     ("compliance", "Notice Checklist"),
+    ("worksheet", "Notice Worksheet"),
     ("reasons", "Reasonable Reasons"),
     ("corporate", "Corporate Practice"),
     ("individual", "Individual Practice"),
@@ -29,6 +32,7 @@ CARDS = [
     ("State-only SF cap", "8.8%", "state", "AB 1482 8/1/26-7/31/27; does not replace SF Rent Ordinance limits."),
     ("Official source links", "auto:sources", "sources", "Official government and SEC links for manual review."),
     ("Flagged items", "auto:flags", "flagged", "Published with source links; do not block the site."),
+    ("Notice worksheet", "auto:worksheet_rows", "worksheet", "Official-rule gates, blank case values and conditional arithmetic."),
     ("Anonymized units", "2", "case", "Placeholder tenant IDs; dates and amounts unchanged."),
     ("Federal cap", "Blank", "federal", "No official general private-rent cap found; flagged."),
     ("94122 SAFMR", "Blank", "market", "Official ZIP row not obtained; flagged."),
@@ -92,4 +96,9 @@ FLAGS = [
     {"id": "F44", "title": "Privacy: the raw tenant identifiers remain in public git history and pull-request diffs", "detail": "The first generated validation report (2026-11-06, commit 0ede010) printed the six raw tenant identifier tokens in one check detail. They were removed from the current tree and the validator now reports counts only, but the commit history, the diffs of PRs #1, #2, #4, #5 and #9, and the tips of two finished session branches still contain them in this public repository. Removing them requires the owner: history rewrite with git filter-repo and a force-push, a GitHub Support request, deleting the two stale branches, or making the repository private. An agent cannot rewrite history or push to another branch, and no raw token is published on this site. Full detail: research/privacy/HISTORY_EXPOSURE.md.", "source_ids": ["S68"], "status": "needs review"},
     {"id": "F45", "title": "SF.gov Current Rates page (S02) link labeled '575 Cap. Imp. Labor Rates' points to Form 574 PDF", "detail": "On https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit, the link labeled '575 Cap. Imp. Labor Rates' under Capital Improvement Petitions points to https://www.sf.gov/documents/34916/574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf (Form 574 Imputed Interest 26-27) instead of Form 575. Confirmed by direct fetch_page on 2026-11-08 (T44-A); recorded as an official SF.gov hyperlink defect and not relied upon for any calculation.", "source_ids": ["S02"], "status": "needs review"},
     {"id": "F46", "title": "Pending legislation could affect banked and capital-improvement increases", "detail": "On November 9, 2026 the Rent Board posted a notice about Board File 261020. The proposal would temporarily limit combined banked and capital-improvement increases to 10% per year; if enacted as currently proposed, it would apply to banked increases noticed on or after September 15, 2026 and capital-improvement increases based on petitions filed on or after that date. Legistar showed Pending Committee Action and no enactment on November 10. This is not current law and may change. A 90-day notice does not establish that an increase is lawful. Check the current status and seek advice before relying on a banked calculation or serving notice; its effect on either unit is unverified.", "source_ids": ["S05", "S71"], "status": "needs review"},
+    {"id": "F47", "title": "Stale PR #18/#19/#25 alternative generators reconciled", "detail": "Three 2026-11-08 pull requests were more than 60 minutes stale with no commits. Their histories were merged into the final integration branch, but the canonical main generator, source IDs, counts and HTML were retained because later merged T44/T45 work superseded their competing implementations. COORDINATION.md was union-merged; PR #19's fee integration note and PR #25's current-source audit and table-search asset were retained. Their original branch versions and PRs remain available for manual review. No legal finding or case fact was discarded.", "source_ids": ["S68"], "status": "needs review"},
+    {"id": "F48", "title": "Forms Center URL variant and Form 583 verification gap", "detail": "B87 cited the short URL https://www.sf.gov/rent-board-forms-forms-center; one direct fetch of that variant failed on 2026-11-10, while canonical S26 https://www.sf.gov/reports--rent-board-forms-forms-center resolved to the same official Forms Center page. The worksheet uses S26. B87's 2026-11-08 review of Forms Center chunks 0-8 found no mandatory annual-notice template or Form 583 filing duty for a plain annual/banked increase; keep a private service record and do not assert such a filing duty.", "source_ids": ["S26"], "status": "needs review"},
 ]
+
+# Namespaced integration flags from the independently verified B87 kit.
+FLAGS.extend(B87_FLAGS)

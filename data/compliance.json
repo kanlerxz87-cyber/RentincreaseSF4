@@ -239,6 +239,21 @@
           "notes": "Do not treat an unenforceable notice as effective.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "CHK-18",
+          "label": "Use the Notice Worksheet and keep its service record",
+          "value": "Complete the categorized Notice Worksheet (pages/worksheet.html) before service; Rule 13.14 tests the license on the effective date, while confirming before service is a conservative practice only. Keep a private proof-of-service record.",
+          "status": "analysis",
+          "source_ids": [
+            "S72",
+            "S35",
+            "S75",
+            "S26"
+          ],
+          "notes": "B87-F05: no Form 583 annual-notice filing duty was verified. Blank case values stay flagged; no challenge immunity is claimed.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

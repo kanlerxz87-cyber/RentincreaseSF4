@@ -47,6 +47,7 @@ def flag_link(flag_id, in_pages):
 
 def render_table(section, in_pages=True):
     cols = section["columns"]
+    worksheet = section.get("kind") == "worksheet"
     out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} — scrollable table"><table><thead><tr>'.format(e(section["title"]))]
     for c in cols:
         out.append("<th scope=\"col\">{}</th>".format(e(c)))
@@ -60,6 +61,16 @@ def render_table(section, in_pages=True):
             notes = "{} &nbsp; {}".format(notes, fl) if notes else fl
         out.append("<tr>")
         out.append("<td><strong>{}</strong><br><span class=\"small\">{}</span></td>".format(e(r["label"]), e(r["id"])))
+        if worksheet:
+            out.append("<td>{}</td>".format(e(r.get("rule", ""))))
+            out.append("<td>{}</td>".format(e(r.get("value", "")) if r.get("value", "") != "" else '<span class="blank">(blank - not officially confirmed)</span>'))
+            out.append("<td>{}</td>".format(badge(r["status"])))
+            out.append("<td>{}</td>".format(source_links(r.get("source_ids", []))))
+            flag_links = " ".join(flag_link(fid, in_pages) for fid in r.get("flag_ids", []))
+            note_cell = "{} &nbsp; {}".format(notes, flag_links) if notes else flag_links
+            out.append("<td>{}</td>".format(note_cell))
+            out.append("</tr>")
+            continue
         out.append(value_cell)
         out.append("<td>{}</td>".format(badge(r["status"])))
         if r.get("status") == "owner supplied" and r.get("source_note"):
@@ -83,6 +94,8 @@ def nav_html(active, in_pages):
 
 def header_html(title, subtitle, active, in_pages):
     css = "../assets/site.css" if in_pages else "assets/site.css"
+    js = "../assets/site.js" if in_pages else "assets/site.js"
+    p = "../" if in_pages else ""
     return """<!doctype html>
 <html lang="en">
 <head>
@@ -90,12 +103,15 @@ def header_html(title, subtitle, active, in_pages):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title} | Rental increase SF</title>
 <link rel="stylesheet" href="{css}">
+<script defer src="{js}"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="privacy-strip"><div class="wrap"><strong>Privacy:</strong><span>Public files use Tenant A-F placeholders and omit the exact address. Earlier public Git history/PR exposure is not remediated by current-tree anonymization; see <a href="{p}research/privacy/HISTORY_EXPOSURE.md">history exposure</a> and flag F44.</span></div></div>
 <header><div class="wrap"><h1>{title}</h1><p>{subtitle}</p><p class="small">Research ledger dated {date} UTC &middot; official-source-linked research</p></div></header>
 <nav>{nav}</nav>
-<main>
-""".format(title=e(title), subtitle=e(subtitle), date=e(D.DATE), css=css, nav=nav_html(active, in_pages))
+<main id="main">
+""".format(title=e(title), subtitle=e(subtitle), date=e(D.DATE), css=css, js=js, p=p, nav=nav_html(active, in_pages))
 
 def footer_html(in_pages):
     p = "../" if in_pages else ""
@@ -169,6 +185,7 @@ def summary_page_with_narrative(page):
         e(page["title"]), e(page["description"]), e(D.DISCLAIMER)))
     out.append('<section class="narrative">{}'.format(md_to_html(counts(D.EXECUTIVE_SUMMARY_TEXT))))
     out.append('<p class="small">The same text is available as <a href="../EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a> for manual review.</p></section>')
+    out.append('<section class="searchbar"><label for="table-search">Filter rows on this page</label><input id="table-search" type="search" data-table-search placeholder="Type a rule, unit, flag or official source ID"><span data-search-count class="count"></span></section>')
     for sec in page["sections"]:
         out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
     out.append(footer_html(True))
@@ -185,6 +202,7 @@ def page_html(slug, page):
     out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
         e(page["title"]), e(page["description"]), e(D.DISCLAIMER)
     ))
+    out.append('<section class="searchbar"><label for="table-search">Filter rows on this page</label><input id="table-search" type="search" data-table-search placeholder="Type a rule, unit, flag or official source ID"><span data-search-count class="count"></span></section>')
     for sec in page["sections"]:
         out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
     out.append(footer_html(True))
@@ -237,7 +255,7 @@ def index_html():
                '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
                '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
                '<p>A second, separate Rent Board obligation also applies: the annual <strong>Rent Board Fee</strong> - <strong>$59.00 per dwelling unit for 2026-2027</strong>, due March 1, with an exemption window closing December 14, 2026. Paying it does not create a license, and a license does not pay it.</p>'
-               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; <a class="cta" href="pages/fee.html">Rent Board Fee, penalties and tenant recovery &rarr;</a></p>'
+               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; <a class="cta" href="pages/worksheet.html">Open the source-linked Notice Worksheet &rarr;</a> &nbsp; <a class="cta" href="pages/fee.html">Rent Board Fee, penalties and tenant recovery &rarr;</a></p>'
                '<div class="disclaimer">{}</div></section>'.format(
                    source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
     out.append('<section class="hero"><h2>How to read this dashboard</h2>'
@@ -252,6 +270,8 @@ def index_html():
             value = str(len(D.SOURCES))
         elif value == "auto:flags":
             value = str(len(D.FLAGS))
+        elif value == "auto:worksheet_rows":
+            value = str(sum(len(sec["rows"]) for sec in D.PAGES["worksheet"]["sections"]))
         out.append('<div class="card"><div class="k">{}</div><div class="v">{}</div><div class="d">{}</div><a href="pages/{}.html">Open {} &rarr;</a></div>'.format(
             e(label), e(value), e(desc), e(slug), e(label)
         ))
@@ -284,6 +304,7 @@ def main():
         d.mkdir(parents=True, exist_ok=True)
     (ROOT / ".nojekyll").write_text("", encoding="utf-8")
     write(ASSETS / "site.css", D.CSS_TEXT)
+    write(ASSETS / "site.js", D.JS_TEXT)
 
     sources_json = [dict(id=sid, **src) for sid, src in sorted(D.SOURCES.items())]
     write(DATA / "sources.json", json.dumps(sources_json, indent=2, ensure_ascii=False) + "\n")

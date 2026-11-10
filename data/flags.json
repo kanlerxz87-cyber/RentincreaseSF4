@@ -574,5 +574,102 @@
       "S71"
     ],
     "status": "needs review"
+  },
+  {
+    "id": "F47",
+    "title": "Stale PR #18/#19/#25 alternative generators reconciled",
+    "detail": "Three 2026-11-08 pull requests were more than 60 minutes stale with no commits. Their histories were merged into the final integration branch, but the canonical main generator, source IDs, counts and HTML were retained because later merged T44/T45 work superseded their competing implementations. COORDINATION.md was union-merged; PR #19's fee integration note and PR #25's current-source audit and table-search asset were retained. Their original branch versions and PRs remain available for manual review. No legal finding or case fact was discarded.",
+    "source_ids": [
+      "S68"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F48",
+    "title": "Forms Center URL variant and Form 583 verification gap",
+    "detail": "B87 cited the short URL https://www.sf.gov/rent-board-forms-forms-center; one direct fetch of that variant failed on 2026-11-10, while canonical S26 https://www.sf.gov/reports--rent-board-forms-forms-center resolved to the same official Forms Center page. The worksheet uses S26. B87's 2026-11-08 review of Forms Center chunks 0-8 found no mandatory annual-notice template or Form 583 filing duty for a plain annual/banked increase; keep a private service record and do not assert such a filing duty.",
+    "source_ids": [
+      "S26"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F01",
+    "title": "Case-specific notice facts unverified",
+    "detail": "Keep unit cells blank; do not infer eligibility, base rent, anniversary, license, lease permission, banking, petition, subsidy, repair/retaliation or service facts.",
+    "source_ids": [
+      "S01",
+      "S07",
+      "S74"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F02",
+    "title": "License timing is effective-date based",
+    "detail": "Rule 13.14 uses the effective date, not service date; confirming license before service is conservative practice only.",
+    "source_ids": [
+      "S72"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F03",
+    "title": "Banking summary wording differs",
+    "detail": "SF guidance says 24 full months; Rule 4.12 says a full 12 months from when an increase could have been imposed. Require full history; no case banking inferred.",
+    "source_ids": [
+      "S05",
+      "S74"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F04",
+    "title": "Notice-nullity wording differs",
+    "detail": "Include full §37.3(b) breakdown and Rule 4.12 banked dates conservatively; do not rely on limited exceptions without review.",
+    "source_ids": [
+      "S73",
+      "S74"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F05",
+    "title": "Form 583 / annual template not verified as annual-notice filing duty",
+    "detail": "Form 583 is described for case documents; keep private service record; no mandatory annual-notice template verified in reviewed Forms Center sections.",
+    "source_ids": [
+      "S26"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F06",
+    "title": "Official examples contain date/rate inconsistencies",
+    "detail": "Use operative Current Rates/Form 571 schedule and statute/rules, not inconsistent examples.",
+    "source_ids": [
+      "S01",
+      "S54",
+      "S04"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F07",
+    "title": "Fixed-term mid-term permission unknown",
+    "detail": "DRE guide verifies general rule; actual lease clause/end date blank and flagged.",
+    "source_ids": [
+      "S76"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "B87-F08",
+    "title": "No attorney approval or challenge immunity",
+    "detail": "Conservative checklist capable of tenant-lawyer review only; neutral wording is not a retaliation/discrimination safe harbor.",
+    "source_ids": [
+      "S57",
+      "S25"
+    ],
+    "status": "needs review"
   }
 ]

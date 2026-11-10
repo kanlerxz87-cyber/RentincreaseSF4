@@ -1,4 +1,3 @@
-
 (function () {
   var input = document.querySelector('[data-table-search]');
   if (!input) return;

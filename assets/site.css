@@ -56,3 +56,17 @@ ul{margin:.4rem 0 .4rem 1.2rem}
 .narrative a{word-break:break-word}
 .narrative>h2:first-child{margin-top:0}
 @media(max-width:700px){nav{position:static}header h1{font-size:1.55rem}nav .wrap{padding:.35rem .5rem}main{padding:1rem .6rem 2rem}th,td{padding:.5rem .45rem}}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:.6rem;z-index:100}
+.skip-link:focus{left:0}
+.privacy-strip{background:#fff0f0;border-bottom:1px solid #efc7c7;color:#7a1f1f;padding:.65rem 1rem;font-size:.9rem}
+.privacy-strip .wrap{display:flex;gap:.6rem;align-items:flex-start}
+.privacy-strip a{color:#7a1f1f;font-weight:700}
+.searchbar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:.8rem 0;padding:.7rem;background:#fff;border:1px solid var(--line);border-radius:10px}
+.searchbar label{font-weight:700;font-size:.86rem}
+.searchbar input{flex:1;min-width:220px;padding:.6rem .75rem;border:1px solid var(--line);border-radius:8px;font:inherit}
+.searchbar .count{font-size:.85rem;color:var(--muted)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:1.2rem 0}
+.panel ul{margin:.4rem 0 .4rem 1.2rem}
+[hidden]{display:none!important}
+@media(max-width:700px){.searchbar{padding:.6rem}.privacy-strip .wrap{display:block}}

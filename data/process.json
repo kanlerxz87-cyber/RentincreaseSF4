@@ -316,6 +316,21 @@
           "notes": "No rule requires raising both units - see Analysis.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "STP-13",
+          "label": "Step 13 - Complete the source-linked Notice Worksheet before service",
+          "value": "Work through the Notice Worksheet's eligibility gates, blank case-value cells, notice contents, service record and tenant-challenge checks; the official-rule column links to the governing SF and California sources.",
+          "status": "analysis",
+          "source_ids": [
+            "S72",
+            "S35",
+            "S75",
+            "S07"
+          ],
+          "notes": "Case values remain blank and flagged until officially confirmed; the worksheet is not an approval or a filed notice.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     },

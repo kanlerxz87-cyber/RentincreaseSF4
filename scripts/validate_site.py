@@ -17,14 +17,18 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 PAGES = ROOT / "pages"
 
-# Government sources, plus the two project-record domains used only for rows about this
-# repository (S68 repository, S69 GitHub Pages build API). Project-record rows are labelled
-# "Project record" in the source ledger and never support a legal or rent finding.
+# Government sources and the official code publisher used by SF.gov, plus the two
+# project-record domains used only for rows about this repository (S68 repository,
+# S69 GitHub Pages build API). Project-record rows are labelled "Project record" in
+# the source ledger and never support a legal or rent finding. codelibrary.amlegal.com
+# is SF.gov's official publisher of the Administrative Code; dre.ca.gov is the
+# California Department of Real Estate's official 2026 landlord/tenant guide.
 OFFICIAL_DOMAINS = {
     "sf.gov", "media.api.sf.gov", "sfplanninggis.org", "default.sfplanning.org",
     "commissions.sfplanning.org", "leginfo.legislature.ca.gov", "calcivilrights.ca.gov",
     "hud.gov", "huduser.gov", "ecfr.gov", "govinfo.gov", "sec.gov", "api.github.com",
     "sfrb.org", "sftreasurer.org", "github.com", "sfgov.legistar.com",
+    "codelibrary.amlegal.com", "dre.ca.gov",
 }
 
 report = {"date": D.DATE, "status": "running", "checks": [], "errors": []}
@@ -336,6 +340,40 @@ def main():
     check("project-record flags cite project records and S02 link defect is flagged",
           all(f["source_ids"] != ["S43"] and f["source_ids"] != ["S20"] for f in flags if f["id"] in ("F19", "F20", "F31"))
           and any(f["id"] == "F45" and "S02" in f["source_ids"] for f in flags))
+
+    # T67 final integration: canonical B87 worksheet, new official sources, and PR reconciliation.
+    worksheet_page = pages.get("worksheet", {})
+    worksheet_rows = [r for sec in worksheet_page.get("sections", []) for r in sec.get("rows", [])]
+    worksheet_html = (PAGES / "worksheet.html").read_text(encoding="utf-8")
+    check("Notice Worksheet is a categorized 40-row subpage with six columns",
+          len(worksheet_page.get("sections", [])) == 6 and len(worksheet_rows) == 40
+          and all(len(sec["columns"]) == 6 for sec in worksheet_page["sections"])
+          and all(r["id"] in worksheet_html for r in worksheet_rows))
+    check("B87 worksheet uses canonical source IDs and statuses only",
+          all(r["source_ids"] and all(sid in source_map and not sid.startswith("B87-") for sid in r["source_ids"]) for r in worksheet_rows)
+          and all(r["status"] in ("needs review", "analysis") for r in worksheet_rows)
+          and all(r.get("rule") for r in worksheet_rows)
+          and not re.search(r'"B87-S\d\d"', json.dumps(worksheet_page)))
+    check("B87 worksheet blank case values are flagged and owner intake is labelled",
+          all(r["value"] == "" and r.get("flag_id") in flag_ids for r in worksheet_rows if r["status"] == "needs review")
+          and all("not an official finding" in r["rule"] for r in worksheet_rows if r["id"].startswith("B87-IN-")))
+    check("all eight B87 flags including unreferenced F06 are published",
+          all("B87-F{:02d}".format(n) in flag_ids and "B87-F{:02d}".format(n) in flagged_html for n in range(1, 9))
+          and any(f["id"] == "B87-F06" for f in flags))
+    check("newly verified official sources S72-S78 are published with correct domains",
+          all("S{:02d}".format(n) in source_map and official_domain(source_map["S{:02d}".format(n)]["url"]) for n in range(72, 79))
+          and "effective date" in D.SOURCES["S72"]["statement"]
+          and "five calendar days" in D.SOURCES["S75"]["statement"]
+          and "not legal advice" in D.SOURCES["S76"]["statement"])
+    check("S71 remains File 261020 and stale PR reconciliation flags are published",
+          "261020" in D.SOURCES["S71"]["statement"]
+          and all(any(f["id"] == fid for f in flags) for fid in ("F47", "F48")))
+    check("table filter, accessibility and privacy strip are generated",
+          (ROOT / "assets" / "site.js").exists()
+          and "data-table-search" in (ROOT / "assets" / "site.js").read_text(encoding="utf-8")
+          and "data-table-search" in worksheet_html
+          and '[hidden]{display:none!important}' in (ROOT / "assets" / "site.css").read_text(encoding="utf-8")
+          and 'class="skip-link"' in worksheet_html and "HISTORY_EXPOSURE.md" in worksheet_html)
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

@@ -5,12 +5,12 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "71 official sources"
+      "detail": "78 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "56 flagged items"
+      "detail": "66 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -35,12 +35,12 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "299 rows checked; "
+      "detail": "341 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "35 needs-review rows"
+      "detail": "73 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -233,6 +233,16 @@
       "detail": ""
     },
     {
+      "name": "data/worksheet.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/worksheet.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "pages/summary.html in navigation exists",
       "ok": true,
       "detail": ""
@@ -284,6 +294,11 @@
     },
     {
       "name": "pages/compliance.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/worksheet.html in navigation exists",
       "ok": true,
       "detail": ""
     },
@@ -450,7 +465,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "46 numeric flags"
+      "detail": "48 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -556,17 +571,52 @@
       "name": "project-record flags cite project records and S02 link defect is flagged",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "Notice Worksheet is a categorized 40-row subpage with six columns",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B87 worksheet uses canonical source IDs and statuses only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B87 worksheet blank case values are flagged and owner intake is labelled",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "all eight B87 flags including unreferenced F06 are published",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "newly verified official sources S72-S78 are published with correct domains",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "S71 remains File 261020 and stale PR reconciliation flags are published",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "table filter, accessibility and privacy strip are generated",
+      "ok": true,
+      "detail": ""
     }
   ],
   "errors": [],
   "summary": {
-    "sources": 71,
-    "pages": 19,
-    "data_files": 21,
-    "rows_verified": 299,
-    "needs_review_rows": 35,
-    "flags": 56,
-    "checks": 111,
+    "sources": 78,
+    "pages": 20,
+    "data_files": 22,
+    "rows_verified": 341,
+    "needs_review_rows": 73,
+    "flags": 66,
+    "checks": 121,
     "errors": 0
   }
 }

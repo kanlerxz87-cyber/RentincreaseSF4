@@ -74,7 +74,7 @@ Extra rent for an additional occupant is unlawful, and adding an occupant is not
 
 ## Flagged for Review
 
-All {{FLAGS}} irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), Unit 1's unknown Section 6.14 notice history (F28), a corrected capital-improvement petition count (F29), and the conditional (not asserted) banked-increase illustration (F30), conflict markers that `main` commit `1d80419` had committed into `COORDINATION.md` and which the validator did not catch (F31), out-of-sequence flag cross-references in `SOURCES.md` (F32), the fee-versus-license conflation (F33), the conditional and unverified two-unit owner-occupied exemption (F34), the in-law-unit / second-structure coverage question (F35), two QA corrections made on 2026-11-08 (F36: in-law exemption wording; F37: project-management rows that cited an unrelated official source), the new fee findings (F38: referral timing differs inside one SF.gov page; F39: an older fee page still shows 2023 dates; F40: Form 573 historical rows that do not show a 50% tenant share; F41: no official statement links fee payment to licence validity; F42: how a 50% recovery is split among co-tenants is not stated; F43: case-specific fee and registration facts are unverified), F44: the raw tenant identifiers still reachable in this public repository's git history and pull-request diffs, which only the owner can remediate, and F45: an official SF.gov hyperlink defect on the Current Rates page where the link labeled '575 Cap. Imp. Labor Rates' points to the Form 574 Imputed Interest PDF. Flagged items do not block the site or merge.
+All {{FLAGS}} irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, unparsed 94122 SAFMR data, unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), the stale-PR reconciliation (F47), the Forms Center URL/Form 583 verification gap (F48), and the eight B87 Notice Worksheet flags (B87-F01-B87-F08), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), Unit 1's unknown Section 6.14 notice history (F28), a corrected capital-improvement petition count (F29), and the conditional (not asserted) banked-increase illustration (F30), conflict markers that `main` commit `1d80419` had committed into `COORDINATION.md` and which the validator did not catch (F31), out-of-sequence flag cross-references in `SOURCES.md` (F32), the fee-versus-license conflation (F33), the conditional and unverified two-unit owner-occupied exemption (F34), the in-law-unit / second-structure coverage question (F35), two QA corrections made on 2026-11-08 (F36: in-law exemption wording; F37: project-management rows that cited an unrelated official source), the new fee findings (F38: referral timing differs inside one SF.gov page; F39: an older fee page still shows 2023 dates; F40: Form 573 historical rows that do not show a 50% tenant share; F41: no official statement links fee payment to licence validity; F42: how a 50% recovery is split among co-tenants is not stated; F43: case-specific fee and registration facts are unverified), F44: the raw tenant identifiers still reachable in this public repository's git history and pull-request diffs, which only the owner can remediate, and F45: an official SF.gov hyperlink defect on the Current Rates page where the link labeled '575 Cap. Imp. Labor Rates' points to the Form 574 Imputed Interest PDF. Flagged items do not block the site or merge. Before any notice, work through the source-linked, categorized Notice Worksheet at pages/worksheet.html: its official-rule column is linked, while blank case values remain blank and flagged. It is a review worksheet, not attorney approval, a filed notice, or a guarantee that a tenant will not petition.
 
 ## Sources
 
@@ -89,10 +89,11 @@ Full detail is in `research/sources/irregularities.md`, `research/sources/unveri
 
 ## Summary of flags
 
-- {{FLAGS}} flagged items in total: {{SOURCE_FLAGS}} source-quality and process flags (F25: SF.gov license-consequence wording differs — 'may be null/void' vs notice 'not enforceable' without a license on the effective date; F26: earlier validation report published raw identifier tokens in a check detail — fixed 2026-11-07, values withheld): SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, old 1.7% example, F27 (next year's allowable rate not yet published), F28 (Unit 1 Section 6.14 notice history unknown), F29 (correction: the June 2024 source shows 18 capital-improvement petitions / 148 units, not 19 / 148) F30 (the 13.1% banked figure for Unit 2 is conditional arithmetic, not a finding), F31-F37 (process and QA corrections: committed conflict markers, out-of-sequence cross-references, fee-versus-licence conflation, the conditional two-unit owner-occupied exemption, in-law wording, and project rows that cited an unrelated official source), F38-F43 (Rent Board Fee: referral timing, a stale fee page, Form 573 row anomalies, the absence of an official fee-to-licence link, co-tenant allocation, and unverified case fee facts), F44 (privacy: raw tenant identifiers remain in this public repository's git history and PR diffs), F45 (official SF.gov hyperlink defect on the Current Rates page where '575 Cap. Imp. Labor Rates' points to Form 574 Imputed Interest PDF), and F46 (pending File 261020, not enacted; potential impact on banked and capital-improvement increases).
+- {{FLAGS}} flagged items in total: {{SOURCE_FLAGS}} source-quality and process flags (F25: SF.gov license-consequence wording differs — 'may be null/void' vs notice 'not enforceable' without a license on the effective date; F26: earlier validation report published raw identifier tokens in a check detail — fixed 2026-11-07, values withheld): SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B Larson footnote, temporary CPI methodology, stale snippets, chunk split, 404 URL variants, GovInfo substitution, HUD FHA redirect, FY2027/FY2026 effective dates, unparsed 94122 SAFMR data, SEC EQR dead end, duplicate page block, Rent Ordinance not-official-record note, TRC report 404, Pages root source, platform branch constraint, unverified case facts, missing federal/attorney/both-units sources, narrow corporate/individual evidence, old 1.7% example, F27 (next year's allowable rate not yet published), F28 (Unit 1 Section 6.14 notice history unknown), F29 (correction: the June 2024 source shows 18 capital-improvement petitions / 148 units, not 19 / 148) F30 (the 13.1% banked figure for Unit 2 is conditional arithmetic, not a finding), F31-F37 (process and QA corrections: committed conflict markers, out-of-sequence cross-references, fee-versus-licence conflation, the conditional two-unit owner-occupied exemption, in-law wording, and project rows that cited an unrelated official source), F38-F43 (Rent Board Fee: referral timing, a stale fee page, Form 573 row anomalies, the absence of an official fee-to-licence link, co-tenant allocation, and unverified case fee facts), F44 (privacy: raw tenant identifiers remain in this public repository's git history and PR diffs), F45 (official SF.gov hyperlink defect on the Current Rates page where '575 Cap. Imp. Labor Rates' points to Form 574 Imputed Interest PDF), F46 (pending File 261020, not enacted; potential impact on banked and capital-improvement increases), F47 (stale PR #18/#19/#25 alternative generators reconciled), and F48 (Forms Center URL variant and the absence of a verified Form 583 annual-notice filing duty).
+- 8 independently verified B87 Notice Worksheet flags B87-F01-B87-F08: owner-supplied case facts, unverified license/effective-date and rent-history facts, SF.gov banking-example conflicts, unlicensed-increase wording, no verified annual-notice template or Form 583 filing duty, service-log limitations, fixed-term mid-term permission, and no attorney challenge immunity. Each is source-linked on the Flagged for Review page.
 - 10 case/analysis flags T03-F01-T03-F10: owner-supplied facts, anonymization, address/year/coverage, Unit 1 legal status, banked/license/notice history, illustrative arithmetic, 94122 SAFMR blank, no cap/approval/both-units guarantee, narrow corporate/individual evidence, and conservative checklist only.
 
-Every flag on the site includes official source links. Unverified value cells are blank.
+Every flag on the site includes official source links. Unverified value cells are blank. The categorized Notice Worksheet (pages/worksheet.html) separates the source-linked official rule from the blank or owner-supplied case value; its status refers to the case value, not to the rule.
 """
 
 README_TEXT = """# RentincreaseSF4
@@ -102,7 +103,8 @@ Public GitHub Pages research site for "Rental increase SF": executive summary, o
 Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
 - `index.html` - clean landing page / dashboard.
-- `pages/` - category subpages with easy-read tables, including the Rent Board Fee page (`pages/fee.html`).
+- `pages/` - category subpages with easy-read tables, including the Rent Board Fee (`pages/fee.html`), the source-linked Notice Worksheet (`pages/worksheet.html`), and the clearly labeled Flagged for Review page.
+- `research/b87_notice_kit/` - the independently verified notice worksheet kit; `scripts/site_b87.py` maps its sources/flags into the canonical site.
 - `data/` - JSON source of truth; every row has official source IDs.
 - `SOURCES.md` / `VERIFICATION.md` / `research/` - official source ledger and line-by-line verification.
 - `EXECUTIVE_SUMMARY.md` - standalone executive summary.
@@ -111,7 +113,7 @@ Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 - `COORDINATION.md` - shared task board, PR and merge record.
 - `scripts/build_site.py` / `scripts/validate_site.py` - static site build and validation.
 
-Privacy: personal information is anonymized with placeholders; raw identifiers are internal-only and excluded from git and the published site. Dates and dollar amounts are preserved. No exact address is published.
+Privacy: personal information is anonymized with placeholders; raw identifiers are internal-only and excluded from the current public tree. Dates and dollar amounts are preserved. No exact address is published. Earlier public Git history/PR exposure is disclosed in `research/privacy/HISTORY_EXPOSURE.md` and flag F44.
 
 Not legal advice. No attorney approval or guarantee of no complaint/lawsuit is claimed. Any increase is framed as a conservative compliance checklist capable of tenant-lawyer review.
 """
@@ -174,4 +176,43 @@ ul{margin:.4rem 0 .4rem 1.2rem}
 .narrative a{word-break:break-word}
 .narrative>h2:first-child{margin-top:0}
 @media(max-width:700px){nav{position:static}header h1{font-size:1.55rem}nav .wrap{padding:.35rem .5rem}main{padding:1rem .6rem 2rem}th,td{padding:.5rem .45rem}}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:.6rem;z-index:100}
+.skip-link:focus{left:0}
+.privacy-strip{background:#fff0f0;border-bottom:1px solid #efc7c7;color:#7a1f1f;padding:.65rem 1rem;font-size:.9rem}
+.privacy-strip .wrap{display:flex;gap:.6rem;align-items:flex-start}
+.privacy-strip a{color:#7a1f1f;font-weight:700}
+.searchbar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:.8rem 0;padding:.7rem;background:#fff;border:1px solid var(--line);border-radius:10px}
+.searchbar label{font-weight:700;font-size:.86rem}
+.searchbar input{flex:1;min-width:220px;padding:.6rem .75rem;border:1px solid var(--line);border-radius:8px;font:inherit}
+.searchbar .count{font-size:.85rem;color:var(--muted)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:1.2rem 0}
+.panel ul{margin:.4rem 0 .4rem 1.2rem}
+[hidden]{display:none!important}
+@media(max-width:700px){.searchbar{padding:.6rem}.privacy-strip .wrap{display:block}}
+"""
+
+JS_TEXT = r"""(function () {
+  var input = document.querySelector('[data-table-search]');
+  if (!input) return;
+  var tables = Array.prototype.slice.call(document.querySelectorAll('main table'));
+  var count = document.querySelector('[data-search-count]');
+  function filter() {
+    var q = input.value.trim().toLowerCase();
+    var visible = 0, total = 0;
+    tables.forEach(function (table) {
+      Array.prototype.forEach.call(table.tBodies, function (body) {
+        Array.prototype.forEach.call(body.rows, function (row) {
+          total += 1;
+          var show = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+          row.hidden = !show;
+          if (show) visible += 1;
+        });
+      });
+    });
+    if (count) count.textContent = q ? visible + ' of ' + total + ' rows match' : total + ' rows';
+  }
+  input.addEventListener('input', filter);
+  filter();
+})();
 """

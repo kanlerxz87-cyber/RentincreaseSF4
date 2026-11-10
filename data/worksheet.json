@@ -1,0 +1,759 @@
+{
+  "title": "Notice Worksheet",
+  "description": "Source-linked annual/banked rent-increase gates, required notice contents, service record and conditional arithmetic. The second column states either a source-linked rule or explicitly labeled owner-supplied intake; the Case value column is blank unless officially confirmed. Status refers to the case value. This is a worksheet, not a filed notice, an eligibility determination or attorney approval.",
+  "sections": [
+    {
+      "title": "Owner-supplied inputs (anonymized; not official findings)",
+      "columns": [
+        "Item / gate",
+        "Rule or owner input (source-linked)",
+        "Case value",
+        "Status",
+        "Official source(s)",
+        "Notes / flags"
+      ],
+      "kind": "worksheet",
+      "rows": [
+        {
+          "id": "B87-IN-01",
+          "label": "Unit 1 owner input",
+          "rule": "Owner-supplied intake (anonymized; not an official finding): Last lease start February 1, 2025; $3,995; initial Tenant A/B/C. Official verification blank.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Owner-supplied, anonymized; not official finding.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-IN-02",
+          "label": "Unit 1 continuing input",
+          "rule": "Owner-supplied intake (anonymized; not an official finding): April 1, 2026; $3,995; Tenant A/D. Official verification blank.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S16"
+          ],
+          "notes": "Owner-supplied; no new-tenancy or reset inference.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-IN-03",
+          "label": "Unit 2 owner input",
+          "rule": "Owner-supplied intake (anonymized; not an official finding): June 1, 2019; $3,150; Tenant E/F. Official verification blank.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Owner-supplied, anonymized.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-IN-04",
+          "label": "Location/building input",
+          "rule": "Owner-supplied intake (anonymized; not an official finding): Outer Sunset, ZIP 94122; reportedly 1940; two units described as rent-controlled. Official verification blank.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S06"
+          ],
+          "notes": "Owner-supplied; coverage unverified.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Pre-service eligibility gates",
+      "columns": [
+        "Item / gate",
+        "Rule or owner input (source-linked)",
+        "Case value",
+        "Status",
+        "Official source(s)",
+        "Notes / flags"
+      ],
+      "kind": "worksheet",
+      "rows": [
+        {
+          "id": "B87-G01",
+          "label": "Coverage gate",
+          "rule": "Many pre-June 14, 1979 units covered; exemptions exist; check PIM.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S06"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G02",
+          "label": "Housing Inventory gate",
+          "rule": "All residential owners report; tenant-occupied covered units receive license; March 1 annual update.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S07"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G03",
+          "label": "License effective-date gate",
+          "rule": "Rule 13.14 null/void if unlicensed on effective date; effective date not service date controls.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S72"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01",
+            "B87-F02"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G04",
+          "label": "Lease term gate",
+          "rule": "Fixed-term mid-term increase only if agreement expressly allows; actual lease unknown.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S76"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01",
+            "B87-F07"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G05",
+          "label": "Lawful base rent gate",
+          "rule": "Calculate on base rent; exclude temporary passthroughs; owner rent not verified lawful base.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S54"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G06",
+          "label": "Anniversary gate",
+          "rule": "Rule 1.11 anniversary is date current rent became effective; next increase >=1 year; later increase resets.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S74"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G07",
+          "label": "Rate gate",
+          "rule": "1.6% effective 3/1/26-2/28/27; use rate on effective date.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S02",
+            "S04"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G08",
+          "label": "Banking gate",
+          "rule": "SF 24-month summary vs Rule 4.12 12-month formulation; no case banking inferred.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S05",
+            "S74"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01",
+            "B87-F03"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G09",
+          "label": "Petition/passthrough gate",
+          "rule": "Annual/banked no petition; other routes have pre-notice filing rules.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S04",
+            "S09"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G10",
+          "label": "Subsidy gate",
+          "rule": "Tenant-based assistance may add notice requirements; status unknown.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S73"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G11",
+          "label": "Repair/retaliation gate",
+          "rule": "Civil Code 1942.5 restrictions; neutral policy not safe harbor.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S57",
+            "S78"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-G12",
+          "label": "Occupant-change gate",
+          "rule": "No extra rent merely for added occupant; 6.14/Costa-Hawkins facts not inferred.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S16",
+            "S73"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Required notice contents",
+      "columns": [
+        "Item / gate",
+        "Rule or owner input (source-linked)",
+        "Case value",
+        "Status",
+        "Official source(s)",
+        "Notes / flags"
+      ],
+      "kind": "worksheet",
+      "rows": [
+        {
+          "id": "B87-N01",
+          "label": "Written notice",
+          "rule": "Civil Code 827 written notice; SF dollar/percentage/effective date.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35",
+            "S01"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N02",
+          "label": "Current/new base rent",
+          "rule": "State verified current and new base rent.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N03",
+          "label": "Dollar/percentage",
+          "rule": "State dollar increase and percentage.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N04",
+          "label": "Effective date",
+          "rule": "State effective date; rate and anniversary apply.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S74"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N05",
+          "label": "Annual/banked breakdown",
+          "rule": "37.3(b)(1) written annual/banked portion.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S73"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N06",
+          "label": "Banked dates",
+          "rule": "Rule 4.12(b)(2) dates; include conservatively despite nullity wording differences.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S74",
+            "S73"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01",
+            "B87-F04"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N07",
+          "label": "Other components",
+          "rule": "Identify/explain O&M, comps, capital, utility, bond, RAP components if any.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S73"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N08",
+          "label": "Notice period",
+          "rule": "30 days <=10%; 90 days >10% combined; CA mail +5; longer periods control.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35",
+            "S75",
+            "S77"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N09",
+          "label": "No rounding up",
+          "rule": "Base rent x allowed percentage; no rounding up.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S04"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-N10",
+          "label": "Neutral reason",
+          "rule": "Neutral annual-increase statement is drafting practice, not statutory reason requirement or safe harbor.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S73",
+            "S57"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01",
+            "B87-F08"
+          ],
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Conditional arithmetic - not a finding or recommendation",
+      "columns": [
+        "Item / gate",
+        "Rule or owner input (source-linked)",
+        "Case value",
+        "Status",
+        "Official source(s)",
+        "Notes / flags"
+      ],
+      "kind": "worksheet",
+      "rows": [
+        {
+          "id": "B87-C01",
+          "label": "Unit 1 conditional arithmetic",
+          "rule": "$3,995 x 1.6% = $63.92; total $4,058.92. Conditional only.",
+          "value": "$4,058.92",
+          "status": "analysis",
+          "source_ids": [
+            "S02",
+            "S04"
+          ],
+          "notes": "Assumes verified base, annual-only, rate window, no bars; unverified.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-C02",
+          "label": "Unit 2 conditional arithmetic",
+          "rule": "$3,150 x 1.6% = $50.40; total $3,200.40. Conditional only.",
+          "value": "$3,200.40",
+          "status": "analysis",
+          "source_ids": [
+            "S02",
+            "S04"
+          ],
+          "notes": "Assumes verified base, annual-only, rate window, no bars; unverified.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Service, effective-date and tenant-challenge record",
+      "columns": [
+        "Item / gate",
+        "Rule or owner input (source-linked)",
+        "Case value",
+        "Status",
+        "Official source(s)",
+        "Notes / flags"
+      ],
+      "kind": "worksheet",
+      "rows": [
+        {
+          "id": "B87-SV01",
+          "label": "Service method",
+          "rule": "Personal delivery or CCP 1013 mail; no email/text/door/portal substitute in this kit.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35"
+          ],
+          "notes": "The official rule is source-linked; the case value is blank and needs review.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-SV02",
+          "label": "Mail extension",
+          "rule": "+5 CA, +10 elsewhere US, +20 outside US; DRE 35/95 examples.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S75",
+            "S77"
+          ],
+          "notes": "The official rule is source-linked; the case value is blank and needs review.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-SV03",
+          "label": "Mail mechanics",
+          "rule": "Sealed, postage paid, proper address; complete on deposit; tracking optional evidence.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S75"
+          ],
+          "notes": "The official rule is source-linked; the case value is blank and needs review.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-SV04",
+          "label": "Mailed copy notation",
+          "rule": "Date/place of mailing or unsigned affidavit/certificate.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S75"
+          ],
+          "notes": "The official rule is source-linked; the case value is blank and needs review.",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-SV05",
+          "label": "Separate tenant records",
+          "rule": "Conservative separate copy/log per tenant; no numeric copy-count rule verified.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35",
+            "S75"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-SV06",
+          "label": "Proof retention / Form 583",
+          "rule": "Keep notice/log/license; Form 583 case-document purpose; no annual filing duty verified.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S26",
+            "S07"
+          ],
+          "notes": "",
+          "flag_id": "B87-F05",
+          "flag_ids": [
+            "B87-F05"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-SV07",
+          "label": "Effective-date license recheck",
+          "rule": "Rule 13.14 effective date controls.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S72"
+          ],
+          "notes": "The official rule is source-linked; the case value is blank and needs review.",
+          "flag_id": "B87-F02",
+          "flag_ids": [
+            "B87-F02"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-SV08",
+          "label": "Tenant challenge routes",
+          "rule": "Failure-to-repair <=60 days; unlawful-rent petition free/no time limit.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S78",
+            "S25"
+          ],
+          "notes": "The official rule is source-linked; the case value is blank and needs review.",
+          "flag_id": "B87-F08",
+          "flag_ids": [
+            "B87-F08"
+          ],
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Placeholder service log - blank until actual service",
+      "columns": [
+        "Item / gate",
+        "Rule or owner input (source-linked)",
+        "Case value",
+        "Status",
+        "Official source(s)",
+        "Notes / flags"
+      ],
+      "kind": "worksheet",
+      "rows": [
+        {
+          "id": "B87-LOG01",
+          "label": "Unit 1 Tenant A service log",
+          "rule": "Blank service record; placeholder roster unverified.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35",
+            "S75"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-LOG02",
+          "label": "Unit 1 Tenant D service log",
+          "rule": "Blank service record; placeholder roster unverified.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35",
+            "S75"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-LOG03",
+          "label": "Unit 2 Tenant E service log",
+          "rule": "Blank service record; placeholder roster unverified.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35",
+            "S75"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        },
+        {
+          "id": "B87-LOG04",
+          "label": "Unit 2 Tenant F service log",
+          "rule": "Blank service record; placeholder roster unverified.",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35",
+            "S75"
+          ],
+          "notes": "",
+          "flag_id": "B87-F01",
+          "flag_ids": [
+            "B87-F01"
+          ],
+          "source_note": ""
+        }
+      ]
+    }
+  ]
+}
