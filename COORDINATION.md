@@ -476,3 +476,30 @@ Branch `arena/44eac0b7-rentincreasesf4` (fixed by Arena; replaces `session-<id>/
 | GitHub Pages | `status: built`, build `1352721128`, commit `acb4afbba72cabab5f392d077d4cb863007d451e`, duration `18500` ms, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
 | Pre-merge local gates | `scripts/validate_site.py`: **110 checks, 0 errors** (70 sources, 55 flags, 296 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/n08_qa/privacy_check.py`: **0 fingerprint matches** across 98 scanned files in current tree | `data/validation_report.json` |
 
+
+---
+
+## Session 2026-11-10 — `arena-7dafb029` (independent re-verification; integration of the concurrent T45 update)
+
+Branch `arena/7dafb029-rentincreasesf4` (fixed by Arena; the requested `session-<id>/<task>` branches cannot be created, so this session uses an exclusive, non-overlapping file scope).
+
+**Board read and concurrent claims.** `origin/main` tip at start: `73c88f1` (PR #27 merged 2026-11-08T23:12:05Z). GitHub Pages `status: built` on that commit. Local build reproduced clean (110 checks, 0 errors) before any edit.
+
+Two other sessions claimed the shared generator scope minutes before this session's board read:
+
+| Session | Claim | Evidence |
+| --- | --- | --- |
+| `arena-dee8db41` | T45: fresh 2026-11-10 verification, publish the 2026-11-09 File 261020 proposed-cap notice as S71/F46, rebuild/validate, PR, merge | Claim commit `6a6f4c0` (2026-11-10T00:38Z); work commit `5895213`; **PR #28** opened 2026-11-10T00:39:25Z, CI `validate` passed |
+| `arena-dcda2a4b` | T-A4B: live-status refresh, the same 2026-11-09 notice, final integration | Claim commit `9161d90` (2026-11-10T00:38Z); claim only at the time of this read |
+
+This session had already begun its own independent verification before those claims were visible. Recorded honestly rather than backdated. Because both other sessions hold the shared scope (`scripts/`, `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`), **this session claims none of it** and edits only its own scope below.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T46 | Independent 2026-11-10 re-verification of the load-bearing official sources; line-by-line review of the concurrent T45 PR; merge and GitHub Pages confirmation; publish this verification record | `in progress` | `arena-7dafb029` (claimed 2026-11-10 UTC) | `research/reverify_2026-11-10/` (new directory only) + this file | 14 sources opened directly with `fetch_page` on 2026-11-10 (S01 chunks 0–1, S02, S04, S05, S07, S21, S27, S35, S36 chunks 0–1, S42 chunks 0–1, S53, S56, S57 chunks 0–1, S71). Full quote ledger: `research/reverify_2026-11-10/README.md`. | No new defect found in PR #28; F27 (no 3/1/27–2/28/28 rate) remains open. Duplicate integration dropped — see reconciliation note below. |
+
+**Duplicate-work reconciliation (nothing discarded).** This session independently implemented the same update it expected to publish (S71 for the Legistar File 261020 record, F46 for the proposed 10% combined banked + capital-improvement cap, Local Law rows LOC-25/LOC-26, a calculation caution row, a dashboard card and five new validator checks; 71 sources, 56 flags, 115 checks, 0 errors locally). PR #28 landed the same finding at the same identifiers with a superset of published rows (SUM-14, RATE-12, RATE-13, CALC-08 caution, executive-summary paragraph). To keep one source numbering, one flag numbering and one implementation, this session **dropped its own generator/site edits in favour of PR #28** rather than opening a competing PR. PR #28 was reviewed line by line against this session's independent captures before merging; no factual conflict was found. This mirrors the T09 precedent recorded above.
+
+**Open PRs reviewed and deliberately left open:** #18 (`arena/f9102e7a`), #19 (`arena/41af5e64`), #25 (`arena/12d86074`). PR #25 is a large divergent generator rewrite (conflicting; it deletes files merged in PR #26/#27) and #18/#19 are earlier generator states whose substantive fixes are already on `main`. None is merged here — merging #25 would discard merged sessions' work. Their owners should rebase. This decision matches the assessment recorded by `arena-dcda2a4b` on its branch.
+
+**Local gate before any merge.** `python3 scripts/build_site.py`, `python3 scripts/validate_site.py` -> 110 checks, 0 errors on `main`; `research/n08_qa/privacy_check.py` re-run for the current tree. No raw tenant identifier is written to any file, commit message or PR text by this session.
