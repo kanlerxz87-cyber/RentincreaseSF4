@@ -82,3 +82,12 @@ The user's lead question is *what must an individual owner do with the Rent Boar
 * New official sources S56-S64 (provisional D16-S01..S08 and S10; D16-S09 is already S53).
 * New site page (or section of the Step-by-Step License page) "Rent Board Fee & other registrations" with rows FEE-01..FEE-17 as above, a small "2026-27 compliance calendar" (Dec 14, 2026 exemption deadline; January 2027 Annual Notice; March 1, 2027 fee and Housing Inventory update; May 31 last day with penalties), the case-arithmetic rows, and flags FEE-F1..F6.
 * One new line in the Executive Summary: *the Rent Board Fee is a separate obligation; individual owners pay $59.00 per rented unit by March 1; see page*.
+
+## D16-C integration result — 2026-11-08, session `arena-41af5e64` (T09)
+
+The integration step D16-C was never claimed by `arena-d16cbfc8`; the T09 final-integration session took it over after the 60-minute stale-claim rule and did this:
+
+1. **Re-verified the whole fee research by re-opening every source on 2026-11-08** rather than trusting this file: sf.gov/rent-board-fee (S56), the fee-recovery page (S62), the older pay-your-fee page (S63), the 2027 Informational Notice (S64), Chapter 37A (S65) and the Treasurer's lessor page (S66). Every quoted figure above, including $59.00 / $29.50, the March 1 due date, the 5% × 3 penalty ladder, the June 1 referral, the December 14, 2026 exemption deadline, the November 1 recovery cut-off, the "not a just cause for eviction" line and the "by reason of that fact alone" business-registration wording, was confirmed verbatim. No correction was needed.
+2. **Published it on the site** as a new **Rent Board Fee** page (`pages/fee.html`) with 12 rows (FEE-01 to FEE-12), each carrying its own official link, plus a dashboard card and an Executive Summary subsection. Provisional keys D16-S01…S10 were mapped to final IDs S56, S62, S63, S64, S65, S66 (and existing S07, S53, S16).
+3. **Assigned final flag IDs.** FEE-12 was published as **F41**; FEE-F1 to FEE-F6 are described in the Flagged-for-Review summary; the 2023-dated service page became **F40**.
+4. **Not published as findings:** the case arithmetic in this file (2 × $59.00 = $118.00; 50% = $59.00) stays in this research file only, because the official billing record and unit count for the case are not available and the file's own caveat says so.
