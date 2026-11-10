@@ -5,7 +5,7 @@
     "title": "Learn about rent increases in San Francisco",
     "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
     "category": "Local",
-    "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants."
+    "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants. Re-verified 2026-11-10: page now carries a 'Proposed Changes' notice posted November 9, 2026 (File No. 261020, proposed 10% cap on banked + capital-improvement increases; not enacted) - see S71 and flag F46."
   },
   {
     "id": "S02",
@@ -13,7 +13,7 @@
     "title": "Current Rates",
     "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
     "category": "Local",
-    "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Page checked 2026-11-07: no 3/1/27-2/28/28 rate published yet."
+    "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Re-verified 2026-11-10: no 3/1/27-2/28/28 rate published yet; page now carries the same November 9, 2026 File 261020 proposed-cap notice as S01."
   },
   {
     "id": "S03",
@@ -37,7 +37,7 @@
     "title": "Banked rent increases",
     "url": "https://www.sf.gov/information--banked-rent-increases",
     "category": "Local",
-    "statement": "24 full months; no compounding/prorating; add percentages; license; notice states banked portion; example inconsistency flagged."
+    "statement": "24 full months; no compounding/prorating; add percentages; license; notice states banked portion; example inconsistency flagged. Rechecked 2026-11-10: November 9 notice describes a proposed, not enacted, cap (S71, F46)."
   },
   {
     "id": "S06",
@@ -558,5 +558,13 @@
     "url": "https://www.sf.gov/pay-your-rent-board-fee",
     "category": "Local",
     "statement": "Older service page that still refers to 2023 deadlines (for example 'if the fee is not paid in full by March 1, 2023'). It is listed only so a reader who finds it can compare it with the current sf.gov/rent-board-fee page; no amount or deadline on this site is taken from it (flag F39). Checked 2026-11-08."
+  },
+  {
+    "id": "S71",
+    "agency": "San Francisco Board of Supervisors",
+    "title": "File 261020 - proposed cap on rent increases for rent-controlled units",
+    "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
+    "category": "Local - proposed legislation",
+    "statement": "Checked 2026-11-10: Version 1, introduced September 15, 2026, status Pending Committee Action, no final action or enactment shown. Proposal: combined banked and capital-improvement increases limited to 10% per year for three years. See also the Rent Board notice S05 for proposed applicability; not enacted and subject to change (F46)."
   }
 ]

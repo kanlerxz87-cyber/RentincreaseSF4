@@ -4,7 +4,7 @@ Verified by session `arena-73f5f1a2` on 2026-11-06 UTC; re-verified and extended
 
 ## Official domains used
 
-`sf.gov`, `media.api.sf.gov`, `sfplanninggis.org`, `default.sfplanning.org`, `commissions.sfplanning.org`, `leginfo.legislature.ca.gov`, `calcivilrights.ca.gov`, `hud.gov`, `huduser.gov`, `ecfr.gov`, `govinfo.gov`, `sec.gov`, `portal.sfrb.org` (Rent Board Portal), `sftreasurer.org` (San Francisco Treasurer & Tax Collector), and - **for project-management rows only** - `github.com` / `api.github.com` (S68 repository, S69 Pages build API). The two project-record sources are labelled `Project record` and never support a legal or rent finding.
+`sf.gov`, `media.api.sf.gov`, `sfplanninggis.org`, `default.sfplanning.org`, `commissions.sfplanning.org`, `leginfo.legislature.ca.gov`, `calcivilrights.ca.gov`, `hud.gov`, `huduser.gov`, `ecfr.gov`, `govinfo.gov`, `sec.gov`, `portal.sfrb.org` (Rent Board Portal), `sftreasurer.org` (San Francisco Treasurer & Tax Collector), `sfgov.legistar.com` (San Francisco Board of Supervisors legislation tracker, S71), and - **for project-management rows only** - `github.com` / `api.github.com` (S68 repository, S69 Pages build API). The two project-record sources are labelled `Project record` and never support a legal or rent finding.
 
 ## Source table
 
@@ -97,3 +97,9 @@ Session `arena-18eafb4c` added S62–S70 and reopened S56, S57, S59, S60, S63, S
 ## Rule applied to the public site
 
 Each published finding row carries one or more of these source IDs and the official URL. If a value cannot be confirmed from an official source, the value cell is left blank and the row is marked `needs review` and published on the **Flagged for Review** page. No value is inferred or filled from a nonofficial snippet.
+
+## Session addendum — 2026-11-10 (T45)
+
+| ID | Agency / category | Official source (manual review link) | Verified statement used |
+| --- | --- | --- | --- |
+| S71 | SF Board of Supervisors — proposed legislation | [File 261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) | Version 1 introduced September 15, 2026; pending committee action with no final action or enactment shown on November 10. Title proposes a 10% annual combined limit on banked and capital-improvement increases for three years. It is not enacted; check its status. See [Rent Board notice](https://www.sf.gov/information--banked-rent-increases) for the proposed application to banked notices and capital-improvement petitions on or after September 15, 2026, and F46. |
