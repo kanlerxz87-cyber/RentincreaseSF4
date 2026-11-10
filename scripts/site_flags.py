@@ -33,6 +33,7 @@ CARDS = [
     ("Federal cap", "Blank", "federal", "No official general private-rent cap found; flagged."),
     ("94122 SAFMR", "Blank", "market", "Official ZIP row not obtained; flagged."),
     ("Attorney approval", "Blank", "questions", "No official approval or guarantee claimed."),
+    ("Pending legislation", "Not law", "rates", "Board of Supervisors File No. 261020 (proposed 10% cap on combined banked + capital improvement increases) is 'Pending Committee Action' as of 2026-11-10; see flags F46/F47."),
 ]
 
 FLAGS = [
