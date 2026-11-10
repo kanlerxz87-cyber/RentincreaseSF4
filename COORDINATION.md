@@ -476,3 +476,27 @@ Branch `arena/44eac0b7-rentincreasesf4` (fixed by Arena; replaces `session-<id>/
 | GitHub Pages | `status: built`, build `1352721128`, commit `acb4afbba72cabab5f392d077d4cb863007d451e`, duration `18500` ms, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
 | Pre-merge local gates | `scripts/validate_site.py`: **110 checks, 0 errors** (70 sources, 55 flags, 296 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/n08_qa/privacy_check.py`: **0 fingerprint matches** across 98 scanned files in current tree | `data/validation_report.json` |
 
+
+---
+
+## Session 2026-11-10 — `arena-dcda2a4b` (T-A4B: live-status refresh, 2026-11-09 SF.gov notice, final integration, PR)
+
+Branch `arena/dcda2a4b-rentincreasesf4` (fixed by Arena; exclusive non-overlapping scopes replace `session-<id>/<task>` branch names).
+
+**Board read before claiming (2026-11-10 UTC).** Full `git fetch --unshallow` performed (the clone started shallow, which made every other session branch show "no merge base" and the first `rev-list` sweep unreliable — corrected before any claim). `origin/main` tip = `73c88f1` (PR #27 merged 2026-11-08T23:12:05Z). GitHub Pages: `status: built` on that commit. Local build + `validate_site.py` reproduced clean (110 checks, 0 errors) before any edit.
+
+**Unmerged session branches reviewed and deliberately not merged:**
+
+| Branch | Ahead / behind `main` | Assessment |
+| --- | --- | --- |
+| `arena/12d86074` (open PR #25) | 6 / 6, `CONFLICTING` | Large divergent generator rewrite (≈9,000 insertions, 3,400 deletions vs `main`) that **deletes** `research/t44_audit/README.md` and `data/flagged.json`-era content merged in PR #26/#27. Merging it would discard merged sessions' work, so it is not merged here; its owner should rebase. CI on its head `validate` passes. |
+| `arena/41af5e64`, `arena/5cbd3f13`, `arena/f9102e7a`, `arena/f8681e80` | 3–5 ahead, 39–82 behind | All are earlier generator states whose *substantive* fee/anonymized-case/count fixes are already on `main` (PR #26/#27 merged the superseding versions). Their remaining diffs are COORDINATION records or already-superseded page text. Left untouched; takeover not needed. |
+| `arena/1e8c70fc`, `arena/2e273eee`, `arena/8337b6e1`, `arena/fce57ebb` | 1 ahead, 41–82 behind | COORDINATION-only claim/record commits already superseded by later merges. Left untouched. |
+
+No live claim is older than 60 minutes with no commits: PR #25's head commit is 2026-11-08T23:15:45Z, i.e. stale, but it is owned by an open PR rather than a crashed session and is excluded from this scope. This session claims **no file owned by another session** and edits only its own listed scope below.
+
+| ID | Task | Status | Owner | Exclusive file scope | Verification / handoff |
+| --- | --- | --- | --- | --- | --- |
+| T-A4B | Re-verify official sources against the live pages on 2026-11-10; add the **new** SF.gov "Proposed Changes to Rent Increase Limitations" notice (posted **November 9, 2026**) and Board of Supervisors **File No. 261020** as a verified source + published status rows; add the next-year rate status; rebuild, validate, open PR to `main`, merge, confirm Pages, record result | `in progress` (claimed 2026-11-10 UTC) | `arena-dcda2a4b` | `scripts/` (site_sources, site_flags, site_pages, site_text, validate_site), generated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `README.md`, `COORDINATION.md` | Direct `fetch_page` on 2026-11-10: S01, S02, Legistar File 261020. All other sessions' claims are `done` or superseded; no other session holds this scope. |
+
+This claim is committed and pushed before substantive work. No raw tenant identifiers are written to any tracked file, log, fixture, commit or PR.
