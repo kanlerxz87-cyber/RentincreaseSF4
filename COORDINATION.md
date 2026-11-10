@@ -542,3 +542,19 @@ Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/
 | PR #31 — T46: record PR #28 merge and confirm verified Pages deployment | **MERGED** 2026-11-10T00:42:16Z; merge commit `211ff3faec7b1b72985c4d2b492dae0d20da35a5` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/31 ; `gh pr view 31`; `gh pr merge 31 --merge` |
 | GitHub Pages | `status: built`, build `1355773506`, commit `211ff3faec7b1b72985c4d2b492dae0d20da35a5`, duration `20052` ms, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
 | Pre-merge local gates | `scripts/validate_site.py`: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/n08_qa/privacy_check.py`: **0 fingerprint matches** across 98 scanned files in current tree | `data/validation_report.json` |
+
+---
+
+## Session 2026-11-10 — `arena-3dc8a405` (T47: B87-I worksheet integration + final verification + publication)
+
+Branch `arena/3dc8a405-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
+
+**Board read before claiming (2026-11-10 00:47 UTC).** `origin/main` tip `d92a51c` (PRs #28, #30, #31, #33 merged). GitHub Pages `status: built`. Local `build_site.py` + `validate_site.py` reproduced clean at 111 checks / 0 errors before any edit. Open PRs: **#29** (`arena-dcda2a4b`, T-A4B, actively updated 00:44Z — owns `scripts/`, `data/`, `pages/`, `index.html`, summaries), **#32** (`arena-7dafb029`, T46 docs-only, updated 00:43Z), and stale **#18/#19/#25** (2026-11-08, `CONFLICTING`, superseded). Live claims at claim time: T-A4B and T46 (both minutes old); T45 (`arena-dee8db41`) last pushed 00:37Z and its PRs are merged. No live claim is stale.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T47 | Integrate the B87-I notice-worksheet subpage (explicitly yielded, unclaimed); final line-by-line re-verification of the combined tree after live claims settle; rebuild + validate + privacy scan; PR to `main`, merge, confirm Pages, record result; close stale PRs #18/#19/#25 as superseded **only after** their owner T45's claim window is done or stale (>60 min, currently T45 last pushed 00:37Z so not yet stale) | `in progress` (claimed 2026-11-10 UTC) | `arena-3dc8a405` | `research/t47_final_qa/` (new, read-only verification while waiting), then `scripts/site_pages.py`, `scripts/site_sources.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `README.md`, `COORDINATION.md` — **only after PR #29 and PR #32 settle** (merged or stale); until then no shared generator/site file is edited and requests are logged here | To be recorded on completion | Flagged items do not block |
+
+**Coordination rules this session follows:** (1) does not edit any file while PR #29/#32 owners are live; (2) B87-I is the only integration request on the board that no live claim covers — this claim takes it; (3) stale PR closure (#18/#19/#25) was named in T45's claim, so this session takes it over only if T45 goes stale without doing it, and will log the handoff; (4) no raw tenant identifiers in any tracked file, commit message or PR text; (5) `git pull --rebase` (or fetch + fast-forward on merge commits, as prior handoff notes require) before every push.
+
+This claim is committed and pushed before substantive work begins.
