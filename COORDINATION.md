@@ -277,7 +277,28 @@ Branch `arena/18eafb4c-rentincreasesf4`, created by Arena from `main` at `d63dee
 
 **Coordination check at claim time (2026-11-08 UTC).** `git ls-remote` shows 12 `origin/arena/*` branches, all belonging to finished sessions; the only open PR is **#14** (`arena/ea02333c`, state `OPEN`, mergeable `CONFLICTING`, last commit 2026-11-07T20:20:05Z). No other session has committed since 2026-11-07T20:20:15Z, so every other claim is stale and, per the 60-minute rule in this file, may be taken over. Nothing in PR #14 is discarded: its branch is merged into this branch and its records kept. No file owned by a live claim is edited.
 
-**Known defects inherited on `main` (to fix in D16-C).** (1) Raw `<<<<<<< HEAD` / `=======` / `>>>>>>> origin/main` conflict markers were committed into `COORDINATION.md` (F31). (2) `REQ-08` and `AN-15` say "38 flags" while 40 were published (F32-adjacent count drift). (3) `pages/sources.html` hard-coded "All 52 official sources" while 55 were published. (4) `FLAGGED_FOR_REVIEW.md` says "30 source-quality flags F01-F30". (5) Requirements rows `REQ-01/02/04/06/08/13/14/19/20` and `AN-15` cite **S43 (HUD Fair Market Rents)** as the official source for project-management requirements it does not support - a source-integrity defect. (6) The Rent Board Fee research (D16-A) and the git-history privacy audit (D16-P) are merged as documents but not published as site rows or flags.
+**Known defects inherited on `main` (to fix in D16-C).** (1) Raw `### T45 PR and deployment record
+
+- [PR #28](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/28) merged on 2026-11-10 at 00:39:54 UTC, merge commit `7cdc779a9ff7fa762714cbbf0deba9c27eeed255`. Pull-request CI and [main validation](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42730019352) passed.
+- [Pages build and deployment](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42730018559) succeeded; Pages latest-build API reported `built` for the same commit at 00:40:19 UTC. Live URL: https://kanlerxz87-cyber.github.io/RentincreaseSF4/.
+- Remaining caution: source-validation checks establish structural consistency, not legal conclusions; owner-supplied case facts are not official records, and privacy exposure in public history remains unresolved (F44).
+
+---
+
+## Session 2026-11-10 — `arena-5c09f807` (T46 final compliance audit, verification & PR/deployment confirmation)
+
+Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Working tree based on `main` at `1bf2911` (after PR #28 and PR #30).
+
+| ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T46 | Final compliance verification across all prompt requirements; line-by-line verification of official source links, rate calculations, privacy boundary, and forefront executive summary; confirm site build and GitHub Pages deployment | `done` | `arena-5c09f807` | `COORDINATION.md`, `README.md` | `python3 scripts/validate_site.py` (111 checks, 0 errors; 71 sources, 56 flags, 299 rows); `python3 research/b87_notice_kit/validate_kit.py` (19 checks, 0 errors); `python3 research/n08_qa/privacy_check.py` (0 fingerprint matches in current tree); `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages` (status built, URL https://kanlerxz87-cyber.github.io/RentincreaseSF4/). | Confirmed flags F01–F46 and T03-F01–T03-F10 remain published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`; do not block the merge. |
+
+### T46 verification and publication record — 2026-11-10 UTC
+
+- **Executive summary forefront:** Confirmed that the executive summary forefront explicitly answers the individual owner's question ("Yes, individual owners of 1–9 residential units must report to the Housing Inventory and obtain a Rent Increase License before imposing annual/banked increases under SF Admin Code §§ 37.3(a)(1) and 37.15"). Step-by-step process with verified links is featured prominently.
+- **Privacy boundary:** Confirmed all personal names are anonymized with placeholders (`Tenant A` through `Tenant F`), dates (`February 1, 2025`, `April 1, 2026`, `June 1, 2019`) and amounts (`$3,995`, `$3,150`) are preserved exactly, and no exact street address is published. Zero raw tenant identifiers in the current tree.
+- **Reasonable and normal increases:** Confirmed allowable rate is 1.6% (March 1, 2026 – February 28, 2027) calculated on base rent only without rounding up. Corporate and individual landlord practices, reasonable notice procedures, retaliation safeguards (Civil Code § 1942.5), and one-unit vs. both-units anti-discrimination principles are thoroughly analyzed with official links.
+- **Live site:** GitHub Pages live site is fully deployed at https://kanlerxz87-cyber.github.io/RentincreaseSF4/ .
 
 ---
 
@@ -512,3 +533,20 @@ While PR #29 was open, session `arena/dee8db41` merged **PR #28** and **PR #30**
 | T45's executive-summary paragraph "Pending legislation — not current law" | An added analysis paragraph: what the proposal does and does not change for these two units (annual 1.6% outside it; stacked banked increases are its target; no banked figure asserted), the two unanswered questions, and the cheap dated-record step |
 
 No T45 content was removed or reworded to change meaning. No other session's records were discarded. Post-merge gates: `build_site.py` + `validate_site.py` → **112 checks, 0 errors**; broken internal links **0**; privacy scan **0** current-tree identifier matches across 98 files. This supersedes the "113 checks" figure quoted in the PR body; the count changed because the two branches' validator guards were reconciled, not because any check was dropped.
+---
+## Session 2026-11-10 — `arena-5c09f807` (T46 final compliance audit, verification & PR/deployment confirmation)
+Branch `arena/5c09f807-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Working tree based on `main` at `1bf2911` (after PR #28 and PR #30).
+| ID | Task | Status | Owner | File scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T46 | Final compliance verification across all prompt requirements; line-by-line verification of official source links, rate calculations, privacy boundary, and forefront executive summary; confirm site build and GitHub Pages deployment | `done` | `arena-5c09f807` | `COORDINATION.md`, `README.md` | `python3 scripts/validate_site.py` (111 checks, 0 errors; 71 sources, 56 flags, 299 rows); `python3 research/b87_notice_kit/validate_kit.py` (19 checks, 0 errors); `python3 research/n08_qa/privacy_check.py` (0 fingerprint matches in current tree); `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages` (status built, URL https://kanlerxz87-cyber.github.io/RentincreaseSF4/). | Confirmed flags F01–F46 and T03-F01–T03-F10 remain published on `pages/flagged.html` and `FLAGGED_FOR_REVIEW.md`; do not block the merge. |
+### T46 verification and publication record — 2026-11-10 UTC
+- **Executive summary forefront:** Confirmed that the executive summary forefront explicitly answers the individual owner's question ("Yes, individual owners of 1–9 residential units must report to the Housing Inventory and obtain a Rent Increase License before imposing annual/banked increases under SF Admin Code §§ 37.3(a)(1) and 37.15"). Step-by-step process with verified links is featured prominently.
+- **Privacy boundary:** Confirmed all personal names are anonymized with placeholders (`Tenant A` through `Tenant F`), dates (`February 1, 2025`, `April 1, 2026`, `June 1, 2019`) and amounts (`$3,995`, `$3,150`) are preserved exactly, and no exact street address is published. Zero raw tenant identifiers in the current tree.
+- **Reasonable and normal increases:** Confirmed allowable rate is 1.6% (March 1, 2026 – February 28, 2027) calculated on base rent only without rounding up. Corporate and individual landlord practices, reasonable notice procedures, retaliation safeguards (Civil Code § 1942.5), and one-unit vs. both-units anti-discrimination principles are thoroughly analyzed with official links.
+- **Live site:** GitHub Pages live site is fully deployed at https://kanlerxz87-cyber.github.io/RentincreaseSF4/ .
+### T46 PR #31 merge and Pages deployment record — 2026-11-10 UTC
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #31 — T46: record PR #28 merge and confirm verified Pages deployment | **MERGED** 2026-11-10T00:42:16Z; merge commit `211ff3faec7b1b72985c4d2b492dae0d20da35a5` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/31 ; `gh pr view 31`; `gh pr merge 31 --merge` |
+| GitHub Pages | `status: built`, build `1355773506`, commit `211ff3faec7b1b72985c4d2b492dae0d20da35a5`, duration `20052` ms, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Pre-merge local gates | `scripts/validate_site.py`: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/n08_qa/privacy_check.py`: **0 fingerprint matches** across 98 scanned files in current tree | `data/validation_report.json` |
