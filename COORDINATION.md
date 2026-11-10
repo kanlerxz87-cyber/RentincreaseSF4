@@ -574,3 +574,15 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 **Verification and build gate.** `python3 scripts/build_site.py` and `python3 scripts/validate_site.py` on the merged tree: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows). `research/b87_notice_kit/validate_kit.py`: 19 checks, 0 errors. `research/n08_qa/privacy_check.py`: 0 fingerprint matches in the current tree (it does not clear historical exposure, F44). No raw tenant identifier is written to any file, commit message or PR text by this session.
 
 **PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.
+
+### T-A4B PR #29 merge and GitHub Pages deployment record — 2026-11-10
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #29 — 2026-11-10 live re-verification, `S72` + extended `S71` (File No. 261020), `F47`, `RATE-14`–`RATE-18`, `REQ-25`, `LOC-25`, executive-summary analysis paragraph, validator guards, reconciliation with T45/T46 | **MERGED** 2026-11-10T00:44:24Z; merge commit `40291cb8afd740139afd931f09b5625b24f4147b` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/29 ; `gh pr view 29`; `gh pr merge 29 --merge` |
+| CI | `validate` passed | https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42730486822/job/129546936755 |
+| GitHub Pages | `status: built`, build commit `50cb2a657b2e51e9306249555c0025aaf5eae888`, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Live spot-check | `pages/summary.html` serves the 2026-11-10 narrative + pending-legislation paragraph + the added unit-specific analysis; `pages/rates.html` serves RATE-12 to RATE-17 with `sfgov.legistar.com` links; live counts 72 sources / 57 flags match the committed build | direct fetch of both live URLs. Note: the first CDN copy was one Pages build behind and was re-fetched until it matched — no content was missing from the repository |
+| Pre-merge gates | `build_site.py` + `validate_site.py` → **112 checks, 0 errors**; broken internal links **0**; privacy scan **0** current-tree identifier matches across 98 files | `data/validation_report.json` |
+
+**T-A4B status: `done`.** Flagged and unverified items (F01–F47, T03-F01–T03-F10) remain published on the Flagged for Review page with official source links and do not block anything. The only open item this session could not resolve is **F44** (raw tenant identifiers persist in this public repository's git history and PR diffs), which only the repository owner can remediate; guidance is in `research/privacy/HISTORY_EXPOSURE.md`.
