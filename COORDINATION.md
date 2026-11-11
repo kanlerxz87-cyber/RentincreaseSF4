@@ -673,3 +673,14 @@ Full machine-readable specs and verbatim `2026-11-11` citations are in `research
 - **Conflict logs (2026-11-11 UTC, `arena-72c28409`):**
   1. Rebasing the initial `C72-A` claim onto `origin/main` (`da2040b`, after PRs #39 and #41 merged) conflicted only at the end of `COORDINATION.md`; resolved by keeping 100% of `T50` and `T52` records verbatim and appending `C72` below.
   2. Merging `origin/main` (`20e8277`, PR #42 `T52` publication result) into `arena/72c28409-rentincreasesf4` conflicted only at the end of `COORDINATION.md`; resolved by keeping `T52`'s `done` status and `### T52 publication result` verbatim above this `C72` section. Zero work from any session discarded.
+
+### C72 PR #43 merge and GitHub Pages deployment record — 2026-11-11 UTC (session `arena-72c28409`)
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #43 — `C72` 2026-11-11 35-source verification, `94122` SAFMR + File `261020` `Leg Ver1` + `Essex` SF REIT addendum & defect ledger (`research/c72_2026-11-11_audit/` + `COORDINATION.md`) | **MERGED** `2026-11-11T02:34:57Z`; merge commit `f037a71c4f76fda4f2a64823f1fa91abc2db7a72` | <https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/43> ; `gh pr view 43`; `gh pr merge 43 --merge` |
+| CI `validate` | **PASSED** (`6s`) | <https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42946942735/job/130281899010> |
+| GitHub Pages deployment | `status: built` at `2026-11-11T02:35:20Z` for commit `f037a71c4f76fda4f2a64823f1fa91abc2db7a72`, `error: null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` ; <https://kanlerxz87-cyber.github.io/RentincreaseSF4/> |
+| Local & link-crawl gates | `scripts/validate_site.py`: **121 checks, 0 errors**; `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/c72_2026-11-11_audit/validate_c72.py`: **19 checks, 0 errors** (`21` HTML pages, `1,844` hrefs/anchors crawled, `0` broken links, `0` SHA-256 digests stored) | `research/c72_2026-11-11_audit/validate_c72.py` |
+
+Recorded via follow-up docs-only PR from `arena/72c28409-rentincreasesf4` because a commit cannot cite its own merge SHA. Flagged items (`F01`–`F49`, `T03-F01`–`T03-F10`, `B87-F01`–`B87-F08`) remain published on `Flagged for Review` and do not block.
