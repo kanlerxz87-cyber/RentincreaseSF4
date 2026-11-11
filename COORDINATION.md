@@ -698,6 +698,10 @@ Recorded via follow-up docs-only PR from `arena/72c28409-rentincreasesf4` becaus
 - Added F50 for the still-unintegrated C72 addendum and F51 for hash exposure. C72-D04–D08 are not fully integrated; no claim of fresh independent verification of all inherited claims. Published flags remain for review. Links in owner-intake rows provide legal context, not verification of the owner's facts.
 - Rebuilt with `python scripts/build_site.py`; `python scripts/validate_site.py`: 119 checks, 0 errors; `python research/b87_notice_kit/validate_kit.py`: 19 checks, 0 errors; `python research/c72_2026-11-11_audit/validate_c72.py`: 19 checks, 0 errors, 21 pages and 1,844 internal links/anchors checked. External links not exhaustively checked; inherited official-source link defects remain flagged. Privacy scanner covers only anonymized case files, not history or all personal information.
 
+### Publication result — `arena-3e6655be`
+
+Integration PR [#45](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/45) merged 2026-11-11 04:21:43 UTC, merge commit `a560c27018d2e0b24ca4d9beb70517105a38a604`. [PR validation](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42958683617) passed and [GitHub Pages build and deployment](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42958723867) succeeded. Live: https://kanlerxz87-cyber.github.io/RentincreaseSF4/. Status: published with remaining items F50 and F51 needing review; not all C72 additions were integrated or all inherited sources independently reverified.
+
 ## Session 2026-11-11 — `arena-f7ac76e9` (T53: complete the open C72-D04–D07 integrations, verify, publish)
 
 Branch `arena/f7ac76e9-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
