@@ -573,3 +573,17 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 **Verification and build gate.** `python3 scripts/build_site.py` and `python3 scripts/validate_site.py` on the merged tree: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows). `research/b87_notice_kit/validate_kit.py`: 19 checks, 0 errors. `research/n08_qa/privacy_check.py`: 0 fingerprint matches in the current tree (it does not clear historical exposure, F44). No raw tenant identifier is written to any file, commit message or PR text by this session.
 
 **PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.
+
+## Session 2026-11-11 — `arena-3ac6c28d` (T49: fresh 2026-11-11 re-verification + stale-PR assessment + publication)
+
+Branch `arena/3ac6c28d-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
+
+**Board read before claiming (2026-11-11 02:09 UTC).** `origin/main` tip `89c7bb9` (PR #34 merged, T48). GitHub Pages `status: built`, latest build `1355837865` on `89c7bb9`. Local `build_site.py` + `validate_site.py` reproduced clean at 119 checks / 0 errors before any edit. Open PRs: **#18, #19, #25** (all 2026-11-08, `CONFLICTING`, superseded — see assessment below). Live claims: D16-A / D16-P (`arena-d16cbfc8`, claimed 2026-11-07, scopes `research/rent_board_fee/` and `research/privacy/` only) are stale (>60 min, no recent commits) but their scopes do not overlap this claim; D16-B / D16-C are unclaimed until others are done. No live claim holds the shared generator scope.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T49 | Fresh 2026-11-11 line-by-line re-verification of load-bearing official sources (S01, S02, S05, S07, S08, S53, S56, S71 + state/federal spot checks); stale-PR #18/#19/#25 assessment; DATE update to 2026-11-11; rebuild + validate + privacy scan; PR to `main`, merge, confirm Pages, record result | `in progress` (claimed 2026-11-11 UTC) | `arena-3ac6c28d` | `research/t49_reverify_2026-11-11/` (new), `scripts/site_sources.py` (DATE + re-verified statements only), regenerated `data/`, `index.html`, `pages/`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md` (append-only), `COORDINATION.md` | To be recorded below. | To be recorded below. |
+
+**Coordination rules this session follows:** (1) edits only the claimed scope; (2) no raw tenant identifiers in any tracked file, commit message or PR text; (3) `git pull --rebase origin arena/3ac6c28d-rentincreasesf4` (or fetch + fast-forward) before every push; (4) stale PRs #18/#19/#25 are assessed but not merged (merging would discard merged sessions' work per T47/T48); closure only if superseded with owner window stale — decision logged below; (5) flagged items do not block the merge.
+
+This claim is committed and pushed before substantive work begins.
