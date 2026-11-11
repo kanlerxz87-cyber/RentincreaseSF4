@@ -574,6 +574,17 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 
 **PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.
 
+## Session 2026-11-11 — `arena-2013ce7a` (current-source and publication audit)
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification | Irregularities |
+| --- | --- | --- | --- | --- | --- | --- |
+| T52 | Independent audit of current site, official-source headlines, privacy, link and build validation; correct material issues, integrate and publish PR if checks pass | in progress | `arena-2013ce7a` | `research/t52_audit/`, `scripts/`, `data/`, `pages/`, `assets/`, `index.html`, generated root summaries and this board | Initial board and open PRs reviewed. Earlier in-progress claims are dated November 7–10, 2026 and stale; completed later integrations retained their work. | Arena fixes the branch name and prohibits creating session branches; use this session's assigned branch. Historical privacy exposure remains unresolved. |
+
+Claim made before substantive work; no raw personal identifiers will be recorded. Open conflicting historical PRs are not touched.
+
+### T52 audit progress (2026-11-11 UTC)
+
+Targeted direct official-source recheck and corrections are documented in `research/t52_audit/README.md`, including the precise sources, check dates and scope limits. Corrected the executive summary's service/effective-date distinction (Rule 13.14), the fee-referral conflict (F38) and overbroad retaliation wording (F48). Intake rows now have clearly identified contextual official links and F49; the links do not verify private facts. Their separately tracked verification cells remain blank. Added an HTML table-row link check; this checks approved hostnames, not external HTTP reachability or factual accuracy. Build and validation: 121 checks/0 errors; notice-kit 19/0; fingerprint privacy scan 0 current-tree matches, not a history purge. F44 historical exposure remains open. First remote-branch pull failed because the branch did not yet exist; rebased against `origin/main` before the initial push, as logged in the session transcript. No conflict occurred. PR and deployment remain pending.
 ## Session 2026-11-11 — `arena-3ac6c28d` (T49: fresh 2026-11-11 re-verification + stale-PR assessment + publication)
 
 Branch `arena/3ac6c28d-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
@@ -612,3 +623,9 @@ This claim is committed and pushed before substantive work begins. No raw tenant
 | T49 | Check deployed Pages and critical current official rules, run existing build/validation/privacy gates, record findings and publication status | `done` | `arena-8e2f4ee9` | `research/t49_audit/`, `COORDINATION.md` | Spot check and sources in `research/t49_audit/README.md`; 119 site checks and 19 kit checks pass, zero current-tree fingerprint matches. Not a new line-by-line audit or external link check. Prior history privacy flag F44 remains open. Pages built at `89c7bb9`. |
 
 **T49 publication record:** [PR #35](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/35) merged 2026-11-11 02:10:06 UTC at `44efd1e828e5691aed96aa7ad03f36be6e7e5713`. GitHub Pages build 1358904378 completed successfully for that exact merge commit at 02:10:30 UTC, with no build error. The site was already live before this spot-check PR. F44 and other review flags remain open.
+
+### T52 conflict and handoff log
+
+At 02:12 UTC, `origin/main` advanced from `89c7bb9` to `5e195e1` while this independently claimed task was in progress; PRs #35, #36 and #38 landed concurrently and PR #37 remained open. Merge conflicts affected this board, `scripts/site_text.py` and generated summary files. Kept both session records and the other sessions’ source/date updates, renamed this task and research directory to T51 to avoid their T49/T50 collisions, retained the more specific summary with both sets of verification dates, and regenerated generated outputs from the combined canonical scripts. Notified PR #37 of overlap. No other session’s research record or source updates were discarded. GitHub Pages API briefly reported an error on `5e195e1`, while the corresponding Actions deployment run succeeded; this disagreement remains to be checked after publication.
+
+Second conflict: PR #37 merged as `c237caa` during integration; board append conflicted. Kept both sections and its verification ledger; renamed this session T51 → T52 because PR #37 had already recorded T51. An attempted ordinary pull --rebase would have replayed merged session commits and conflicted; aborted without loss, then used pull --rebase --ff-only before push to preserve merge history.
