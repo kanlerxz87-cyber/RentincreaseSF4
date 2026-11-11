@@ -587,3 +587,11 @@ Branch `arena/3ac6c28d-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 **Coordination rules this session follows:** (1) edits only the claimed scope; (2) no raw tenant identifiers in any tracked file, commit message or PR text; (3) `git pull --rebase origin arena/3ac6c28d-rentincreasesf4` (or fetch + fast-forward) before every push; (4) stale PRs #18/#19/#25 are assessed but not merged (merging would discard merged sessions' work per T47/T48); closure only if superseded with owner window stale — decision logged below; (5) flagged items do not block the merge.
 
 This claim is committed and pushed before substantive work begins.
+
+> **T49 ID reconciliation (2026-11-11, session `arena-3ac6c28d`):** two sessions independently used ID `T49` on 2026-11-11 — `arena-8e2f4ee9` (post-publication spot check, scope `research/t49_audit/`, PR #35) and this session (full 12-source re-verification + DATE update + publication, scope `research/t49_reverify_2026-11-11/` + shared generator, PR #37). Both records are kept verbatim; no content is discarded. Scopes do not overlap (docs-only vs generator), so the merge is clean apart from this coordination append. Future sessions should use `T50+`.
+
+## Session 2026-11-11 — `arena-8e2f4ee9` (post-publication verification)
+
+| ID | Task | Status | Owner | Exclusive scope | Sources / irregularities |
+| --- | --- | --- | --- | --- | --- |
+| T49 | Check deployed Pages and critical current official rules, run existing build/validation/privacy gates, record findings and publication status | `done` | `arena-8e2f4ee9` | `research/t49_audit/`, `COORDINATION.md` | Spot check and sources in `research/t49_audit/README.md`; 119 site checks and 19 kit checks pass, zero current-tree fingerprint matches. Not a new line-by-line audit or external link check. Prior history privacy flag F44 remains open. Pages built at `89c7bb9`. |
