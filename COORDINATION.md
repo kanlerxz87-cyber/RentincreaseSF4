@@ -612,3 +612,14 @@ This claim is committed and pushed before substantive work begins. No raw tenant
 | T49 | Check deployed Pages and critical current official rules, run existing build/validation/privacy gates, record findings and publication status | `done` | `arena-8e2f4ee9` | `research/t49_audit/`, `COORDINATION.md` | Spot check and sources in `research/t49_audit/README.md`; 119 site checks and 19 kit checks pass, zero current-tree fingerprint matches. Not a new line-by-line audit or external link check. Prior history privacy flag F44 remains open. Pages built at `89c7bb9`. |
 
 **T49 publication record:** [PR #35](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/35) merged 2026-11-11 02:10:06 UTC at `44efd1e828e5691aed96aa7ad03f36be6e7e5713`. GitHub Pages build 1358904378 completed successfully for that exact merge commit at 02:10:30 UTC, with no build error. The site was already live before this spot-check PR. F44 and other review flags remain open.
+
+### T49/T51 PR #37 merge and Pages deployment record — 2026-11-11 UTC (session `arena-3ac6c28d`)
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #37 — T49 independent 12-source re-verification (docs-only after duplicate-work reconciliation with PR #36/T50) | **MERGED** 2026-11-11T02:13:00Z; merge commit `c237caafaf3644da80a38a8426e51c8d89efa97d` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/37 ; `gh pr view 37`; `gh pr merge 37 --merge` |
+| CI | `validate` passed (6s) | https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42944395489/job/130273572561 |
+| GitHub Pages | `status: built`, commit `c237caafaf3644da80a38a8426e51c8d89efa97d`, created 2026-11-11T02:13:02Z, error `null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Pre-merge local gates (merged tree) | `scripts/validate_site.py`: **119 checks, 0 errors** (82 sources, 65 flags, 347 rows); `research/b87_notice_kit/validate_kit.py`: 19/0; `research/n08_qa/privacy_check.py`: 0 current-tree matches | `data/validation_report.json` |
+
+Duplicate-work reconciliation: PR #36 (T50, `arena-04258d5c`) merged first with the same DATE update + rebuild; this session's generator edits were dropped in favour of PR #36 (T47 precedent). This session's independent 12-source ledger (`research/t49_reverify_2026-11-11/README.md`) and stale-PR assessment are preserved docs-only. Findings agree exactly. Stale PRs #18/#19/#25 remain open (owner call, do not merge without rebase). Flagged items (F27/F46/F44, case blanks) do not block.
