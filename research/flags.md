@@ -80,4 +80,10 @@ The `T09 additions` table above recorded session `arena-abb34cd1`'s pre-reconcil
 | F43 | Case-specific fee, exemption, and business-registration facts are unverified | S56, S64, S66 |
 | F44 | Privacy: raw tenant identifiers remain in public git history and pull-request diffs (owner-only remediation) | S68 |
 | F45 | SF.gov Current Rates page (`S02`) link labeled `575 Cap. Imp. Labor Rates` points to `574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf` (Form 574 Imputed Interest instead of Form 575) | S02 |
-
+| F46 | Proposed File 261020 (10% combined banked + capital-improvement cap) is not enacted; status must be re-checked | S71, S72, S87 |
+| F47 | Proposed-cap notice, Legistar record and draft text do not fully align on retroactivity or on how the 10% interacts with the annual allowable increase | S71, S72, S87 |
+| F48 | Earlier overbroad retaliation wording corrected against Civil Code 1942.5 | S57 |
+| F49 | Owner-intake rows are not official verification; official cells stay blank | S06, S01, S07 |
+| F50 | Independent audit integration status: most items now integrated; historical privacy exposure and non-enactment remain open | S71, S83, S85, S87 |
+| F51 | Recoverable short-identifier hashes were removed from the validator but remain in public history | S68 |
+| F52 | The 94122 SAFMR is a voucher benchmark, not a market rent, cap or comparison for these units | S83, S84, S43 |

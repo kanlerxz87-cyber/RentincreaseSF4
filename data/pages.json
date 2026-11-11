@@ -2449,18 +2449,16 @@
           },
           {
             "id": "FED-07",
-            "label": "94122 SAFMR",
-            "value": "",
-            "status": "needs review",
+            "label": "94122 SAFMR (FY2027 and FY2026)",
+            "value": "$2,370 / $2,770 / $3,410 / $4,460 / $5,020 (FY2027); $2,280 / $2,730 / $3,310 / $4,230 / $4,380 (FY2026)",
+            "status": "verified",
             "source_ids": [
-              "S44",
-              "S46",
-              "S50",
-              "S51",
-              "S52"
+              "S83",
+              "S84",
+              "S44"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07",
+            "notes": "Official HUD ZIP calculation pages, re-verified 2026-11-11. Order is efficiency / 1BR / 2BR / 3BR / 4BR. These are 40th-percentile gross-rent voucher benchmarks, not caps or opinions of market rent.",
+            "flag_id": "",
             "source_note": ""
           }
         ]
@@ -3636,6 +3634,42 @@
             "notes": "No official source proves what all large corporations do.",
             "flag_id": "F23",
             "source_note": ""
+          },
+          {
+            "id": "CORP-07",
+            "label": "Essex Property Trust - San Francisco County, Q4 2025",
+            "value": "Average monthly rental rate $2,966 vs $2,897 in Q4 2024 (+2.4%); 1,356 apartment homes; financial occupancy 95.5%; gross revenues +2.0%",
+            "status": "verified",
+            "source_ids": [
+              "S85"
+            ],
+            "notes": "Official Form 8-K Exhibit 99.1, page S-9, re-verified 2026-11-11. County-level same-property data; the filing does not say how individual rents were set or whether any unit is rent-controlled.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CORP-08",
+            "label": "Essex Property Trust - blended rate growth, FY2025",
+            "value": "Blended same-property net effective rate growth +2.5% for FY2025, portfolio-wide",
+            "status": "verified",
+            "source_ids": [
+              "S85"
+            ],
+            "notes": "Taken from footnote 7 of the same filing, which defines the measure; portfolio-wide and not San Francisco-specific. Quarterly tradeout columns are not published here because their column labels were not captured unambiguously.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CORP-09",
+            "label": "Equity Residential - FY2025 Form 10-K",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S86"
+            ],
+            "notes": "Filing confirmed retrievable 2026-11-11; no San Francisco-specific figure extracted, so none is published. See F15.",
+            "flag_id": "F15",
+            "source_note": ""
           }
         ]
       }
@@ -3799,6 +3833,19 @@
             "notes": "FY2027 FMR.",
             "flag_id": "",
             "source_note": ""
+          },
+          {
+            "id": "MKT-08",
+            "label": "94122 FY2027 Small Area FMR",
+            "value": "$2,370 / $2,770 / $3,410 / $4,460 / $5,020",
+            "status": "verified",
+            "source_ids": [
+              "S83",
+              "S44"
+            ],
+            "notes": "Official HUD ZIP calculation page, re-verified 2026-11-11. Efficiency / 1BR / 2BR / 3BR / 4BR; 40th-percentile gross-rent benchmark, not a cap.",
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -3828,29 +3875,14 @@
           {
             "id": "MKT-07",
             "label": "94122 FY2026 Small Area FMR",
-            "value": "",
-            "status": "needs review",
+            "value": "$2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+            "status": "verified",
             "source_ids": [
-              "S44",
-              "S46",
-              "S51"
+              "S84",
+              "S44"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07",
-            "source_note": ""
-          },
-          {
-            "id": "MKT-08",
-            "label": "94122 FY2027 Small Area FMR",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S44",
-              "S50",
-              "S52"
-            ],
-            "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07",
+            "notes": "Official HUD ZIP calculation page, re-verified 2026-11-11. Efficiency / 1BR / 2BR / 3BR / 4BR; historical benchmark, not a cap.",
+            "flag_id": "",
             "source_note": ""
           },
           {
@@ -3864,6 +3896,20 @@
             ],
             "notes": "Not a legal basis for a private rent increase.",
             "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "MKT-10",
+            "label": "Use of the 94122 SAFMR for these units",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S83",
+              "S84",
+              "S43"
+            ],
+            "notes": "Comparing a SAFMR with a contract rent would need each unit's bedroom count and utility treatment, which are not published; no comparison, percentage or 'market rent' figure is asserted.",
+            "flag_id": "F52",
             "source_note": ""
           }
         ]

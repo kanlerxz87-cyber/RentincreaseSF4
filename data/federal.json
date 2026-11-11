@@ -91,18 +91,16 @@
         },
         {
           "id": "FED-07",
-          "label": "94122 SAFMR",
-          "value": "",
-          "status": "needs review",
+          "label": "94122 SAFMR (FY2027 and FY2026)",
+          "value": "$2,370 / $2,770 / $3,410 / $4,460 / $5,020 (FY2027); $2,280 / $2,730 / $3,310 / $4,230 / $4,380 (FY2026)",
+          "status": "verified",
           "source_ids": [
-            "S44",
-            "S46",
-            "S50",
-            "S51",
-            "S52"
+            "S83",
+            "S84",
+            "S44"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07",
+          "notes": "Official HUD ZIP calculation pages, re-verified 2026-11-11. Order is efficiency / 1BR / 2BR / 3BR / 4BR. These are 40th-percentile gross-rent voucher benchmarks, not caps or opinions of market rent.",
+          "flag_id": "",
           "source_note": ""
         }
       ]

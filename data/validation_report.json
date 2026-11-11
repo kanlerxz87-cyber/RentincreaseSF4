@@ -5,12 +5,12 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "82 official sources"
+      "detail": "87 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "69 flagged items"
+      "detail": "70 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -21,6 +21,36 @@
       "name": "every source has id, title, agency, category and statement",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "SOURCES.md lists every catalogued source",
+      "ok": true,
+      "detail": "missing: "
+    },
+    {
+      "name": "SOURCES.md has no stale hand-typed source total",
+      "ok": true,
+      "detail": "87 sources"
+    },
+    {
+      "name": "94122 SAFMR rows publish the official HUD values with official sources",
+      "ok": true,
+      "detail": "FY2027 and FY2026 ZIP figures present"
+    },
+    {
+      "name": "94122 SAFMR limitation flag is published and cites HUD",
+      "ok": true,
+      "detail": "F52 cites S83 and S84"
+    },
+    {
+      "name": "resolved audit gaps name their official sources",
+      "ok": true,
+      "detail": "F13->S83, F15->S85, F47->S87"
+    },
+    {
+      "name": "San Francisco County corporate benchmark is published from the SEC filing",
+      "ok": true,
+      "detail": "Essex Q4 2025 SF County row"
     },
     {
       "name": "row IDs are unique across all pages",
@@ -40,17 +70,17 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "347 rows checked; "
+      "detail": "351 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "449 rows checked; "
+      "detail": "458 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "67 needs-review rows"
+      "detail": "66 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -465,7 +495,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "51 numeric flags"
+      "detail": "52 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -600,13 +630,13 @@
   ],
   "errors": [],
   "summary": {
-    "sources": 82,
+    "sources": 87,
     "pages": 20,
     "data_files": 22,
-    "rows_verified": 347,
-    "needs_review_rows": 67,
-    "flags": 69,
-    "checks": 119,
+    "rows_verified": 351,
+    "needs_review_rows": 66,
+    "flags": 70,
+    "checks": 125,
     "errors": 0
   }
 }

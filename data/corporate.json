@@ -84,6 +84,42 @@
           "notes": "No official source proves what all large corporations do.",
           "flag_id": "F23",
           "source_note": ""
+        },
+        {
+          "id": "CORP-07",
+          "label": "Essex Property Trust - San Francisco County, Q4 2025",
+          "value": "Average monthly rental rate $2,966 vs $2,897 in Q4 2024 (+2.4%); 1,356 apartment homes; financial occupancy 95.5%; gross revenues +2.0%",
+          "status": "verified",
+          "source_ids": [
+            "S85"
+          ],
+          "notes": "Official Form 8-K Exhibit 99.1, page S-9, re-verified 2026-11-11. County-level same-property data; the filing does not say how individual rents were set or whether any unit is rent-controlled.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CORP-08",
+          "label": "Essex Property Trust - blended rate growth, FY2025",
+          "value": "Blended same-property net effective rate growth +2.5% for FY2025, portfolio-wide",
+          "status": "verified",
+          "source_ids": [
+            "S85"
+          ],
+          "notes": "Taken from footnote 7 of the same filing, which defines the measure; portfolio-wide and not San Francisco-specific. Quarterly tradeout columns are not published here because their column labels were not captured unambiguously.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CORP-09",
+          "label": "Equity Residential - FY2025 Form 10-K",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S86"
+          ],
+          "notes": "Filing confirmed retrievable 2026-11-11; no San Francisco-specific figure extracted, so none is published. See F15.",
+          "flag_id": "F15",
+          "source_note": ""
         }
       ]
     }
