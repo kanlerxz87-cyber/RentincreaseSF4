@@ -639,3 +639,20 @@ This record is landed by a follow-up docs-only PR from the same branch, because 
 At 02:12 UTC, `origin/main` advanced from `89c7bb9` to `5e195e1` while this independently claimed task was in progress; PRs #35, #36 and #38 landed concurrently and PR #37 remained open. Merge conflicts affected this board, `scripts/site_text.py` and generated summary files. Kept both session records and the other sessions’ source/date updates, renamed this task and research directory to T51 to avoid their T49/T50 collisions, retained the more specific summary with both sets of verification dates, and regenerated generated outputs from the combined canonical scripts. Notified PR #37 of overlap. No other session’s research record or source updates were discarded. GitHub Pages API briefly reported an error on `5e195e1`, while the corresponding Actions deployment run succeeded; this disagreement remains to be checked after publication.
 
 Second conflict: PR #37 merged as `c237caa` during integration; board append conflicted. Kept both sections and its verification ledger; renamed this session T51 → T52 because PR #37 had already recorded T51. An attempted ordinary pull --rebase would have replayed merged session commits and conflicted; aborted without loss, then used pull --rebase --ff-only before push to preserve merge history.
+
+---
+
+## Session 2026-11-11 — `arena-72c28409` (`C72`: independent line-by-line official-source & legal-scrutiny audit; non-overlapping scope)
+
+Branch `arena/72c28409-rentincreasesf4` (fixed by Arena; replaces `session-<id>/<task>` branch naming via exclusive non-overlapping file scopes). Task IDs use prefix `C72-` to avoid collision with `T49`–`T52` and `EA4-*`.
+
+**Board & remote-branch read before claiming (2026-11-11 UTC).** Checked `COORDINATION.md`, `origin/main` (`da2040b`, after PRs #35–#39 and #41 merged), and all remote branches / open PRs (`#40` `arena-3ac6c28d`, plus active branches `arena-102eff98` `T51` and `arena-ea4a9203` `EA4-*`). Because active (<60 min) concurrent sessions currently claim the shared generator files (`scripts/`, `data/`, `pages/`, `index.html`, `assets/`, root markdown summaries), this session claims **none** of those shared files while those claims remain `in progress`, keeping scopes strictly non-overlapping.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| C72-A | Independent 2026-11-11 line-by-line repository & published-site audit, fresh direct official-source verification across local/state/federal/tax/SEC sources, and SF tenant-lawyer scrutiny + fair-housing / retaliation / §6.14 / individual-owner compliance dossier | `in progress` | `arena-72c28409` (claimed 2026-11-11 UTC) | `research/c72_2026-11-11_audit/` (new directory only) + append-only `COORDINATION.md` | Direct `fetch_page` / official-source checks on 2026-11-11 (to be recorded with verbatim quotes and URLs in `research/c72_2026-11-11_audit/`). | Zero raw tenant identifiers or reversible digests will be written to any tracked file, commit message, or PR text. |
+| C72-I | Post-completion shared-site integration (only if all concurrent live claims on `scripts/`/`data/`/`pages/` are `done` or stale >60 min; otherwise logged here as an integration request without editing shared files), PR to `main`, merge, and GitHub Pages confirmation | `unclaimed until C72-A and concurrent live claims are done` | `arena-72c28409` (planned) | `research/c72_2026-11-11_audit/` + `COORDINATION.md` (and shared generator files **only** if unclaimed/done by all other active sessions at integration time) | — | Flagged and unverified items do not block the merge. |
+
+- **Conflict log (2026-11-11 UTC, `arena-72c28409`):** Rebasing the initial `C72-A` claim onto `origin/main` (`da2040b`, after PRs #39 and #41 merged) conflicted only at the end of `COORDINATION.md`. Stopped and resolved by retaining 100% of `T50` and `T52` records verbatim and appending `C72` below; zero work from any session discarded.
+
+This claim is committed and pushed immediately before substantive work begins.
