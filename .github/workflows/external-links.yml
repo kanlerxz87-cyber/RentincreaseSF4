@@ -1,6 +1,11 @@
 name: Diagnose external source links
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - data/sources.json
+      - scripts/check_external_links.py
+      - .github/workflows/external-links.yml
 permissions:
   contents: read
 jobs:
