@@ -586,6 +586,26 @@
     "status": "needs review"
   },
   {
+    "id": "F48",
+    "title": "Previously overbroad retaliation wording corrected",
+    "detail": "The prior executive summary and rows ST-13, CHK-14 and Q-18 described the 180-day rule too broadly and did not clearly state subdivision (a)'s retaliation condition or all remedy conditions. Corrected on 2026-11-11 against Civil Code section 1942.5. Check all applicable conditions, including the lawful-cause provision; consult counsel about case-specific risks.",
+    "source_ids": [
+      "S57"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F49",
+    "title": "Owner-intake rows are not official verification",
+    "detail": "The 23 anonymized owner-intake rows preserve supplied dates and amounts; their general official context links do not corroborate individual property or tenancy facts. Official-verification cells remain blank and flagged, including building coverage, license, current base rents and history. The earlier validator exempted these intake rows from its official-link check; rendering and the check were corrected 2026-11-11.",
+    "source_ids": [
+      "S06",
+      "S01",
+      "S07"
+    ],
+    "status": "needs review"
+  },
+  {
     "id": "B87-F01",
     "title": "Notice worksheet: case-specific notice facts unverified",
     "detail": "Worksheet unit cells stay blank; do not infer eligibility, base rent, anniversary, license, lease permission, banking, petition, subsidy, repair/retaliation or service facts. Owner-supplied dates and amounts are preserved but are not official findings. From the B87 notice kit (research/b87_notice_kit), integrated 2026-11-10.",

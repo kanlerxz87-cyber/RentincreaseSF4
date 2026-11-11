@@ -164,7 +164,7 @@
         {
           "id": "ST-13",
           "label": "Retaliation - 180-day bar",
-          "value": "Where the tenant is not in default in rent, rent/service changes are barred within 180 days of the latest applicable enumerated tenantability event: good-faith notice/oral complaint to the landlord, bed-bug notice, qualifying recorded agency complaint, related inspection/citation, proceeding or adverse decision",
+          "value": "If the landlord retaliates and the tenant is not in default in rent, rent/service changes are restricted within 180 days of the latest applicable enumerated tenantability event: good-faith notice/oral complaint to the landlord, bed-bug notice, qualifying recorded agency complaint, related inspection/citation, proceeding or adverse decision",
           "status": "verified",
           "source_ids": [
             "S57"

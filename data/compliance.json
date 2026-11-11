@@ -190,13 +190,13 @@
         {
           "id": "CHK-14",
           "label": "Check the retaliation clock",
-          "value": "Before serving any notice, confirm the tenant has no unresolved repair request or agency complaint from the prior 180 days",
+          "value": "Before serving notice, review tenantability complaints and other qualifying events within the prior 180 days and consult counsel about retaliation risks",
           "status": "verified",
           "source_ids": [
             "S57",
             "S22"
           ],
-          "notes": "A rent increase inside that window is barred if the tenant is not in default.",
+          "notes": "Section 1942.5(a) addresses retaliatory increases with conditions; subsection (g) addresses lawful cause. Other retaliation rules may also apply.",
           "flag_id": "",
           "source_note": ""
         },
