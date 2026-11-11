@@ -63,7 +63,7 @@ def render_table(section, in_pages=True):
         out.append(value_cell)
         out.append("<td>{}</td>".format(badge(r["status"])))
         if r.get("status") == "owner supplied" and r.get("source_note"):
-            out.append('<td><span class="owner-src">{}</span></td>'.format(e(r["source_note"])))
+            out.append('<td><span class="owner-src">{}</span><br>{}</td>'.format(e(r["source_note"]), source_links(r.get("source_ids", []))))
         else:
             out.append("<td>{}</td>".format(source_links(r.get("source_ids", []))))
         out.append("<td>{}</td>".format(notes))

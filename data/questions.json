@@ -247,7 +247,7 @@
         {
           "id": "Q-18",
           "label": "Can an increase during a repair dispute or after a complaint be retaliatory?",
-          "value": "Yes, that is a separate state-law risk. If the tenant is not in default and has asked for repairs, given a tenantability notice, or complained to an agency, the owner may not increase the rent within 180 days of that act; retaliation for tenant organizing or for exercising lawful rights is separately barred. Remedies include actual damages, punitive damages of $100-$2,000 per retaliatory act, and attorney's fees.",
+          "value": "Yes, that is a separate state-law risk. Section 1942.5(a) restricts retaliatory increases within 180 days of specified tenantability events when the tenant is not in rent default, subject to the statute’s conditions and lawful-cause provision. Retaliation for tenant organizing or exercising lawful rights is separately barred. Remedies have additional conditions, including fraud, oppression or malice for punitive damages.",
           "status": "verified",
           "source_ids": [
             "S57",
