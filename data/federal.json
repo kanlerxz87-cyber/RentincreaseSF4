@@ -91,18 +91,16 @@
         },
         {
           "id": "FED-07",
-          "label": "94122 SAFMR",
-          "value": "",
-          "status": "needs review",
+          "label": "94122 SAFMR (HUD ZIP benchmark)",
+          "value": "FY2027: $2,370 / $2,770 / $3,410 / $4,460 / $5,020 (0-4BR); FY2026: $2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+          "status": "verified",
           "source_ids": [
-            "S44",
-            "S46",
-            "S50",
-            "S51",
-            "S52"
+            "S85",
+            "S86",
+            "S44"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07",
+          "notes": "HUD ZIP benchmarks obtained 2026-11-11; subject-unit bedroom counts still blank, so no subject-unit comparison is asserted. Voucher standards only.",
+          "flag_id": "",
           "source_note": ""
         }
       ]

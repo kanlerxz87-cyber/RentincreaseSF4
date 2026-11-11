@@ -178,7 +178,7 @@ def counts(text):
     """Substitute the computed source/flag counts so no total is ever typed by hand."""
     return (text.replace("{{SOURCES}}", str(len(D.SOURCES)))
                 .replace("{{FLAGS}}", str(len(D.FLAGS)))
-                .replace("{{SOURCE_FLAGS}}", str(len([f for f in D.FLAGS if not f["id"].startswith("T03-")]))))
+                .replace("{{SOURCE_FLAGS}}", str(len([f for f in D.FLAGS if not f["id"].startswith("T03-") and not f["id"].startswith("B87-")]))))
 
 def page_html(slug, page):
     out = [header_html(page["title"], page["description"], slug, True)]

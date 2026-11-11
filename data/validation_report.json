@@ -5,7 +5,7 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "82 official sources"
+      "detail": "90 official sources"
     },
     {
       "name": "flags count matches dashboard",
@@ -40,17 +40,17 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "347 rows checked; "
+      "detail": "352 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "449 rows checked; "
+      "detail": "462 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "67 needs-review rows"
+      "detail": "64 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -383,14 +383,19 @@
       "detail": ""
     },
     {
-      "name": "privacy fingerprint baseline present",
+      "name": "privacy allowlist baseline present",
       "ok": true,
-      "detail": "6 one-way fingerprints; no private intake required"
+      "detail": "30 allowlisted tokens; zero digests stored"
     },
     {
       "name": "no raw tenant identifiers in public files",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "zero SHA-256 digests stored in validator",
+      "ok": true,
+      "detail": "no 64-hex digest literals"
     },
     {
       "name": "no exact street address published",
@@ -610,13 +615,13 @@
   ],
   "errors": [],
   "summary": {
-    "sources": 82,
+    "sources": 90,
     "pages": 20,
     "data_files": 22,
-    "rows_verified": 347,
-    "needs_review_rows": 67,
+    "rows_verified": 352,
+    "needs_review_rows": 64,
     "flags": 67,
-    "checks": 121,
+    "checks": 122,
     "errors": 0
   }
 }

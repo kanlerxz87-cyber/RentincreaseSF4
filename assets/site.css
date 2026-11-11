@@ -37,7 +37,6 @@ td.blank{color:var(--muted);font-style:italic}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
 .badge.owner{background:var(--ownerbg);color:var(--owner)}
 .owner-src{font-size:.78rem;color:var(--owner)}
-td.blank{color:var(--warn);font-style:italic}
 @media print{nav,.cta{display:none}section,.hero{box-shadow:none}}
 .src a{display:inline-block;margin:0 .25rem .2rem 0;font-size:.78rem;background:#eef3fa;border:1px solid #d3ddef;padding:.1rem .35rem;border-radius:5px}
 .flaglink{font-weight:700;color:var(--flag)}

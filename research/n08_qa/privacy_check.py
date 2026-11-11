@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Count-only privacy regression check. Never print or write identifier values.
 
-Uses the existing validator's one-way fingerprints; does not duplicate private
-intake. Scans tracked files and optional new QA files. If the historical report
-is available, read it into memory only to prove the detector catches that leak.
-A clean current tree is NOT a git-history purge.
+Allowlist-only scan (C72-D02 fix, 2026-11-11 I1D): stores ZERO tokens or
+digests derived from any private person's name or initials. Standalone
+2-letter uppercase tokens must be in the explicit allowlist below; any
+other such token is counted (values withheld). Scans tracked files and
+optional new QA files. If the historical report is available, read it into
+memory only to prove the detector catches that leak. A clean current tree
+is NOT a git-history purge.
 """
-import ast
-import hashlib
 import json
 import re
 import subprocess
@@ -15,26 +16,29 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PATTERN = re.compile(r"(?<![A-Za-z])[A-Z]\s+[A-Z](?![A-Za-z])|(?<![A-Za-z])[A-Z]{2}(?![A-Za-z])")
+URL_RE = re.compile(r"https://[^\s)>\]]+")
+TWO_UPPER_RE = re.compile(r"(?<![A-Za-z0-9_-])[A-Z]{2}(?![A-Za-z0-9_-])")
+SPACED_RE = re.compile(r"(?<![A-Za-z])[A-Z]\s+[A-Z](?![A-Za-z])")
+
+ALLOWED_TWO_UPPER_TOKENS = {
+    "AA", "AB", "AK", "AL", "AN", "AZ", "BR", "CA", "CH", "CI", "EX",
+    "FR", "FY", "ID", "IV", "LL", "LP", "NO", "OF", "OR", "PO",
+    "PR", "QA", "SB", "SF", "ST", "TO", "TT", "UI", "US",
+}
 
 
-def fingerprints():
-    tree = ast.parse((ROOT / "scripts/validate_site.py").read_text(encoding="utf-8"))
-    for node in ast.walk(tree):
-        if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == "private_fingerprints" for t in node.targets):
-            values = ast.literal_eval(node.value)
-            if len(values) != 6 or any(not re.fullmatch(r"[0-9a-f]{64}", v) for v in values):
-                raise ValueError("Expected six SHA-256 fingerprints; no values printed")
-            return set(values)
-    raise ValueError("Existing privacy fingerprint baseline not found")
-
-
-def count_matches(text, baseline):
-    return sum(hashlib.sha256(" ".join(m.split()).encode()).hexdigest() in baseline for m in PATTERN.findall(text))
+def count_matches(text):
+    scrubbed = URL_RE.sub(" ", text)
+    # Strip long integrity/hash strings (e.g. package-lock sha512) so their
+    # substrings are not mistaken for standalone tokens.
+    scrubbed = re.sub(r"[A-Za-z0-9+/=]{20,}", " ", scrubbed)
+    count = sum(1 for tok in TWO_UPPER_RE.findall(scrubbed) if tok not in ALLOWED_TWO_UPPER_TOKENS)
+    if SPACED_RE.search(scrubbed.replace("Q&A", " ")):
+        count += 1
+    return count
 
 
 def main():
-    baseline = fingerprints()
     tracked = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT).decode().split("\0")
     additions = [str(p.relative_to(ROOT)) for p in (ROOT / "research/n08_qa").rglob("*")
                  if p.is_file() and "node_modules" not in p.parts]
@@ -43,13 +47,14 @@ def main():
     for name in paths:
         p = ROOT / name
         try:
-            count = count_matches(p.read_text(encoding="utf-8"), baseline)
+            count = count_matches(p.read_text(encoding="utf-8"))
         except (UnicodeDecodeError, OSError):
             continue
         if count:
             current_files.append({"file": name, "matching_candidates": count})
     result = {
-        "baseline_fingerprints": len(baseline),
+        "baseline_allowlisted_tokens": len(ALLOWED_TWO_UPPER_TOKENS),
+        "baseline_digests_stored": 0,
         "files_scanned": len(paths),
         "current_tree_matching_candidates": sum(x["matching_candidates"] for x in current_files),
         "current_tree_files_with_matches": current_files,
@@ -60,7 +65,7 @@ def main():
     }
     try:
         old = subprocess.check_output(["git", "show", "0ede010:data/validation_report.json"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL)
-        result["historical_fixture_matching_candidates"] = count_matches(old, baseline)
+        result["historical_fixture_matching_candidates"] = count_matches(old)
         result["historical_fixture_note"] = "Known historical report read into memory only; detector count recorded, values withheld."
     except (subprocess.CalledProcessError, UnicodeDecodeError):
         pass

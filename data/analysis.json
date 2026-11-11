@@ -148,11 +148,13 @@
         {
           "id": "AN-11",
           "label": "Corporate figures",
-          "value": "Portfolio-level disclosures are evidence of practice, not legal benchmarks",
+          "value": "Portfolio/county-level disclosures (including Essex SF County) are evidence of practice, not legal benchmarks",
           "status": "verified",
           "source_ids": [
             "S48",
-            "S49"
+            "S49",
+            "S89",
+            "S90"
           ],
           "notes": "Not SF-specific.",
           "flag_id": "",
@@ -337,7 +339,8 @@
             "S01",
             "S07",
             "S35",
-            "S42"
+            "S42",
+            "S73"
           ],
           "notes": "Still not a guarantee against a petition.",
           "flag_id": "",

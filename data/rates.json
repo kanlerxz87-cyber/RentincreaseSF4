@@ -168,11 +168,13 @@
         {
           "id": "RATE-12",
           "label": "Proposed banked and capital-improvement cap, File 261020",
-          "value": "Not enacted as of November 10, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
+          "value": "Not enacted as of November 11, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
           "status": "verified",
           "source_ids": [
             "S05",
-            "S71"
+            "S71",
+            "S83",
+            "S84"
           ],
           "notes": "If enacted as currently proposed, applicability would include banked notices and capital-improvement petitions from September 15, 2026. Check current status; see F46.",
           "flag_id": "F46",
@@ -185,7 +187,9 @@
           "status": "needs review",
           "source_ids": [
             "S05",
-            "S71"
+            "S71",
+            "S83",
+            "S84"
           ],
           "notes": "Not enacted and case-specific histories are unverified; do not treat the proposal as current law.",
           "flag_id": "F46",
@@ -193,11 +197,13 @@
         },
         {
           "id": "RATE-14",
-          "label": "Exact Legistar record at fetch (2026-11-10)",
+          "label": "Exact Legistar record at fetch (2026-11-11)",
           "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
           "status": "verified",
           "source_ids": [
-            "S71"
+            "S71",
+            "S83",
+            "S84"
           ],
           "notes": "History rows are procedural only: 9/15/2026 assigned under 30-day rule; 9/18/2026 and 9/30/2026 referred to department; 10/7/2026 Youth Commission response received.",
           "flag_id": "F47",
@@ -206,11 +212,13 @@
         {
           "id": "RATE-15",
           "label": "Proposed applicability date vs posting date",
-          "value": "Notice posted November 9, 2026 says the proposal would apply to banked increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026",
+          "value": "Notice posted November 9, 2026 says the proposal would apply to banked increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026; draft Sec. 37.3(h) uses the same September 15, 2026 trigger",
           "status": "verified",
           "source_ids": [
             "S72",
-            "S71"
+            "S71",
+            "S83",
+            "S84"
           ],
           "notes": "The applicability date precedes both the posting date and the 9/15/2026 introduction. Nothing official says how a notice served between 9/15/2026 and enactment would be treated.",
           "flag_id": "F47",
@@ -219,13 +227,15 @@
         {
           "id": "RATE-16",
           "label": "Duration wording disagrees",
-          "value": "Notice: 'temporarily limit'. Legistar title: 'for the next three years'",
+          "value": "Notice: 'temporarily limit'. Legistar title: 'for the next three years'. Draft Sec. 37.3(h) states the limit remains in effect until December 31, 2029 unless extended, with excess imposable on/after January 1, 2030",
           "status": "verified",
           "source_ids": [
             "S72",
-            "S71"
+            "S71",
+            "S83",
+            "S84"
           ],
-          "notes": "Recorded as an inconsistency; neither wording is preferred here.",
+          "notes": "Draft text defines the sunset; the proposal is still not enacted. See F47.",
           "flag_id": "F47",
           "source_note": ""
         },
@@ -244,14 +254,16 @@
         },
         {
           "id": "RATE-18",
-          "label": "How the proposed 10% is measured",
-          "value": "",
-          "status": "needs review",
+          "label": "How the proposed 10% is measured (draft text)",
+          "value": "10% of the lowest base rent in effect during the 12 months preceding the effective date; proposed Sec. 37.3(h) covers Sec. 37.3(a)(2)-(3) only, leaving the Sec. 37.3(a)(1) annual CPI increase separate",
+          "status": "verified",
           "source_ids": [
+            "S83",
+            "S84",
             "S71",
             "S72"
           ],
-          "notes": "No official page states whether the 10% includes or excludes the separate annual allowable increase, or how it treats a banked increase already imposed; blank, not inferred.",
+          "notes": "Draft text answers measurement; still proposed, not current law. Case-specific effect remains blank (RATE-13).",
           "flag_id": "F47",
           "source_note": ""
         }

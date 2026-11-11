@@ -117,11 +117,13 @@
         {
           "id": "LOC-25",
           "label": "Pending legislation (proposed, not law)",
-          "value": "File 261020 would cap combined banked plus capital improvement increases at 10% per year; version 1, 'Pending Committee Action' on 2026-11-10",
+          "value": "File 261020 would cap combined banked plus capital improvement increases at 10% per year; version 1, 'Pending Committee Action' on 2026-11-11",
           "status": "verified",
           "source_ids": [
             "S71",
-            "S72"
+            "S72",
+            "S83",
+            "S84"
           ],
           "notes": "Proposed only - creates no current limit. See Rates page RATE-12 to RATE-18 and flags F46/F47.",
           "flag_id": "F46",

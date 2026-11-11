@@ -45,7 +45,8 @@
           "value": "Published",
           "status": "verified",
           "source_ids": [
-            "S20"
+            "S20",
+            "S68"
           ],
           "notes": "This page.",
           "flag_id": "",
@@ -71,7 +72,8 @@
           "value": "Done",
           "status": "verified",
           "source_ids": [
-            "S20"
+            "S20",
+            "S68"
           ],
           "notes": "REPO_REVIEW.md.",
           "flag_id": "",
@@ -193,7 +195,8 @@
           "value": "Published",
           "status": "verified",
           "source_ids": [
-            "S01"
+            "S01",
+            "S68"
           ],
           "notes": "Tables on every subpage.",
           "flag_id": "",
@@ -217,7 +220,8 @@
           "value": "Published",
           "status": "verified",
           "source_ids": [
-            "S01"
+            "S01",
+            "S68"
           ],
           "notes": "pages/flagged.html.",
           "flag_id": "",
@@ -229,7 +233,8 @@
           "value": "Published",
           "status": "verified",
           "source_ids": [
-            "S01"
+            "S01",
+            "S68"
           ],
           "notes": "Sources page.",
           "flag_id": "",

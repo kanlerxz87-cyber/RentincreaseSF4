@@ -79,10 +79,48 @@
           "status": "needs review",
           "source_ids": [
             "S48",
-            "S49"
+            "S49",
+            "S89",
+            "S90"
           ],
           "notes": "No official source proves what all large corporations do.",
           "flag_id": "F23",
+          "source_note": ""
+        },
+        {
+          "id": "CORP-07",
+          "label": "Essex Property Trust - San Francisco County Q4 2025",
+          "value": "1,356 consolidated SF units; avg monthly rental rate $2,966 vs $2,897 (+2.4% YoY); occupancy 95.5%; gross revenue +2.0% YoY",
+          "status": "verified",
+          "source_ids": [
+            "S89"
+          ],
+          "notes": "County-level REIT evidence; not a legal benchmark for a rent-controlled unit.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CORP-08",
+          "label": "Essex Property Trust - portfolio lease tradeouts Q4 2025",
+          "value": "Similar-term net effective renewal +4.8%; new lease -2.4%; blended +1.9% (full-year 2025 blended +2.5%)",
+          "status": "verified",
+          "source_ids": [
+            "S89"
+          ],
+          "notes": "Portfolio-level; renewals above 1.6% reflect largely post-1979 stock outside SF rent control.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "CORP-09",
+          "label": "Equity Residential FY 2025 Form 10-K",
+          "value": "FY 2025 Form 10-K on EDGAR (CIK 0000931182); multifamily REIT operating in San Francisco and other coastal markets",
+          "status": "verified",
+          "source_ids": [
+            "S90"
+          ],
+          "notes": "Resolves prior SEC search dead end (F15); portfolio-level only, not SF-specific rent data.",
+          "flag_id": "",
           "source_note": ""
         }
       ]

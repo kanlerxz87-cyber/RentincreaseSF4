@@ -119,14 +119,13 @@
   },
   {
     "id": "F13",
-    "title": "94122 SAFMR row not obtained",
-    "detail": "SAFMR schedule chunks did not include CA/94122; xlsx fetch failed or not parsed; ZIP value left blank.",
+    "title": "94122 SAFMR row not obtained (benchmark now obtained; subject-unit comparison still blank)",
+    "detail": "Earlier PDF/XLSX parsing left the 94122 ZIP row blank. Resolved in part 2026-11-11: HUD USER HTML zip-calc pages publish FY2027 ($2,370/$2,770/$3,410/$4,460/$5,020) and FY2026 ($2,280/$2,730/$3,310/$4,230/$4,380) 94122 SAFMRs (S85/S86). Subject-unit bedroom counts were not supplied, so no subject-unit SAFMR comparison is asserted; those cells stay blank.",
     "source_ids": [
+      "S85",
+      "S86",
       "S44",
-      "S46",
-      "S50",
-      "S51",
-      "S52"
+      "S88"
     ],
     "status": "needs review"
   },
@@ -142,9 +141,11 @@
   },
   {
     "id": "F15",
-    "title": "Equity Residential SEC dead end",
-    "detail": "No official EQR filing found; IRT and Invitation Homes SEC filings used.",
+    "title": "Equity Residential SEC dead end (resolved 2026-11-11)",
+    "detail": "Earlier SEC search found no EQR filing. Resolved 2026-11-11: Equity Residential FY2025 Form 10-K is on EDGAR (S90); Essex Property Trust SF County results are also on EDGAR (S89). Both are portfolio/county-level evidence only, not legal benchmarks.",
     "source_ids": [
+      "S90",
+      "S89",
       "S48",
       "S49"
     ],
@@ -255,7 +256,7 @@
   {
     "id": "F26",
     "title": "Privacy: earlier validation report published raw identifier tokens",
-    "detail": "data/validation_report.json generated 2026-11-06 listed the raw tenant identifier tokens it scanned for, in a check detail. Found independently on 2026-11-07 by sessions arena-6f344b80 and arena-2e273eee (PR #2, merged). validate_site.py no longer prints raw tokens (count/fingerprint only) and the report was regenerated. Manual review should confirm no other published file contains those tokens.",
+    "detail": "data/validation_report.json generated 2026-11-06 listed the raw tenant identifier tokens it scanned for, in a check detail. Found independently on 2026-11-07 by sessions arena-6f344b80 and arena-2e273eee (PR #2, merged). validate_site.py no longer prints raw tokens (allowlist count only, zero digests stored since 2026-11-11 I1D) and the report was regenerated. Manual review should confirm no other published file contains those tokens.",
     "source_ids": [
       "S23"
     ],
@@ -577,9 +578,11 @@
   },
   {
     "id": "F47",
-    "title": "The proposed-cap notice and the Legistar record do not align on retroactivity, duration or how the 10% is measured",
-    "detail": "Verified 2026-11-10 from two official pages about the same proposal. (1) Retroactivity: the November 9, 2026 notice says the proposal would apply to banked increases noticed on or after September 15, 2026, a date earlier than the notice itself and earlier than any possible enactment; the Legistar record shows the ordinance was only introduced on 9/15/2026. Neither page says whether an increase noticed between 9/15/2026 and enactment would be caught. (2) Duration: the notice calls the measure temporary, while the Legistar title says the cap applies 'for the next three years'. (3) Measurement: no page states how the 10% is measured, how it interacts with the separate annual allowable increase, or how it applies to a banked increase already imposed. Nothing is inferred here, and no case-specific banked or capital-improvement amount is asserted for either unit.",
+    "title": "Proposed-cap retroactivity, duration and measurement (draft text now defines them; still not enacted)",
+    "detail": "Verified 2026-11-10 from the notice/Legistar record and updated 2026-11-11 from Leg Ver1/Leg Dig Ver1 (S83/S84). Draft Sec. 37.3(h) defines measurement as 10% of the lowest base rent in the prior 12 months, covers Sec. 37.3(a)(2)-(3) only (annual CPI increase separate), applies to notices/petitions on/after September 15, 2026 through December 31, 2029, and defers excess to on/after January 1, 2030. Remaining uncertainty: the proposal is still Pending Committee Action (not enacted), and no official page says how a notice served between September 15, 2026 and any future enactment would be treated. No case-specific banked or capital-improvement amount is asserted for either unit.",
     "source_ids": [
+      "S83",
+      "S84",
       "S71",
       "S72"
     ],

@@ -105,28 +105,41 @@
         {
           "id": "MKT-07",
           "label": "94122 FY2026 Small Area FMR",
-          "value": "",
-          "status": "needs review",
+          "value": "$2,280 / $2,730 / $3,310 / $4,230 / $4,380 (0-4BR)",
+          "status": "verified",
           "source_ids": [
-            "S44",
-            "S46",
-            "S51"
+            "S86",
+            "S44"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07",
+          "notes": "HUD ZIP benchmark obtained 2026-11-11; historical FY2026.",
+          "flag_id": "",
           "source_note": ""
         },
         {
           "id": "MKT-08",
           "label": "94122 FY2027 Small Area FMR",
+          "value": "$2,370 / $2,770 / $3,410 / $4,460 / $5,020 (0-4BR)",
+          "status": "verified",
+          "source_ids": [
+            "S85",
+            "S44",
+            "S88"
+          ],
+          "notes": "HUD ZIP benchmark obtained 2026-11-11; in effect Oct. 1, 2026 per S88.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "MKT-10",
+          "label": "Subject-unit SAFMR comparison (bedroom count)",
           "value": "",
           "status": "needs review",
           "source_ids": [
-            "S44",
-            "S50",
-            "S52"
+            "S85",
+            "S86",
+            "S44"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
+          "notes": "Subject-unit bedroom counts were not supplied; no subject-unit SAFMR comparison is asserted; blank.",
           "flag_id": "T03-F07",
           "source_note": ""
         },

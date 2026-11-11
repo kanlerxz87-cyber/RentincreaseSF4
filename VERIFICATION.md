@@ -277,3 +277,18 @@ This is a focused update, not a claim that every historical source was rechecked
 | S71 | File 261020 still Pending Committee Action, not enacted; 6 attachments now listed (Comment Ltrs added since 2026-11-10), history rows unchanged. |
 
 Build date updated to 2026-11-11. No new legal irregularity; no new flag. F44 (history exposure) remains open and owner-actionable.
+
+## I1D — final integration + fresh re-verification, 2026-11-11 (session `arena-1d1e5d2d`)
+
+Focused update, not a claim that every historical source was rechecked today. Each source retains its individual verification date. Full record: `research/i1d_2026-11-11_integration/README.md`.
+
+| Source | Directly rechecked 2026-11-11 and outcome |
+| --- | --- |
+| S01, S02 | 1.6% 3/1/26–2/28/27, license rule, 30/90-day notice, File 261020 notice (not enacted) unchanged; S02 F45 link defect still present. |
+| S05, S07, S08, S53 | 24-month banking, Housing Inventory reporting, current-license-before-effective-date, null-and-void/suspension wording unchanged. |
+| S27, S56, S57, S59, S61 | AB 1482 8.8% (not applicable to SF Ordinance units), $59.00 fee + 50% recovery, §1942.5 retaliation bar, post-1979 exemption, just-cause evictions all held. S57/S59/S61 fee-text corruption (C72-D01) fixed. |
+| S71, S83, S84 | File 261020 still Pending Committee Action, not enacted. Leg Ver1/Leg Dig Ver1 define proposed §37.3(h) (10% of lowest prior-12-month base rent, annual separate, through 12/31/2029). RATE-18 now verified; F47 updated. |
+| S85, S86, S87, S88 | HUD 94122 SAFMRs obtained: FY27 $2,370/$2,770/$3,410/$4,460/$5,020; FY26 $2,280/$2,730/$3,310/$4,230/$4,380; SF HMFA FY27 $2,574/$3,003/$3,697/$4,832/$5,439; in effect Oct. 1, 2026. Subject-unit bedroom counts still blank. |
+| S89, S90 | Essex SF County Q4 avg $2,966 (+2.4%), renewal +4.8%/new −2.4%; EQR FY25 10-K on EDGAR. F15 resolved in part. |
+
+Case arithmetic re-checked with `Decimal`: $3,995 × 1.6% = $63.92 → $4,058.92; $3,150 × 1.6% = $50.40 → $3,200.40; fee $59.00 × 2 = $118.00, 50% = $29.50. No banked total computed. Gates: `build_site.py` clean; `validate_site.py` 122 checks, 0 errors; B87 kit 19/0; C72 kit 19/0; privacy allowlist 0 matches (zero digests stored). F44 (history exposure) remains open and owner-actionable.

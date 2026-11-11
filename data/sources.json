@@ -453,7 +453,7 @@
     "title": "CIV 1942.5 (retaliation)",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV",
     "category": "State",
-    "statement": "If the lessee is not in default and has exercised repair/tenantability rights or complained to an agency, the lessor may not increase the rent (or decrease services) within 180 days of the triggering act; separate bar on retaliating for tenant organizing or exercising lawful rights; remedy is actual damages plus punitive damages of $100-$2,000 per retaliatory act for fraud/oppression/malice, and the court awards attorney's fees to the prevailing party if requested. Operative October 1, 2021. Re-verified 2026-11-07; re-verified 2026-11-11: $59.00/$29.50, March 1 deadline, Dec 14 2026 exemption window unchanged."
+    "statement": "If the lessee is not in default and has exercised repair/tenantability rights or complained to an agency, the lessor may not increase the rent (or decrease services) within 180 days of the triggering act; separate bar on retaliating for tenant organizing or exercising lawful rights; remedy is actual damages plus punitive damages of $100-$2,000 per retaliatory act for fraud/oppression/malice, and the court awards attorney's fees to the prevailing party if requested. Operative October 1, 2021. Re-verified 2026-11-07; re-verified 2026-11-11 (I1D): 180-day retaliation bar, subdivision (d) organizing bar and subdivision (g) lawful-cause provision confirmed from the statute text; no fee text applies to this source (C72-D01 fix)."
   },
   {
     "id": "S58",
@@ -469,7 +469,7 @@
     "title": "Partial Exemption for Newly Constructed Rental Units",
     "url": "https://www.sf.gov/information--partial-exemption-newly-constructed-rental-units",
     "category": "Local",
-    "statement": "Units whose first Certificate of Occupancy issued after June 13, 1979 are exempt from the rent increase limitations only; they keep just-cause eviction protection and the annual Rent Board fee is collected for them. The exemption needs both a post-June-13-1979 first Certificate of Occupancy and no residential use before it. Re-verified 2026-11-07; re-verified 2026-11-11: $59.00/$29.50, March 1 deadline, Dec 14 2026 exemption window unchanged."
+    "statement": "Units whose first Certificate of Occupancy issued after June 13, 1979 are exempt from the rent increase limitations only; they keep just-cause eviction protection and the annual Rent Board fee is collected for them. The exemption needs both a post-June-13-1979 first Certificate of Occupancy and no residential use before it. Re-verified 2026-11-07; re-verified 2026-11-11 (I1D): post-1979 exemption conditions and January 20, 2020 just-cause extension confirmed from the page; no fee text applies to this source (C72-D01 fix)."
   },
   {
     "id": "S60",
@@ -485,7 +485,7 @@
     "title": "Evictions in San Francisco",
     "url": "https://www.sf.gov/evictions-san-francisco",
     "category": "Local",
-    "statement": "Eviction requires just cause under the Rent Ordinance; the Rent Ordinance generally allows tenants to replace departing roommates and to increase the number of occupants even when a written lease prohibits it; free legal help through the Eviction Defense Collaborative (415-659-9184) on receipt of an unlawful detainer; the 17 just-cause reasons are listed separately. Re-verified 2026-11-07; re-verified 2026-11-11: $59.00/$29.50, March 1 deadline, Dec 14 2026 exemption window unchanged."
+    "statement": "Eviction requires just cause under the Rent Ordinance; the Rent Ordinance generally allows tenants to replace departing roommates and to increase the number of occupants even when a written lease prohibits it; free legal help through the Eviction Defense Collaborative (415-659-9184) on receipt of an unlawful detainer; the 17 just-cause reasons are listed separately. Re-verified 2026-11-07; re-verified 2026-11-11 (I1D): just-cause, roommate-replacement and Eviction Defense Collaborative statements confirmed from the page; no fee text applies to this source (C72-D01 fix)."
   },
   {
     "id": "S62",
@@ -654,5 +654,69 @@
     "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
     "category": "Local",
     "statement": "Direct fetch_page 2026-11-10: a tenant may petition to defer an annual rent increase when requested repairs required by law were not made; 'The petition must be filed no later than 60 days following the tenant's receipt of the rent increase notice'; the tenant pays the disputed increase until the ALJ decision and is refunded if the petition is granted; 'The tenant's anniversary date is not affected by the deferral of the increase.'"
+  },
+  {
+    "id": "S83",
+    "agency": "San Francisco Board of Supervisors (Legistar)",
+    "title": "File 261020 Leg Ver1 - proposed ordinance text (Version 1)",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E",
+    "category": "Local - proposed legislation",
+    "statement": "Direct fetch_page 2026-11-11 (I1D): Version 1 ordinance text introduced September 15, 2026, Pending Committee Action, NOT enacted. Proposed Sec. 37.3(h) caps combined Sec. 37.3(a)(2) banked and Sec. 37.3(a)(3) capital-improvement increases at 10% of the lowest base rent in effect during the 12 months preceding the effective date (Sec. 37.3(a)(1) annual CPI increase separate), applies to banked notices and capital-improvement petitions on/after September 15, 2026 through December 31, 2029, defers excess to on/after January 1, 2030, and proposes Sec. 37.15(b)(2)(F) Housing Inventory reporting of prior-12-month banked increases. Effective 31st day after enactment if enacted (Sec. 5)."
+  },
+  {
+    "id": "S84",
+    "agency": "San Francisco Office of the City Attorney (Legistar)",
+    "title": "File 261020 Leg Dig Ver1 - Legislative Digest (Version 1)",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865647&GUID=CC09B796-4675-4A7D-9960-85FE239F7FBB",
+    "category": "Local - proposed legislation",
+    "statement": "Direct fetch_page 2026-11-11 (I1D): September 15, 2026 Legislative Digest summarizing existing law (annual CPI increase, 24-month banking, capital-improvement caps) and confirming the proposal (not enacted) would cap combined banked + capital-improvement increases at 10% of the lowest base rent in the previous 12 months through December 31, 2029, with excess imposable on/after January 1, 2030."
+  },
+  {
+    "id": "S85",
+    "agency": "U.S. Department of Housing and Urban Development (HUD USER)",
+    "title": "FY 2027 SAFMR calculation summary for ZIP 94122",
+    "url": "https://www.huduser.gov/datasets/fmr/fmr2027/zip-calc?year=2027&zip=94122&cbsasub=METRO41860MM7360",
+    "category": "Federal",
+    "statement": "Direct fetch_page 2026-11-11 (I1D): official HUD FY 2027 Small Area FMRs for Outer Sunset ZIP 94122: Efficiency $2,370; 1BR $2,770; 2BR $3,410; 3BR $4,460; 4BR $5,020 (2BR base $2,622 x 1.183 x 1.0352 x 1.0604). Voucher benchmark only, not a private rent cap."
+  },
+  {
+    "id": "S86",
+    "agency": "U.S. Department of Housing and Urban Development (HUD USER)",
+    "title": "FY 2026 SAFMR calculation summary for ZIP 94122",
+    "url": "https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2026_code/2026zip_code_calc.odn?zcta=94122&metro_code=METRO41860MM7360&year=2026",
+    "category": "Federal",
+    "statement": "Direct fetch_page 2026-11-11 (I1D): official HUD FY 2026 Small Area FMRs for ZIP 94122: Efficiency $2,280; 1BR $2,730; 2BR $3,310; 3BR $4,230; 4BR $4,380 (2BR base $2,512 x 1.2198 x 1.0229 x 1.0553). Historical; voucher benchmark only."
+  },
+  {
+    "id": "S87",
+    "agency": "U.S. Department of Housing and Urban Development (HUD USER)",
+    "title": "FY 2027 FMR summary for San Francisco, CA HUD Metro FMR Area",
+    "url": "https://www.huduser.gov/datasets/fmr/fmr2027/summary?year=2027&reporttype=county&counties=0607599999",
+    "category": "Federal",
+    "statement": "Direct fetch_page 2026-11-11 (I1D): official HTML Final FY 2027 FMRs for San Francisco, CA HUD Metro FMR Area (Marin, San Francisco, San Mateo): Efficiency $2,574; 1BR $3,003; 2BR $3,697; 3BR $4,832; 4BR $5,439."
+  },
+  {
+    "id": "S88",
+    "agency": "U.S. Department of Housing and Urban Development (HUD USER)",
+    "title": "Reevaluation Requests for FY 2027 Fair Market Rents",
+    "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/Reevaluation-Requests-FY27-FMRs.pdf",
+    "category": "Federal",
+    "statement": "Direct fetch_page 2026-11-11 (I1D): FY 2027 FMRs/SAFMRs for the San Francisco, CA HUD Metro FMR Area ARE in effect as of October 1, 2026; agencies have until January 8, 2027 to submit survey data for a requested reevaluation."
+  },
+  {
+    "id": "S89",
+    "agency": "U.S. Securities and Exchange Commission (EDGAR)",
+    "title": "Essex Property Trust Form 8-K Exhibit 99.1, Q4 and Full-Year 2025 (filed Feb. 4, 2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/920522/000114036126003709/ef20064474_ex99-1.htm",
+    "category": "Corporate",
+    "statement": "Direct fetch_page 2026-11-11 (I1D): San Francisco County same-property 1,356 consolidated units (1,893 total at pro rata share); Q4 2025 average monthly rental rate $2,966 vs $2,897 (+2.4% YoY), occupancy 95.5%, gross revenue +2.0% YoY; portfolio Q4 similar-term net effective renewal +4.8%, new lease -2.4%, blended +1.9% (full-year 2025 blended +2.5%). Portfolio/county evidence only, not a legal benchmark for a rent-controlled unit."
+  },
+  {
+    "id": "S90",
+    "agency": "U.S. Securities and Exchange Commission (EDGAR)",
+    "title": "Equity Residential FY 2025 Form 10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/931182/000119312526051433/eqr-20251231.htm",
+    "category": "Corporate",
+    "statement": "Direct fetch_page 2026-11-11 (I1D): Equity Residential FY 2025 Form 10-K on EDGAR (CIK 0000931182), resolving the prior SEC search dead end (F15). Multifamily REIT operating in San Francisco and other coastal markets; portfolio-level evidence only, not SF-specific rent data and not a legal benchmark."
   }
 ]

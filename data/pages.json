@@ -96,7 +96,8 @@
             "source_ids": [
               "S01",
               "S05",
-              "S35"
+              "S35",
+              "S73"
             ],
             "notes": "License first, tenant notice second. License alone does not satisfy state/local notice law; you must still comply with all other rent increase laws.",
             "flag_id": "",
@@ -271,13 +272,14 @@
           {
             "id": "SUM-09",
             "label": "Corporate practice",
-            "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%",
+            "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%; Essex SF County Q4 2025 avg $2,966 (+2.4% YoY), renewal +4.8%, new -2.4%",
             "status": "verified",
             "source_ids": [
               "S48",
-              "S49"
+              "S49",
+              "S89"
             ],
-            "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
+            "notes": "Portfolio/county-level evidence only, not a legal benchmark for a rent-controlled unit.",
             "flag_id": "",
             "source_note": ""
           },
@@ -329,7 +331,9 @@
             "status": "verified",
             "source_ids": [
               "S05",
-              "S71"
+              "S71",
+              "S83",
+              "S84"
             ],
             "notes": "If enacted as proposed, it would apply to banked notices and capital-improvement petitions from September 15, 2026; check status before relying on a banked calculation. F46.",
             "flag_id": "F46",
@@ -337,17 +341,29 @@
           },
           {
             "id": "SUM-13",
-            "label": "94122 Small Area FMR",
+            "label": "94122 Small Area FMR (HUD ZIP benchmark)",
+            "value": "FY2027: $2,370 / $2,770 / $3,410 / $4,460 / $5,020 (0-4BR); FY2026: $2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+            "status": "verified",
+            "source_ids": [
+              "S85",
+              "S86",
+              "S44"
+            ],
+            "notes": "HUD ZIP benchmarks obtained 2026-11-11; voucher standards only, not a rent cap.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUM-15",
+            "label": "Subject-unit SAFMR comparison (bedroom count)",
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S44",
-              "S46",
-              "S50",
-              "S51",
-              "S52"
+              "S85",
+              "S86",
+              "S44"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
+            "notes": "Subject-unit bedroom counts were not supplied; no subject-unit SAFMR comparison is asserted; blank.",
             "flag_id": "T03-F07",
             "source_note": ""
           }
@@ -1252,7 +1268,8 @@
             "value": "Published",
             "status": "verified",
             "source_ids": [
-              "S20"
+              "S20",
+              "S68"
             ],
             "notes": "This page.",
             "flag_id": "",
@@ -1278,7 +1295,8 @@
             "value": "Done",
             "status": "verified",
             "source_ids": [
-              "S20"
+              "S20",
+              "S68"
             ],
             "notes": "REPO_REVIEW.md.",
             "flag_id": "",
@@ -1400,7 +1418,8 @@
             "value": "Published",
             "status": "verified",
             "source_ids": [
-              "S01"
+              "S01",
+              "S68"
             ],
             "notes": "Tables on every subpage.",
             "flag_id": "",
@@ -1424,7 +1443,8 @@
             "value": "Published",
             "status": "verified",
             "source_ids": [
-              "S01"
+              "S01",
+              "S68"
             ],
             "notes": "pages/flagged.html.",
             "flag_id": "",
@@ -1436,7 +1456,8 @@
             "value": "Published",
             "status": "verified",
             "source_ids": [
-              "S01"
+              "S01",
+              "S68"
             ],
             "notes": "Sources page.",
             "flag_id": "",
@@ -1715,11 +1736,13 @@
           {
             "id": "RATE-12",
             "label": "Proposed banked and capital-improvement cap, File 261020",
-            "value": "Not enacted as of November 10, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
+            "value": "Not enacted as of November 11, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
             "status": "verified",
             "source_ids": [
               "S05",
-              "S71"
+              "S71",
+              "S83",
+              "S84"
             ],
             "notes": "If enacted as currently proposed, applicability would include banked notices and capital-improvement petitions from September 15, 2026. Check current status; see F46.",
             "flag_id": "F46",
@@ -1732,7 +1755,9 @@
             "status": "needs review",
             "source_ids": [
               "S05",
-              "S71"
+              "S71",
+              "S83",
+              "S84"
             ],
             "notes": "Not enacted and case-specific histories are unverified; do not treat the proposal as current law.",
             "flag_id": "F46",
@@ -1740,11 +1765,13 @@
           },
           {
             "id": "RATE-14",
-            "label": "Exact Legistar record at fetch (2026-11-10)",
+            "label": "Exact Legistar record at fetch (2026-11-11)",
             "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
             "status": "verified",
             "source_ids": [
-              "S71"
+              "S71",
+              "S83",
+              "S84"
             ],
             "notes": "History rows are procedural only: 9/15/2026 assigned under 30-day rule; 9/18/2026 and 9/30/2026 referred to department; 10/7/2026 Youth Commission response received.",
             "flag_id": "F47",
@@ -1753,11 +1780,13 @@
           {
             "id": "RATE-15",
             "label": "Proposed applicability date vs posting date",
-            "value": "Notice posted November 9, 2026 says the proposal would apply to banked increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026",
+            "value": "Notice posted November 9, 2026 says the proposal would apply to banked increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026; draft Sec. 37.3(h) uses the same September 15, 2026 trigger",
             "status": "verified",
             "source_ids": [
               "S72",
-              "S71"
+              "S71",
+              "S83",
+              "S84"
             ],
             "notes": "The applicability date precedes both the posting date and the 9/15/2026 introduction. Nothing official says how a notice served between 9/15/2026 and enactment would be treated.",
             "flag_id": "F47",
@@ -1766,13 +1795,15 @@
           {
             "id": "RATE-16",
             "label": "Duration wording disagrees",
-            "value": "Notice: 'temporarily limit'. Legistar title: 'for the next three years'",
+            "value": "Notice: 'temporarily limit'. Legistar title: 'for the next three years'. Draft Sec. 37.3(h) states the limit remains in effect until December 31, 2029 unless extended, with excess imposable on/after January 1, 2030",
             "status": "verified",
             "source_ids": [
               "S72",
-              "S71"
+              "S71",
+              "S83",
+              "S84"
             ],
-            "notes": "Recorded as an inconsistency; neither wording is preferred here.",
+            "notes": "Draft text defines the sunset; the proposal is still not enacted. See F47.",
             "flag_id": "F47",
             "source_note": ""
           },
@@ -1791,14 +1822,16 @@
           },
           {
             "id": "RATE-18",
-            "label": "How the proposed 10% is measured",
-            "value": "",
-            "status": "needs review",
+            "label": "How the proposed 10% is measured (draft text)",
+            "value": "10% of the lowest base rent in effect during the 12 months preceding the effective date; proposed Sec. 37.3(h) covers Sec. 37.3(a)(2)-(3) only, leaving the Sec. 37.3(a)(1) annual CPI increase separate",
+            "status": "verified",
             "source_ids": [
+              "S83",
+              "S84",
               "S71",
               "S72"
             ],
-            "notes": "No official page states whether the 10% includes or excludes the separate annual allowable increase, or how it treats a banked increase already imposed; blank, not inferred.",
+            "notes": "Draft text answers measurement; still proposed, not current law. Case-specific effect remains blank (RATE-13).",
             "flag_id": "F47",
             "source_note": ""
           }
@@ -1925,11 +1958,13 @@
           {
             "id": "LOC-25",
             "label": "Pending legislation (proposed, not law)",
-            "value": "File 261020 would cap combined banked plus capital improvement increases at 10% per year; version 1, 'Pending Committee Action' on 2026-11-10",
+            "value": "File 261020 would cap combined banked plus capital improvement increases at 10% per year; version 1, 'Pending Committee Action' on 2026-11-11",
             "status": "verified",
             "source_ids": [
               "S71",
-              "S72"
+              "S72",
+              "S83",
+              "S84"
             ],
             "notes": "Proposed only - creates no current limit. See Rates page RATE-12 to RATE-18 and flags F46/F47.",
             "flag_id": "F46",
@@ -2449,18 +2484,16 @@
           },
           {
             "id": "FED-07",
-            "label": "94122 SAFMR",
-            "value": "",
-            "status": "needs review",
+            "label": "94122 SAFMR (HUD ZIP benchmark)",
+            "value": "FY2027: $2,370 / $2,770 / $3,410 / $4,460 / $5,020 (0-4BR); FY2026: $2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+            "status": "verified",
             "source_ids": [
-              "S44",
-              "S46",
-              "S50",
-              "S51",
-              "S52"
+              "S85",
+              "S86",
+              "S44"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07",
+            "notes": "HUD ZIP benchmarks obtained 2026-11-11; subject-unit bedroom counts still blank, so no subject-unit comparison is asserted. Voucher standards only.",
+            "flag_id": "",
             "source_note": ""
           }
         ]
@@ -3296,7 +3329,8 @@
             "source_ids": [
               "S53",
               "S07",
-              "S55"
+              "S55",
+              "S73"
             ],
             "notes": "Unlicensed notices may be void or unenforceable.",
             "flag_id": "",
@@ -3631,10 +3665,48 @@
             "status": "needs review",
             "source_ids": [
               "S48",
-              "S49"
+              "S49",
+              "S89",
+              "S90"
             ],
             "notes": "No official source proves what all large corporations do.",
             "flag_id": "F23",
+            "source_note": ""
+          },
+          {
+            "id": "CORP-07",
+            "label": "Essex Property Trust - San Francisco County Q4 2025",
+            "value": "1,356 consolidated SF units; avg monthly rental rate $2,966 vs $2,897 (+2.4% YoY); occupancy 95.5%; gross revenue +2.0% YoY",
+            "status": "verified",
+            "source_ids": [
+              "S89"
+            ],
+            "notes": "County-level REIT evidence; not a legal benchmark for a rent-controlled unit.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CORP-08",
+            "label": "Essex Property Trust - portfolio lease tradeouts Q4 2025",
+            "value": "Similar-term net effective renewal +4.8%; new lease -2.4%; blended +1.9% (full-year 2025 blended +2.5%)",
+            "status": "verified",
+            "source_ids": [
+              "S89"
+            ],
+            "notes": "Portfolio-level; renewals above 1.6% reflect largely post-1979 stock outside SF rent control.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CORP-09",
+            "label": "Equity Residential FY 2025 Form 10-K",
+            "value": "FY 2025 Form 10-K on EDGAR (CIK 0000931182); multifamily REIT operating in San Francisco and other coastal markets",
+            "status": "verified",
+            "source_ids": [
+              "S90"
+            ],
+            "notes": "Resolves prior SEC search dead end (F15); portfolio-level only, not SF-specific rent data.",
+            "flag_id": "",
             "source_note": ""
           }
         ]
@@ -3828,28 +3900,41 @@
           {
             "id": "MKT-07",
             "label": "94122 FY2026 Small Area FMR",
-            "value": "",
-            "status": "needs review",
+            "value": "$2,280 / $2,730 / $3,310 / $4,230 / $4,380 (0-4BR)",
+            "status": "verified",
             "source_ids": [
-              "S44",
-              "S46",
-              "S51"
+              "S86",
+              "S44"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
-            "flag_id": "T03-F07",
+            "notes": "HUD ZIP benchmark obtained 2026-11-11; historical FY2026.",
+            "flag_id": "",
             "source_note": ""
           },
           {
             "id": "MKT-08",
             "label": "94122 FY2027 Small Area FMR",
+            "value": "$2,370 / $2,770 / $3,410 / $4,460 / $5,020 (0-4BR)",
+            "status": "verified",
+            "source_ids": [
+              "S85",
+              "S44",
+              "S88"
+            ],
+            "notes": "HUD ZIP benchmark obtained 2026-11-11; in effect Oct. 1, 2026 per S88.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "MKT-10",
+            "label": "Subject-unit SAFMR comparison (bedroom count)",
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S44",
-              "S50",
-              "S52"
+              "S85",
+              "S86",
+              "S44"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
+            "notes": "Subject-unit bedroom counts were not supplied; no subject-unit SAFMR comparison is asserted; blank.",
             "flag_id": "T03-F07",
             "source_note": ""
           },
@@ -3902,11 +3987,13 @@
           {
             "id": "Q-02",
             "label": "How do big real estate corporations handle increases?",
-            "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.",
+            "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%; Essex SF County Q4 2025 avg $2,966 (+2.4% YoY), renewal +4.8%, new -2.4%.",
             "status": "verified",
             "source_ids": [
               "S48",
-              "S49"
+              "S49",
+              "S89",
+              "S90"
             ],
             "notes": "Portfolio-level, not SF-specific; no generalization.",
             "flag_id": "",
@@ -3935,7 +4022,8 @@
               "S01",
               "S05",
               "S35",
-              "S07"
+              "S07",
+              "S73"
             ],
             "notes": "Conservative checklist capable of lawyer review.",
             "flag_id": "",
@@ -4340,11 +4428,13 @@
           {
             "id": "AN-11",
             "label": "Corporate figures",
-            "value": "Portfolio-level disclosures are evidence of practice, not legal benchmarks",
+            "value": "Portfolio/county-level disclosures (including Essex SF County) are evidence of practice, not legal benchmarks",
             "status": "verified",
             "source_ids": [
               "S48",
-              "S49"
+              "S49",
+              "S89",
+              "S90"
             ],
             "notes": "Not SF-specific.",
             "flag_id": "",
@@ -4529,7 +4619,8 @@
               "S01",
               "S07",
               "S35",
-              "S42"
+              "S42",
+              "S73"
             ],
             "notes": "Still not a guarantee against a petition.",
             "flag_id": "",

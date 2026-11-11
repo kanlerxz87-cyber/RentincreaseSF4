@@ -1,6 +1,7 @@
 {
-  "baseline_fingerprints": 6,
-  "files_scanned": 102,
+  "baseline_allowlisted_tokens": 30,
+  "baseline_digests_stored": 0,
+  "files_scanned": 109,
   "current_tree_matching_candidates": 0,
   "current_tree_files_with_matches": [],
   "historical_fixture_matching_candidates": null,

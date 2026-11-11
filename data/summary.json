@@ -95,7 +95,8 @@
           "source_ids": [
             "S01",
             "S05",
-            "S35"
+            "S35",
+            "S73"
           ],
           "notes": "License first, tenant notice second. License alone does not satisfy state/local notice law; you must still comply with all other rent increase laws.",
           "flag_id": "",
@@ -270,13 +271,14 @@
         {
           "id": "SUM-09",
           "label": "Corporate practice",
-          "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%",
+          "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%; Essex SF County Q4 2025 avg $2,966 (+2.4% YoY), renewal +4.8%, new -2.4%",
           "status": "verified",
           "source_ids": [
             "S48",
-            "S49"
+            "S49",
+            "S89"
           ],
-          "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
+          "notes": "Portfolio/county-level evidence only, not a legal benchmark for a rent-controlled unit.",
           "flag_id": "",
           "source_note": ""
         },
@@ -328,7 +330,9 @@
           "status": "verified",
           "source_ids": [
             "S05",
-            "S71"
+            "S71",
+            "S83",
+            "S84"
           ],
           "notes": "If enacted as proposed, it would apply to banked notices and capital-improvement petitions from September 15, 2026; check status before relying on a banked calculation. F46.",
           "flag_id": "F46",
@@ -336,17 +340,29 @@
         },
         {
           "id": "SUM-13",
-          "label": "94122 Small Area FMR",
+          "label": "94122 Small Area FMR (HUD ZIP benchmark)",
+          "value": "FY2027: $2,370 / $2,770 / $3,410 / $4,460 / $5,020 (0-4BR); FY2026: $2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+          "status": "verified",
+          "source_ids": [
+            "S85",
+            "S86",
+            "S44"
+          ],
+          "notes": "HUD ZIP benchmarks obtained 2026-11-11; voucher standards only, not a rent cap.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUM-15",
+          "label": "Subject-unit SAFMR comparison (bedroom count)",
           "value": "",
           "status": "needs review",
           "source_ids": [
-            "S44",
-            "S46",
-            "S50",
-            "S51",
-            "S52"
+            "S85",
+            "S86",
+            "S44"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
+          "notes": "Subject-unit bedroom counts were not supplied; no subject-unit SAFMR comparison is asserted; blank.",
           "flag_id": "T03-F07",
           "source_note": ""
         }

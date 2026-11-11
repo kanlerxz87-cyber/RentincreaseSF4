@@ -30,11 +30,13 @@
         {
           "id": "Q-02",
           "label": "How do big real estate corporations handle increases?",
-          "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.",
+          "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%; Essex SF County Q4 2025 avg $2,966 (+2.4% YoY), renewal +4.8%, new -2.4%.",
           "status": "verified",
           "source_ids": [
             "S48",
-            "S49"
+            "S49",
+            "S89",
+            "S90"
           ],
           "notes": "Portfolio-level, not SF-specific; no generalization.",
           "flag_id": "",
@@ -63,7 +65,8 @@
             "S01",
             "S05",
             "S35",
-            "S07"
+            "S07",
+            "S73"
           ],
           "notes": "Conservative checklist capable of lawyer review.",
           "flag_id": "",
