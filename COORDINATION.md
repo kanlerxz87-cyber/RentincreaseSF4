@@ -624,6 +624,16 @@ This claim is committed and pushed before substantive work begins. No raw tenant
 
 **T49 publication record:** [PR #35](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/35) merged 2026-11-11 02:10:06 UTC at `44efd1e828e5691aed96aa7ad03f36be6e7e5713`. GitHub Pages build 1358904378 completed successfully for that exact merge commit at 02:10:30 UTC, with no build error. The site was already live before this spot-check PR. F44 and other review flags remain open.
 
+### T50 publication record (session `arena-04258d5c`, 2026-11-11)
+
+| Item | Result | Evidence |
+| --- | --- | --- |
+| PR #36 — T50 fresh re-verification, DATE 2026-11-11, rebuild + validate | `MERGED` 2026-11-11T02:11:28Z, merge commit `5e195e1e70965570bf303cee8bf8745572700ed5` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/36 ; `gh pr view 36`; CI `validate` passed (7s) |
+| GitHub Pages deployment | `built` at `c237caafaf3644da80a38a8426e51c8d89efa97d` (includes PR #36 + PR #37 + PR #38); live site verified by direct fetch (license answer first, 1.6%, $59.00 fee, 82 sources, 65 flags) | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` -> `built`; live fetch of https://kanlerxz87-cyber.github.io/RentincreaseSF4/ |
+| Coordination | PR #35 (spot check) merged first; PR #37 (parallel T49 re-verification) dropped its generator edits in favour of PR #36 per the T47 precedent and kept its quote ledger docs-only; all three T49/T50 records kept verbatim | See T49 ID reconciliation + duplicate-work reconciliation above |
+
+This record is landed by a follow-up docs-only PR from the same branch, because a commit cannot cite its own merge commit. Flagged items (F44 and all others) remain published on the Flagged for Review page and do not block.
+
 ### T52 conflict and handoff log
 
 At 02:12 UTC, `origin/main` advanced from `89c7bb9` to `5e195e1` while this independently claimed task was in progress; PRs #35, #36 and #38 landed concurrently and PR #37 remained open. Merge conflicts affected this board, `scripts/site_text.py` and generated summary files. Kept both session records and the other sessions’ source/date updates, renamed this task and research directory to T51 to avoid their T49/T50 collisions, retained the more specific summary with both sets of verification dates, and regenerated generated outputs from the combined canonical scripts. Notified PR #37 of overlap. No other session’s research record or source updates were discarded. GitHub Pages API briefly reported an error on `5e195e1`, while the corresponding Actions deployment run succeeded; this disagreement remains to be checked after publication.
