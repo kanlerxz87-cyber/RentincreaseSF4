@@ -12,5 +12,6 @@ jobs:
           python-version: '3.12'
       - run: python scripts/build_site.py
       - run: python scripts/validate_site.py
+      - run: python research/t51_external_audit/test_privacy_guard.py
       - name: Confirm generated outputs are committed
         run: git diff --exit-code

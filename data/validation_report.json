@@ -383,14 +383,14 @@
       "detail": ""
     },
     {
-      "name": "privacy fingerprint baseline present",
+      "name": "tenant group fields and map use placeholders only",
       "ok": true,
-      "detail": "6 one-way fingerprints; no private intake required"
+      "detail": "Structural check only; no private intake or private-derived fingerprint stored"
     },
     {
-      "name": "no raw tenant identifiers in public files",
+      "name": "no recoverable two-letter SHA-256 fingerprints in current files",
       "ok": true,
-      "detail": ""
+      "detail": "108 files scanned; Structural checks only: not a complete personal-information audit, not proof of anonymity, and not a git-history, PR-diff, branch or cache purge."
     },
     {
       "name": "no exact street address published",
@@ -573,7 +573,7 @@
       "detail": ""
     },
     {
-      "name": "no raw tenant identifiers in the fee or new markdown files",
+      "name": "Flagged Markdown has no unresolved template markers",
       "ok": true,
       "detail": ""
     },
@@ -613,7 +613,7 @@
     "sources": 82,
     "pages": 20,
     "data_files": 22,
-    "rows_verified": 347,
+    "rows_checked_structurally": 347,
     "needs_review_rows": 67,
     "flags": 67,
     "checks": 121,

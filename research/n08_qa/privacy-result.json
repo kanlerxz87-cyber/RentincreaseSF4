@@ -1,10 +1,9 @@
 {
-  "baseline_fingerprints": 6,
-  "files_scanned": 102,
-  "current_tree_matching_candidates": 0,
-  "current_tree_files_with_matches": [],
-  "historical_fixture_matching_candidates": null,
-  "historical_fixture_note": "Not available in this checkout; no history conclusion drawn.",
+  "files_scanned": 108,
+  "tenant_group_errors": 0,
+  "placeholder_map_errors": 0,
+  "files_with_recoverable_two_letter_hashes": [],
+  "scope_limit": "Structural checks only: not a complete personal-information audit, not proof of anonymity, and not a git-history, PR-diff, branch or cache purge.",
   "privacy_values_printed": false,
-  "scope_limit": "Current-tree cleanliness does not remove git history, PR diffs, other branches, forks, caches or prior downloads."
+  "status": "passed"
 }

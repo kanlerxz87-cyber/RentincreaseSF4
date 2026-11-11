@@ -209,21 +209,17 @@ def main():
     public_css = [ROOT / "assets" / "site.css"]
     public_files = [p for p in public_md + public_json + public_html + public_css if p.exists()]
 
-    # One-way fingerprints keep the privacy regression test portable without
-    # committing private intake or printing identifiers in public reports.
-    import hashlib
-    private_fingerprints = ['27c9478468718ed43669f8b2bbac3694d1f03287a6347d4c9adadc9d12f9ecf5', '158dc33a8be8ae49804b3fa72e2e116edb683730b51752bdb552435f31f0ba5a', '569ec6135d377e8ac326be2be2fd4cd8f3538fc3c23f33a89e81a4ed83671b7e', '399ad8e221e6815cd19b54cd7f313335f9bab0ecc681615af552c64ea3901b0f', '01efd0141d7d80509ee44bbbb2dee48875711d55358bd9a91bf22d5208ffa93d', '0b28c4215599de9c8f7019402d7eaeccc8cbdc5103aeca7427774222c2bf2f16']
+    # Never embed unsalted fingerprints of a tiny identifier space: they are
+    # trivially reversible. These generic checks do not require private intake.
+    import privacy_guard
     check("private intake file is excluded from git", "internal/" in (ROOT / ".gitignore").read_text(encoding="utf-8"))
-    privacy_hits = []
-    for p in public_files:
-        text = p.read_text(encoding="utf-8")
-        candidates = re.findall(r"(?<![A-Za-z])[A-Z]\s+[A-Z](?![A-Za-z])|(?<![A-Za-z])[A-Z]{2}(?![A-Za-z])", text)
-        for candidate in candidates:
-            normalized = " ".join(candidate.split())
-            if hashlib.sha256(normalized.encode()).hexdigest() in private_fingerprints:
-                privacy_hits.append(str(p.relative_to(ROOT)))
-    check("privacy fingerprint baseline present", len(private_fingerprints) == 6, "6 one-way fingerprints; no private intake required")
-    check("no raw tenant identifiers in public files", not privacy_hits, "; ".join(privacy_hits[:5]))
+    privacy = privacy_guard.inspect()
+    check("tenant group fields and map use placeholders only",
+          privacy["tenant_group_errors"] == 0 and privacy["placeholder_map_errors"] == 0,
+          "Structural check only; no private intake or private-derived fingerprint stored")
+    check("no recoverable two-letter SHA-256 fingerprints in current files",
+          not privacy["files_with_recoverable_two_letter_hashes"],
+          "{} files scanned; {}".format(privacy["files_scanned"], privacy["scope_limit"]))
 
     address_patterns = [
         r"\b\d{3,5}\s+\d{1,2}(?:st|nd|rd|th)\s+(?:Ave|Avenue|Street|St)\b",
@@ -381,7 +377,7 @@ def main():
     check("privacy history-exposure flag is published",
           any(f["id"] == "F44" for f in flags)
           and "git history" in "".join(f["title"] + " " + f["detail"] for f in flags if f["id"] == "F44"))
-    check("no raw tenant identifiers in the fee or new markdown files",
+    check("Flagged Markdown has no unresolved template markers",
           all("{{" not in (ROOT / n).read_text(encoding="utf-8") for n in ("FLAGGED_FOR_REVIEW.md",)))
     check("table regions and inline links meet accessibility standards",
           'tabindex="0" role="region"' in (PAGES / "case.html").read_text(encoding="utf-8")
@@ -424,7 +420,7 @@ def main():
         "sources": len(source_map),
         "pages": len(list(PAGES.glob("*.html"))),
         "data_files": len(list(DATA.glob("*.json"))),
-        "rows_verified": row_count,
+        "rows_checked_structurally": row_count,
         "needs_review_rows": needs_review_count,
         "flags": len(flags),
         "checks": len(report["checks"]),
