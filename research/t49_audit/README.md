@@ -1,0 +1,10 @@
+# Post-publication spot check — 2026-11-11 UTC
+
+This is a targeted audit, not a fresh line-by-line verification of all 347 rows or a check of every external link. Earlier sessions' ledgers record their work; automated source-link checks establish URL presence and approved domains, not that each linked source proves each claim or is reachable.
+
+- [SF Rent Board rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco): directly opened; 1.6% for March 1, 2026–February 28, 2027; annual/banked license, 12-month rule and notice requirements agree with the site. The 10% banked/capital proposal remains explicitly not enacted on this page.
+- [SF Housing Inventory](https://www.sf.gov/rent-board-housing-inventory): directly opened; all residential owners report, non-owner-occupied licenses are generated automatically, a current license must be on file before annual/banked increases take effect; inventory information is public. License status for either case unit remains unknown.
+- [SF Rent Board fee](https://www.sf.gov/rent-board-fee): directly opened; 2026–27 dwelling fee $59; 2027 exemption deadline December 14, 2026; fee due March 1, 2027. This is separate from inventory reporting.
+- [Deployed dashboard](https://kanlerxz87-cyber.github.io/RentincreaseSF4/): directly opened; key license answer and 1.6% rate visible. GitHub Pages API reported `built` at commit `89c7bb9930350565babf986007740bd8046b8ee4`.
+- Build and checks: `python3 scripts/build_site.py`; `python3 scripts/validate_site.py` (119 checks, 0 errors); `python3 research/b87_notice_kit/validate_kit.py` (19 checks, 0 errors); `python3 research/n08_qa/privacy_check.py` (0 current-tree fingerprint matches, 102 files). Privacy check does not remove or clear historical public exposure; see site flag F44.
+- Arithmetic: 3,995 × 1.6% = 63.92; 3,150 × 1.6% = 50.40. These are conditional examples, not confirmation of base rent, eligibility, lease constraints, anniversary, service or license status. Rent Board rate on effective date applies.
