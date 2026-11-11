@@ -1,6 +1,6 @@
 # Executive Summary - Rental increase SF
 
-Key rate, licensing, fee, coverage, banking, retaliation and pending-legislation sources rechecked on 2026-11-11 UTC; other sources retain their individual verification dates. See research/t49_audit/README.md for the limited scope of this recheck. Informational compliance research, not legal advice.
+Key rate, licensing, fee, coverage, banking, retaliation and pending-legislation sources rechecked on 2026-11-11 UTC; other sources retain their individual verification dates. See research/t51_audit/README.md for the limited scope of this recheck. Informational compliance research, not legal advice.
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 
