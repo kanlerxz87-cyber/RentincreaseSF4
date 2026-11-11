@@ -606,6 +606,25 @@
     "status": "needs review"
   },
   {
+    "id": "F50",
+    "title": "Independent audit addendum not yet integrated into all tables",
+    "detail": "The C72 audit identifies official HUD ZIP-level market data, SEC filings and proposed ordinance attachments that may resolve some older source gaps, and further citation and source-ledger drift. The shared tables and F15/F47 have not yet been reverified and updated against those documents. See research/c72_2026-11-11_audit/README.md; do not treat those older gaps as exhaustive. The proposed ordinance is not enacted; check its current status.",
+    "source_ids": [
+      "S71",
+      "S43"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F51",
+    "title": "Privacy: short-identifier hashes remain in history",
+    "detail": "A prior validator stored unsalted hashes of short personal identifiers, which can be reversed by enumerating possible values. They have been removed from the current validator but remain in public git history and possibly prior branches or diffs. See F44 for the earlier direct disclosure and owner remediation; current checks are limited and do not prove complete privacy or remove historical exposure.",
+    "source_ids": [
+      "S68"
+    ],
+    "status": "needs review"
+  },
+  {
     "id": "B87-F01",
     "title": "Notice worksheet: case-specific notice facts unverified",
     "detail": "Worksheet unit cells stay blank; do not infer eligibility, base rent, anniversary, license, lease permission, banking, petition, subsidy, repair/retaliation or service facts. Owner-supplied dates and amounts are preserved but are not official findings. From the B87 notice kit (research/b87_notice_kit), integrated 2026-11-10.",

@@ -10,7 +10,7 @@
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "67 flagged items"
+      "detail": "69 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -383,16 +383,6 @@
       "detail": ""
     },
     {
-      "name": "privacy fingerprint baseline present",
-      "ok": true,
-      "detail": "6 one-way fingerprints; no private intake required"
-    },
-    {
-      "name": "no raw tenant identifiers in public files",
-      "ok": true,
-      "detail": ""
-    },
-    {
       "name": "no exact street address published",
       "ok": true,
       "detail": ""
@@ -475,7 +465,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "49 numeric flags"
+      "detail": "51 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -615,8 +605,8 @@
     "data_files": 22,
     "rows_verified": 347,
     "needs_review_rows": 67,
-    "flags": 67,
-    "checks": 121,
+    "flags": 69,
+    "checks": 119,
     "errors": 0
   }
 }

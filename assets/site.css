@@ -30,7 +30,6 @@ table{width:100%;border-collapse:collapse;font-size:.9rem}
 th,td{text-align:left;vertical-align:top;padding:.65rem .6rem;border-bottom:1px solid var(--line)}
 th{background:#eef3fa;color:#253b5b;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}
 tr:last-child td{border-bottom:0}
-td.blank{color:var(--muted);font-style:italic}
 .badge{display:inline-block;padding:.15rem .45rem;border-radius:999px;font-size:.72rem;font-weight:700;white-space:nowrap}
 .badge.verified{background:var(--okbg);color:var(--accent)}
 .badge.review{background:var(--warnbg);color:var(--warn)}
