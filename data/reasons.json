@@ -29,13 +29,13 @@
         {
           "id": "REAS-02",
           "label": "Properly banked skipped/partial increases",
-          "value": "24 full months; add percentages",
+          "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
           "status": "verified",
           "source_ids": [
             "S05"
           ],
           "notes": "No banked amount inferred here.",
-          "flag_id": "",
+          "flag_id": "B87-F03",
           "source_note": ""
         },
         {

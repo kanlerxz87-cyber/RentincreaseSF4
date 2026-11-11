@@ -5,7 +5,7 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "82 official sources"
+      "detail": "84 official sources"
     },
     {
       "name": "flags count matches dashboard",
@@ -45,12 +45,12 @@
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "449 rows checked; "
+      "detail": "451 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "67 needs-review rows"
+      "detail": "62 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -610,11 +610,11 @@
   ],
   "errors": [],
   "summary": {
-    "sources": 82,
+    "sources": 84,
     "pages": 20,
     "data_files": 22,
     "rows_checked_structurally": 347,
-    "needs_review_rows": 67,
+    "needs_review_rows": 62,
     "flags": 67,
     "checks": 121,
     "errors": 0

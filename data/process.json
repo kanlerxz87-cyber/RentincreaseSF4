@@ -233,14 +233,14 @@
         {
           "id": "STP-07",
           "label": "Step 7 - Decide whether a banked increase applies",
-          "value": "A skipped increase is only banked if at least 24 full months pass without any rent increase; banked percentages are added together, never compounded or prorated, never carry to a new tenant, and need no Rent Board petition.",
+          "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
           "status": "verified",
           "source_ids": [
             "S05",
             "S54"
           ],
-          "notes": "SF.gov examples describe elapsed time differently - flag F03.",
-          "flag_id": "",
+          "notes": "A banked increase may not carry over to a new tenant; ordinary banking needs no petition. The full history and any new law must be checked.",
+          "flag_id": "B87-F03",
           "source_note": ""
         },
         {
@@ -276,15 +276,16 @@
         },
         {
           "id": "STP-10",
-          "label": "Step 10 - Serve written notice with the required contents",
-          "value": "At least 30 days' written notice, or 90 days if the increase by itself or combined with another increase in the same year is more than 10%; add 5 days if mailed. State the dollar amount, the percentage, the effective date and any banked portion.",
+          "label": "Step 10 - Serve written notice",
+          "value": "At least 30 days, or 90 days if the increase alone or combined with others in the preceding 12 months is more than 10%; add applicable mail-service time. State the dollar amount, percentage, effective date and any banked portion.",
           "status": "verified",
           "source_ids": [
             "S01",
             "S05",
-            "S35"
+            "S35",
+            "S78"
           ],
-          "notes": "Civil Code 827 requires longer notice in some cases.",
+          "notes": "Five extra calendar days generally apply when mailing and address are both within California; longer periods may apply otherwise.",
           "flag_id": "",
           "source_note": ""
         },
@@ -331,14 +332,15 @@
       "rows": [
         {
           "id": "APP-01",
-          "label": "Unit 1 - earliest annual increase under the stated lease date",
-          "value": "With a February 1, 2025 lease start, the first annual increase could have been given on February 1, 2026; any later increase date uses the rate in effect on that date.",
+          "label": "Unit 1 - hypothetical first annual anniversary",
+          "value": "If a new tenancy began February 1, 2025, its first annual increase would be no earlier than February 1, 2026, subject to the lease, license, notice and coverage.",
           "status": "analysis",
           "source_ids": [
             "S01",
-            "S02"
+            "S02",
+            "S79"
           ],
-          "notes": "Derived from the official timing rule plus the owner-supplied date; no increase history was supplied.",
+          "notes": "The original tenancy, anniversary and any past increases are unverified; not a determination of a lawful increase.",
           "flag_id": "",
           "source_note": ""
         },
@@ -358,15 +360,16 @@
         },
         {
           "id": "APP-03",
-          "label": "Unit 2 - earliest annual increase under the stated lease date",
-          "value": "With a June 1, 2019 lease start, annual increases were available from June 1, 2020; an increase effective now uses the 1.6% rate plus any properly banked increases.",
+          "label": "Unit 2 - hypothetical first annual anniversary",
+          "value": "If a tenancy began June 1, 2019, its first annual increase would be no earlier than June 1, 2020, subject to all requirements.",
           "status": "analysis",
           "source_ids": [
             "S01",
             "S05",
-            "S02"
+            "S02",
+            "S79"
           ],
-          "notes": "Prior increases since 2019 were not supplied, so no banked amount is computed.",
+          "notes": "The lawful current base rent, anniversary and prior increases are unknown; no banked amount is computed.",
           "flag_id": "",
           "source_note": ""
         },

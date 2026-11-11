@@ -89,15 +89,17 @@
         },
         {
           "id": "LIC-07",
-          "label": "Step 4 - Only then notify tenants",
-          "value": "30-day written notice (90-day if >10% alone/combined in same year; +5 days if mailed) stating dollar amount, percentage and effective date, using the rate in effect on the increase date",
+          "label": "Step 4 - Recommended: confirm license, then notify",
+          "value": "Give written notice: generally 30 days, or 90 days if the increase alone or combined with other increases in the preceding 12 months exceeds 10%; add applicable mail-service time. State the dollar amount, percentage and effective date, using the rate effective then.",
           "status": "verified",
           "source_ids": [
             "S01",
             "S05",
-            "S35"
+            "S35",
+            "S78",
+            "S73"
           ],
-          "notes": "License first, tenant notice second. License alone does not satisfy state/local notice law; you must still comply with all other rent increase laws.",
+          "notes": "Getting the license before service is prudent; Rule 13.14 tests the effective date, not service date. Other requirements still apply.",
           "flag_id": "",
           "source_note": ""
         },
@@ -214,27 +216,28 @@
         {
           "id": "SUM-05",
           "label": "Notice",
-          "value": "30-day written; 90-day if >10%; +5 days if mailed; dollar amount, percentage, effective date",
+          "value": "Written notice generally 30 days, or 90 days if the increase alone or combined over the preceding 12 months exceeds 10%; state amount, percentage and effective date.",
           "status": "verified",
           "source_ids": [
             "S01",
             "S05",
-            "S35"
+            "S35",
+            "S78"
           ],
-          "notes": "Use rate in effect on increase date.",
+          "notes": "Mailing and address both within California add five calendar days; other locations may require more. Use the rate effective on the increase date.",
           "flag_id": "",
           "source_note": ""
         },
         {
           "id": "SUM-06",
           "label": "Banked increases",
-          "value": "Only if >=24 full months without any increase; add percentages, do not compound/prorate",
+          "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
           "status": "verified",
           "source_ids": [
             "S05"
           ],
-          "notes": "No banked amount inferred for this case.",
-          "flag_id": "",
+          "notes": "No banked amount is inferred for either unit. Proposed legislation may change the rules.",
+          "flag_id": "B87-F03",
           "source_note": ""
         },
         {
@@ -270,14 +273,14 @@
         {
           "id": "SUM-09",
           "label": "Corporate practice",
-          "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%",
+          "value": "IRT Q4 2025 same-store like-term renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 total-portfolio renewal 4.6%, new -0.8%.",
           "status": "verified",
           "source_ids": [
             "S48",
             "S49"
           ],
-          "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
-          "flag_id": "",
+          "notes": "IRT like-term leases were approximately 81% of Q4 leases, not all leases. Portfolio-level, not SF-specific or a legal benchmark.",
+          "flag_id": "F23",
           "source_note": ""
         },
         {
@@ -336,17 +339,15 @@
         },
         {
           "id": "SUM-13",
-          "label": "94122 Small Area FMR",
-          "value": "",
-          "status": "needs review",
+          "label": "ZIP 94122 HUD Small Area FMR, 0/1/2/3/4 bedrooms",
+          "value": "FY2027: $2,370 / $2,770 / $3,410 / $4,460 / $5,020; FY2026: $2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+          "status": "verified",
           "source_ids": [
-            "S44",
-            "S46",
             "S50",
             "S51",
-            "S52"
+            "S43"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
+          "notes": "Monthly gross-rent program benchmarks, not asking rents or private rent-increase caps; unit bedroom counts are unknown.",
           "flag_id": "T03-F07",
           "source_note": ""
         }

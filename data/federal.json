@@ -61,7 +61,7 @@
             "S43",
             "S44"
           ],
-          "notes": "Used for voucher payment standards, not a rent-increase cap.",
+          "notes": "Used in several federal housing programs, not a general private rent-increase cap.",
           "flag_id": "",
           "source_note": ""
         },
@@ -91,17 +91,15 @@
         },
         {
           "id": "FED-07",
-          "label": "94122 SAFMR",
-          "value": "",
-          "status": "needs review",
+          "label": "94122 Small Area FMR, 0/1/2/3/4 bedrooms",
+          "value": "FY2027: $2,370 / $2,770 / $3,410 / $4,460 / $5,020; FY2026: $2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+          "status": "verified",
           "source_ids": [
-            "S44",
-            "S46",
             "S50",
             "S51",
-            "S52"
+            "S43"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
+          "notes": "Monthly gross-rent estimates; not case-specific rent limits. Unit bedroom counts are unknown.",
           "flag_id": "T03-F07",
           "source_note": ""
         }

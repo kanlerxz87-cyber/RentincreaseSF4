@@ -65,14 +65,15 @@
         {
           "id": "LOC-05",
           "label": "License",
-          "value": "Current Rent Increase License required before annual/banked increase",
+          "value": "Current Rent Increase License required when an annual/banked increase takes effect",
           "status": "verified",
           "source_ids": [
             "S01",
             "S07",
-            "S08"
+            "S08",
+            "S73"
           ],
-          "notes": "Unlicensed increase may be null/void.",
+          "notes": "Rule 13.14 tests the effective date, not the service date.",
           "flag_id": "",
           "source_note": ""
         },
@@ -91,13 +92,13 @@
         {
           "id": "LOC-07",
           "label": "Banking",
-          "value": "24 full months; add percentages; no compounding/prorating; license",
+          "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
           "status": "verified",
           "source_ids": [
             "S05"
           ],
-          "notes": "Notice must state banked portion.",
-          "flag_id": "",
+          "notes": "Notice must identify the banked portion; see the pending proposal.",
+          "flag_id": "B87-F03",
           "source_note": ""
         },
         {
@@ -141,15 +142,16 @@
         },
         {
           "id": "LOC-10",
-          "label": "Section 6.14",
-          "value": "Unlimited increase only when last original occupant vacates plus timely 6.14 notice",
+          "label": "Section 6.14 and Costa-Hawkins",
+          "value": "Section 6.14 and Costa-Hawkins have distinct requirements when the last original occupant leaves. Section 6.14 requires timely written notice to remaining occupants; Costa-Hawkins addresses qualifying subtenants or assignees, not co-tenants.",
           "status": "verified",
           "source_ids": [
             "S15",
-            "S16"
+            "S16",
+            "S37"
           ],
-          "notes": "60 days generally reasonable.",
-          "flag_id": "",
+          "notes": "Whether either path applies is fact-specific and unverified; SF.gov urges legal advice.",
+          "flag_id": "F28",
           "source_note": ""
         },
         {

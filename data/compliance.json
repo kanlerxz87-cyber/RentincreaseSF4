@@ -54,26 +54,27 @@
         {
           "id": "CHK-04",
           "label": "Verify banked amounts",
-          "value": "Only if >=24 full months without any increase; add percentages; no compounding/prorating",
+          "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
           "status": "verified",
           "source_ids": [
             "S05"
           ],
-          "notes": "Not inferred here.",
-          "flag_id": "",
+          "notes": "Do not infer banking from a missing history.",
+          "flag_id": "B87-F03",
           "source_note": ""
         },
         {
           "id": "CHK-05",
           "label": "Written notice timing",
-          "value": "30 days; 90 days if >10% alone/combined in same year; +5 days if mailed",
+          "value": "Generally 30 days, or 90 days if the increase alone or combined with other increases in the preceding 12 months is more than 10%; add applicable mail time.",
           "status": "verified",
           "source_ids": [
             "S01",
             "S05",
-            "S35"
+            "S35",
+            "S78"
           ],
-          "notes": "827(c) longer notice controls.",
+          "notes": "Both mailing and address within California add five calendar days; CCP 1013 specifies longer extensions in other circumstances.",
           "flag_id": "",
           "source_note": ""
         },
@@ -148,15 +149,16 @@
         },
         {
           "id": "CHK-11",
-          "label": "License before notice",
-          "value": "Report into the Housing Inventory and confirm a current license for each unit and each effective date",
+          "label": "Confirm license for the effective date",
+          "value": "Report into the Housing Inventory and confirm a current license for each unit and each increase effective date.",
           "status": "verified",
           "source_ids": [
             "S53",
             "S07",
-            "S55"
+            "S55",
+            "S73"
           ],
-          "notes": "Unlicensed notices may be void or unenforceable.",
+          "notes": "Confirming before service is prudent; an increase effective while unlicensed can be null and void under Rule 13.14.",
           "flag_id": "",
           "source_note": ""
         },
@@ -228,15 +230,15 @@
         },
         {
           "id": "CHK-17",
-          "label": "Re-serve rather than backdate",
-          "value": "If a notice went out unlicensed, report, confirm the license, and serve a new notice with a compliant effective date",
+          "label": "Do not backdate or assume a notice is invalid based only on its service date",
+          "value": "If a served notice has not yet taken effect, check whether a current license can be confirmed by its effective date. If an increase took effect while unlicensed, get advice before re-serving; do not backdate.",
           "status": "analysis",
           "source_ids": [
-            "S08",
-            "S53",
+            "S73",
+            "S07",
             "S35"
           ],
-          "notes": "Do not treat an unenforceable notice as effective.",
+          "notes": "Rule 13.14 specifies the effective date, not the date of service; other notice requirements still apply.",
           "flag_id": "",
           "source_note": ""
         },

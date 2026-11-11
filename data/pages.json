@@ -90,15 +90,17 @@
           },
           {
             "id": "LIC-07",
-            "label": "Step 4 - Only then notify tenants",
-            "value": "30-day written notice (90-day if >10% alone/combined in same year; +5 days if mailed) stating dollar amount, percentage and effective date, using the rate in effect on the increase date",
+            "label": "Step 4 - Recommended: confirm license, then notify",
+            "value": "Give written notice: generally 30 days, or 90 days if the increase alone or combined with other increases in the preceding 12 months exceeds 10%; add applicable mail-service time. State the dollar amount, percentage and effective date, using the rate effective then.",
             "status": "verified",
             "source_ids": [
               "S01",
               "S05",
-              "S35"
+              "S35",
+              "S78",
+              "S73"
             ],
-            "notes": "License first, tenant notice second. License alone does not satisfy state/local notice law; you must still comply with all other rent increase laws.",
+            "notes": "Getting the license before service is prudent; Rule 13.14 tests the effective date, not service date. Other requirements still apply.",
             "flag_id": "",
             "source_note": ""
           },
@@ -215,27 +217,28 @@
           {
             "id": "SUM-05",
             "label": "Notice",
-            "value": "30-day written; 90-day if >10%; +5 days if mailed; dollar amount, percentage, effective date",
+            "value": "Written notice generally 30 days, or 90 days if the increase alone or combined over the preceding 12 months exceeds 10%; state amount, percentage and effective date.",
             "status": "verified",
             "source_ids": [
               "S01",
               "S05",
-              "S35"
+              "S35",
+              "S78"
             ],
-            "notes": "Use rate in effect on increase date.",
+            "notes": "Mailing and address both within California add five calendar days; other locations may require more. Use the rate effective on the increase date.",
             "flag_id": "",
             "source_note": ""
           },
           {
             "id": "SUM-06",
             "label": "Banked increases",
-            "value": "Only if >=24 full months without any increase; add percentages, do not compound/prorate",
+            "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
             "status": "verified",
             "source_ids": [
               "S05"
             ],
-            "notes": "No banked amount inferred for this case.",
-            "flag_id": "",
+            "notes": "No banked amount is inferred for either unit. Proposed legislation may change the rules.",
+            "flag_id": "B87-F03",
             "source_note": ""
           },
           {
@@ -271,14 +274,14 @@
           {
             "id": "SUM-09",
             "label": "Corporate practice",
-            "value": "IRT Q4 2025 same-store renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%",
+            "value": "IRT Q4 2025 same-store like-term renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 total-portfolio renewal 4.6%, new -0.8%.",
             "status": "verified",
             "source_ids": [
               "S48",
               "S49"
             ],
-            "notes": "Portfolio-level, not SF-specific and not a legal benchmark.",
-            "flag_id": "",
+            "notes": "IRT like-term leases were approximately 81% of Q4 leases, not all leases. Portfolio-level, not SF-specific or a legal benchmark.",
+            "flag_id": "F23",
             "source_note": ""
           },
           {
@@ -337,17 +340,15 @@
           },
           {
             "id": "SUM-13",
-            "label": "94122 Small Area FMR",
-            "value": "",
-            "status": "needs review",
+            "label": "ZIP 94122 HUD Small Area FMR, 0/1/2/3/4 bedrooms",
+            "value": "FY2027: $2,370 / $2,770 / $3,410 / $4,460 / $5,020; FY2026: $2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+            "status": "verified",
             "source_ids": [
-              "S44",
-              "S46",
               "S50",
               "S51",
-              "S52"
+              "S43"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
+            "notes": "Monthly gross-rent program benchmarks, not asking rents or private rent-increase caps; unit bedroom counts are unknown.",
             "flag_id": "T03-F07",
             "source_note": ""
           }
@@ -590,14 +591,14 @@
           {
             "id": "STP-07",
             "label": "Step 7 - Decide whether a banked increase applies",
-            "value": "A skipped increase is only banked if at least 24 full months pass without any rent increase; banked percentages are added together, never compounded or prorated, never carry to a new tenant, and need no Rent Board petition.",
+            "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
             "status": "verified",
             "source_ids": [
               "S05",
               "S54"
             ],
-            "notes": "SF.gov examples describe elapsed time differently - flag F03.",
-            "flag_id": "",
+            "notes": "A banked increase may not carry over to a new tenant; ordinary banking needs no petition. The full history and any new law must be checked.",
+            "flag_id": "B87-F03",
             "source_note": ""
           },
           {
@@ -633,15 +634,16 @@
           },
           {
             "id": "STP-10",
-            "label": "Step 10 - Serve written notice with the required contents",
-            "value": "At least 30 days' written notice, or 90 days if the increase by itself or combined with another increase in the same year is more than 10%; add 5 days if mailed. State the dollar amount, the percentage, the effective date and any banked portion.",
+            "label": "Step 10 - Serve written notice",
+            "value": "At least 30 days, or 90 days if the increase alone or combined with others in the preceding 12 months is more than 10%; add applicable mail-service time. State the dollar amount, percentage, effective date and any banked portion.",
             "status": "verified",
             "source_ids": [
               "S01",
               "S05",
-              "S35"
+              "S35",
+              "S78"
             ],
-            "notes": "Civil Code 827 requires longer notice in some cases.",
+            "notes": "Five extra calendar days generally apply when mailing and address are both within California; longer periods may apply otherwise.",
             "flag_id": "",
             "source_note": ""
           },
@@ -688,14 +690,15 @@
         "rows": [
           {
             "id": "APP-01",
-            "label": "Unit 1 - earliest annual increase under the stated lease date",
-            "value": "With a February 1, 2025 lease start, the first annual increase could have been given on February 1, 2026; any later increase date uses the rate in effect on that date.",
+            "label": "Unit 1 - hypothetical first annual anniversary",
+            "value": "If a new tenancy began February 1, 2025, its first annual increase would be no earlier than February 1, 2026, subject to the lease, license, notice and coverage.",
             "status": "analysis",
             "source_ids": [
               "S01",
-              "S02"
+              "S02",
+              "S79"
             ],
-            "notes": "Derived from the official timing rule plus the owner-supplied date; no increase history was supplied.",
+            "notes": "The original tenancy, anniversary and any past increases are unverified; not a determination of a lawful increase.",
             "flag_id": "",
             "source_note": ""
           },
@@ -715,15 +718,16 @@
           },
           {
             "id": "APP-03",
-            "label": "Unit 2 - earliest annual increase under the stated lease date",
-            "value": "With a June 1, 2019 lease start, annual increases were available from June 1, 2020; an increase effective now uses the 1.6% rate plus any properly banked increases.",
+            "label": "Unit 2 - hypothetical first annual anniversary",
+            "value": "If a tenancy began June 1, 2019, its first annual increase would be no earlier than June 1, 2020, subject to all requirements.",
             "status": "analysis",
             "source_ids": [
               "S01",
               "S05",
-              "S02"
+              "S02",
+              "S79"
             ],
-            "notes": "Prior increases since 2019 were not supplied, so no banked amount is computed.",
+            "notes": "The lawful current base rent, anniversary and prior increases are unknown; no banked amount is computed.",
             "flag_id": "",
             "source_note": ""
           },
@@ -1531,7 +1535,7 @@
           {
             "id": "REQ-25",
             "label": "Re-check the committee status of File 261020 before serving any banked or capital improvement notice",
-            "value": "Checked 2026-11-10 - 'Pending Committee Action' in the Land Use and Transportation Committee; not law, no enactment",
+            "value": "Checked 2026-11-11 - 'Pending Committee Action' in the Land Use and Transportation Committee; not law, no enactment",
             "status": "verified",
             "source_ids": [
               "S71",
@@ -1547,7 +1551,7 @@
   },
   "rates": {
     "title": "Official Allowable Increase Rates",
-    "description": "SF Rent Board rates effective on 2026-11-10 and historical context.",
+    "description": "SF Rent Board rates checked 2026-11-11 and historical context.",
     "sections": [
       {
         "title": "Current and recent rates",
@@ -1715,7 +1719,7 @@
           {
             "id": "RATE-12",
             "label": "Proposed banked and capital-improvement cap, File 261020",
-            "value": "Not enacted as of November 10, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
+            "value": "Not enacted as of November 11, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
             "status": "verified",
             "source_ids": [
               "S05",
@@ -1740,39 +1744,41 @@
           },
           {
             "id": "RATE-14",
-            "label": "Exact Legistar record at fetch (2026-11-10)",
-            "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
+            "label": "Legistar record checked 2026-11-11",
+            "value": "Version 1; introduced 9/15/2026; Pending Committee Action; final action and enactment date/number blank",
             "status": "verified",
             "source_ids": [
               "S71"
             ],
-            "notes": "History rows are procedural only: 9/15/2026 assigned under 30-day rule; 9/18/2026 and 9/30/2026 referred to department; 10/7/2026 Youth Commission response received.",
+            "notes": "Check current status before relying on a banked calculation.",
             "flag_id": "F47",
             "source_note": ""
           },
           {
             "id": "RATE-15",
             "label": "Proposed applicability date vs posting date",
-            "value": "Notice posted November 9, 2026 says the proposal would apply to banked increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026",
+            "value": "Version 1 would apply to banked notices and capital-improvement petitions on or after September 15, 2026.",
             "status": "verified",
             "source_ids": [
+              "S71",
               "S72",
-              "S71"
+              "S83",
+              "S84"
             ],
-            "notes": "The applicability date precedes both the posting date and the 9/15/2026 introduction. Nothing official says how a notice served between 9/15/2026 and enactment would be treated.",
+            "notes": "September 15 is the introduction date; the Rent Board notice was posted November 9. Not enacted.",
             "flag_id": "F47",
             "source_note": ""
           },
           {
             "id": "RATE-16",
-            "label": "Duration wording disagrees",
-            "value": "Notice: 'temporarily limit'. Legistar title: 'for the next three years'",
+            "label": "Proposed end date and excess",
+            "value": "Version 1 would remain in effect through December 31, 2029 unless extended; excess may be imposed from January 1, 2030 as otherwise permitted by law.",
             "status": "verified",
             "source_ids": [
-              "S72",
-              "S71"
+              "S83",
+              "S84"
             ],
-            "notes": "Recorded as an inconsistency; neither wording is preferred here.",
+            "notes": "The title and a temporary notice alone do not establish a duration inconsistency. Not enacted.",
             "flag_id": "F47",
             "source_note": ""
           },
@@ -1785,20 +1791,20 @@
               "S02",
               "S01"
             ],
-            "notes": "Still not published on either official page when re-checked 2026-11-10; blank rather than estimated.",
+            "notes": "Still not published on either official page when re-checked 2026-11-11; blank rather than estimated.",
             "flag_id": "F27",
             "source_note": ""
           },
           {
             "id": "RATE-18",
-            "label": "How the proposed 10% is measured",
-            "value": "",
-            "status": "needs review",
+            "label": "Proposed measurement of 10%",
+            "value": "Version 1 measures the combined banked/capital-improvement limit against 10% of the lowest base rent in the 12 months immediately before the increase.",
+            "status": "verified",
             "source_ids": [
-              "S71",
-              "S72"
+              "S83",
+              "S84"
             ],
-            "notes": "No official page states whether the 10% includes or excludes the separate annual allowable increase, or how it treats a banked increase already imposed; blank, not inferred.",
+            "notes": "Its interaction with an ordinary annual increase and case-specific application remain unverified; not enacted.",
             "flag_id": "F47",
             "source_note": ""
           }
@@ -1873,14 +1879,15 @@
           {
             "id": "LOC-05",
             "label": "License",
-            "value": "Current Rent Increase License required before annual/banked increase",
+            "value": "Current Rent Increase License required when an annual/banked increase takes effect",
             "status": "verified",
             "source_ids": [
               "S01",
               "S07",
-              "S08"
+              "S08",
+              "S73"
             ],
-            "notes": "Unlicensed increase may be null/void.",
+            "notes": "Rule 13.14 tests the effective date, not the service date.",
             "flag_id": "",
             "source_note": ""
           },
@@ -1899,13 +1906,13 @@
           {
             "id": "LOC-07",
             "label": "Banking",
-            "value": "24 full months; add percentages; no compounding/prorating; license",
+            "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
             "status": "verified",
             "source_ids": [
               "S05"
             ],
-            "notes": "Notice must state banked portion.",
-            "flag_id": "",
+            "notes": "Notice must identify the banked portion; see the pending proposal.",
+            "flag_id": "B87-F03",
             "source_note": ""
           },
           {
@@ -1949,15 +1956,16 @@
           },
           {
             "id": "LOC-10",
-            "label": "Section 6.14",
-            "value": "Unlimited increase only when last original occupant vacates plus timely 6.14 notice",
+            "label": "Section 6.14 and Costa-Hawkins",
+            "value": "Section 6.14 and Costa-Hawkins have distinct requirements when the last original occupant leaves. Section 6.14 requires timely written notice to remaining occupants; Costa-Hawkins addresses qualifying subtenants or assignees, not co-tenants.",
             "status": "verified",
             "source_ids": [
               "S15",
-              "S16"
+              "S16",
+              "S37"
             ],
-            "notes": "60 days generally reasonable.",
-            "flag_id": "",
+            "notes": "Whether either path applies is fact-specific and unverified; SF.gov urges legal advice.",
+            "flag_id": "F28",
             "source_note": ""
           },
           {
@@ -2419,7 +2427,7 @@
               "S43",
               "S44"
             ],
-            "notes": "Used for voucher payment standards, not a rent-increase cap.",
+            "notes": "Used in several federal housing programs, not a general private rent-increase cap.",
             "flag_id": "",
             "source_note": ""
           },
@@ -2449,17 +2457,15 @@
           },
           {
             "id": "FED-07",
-            "label": "94122 SAFMR",
-            "value": "",
-            "status": "needs review",
+            "label": "94122 Small Area FMR, 0/1/2/3/4 bedrooms",
+            "value": "FY2027: $2,370 / $2,770 / $3,410 / $4,460 / $5,020; FY2026: $2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+            "status": "verified",
             "source_ids": [
-              "S44",
-              "S46",
               "S50",
               "S51",
-              "S52"
+              "S43"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
+            "notes": "Monthly gross-rent estimates; not case-specific rent limits. Unit bedroom counts are unknown.",
             "flag_id": "T03-F07",
             "source_note": ""
           }
@@ -2906,7 +2912,7 @@
               "S16",
               "S15"
             ],
-            "notes": "Not supplied; a written 6.14 notice within a reasonable time (generally 60 days) is required for a later unlimited increase.",
+            "notes": "Not supplied; the Rent Board describes a timely written 6.14 notice for that separate path, generally within 60 days. Do not conflate it with all Costa-Hawkins requirements.",
             "flag_id": "F28",
             "source_note": ""
           },
@@ -2918,7 +2924,7 @@
             "source_ids": [
               "S05"
             ],
-            "notes": "Needs 24 full months without any increase; history unknown.",
+            "notes": "Skipped and partial increases have different timing descriptions; full history and anniversary dates unknown.",
             "flag_id": "T03-F05",
             "source_note": ""
           },
@@ -2979,8 +2985,8 @@
               "S03",
               "S04"
             ],
-            "notes": "Eligibility, license, notice and anniversary unverified.",
-            "flag_id": "",
+            "notes": "$3,150 is the 2019 lease amount, not a confirmed current lawful base rent. Eligibility, license, notice and anniversary are unverified.",
+            "flag_id": "T03-F05",
             "source_note": ""
           }
         ]
@@ -3017,8 +3023,8 @@
               "S02",
               "S04"
             ],
-            "notes": "Historical comparison only.",
-            "flag_id": "",
+            "notes": "Historical arithmetic using the 2019 lease amount only; the current lawful base rent is unknown.",
+            "flag_id": "T03-F05",
             "source_note": ""
           }
         ]
@@ -3073,15 +3079,16 @@
           },
           {
             "id": "CALC-08",
-            "label": "Unit 2 - conditional illustration if nothing was ever raised",
+            "label": "Unit 2 - conditional banking illustration",
             "value": "11.5% of skipped years (1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4) plus 1.6% = 13.1%; $3,150 x 13.1% = $412.65, or $3,562.65",
             "status": "analysis",
             "source_ids": [
               "S05",
               "S04",
-              "S02"
+              "S02",
+              "S71"
             ],
-            "notes": "Conditional arithmetic only: it assumes no increase since June 1, 2019, which the owner has not confirmed. A combined increase above 10% also requires 90 days' written notice, and the effective date must fall on or before 2/28/2027 for the 1.6% component to be the published rate. Pending File 261020 could affect this illustrative calculation; a 90-day notice alone does not establish legality. See F46.",
+            "notes": "Arithmetic only: assumes the same tenancy, no increases since June 1, 2019, a current lawful $3,150 base rent, all skipped rates properly banked and an eligible date in the 1.6% period. None is verified; no amount is recommended. A >10% increase generally needs 90 days, but notice alone does not establish legality. Proposed File 261020 may affect it (F46).",
             "flag_id": "F30",
             "source_note": ""
           },
@@ -3094,7 +3101,7 @@
               "S05",
               "S01"
             ],
-            "notes": "The lease began February 1, 2025 and no notice history was supplied, so nothing can yet satisfy the 24-full-month banking rule.",
+            "notes": "If a tenancy began February 1, 2025 and no increase occurred, 24 months first elapse February 1, 2027. Initial tenancy, prior notices and partial-increase history are unconfirmed; partial banking has separate timing.",
             "flag_id": "T03-F05",
             "source_note": ""
           }
@@ -3125,14 +3132,15 @@
           },
           {
             "id": "CALC-11",
-            "label": "Effective February 1, 2027, served by mail",
+            "label": "Effective February 1, 2027, mailed within California",
             "value": "Notice mailed by December 28, 2026",
             "status": "analysis",
             "source_ids": [
               "S01",
-              "S35"
+              "S35",
+              "S78"
             ],
-            "notes": "Mailed notice gets 5 extra days and Civil Code 1013 extension rules apply.",
+            "notes": "Illustration assumes both mailing and address are within California and all other requirements are met; CCP 1013 specifies longer periods for other mailing/address locations. Do not use as a case-specific service deadline.",
             "flag_id": "",
             "source_note": ""
           }
@@ -3196,26 +3204,27 @@
           {
             "id": "CHK-04",
             "label": "Verify banked amounts",
-            "value": "Only if >=24 full months without any increase; add percentages; no compounding/prorating",
+            "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
             "status": "verified",
             "source_ids": [
               "S05"
             ],
-            "notes": "Not inferred here.",
-            "flag_id": "",
+            "notes": "Do not infer banking from a missing history.",
+            "flag_id": "B87-F03",
             "source_note": ""
           },
           {
             "id": "CHK-05",
             "label": "Written notice timing",
-            "value": "30 days; 90 days if >10% alone/combined in same year; +5 days if mailed",
+            "value": "Generally 30 days, or 90 days if the increase alone or combined with other increases in the preceding 12 months is more than 10%; add applicable mail time.",
             "status": "verified",
             "source_ids": [
               "S01",
               "S05",
-              "S35"
+              "S35",
+              "S78"
             ],
-            "notes": "827(c) longer notice controls.",
+            "notes": "Both mailing and address within California add five calendar days; CCP 1013 specifies longer extensions in other circumstances.",
             "flag_id": "",
             "source_note": ""
           },
@@ -3290,15 +3299,16 @@
           },
           {
             "id": "CHK-11",
-            "label": "License before notice",
-            "value": "Report into the Housing Inventory and confirm a current license for each unit and each effective date",
+            "label": "Confirm license for the effective date",
+            "value": "Report into the Housing Inventory and confirm a current license for each unit and each increase effective date.",
             "status": "verified",
             "source_ids": [
               "S53",
               "S07",
-              "S55"
+              "S55",
+              "S73"
             ],
-            "notes": "Unlicensed notices may be void or unenforceable.",
+            "notes": "Confirming before service is prudent; an increase effective while unlicensed can be null and void under Rule 13.14.",
             "flag_id": "",
             "source_note": ""
           },
@@ -3370,15 +3380,15 @@
           },
           {
             "id": "CHK-17",
-            "label": "Re-serve rather than backdate",
-            "value": "If a notice went out unlicensed, report, confirm the license, and serve a new notice with a compliant effective date",
+            "label": "Do not backdate or assume a notice is invalid based only on its service date",
+            "value": "If a served notice has not yet taken effect, check whether a current license can be confirmed by its effective date. If an increase took effect while unlicensed, get advice before re-serving; do not backdate.",
             "status": "analysis",
             "source_ids": [
-              "S08",
-              "S53",
+              "S73",
+              "S07",
               "S35"
             ],
-            "notes": "Do not treat an unenforceable notice as effective.",
+            "notes": "Rule 13.14 specifies the effective date, not the date of service; other notice requirements still apply.",
             "flag_id": "",
             "source_note": ""
           },
@@ -3431,13 +3441,13 @@
           {
             "id": "REAS-02",
             "label": "Properly banked skipped/partial increases",
-            "value": "24 full months; add percentages",
+            "value": "SF guidance distinguishes skipped increases (24 full months without an increase) from unused portions of partial increases (at least 12 months later or a future anniversary). Add eligible percentages; do not compound or prorate.",
             "status": "verified",
             "source_ids": [
               "S05"
             ],
             "notes": "No banked amount inferred here.",
-            "flag_id": "",
+            "flag_id": "B87-F03",
             "source_note": ""
           },
           {
@@ -3567,25 +3577,25 @@
           {
             "id": "CORP-01",
             "label": "Independence Realty Trust Q4 2025",
-            "value": "Same-store new leases -3.7%; renewal 2.9%; blended 0.8%; occupancy 95.4%; retention 61.4%",
+            "value": "Same-store LIKE-TERM new leases -3.7%; renewal 2.9%; blended 0.8%; occupancy 95.4%; retention 61.4%.",
             "status": "verified",
             "source_ids": [
               "S48"
             ],
-            "notes": "Multifamily REIT; not SF-specific.",
-            "flag_id": "",
+            "notes": "Like-term means 9–14-month prior and current leases; approximately 81% of Q4 leases. All leases: new -6.2%, renewal 3.0%, blended -1.0%. Not SF-specific.",
+            "flag_id": "F23",
             "source_note": ""
           },
           {
             "id": "CORP-02",
             "label": "Independence Realty Trust Q3 2025",
-            "value": "Same-store new leases -3.5%; renewal 2.6%; blended 0.1%",
+            "value": "Same-store LIKE-TERM new leases -3.5%; renewal 2.6%; blended 0.1%.",
             "status": "verified",
             "source_ids": [
               "S48"
             ],
-            "notes": "Not SF-specific.",
-            "flag_id": "",
+            "notes": "Like-term sample, approximately 90% of Q3 leases; not SF-specific.",
+            "flag_id": "F23",
             "source_note": ""
           },
           {
@@ -3723,7 +3733,7 @@
   },
   "market": {
     "title": "Market Context - HUD FMR / SAFMR",
-    "description": "HUD figures are voucher standards, not rent caps or legal bases for an increase.",
+    "description": "HUD gross-rent estimates inform several federal programs; they are not private rent caps or asking rents.",
     "sections": [
       {
         "title": "FY2027 current federal fiscal year",
@@ -3827,42 +3837,40 @@
           },
           {
             "id": "MKT-07",
-            "label": "94122 FY2026 Small Area FMR",
-            "value": "",
-            "status": "needs review",
+            "label": "94122 FY2026 Small Area FMR, 0/1/2/3/4 bedrooms",
+            "value": "$2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+            "status": "verified",
             "source_ids": [
-              "S44",
-              "S46",
-              "S51"
+              "S51",
+              "S43"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
+            "notes": "Monthly gross rents; FY2026 is historical; unit bedroom counts are unknown.",
             "flag_id": "T03-F07",
             "source_note": ""
           },
           {
             "id": "MKT-08",
-            "label": "94122 FY2027 Small Area FMR",
-            "value": "",
-            "status": "needs review",
+            "label": "94122 FY2027 Small Area FMR, 0/1/2/3/4 bedrooms",
+            "value": "$2,370 / $2,770 / $3,410 / $4,460 / $5,020",
+            "status": "verified",
             "source_ids": [
-              "S44",
               "S50",
-              "S52"
+              "S43"
             ],
-            "notes": "Official ZIP row not obtained; blank.",
+            "notes": "Monthly gross rents; not advertised asking rents or limits on these units.",
             "flag_id": "T03-F07",
             "source_note": ""
           },
           {
             "id": "MKT-09",
-            "label": "FMR/SAFMR as rent cap",
-            "value": "No - voucher payment standards only",
+            "label": "FMR/SAFMR as a rent-increase cap",
+            "value": "No. HUD uses FMR estimates in multiple federal programs, including voucher payment standards.",
             "status": "verified",
             "source_ids": [
               "S43",
               "S44"
             ],
-            "notes": "Not a legal basis for a private rent increase.",
+            "notes": "Not a general private rent-increase cap; subsidy-specific rules can be different.",
             "flag_id": "",
             "source_note": ""
           }
@@ -3902,14 +3910,14 @@
           {
             "id": "Q-02",
             "label": "How do big real estate corporations handle increases?",
-            "value": "Public REITs disclose lease-over-lease rates in SEC filings: IRT Q4 2025 renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 renewal 4.6%, new -0.8%.",
+            "value": "IRT Q4 2025 same-store LIKE-TERM renewal 2.9%, new -3.7%, blended 0.8%; Invitation Homes 2025 total-portfolio renewal 4.6%, new -0.8%.",
             "status": "verified",
             "source_ids": [
               "S48",
               "S49"
             ],
-            "notes": "Portfolio-level, not SF-specific; no generalization.",
-            "flag_id": "",
+            "notes": "Portfolio-level, not SF-specific; IRT like-term sample is not all leases; no generalization.",
+            "flag_id": "F23",
             "source_note": ""
           },
           {
@@ -3929,15 +3937,16 @@
           {
             "id": "Q-04",
             "label": "What is the correct tenant-notice method?",
-            "value": "Written 30-day notice; 90-day if >10% alone/combined in same year; +5 days if mailed; dollar amount, percentage, effective date; banked portion if any; license first; 827 delivery rules.",
+            "value": "Written notice generally 30 days, or 90 days if the increase alone or combined with other increases in the preceding 12 months exceeds 10%; add applicable mail time. State dollar amount, percentage, effective date and banked portion.",
             "status": "verified",
             "source_ids": [
               "S01",
               "S05",
               "S35",
-              "S07"
+              "S78",
+              "S73"
             ],
-            "notes": "Conservative checklist capable of lawyer review.",
+            "notes": "Confirming the license before service is recommended, while Rule 13.14 tests the effective date. Both mailing and address within California add five calendar days.",
             "flag_id": "",
             "source_note": ""
           },
@@ -4019,16 +4028,16 @@
           },
           {
             "id": "Q-11",
-            "label": "Do individual owners (not corporations) need to apply for the Rent Board license and inform the Rent Board before notifying tenants?",
-            "value": "Yes. A current Rent Increase License must be on file before an annual or banked increase takes effect, and all owners must report into the Housing Inventory first; no individual-owner or small-building exemption was found (buildings under 10 units report from March 1, 2023).",
+            "label": "Do individual owners need to report and obtain the license before notifying tenants?",
+            "value": "For a covered annual or banked increase, an individual owner must report and have a current license on the increase effective date. The license need not necessarily exist before service of the notice.",
             "status": "verified",
             "source_ids": [
               "S01",
               "S07",
-              "S08",
-              "S53"
+              "S53",
+              "S73"
             ],
-            "notes": "See the Step-by-Step License page.",
+            "notes": "Confirming the license before service is the recommended safer order, not Rule 13.14’s service-date test.",
             "flag_id": "",
             "source_note": ""
           },
@@ -4064,7 +4073,7 @@
           {
             "id": "Q-14",
             "label": "Does the added roommate allow a market-rate reset?",
-            "value": "No, not by itself: extra rent for an additional occupant is unlawful, and a 6.14/Costa-Hawkins increase requires specific facts plus a timely written 6.14 notice. Those facts are unverified here.",
+            "value": "No, not by itself: extra rent merely for an added roommate is unlawful. Section 6.14 and Costa-Hawkins have distinct conditions that depend on original and remaining occupants; the case facts are unverified.",
             "status": "verified",
             "source_ids": [
               "S01",
@@ -4072,8 +4081,8 @@
               "S16",
               "S37"
             ],
-            "notes": "No reset recommended; see flag F28.",
-            "flag_id": "",
+            "notes": "Section 6.14 requires timely notice to remaining occupants. Seek advice; no reset is recommended.",
+            "flag_id": "F28",
             "source_note": ""
           },
           {
@@ -4104,15 +4113,16 @@
           },
           {
             "id": "Q-17",
-            "label": "How long do I have to report a Housing Inventory change, and what if I already served a notice?",
-            "value": "Unit information is updated annually by March 1, and a change in the owner or manager name or business contact information must be updated within 30 days. If a notice already went out with no license on file, report first, then re-serve the notice so the effective date falls after the license is on file: a notice is unenforceable for an effective date on which no license was on file, and an unlicensed increase may be null and void.",
+            "label": "What if a notice was served before the license was on file?",
+            "value": "Rule 13.14 tests the increase effective date, not the service date. If the effective date is still ahead, confirm a current license by that date; if the increase took effect while unlicensed, seek advice before re-serving.",
             "status": "verified",
             "source_ids": [
               "S53",
               "S07",
-              "S08"
+              "S73",
+              "S35"
             ],
-            "notes": "Whether any notice has already been served here is unverified.",
+            "notes": "Changes to owner or manager contact information must be updated within 30 days; annual reporting is due March 1. Do not backdate.",
             "flag_id": "",
             "source_note": ""
           },
@@ -4206,14 +4216,14 @@
         "rows": [
           {
             "id": "AN-01",
-            "label": "Normal local increase",
-            "value": "1.6% or less on each eligible unit",
-            "status": "verified",
+            "label": "Conservative ordinary-increase baseline",
+            "value": "For an eligible covered unit, consider no more than the ordinary 1.6% rate (or less) during its stated effective period.",
+            "status": "analysis",
             "source_ids": [
               "S01",
               "S02"
             ],
-            "notes": "Once every 12 months; license; notice.",
+            "notes": "A cautious policy, not evidence of what all owners normally charge; verify each unit separately.",
             "flag_id": "",
             "source_note": ""
           },
@@ -4232,7 +4242,7 @@
           },
           {
             "id": "AN-03",
-            "label": "No federal rent cap found",
+            "label": "No federal private-rent cap found",
             "value": "",
             "status": "needs review",
             "source_ids": [
@@ -4241,7 +4251,7 @@
               "S41",
               "S42"
             ],
-            "notes": "HUD FMR/SAFMR are voucher standards.",
+            "notes": "HUD FMR/SAFMR are program estimates with multiple federal uses, not a general private-rent cap.",
             "flag_id": "F22",
             "source_note": ""
           },
@@ -4425,15 +4435,15 @@
           },
           {
             "id": "AN-16",
-            "label": "The license is a precondition, not paperwork",
-            "value": "An increase noticed while the unit is unlicensed may be null and void or unenforceable with refund exposure, and the Rent Board issues noncompliance notices; its January 2026 minutes record more than 23,000 licenses",
+            "label": "The license is an effective-date precondition",
+            "value": "An annual or banked increase effective while the landlord is unlicensed is null and void under Rule 13.14; SF.gov describes unenforceability and possible noncompliance notices.",
             "status": "verified",
             "source_ids": [
               "S08",
               "S53",
-              "S28"
+              "S73"
             ],
-            "notes": "Checks should look at the effective date, not today's status.",
+            "notes": "Service while unlicensed alone is not the Rule 13.14 test; check the effective date.",
             "flag_id": "",
             "source_note": ""
           },
@@ -4523,15 +4533,16 @@
           {
             "id": "AN-29",
             "label": "Conservative approach",
-            "value": "Ordinary annual increase at or under 1.6%, license on file first, 30-day written notice, no additional-occupant charge, and an identical written standard applied to both units",
+            "value": "Consider an ordinary annual increase at or under 1.6% during the rate period, confirm the license before service, provide proper written notice and apply neutral criteria consistently.",
             "status": "analysis",
             "source_ids": [
               "S01",
               "S07",
               "S35",
-              "S42"
+              "S42",
+              "S73"
             ],
-            "notes": "Still not a guarantee against a petition.",
+            "notes": "The license-before-service sequence is recommended, not the legal effective-date test. No guarantee against a petition.",
             "flag_id": "",
             "source_note": ""
           }

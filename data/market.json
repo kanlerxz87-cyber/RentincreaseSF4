@@ -1,6 +1,6 @@
 {
   "title": "Market Context - HUD FMR / SAFMR",
-  "description": "HUD figures are voucher standards, not rent caps or legal bases for an increase.",
+  "description": "HUD gross-rent estimates inform several federal programs; they are not private rent caps or asking rents.",
   "sections": [
     {
       "title": "FY2027 current federal fiscal year",
@@ -104,42 +104,40 @@
         },
         {
           "id": "MKT-07",
-          "label": "94122 FY2026 Small Area FMR",
-          "value": "",
-          "status": "needs review",
+          "label": "94122 FY2026 Small Area FMR, 0/1/2/3/4 bedrooms",
+          "value": "$2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+          "status": "verified",
           "source_ids": [
-            "S44",
-            "S46",
-            "S51"
+            "S51",
+            "S43"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
+          "notes": "Monthly gross rents; FY2026 is historical; unit bedroom counts are unknown.",
           "flag_id": "T03-F07",
           "source_note": ""
         },
         {
           "id": "MKT-08",
-          "label": "94122 FY2027 Small Area FMR",
-          "value": "",
-          "status": "needs review",
+          "label": "94122 FY2027 Small Area FMR, 0/1/2/3/4 bedrooms",
+          "value": "$2,370 / $2,770 / $3,410 / $4,460 / $5,020",
+          "status": "verified",
           "source_ids": [
-            "S44",
             "S50",
-            "S52"
+            "S43"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
+          "notes": "Monthly gross rents; not advertised asking rents or limits on these units.",
           "flag_id": "T03-F07",
           "source_note": ""
         },
         {
           "id": "MKT-09",
-          "label": "FMR/SAFMR as rent cap",
-          "value": "No - voucher payment standards only",
+          "label": "FMR/SAFMR as a rent-increase cap",
+          "value": "No. HUD uses FMR estimates in multiple federal programs, including voucher payment standards.",
           "status": "verified",
           "source_ids": [
             "S43",
             "S44"
           ],
-          "notes": "Not a legal basis for a private rent increase.",
+          "notes": "Not a general private rent-increase cap; subsidy-specific rules can be different.",
           "flag_id": "",
           "source_note": ""
         }

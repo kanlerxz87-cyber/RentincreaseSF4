@@ -14,14 +14,14 @@
       "rows": [
         {
           "id": "AN-01",
-          "label": "Normal local increase",
-          "value": "1.6% or less on each eligible unit",
-          "status": "verified",
+          "label": "Conservative ordinary-increase baseline",
+          "value": "For an eligible covered unit, consider no more than the ordinary 1.6% rate (or less) during its stated effective period.",
+          "status": "analysis",
           "source_ids": [
             "S01",
             "S02"
           ],
-          "notes": "Once every 12 months; license; notice.",
+          "notes": "A cautious policy, not evidence of what all owners normally charge; verify each unit separately.",
           "flag_id": "",
           "source_note": ""
         },
@@ -40,7 +40,7 @@
         },
         {
           "id": "AN-03",
-          "label": "No federal rent cap found",
+          "label": "No federal private-rent cap found",
           "value": "",
           "status": "needs review",
           "source_ids": [
@@ -49,7 +49,7 @@
             "S41",
             "S42"
           ],
-          "notes": "HUD FMR/SAFMR are voucher standards.",
+          "notes": "HUD FMR/SAFMR are program estimates with multiple federal uses, not a general private-rent cap.",
           "flag_id": "F22",
           "source_note": ""
         },
@@ -233,15 +233,15 @@
         },
         {
           "id": "AN-16",
-          "label": "The license is a precondition, not paperwork",
-          "value": "An increase noticed while the unit is unlicensed may be null and void or unenforceable with refund exposure, and the Rent Board issues noncompliance notices; its January 2026 minutes record more than 23,000 licenses",
+          "label": "The license is an effective-date precondition",
+          "value": "An annual or banked increase effective while the landlord is unlicensed is null and void under Rule 13.14; SF.gov describes unenforceability and possible noncompliance notices.",
           "status": "verified",
           "source_ids": [
             "S08",
             "S53",
-            "S28"
+            "S73"
           ],
-          "notes": "Checks should look at the effective date, not today's status.",
+          "notes": "Service while unlicensed alone is not the Rule 13.14 test; check the effective date.",
           "flag_id": "",
           "source_note": ""
         },
@@ -331,15 +331,16 @@
         {
           "id": "AN-29",
           "label": "Conservative approach",
-          "value": "Ordinary annual increase at or under 1.6%, license on file first, 30-day written notice, no additional-occupant charge, and an identical written standard applied to both units",
+          "value": "Consider an ordinary annual increase at or under 1.6% during the rate period, confirm the license before service, provide proper written notice and apply neutral criteria consistently.",
           "status": "analysis",
           "source_ids": [
             "S01",
             "S07",
             "S35",
-            "S42"
+            "S42",
+            "S73"
           ],
-          "notes": "Still not a guarantee against a petition.",
+          "notes": "The license-before-service sequence is recommended, not the legal effective-date test. No guarantee against a petition.",
           "flag_id": "",
           "source_note": ""
         }

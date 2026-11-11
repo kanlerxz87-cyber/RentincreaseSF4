@@ -15,25 +15,25 @@
         {
           "id": "CORP-01",
           "label": "Independence Realty Trust Q4 2025",
-          "value": "Same-store new leases -3.7%; renewal 2.9%; blended 0.8%; occupancy 95.4%; retention 61.4%",
+          "value": "Same-store LIKE-TERM new leases -3.7%; renewal 2.9%; blended 0.8%; occupancy 95.4%; retention 61.4%.",
           "status": "verified",
           "source_ids": [
             "S48"
           ],
-          "notes": "Multifamily REIT; not SF-specific.",
-          "flag_id": "",
+          "notes": "Like-term means 9–14-month prior and current leases; approximately 81% of Q4 leases. All leases: new -6.2%, renewal 3.0%, blended -1.0%. Not SF-specific.",
+          "flag_id": "F23",
           "source_note": ""
         },
         {
           "id": "CORP-02",
           "label": "Independence Realty Trust Q3 2025",
-          "value": "Same-store new leases -3.5%; renewal 2.6%; blended 0.1%",
+          "value": "Same-store LIKE-TERM new leases -3.5%; renewal 2.6%; blended 0.1%.",
           "status": "verified",
           "source_ids": [
             "S48"
           ],
-          "notes": "Not SF-specific.",
-          "flag_id": "",
+          "notes": "Like-term sample, approximately 90% of Q3 leases; not SF-specific.",
+          "flag_id": "F23",
           "source_note": ""
         },
         {

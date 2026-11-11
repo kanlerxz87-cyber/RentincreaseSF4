@@ -37,7 +37,7 @@
     "title": "Banked rent increases",
     "url": "https://www.sf.gov/information--banked-rent-increases",
     "category": "Local",
-    "statement": "24 full months; no compounding/prorating; add percentages; license; notice states banked portion; example inconsistency flagged. Rechecked 2026-11-10; re-verified 2026-11-11: November 9 notice describes a proposed, not enacted, cap (S71, F46); 24-month banking unchanged."
+    "statement": "Directly rechecked 2026-11-11: a skipped increase is banked after 24 full months without any rent increase; an unused portion of a partial increase may be imposed later after at least 12 months or on a future anniversary. Add percentages, do not compound or prorate; banked increases need no petition. Proposed File 261020 is not enacted."
   },
   {
     "id": "S06",
@@ -341,7 +341,7 @@
     "title": "Fair Market Rents",
     "url": "https://www.huduser.gov/portal/datasets/fmr.html",
     "category": "Federal",
-    "statement": "40th-percentile gross rents; voucher payment standards; federal fiscal-year start generally Oct. 1; FY2027 docs; FY2026 revised May 21, 2026."
+    "statement": "40th-percentile gross-rent estimates; HUD lists several uses, including Housing Choice Voucher payment standards, project-based Section 8, HOME, Emergency Solutions Grants and public-housing flat rents. Federal fiscal year generally begins October 1. FMRs are not a private rent-increase cap."
   },
   {
     "id": "S44",
@@ -365,7 +365,7 @@
     "title": "FY2026 Small Area FMR Schedule",
     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_Small_Area_FMR_Schedule.pdf",
     "category": "Federal",
-    "statement": "Official chunks fetched covered AL/AK/AZ only; no 94122 row obtained."
+    "statement": "The earlier PDF chunks did not include 94122; the official FY2026 ZIP lookup is now linked as S51."
   },
   {
     "id": "S47",
@@ -381,7 +381,7 @@
     "title": "Independence Realty Trust Q4/FY 2025 earnings release exhibit",
     "url": "https://www.sec.gov/Archives/edgar/data/1466085/000143774926003792/ex_895776.htm",
     "category": "Corporate",
-    "statement": "Q4 2025 same-store new -3.7%, renewal 2.9%, blended 0.8%; Q3 2025 new -3.5%, renewal 2.6%, blended 0.1%; 2,003 renovations, $251/month."
+    "statement": "Directly rechecked 2026-11-11: Q4 2025 same-store LIKE-TERM (9–14 month) lease-over-lease figures: new -3.7%, renewal 2.9%, blended 0.8%; like-term Q3 new -3.5%, renewal 2.6%, blended 0.1%. Q4 like-term sample represented approximately 81% of leases; all-lease Q4 figures are new -6.2%, renewal 3.0%, blended -1.0%. 2,003 renovations, $251/month over unrenovated comparable units. Not SF-specific."
   },
   {
     "id": "S49",
@@ -393,19 +393,19 @@
   },
   {
     "id": "S50",
-    "agency": "HUD",
-    "title": "FY2027 Small Area FMR data (xlsx)",
-    "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY27_safmrs.xlsx",
+    "agency": "HUD USER",
+    "title": "FY2027 ZIP 94122 Small Area FMR calculation",
+    "url": "https://www.huduser.gov/datasets/fmr/fmr2027/zip-calc?year=2027&zip=94122&cbsasub=METRO41860MM7360",
     "category": "Federal",
-    "statement": "Official xlsx listed; not parsed successfully; 94122 row left blank."
+    "statement": "Directly fetched 2026-11-11: ZIP 94122 FY2027 0/1/2/3/4-bedroom Small Area FMRs are $2,370 / $2,770 / $3,410 / $4,460 / $5,020 per month. Gross-rent estimates, not private rent caps or advertised rents."
   },
   {
     "id": "S51",
-    "agency": "HUD",
-    "title": "FY2026 revised Small Area FMR data (xlsx)",
-    "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/fy2026_safmrs_revised.xlsx",
+    "agency": "HUD USER",
+    "title": "FY2026 ZIP 94122 Small Area FMR calculation",
+    "url": "https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2026_code/2026zip_code_calc.odn?zcta=94122&metro_code=METRO41860MM7360&year=2026",
     "category": "Federal",
-    "statement": "Fetch returned HTTP 500; 94122 row left blank."
+    "statement": "Directly fetched 2026-11-11: ZIP 94122 FY2026 0/1/2/3/4-bedroom Small Area FMRs are $2,280 / $2,730 / $3,310 / $4,230 / $4,380 per month. Historical gross-rent estimates, not private rent caps or advertised rents."
   },
   {
     "id": "S52",
@@ -413,7 +413,7 @@
     "title": "FY2027 Small Area FMR Schedule",
     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/FY2027_Small_Area_FMR_Schedule.pdf",
     "category": "Federal",
-    "statement": "Official schedule listed; 94122 row not parsed; blank."
+    "statement": "The earlier PDF chunks did not include 94122; the official FY2027 ZIP lookup is now linked as S50."
   },
   {
     "id": "S53",
@@ -453,7 +453,7 @@
     "title": "CIV 1942.5 (retaliation)",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV",
     "category": "State",
-    "statement": "If the lessee is not in default and has exercised repair/tenantability rights or complained to an agency, the lessor may not increase the rent (or decrease services) within 180 days of the triggering act; separate bar on retaliating for tenant organizing or exercising lawful rights; remedy is actual damages plus punitive damages of $100-$2,000 per retaliatory act for fraud/oppression/malice, and the court awards attorney's fees to the prevailing party if requested. Operative October 1, 2021. Re-verified 2026-11-07; re-verified 2026-11-11: $59.00/$29.50, March 1 deadline, Dec 14 2026 exemption window unchanged."
+    "statement": "Subdivision (a) restricts retaliatory rent increases after specified tenantability events, subject to its conditions and timing; subdivision (d) addresses retaliation for lawful organizing and exercise of rights; subdivision (g) preserves action for lawful cause. Remedies and fees are subject to the statutory conditions. Rechecked 2026-11-11; see F48."
   },
   {
     "id": "S58",
@@ -654,5 +654,21 @@
     "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
     "category": "Local",
     "statement": "Direct fetch_page 2026-11-10: a tenant may petition to defer an annual rent increase when requested repairs required by law were not made; 'The petition must be filed no later than 60 days following the tenant's receipt of the rent increase notice'; the tenant pays the disputed increase until the ALJ decision and is refunded if the petition is granted; 'The tenant's anniversary date is not affected by the deferral of the increase.'"
+  },
+  {
+    "id": "S83",
+    "agency": "SF Board of Supervisors",
+    "title": "File 261020 proposed ordinance, version 1",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E",
+    "category": "Local - proposed legislation",
+    "statement": "Directly fetched 2026-11-11: proposed Sec. 37.3(h) measures the combined limit against 10% of the lowest base rent in the 12 months before the increase; proposed applicability is banked notices and capital-improvement petitions on or after September 15, 2026. It would remain in effect through December 31, 2029 unless extended; excess may be imposed on or after January 1, 2030 as otherwise lawful. Not enacted."
+  },
+  {
+    "id": "S84",
+    "agency": "SF Board of Supervisors",
+    "title": "File 261020 legislative digest, version 1",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865647&GUID=CC09B796-4675-4A7D-9960-85FE239F7FBB",
+    "category": "Local - proposed legislation",
+    "statement": "Directly fetched 2026-11-11: summarizes the proposed combined cap, lowest-base-rent denominator, September 15, 2026 applicability and December 31, 2029 end; excess may be imposed from January 1, 2030 as otherwise lawful. Not enacted."
   }
 ]

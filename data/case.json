@@ -437,7 +437,7 @@
             "S16",
             "S15"
           ],
-          "notes": "Not supplied; a written 6.14 notice within a reasonable time (generally 60 days) is required for a later unlimited increase.",
+          "notes": "Not supplied; the Rent Board describes a timely written 6.14 notice for that separate path, generally within 60 days. Do not conflate it with all Costa-Hawkins requirements.",
           "flag_id": "F28",
           "source_note": ""
         },
@@ -449,7 +449,7 @@
           "source_ids": [
             "S05"
           ],
-          "notes": "Needs 24 full months without any increase; history unknown.",
+          "notes": "Skipped and partial increases have different timing descriptions; full history and anniversary dates unknown.",
           "flag_id": "T03-F05",
           "source_note": ""
         },

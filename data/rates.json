@@ -1,6 +1,6 @@
 {
   "title": "Official Allowable Increase Rates",
-  "description": "SF Rent Board rates effective on 2026-11-10 and historical context.",
+  "description": "SF Rent Board rates checked 2026-11-11 and historical context.",
   "sections": [
     {
       "title": "Current and recent rates",
@@ -168,7 +168,7 @@
         {
           "id": "RATE-12",
           "label": "Proposed banked and capital-improvement cap, File 261020",
-          "value": "Not enacted as of November 10, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
+          "value": "Not enacted as of November 11, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
           "status": "verified",
           "source_ids": [
             "S05",
@@ -193,39 +193,41 @@
         },
         {
           "id": "RATE-14",
-          "label": "Exact Legistar record at fetch (2026-11-10)",
-          "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
+          "label": "Legistar record checked 2026-11-11",
+          "value": "Version 1; introduced 9/15/2026; Pending Committee Action; final action and enactment date/number blank",
           "status": "verified",
           "source_ids": [
             "S71"
           ],
-          "notes": "History rows are procedural only: 9/15/2026 assigned under 30-day rule; 9/18/2026 and 9/30/2026 referred to department; 10/7/2026 Youth Commission response received.",
+          "notes": "Check current status before relying on a banked calculation.",
           "flag_id": "F47",
           "source_note": ""
         },
         {
           "id": "RATE-15",
           "label": "Proposed applicability date vs posting date",
-          "value": "Notice posted November 9, 2026 says the proposal would apply to banked increases noticed on or after September 15, 2026 and to capital improvement petitions filed on or after September 15, 2026",
+          "value": "Version 1 would apply to banked notices and capital-improvement petitions on or after September 15, 2026.",
           "status": "verified",
           "source_ids": [
+            "S71",
             "S72",
-            "S71"
+            "S83",
+            "S84"
           ],
-          "notes": "The applicability date precedes both the posting date and the 9/15/2026 introduction. Nothing official says how a notice served between 9/15/2026 and enactment would be treated.",
+          "notes": "September 15 is the introduction date; the Rent Board notice was posted November 9. Not enacted.",
           "flag_id": "F47",
           "source_note": ""
         },
         {
           "id": "RATE-16",
-          "label": "Duration wording disagrees",
-          "value": "Notice: 'temporarily limit'. Legistar title: 'for the next three years'",
+          "label": "Proposed end date and excess",
+          "value": "Version 1 would remain in effect through December 31, 2029 unless extended; excess may be imposed from January 1, 2030 as otherwise permitted by law.",
           "status": "verified",
           "source_ids": [
-            "S72",
-            "S71"
+            "S83",
+            "S84"
           ],
-          "notes": "Recorded as an inconsistency; neither wording is preferred here.",
+          "notes": "The title and a temporary notice alone do not establish a duration inconsistency. Not enacted.",
           "flag_id": "F47",
           "source_note": ""
         },
@@ -238,20 +240,20 @@
             "S02",
             "S01"
           ],
-          "notes": "Still not published on either official page when re-checked 2026-11-10; blank rather than estimated.",
+          "notes": "Still not published on either official page when re-checked 2026-11-11; blank rather than estimated.",
           "flag_id": "F27",
           "source_note": ""
         },
         {
           "id": "RATE-18",
-          "label": "How the proposed 10% is measured",
-          "value": "",
-          "status": "needs review",
+          "label": "Proposed measurement of 10%",
+          "value": "Version 1 measures the combined banked/capital-improvement limit against 10% of the lowest base rent in the 12 months immediately before the increase.",
+          "status": "verified",
           "source_ids": [
-            "S71",
-            "S72"
+            "S83",
+            "S84"
           ],
-          "notes": "No official page states whether the 10% includes or excludes the separate annual allowable increase, or how it treats a banked increase already imposed; blank, not inferred.",
+          "notes": "Its interaction with an ordinary annual increase and case-specific application remain unverified; not enacted.",
           "flag_id": "F47",
           "source_note": ""
         }
