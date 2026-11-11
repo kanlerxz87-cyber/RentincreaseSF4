@@ -578,4 +578,4 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 
 | ID | Task | Status | Owner | Exclusive scope | Sources / irregularities |
 | --- | --- | --- | --- | --- | --- |
-| T49 | Check deployed Pages and critical current official rules, run existing build/validation/privacy gates, record findings and publication status | `in progress` | `arena-8e2f4ee9` | `research/t49_audit/`, `COORDINATION.md` | Arena fixes branch name; existing historical work and active claims are not overwritten. |
+| T49 | Check deployed Pages and critical current official rules, run existing build/validation/privacy gates, record findings and publication status | `done` | `arena-8e2f4ee9` | `research/t49_audit/`, `COORDINATION.md` | Spot check and sources in `research/t49_audit/README.md`; 119 site checks and 19 kit checks pass, zero current-tree fingerprint matches. Not a new line-by-line audit or external link check. Prior history privacy flag F44 remains open. Pages built at `89c7bb9`. |
