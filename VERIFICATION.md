@@ -249,9 +249,9 @@ This is a focused update, not a claim that every historical source was rechecked
 
 Regression: the conditional Unit 2 13.1% calculation is arithmetic only, not a finding or recommendation; it now explicitly points to F46. 90-day notice is not proof of lawfulness. Earlier source and privacy flags remain open.
 
-## T49 — focused re-verification, 2026-11-11 (session `arena-04258d5c`)
+## T50 — focused re-verification, 2026-11-11 (session `arena-04258d5c`)
 
-This is a focused update, not a claim that every historical source was rechecked today. Each source retains its individual verification date. Full per-page record: `research/t49_reverify/README.md`.
+This is a focused update, not a claim that every historical source was rechecked today. Each source retains its individual verification date. Full per-page record: `research/t50_reverify/README.md`.
 
 | Source | Directly rechecked 2026-11-11 and outcome |
 | --- | --- |
