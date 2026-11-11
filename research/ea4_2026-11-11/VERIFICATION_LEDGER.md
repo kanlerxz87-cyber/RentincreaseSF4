@@ -262,3 +262,137 @@ On the owner-supplied facts one original Unit 1 tenant (Tenant A) still lives in
 | 4 | (f) "This section does not limit in any way the exercise by the lessor of the lessor's rights under any lease or agreement or any law pertaining to the hiring of property or the lessor's right to do any of the acts described in subdivision (a) or (d) for any lawful cause." | ST-13, CHK-14 | holds, wording: the site attributes "lawful cause" to subdivision (g); the words are in **(f)** (item C2) |
 | 5 | (g) a lessor may do the acts "if the notice of termination, rent increase, or other act … states the ground upon which the lessor, in good faith, seeks to … increase rent … If the statement is controverted, the lessor shall establish its truth at the trial or other hearing." | ST-13, CHK-14 | holds, wording: (g) is the stated-ground rule. It is a reason to state the ground of the increase in the notice (item A4). |
 | 6 | (h) actual damages and "Punitive damages in an amount of not less than one hundred dollars ($100) nor more than two thousand dollars ($2,000) for each retaliatory act where the lessor or agent has been guilty of fraud, oppression, or malice"; (i) attorney's fees "to the prevailing party if either party requests attorney's fees upon the initiation of the action". | Q-18 | holds |
+| 7 | (j) "The remedies provided by this section shall be in addition to any other remedies provided by statutory or decisional law." | Q-18 | holds |
+
+### S36 / S58 — Civil Code section 1947.12 (state rent cap, AB 1482)
+<https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV> — fetched 2026-11-11, chunks 1 and 2 of 3.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | (a)(1) an owner "shall not, over the course of any 12-month period, increase the gross rental rate for a dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower, of the lowest gross rental rate charged for that dwelling or unit at any time during the 12 months prior to the effective date of the increase." | ST rows, Q-01 | holds |
+| 2 | (a)(2) "shall not be increased in more than two increments over that 12-month period". | ST rows | holds |
+| 3 | (d)(3) the section does not apply to "Housing subject to rent or price control through a public entity's valid exercise of its police power … that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a)." | AN-02, Q-01, Q-19 | holds. This is the statutory reason the 8.8% state figure is not the limit for a unit under the San Francisco Rent Ordinance. |
+| 4 | (d)(6) "A property containing two separate dwelling units within a single structure in which the owner occupied one of the units as the owner's principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit." | Q-19, F34 | holds |
+| 5 | (e) "An owner shall provide notice of any increase in the rental rate, pursuant to subdivision (a), to each tenant in accordance with Section 827." | ST rows | holds |
+
+## Part 6 — Fair housing (the "one unit or both" question)
+
+### S41 — 42 U.S.C. 3603 and 3604 (Fair Housing Act)
+<https://www.govinfo.gov/link/uscode/42/3604> (resolves to the GovInfo PDF of the 2024 edition of the U.S. Code) — fetched 2026-11-11, chunk 1 of 3.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | Sec. 3604(b): unlawful "To discriminate against any person in the terms, conditions, or privileges of sale or rental of a dwelling, or in the provision of services or facilities in connection therewith, because of race, color, religion, sex, familial status, or national origin." Sec. 3604(f)(2): the same for "a handicap". | FED rows, AN-03, Q-08 | holds |
+| 2 | Sec. 3603(b)(2) exempts "rooms or units in dwellings containing living quarters occupied or intended to be occupied by no more than four families living independently of each other, if the owner actually maintains and occupies one of such living quarters as his residence." | FED rows | holds. Whether the owner lives in the building was not supplied; no exemption is asserted, and California law (S38) has no such gap for these units. |
+
+### S42 — 24 CFR 100.500 (discriminatory effect)
+<https://www.ecfr.gov/current/title-24/subtitle-B/chapter-I/part-100/subpart-G/section-100.500> — fetched 2026-11-11, both chunks. The page displayed "up to date as of 11/09/2026. Title 24 was last amended 8/20/2026."
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | "Liability may be established under the Fair Housing Act based on a practice's discriminatory effect … even if the practice was not motivated by a discriminatory intent. The practice may still be lawful if supported by a legally sufficient justification". | AN-04, FED rows, Q-08 | holds |
+| 2 | (b)(1) a legally sufficient justification exists where the practice "(i) Is necessary to achieve one or more substantial, legitimate, nondiscriminatory interests … and (ii) Those interests could not be served by another practice that has a less discriminatory effect." (b)(2) it "must be supported by evidence and may not be hypothetical or speculative." | AN-04, AN-08, CHK-09 | holds |
+| 3 | (d) such a justification "may not be used as a defense against a claim of intentional discrimination." | AN-04 | holds |
+| 4 | Date wording on the site: AN-04 says "Current eCFR as of 11/04/2026". | AN-04 | correction, date only (item D1): the page now displays 11/09/2026; the text is unchanged |
+
+### S38 — Government Code section 12955 (California FEHA, housing)
+<https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12955.&lawCode=GOV> — fetched 2026-11-11, chunk 1 of 2.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | (a) unlawful "For the owner of any housing accommodation to discriminate against or harass any person because of the race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran or military status, or genetic information of that person." | AN-05, ST rows, Q-08 | holds |
+| 2 | (f) unlawful to "harass, evict, or otherwise discriminate against any person in the sale or rental of housing accommodations when the owner's dominant purpose is retaliation against a person who has opposed practices unlawful under this section". | AN-05 | holds |
+
+None of these three texts says that a landlord must raise the rent of every unit, or of none. What they prohibit is different treatment because of a protected characteristic, and neutral practices with an unjustified discriminatory effect. Rows Q-08 and AN-08 say this and stay flagged (F22) because no official source gives a both-units rule either way.
+
+## Part 7 — How large corporate landlords report rent changes (SEC filings)
+
+### S48 — Independence Realty Trust, Exhibit 99.2 to Form 8-K (earnings release dated February 11, 2026)
+<https://www.sec.gov/Archives/edgar/data/1466085/000143774926003792/ex_895776.htm> — fetched 2026-11-11, chunks 1 to 3 of 17.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | Same-Store Portfolio table, Q4 2025: Average Occupancy 95.4%; "Lease Over Lease Effective Rental Rate Growth": New Leases (3.7)%, Renewal Leases 2.9%, Blended 0.8%; Resident Retention Rate 61.4%. | CORP-01, SUM-09, Q-02 | holds |
+| 2 | Same table, Q3 2025: Average Occupancy 95.3%; New Leases (3.5)%, Renewal Leases 2.6%, Blended 0.1%; Resident Retention Rate 60.4%. | CORP-02 | holds |
+| 3 | "We completed renovations of 2,003 units during the year ended December 31, 2025, achieving a weighted average return on investment of 15.3%, with an average cost per unit renovated of $19,661, and an average monthly rent increase per unit of $251 over unrenovated comparable units." | CORP-03 | holds |
+| 4 | Footnote (2): "Lease-over-lease effective rent growth represents the change in effective monthly rent, as adjusted for concessions, for each unit that had a prior lease and current lease that are for a term of 9-14 months." Footnote (4): "Q4 2025 new, renewal, and blended lease over lease rent growth for all leases was (6.2)%, 3.0% and (1.0)%, respectively." | CORP-01 | holds, wording: the published figures are the like-term (9 to 14 month) measure; the all-lease figures differ (item A5) |
+| 5 | "Same-store portfolio includes 105 properties, which represent 30,502 units." IRT "owns and operates multifamily communities, across non-gateway U.S. markets." | CORP rows | holds: not San Francisco, not rent-controlled housing |
+
+### S49 — Invitation Homes Inc., Form 10-K for the year ended December 31, 2025
+<https://www.sec.gov/Archives/edgar/data/1687229/000168722926000016/invh-20251231.htm> — fetched 2026-11-11, chunks 43 and 44 of 81 (pages 65 to 69 of the filing).
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | "Renewal lease net effective rental rate growth for the total portfolio averaged 4.6% and 4.9% for the years ended December 31, 2025 and 2024, respectively, and new lease net effective rental rate growth for the total portfolio averaged (0.8)% and 1.0% for the years ended December 31, 2025 and 2024, respectively." | CORP-04, CORP-05, SUM-09, Q-02 | holds |
+| 2 | "We enter into leases directly with our residents, and the leases typically have a term of one to two years." | CORP rows | holds; **not yet used on the site** (item A5): it shows the corporate pattern is a rent change at each lease renewal |
+| 3 | "we compare the monthly rent from an expiring lease to the monthly rent from the next lease for the same home … Leases are either renewal leases, where our current resident stays for a subsequent lease term, or new leases, where our previous resident moves out and a new resident signs a lease". | CORP rows | holds |
+| 4 | "As of December 31, 2025 and 2024, we owned 86,192 and 85,138 single-family rental homes". | CORP rows | holds: portfolio-wide, not San Francisco specific |
+
+Both filings were reachable and say what rows CORP-01 to CORP-05 and SUM-09 publish. See `UNMERGED_WORK_REVIEW.md` for the unmerged commits that would have blanked them.
+
+### S03 — Rent Board announcement of the 2026-27 rate
+<https://www.sf.gov/news--annual-rent-increase-3126-22827-announced> — fetched 2026-11-11, whole page.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | "January 14, 2026": "For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%." "$2,000.00 x .016 = $32.00". "The annual allowable increase amount effective March 1, 2025 through February 28, 2026 is 1.4%." | RATE rows | holds |
+| 2 | The "complete list" link on this page still points to the 25-26 edition of Form 571. | F32 | official-page defect (already recorded; still present today) |
+
+### S25 — Report an unlawful rent increase
+<https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history> — fetched 2026-11-11, whole page.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | "There is no charge for filing the petition"; "There is no time limit for filing a petition". | Q-21, Q-06 | holds |
+| 2 | "Usually within a few months after the petition is filed, it will be scheduled for an arbitration hearing before a Rent Board Administrative Law Judge." "The hearing process is designed so that no one needs an attorney, although parties are entitled to have an attorney or other authorized representative assist them at the hearing." | Q-06, Q-13, Q-21 | holds |
+| 3 | The "Eligibility" block appears twice on the page. | F16 | official-page defect (already F16; still present today) |
+
+### S62 — Recover part of your Rent Board fee from the tenant
+<https://www.sf.gov/information--recover-part-your-rent-board-fee-tenant> — fetched 2026-11-11, whole page.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | "A landlord who has paid the Rent Board fee in full may be able to collect 50% of the Rent Board fee (excluding any late penalties that have been added to the fee) from the tenant(s) residing in the unit." | FEE-16, Q-16 | holds |
+| 2 | "The landlord may only bill the tenant for the Rent Board fee if the tenant was residing in the unit on or before November 1 in the year before the fee became due." | FEE-16, FEE-27 | holds |
+| 3 | Recover by "Deducting it from the tenant's security deposit interest due to the tenant each year" or "Billing the tenant directly (Only if there is no (or insufficient) security deposit held by the landlord, or if the landlord already pays the tenant's security deposit interest annually)." The bill should state "That the purpose of the fee is to fund the Rent Board" and "That the fee is due and payable within 30 days of the date of the bill". | FEE-17 | holds |
+| 4 | "Banking only applies to fees assessed from November 1999 on." | FEE-18 | holds, wording: FEE-18 says "after July 25, 1999" from Chapter 37A; both are official and are shown side by side at integration (item A6) |
+| 5 | "A tenant's failure to pay the Rent Board fee is not a just cause for eviction. The landlord must go to Small Claims Court in order to collect an unpaid fee." | FEE-19 | holds |
+
+## Part 8 — Fee ordinance, petition statistics, single-family exemption
+
+### S63 — Administrative Code Chapter 37A (official PDF, Rent Board document 901)
+<https://www.sf.gov/sites/default/files/2022-09/901%20Rent%20Board%20Fee%20Ch.%2037A.pdf> — fetched 2026-11-11, both chunks.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | Sec. 37A.1: "This Chapter 37A is applicable to all residential units in the City and County of San Francisco, including residential units which are exempt from the rent increase limitation provisions (but not other provisions) of Chapter 37". Excluded: "(f) Any dwelling unit which is occupied by an owner of record on either a full-time or parttime basis and which is not rented at any time, provided that the owner file with the Rent Board an affidavit so stating". | FEE-01, FEE-13 | holds |
+| 2 | Sec. 37A.4: "Fees shall be paid by March 1 of each year. The Rent Board shall add a 5% penalty to the amount of the fee if the fee has not been paid by March 1, an additional 5% if the fee has not been paid by April 1, and an additional 5% if the fee has not been paid by May 1. If the fee remains outstanding as of June 1, the Rent Board shall refer the matter to the Bureau of Delinquent" Revenue. | FEE-07, FEE-08, F38 | holds |
+| 3 | Sec. 37A.6: "An owner who has paid the fee in full may seek recovery of the fee (exclusive of any penalties …) from the tenant(s) in occupancy of each residential unit on November 1, up to a maximum of 50% of the annual fee for each unit". | FEE-16 | holds |
+| 4 | Sec. 37A.6(b): "Only those fees that become due after July 25, 1999 (the effective date of Ordinance No. 178-99) may be banked." | FEE-18 | holds |
+| 5 | Sec. 37A.6(d): "The owner remains liable for full payment of the fee to the Rent Board whether or not the owner seeks any recovery". | FEE rows | holds |
+
+### S29 — Rent Board Monthly Workload Statistics, June 2024
+<https://www.sf.gov/file/workload-stats-june-2024pdf> — fetched 2026-11-11, whole document.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | Landlord Petitions Filed: "Capital Improvements 18 / 148"; "Operating and Maintenance 0 / 0"; "Comparable Rent 0 / 0"; "Costa-Hawkins &/or §6.14 1 / 1"; "SUBTOTAL: 19 / 149"; "TOTAL LL PETITIONS: 23 / 154". | IND-03, IND rows | holds for the row (18 / 148) |
+| 2 | "TOTAL TT PETITIONS: 73 / 73"; "TOTAL Notices Received = 89". | IND rows | holds |
+| 3 | The source list entry for S29 still reads "19 capital-improvement/148 units". | S29 statement | correction (item C3): the document says 18 petitions / 148 units; 19 is the subtotal that includes one Costa-Hawkins petition |
+
+### S60 — Partial exemption for certain single-family homes and condominiums
+<https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins> — fetched 2026-11-11, whole page.
+
+| # | Quote | Rows | Result |
+| --- | --- | --- | --- |
+| 1 | "single-family homes and condominiums are generally exempt from the rent increase limitations (but not the just cause eviction provisions) of the Rent Ordinance, but ONLY IF the tenancy commenced on or after January 1, 1996." | Q-20, F35 | holds |
+| 2 | "A single-family dwelling with a legal in-law unit constitutes a two-unit building and is not exempt from the Ordinance. A single-family dwelling with an illegal in-law unit also constitutes a two-unit building and is not exempt, unless both units are rented together as a single tenancy." | Q-20, F35, CHK-01 | holds |
+| 3 | "Units exempted from rent control limitations by Costa-Hawkins are still subject to the Rent Ordinance for all other purposes, including the just-cause eviction regulations and payment of the annual Rent Board fee." | FEE-01 | holds |
+
+## What this session did not open today
+
+These published sources were **not** re-opened by this session on 2026-11-11, so this ledger says nothing about them and their rows keep the dates of the earlier checks: S09 to S15, S17 to S20, S22 to S24, S26, S28, S30 to S34, S37, S39, S40, S43 to S47, S50 to S52, S55 (the Portal needs an owner login), S59, S61, S64, S65, S66 to S70, S72 (same page as S01, whose notice was read), S74, S75, S78 to S82. Other sessions' records for today (`research/t49_audit/`, `research/t50_reverify/`, `research/t52_audit/`) cover some of them; those records are theirs, not this session's.
+
+## Result count
+
+`python3 research/ea4_2026-11-11/checks.py` recounts the table rows in this file by result and prints the totals; the totals are not typed by hand here.
