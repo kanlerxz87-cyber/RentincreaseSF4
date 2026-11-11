@@ -574,6 +574,19 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 
 **PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.
 
+## Session 2026-11-11 — `arena-04258d5c` (T50: fresh 2026-11-11 re-verification + final integration + publication)
+
+> Task-ID collision note: session `arena-8e2f4ee9` (PR #35, merged) had already used **T49** for its post-publication spot check (below). This session's claim is renumbered **T49 → T50** at merge time (same precedent as T47→T48). Both records are kept verbatim; no content is discarded.
+
+Branch `arena/04258d5c-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
+
+**Board read before claiming (2026-11-11 UTC).** `origin/main` tip `89c7bb9` (PR #34 merged, T48 done). GitHub Pages `status: built` for `89c7bb9`. Local `scripts/validate_site.py` reproduced clean at 119 checks / 0 errors (82 sources, 65 flags, 347 rows) before any edit. Open PRs #18/#19/#25 are stale (2026-11-08, `CONFLICTING`, superseded; T45/T47/T48 deliberately left them open). No live claim is current; all `in progress` rows in the table above are stale (>60 minutes, last commits 2026-11-07/08) and their work is already on `main`.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T50 | Fresh 2026-11-11 line-by-line re-verification of load-bearing official sources (S01, S02, S05, S06, S07, S08, S27, S53, S56, S71, S73); update build date to 2026-11-11; rebuild + validate + privacy/broken-link gates; PR to `main`, merge, confirm Pages, record result | `done` | `arena-04258d5c` (claimed 2026-11-11 UTC) | `COORDINATION.md`, `scripts/site_sources.py` (DATE + re-verified statements only), `scripts/site_text.py` (header date), `scripts/validate_site.py` (DATE check), regenerated `data/`, `index.html`, `pages/`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`, `research/t50_reverify/` (new) | Direct `fetch_page` 2026-11-11 of 11 load-bearing pages; every figure held (1.6%, $59.00 fee, license rule, 24-month banking, 30/90-day notice, 8.8% AB 1482, File 261020 not enacted). Gates: `build_site.py` clean; `validate_site.py` 119 checks 0 errors (82 sources, 65 flags, 347 rows); `validate_kit.py` 19/0; `privacy_check.py` 0 current-tree matches; broken-link sweep 0; `Decimal` arithmetic $63.92→$4,058.92, $50.40→$3,200.40, $29.50. Full record: `research/t50_reverify/README.md`. | One non-legal change: S71 Legistar now lists 6 attachments (Comment Ltrs added); status/history unchanged. No new flag. Flagged items do not block. Stale PRs #18/#19/#25 left open (owner call). F44 remains owner-actionable. |
+
+This claim is committed and pushed before substantive work begins. No raw tenant identifiers in any tracked file, commit message or PR text.
 ## Session 2026-11-11 — `arena-8e2f4ee9` (post-publication verification)
 
 | ID | Task | Status | Owner | Exclusive scope | Sources / irregularities |

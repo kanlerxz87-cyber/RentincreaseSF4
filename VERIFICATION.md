@@ -248,3 +248,17 @@ This is a focused update, not a claim that every historical source was rechecked
 | [S56](https://www.sf.gov/rent-board-fee) | Rechecked separate fee and deadlines; $59 per dwelling and $29.50 per guest for 2026–27 remain published. |
 
 Regression: the conditional Unit 2 13.1% calculation is arithmetic only, not a finding or recommendation; it now explicitly points to F46. 90-day notice is not proof of lawfulness. Earlier source and privacy flags remain open.
+
+## T50 — focused re-verification, 2026-11-11 (session `arena-04258d5c`)
+
+This is a focused update, not a claim that every historical source was rechecked today. Each source retains its individual verification date. Full per-page record: `research/t50_reverify/README.md`.
+
+| Source | Directly rechecked 2026-11-11 and outcome |
+| --- | --- |
+| S01, S02 | 1.6% 3/1/26–2/28/27, license rule, 30/90-day notice, File 261020 notice (not enacted) all unchanged. S02 F45 link defect still present. |
+| S07, S08, S53, S73 | Housing Inventory reporting, current-license-before-effective-date rule, null-and-void / suspension wording, Rule 13.14 all unchanged. |
+| S56 | $59.00/dwelling, 50% ($29.50) recovery, March 1 deadline, December 14, 2026 exemption window unchanged. |
+| S05, S06, S27 | 24-month banking, June 13, 1979 coverage cutoff, AB 1482 8.8% (not applicable to SF Ordinance units) unchanged. |
+| S71 | File 261020 still Pending Committee Action, not enacted; 6 attachments now listed (Comment Ltrs added since 2026-11-10), history rows unchanged. |
+
+Build date updated to 2026-11-11. No new legal irregularity; no new flag. F44 (history exposure) remains open and owner-actionable.
