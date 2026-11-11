@@ -209,21 +209,9 @@ def main():
     public_css = [ROOT / "assets" / "site.css"]
     public_files = [p for p in public_md + public_json + public_html + public_css if p.exists()]
 
-    # One-way fingerprints keep the privacy regression test portable without
-    # committing private intake or printing identifiers in public reports.
-    import hashlib
-    private_fingerprints = ['27c9478468718ed43669f8b2bbac3694d1f03287a6347d4c9adadc9d12f9ecf5', '158dc33a8be8ae49804b3fa72e2e116edb683730b51752bdb552435f31f0ba5a', '569ec6135d377e8ac326be2be2fd4cd8f3538fc3c23f33a89e81a4ed83671b7e', '399ad8e221e6815cd19b54cd7f313335f9bab0ecc681615af552c64ea3901b0f', '01efd0141d7d80509ee44bbbb2dee48875711d55358bd9a91bf22d5208ffa93d', '0b28c4215599de9c8f7019402d7eaeccc8cbdc5103aeca7427774222c2bf2f16']
+    # Do not store recoverable hashes of short private identifiers. This check is
+    # deliberately limited to the anonymized case files; it is not a history audit.
     check("private intake file is excluded from git", "internal/" in (ROOT / ".gitignore").read_text(encoding="utf-8"))
-    privacy_hits = []
-    for p in public_files:
-        text = p.read_text(encoding="utf-8")
-        candidates = re.findall(r"(?<![A-Za-z])[A-Z]\s+[A-Z](?![A-Za-z])|(?<![A-Za-z])[A-Z]{2}(?![A-Za-z])", text)
-        for candidate in candidates:
-            normalized = " ".join(candidate.split())
-            if hashlib.sha256(normalized.encode()).hexdigest() in private_fingerprints:
-                privacy_hits.append(str(p.relative_to(ROOT)))
-    check("privacy fingerprint baseline present", len(private_fingerprints) == 6, "6 one-way fingerprints; no private intake required")
-    check("no raw tenant identifiers in public files", not privacy_hits, "; ".join(privacy_hits[:5]))
 
     address_patterns = [
         r"\b\d{3,5}\s+\d{1,2}(?:st|nd|rd|th)\s+(?:Ave|Avenue|Street|St)\b",
