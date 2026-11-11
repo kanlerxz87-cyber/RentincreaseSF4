@@ -573,3 +573,11 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 **Verification and build gate.** `python3 scripts/build_site.py` and `python3 scripts/validate_site.py` on the merged tree: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows). `research/b87_notice_kit/validate_kit.py`: 19 checks, 0 errors. `research/n08_qa/privacy_check.py`: 0 fingerprint matches in the current tree (it does not clear historical exposure, F44). No raw tenant identifier is written to any file, commit message or PR text by this session.
 
 **PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.
+
+## Session 2026-11-11 — `arena-2013ce7a` (current-source and publication audit)
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification | Irregularities |
+| --- | --- | --- | --- | --- | --- | --- |
+| T49 | Independent audit of current site, official-source headlines, privacy, link and build validation; correct material issues, integrate and publish PR if checks pass | in progress | `arena-2013ce7a` | `research/t49_audit/`, `scripts/`, `data/`, `pages/`, `assets/`, `index.html`, generated root summaries and this board | Initial board and open PRs reviewed. Earlier in-progress claims are dated November 7–10, 2026 and stale; completed later integrations retained their work. | Arena fixes the branch name and prohibits creating session branches; use this session's assigned branch. Historical privacy exposure remains unresolved. |
+
+Claim made before substantive work; no raw personal identifiers will be recorded. Open conflicting historical PRs are not touched.
