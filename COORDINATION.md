@@ -573,3 +573,9 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 **Verification and build gate.** `python3 scripts/build_site.py` and `python3 scripts/validate_site.py` on the merged tree: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows). `research/b87_notice_kit/validate_kit.py`: 19 checks, 0 errors. `research/n08_qa/privacy_check.py`: 0 fingerprint matches in the current tree (it does not clear historical exposure, F44). No raw tenant identifier is written to any file, commit message or PR text by this session.
 
 **PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.
+
+## Session 2026-11-11 — `arena-8e2f4ee9` (post-publication verification)
+
+| ID | Task | Status | Owner | Exclusive scope | Sources / irregularities |
+| --- | --- | --- | --- | --- | --- |
+| T49 | Check deployed Pages and critical current official rules, run existing build/validation/privacy gates, record findings and publication status | `in progress` | `arena-8e2f4ee9` | `research/t49_audit/`, `COORDINATION.md` | Arena fixes branch name; existing historical work and active claims are not overwritten. |
