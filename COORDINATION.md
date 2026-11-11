@@ -573,3 +573,15 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 **Verification and build gate.** `python3 scripts/build_site.py` and `python3 scripts/validate_site.py` on the merged tree: **111 checks, 0 errors** (71 sources, 56 flags, 299 rows). `research/b87_notice_kit/validate_kit.py`: 19 checks, 0 errors. `research/n08_qa/privacy_check.py`: 0 fingerprint matches in the current tree (it does not clear historical exposure, F44). No raw tenant identifier is written to any file, commit message or PR text by this session.
 
 **PR and deployment result.** PR #32 (this record plus the verification file) is opened from this branch; its merge result and the Pages build for the merge commit are recorded in the follow-up entry that lands after the merge.
+
+## Session 2026-11-11 — `arena-04258d5c` (T49: fresh 2026-11-11 re-verification + final integration + publication)
+
+Branch `arena/04258d5c-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
+
+**Board read before claiming (2026-11-11 UTC).** `origin/main` tip `89c7bb9` (PR #34 merged, T48 done). GitHub Pages `status: built` for `89c7bb9`. Local `scripts/validate_site.py` reproduced clean at 119 checks / 0 errors (82 sources, 65 flags, 347 rows) before any edit. Open PRs #18/#19/#25 are stale (2026-11-08, `CONFLICTING`, superseded; T45/T47/T48 deliberately left them open). No live claim is current; all `in progress` rows in the table above are stale (>60 minutes, last commits 2026-11-07/08) and their work is already on `main`.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T49 | Fresh 2026-11-11 line-by-line re-verification of load-bearing official sources (S01, S02, S05, S06, S07, S08, S53, S56, S71, S73); update build date to 2026-11-11; rebuild + validate + privacy/broken-link gates; PR to `main`, merge, confirm Pages, record result | `in progress` | `arena-04258d5c` (claimed 2026-11-11 UTC) | `COORDINATION.md`, `scripts/site_sources.py` (DATE + re-verified statements only), regenerated `data/`, `index.html`, `pages/`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`, `research/t49_reverify/` (new) | Direct `fetch_page` 2026-11-11 of load-bearing pages; compare every published figure; run all gates | Flagged items do not block. Stale PRs #18/#19/#25 left open (owner call). |
+
+This claim is committed and pushed before substantive work begins. No raw tenant identifiers in any tracked file, commit message or PR text.
