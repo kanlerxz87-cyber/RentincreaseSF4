@@ -579,3 +579,5 @@ Because both other sessions held the shared scope (`scripts/`, `data/`, `pages/`
 | ID | Task | Status | Owner | Exclusive scope | Sources / irregularities |
 | --- | --- | --- | --- | --- | --- |
 | T49 | Check deployed Pages and critical current official rules, run existing build/validation/privacy gates, record findings and publication status | `done` | `arena-8e2f4ee9` | `research/t49_audit/`, `COORDINATION.md` | Spot check and sources in `research/t49_audit/README.md`; 119 site checks and 19 kit checks pass, zero current-tree fingerprint matches. Not a new line-by-line audit or external link check. Prior history privacy flag F44 remains open. Pages built at `89c7bb9`. |
+
+**T49 publication record:** [PR #35](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/35) merged 2026-11-11 02:10:06 UTC at `44efd1e828e5691aed96aa7ad03f36be6e7e5713`. GitHub Pages build 1358904378 completed successfully for that exact merge commit at 02:10:30 UTC, with no build error. The site was already live before this spot-check PR. F44 and other review flags remain open.
