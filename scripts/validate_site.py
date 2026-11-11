@@ -56,6 +56,34 @@ class LinkParser(HTMLParser):
             if key in ("href", "src") and value:
                 self.links.append(value)
 
+class TableRowSourceParser(HTMLParser):
+    """Check rendered body rows, not just their backing JSON metadata."""
+    def __init__(self):
+        super().__init__()
+        self.in_body = False
+        self.in_row = False
+        self.links = []
+        self.row_count = 0
+        self.missing = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "tbody":
+            self.in_body = True
+        elif tag == "tr" and self.in_body:
+            self.in_row = True
+            self.links = []
+        elif tag == "a" and self.in_row:
+            self.links.append(dict(attrs).get("href", ""))
+
+    def handle_endtag(self, tag):
+        if tag == "tr" and self.in_row:
+            self.row_count += 1
+            if not any(urlparse(link).scheme == "https" and official_domain(link) for link in self.links):
+                self.missing += 1
+            self.in_row = False
+        elif tag == "tbody":
+            self.in_body = False
+
 def main():
     # Placeholder so the footer's validation-report link resolves during the link check.
     DATA.mkdir(parents=True, exist_ok=True)
@@ -84,8 +112,12 @@ def main():
                 rid = r.get("id", "?")
                 if r.get("status") == "owner supplied":
                     owner_rows.append(rid)
-                    if r.get("source_ids"):
-                        row_errors.append("{} is owner-supplied but carries official source_ids".format(rid))
+                    if not r.get("source_ids") or any(sid not in source_map or not official_domain(source_map[sid]["url"]) for sid in r.get("source_ids", [])):
+                        row_errors.append("{} lacks valid contextual official source links".format(rid))
+                    if "context only" not in r.get("source_note", ""):
+                        row_errors.append("{} must distinguish context from verification".format(rid))
+                    if r.get("flag_id") not in flag_ids:
+                        row_errors.append("{} lacks a published review flag".format(rid))
                     if not r.get("source_note"):
                         row_errors.append("{} is owner-supplied but has no source note".format(rid))
                     if not r.get("value"):
@@ -114,7 +146,19 @@ def main():
     dupes = [i for i, n in _c.Counter(r["id"] for pg in pages.values() for sec in pg["sections"] for r in sec["rows"]).items() if n > 1]
     check("row IDs are unique across all pages", not dupes, ", ".join(dupes[:5]))
     check("owner-supplied case rows are published and labelled", len(owner_rows) >= 10, "{} owner-supplied rows ({} ...)".format(len(owner_rows), ", ".join(owner_rows[:3])))
+    case_html = (PAGES / "case.html").read_text(encoding="utf-8")
+    check("owner-intake rows render contextual links without implying verification", case_html.count("official links provide general context only") == len(owner_rows) and 'href="https://www.sf.gov/learn-about-san-francisco-rental-laws"' in case_html)
     check("every table row has valid official source links", not row_errors, "{} rows checked; {}".format(row_count, "; ".join(row_errors[:5])))
+    rendered_rows = 0
+    rendered_missing = []
+    for html_path in [ROOT / "index.html", *sorted(PAGES.glob("*.html"))]:
+        parser = TableRowSourceParser()
+        parser.feed(html_path.read_text(encoding="utf-8"))
+        rendered_rows += parser.row_count
+        if parser.missing:
+            rendered_missing.append("{}: {} rows".format(html_path.name, parser.missing))
+    check("rendered table rows contain official-domain links", not rendered_missing and rendered_rows >= row_count,
+          "{} rows checked; {}".format(rendered_rows, "; ".join(rendered_missing)))
     check("unverified rows are blank and flagged", needs_review_count > 0, "{} needs-review rows".format(needs_review_count))
 
     flag_errors = []
