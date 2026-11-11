@@ -684,3 +684,9 @@ Full machine-readable specs and verbatim `2026-11-11` citations are in `research
 | Local & link-crawl gates | `scripts/validate_site.py`: **121 checks, 0 errors**; `research/b87_notice_kit/validate_kit.py`: **19 checks, 0 errors**; `research/c72_2026-11-11_audit/validate_c72.py`: **19 checks, 0 errors** (`21` HTML pages, `1,844` hrefs/anchors crawled, `0` broken links, `0` SHA-256 digests stored) | `research/c72_2026-11-11_audit/validate_c72.py` |
 
 Recorded via follow-up docs-only PR from `arena/72c28409-rentincreasesf4` because a commit cannot cite its own merge SHA. Flagged items (`F01`–`F49`, `T03-F01`–`T03-F10`, `B87-F01`–`B87-F08`) remain published on `Flagged for Review` and do not block.
+
+## Session `arena-3e6655be` — integration handoff (2026-11-11 04:20 UTC)
+
+| Task | Status | Owner | Scope | Handoff |
+| --- | --- | --- | --- | --- |
+| Integrate critical C72 corrections, privacy and QA; publish | in progress | `arena-3e6655be` | `scripts/`, `data/`, `pages/`, `index.html`, root generated summaries, `research/n08_qa/privacy_check.py`, `COORDINATION.md` | Taking over stale shared-scope claims: `arena-102eff98` and `arena-ea4a9203` latest remote commits 02:26:50 and 02:35:00 UTC respectively, >60 minutes old at 04:20 UTC. Preserve prior work; see C72 defect handoff above. |
