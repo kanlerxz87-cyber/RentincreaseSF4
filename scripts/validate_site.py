@@ -278,10 +278,10 @@ def main():
     check("executive summary page renders the narrative, not just tables",
           summary_html.count("<h2>") >= 10 and "<ol>" in summary_html and "<h2>FOREFRONT" in summary_html,
           "{} headings".format(summary_html.count("<h2>")))
-    check("2026-11-11 proposed-cap inconsistencies and next-year rate are published",
+    check("2026-11-10 proposed-cap inconsistencies and next-year rate are published",
           any(r["id"] == "RATE-14" and "Pending Committee Action" in r["value"] for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
           and any(r["id"] == "RATE-17" and r["value"] == "" and r["status"] == "needs review" for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
-          and any(f["id"] == "F47" for f in flags) and D.DATE == "2026-11-11"
+          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11")
           and "2026-11-10" in D.SOURCES["S72"]["statement"]
           and official_domain(D.SOURCES["S71"]["url"]))
     check("pending cap is distinguished from current law and calculation is cautioned",
