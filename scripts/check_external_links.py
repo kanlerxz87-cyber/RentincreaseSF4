@@ -10,6 +10,7 @@ import concurrent.futures
 import datetime
 import html
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -80,6 +81,15 @@ def main():
     for item in entries:
         print("{id}: {outcome} HTTP {http_status}".format(**item), flush=True)
     print("Summary:", json.dumps(counts), flush=True)
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        # Check-run annotations are queryable through the GitHub API even when
+        # the runner's full logs/artifacts cannot be downloaded in a sandbox.
+        for item in entries:
+            if item["outcome"] == "reachable":
+                continue
+            level = "error" if item["outcome"] == "broken" else "warning"
+            print("::{level} file=data/sources.json,line=1,title=External source link::{id} {outcome}; HTTP {http_status}".format(level=level, **item), flush=True)
+        print("::notice file=data/sources.json,line=1,title=External source link summary::" + json.dumps(counts), flush=True)
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

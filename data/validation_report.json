@@ -390,7 +390,7 @@
     {
       "name": "no recoverable two-letter SHA-256 fingerprints in current files",
       "ok": true,
-      "detail": "108 files scanned; Structural checks only: not a complete personal-information audit, not proof of anonymity, and not a git-history, PR-diff, branch or cache purge."
+      "detail": "Structural checks only: not a complete personal-information audit, not proof of anonymity, and not a git-history, PR-diff, branch or cache purge."
     },
     {
       "name": "no exact street address published",

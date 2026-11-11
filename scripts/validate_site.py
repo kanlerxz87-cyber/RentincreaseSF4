@@ -1,4 +1,4 @@
-"""Re-verify combined data line by line, validate source links, privacy and internal links.
+"""Validate structural source links, limited privacy safeguards and internal links.
 
 Run: python3 scripts/validate_site.py
 Writes data/validation_report.json. Exits nonzero on any error.
@@ -219,7 +219,7 @@ def main():
           "Structural check only; no private intake or private-derived fingerprint stored")
     check("no recoverable two-letter SHA-256 fingerprints in current files",
           not privacy["files_with_recoverable_two_letter_hashes"],
-          "{} files scanned; {}".format(privacy["files_scanned"], privacy["scope_limit"]))
+          privacy["scope_limit"])
 
     address_patterns = [
         r"\b\d{3,5}\s+\d{1,2}(?:st|nd|rd|th)\s+(?:Ave|Avenue|Street|St)\b",
