@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "task_id": "C72-A",
+    "session_id": "arena-72c28409",
+    "verified_date": "2026-11-11",
+    "privacy_policy": "Strictly anonymized placeholders only (Unit 1, Unit 2, Tenant 1A-1D, Tenant 2A-2B); zero raw personal identifiers and zero hashes, digests, or encodings derived from personal identifiers.",
+    "not_legal_advice": "Educational and compliance-checklist synthesis from official sources only; not legal advice, not approved by a tenant lawyer, and no guarantee against administrative petitions or litigation."
+  },
+  "new_official_sources": [
+    {
+      "id": "C72-S01",
+      "proposed_site_id": "S83",
+      "title": "Board of Supervisors File No. 261020 — Legislation Text, Version 1 (Proposed Admin. Code §§ 37.3(h), 37.7, 37.15(b)(2)(F))",
+      "agency": "San Francisco Board of Supervisors (Legistar)",
+      "category": "local_pending_legislation",
+      "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E",
+      "verified_date": "2026-11-11",
+      "statement": "Official Version 1 bill text introduced September 15, 2026 (Pending Committee Action; NOT enacted). Proposes Sec. 37.3(h) capping combined Sec. 37.3(a)(2) banked rent increases and Sec. 37.3(a)(3) capital-improvement passthroughs at 10% of the lowest base rent in effect during the 12 months preceding the effective date (leaving Sec. 37.3(a)(1) annual CPI increases separate), applicable to banked notices and CI petitions on/after September 15, 2026 through December 31, 2029, with excess amounts deferred to on/after January 1, 2030, and proposes amending Sec. 37.15(b)(2)(F) to add annual Housing Inventory reporting of whether any banked increase was imposed in the prior 12 months."
+    },
+    {
+      "id": "C72-S02",
+      "proposed_site_id": "S84",
+      "title": "Board of Supervisors File No. 261020 — City Attorney Legislative Digest, Version 1",
+      "agency": "San Francisco Office of the City Attorney / Board of Supervisors (Legistar)",
+      "category": "local_pending_legislation",
+      "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865647&GUID=CC09B796-4675-4A7D-9960-85FE239F7FBB",
+      "verified_date": "2026-11-11",
+      "statement": "Official September 15, 2026 Legislative Digest summarizing existing Rent Ordinance law (annual CPI increase, 24-month banking, 5%/10% capital-improvement amortization caps, Housing Inventory licensing) and confirming proposed File No. 261020 (not enacted) would cap combined banked + capital-improvement increases at 10% of lowest prior-12-month base rent through December 31, 2029 and require Housing Inventory reporting of prior-12-month banked increases."
+    },
+    {
+      "id": "C72-S03",
+      "proposed_site_id": "S85",
+      "title": "FY 2027 Calculation Summary of Small Area Fair Market Rents (SAFMRs) for ZIP Code 94122 (San Francisco, CA HUD Metro FMR Area)",
+      "agency": "U.S. Department of Housing and Urban Development (HUD USER)",
+      "category": "federal_benchmark",
+      "url": "https://www.huduser.gov/datasets/fmr/fmr2027/zip-calc?year=2027&zip=94122&cbsasub=METRO41860MM7360",
+      "verified_date": "2026-11-11",
+      "statement": "Official HUD FY 2027 Small Area FMRs for Outer Sunset ZIP Code 94122: Efficiency $2,370; 1-Bedroom $2,770; 2-Bedroom $3,410; 3-Bedroom $4,460; 4-Bedroom $5,020. Derived from 94122 ACS 5-year 40th-percentile 2BR Adjusted Standard Quality gross rent estimates ($2,610 in 2024; $2,498 inflated to $2,565 in 2023; $2,498 inflated to $2,691 in 2022; average base rent $2,622 x 1.183 recent-mover factor x 1.0352 gross-rent inflation x 1.0604 trend factor = $3,410)."
+    },
+    {
+      "id": "C72-S04",
+      "proposed_site_id": "S86",
+      "title": "FY 2026 Calculation Summary of Small Area Fair Market Rents (SAFMRs) for ZIP Code 94122 (San Francisco, CA HUD Metro FMR Area)",
+      "agency": "U.S. Department of Housing and Urban Development (HUD USER)",
+      "category": "federal_benchmark",
+      "url": "https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2026_code/2026zip_code_calc.odn?zcta=94122&metro_code=METRO41860MM7360&year=2026",
+      "verified_date": "2026-11-11",
+      "statement": "Official HUD FY 2026 Small Area FMRs for Outer Sunset ZIP Code 94122: Efficiency $2,280; 1-Bedroom $2,730; 2-Bedroom $3,310; 3-Bedroom $4,230; 4-Bedroom $4,380 (2BR base rent $2,512 x 1.2198 recent-mover factor x 1.0229 inflation x 1.0553 trend = $3,310)."
+    },
+    {
+      "id": "C72-S05",
+      "proposed_site_id": "S87",
+      "title": "FY 2027 Fair Market Rent Documentation System — Summary for San Francisco, CA HUD Metro FMR Area (FIPS 0607599999)",
+      "agency": "U.S. Department of Housing and Urban Development (HUD USER)",
+      "category": "federal_benchmark",
+      "url": "https://www.huduser.gov/datasets/fmr/fmr2027/summary?year=2027&reporttype=county&counties=0607599999",
+      "verified_date": "2026-11-11",
+      "statement": "Official HTML documentation of Final FY 2027 FMRs for San Francisco, CA HMFA (Marin, San Francisco, San Mateo): Efficiency $2,574; 1BR $3,003; 2BR $3,697; 3BR $4,832; 4BR $5,439 (ACS 2024 5-year 2BR $2,847, 1-year recent-mover 2BR $3,368, recent-mover ratio 1.183, local gross-rent inflation 1.03524, local trend 1.06044)."
+    },
+    {
+      "id": "C72-S06",
+      "proposed_site_id": "S88",
+      "title": "Reevaluation Requests for FY 2027 Fair Market Rents",
+      "agency": "U.S. Department of Housing and Urban Development (HUD USER)",
+      "category": "federal_benchmark",
+      "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2027/Reevaluation-Requests-FY27-FMRs.pdf",
+      "verified_date": "2026-11-11",
+      "statement": "Confirms that for the San Francisco, CA HUD Metro FMR Area, FY 2027 Fair Market Rents and Small Area Fair Market Rents ARE in effect as of October 1, 2026, while local agencies have until January 8, 2027 to submit rental market survey data for a requested reevaluation."
+    },
+    {
+      "id": "C72-S07",
+      "proposed_site_id": "S89",
+      "title": "Essex Property Trust, Inc. (NYSE: ESS) — Form 8-K Exhibit 99.1, Q4 & Full-Year 2025 Earnings Release and Supplemental Financial Data (Filed Feb. 4, 2026)",
+      "agency": "U.S. Securities and Exchange Commission (EDGAR CIK 0000920522)",
+      "category": "corporate_reit_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/920522/000114036126003709/ef20064474_ex99-1.htm",
+      "verified_date": "2026-11-11",
+      "statement": "West Coast multifamily REIT (63,620 total apartment homes) reporting county-level San Francisco same-property metrics (1,356 consolidated SF units; 1,893 total SF units at pro rata share): Q4 2025 SF average monthly rental rate $2,966 vs. $2,897 (+2.4% YoY), occupancy 95.5%, gross revenue +2.0% YoY; full-year 2025 SF average monthly rent $2,944 vs. $2,887 (+2.0% YoY), occupancy 96.3%, gross revenue +5.0% YoY; portfolio Q4 2025 similar-term net effective renewal +4.8%, new lease -2.4%, blended +1.9% (full-year 2025 blended +2.5%)."
+    },
+    {
+      "id": "C72-S08",
+      "proposed_site_id": "S90",
+      "title": "Equity Residential / ERP Operating Limited Partnership (NYSE: EQR) — FY 2025 Form 10-K",
+      "agency": "U.S. Securities and Exchange Commission (EDGAR CIK 0000931182)",
+      "category": "corporate_reit_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/931182/000119312526051433/eqr-20251231.htm",
+      "verified_date": "2026-11-11",
+      "statement": "S&P 500 multifamily REIT operating in San Francisco and other coastal markets; confirms completion of a consolidated San Francisco apartment development in 2025 and resolves prior SEC EDGAR search dead-end flag F15."
+    }
+  ],
+  "hud_94122_safmr_comparison": {
+    "zip_code": "94122",
+    "hmfa": "San Francisco, CA HUD Metro FMR Area (METRO41860MM7360)",
+    "fy2026": {
+      "0br": 2280,
+      "1br": 2730,
+      "2br": 3310,
+      "3br": 4230,
+      "4br": 4380
+    },
+    "fy2027": {
+      "0br": 2370,
+      "1br": 2770,
+      "2br": 3410,
+      "3br": 4460,
+      "4br": 5020
+    },
+    "sf_hmfa_fy2027": {
+      "0br": 2574,
+      "1br": 3003,
+      "2br": 3697,
+      "3br": 4832,
+      "4br": 5439
+    },
+    "legal_effect": "Voucher payment-standard benchmark (40th-percentile gross rent including utilities) only; does NOT authorize exceeding the 1.6% SF Rent Ordinance cap on a 1940 rent-controlled unit."
+  },
+  "case_calculations": {
+    "annual_rate_2026_2027_pct": "1.6",
+    "unit_1": {
+      "unit_label": "Unit 1",
+      "initial_lease_date": "February 1, 2025",
+      "occupancy_change_date": "April 1, 2026",
+      "current_base_rent": "3995.00",
+      "annual_increase_dollars": "63.92",
+      "new_base_rent": "4058.92",
+      "market_reset_barred": true,
+      "roommate_surcharge_barred": true,
+      "banked_eligible_on_first_anniversary": false,
+      "prior_increase_history": null,
+      "bedroom_count": null
+    },
+    "unit_2": {
+      "unit_label": "Unit 2",
+      "initial_lease_date": "June 1, 2019",
+      "current_base_rent": "3150.00",
+      "annual_only_increase_dollars": "50.40",
+      "annual_only_new_base_rent": "3200.40",
+      "prior_increase_history": null,
+      "verified_banked_amount": null,
+      "bedroom_count": null
+    },
+    "rent_board_fee_2026_2027": {
+      "per_dwelling_unit": "59.00",
+      "two_unit_total": "118.00",
+      "tenant_recoverable_50pct_per_unit": "29.50"
+    }
+  },
+  "defect_ledger": [
+    {
+      "id": "C72-D01",
+      "severity": "critical_source_integrity",
+      "target_files": ["scripts/site_sources.py", "data/sources.json", "pages/sources.html"],
+      "summary": "Corrupted statement text on S57 (Cal. Civ. Code § 1942.5), S59 (post-1979 new construction), and S61 (SF evictions): PR #36 pasted Rent Board Fee text ('$59.00/$29.50, March 1 deadline, Dec 14 2026 exemption window unchanged') onto three unrelated legal sources.",
+      "official_proof_urls": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV",
+        "https://www.sf.gov/information--partial-exemption-newly-constructed-rental-units",
+        "https://www.sf.gov/evictions-san-francisco"
+      ]
+    },
+    {
+      "id": "C72-D02",
+      "severity": "high_privacy_hardening",
+      "target_files": ["scripts/validate_site.py", "research/n08_qa/privacy_check.py"],
+      "summary": "scripts/validate_site.py embeds six unsalted SHA-256 digests of 2-letter tenant tokens (searchable across 1,352 uppercase 2-letter forms in <1 ms). Replace with an allowlist-based 2-letter uppercase token scanner storing zero digests derived from personal identifiers.",
+      "official_proof_urls": [
+        "https://github.com/kanlerxz87-cyber/RentincreaseSF4"
+      ]
+    },
+    {
+      "id": "C72-D03",
+      "severity": "medium_count_math",
+      "target_files": ["scripts/build_site.py", "FLAGGED_FOR_REVIEW.md", "pages/flagged.html"],
+      "summary": "scripts/build_site.py:183 computes source_flags by excluding T03-* but forgets to exclude B87-* (yielding 57 + 10 + 8 = 75 instead of 49 + 10 + 8 = 67).",
+      "official_proof_urls": [
+        "https://github.com/kanlerxz87-cyber/RentincreaseSF4"
+      ]
+    },
+    {
+      "id": "C72-D04",
+      "severity": "medium_ledger_drift",
+      "target_files": ["SOURCES.md"],
+      "summary": "Hand-maintained SOURCES.md omits S72-S82 (present in scripts/site_sources.py and pages/sources.html) and line 96 still claims 70 sources (68 government) instead of 82 (80 official government/SEC).",
+      "official_proof_urls": [
+        "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent"
+      ]
+    },
+    {
+      "id": "C72-D05",
+      "severity": "medium_primary_source_update",
+      "target_files": ["scripts/site_flags.py", "scripts/site_pages.py", "scripts/site_text.py"],
+      "summary": "Flag F47 and row RATE-18 state no official page defines File 261020's 10% measurement or interaction with the annual increase; official Legistar attachments Leg Ver1 (ID=15865646) and Leg Dig Ver1 (ID=15865647) define proposed Sec. 37.3(h) verbatim while confirming it remains Pending Committee Action (not enacted).",
+      "official_proof_urls": [
+        "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E",
+        "https://sfgov.legistar.com/View.ashx?M=F&ID=15865647&GUID=CC09B796-4675-4A7D-9960-85FE239F7FBB"
+      ]
+    },
+    {
+      "id": "C72-D06",
+      "severity": "medium_primary_source_update",
+      "target_files": ["scripts/site_pages.py", "scripts/site_flags.py"],
+      "summary": "Flags F08, F09, F13, F40 and rows FED-07..09 / MKT-05..06 leave ZIP 94122 SAFMR blank due to PDF/XLSX parser limits; HUD USER's official HTML zip-calc endpoints publish both FY 2027 ($2,370 / $2,770 / $3,410 / $4,460 / $5,020) and FY 2026 ($2,280 / $2,730 / $3,310 / $4,230 / $4,380) 94122 SAFMRs directly.",
+      "official_proof_urls": [
+        "https://www.huduser.gov/datasets/fmr/fmr2027/zip-calc?year=2027&zip=94122&cbsasub=METRO41860MM7360",
+        "https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2026_code/2026zip_code_calc.odn?zcta=94122&metro_code=METRO41860MM7360&year=2026"
+      ]
+    },
+    {
+      "id": "C72-D07",
+      "severity": "low_medium_primary_source_update",
+      "target_files": ["scripts/site_pages.py", "scripts/site_flags.py"],
+      "summary": "Corporate comparison page relies only on non-SF REITs (IRT, Invitation Homes) and flags EQR SEC search as a dead end (F15); SEC EDGAR publishes Essex Property Trust's San Francisco County same-property results (1,356 units, $2,966 Q4 2025 avg rent, +2.4% YoY) and Equity Residential's FY 2025 Form 10-K.",
+      "official_proof_urls": [
+        "https://www.sec.gov/Archives/edgar/data/920522/000114036126003709/ef20064474_ex99-1.htm",
+        "https://www.sec.gov/Archives/edgar/data/931182/000119312526051433/eqr-20251231.htm"
+      ]
+    },
+    {
+      "id": "C72-D08",
+      "severity": "low_citation_and_template_polish",
+      "target_files": ["scripts/site_pages.py", "scripts/site_text.py"],
+      "summary": "REQ-03/05 cite S20 and REQ-15/17/18 cite S01 without project record S68; LIC-07/CHK-11/Q-04/AN-29 omit S73 (Rule 13.14); site_text.py omits F47-F49 in FLAGGED_TEXT, omits punctuation between F29 and F30, defines td.blank twice in CSS_TEXT, and carries 2026-11-08/2026-11-10 check dates in several row notes.",
+      "official_proof_urls": [
+        "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent",
+        "https://github.com/kanlerxz87-cyber/RentincreaseSF4"
+      ]
+    }
+  ]
+}
