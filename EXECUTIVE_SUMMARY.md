@@ -1,6 +1,6 @@
 # Executive Summary - Rental increase SF
 
-Research updated 2026-11-10 UTC. The key Rent Board rate, banking, licence, coverage and fee pages were rechecked on 2026-11-10; other sources retain their individual verification dates. Informational compliance research, not legal advice.
+Research updated 2026-11-11 UTC. The key Rent Board rate, banking, licence, coverage and fee pages were rechecked on 2026-11-11; other sources retain their individual verification dates. Informational compliance research, not legal advice.
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 

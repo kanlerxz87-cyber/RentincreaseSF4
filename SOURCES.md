@@ -103,3 +103,7 @@ Each published finding row carries one or more of these source IDs and the offic
 | ID | Agency / category | Official source (manual review link) | Verified statement used |
 | --- | --- | --- | --- |
 | S71 | SF Board of Supervisors — proposed legislation | [File 261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) | Version 1 introduced September 15, 2026; pending committee action with no final action or enactment shown on November 10. Title proposes a 10% annual combined limit on banked and capital-improvement increases for three years. It is not enacted; check its status. See [Rent Board notice](https://www.sf.gov/information--banked-rent-increases) for the proposed application to banked notices and capital-improvement petitions on or after September 15, 2026, and F46. |
+
+## Session addendum — 2026-11-11 (T49)
+
+Session `arena-04258d5c` directly re-opened S01, S02, S05, S06, S07, S08, S27, S53, S56, S71 and S73 on 2026-11-11 UTC. All load-bearing figures were unchanged (1.6% local rate, $59.00 fee, license rule, 24-month banking, 30/90-day notice, 8.8% AB 1482, File 261020 not enacted). One non-legal change: the Legistar record for File 261020 (S71) now lists 6 attachments (Comment Ltrs added since 2026-11-10); status and history rows are unchanged. Build date updated to 2026-11-11. Full record: `research/t49_reverify/README.md`.
