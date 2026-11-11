@@ -1,4 +1,4 @@
-# T51: independent targeted audit — 2026-11-11 UTC
+# T52: independent targeted audit — 2026-11-11 UTC
 
 This is a **targeted** recheck, not a claim that all 347 legal rows or all external URLs were freshly verified today. Prior work and its dates remain in the source ledger. Case-specific information is owner-provided, not an official record; the property address and private files were not available to independently establish coverage, current rent, anniversary, lease terms, notice history or license. The site keeps official-verification cells blank and flagged. The anonymized intake table retains the owner's dates and amounts as requested; its added official links provide legal context, not corroboration of those individual facts.
 

@@ -249,6 +249,21 @@ This is a focused update, not a claim that every historical source was rechecked
 
 Regression: the conditional Unit 2 13.1% calculation is arithmetic only, not a finding or recommendation; it now explicitly points to F46. 90-day notice is not proof of lawfulness. Earlier source and privacy flags remain open.
 
+## T49 — focused re-verification, 2026-11-11 (session `arena-3ac6c28d`)
+
+This is a focused update, not a claim that every historical source was rechecked today. Each source retains its individual verification date. Full quote ledger: `research/t49_reverify_2026-11-11/README.md`.
+
+| Source | Directly rechecked and outcome (2026-11-11) |
+| --- | --- |
+| [S01](https://www.sf.gov/learn-about-rent-increases-san-francisco), [S02](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) | 1.6% remains in effect March 1, 2026 through February 28, 2027; 1.4% and 1.7% prior years held; security-deposit interest 4.2% held; November 9 File 261020 notice still posted, not enacted; still no 3/1/27–2/28/28 rate (F27 open). |
+| [S05](https://www.sf.gov/information--banked-rent-increases) | 24-full-month banking, no compounding/prorating, license before annual/banked increase, 30/90-day notice held; November 9 proposed-cap notice still posted. |
+| [S06](https://www.sf.gov/learn-about-san-francisco-rental-laws), [S07](https://www.sf.gov/rent-board-housing-inventory), [S08](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory), [S53](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing) | June 13, 1979 cutoff, March 1 reporting, license-before-effective-date, "may be null and void" vs "not enforceable" wording difference (F25), §37.15(e) suspension rule all held; no new case-specific license or coverage facts established. |
+| [S16](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins), [S35](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV), [S36](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV) | §6.14/Costa-Hawkins conditions, 30/90-day notice thresholds, AB 1482 5%+CPI-or-10% cap and local-exemption rule all held. |
+| [S56](https://www.sf.gov/rent-board-fee) | Separate fee held: $59.00 per dwelling unit, $29.50 per guest unit (2026–27), March 1 deadline, 5% monthly to 15% max, June 1 referral, 50% ($29.50) recovery, December 14, 2026 exemption deadline. |
+| [S71](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) | Still Version 1, Pending Committee Action, no enactment; 4 history rows only. F46 remains proposed-only. |
+
+Case arithmetic re-checked with `Decimal`: $3,995 × 1.6% = $63.92 → $4,058.92; $3,150 × 1.6% = $50.40 → $3,200.40. No banked total computed. Stale PRs #18/#19/#25 assessed as superseded/conflicting — do not merge without rebase (see `research/t49_reverify_2026-11-11/README.md`). Gates: `build_site.py` clean; `validate_site.py` 119 checks, 0 errors; B87 kit 19/0; privacy 0 current-tree matches.
+
 ## T50 — focused re-verification, 2026-11-11 (session `arena-04258d5c`)
 
 This is a focused update, not a claim that every historical source was rechecked today. Each source retains its individual verification date. Full per-page record: `research/t50_reverify/README.md`.
