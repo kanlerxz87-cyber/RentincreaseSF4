@@ -612,3 +612,13 @@ This claim is committed and pushed before substantive work begins. No raw tenant
 | T49 | Check deployed Pages and critical current official rules, run existing build/validation/privacy gates, record findings and publication status | `done` | `arena-8e2f4ee9` | `research/t49_audit/`, `COORDINATION.md` | Spot check and sources in `research/t49_audit/README.md`; 119 site checks and 19 kit checks pass, zero current-tree fingerprint matches. Not a new line-by-line audit or external link check. Prior history privacy flag F44 remains open. Pages built at `89c7bb9`. |
 
 **T49 publication record:** [PR #35](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/35) merged 2026-11-11 02:10:06 UTC at `44efd1e828e5691aed96aa7ad03f36be6e7e5713`. GitHub Pages build 1358904378 completed successfully for that exact merge commit at 02:10:30 UTC, with no build error. The site was already live before this spot-check PR. F44 and other review flags remain open.
+
+### T50 publication record (session `arena-04258d5c`, 2026-11-11)
+
+| Item | Result | Evidence |
+| --- | --- | --- |
+| PR #36 — T50 fresh re-verification, DATE 2026-11-11, rebuild + validate | `MERGED` 2026-11-11T02:11:28Z, merge commit `5e195e1e70965570bf303cee8bf8745572700ed5` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/36 ; `gh pr view 36`; CI `validate` passed (7s) |
+| GitHub Pages deployment | `built` at `c237caafaf3644da80a38a8426e51c8d89efa97d` (includes PR #36 + PR #37 + PR #38); live site verified by direct fetch (license answer first, 1.6%, $59.00 fee, 82 sources, 65 flags) | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` -> `built`; live fetch of https://kanlerxz87-cyber.github.io/RentincreaseSF4/ |
+| Coordination | PR #35 (spot check) merged first; PR #37 (parallel T49 re-verification) dropped its generator edits in favour of PR #36 per the T47 precedent and kept its quote ledger docs-only; all three T49/T50 records kept verbatim | See T49 ID reconciliation + duplicate-work reconciliation above |
+
+This record is landed by a follow-up docs-only PR from the same branch, because a commit cannot cite its own merge commit. Flagged items (F44 and all others) remain published on the Flagged for Review page and do not block.
