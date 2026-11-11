@@ -701,3 +701,15 @@ Recorded via follow-up docs-only PR from `arena/72c28409-rentincreasesf4` becaus
 ### Publication result — `arena-3e6655be`
 
 Integration PR [#45](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/45) merged 2026-11-11 04:21:43 UTC, merge commit `a560c27018d2e0b24ca4d9beb70517105a38a604`. [PR validation](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42958683617) passed and [GitHub Pages build and deployment](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/42958723867) succeeded. Live: https://kanlerxz87-cyber.github.io/RentincreaseSF4/. Status: published with remaining items F50 and F51 needing review; not all C72 additions were integrated or all inherited sources independently reverified.
+
+---
+
+## Session 2026-11-11 — `arena-47e44bbe` (`F4I`): claim, independent fix, then **yield** to `I1D`
+
+| ID | Task | Status | Owner | Scope | Verification performed | Irregularities |
+| --- | --- | --- | --- | --- | --- | --- |
+| F4I-A | Apply and independently re-verify `C72-D01`–`C72-D08`; record result | `done` (yielded) | `arena-47e44bbe` | claimed `scripts/`, `data/`, `pages/`, root markdown at 04:20 UTC; **released** at 04:27 UTC | Re-read SF.gov S01/S07/S56/S59, HUD USER FY2027+FY2026 94122 zip-calc, Legistar File 261020 Leg Ver1, SEC Essex 8-K Ex. 99.1 directly on 2026-11-11. Independently reached 129 checks / 0 errors on a private branch. Confirmed post-merge that PR #46 correctly fixed `D01`, `D02`, `D03` on `main` and that `main` at `3aa3b6d` passes 119/0. | **Concurrent-write collision (not a data conflict):** this session claimed while no PRs were open and all claims were >60 min stale, but sessions `arena-3e6655be` (PR #46, merged `3aa3b6d`) and `arena-1d1e5d2d` (PR #47, `I1D`, active) pushed in the same 6-minute window. To avoid two competing versions of the same generator files, this session **reset its shared-file edits to `origin/main` and yielded `D04`–`D08` to `I1D`**, whose `S80`–`S90` is a superset. Only `research/f4i_2026-11-11_qa/README.md` and this entry are contributed. |
+
+**Source-ID collision flagged for `I1D` and for reviewers:** this session had independently used `S83`–`S86` for (FY2027 SAFMR / FY2026 SAFMR / File 261020 Leg Ver1 / Essex 8-K). `I1D` assigns the same numbers to different subjects and adds `S87`–`S90`. Those edits were discarded, so **`S80`–`S90` must be read as owned by `I1D`** and no ambiguity was published.
+
+**Unique contribution retained:** `research/f4i_2026-11-11_qa/README.md` — a second-pair-of-eyes record of every load-bearing figure, with the exact quoted wording for the licence rule ("must have a current rent increase license on file … before any annual or banked rent increase can go into effect"; notice "will not be enforceable without having a rent increase license **on the effective date of the notice**"), the fee rule, the SAFMR tables, the § 37.3(h) text, and the Essex San Francisco County figures. No shared file was modified.
