@@ -453,7 +453,7 @@
     "title": "CIV 1942.5 (retaliation)",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV",
     "category": "State",
-    "statement": "Section 1942.5 prohibits retaliatory rent increases in specified circumstances, including protected tenantability complaints within 180 days when conditions in subdivision (a) are met, and separately bars retaliation for lawful tenant organizing or exercise of rights. See statutory conditions and remedies. Rechecked 2026-11-11."
+    "statement": "Subdivision (a): if the lessee is not in default as to rent and has exercised rights under this chapter or complained to an appropriate agency about tenantability, the lessor may not recover possession, cause the lessee to quit involuntarily, increase the rent, or decrease services within 180 days of the listed triggering events (good-faith repair notice or oral complaint, written or recorded agency complaint, inspection or citation, filing of a tenantability proceeding, or an adverse judgment or award); a lessee may invoke subdivision (a) only once in any 12-month period (subd. (b)). Subdivision (d) separately bars rent increases, service decreases, eviction or threats for lawful organizing or peaceable exercise of rights. Subdivision (g) permits the acts if the notice or pleading states the ground in good faith. Subdivision (h) gives actual damages plus $100-$2,000 punitive damages per retaliatory act for fraud, oppression or malice; subdivision (i) requires the court to award reasonable attorney fees to the prevailing party if either party requests fees when the action is initiated. Operative October 1, 2021. Re-verified 2026-11-11 from the statute text."
   },
   {
     "id": "S58",
@@ -469,7 +469,7 @@
     "title": "Partial Exemption for Newly Constructed Rental Units",
     "url": "https://www.sf.gov/information--partial-exemption-newly-constructed-rental-units",
     "category": "Local",
-    "statement": "New-construction partial exemption requires a first certificate of occupancy after June 13, 1979 and no prior residential use; just-cause protections and Rent Board fee generally still apply. Rechecked 2026-11-11."
+    "statement": "New-construction partial exemption: a unit whose first Certificate of Occupancy issued after June 13, 1979, and where there was no residential use of the unit before that Certificate, is exempt from the Ordinance rent increase limitations only. Just-cause eviction protections were extended to these units effective January 20, 2020, and the annual Rent Board fee is collected for them. A live/work unit has the additional requirement that there was no residential occupancy in the building between June 13, 1979 and the Certificate. These units may still be covered by the California Tenant Protection Act. Re-verified 2026-11-11."
   },
   {
     "id": "S60",
@@ -485,7 +485,7 @@
     "title": "Evictions in San Francisco",
     "url": "https://www.sf.gov/evictions-san-francisco",
     "category": "Local",
-    "statement": "Most residential tenants have just-cause eviction protection. Tenants receiving unlawful detainer papers can contact the Eviction Defense Collaborative for free legal help; the Rent Board provides referrals and counseling. Rechecked 2026-11-11."
+    "statement": "Most residential tenants have just-cause eviction protection, including in buildings built after 1979. A landlord must follow the legal process (written notice, unlawful detainer lawsuit, court judgment, Sheriff removal) and may not lock out, remove possessions, shut off utilities or harass. The Rent Ordinance generally allows tenants to replace departing roommates or add occupants even where a written lease prohibits it. A tenant who receives an Unlawful Detainer should contact the Eviction Defense Collaborative at 415-659-9184 for free legal help; the Rent Board (415-252-4600) gives general information and a referral listing. Re-verified 2026-11-11."
   },
   {
     "id": "S62",
@@ -654,5 +654,45 @@
     "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
     "category": "Local",
     "statement": "Direct fetch_page 2026-11-10: a tenant may petition to defer an annual rent increase when requested repairs required by law were not made; 'The petition must be filed no later than 60 days following the tenant's receipt of the rent increase notice'; the tenant pays the disputed increase until the ALJ decision and is refunded if the petition is granted; 'The tenant's anniversary date is not affected by the deferral of the increase.'"
+  },
+  {
+    "id": "S83",
+    "agency": "HUD USER",
+    "title": "FY 2027 Small Area FMR calculation summary for ZIP 94122",
+    "url": "https://www.huduser.gov/datasets/fmr/fmr2027/zip-calc?year=2027&zip=94122&cbsasub=METRO41860MM7360",
+    "category": "Federal",
+    "statement": "Direct fetch_page 2026-11-11: official FY 2027 SAFMRs for ZIP 94122 are $2,370 (efficiency), $2,770 (one-bedroom), $3,410 (two-bedroom), $4,460 (three-bedroom) and $5,020 (four-bedroom), calculated from a $2,622 ZIP base rent. SAFMRs are 40th-percentile gross-rent benchmarks used for voucher payment standards, not caps on private rents. Re-verified 2026-11-11."
+  },
+  {
+    "id": "S84",
+    "agency": "HUD USER",
+    "title": "FY 2026 Small Area FMR calculation summary for ZIP 94122",
+    "url": "https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2026_code/2026zip_code_calc.odn?zcta=94122&metro_code=METRO41860MM7360&year=2026",
+    "category": "Federal",
+    "statement": "Direct fetch_page 2026-11-11: official FY 2026 SAFMRs for ZIP 94122 are $2,280 (efficiency), $2,730 (one-bedroom), $3,310 (two-bedroom), $4,230 (three-bedroom) and $4,380 (four-bedroom), calculated from a $2,512 ZIP base rent. Historical benchmark; not a rent cap. Re-verified 2026-11-11."
+  },
+  {
+    "id": "S85",
+    "agency": "SEC - Essex Property Trust",
+    "title": "Form 8-K Exhibit 99.1, Q4 2025 earnings release and supplemental data",
+    "url": "https://www.sec.gov/Archives/edgar/data/920522/000114036126003709/ef20064474_ex99-1.htm",
+    "category": "Corporate filing",
+    "statement": "Direct fetch_page 2026-11-11, same-property revenue results by county (page S-9): San Francisco County shows 1,356 apartment homes, 2.4% of actual NOI, average monthly rental rate $2,966 in Q4 2025 versus $2,897 in Q4 2024 (+2.4%), financial occupancy 95.5% versus 96.1% (-0.6%), gross revenues $12,580 thousand versus $12,336 thousand (+2.0%), and sequential gross revenues -1.2% versus Q3 2025. Footnote 7 states FY2025 blended same-property net effective rate growth was 2.5% portfolio-wide. The filing does not state how individual rents were set or whether any unit is rent-controlled."
+  },
+  {
+    "id": "S86",
+    "agency": "SEC - Equity Residential",
+    "title": "Form 10-K for fiscal year ended December 31, 2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/931182/000119312526051433/eqr-20251231.htm",
+    "category": "Corporate filing",
+    "statement": "Direct fetch_page 2026-11-11 confirmed the FY2025 Form 10-K is filed and retrievable. No San Francisco-specific figure is published on this site from this filing; it is recorded only to show that the earlier SEC search dead end was a search limitation, not an absence of official filings. No value is inferred from it."
+  },
+  {
+    "id": "S87",
+    "agency": "San Francisco Board of Supervisors (Legistar)",
+    "title": "File 261020 - Leg Ver1, draft ordinance text",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E",
+    "category": "Local - proposed legislation",
+    "statement": "Direct fetch_page 2026-11-11: the draft attachment shows proposed new Sec. 37.3(h) limiting combined banked increases under Sec. 37.3(a)(2) and capital-improvement increases under Sec. 37.3(a)(3) to a total of 10% of the lowest base rent in effect at any time in the 12 months before the increase takes effect; it applies to banked increases noticed, and capital-improvement pass-throughs based on petitions filed, on or after September 15, 2026, remains in effect until December 31, 2029 unless extended, and lets landlords accumulate the excess for increases effective on or after January 1, 2030. The draft is NOT enacted; the Legistar record status is Pending Committee Action. It does not state how the 10% interacts with the separate annual allowable increase."
   }
 ]

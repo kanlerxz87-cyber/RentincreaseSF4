@@ -76,6 +76,19 @@
           "notes": "FY2027 FMR.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "MKT-08",
+          "label": "94122 FY2027 Small Area FMR",
+          "value": "$2,370 / $2,770 / $3,410 / $4,460 / $5,020",
+          "status": "verified",
+          "source_ids": [
+            "S83",
+            "S44"
+          ],
+          "notes": "Official HUD ZIP calculation page, re-verified 2026-11-11. Efficiency / 1BR / 2BR / 3BR / 4BR; 40th-percentile gross-rent benchmark, not a cap.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     },
@@ -105,29 +118,14 @@
         {
           "id": "MKT-07",
           "label": "94122 FY2026 Small Area FMR",
-          "value": "",
-          "status": "needs review",
+          "value": "$2,280 / $2,730 / $3,310 / $4,230 / $4,380",
+          "status": "verified",
           "source_ids": [
-            "S44",
-            "S46",
-            "S51"
+            "S84",
+            "S44"
           ],
-          "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07",
-          "source_note": ""
-        },
-        {
-          "id": "MKT-08",
-          "label": "94122 FY2027 Small Area FMR",
-          "value": "",
-          "status": "needs review",
-          "source_ids": [
-            "S44",
-            "S50",
-            "S52"
-          ],
-          "notes": "Official ZIP row not obtained; blank.",
-          "flag_id": "T03-F07",
+          "notes": "Official HUD ZIP calculation page, re-verified 2026-11-11. Efficiency / 1BR / 2BR / 3BR / 4BR; historical benchmark, not a cap.",
+          "flag_id": "",
           "source_note": ""
         },
         {
@@ -141,6 +139,20 @@
           ],
           "notes": "Not a legal basis for a private rent increase.",
           "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "MKT-10",
+          "label": "Use of the 94122 SAFMR for these units",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S83",
+            "S84",
+            "S43"
+          ],
+          "notes": "Comparing a SAFMR with a contract rent would need each unit's bedroom count and utility treatment, which are not published; no comparison, percentage or 'market rent' figure is asserted.",
+          "flag_id": "F52",
           "source_note": ""
         }
       ]

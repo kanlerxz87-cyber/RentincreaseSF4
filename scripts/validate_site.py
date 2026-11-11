@@ -101,6 +101,37 @@ def main():
     check("every source has id, title, agency, category and statement",
           all(all(k in s for k in ("id", "title", "agency", "category", "statement", "url")) for s in sources_list))
 
+    # The hand-maintained SOURCES.md ledger must stay in sync with the generator.
+    sources_md = (ROOT / "SOURCES.md").read_text(encoding="utf-8")
+    missing_ledger = sorted(sid for sid in source_map if "| {} |".format(sid) not in sources_md)
+    check("SOURCES.md lists every catalogued source", not missing_ledger, "missing: " + ", ".join(missing_ledger[:8]))
+    check("SOURCES.md has no stale hand-typed source total",
+          "source count is 70," not in sources_md and str(len(source_map)) in sources_md,
+          "{} sources".format(len(source_map)))
+
+    row_index = {}
+    for _slug, _page in pages.items():
+        for _sec in _page["sections"]:
+            for _r in _sec["rows"]:
+                row_index[_r["id"]] = _r
+    safmr_rows = [row_index.get(rid) for rid in ("FED-07", "MKT-07", "MKT-08")]
+    check("94122 SAFMR rows publish the official HUD values with official sources",
+          all(r and r["status"] == "verified" and r["value"] for r in safmr_rows)
+          and "$3,410" in row_index["MKT-08"]["value"] and "$3,310" in row_index["MKT-07"]["value"]
+          and "$2,370" in row_index["FED-07"]["value"] and "$2,280" in row_index["FED-07"]["value"]
+          and all(("S83" in row_index["MKT-08"]["source_ids"]) or ("S84" in row_index["MKT-08"]["source_ids"]) for _ in [0]),
+          "FY2027 and FY2026 ZIP figures present")
+    f52 = [f for f in flags if f["id"] == "F52"]
+    check("94122 SAFMR limitation flag is published and cites HUD",
+          bool(f52) and {"S83", "S84"} <= set(f52[0]["source_ids"]),
+          "F52 cites S83 and S84")
+    check("resolved audit gaps name their official sources",
+          all(sid in [f for f in flags if f["id"] == fid][0]["source_ids"] for fid, sid in (("F13", "S83"), ("F15", "S85"), ("F47", "S87"))),
+          "F13->S83, F15->S85, F47->S87")
+    check("San Francisco County corporate benchmark is published from the SEC filing",
+          "2,966" in row_index.get("CORP-07", {}).get("value", "") and "S85" in row_index.get("CORP-07", {}).get("source_ids", []),
+          "Essex Q4 2025 SF County row")
+
     row_count = 0
     needs_review_count = 0
     owner_rows = []
