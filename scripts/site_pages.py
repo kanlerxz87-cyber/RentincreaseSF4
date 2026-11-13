@@ -482,6 +482,11 @@ PAGES = {
                 row("Q-21", "Do the tenants have to keep accepting increases, or can they challenge each one?", "They can challenge. A tenant may file an unlawful-rent-increase petition with no filing fee and no time limit, and the matter can go to an Administrative Law Judge. Tenant-side free legal help is documented for eviction proceedings (Eviction Defense Collaborative line and Tenant Right to Counsel), not as a general pre-approval service for rent increases.", "verified", ["S25", "S61", "S30"], "No official source offers approval of an increase before it is served."),
                 row("Q-10", "Is any increase guaranteed lawful or lawsuit-proof?", "No. No attorney approval or guarantee of no complaint/inquiry/lawsuit is claimed.", "analysis", ["S23", "S24", "S42"], "Conservative compliance checklist only."),
             ]},
+            {"title": "What is still missing, and how to find it", "columns": COLUMNS, "rows": [
+                row("Q-22", "Which open questions can an official record answer, and which only you can answer?", "The Suggestions & Review page publishes a missing-information register (SUG-F1) that names, for every open item, what is missing, which official source would resolve it, how to obtain it, who must supply it and which decision it blocks, plus a separate list of the facts only the owner can supply (SUG-F2): the last original occupant in each unit, the date occupancy began, whether a 6.14 notice was served, each unit's anniversary date, the full lease and notice history, square footage and bedroom and bathroom counts, whether either unit is an in-law unit, whether the owner occupies one unit, and whether each tenant was in occupancy on November 1 for the fee-recovery test.", "verified", ["S07", "S16", "S56", "S24", "S55", "S32"], "Published as proposals for review, not as a determination about either unit."),
+                row("Q-23", "How do I put the open questions to the Rent Board efficiently?", "Counseling is free, available in Spanish, Cantonese and Mandarin with interpretation for other languages, and cannot give legal advice, so the questions have to be written down first; calls are generally limited to 5 minutes. The Suggestions & Review page publishes a printable call script (SUG-F3) containing only the open questions, with the counselor's published phone number and office hours, and a pre-decision gate sequence (SUG-F4) listing the questions to answer before any notice is dated.", "verified", ["S24", "S07", "S55", "S16"], "The Rent Board states it will tell you when a question is one that should be answered by a lawyer."),
+                row("Q-24", "Where do the proposed improvements to this site live?", "On the Suggestions & Review page (`pages/suggestions.html`): 27 proposals in four groups - compliance gates, evidence and defensibility, discovering the missing information, and internal site quality. Every row carries the official rule that motivates it, an effort and impact estimate, and a Decision cell starting at Review, with a blank review checklist for recording Accept, Reject or Defer before anything is implemented.", "verified", ["S68"], "Project-record source: the proposals are about this site, and no legal finding rests on them."),
+            ]},
         ],
     },
     "analysis": {
@@ -593,6 +598,7 @@ def sug(id, title, why, source_ids, effort, status="open for review", notes=""):
 SUGGESTIONS = {
     "title": "Suggestions - review before implementing",
     "description": "A dedicated review queue of proposed improvements to this site and to the rent-increase decision process. Each suggestion states what it changes, why it helps, the official basis, the effort, and its review status so a reviewer can choose the best path before anything is implemented.",
+    "intro": "How to read the links in this table. Every row carries at least one link, and every link opens the source page for manual review. Most rows cite the San Francisco Rent Board, the Rent Ordinance, California statute, the federal regulations or the SEC, and the link is there so a reviewer can check the quoted rule, dollar figure or date against the page itself rather than against this summary. A small number of rows are marked 'Internal site-design proposal': they are proposals about how this research site is built and presented, they make no claim about the law, and they therefore cite the project record - this repository and its published build - instead of an official rule. No official source is attached to such a row, because attaching one that does not support it would be false. A proposal row is never a finding: nothing here is applied until a reviewer records a decision, and no row asserts that any rent increase is lawful, approved or free of challenge.",
     "sections": [
         {"title": "How to use this page (the review process)", "columns": ["Step", "What happens", "Owner of the decision", "Record kept"], "rows": [
             {"id": "SUG-P1", "label": "1. Read the proposal", "value": "Each suggestion below states the exact change, the decision it improves, and the official source that motivates it. Nothing is implemented by being listed here.", "status": "analysis", "source_ids": ["S01"], "notes": "Honest label: this is a proposal queue, not a change log.", "flag_id": ""},
@@ -630,6 +636,34 @@ SUGGESTIONS = {
 }
 
 PAGES["suggestions"] = SUGGESTIONS
+
+# ---------------------------------------------------------------------------
+# T54 (2026-11-13): additional suggestion groups contributed by session
+# `arena-87a91aec`, appended to the Suggestions review queue published by
+# session `arena-415e54ea` (PRs #51 and #53). Nothing from either session is
+# discarded: the concurrent session's SUG-P*, SUG-A*, SUG-B* and SUG-C* rows
+# stay first on the page, and the groups below are added after them. Where the
+# two overlap, the row's notes name the related row instead of repeating it.
+from site_suggestions import T54_SECTIONS, checklist_rows  # noqa: E402
+
+_T54_COLUMNS = ["ID", "Suggestion", "Why it helps the decision", "Evidence / official source", "Effort", "Review status"]
+for _sec in T54_SECTIONS:
+    SUGGESTIONS["sections"].append({
+        "title": _sec["title"],
+        "intro": _sec["intro"],
+        "columns": list(_T54_COLUMNS),
+        "rows": _sec["rows"],
+    })
+
+# The review checklist: one blank decision row per T54 proposal, so a reviewer
+# can record Accept / Reject / Defer before anything is implemented.
+SUGGESTIONS["sections"].append({
+    "title": "H. Review checklist for the D-G proposals (reviewer to complete)",
+    "intro": "One row per proposal above. The Decision, Reviewer, Date and Review note cells are intentionally blank - they are the reviewer's to complete. A blank cell here means 'not yet decided', which is different from a blank cell on a finding page, where a blank means 'no official source confirms the value'.",
+    "columns": ["ID", "Suggestion", "Decision", "Reviewer", "Date", "Review note"],
+    "rows": checklist_rows(),
+})
+
 
 # ---------------------------------------------------------------------------
 # T56 (2026-11-13): Decision Readiness register. One row per question that must
