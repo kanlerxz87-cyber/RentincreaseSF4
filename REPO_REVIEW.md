@@ -93,3 +93,4 @@ Base: `main` at `f810ee5` (PR #50). Scope: line-by-line review of the current tr
 | sf.gov Housing Inventory page (S07) | Links to an Assessor URL that redirects to the Planning Property Information Map. | Direct `fetch_page` 2026-11-13 | F55. |
 | Legistar Ordinance 265-20 copy (S88) | Marked-up master report (strike-throughs and redlines), not clean codified text. | Direct `fetch_page` 2026-11-13 | F54. |
 | Premise in the owner request | The license requirement is described as a "2023 law". Ordinance 265-20 is effective January 18, 2021; March 1, 2023 is the reporting start for buildings under 10 units. | SF.gov news (S89) | F53. |
+| `research/c72_2026-11-11_audit/validate_c72.py` | The page-count assertion was hard-coded to 21 HTML pages; the new Suggestions & Decisions page makes 22. Updated the expected count only (no check removed). | `python3 research/c72_2026-11-11_audit/validate_c72.py` → 19/0 | None (maintenance). |

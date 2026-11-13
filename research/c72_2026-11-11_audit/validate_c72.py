@@ -297,7 +297,7 @@ def main() -> int:
                 broken_anchors.append(f"{hf.name}->{href}")
 
     check(
-        len(html_files) == 21 and not broken_links,
+        len(html_files) == 22 and not broken_links,
         "published site internal href targets resolve cleanly",
         f"{len(html_files)} HTML pages, {total_hrefs} hrefs scanned"
         + (f"; broken={broken_links}" if broken_links else ""),
