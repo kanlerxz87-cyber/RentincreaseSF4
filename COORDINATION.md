@@ -972,3 +972,36 @@ do not re-tighten the c72 page-count check, and re-pull `main` immediately befor
 
 **Record:** `research/t54_suggestions/INTEGRATION_6f65a2f5.md` (verification detail, verbatim quotations, the re-check
 table and both merge rounds). It sits beside `arena-87a91aec`'s `README.md` in the same folder rather than over it.
+
+## Session `arena-3b66c553` (branch `arena/3b66c553-rentincreasesf4`) — claim, 2026-11-13 UTC
+
+**Claim (T58, in progress).** Independent re-verification of the forefront answers and the privacy/history status, plus a correction to flag F56. Base: `main` at `ad20650` (PR #58). No other live claim exists: `git ls-remote` shows only `main`, `gh pr list --state open` is empty, and the last merged PR is #58.
+
+**File scope (this session only):** `COORDINATION.md` (this section only), `scripts/site_flags.py` (F56 text only), `REPO_REVIEW.md` (one row, the git-history line), `research/privacy/FULL_HISTORY_SCAN_2026-11-13.md` (new), and regenerated outputs of `scripts/build_site.py` (`data/`, `pages/`, `index.html`, `FLAGGED_FOR_REVIEW.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`), which must differ only where F56 changes.
+
+**Coordination note.** The board's `T`-numbering was reused by several sessions. This session's row is `T58` and does not reuse an earlier number. The branch name is fixed by Arena, so `session-<id>/<task>` branches are not used.
+
+### T58 record — status `done` (session `arena-3b66c553`, 2026-11-13 UTC)
+
+**Sources opened directly on 2026-11-13 (official SF.gov / Rent Board pages, `fetch_page`):**
+
+| Source | What it was used to check | Result |
+| --- | --- | --- |
+| <https://www.sf.gov/learn-about-rent-increases-san-francisco> | 1.6% allowable increase for 3/1/26–2/28/27; 30-day notice, 90-day notice above 10%, +5 days if mailed; anniversary rule; license required before annual/banked increase; additional-occupant rule | **Held.** Notice for File 261020 "Posted November 9, 2026", stated as not enacted. |
+| <https://www.sf.gov/information--sec-3715-reporting-obligations-licensing> | Sec. 37.15 text: reporting duty, timing (7/1/22; 3/1/23 for condos and 1–9 unit buildings), license under §37.3(a)(1)–(2), suspension and no-pay-during-suspension in (e); "Added by Ord. No. 265-20, effective January 18, 2021" | **Held** (verbatim). |
+| <https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent> | Rule 13.14: unlicensed increase "null and void"; effective date, not service date, controls; banking preserved; March 1, 2023 for condos and buildings under ten units | **Held** (verbatim). |
+| <https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit> | Allowable rates 1.6% (2026–27), 1.4% (2025–26), 1.7% (2024–25) | **Held.** Full historical series is on Form 571 (already cited). |
+| <https://www.sf.gov/rent-board-fee> | Rent Board Fee $59.00 per dwelling unit for 2026–27; due March 1; 50% recoverable from the tenant in occupancy as of November 1 | **Held.** |
+| <https://www.sf.gov/information--banked-rent-increases> | Skipped increase banks only after 24 full months with no increase; no compounding or proration; no expiry; banking since April 1, 1982; worked example | **Held.** Supports CALC-08 as a conditional illustration only. |
+
+**Arithmetic re-checked (Python `Decimal`):** Unit 1 $3,995 × 1.6% = $63.92 → $4,058.92; Unit 2 $3,150 × 1.6% = $50.40 → $3,200.40; $3,150 × 13.1% = $412.65 → $3,562.65 (conditional, if no increase was ever imposed since June 1, 2019). Notice-date arithmetic for an effective date of February 1, 2027: 30 days → served by January 2, 2027; mailed (35 days) → by December 28, 2026. All match the published CALC rows.
+
+**Answers re-confirmed (no change needed):** (1) the "inform the Rent Board" requirement is **local** (SF Admin. Code §37.15, Ord. 265-20), not a California statute; the 2023 date is the local operative date for buildings of 1–9 units; (2) an individual owner must report and hold a license for a covered annual or banked increase, with the legal test being the **effective date** (Rule 13.14); (3) the one-unit vs. both-unit question is answered by the published discrimination section, not by a legal conclusion.
+
+**Correction made (F56).** The published count of raw-identifier commits was **12 commits dated 2026-11-06 to 2026-11-11**. A complete-mirror re-scan (258 commits, 43 refs) found **14 commits dated 2026-11-06 to 2026-11-08**, all touching `data/validation_report.json`, with the tokens in only one commit's added lines (`0ede010`). The earlier figure could not be reproduced. Corrected in `scripts/site_flags.py` (F56), `data/flags.json`, `pages/flagged.html` and `REPO_REVIEW.md`. Method and commit list: `research/privacy/FULL_HISTORY_SCAN_2026-11-13.md`. The older `research/s23_2026-11-13/README.md` row is left as a historical record. This is a historical entry, not an edit to it.
+
+**Still open, owner decision (not done by an agent):** F44 / F51 / F56 remediation. Two remote branch tips still carry the tokens (`arena/73f5f1a2-rentincreasesf4`, `arena/fce57ebb-rentincreasesf4`); the repository is public. A history rewrite, force-push, branch deletion or GitHub Support request needs the owner's approval.
+
+**Gates on this branch:** `scripts/build_site.py` clean (24 data files, 22 page HTML files); `scripts/validate_site.py` **162 checks, 0 errors**; `research/b87_notice_kit/validate_kit.py` 19/0; `research/c72_2026-11-11_audit/validate_c72.py` 19/0; no raw identifier in the working tree (checked on the tree and on every ref).
+
+**PR and merge.** Recorded in the follow-up commit below (a record cannot cite its own merge commit).
