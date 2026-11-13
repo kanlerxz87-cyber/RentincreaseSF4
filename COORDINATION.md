@@ -764,3 +764,18 @@ Local baseline before any edit: `python3 scripts/validate_site.py` → **125 che
 | Gates at commit | `validate_site.py` **145 checks, 0 errors** (91 sources, 71 flags, 417 rows); `validate_kit.py` **19/0**; `validate_c72.py` **19/0** (23 pages, 2,185 hrefs, 0 broken, 0 anchors broken); privacy check clean; local preview server returned HTTP 200 for index and every new page. |
 | Irregularities | **F53** published. Two validator assumptions were relaxed rather than worked around: the C72 crawl asserted exactly 21 HTML pages (now a floor of 21), and one date gate asserted an exact `DATE` (now a floor of 2026-11-10). Both changes are in the diff and are not hides of a failure. |
 | Not changed | No historical git rewrite attempted (F44/F51 remain open and owner-actionable). Stale PRs #18/#19/#25/#47/#48 left open and unmerged; `main` already supersedes them. |
+
+### T57 — PR, merge and GitHub Pages deployment result (session `arena-415e54ea`, 2026-11-13 UTC)
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR [#51](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/51) — T54/T55/T56: state-vs-local law answer, Suggestions review queue, Decision Readiness register | **MERGED** `2026-11-13T06:56:20Z`; merge commit `e9174fb533687566440705dc32318edc4bad7a40` | `gh pr view 51`; `gh pr merge 51 --merge` |
+| CI `validate` on the PR | **PASSED** (7s) | [run 43382091180](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43382091180) |
+| CI `validate` on `main` | **PASSED** for `e9174fb` | `gh run list --branch main` |
+| GitHub Pages build and deployment | **SUCCESS** for `e9174fb`; Pages API `status: built`, `commit: e9174fb…`, `error: null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`; [Pages run](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43382091180) |
+| Deployed-tree spot check | The merge commit on `main` contains the state-vs-local hero on `index.html`, `LAW-01`/`265-20`/`March 1, 2023` on `pages/local.html`, `SUG-A1`/`SUG-C6` on `pages/suggestions.html`, `DR-G1`/`DR-P4` on `pages/decision.html`; all 22 category pages present | `git show origin/main:<path>` at `e9174fb` |
+| Local gate at merge | `validate_site.py` **145 checks, 0 errors** (91 sources, 71 flags, 423 rows); `validate_kit.py` **19/0**; `validate_c72.py` **19/0**; rebuild reproducible (`git status` clean after `build_site.py`) | `data/validation_report.json` |
+
+**Live site:** https://kanlerxz87-cyber.github.io/RentincreaseSF4/
+
+**Limits stated honestly.** The sandbox's outbound allowlist does not include `kanlerxz87-cyber.github.io`, so the live site could not be fetched over HTTP from this session; deployment was confirmed through the Pages build API, the successful deployment run, and a direct read of the deployed commit's tree. Flags **F44** and **F51** (historical identifier exposure in public git history) remain **open and owner-actionable**; this session did not and cannot rewrite published history. Stale PRs #18, #19, #25, #47 and #48 remain open and unmerged.
