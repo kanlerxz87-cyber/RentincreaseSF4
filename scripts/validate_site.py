@@ -499,6 +499,63 @@ def main():
           and "SB 567" in D.SOURCES["S88"]["title"]
           and official_domain(D.SOURCES["S89"]["url"]) and "1946.2" in D.SOURCES["S89"]["title"])
 
+    # --- Checks added 2026-11-13 by session arena-6f65a2f5 (state-backstop layer,
+    #     Rule 13.14 verbatim, currency re-check, Suggestions decision record) ---
+    check("Civil Code 1947.7 is catalogued as an official source",
+          D.SOURCES.get("S93", {}).get("agency") == "California Legislature"
+          and "1947.7" in D.SOURCES["S93"]["title"]
+          and official_domain(D.SOURCES["S93"]["url"]),
+          "S93")
+    loc_rows = [r for sec in pages.get("local", {}).get("sections", []) for r in sec["rows"]]
+    st_rows = [r for sec in pages.get("state", {}).get("sections", []) for r in sec["rows"]]
+    law09 = [r for r in loc_rows if r["id"] == "LAW-09"]
+    check("the local page states the 1947.7 question without answering it by inference",
+          bool(law09) and "registration of rents" in law09[0]["value"]
+          and "37.15(d)" in law09[0]["value"] and "F59" in (law09[0]["notes"] + law09[0]["flag_id"]),
+          "LAW-09")
+    st18 = [r for r in st_rows if r["id"] == "ST-18"]
+    st19 = [r for r in st_rows if r["id"] == "ST-19"]
+    check("the state page carries section 1947.7 as read, and what it does not do",
+          bool(st18) and bool(st19) and "restored prospectively" in st18[0]["value"]
+          and "does not create or replace a Rent Increase License" in st19[0]["value"],
+          "ST-18 / ST-19")
+    q_rows = [r for sec in pages.get("questions", {}).get("sections", []) for r in sec["rows"]]
+    q22 = [r for r in q_rows if r["id"] == "Q-22"]
+    check("the unresolved 1947.7 applicability question is published blank with its flag and a discovery route",
+          bool(q22) and q22[0]["value"] == "" and q22[0]["flag_id"] == "F59"
+          and "attorney" in q22[0]["notes"].lower(),
+          "Q-22")
+    f25 = [f for f in flags if f["id"] == "F25"][0]
+    check("F25 was narrowed with the verbatim Rule 13.14 wording rather than closed",
+          "null and void" in f25["detail"] and "S73" in f25["source_ids"] and f25["status"] == "needs review",
+          "F25 detail cites the rule text; status still needs review")
+    sum_rows = [r for sec in pages.get("summary", {}).get("sections", []) for r in sec["rows"]]
+    lic11 = [r for r in sum_rows if r["id"] == "LIC-11"]
+    check("the summary quotes Rule 13.14 verbatim instead of paraphrasing the softer pages",
+          bool(lic11) and "purporting to be effective while the landlord is unlicensed" in lic11[0]["value"]
+          and "March 1, 2023" in lic11[0]["value"],
+          "LIC-11")
+    sug_rows2 = [r for sec in pages.get("suggestions", {}).get("sections", []) for r in sec["rows"]]
+    d_rows = [r for r in sug_rows2 if r["id"].startswith("SUG-D")]
+    check("the suggestions board carries an owner decision record of eight blank rows, all flagged",
+          len(d_rows) == 8 and all(r["value"] == "" and r["flag_id"] == "F60" and r["status"] == "needs review" for r in d_rows)
+          and any(r["id"] == "SUG-P6" for r in sug_rows2),
+          "{} decision rows".format(len(d_rows)))
+    check("the landing page routes a reviewer to the suggestions board",
+          'href="pages/suggestions.html"' in (ROOT / "index.html").read_text(encoding="utf-8"))
+    check("pending-legislation rows carry the 2026-11-13 currency re-check",
+          any(r["id"] == "RATE-14" and "2026-11-13" in r["label"] for r in [x for sec in pages.get("rates", {}).get("sections", []) for x in sec["rows"]])
+          and "2026-11-13" in [f for f in flags if f["id"] == "F46"][0]["detail"],
+          "RATE-14 and F46 re-dated")
+    check("the source ledger prose total matches the catalogued count",
+          "{} catalogued sources".format(len(source_map)) in sources_md,
+          "{} catalogued sources expected in SOURCES.md".format(len(source_map)))
+    exec_md = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("the executive summary carries the state-backstop paragraph and the suggestions pointer",
+          "1947.7" in exec_md and "Review the options and record your choice first" in exec_md
+          and "SUG-D1" in exec_md,
+          "both sections present")
+
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {
         "sources": len(source_map),

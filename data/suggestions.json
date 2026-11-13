@@ -66,6 +66,17 @@
           ],
           "notes": "Generated files are reproducible; CI re-runs the build and fails on drift.",
           "flag_id": ""
+        },
+        {
+          "id": "SUG-P6",
+          "label": "6. Record the choice in section D",
+          "value": "Section D is the decision record. Every row there is deliberately blank: this page lists options, evidence and effort, and does not choose for you. A choice written down with a date is what stops a later review re-opening an item that was already settled.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Added 2026-11-13 so the review has somewhere to land; nothing on this page is implemented by being listed.",
+          "flag_id": ""
         }
       ]
     },
@@ -402,6 +413,124 @@
           "review_status": "open for review",
           "notes": "Maps to F46 / REQ-25.",
           "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "D. Owner decision record - blank until you choose (the site takes no position)",
+      "columns": [
+        "Decision point",
+        "Your decision - blank until the owner records it",
+        "Status",
+        "Official source(s)",
+        "What is being decided, and what to write in the decision column"
+      ],
+      "rows": [
+        {
+          "id": "SUG-D1",
+          "label": "Which annual rate to apply",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S02"
+          ],
+          "notes": "Decides SUG-C4 and every amount row on the site: the rate in force on the increase's EFFECTIVE date (1.6% for 3/1/26-2/28/27) versus waiting for the next published rate. The 2027-28 figure is not yet published (F27), so it cannot be planned around. Record here: the effective date you chose, the rate you used, and the date you confirmed it on the official page.",
+          "flag_id": "F60",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-D2",
+          "label": "One unit or both",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S42",
+            "S01",
+            "S38"
+          ],
+          "notes": "Decides SUG-C1 and SUG-C2. Options: both units on their own anniversary dates under one written neutral rule; Unit 1 only; Unit 2 only; neither this cycle. No official source requires both and none forbids one - the exposure is in the reason and the record, not the count. Record here: the choice, and the neutral rule applied to reach it, written before any notice goes out.",
+          "flag_id": "F60",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-D3",
+          "label": "Whether to pursue a banked increase at all",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S05",
+            "S01"
+          ],
+          "notes": "Decides SUG-A3. Options: no banked claim (1.6% only, the documented default); reconstruct the history from leases, notices and payment records and bank what is provable; or stop and get advice first. No banked amount is asserted for either unit on this site (F30). Record here: the decision, and if a banked claim is pursued, the documents relied on and who checked them.",
+          "flag_id": "F60",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-D4",
+          "label": "Whether to spend the attorney hour before serving",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S35",
+            "S01"
+          ],
+          "notes": "Decides SUG-A6. Options: review the completed Notice Worksheet with counsel before service; review afterwards; or rely on self-review. This is the one item on the board a third party can close for you. Record here: yes or no, the date, and the questions asked.",
+          "flag_id": "F60",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-D5",
+          "label": "Which site improvements to build",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S68",
+            "S69"
+          ],
+          "notes": "Decides the SUG-B group (one-page decision sheet, stale-source re-check, bidirectional flag links, change log, glossary, privacy guard). Site-only rows can be accepted by the owner or by the next build session; accepting one changes no legal obligation. Record here: the IDs you accept, in priority order, and who should build them.",
+          "flag_id": "F60",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-D6",
+          "label": "Privacy remediation of the repository history",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Decides SUG-B6 and flags F44/F51. Raw tenant identifiers remain reachable in commits and closed pull-request diffs on this public repository. Options: rewrite history and force-push; delete and re-create the repository; close the stale pull requests and accept the exposure; or take the repository private. Only the owner can do any of these. Record here: the choice and the date it was done, so the flags can be closed against an action instead of left open indefinitely.",
+          "flag_id": "F60",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-D7",
+          "label": "Whether to use a petition route above 1.6%",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S09",
+            "S12",
+            "S08"
+          ],
+          "notes": "Decides the petition questions on the Reasons and Process pages. Options: no petition; a capital-improvement or O&M petition, which must be FILED BEFORE the notice is served or the notice is void; or a documented passthrough, which needs no licence but is a different kind of increase. Each has its own worksheet, cost and timing. Record here: the route chosen, whether a petition was filed, and its file number and date.",
+          "flag_id": "F60",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-D8",
+          "label": "Whether to increase anything this cycle",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S57"
+          ],
+          "notes": "The last option, and sometimes the right one: if coverage (SUG-A1), licence status (SUG-A2) or an open repair/retaliation question cannot be closed, doing nothing costs nothing, and the right to bank accrues while 24 full months pass without an increase. Record here: the decision to defer, the reason, and the date to re-check.",
+          "flag_id": "F60",
           "source_note": ""
         }
       ]

@@ -210,6 +210,32 @@
             "source_note": ""
           },
           {
+            "id": "LIC-11",
+            "label": "Rule 13.14 quoted verbatim (re-read 2026-11-13)",
+            "value": "\"Any rent increase under Ordinance Sections 37.3(a)(1)-(2) purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void; provided, however, that the effective date of the rent increase, not the date of service, shall be used to determine whether or not the increase conforms with the provisions of this section. Nothing in this Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise lawful rent increases that were found to be null and void. This section shall apply to all rent increases that are effective on or after July 1, 2022, except that with respect to condominium units and buildings with less than ten residential units, this section shall only apply to rent increases that are effective on or after March 1, 2023.\"",
+            "status": "verified",
+            "source_ids": [
+              "S73"
+            ],
+            "notes": "Read on 2026-11-13. This is the strongest wording in the record and it narrows flag F25: the softer 'may be null and void' / 'will not be enforceable' phrasing on the tenant-facing pages does not soften the rule text, and an owner's banking rights survive a void increase.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LIC-12",
+            "label": "What an individual owner is exposed to if the licence is not on file on the effective date",
+            "value": "Under Sec. 37.15(e) the licence is \"temporarily suspended during the period of the landlord's noncompliance\" and \"a tenant shall not be obligated to pay the increased rent for months during the period of suspension\"; separately, SF.gov states there is no monetary penalty from the Rent Board for reporting late. So the exposure is money back to the tenant for the suspended months, not a City fine for the late report itself.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S07",
+              "S73"
+            ],
+            "notes": "A tenant who paid an increase while the owner was unlicensed can petition for the difference; there is no time limit on a tenant petition. Nothing here exempts an individual owner.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
             "id": "LIC-10",
             "label": "Full step-by-step page",
             "value": "12 numbered steps from coverage check to notice delivery, each with its official source link, plus the ordinance text and the case-specific application",
@@ -1882,7 +1908,7 @@
           {
             "id": "RATE-12",
             "label": "Proposed banked and capital-improvement cap, File 261020",
-            "value": "Not enacted as of November 10, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
+            "value": "Not enacted as of November 10, 2026 and still pending on November 13, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
             "status": "verified",
             "source_ids": [
               "S05",
@@ -1907,8 +1933,8 @@
           },
           {
             "id": "RATE-14",
-            "label": "Exact Legistar record at fetch (2026-11-10)",
-            "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
+            "label": "Exact Legistar record at fetch (2026-11-10; re-read 2026-11-13)",
+            "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank. Re-read 2026-11-13: unchanged, and a sixth attachment 'Comment Ltrs' is now listed",
             "status": "verified",
             "source_ids": [
               "S71"
@@ -1952,7 +1978,7 @@
               "S02",
               "S01"
             ],
-            "notes": "Still not published on either official page when re-checked 2026-11-10; blank rather than estimated.",
+            "notes": "Still not published on either official page when re-checked 2026-11-13; blank rather than estimated.",
             "flag_id": "F27",
             "source_note": ""
           },
@@ -2087,6 +2113,20 @@
               "S53"
             ],
             "notes": "The Rent Board Fee is a different, separate payment (FEE page).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-09",
+            "label": "Does the state rent-registration statute (Civil Code 1947.7) soften the local licence rule?",
+            "value": "Not established on this record. Section 1947.7(b) shields an owner who is in substantial compliance with an ordinance that \"requires the registration of rents\", limiting remedies to restitution and filing fees, and section 1947.7(c) restores denied annual adjustments prospectively. San Francisco's own ordinance states in Sec. 37.15(d) that the Rent Board shall not operate a rental registry \"within the meaning of California Civil Code Sections 1947.7 - 1947.8\", so a site cannot assert that the shield applies here.",
+            "status": "verified",
+            "source_ids": [
+              "S93",
+              "S53",
+              "S73"
+            ],
+            "notes": "This is a \"what the statute says versus what it reaches\" distinction, not advice. Published as an open question: Q-22 (blank) and flag F59. Do not plan an increase on the assumption that 1947.7 rescues an unlicensed notice.",
             "flag_id": "",
             "source_note": ""
           },
@@ -2632,6 +2672,32 @@
               "S27"
             ],
             "notes": "Owner occupancy of a unit here was not supplied; no exemption asserted (F34).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-18",
+            "label": "Civil Code 1947.7 as read on 2026-11-13 (rent-registration shield)",
+            "value": "Intent: to \"limit the imposition of penalties and sanctions against an owner of residential rental units where that person has attempted in good faith to fully comply with the regulatory processes of those programs\". (b) An owner in substantial compliance with an ordinance or charter that controls rents AND requires the registration of rents shall not be assessed a penalty or other sanction; restitution of excess rent plus filing fees are the exclusive remedies. (c) Denied annual rent adjustments \"shall be restored prospectively once the owner is in compliance\".",
+            "status": "verified",
+            "source_ids": [
+              "S93"
+            ],
+            "notes": "Read directly from the current section text on leginfo. It is a shield against penalties under a registration ordinance; it is not a licence, and it does not raise the permitted amount.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-19",
+            "label": "What Civil Code 1947.7 does NOT do",
+            "value": "It does not create or replace a Rent Increase License, it does not excuse the Housing Inventory report, it does not permit an increase above the published annual allowable amount, and it does not apply by its own terms unless the local ordinance \"requires the registration of rents\". San Francisco states its inventory is not such a registry (Sec. 37.15(d)), and Rule 13.14 voids an unlicensed increase regardless.",
+            "status": "verified",
+            "source_ids": [
+              "S93",
+              "S53",
+              "S73"
+            ],
+            "notes": "Whether a tenant-side or Rent Board reviewer would nonetheless apply 1947.7 is unresolved and deliberately not answered here (Q-22, F59).",
             "flag_id": "",
             "source_note": ""
           },
@@ -4501,6 +4567,20 @@
             "source_note": ""
           },
           {
+            "id": "Q-22",
+            "label": "Would Civil Code 1947.7 protect an owner whose San Francisco licence was not current on the effective date?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S93",
+              "S53",
+              "S73"
+            ],
+            "notes": "Blank because the official record does not answer it: section 1947.7(b) reaches an ordinance that \"requires the registration of rents\", while Sec. 37.15(d) states the Rent Board shall not operate a rental registry within the meaning of sections 1947.7 - 1947.8. No San Francisco official page applies the state shield to the licence rule. How to discover it: ask the Rent Board directly (311 / 415-252-4600) and, because this is a question about remedies, put it to a landlord-tenant attorney in writing; do not self-answer it. Flag F59.",
+            "flag_id": "F59",
+            "source_note": ""
+          },
+          {
             "id": "Q-21",
             "label": "Do the tenants have to keep accepting increases, or can they challenge each one?",
             "value": "They can challenge. A tenant may file an unlawful-rent-increase petition with no filing fee and no time limit, and the matter can go to an Administrative Law Judge. Tenant-side free legal help is documented for eviction proceedings (Eviction Defense Collaborative line and Tenant Right to Counsel), not as a general pre-approval service for rent increases.",
@@ -4859,6 +4939,21 @@
               "S60"
             ],
             "notes": "Owner-supplied facts only; confirm in the Property Information Map.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-30",
+            "label": "Do not substitute a state statute for the local report",
+            "value": "The only step in this case that is free, takes minutes, is documented on the official page, and removes the nullity risk entirely is the Housing Inventory report itself. Section 1947.7 is at best an argument about remedies after the fact; the report is a fact you can control before the notice is served.",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S53",
+              "S93",
+              "S73"
+            ],
+            "notes": "Recommendation derived from the sources, not a legal opinion; the licence question itself is answered in LIC-01 to LIC-12.",
             "flag_id": "",
             "source_note": ""
           },
@@ -5531,6 +5626,17 @@
             ],
             "notes": "Generated files are reproducible; CI re-runs the build and fails on drift.",
             "flag_id": ""
+          },
+          {
+            "id": "SUG-P6",
+            "label": "6. Record the choice in section D",
+            "value": "Section D is the decision record. Every row there is deliberately blank: this page lists options, evidence and effort, and does not choose for you. A choice written down with a date is what stops a later review re-opening an item that was already settled.",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "Added 2026-11-13 so the review has somewhere to land; nothing on this page is implemented by being listed.",
+            "flag_id": ""
           }
         ]
       },
@@ -5867,6 +5973,124 @@
             "review_status": "open for review",
             "notes": "Maps to F46 / REQ-25.",
             "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "D. Owner decision record - blank until you choose (the site takes no position)",
+        "columns": [
+          "Decision point",
+          "Your decision - blank until the owner records it",
+          "Status",
+          "Official source(s)",
+          "What is being decided, and what to write in the decision column"
+        ],
+        "rows": [
+          {
+            "id": "SUG-D1",
+            "label": "Which annual rate to apply",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01",
+              "S02"
+            ],
+            "notes": "Decides SUG-C4 and every amount row on the site: the rate in force on the increase's EFFECTIVE date (1.6% for 3/1/26-2/28/27) versus waiting for the next published rate. The 2027-28 figure is not yet published (F27), so it cannot be planned around. Record here: the effective date you chose, the rate you used, and the date you confirmed it on the official page.",
+            "flag_id": "F60",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D2",
+            "label": "One unit or both",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S42",
+              "S01",
+              "S38"
+            ],
+            "notes": "Decides SUG-C1 and SUG-C2. Options: both units on their own anniversary dates under one written neutral rule; Unit 1 only; Unit 2 only; neither this cycle. No official source requires both and none forbids one - the exposure is in the reason and the record, not the count. Record here: the choice, and the neutral rule applied to reach it, written before any notice goes out.",
+            "flag_id": "F60",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D3",
+            "label": "Whether to pursue a banked increase at all",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S05",
+              "S01"
+            ],
+            "notes": "Decides SUG-A3. Options: no banked claim (1.6% only, the documented default); reconstruct the history from leases, notices and payment records and bank what is provable; or stop and get advice first. No banked amount is asserted for either unit on this site (F30). Record here: the decision, and if a banked claim is pursued, the documents relied on and who checked them.",
+            "flag_id": "F60",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D4",
+            "label": "Whether to spend the attorney hour before serving",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S35",
+              "S01"
+            ],
+            "notes": "Decides SUG-A6. Options: review the completed Notice Worksheet with counsel before service; review afterwards; or rely on self-review. This is the one item on the board a third party can close for you. Record here: yes or no, the date, and the questions asked.",
+            "flag_id": "F60",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D5",
+            "label": "Which site improvements to build",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S68",
+              "S69"
+            ],
+            "notes": "Decides the SUG-B group (one-page decision sheet, stale-source re-check, bidirectional flag links, change log, glossary, privacy guard). Site-only rows can be accepted by the owner or by the next build session; accepting one changes no legal obligation. Record here: the IDs you accept, in priority order, and who should build them.",
+            "flag_id": "F60",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D6",
+            "label": "Privacy remediation of the repository history",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "Decides SUG-B6 and flags F44/F51. Raw tenant identifiers remain reachable in commits and closed pull-request diffs on this public repository. Options: rewrite history and force-push; delete and re-create the repository; close the stale pull requests and accept the exposure; or take the repository private. Only the owner can do any of these. Record here: the choice and the date it was done, so the flags can be closed against an action instead of left open indefinitely.",
+            "flag_id": "F60",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D7",
+            "label": "Whether to use a petition route above 1.6%",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S09",
+              "S12",
+              "S08"
+            ],
+            "notes": "Decides the petition questions on the Reasons and Process pages. Options: no petition; a capital-improvement or O&M petition, which must be FILED BEFORE the notice is served or the notice is void; or a documented passthrough, which needs no licence but is a different kind of increase. Each has its own worksheet, cost and timing. Record here: the route chosen, whether a petition was filed, and its file number and date.",
+            "flag_id": "F60",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D8",
+            "label": "Whether to increase anything this cycle",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S01",
+              "S05",
+              "S57"
+            ],
+            "notes": "The last option, and sometimes the right one: if coverage (SUG-A1), licence status (SUG-A2) or an open repair/retaliation question cannot be closed, doing nothing costs nothing, and the right to bank accrues while 24 full months pass without an increase. Record here: the decision to defer, the reason, and the date to re-check.",
+            "flag_id": "F60",
             "source_note": ""
           }
         ]

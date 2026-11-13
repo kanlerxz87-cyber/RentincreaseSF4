@@ -1,8 +1,8 @@
 [
   {
     "id": "F01",
-    "title": "SF.gov rent-increase example rate conflict",
-    "detail": "Example says June 1, 2025 is 1.6% while Current Rates/Form 571 show 1.4%.",
+    "title": "SF.gov rent-increase example uses a rate for the wrong year",
+    "detail": "Re-read 2026-11-13: the Rent Board's rent-increase guidance still says the increase \"in effect on June 1, 2025 is 1.6%\"; 1.6% is the rate for 3/1/2026-2/28/2027, and the rate in effect on June 1, 2025 was 1.4% per Current Rates and Form 571. The example's arithmetic is right for a June 2026 increase; only the stated date/rate pairing is wrong. Do not copy the example's wording into a tenant notice - state the rate in effect on your own increase's effective date.",
     "source_ids": [
       "S01",
       "S02",
@@ -12,10 +12,11 @@
   },
   {
     "id": "F02",
-    "title": "Banked example year conflict",
-    "detail": "Example says August 1, 2024 is 1.4% while Form 571 shows 1.7%.",
+    "title": "Banked-increase example names two different effective dates",
+    "detail": "Re-read 2026-11-13: the banked-increase page's calculation sentence still reads \"the annual allowable rent increase in effect on August 1, 2024 (1.4%)\" while the same example's effective date is August 1, 2025, and the page's own rate list labels 8/1/2023 as 3.6% and 8/1/2024 as 1.7%. The arithmetic shown (6.7% total, $87.10 on a $1,300 base) is internally consistent; the date label in that sentence is not. Recorded as an official-page wording defect, not corrected here.",
     "source_ids": [
       "S05",
+      "S02",
       "S04"
     ],
     "status": "needs review"
@@ -243,12 +244,14 @@
   },
   {
     "id": "F25",
-    "title": "License-consequence wording differs between SF.gov pages",
-    "detail": "Site rows state an unlicensed increase 'may be null/void', while the Housing Inventory page (re-fetched 2026-11-07) states a rent increase notice 'will not be enforceable' without a rent increase license on the effective date. Exact legal consequence wording needs manual review against the Rent Ordinance; no wording is chosen over the other here.",
+    "title": "License-consequence wording differs between SF.gov pages - narrowed 2026-11-13",
+    "detail": "The three official phrasings are not identical: the Housing Inventory page says a notice 'will not be enforceable without having a rent increase license on the effective date'; the owner-noncompliance page says an unlicensed increase 'may be null and void (this may apply for multiple years)'; and Rent Board Rule 13.14, read in full on 2026-11-13, is the strongest - an increase 'purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void', tested by the EFFECTIVE date and not the service date, with banking rights preserved. The site publishes the rule text as the operative wording (LIC-11) and does not treat the softer pages as a concession. Left open, not closed: only a Rent Board or court determination on specific facts settles how far the nullity reaches (for example whether it also voids a banked component served in the same notice).",
     "source_ids": [
       "S01",
       "S07",
-      "S08"
+      "S08",
+      "S73",
+      "S53"
     ],
     "status": "needs review"
   },
@@ -567,10 +570,11 @@
   {
     "id": "F46",
     "title": "Pending legislation could affect banked and capital-improvement increases",
-    "detail": "On November 9, 2026 the Rent Board posted a notice about Board File 261020. The proposal would temporarily limit combined banked and capital-improvement increases to 10% per year; if enacted as currently proposed, it would apply to banked increases noticed on or after September 15, 2026 and capital-improvement increases based on petitions filed on or after that date. Legistar showed Pending Committee Action and no enactment on November 10. This is not current law and may change. A 90-day notice does not establish that an increase is lawful. Check the current status and seek advice before relying on a banked calculation or serving notice; its effect on either unit is unverified.",
+    "detail": "On November 9, 2026 the Rent Board posted a notice about Board File 261020. The proposal would temporarily limit combined banked and capital-improvement increases to 10% per year; if enacted as currently proposed, it would apply to banked increases noticed on or after September 15, 2026 and capital-improvement increases based on petitions filed on or after that date. Legistar showed Pending Committee Action and no enactment on November 10. This is not current law and may change. A 90-day notice does not establish that an increase is lawful. Check the current status and seek advice before relying on a banked calculation or serving notice; its effect on either unit is unverified. Re-checked 2026-11-13: the Legistar record still shows Pending Committee Action with no final action, no enactment date and no enactment number (newest history row 10/7/2026 Youth Commission response; a sixth attachment 'Comment Ltrs' is now listed), so this remains not-law and is not stated as a current limit anywhere on the site.",
     "source_ids": [
       "S05",
-      "S71"
+      "S71",
+      "S72"
     ],
     "status": "needs review"
   },
@@ -695,6 +699,27 @@
     "detail": "research/ holds 16 folders, several with their own validators (for example research/b87_notice_kit, research/c72_2026-11-11_audit, research/n08_qa). Open PRs #18, #19, #25, #47 and #48 are stale, conflicting generator states. This session did not merge or close any of them; the owner should decide whether to close them.",
     "source_ids": [
       "S68"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F59",
+    "title": "Whether Civil Code 1947.7 reaches the SF licensing scheme is unresolved",
+    "detail": "Civil Code 1947.7(b) limits penalties and remedies for an owner in substantial compliance with an ordinance that controls rents and 'requires the registration of rents', and 1947.7(c) restores denied annual adjustments prospectively. SF Administrative Code Sec. 37.15(d) states the Rent Board 'shall not operate a rental registry within the meaning of California Civil Code Sections 1947.7 - 1947.8', which cuts against the shield applying here, and no San Francisco official page applies it to the Rent Increase License rule. The site publishes this as an open question (Q-22, blank) and never argues it as a defense. A landlord-tenant attorney, not this site, should answer it.",
+    "source_ids": [
+      "S93",
+      "S53",
+      "S73"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F60",
+    "title": "The Suggestions page decision record is blank by design",
+    "detail": "Rows SUG-D1 to SUG-D8 on pages/suggestions.html are proposals awaiting an owner choice, not findings: every decision cell is blank because no choice has been recorded. Nothing in the suggestions board has been implemented, and accepting or declining a suggestion changes no legal obligation. The board exists so a reviewer can compare options and pick a path before any rent increase is implemented; the published answers on the other pages remain the evidence base.",
+    "source_ids": [
+      "S01",
+      "S07"
     ],
     "status": "needs review"
   },

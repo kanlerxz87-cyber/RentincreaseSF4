@@ -202,3 +202,44 @@ that were rejected by design (computing a banked total from missing history, ass
 vacancy-based reset, quoting an unpublished 2027–28 rate, or describing an increase as
 approved/certified/challenge-proof). Flag `F53` states that nothing on the page has been
 implemented.
+
+## 6. Integration with a colliding parallel session (2026-11-13)
+
+While this session's work was uncommitted, another session (`arena-23a50992`, PRs #51/#52/#55, merged to `main` as
+`038f2e6`) implemented the **same two brief items**: a Suggestions page and the state-vs-local answer. This was a
+coordination failure, not a content dispute — the board row for `T54` was claimed by both sessions.
+
+**Resolution strategy: main became the shared base; nothing from either session was discarded.**
+
+1. `git merge --no-commit origin/main`, then every generated or shared file (`scripts/`, `pages/`, `data/`, root `.md`,
+   `assets/`, `.github/`, `research/c72_.../validate_c72.py`) was reset to **main's version** (`git checkout origin/main -- ...`),
+   so the merge commit carries no interleaved half-adopted state. This session's own verification record was the only file kept
+   as-is from the pre-merge tree.
+2. Overlapping content that main already published was **not re-added**: the state-vs-local answer (main's `SL-01`–`SL-05`,
+   `LAW-01`–`LAW-08`, `REQ-26`–`REQ-28`, flag `F53`), the ordinance provenance sources (main's `S90` = the SF.gov news item,
+   `S92` = the Ord. 265-20 attachment, `S89` = Civ. Code 1946.2), the licence-scope rows (`PRC-07`, `LOC-15`), and the
+   suggestion groups with effort and review status (`SUG-A1`–`A7`, `SUG-B1`–`B6`, `SUG-C1`–`C6`).
+   Source IDs were **not** reused or renumbered: this session's four new sources became main's `S90`/`S92`/`S89` plus one new row.
+
+**What this session then added on top (all verifiable, none duplicative):**
+
+| Added | Where | Why it was still missing |
+| --- | --- | --- |
+| **S93** Civil Code §1947.7 read directly | `SOURCES.md`, Sources page | Main cited only §37.15(d)'s non-registry disclaimer (in `LOC-14`); the state penalty shield an owner would look for was not in the ledger |
+| **LAW-09** the statute-versus-scope distinction | Local Law page | Main answered *where* the duty lives, not whether the state shield softens it |
+| **ST-18 / ST-19** §1947.7 as read, and what it does not do | State Law page | No state-side row quoted the section |
+| **Q-22** applicability, blank + **F59** | Questions page | Unresolved on the official record — deliberately not answered by inference |
+| **LIC-11 / LIC-12** Rule 13.14 verbatim; the individual owner's actual exposure | Executive Summary | Main *paraphrased* the rule; the verbatim text is the strongest wording in the record and narrows `F25` |
+| **AN-30** do not substitute a state statute for the free report | Analysis | Turns the §1947.7 finding into an action, without advising |
+| **SUG-P6 + section D (`SUG-D1`–`SUG-D8`)** owner decision record, 8 blank rows + **F60** | Suggestions page | Main's board listed options and effort but had nowhere to record a choice, which is what the brief asked for |
+| **F01 / F02 / F25** narrowed with today's page text; **F46** + `RATE-12/14/17` + `S71`/`S73` re-dated | Flags page, Rates page, ledger | Main's versions still carried the 2026-11-10 wording and left the File 261020 status undated |
+| 11 new validator checks (156 total) | `scripts/validate_site.py` | Locks the decision grid (8 blank rows, all flagged), the verbatim quotations, the re-check dates and the ledger total |
+
+**One defect found in main and corrected here rather than left:** the 2026-11-13 addendum in `SOURCES.md` said
+"91 catalogued sources: 89 official" while its own ledger already held 92 rows (`S88`–`S92`) — a stale hand-typed total that
+the validator missed because it only tests that the current count string appears *somewhere* in the file. The prose now reads
+"93 catalogued sources: 91 official ... plus two project records", and a new check (`"{n} catalogued sources" in SOURCES.md`)
+makes that total exact so it cannot drift again.
+
+**Gates after the merge:** `validate_site.py` 156 checks / 0 errors · b87 kit 19 / 0 · c72 19 / 0 · privacy scan 0 matches ·
+two consecutive builds byte-identical over 57 published files.

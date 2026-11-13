@@ -264,7 +264,7 @@ def index_html():
     out.append('<section class="hero"><h2>Start here: is the \'inform the Rent Board\' rule a state law or a local law?</h2>'
                '<p><strong>Local.</strong> The duty to report a rent-controlled unit and hold a <strong>Rent Increase License</strong> is a <strong>San Francisco ordinance</strong> — Administrative Code Chapter 37, Section 37.15, added by Ordinance No. 265-20, effective <strong>January 18, 2021</strong>. It is not a California state statute and not a federal rule.</p>'
                '<p>The <strong>2023</strong> date is the <strong>local</strong> operative date for small buildings: condominiums and buildings with <strong>1-9 residential units</strong> have had to report since <strong>March 1, 2023</strong> (buildings with 10+ units began July 1, 2022). The actual 2023 state law was <strong>SB 567</strong>, which amended the statewide rent cap and just-cause rules and became operative <strong>April 1, 2024</strong> — it creates no rent-board reporting duty. {} &middot; {} &middot; {}</p>'
-               '<p><a class="cta" href="pages/local.html">See the layer-by-layer table (LAW-01 to LAW-08) &rarr;</a></p>'
+               '<p><a class="cta" href="pages/local.html">See the layer-by-layer table (LAW-01 to LAW-09) &rarr;</a> <a class="cta" href="pages/suggestions.html">Review the options and record your choice before implementing anything &rarr;</a></p>'
                '<div class="disclaimer">{}</div></section>'.format(
                    source_links(["S53"]), source_links(["S90"]), source_links(["S88", "S73"]), e(D.DISCLAIMER)))
     out.append('<section class="hero"><h2>Next: do I need a Rent Board license as an individual owner?</h2>'

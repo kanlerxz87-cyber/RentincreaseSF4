@@ -287,6 +287,20 @@
           "source_note": ""
         },
         {
+          "id": "Q-22",
+          "label": "Would Civil Code 1947.7 protect an owner whose San Francisco licence was not current on the effective date?",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S93",
+            "S53",
+            "S73"
+          ],
+          "notes": "Blank because the official record does not answer it: section 1947.7(b) reaches an ordinance that \"requires the registration of rents\", while Sec. 37.15(d) states the Rent Board shall not operate a rental registry within the meaning of sections 1947.7 - 1947.8. No San Francisco official page applies the state shield to the licence rule. How to discover it: ask the Rent Board directly (311 / 415-252-4600) and, because this is a question about remedies, put it to a landlord-tenant attorney in writing; do not self-answer it. Flag F59.",
+          "flag_id": "F59",
+          "source_note": ""
+        },
+        {
           "id": "Q-21",
           "label": "Do the tenants have to keep accepting increases, or can they challenge each one?",
           "value": "They can challenge. A tenant may file an unlawful-rent-increase petition with no filing fee and no time limit, and the matter can go to an Administrative Law Judge. Tenant-side free legal help is documented for eviction proceedings (Eviction Defense Collaborative line and Tenant Right to Counsel), not as a general pre-approval service for rent increases.",
