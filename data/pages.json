@@ -4544,6 +4544,62 @@
             "source_note": ""
           }
         ]
+      },
+      {
+        "title": "What is still missing, and how to find it",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "Q-22",
+            "label": "Which open questions can an official record answer, and which only you can answer?",
+            "value": "The Suggestions & Review page publishes a missing-information register (SUG-F1) that names, for every open item, what is missing, which official source would resolve it, how to obtain it, who must supply it and which decision it blocks, plus a separate list of the facts only the owner can supply (SUG-F2): the last original occupant in each unit, the date occupancy began, whether a 6.14 notice was served, each unit's anniversary date, the full lease and notice history, square footage and bedroom and bathroom counts, whether either unit is an in-law unit, whether the owner occupies one unit, and whether each tenant was in occupancy on November 1 for the fee-recovery test.",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S16",
+              "S56",
+              "S24",
+              "S55",
+              "S32"
+            ],
+            "notes": "Published as proposals for review, not as a determination about either unit.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-23",
+            "label": "How do I put the open questions to the Rent Board efficiently?",
+            "value": "Counseling is free, available in Spanish, Cantonese and Mandarin with interpretation for other languages, and cannot give legal advice, so the questions have to be written down first; calls are generally limited to 5 minutes. The Suggestions & Review page publishes a printable call script (SUG-F3) containing only the open questions, with the counselor's published phone number and office hours, and a pre-decision gate sequence (SUG-F4) listing the questions to answer before any notice is dated.",
+            "status": "verified",
+            "source_ids": [
+              "S24",
+              "S07",
+              "S55",
+              "S16"
+            ],
+            "notes": "The Rent Board states it will tell you when a question is one that should be answered by a lawyer.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "Q-24",
+            "label": "Where do the proposed improvements to this site live?",
+            "value": "On the Suggestions & Review page (`pages/suggestions.html`): 27 proposals in four groups - compliance gates, evidence and defensibility, discovering the missing information, and internal site quality. Every row carries the official rule that motivates it, an effort and impact estimate, and a Decision cell starting at Review, with a blank review checklist for recording Accept, Reject or Defer before anything is implemented.",
+            "status": "verified",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "Project-record source: the proposals are about this site, and no legal finding rests on them.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
       }
     ]
   },
@@ -4899,6 +4955,7 @@
   "suggestions": {
     "title": "Suggestions - review before implementing",
     "description": "A dedicated review queue of proposed improvements to this site and to the rent-increase decision process. Each suggestion states what it changes, why it helps, the official basis, the effort, and its review status so a reviewer can choose the best path before anything is implemented.",
+    "intro": "How to read the links in this table. Every row carries at least one link, and every link opens the source page for manual review. Most rows cite the San Francisco Rent Board, the Rent Ordinance, California statute, the federal regulations or the SEC, and the link is there so a reviewer can check the quoted rule, dollar figure or date against the page itself rather than against this summary. A small number of rows are marked 'Internal site-design proposal': they are proposals about how this research site is built and presented, they make no claim about the law, and they therefore cite the project record - this repository and its published build - instead of an official rule. No official source is attached to such a row, because attaching one that does not support it would be false. A proposal row is never a finding: nothing here is applied until a reviewer records a decision, and no row asserts that any rent increase is lawful, approved or free of challenge.",
     "sections": [
       {
         "title": "How to use this page (the review process)",
@@ -5299,6 +5356,924 @@
             "effort": "5 minutes",
             "review_status": "open for review",
             "notes": "Maps to F46 / REQ-25.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "D. Compliance gates - make the required order of operations impossible to miss",
+        "intro": "Each proposal below adds a gate that must be answered before a notice is dated. Every one is grounded in a rule published by the San Francisco Rent Board, the Rent Ordinance, California statute or federal regulation. Contributed by the 2026-11-13 final review.",
+        "columns": [
+          "ID",
+          "Suggestion",
+          "Why it helps the decision",
+          "Evidence / official source",
+          "Effort",
+          "Review status"
+        ],
+        "rows": [
+          {
+            "id": "SUG-D1",
+            "label": "License-status gate per unit",
+            "value": "What changes: Add a per-unit row on the Anonymized Case page and on the Notice Checklist: 'Rent Increase License status for this unit, confirmed on (date), portal reference (optional)'. Leave it blank and flag it until the owner fills in a real date. Why it helps the decision: The license is the one precondition that can void an otherwise lawful increase, and Rule 13.14 tests the effective date of the increase, not the date the notice was served. A dated status field turns an invisible dependency into a visible gate.",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S73",
+              "S53",
+              "S08"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "Rule 13.14: a rent increase purporting to be effective while the landlord is unlicensed renders the entire increase null and void, and the effective date - not the date of service - is the test. SF.gov: a landlord must have a current rent increase license on file before any annual or banked increase can go into effect. Builds the site-side control behind SUG-A2, which obtains the fact itself.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D2",
+            "label": "Housing Inventory filing tracker",
+            "value": "What changes: Add a per-unit filing row: 'Housing Inventory submitted for reporting year (YYYY) on (date)', with the recurring March 1 deadline and the rule that units in buildings with fewer than 10 residential units have reported since March 1, 2023. Why it helps the decision: The rent increase license is generated from the Housing Inventory submission, so the filing is the upstream cause of every license gap. Tracking it removes the most common way a license goes missing.",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S53",
+              "S55"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "SF.gov: all owners of residential property are required to report into the Housing Inventory by March 1 every year; reporting began March 1, 2023 for condominiums and units in buildings with fewer than 10 residential units; the license is generated from the report. Builds the site-side control behind SUG-A2.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D3",
+            "label": "Rent Board Fee calendar with the tenant-recovery switch",
+            "value": "What changes: Add a fee timeline to the Rent Board Fee page (October informational notice, December exemption window, January invoice, March 1 due date, 5% monthly late penalties capped at 15%, June 1 referral) plus one yes/no field per unit: 'Was the tenant in occupancy on November 1 of the applicable tax year?'. That answer alone should decide whether the 50% recovery may be charged. Why it helps the decision: The fee is a separate money decision from the rent increase, it has its own penalty ladder, and the right to recover half of it turns on a single November 1 occupancy test. Treating it as a calendar plus a switch removes a recurring source of error.",
+            "status": "analysis",
+            "source_ids": [
+              "S56",
+              "S62",
+              "S65"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "SF.gov Rent Board Fee page: $59.00 per dwelling unit for 2026-2027, due March 1, 5% late penalty each month capped at 15%, referral to the Bureau of Delinquent Revenue after June 1, exemption request deadline December 14, 2026. 50% may be recovered only from tenants in occupancy on November 1 of the applicable tax year. Site-side counterpart to SUG-A7.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D4",
+            "label": "Effective-date rate engine",
+            "value": "What changes: Add a small calculator that takes the anniversary date and the intended effective date, then selects the published rate for the period that contains the effective date from the Current Rates ledger, instead of letting a reader pick a rate from a list. Why it helps the decision: The rate in effect on the effective date controls, not the rate in effect when the notice is written, and the currently published 1.6% rate covers only March 1, 2026 through February 28, 2027. A date-driven selector prevents picking the wrong period.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S04",
+              "S21"
+            ],
+            "effort": "Medium build, High impact",
+            "review_status": "Review",
+            "notes": "SF.gov: the percentage is the one in effect on the date the increase takes effect; 1.6% applies to increases effective March 1, 2026 through February 28, 2027, and Section 37.3 caps the increase at 7% of CPI.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D5",
+            "label": "Banked-increase ledger per unit",
+            "value": "What changes: Add a per-unit table that logs every increase the owner could have taken and did not take: the year, the anniversary date, the published percentage at that time, and whether 24 full months elapsed without any increase. Show the running banked total and the notice wording that must state the banked portion. Why it helps the decision: Banking requires the 24-full-month test for each skipped year, forbids compounding and prorating, and never carries to a new tenant. It is the hardest part of the calculation to hold in memory and the easiest to misstate in a notice.",
+            "status": "analysis",
+            "source_ids": [
+              "S05",
+              "S54",
+              "S77"
+            ],
+            "effort": "Medium build, High impact",
+            "review_status": "Review",
+            "notes": "SF.gov: a skipped increase is banked only if at least 24 full months pass without any increase; banked percentages are added, never compounded or prorated, and the notice must state the banked portion. Site-side counterpart to SUG-A3.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D6",
+            "label": "Pending-legislation watch row",
+            "value": "What changes: Add a dated row to the Rates page that records the status of File 261020 and any successor, labelled 'proposed - not enacted', and never feeds it into a calculation. Re-check it at each review cycle. Why it helps the decision: A notice about a proposed 10% cap was posted on the Rent Board's own rent-increase, Current Rates and Forms Center pages on November 9, 2026. Because it appears on live official pages, there is a real risk of reading it as current law.",
+            "status": "analysis",
+            "source_ids": [
+              "S71",
+              "S72",
+              "S87"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "SF.gov notice posted November 9, 2026 on the rent-increase page, the Current Rates page and the Forms Center, and Board of Supervisors File 261020 in Legistar: the 10% combined banked and capital-improvement cap is proposed, not enacted, and subject to change.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D7",
+            "label": "Retaliation-window screen",
+            "value": "What changes: Add a screening block that must be answered before any notice is dated: 'In the last 12 months, has any tenant complained to an agency or exercised a right under the tenant chapter?', with the answer and the date checked recorded next to it. Why it helps the decision: A rent increase that follows a protected complaint or act can be challenged as retaliation within the statutory window, independently of whether the increase amount itself is permitted. The bar is time-based and easy to miss on a case with a repair or complaint history.",
+            "status": "analysis",
+            "source_ids": [
+              "S57",
+              "S22"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "California Civil Code 1942.5(a): a landlord may not retaliate against a lessee who has exercised rights under the chapter or complained to an agency within 12 months of the complaint; Section 37.10B separately prohibits bad-faith harassment. Site-side counterpart to the 180-day history question on the Decision Readiness page (DR-14).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D8",
+            "label": "Uniform-criteria record for the one-unit-or-both decision",
+            "value": "What changes: Add a field that records the single neutral eligibility criterion applied to each unit (for example: the unit's anniversary date has passed), the date each anniversary passed, and the owner-entered reason if only one unit is raised. Why it helps the decision: No official rule requires raising both units. What a reviewer would look for is a consistent, documented, non-pretextual reason applied the same way to both units, which is what the fair-housing rules ask when a neutral practice has a disparate effect.",
+            "status": "analysis",
+            "source_ids": [
+              "S42",
+              "S41",
+              "S38",
+              "S39"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "24 CFR 100.500: a practice with a disparate effect violates the Fair Housing Act unless it is supported by a substantial legitimate nondiscriminatory interest and no less discriminatory alternative is available. California Government Code 12955 and the California Civil Rights Department housing guidance add source-of-income and retaliation protections. Overlaps SUG-C2; this adds the site field that records the reason.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D9",
+            "label": "Roommate and 6.14 fact screen",
+            "value": "What changes: Add a structured, mostly blank questionnaire for each unit: who was the last original occupant, the date occupancy began, whether a 6.14 notice was ever served and when, and whether any occupant is a subtenant or a co-tenant. Why it helps the decision: A market-rate reset on remaining occupants turns on the last original occupant, the date occupancy began and the 6.14 notice. Those are exactly the facts this case has not verified, and they decide whether an unlimited increase is even available.",
+            "status": "analysis",
+            "source_ids": [
+              "S16",
+              "S01",
+              "S37"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "SF.gov on Section 6.14 and Costa-Hawkins: an unlimited increase on remaining occupants requires that the last original occupant has vacated and that a proper 6.14 notice was served within a reasonable time; a co-tenant is not subject to such an increase. Site-side counterpart to SUG-A4.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D10",
+            "label": "Coverage determination sheet per unit",
+            "value": "What changes: Add a per-unit coverage row recording: pre-1979 construction confirmed (date checked), not a single-family dwelling, no new-construction partial exemption, no single-family/condominium partial exemption, and the Property Information Map link with the date it was checked. Why it helps the decision: If a unit is not covered by rent control the rent increase limitations do not apply to it and every other gate changes. This is the first gate and the one currently resting on an assumption rather than a record.",
+            "status": "analysis",
+            "source_ids": [
+              "S06",
+              "S32",
+              "S59",
+              "S60",
+              "S08"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "SF.gov: many units built on or before June 13, 1979 that are not single-family dwellings have rent control, and partial exemptions exist for newly constructed units and for certain single-family homes and condominiums; the Property Information Map is the official lookup. Site-side counterpart to SUG-A1.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D11",
+            "label": "Notice assembly with required contents",
+            "value": "What changes: Extend the Notice Worksheet so the assembled notice shows, in the notice itself, the dollar amount, the percentage, the effective date and any banked portion, and carries a delivery-method row (personal delivery or mail, with the 5-day extension) and a proof-of-service row. Why it helps the decision: Notice content and delivery method are the two steps most often defective, and both have fixed external requirements. Assembling the notice inside the tool means the checklist and the document cannot drift apart.",
+            "status": "analysis",
+            "source_ids": [
+              "S35",
+              "S78",
+              "S01",
+              "S26"
+            ],
+            "effort": "Medium build, High impact",
+            "review_status": "Review",
+            "notes": "California Civil Code 827: at least 30 days' notice where the increase is 10% or less and 90 days where it exceeds 10%, delivered personally or by mail, and the notice must state the amount of the increase and its effective date. Builds out SUG-B1.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-D12",
+            "label": "Petition routing table",
+            "value": "What changes: Add a table that names the petition or worksheet required before a notice for each increase type (capital improvement, operating and maintenance, utility, comparable rent, and the passthrough petitions) and marks them explicitly 'not required for a plain annual or banked increase'. Why it helps the decision: Each petition category has its own pre-notice filing rule, and the filing for one type is not a substitute for another. A routing table stops the wrong petition from being filed, or none being filed when one is required.",
+            "status": "analysis",
+            "source_ids": [
+              "S09",
+              "S10",
+              "S11",
+              "S12",
+              "S13",
+              "S14",
+              "S77"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "SF.gov: capital improvement, operating and maintenance, utility, comparable-rent and passthrough increases each have their own petition or worksheet rules that apply before the increase is noticed; no petition is required for a plain annual or banked increase.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "E. Evidence and defensibility - make the record reviewable",
+        "intro": "These proposals build the paper trail a tenant-side reviewer would look for, and make the case exportable as a document rather than only as a web page. Contributed by the 2026-11-13 final review.",
+        "columns": [
+          "ID",
+          "Suggestion",
+          "Why it helps the decision",
+          "Evidence / official source",
+          "Effort",
+          "Review status"
+        ],
+        "rows": [
+          {
+            "id": "SUG-E1",
+            "label": "Case-file completeness checklist",
+            "value": "What changes: Add a checklist of the documents an owner should be able to produce for each unit: the current lease, every prior increase notice, proof of service for each notice, the license status record, the Housing Inventory submission receipt, the Rent Board Fee payment receipt, the Property Information Map printout, and the rate sheet actually used for the calculation. Why it helps the decision: An unlawful-increase petition is decided on a documentary record. Missing documents, not wrong amounts, are how an otherwise compliant increase fails review.",
+            "status": "analysis",
+            "source_ids": [
+              "S35",
+              "S78",
+              "S07",
+              "S55",
+              "S56",
+              "S32",
+              "S02"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "California Civil Code 827 and Code of Civil Procedure 1013 govern notice and service by mail; the Housing Inventory submission, the portal license record, the fee payment and the Property Information Map are the official records the owner already has to create.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-E2",
+            "label": "Tenant-side challenge walkthrough",
+            "value": "What changes: Add a page that follows the exact path a tenant can take - search the Rent Board Portal for the landlord's license status, file the Tenant Petition and Form C at no charge and with no time limit, attend a hearing before an Administrative Law Judge - and lists what a reviewer would check at each step. Why it helps the decision: The standard asked for is that an increase survives review by a San Francisco tenant-side lawyer. No official source offers pre-approval, so the closest available substitute is to run the challenge yourself before serving. The Rent Board states the process is designed so that no one needs an attorney.",
+            "status": "analysis",
+            "source_ids": [
+              "S25",
+              "S08",
+              "S26",
+              "S24"
+            ],
+            "effort": "Medium build, High impact",
+            "review_status": "Review",
+            "notes": "SF.gov: a tenant may file a Tenant Petition and Form C at no charge and with no time limit, and the matter is set for a hearing before a Rent Board Administrative Law Judge; the process is designed so that no one needs an attorney. A tenant may also search the portal for the landlord's license status.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-E3",
+            "label": "Printable attorney-review handoff packet",
+            "value": "What changes: Add a one-page printable case summary, anonymized with dates and amounts unchanged, that can be handed to a tenant-side or defense attorney: the unit facts, the proposed increase, every rule relied on with its official link, and a list of every item still blank or flagged. Why it helps the decision: Turning a dashboard into a document is what 'able to pass review' actually requires. Publishing the blanks in the packet rather than hiding them is what lets a reviewer judge the case rather than the presentation.",
+            "status": "analysis",
+            "source_ids": [
+              "S23",
+              "S24",
+              "S25",
+              "S42",
+              "S41"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "SF.gov tenant and landlord resources, the free Rent Board counselor service, the unlawful-rent-increase petition, 42 USC 3604 and 24 CFR 100.500 are the rules a reviewer would apply. Builds out SUG-A6 and SUG-B1.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-E4",
+            "label": "Neutral-language bank for the increase letter",
+            "value": "What changes: Add a short, sourced bank of neutral phrasings for the increase letter - stating the amount, percentage and effective date without characterising the tenants, their conduct, or their ability to pay - each tied to the rule it is designed to satisfy. Why it helps the decision: Bad-faith conduct is a separate exposure from the arithmetic of the increase, and Section 37.10B carries its own civil remedies. Language control is a cheap control that a reviewer can check on the face of the letter.",
+            "status": "analysis",
+            "source_ids": [
+              "S22",
+              "S01"
+            ],
+            "effort": "Medium build, Medium impact",
+            "review_status": "Review",
+            "notes": "Section 37.10B prohibits bad-faith harassment of a tenant by a landlord and carries civil remedies; the published guidance is the official statement of the conduct that is prohibited.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-E5",
+            "label": "Public-records disclosure note before filing",
+            "value": "What changes: Add a note to the Housing Inventory steps that the information entered in the submission is public and may include the owner's name and business, contact information, approximate square footage, bedrooms, bathrooms and vacancy/occupancy history, with a checkbox confirming the owner has read it before filing. Why it helps the decision: The required filing publishes the owner's own identifying and business information. That is a real privacy consequence of the compliance step itself and belongs at the point of action, not buried on a research page.",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S53"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "SF.gov: the information entered in the Housing Inventory submission is public and may include name and business, contact information, approximate square footage, number of bedrooms and bathrooms, and vacancy or occupancy history for the past 12 months.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "F. Discovering the missing information",
+        "intro": "The owner's standard is that a decision should rest on what is already known and what is not yet known. These proposals turn the open blanks into an ordered discovery plan, and separate the facts that only the owner can supply from the ones a public record can answer. Contributed by the 2026-11-13 final review.",
+        "columns": [
+          "ID",
+          "Suggestion",
+          "Why it helps the decision",
+          "Evidence / official source",
+          "Effort",
+          "Review status"
+        ],
+        "rows": [
+          {
+            "id": "SUG-F1",
+            "label": "Missing-information register",
+            "value": "What changes: Add one page that lists every open question in this case with five columns: what is missing, which official source would resolve it, how to obtain it, who must supply it, and which decision it blocks. Populate it from the existing needs-review rows so nothing stays only on the Flagged for Review page. Why it helps the decision: Every unresolved item currently appears as a blank cell on several pages. A single register turns a scatter of blanks into an ordered work plan, and it is the direct answer to what information has to exist before a decision can reasonably be made.",
+            "status": "analysis",
+            "source_ids": [
+              "S25",
+              "S24",
+              "S16",
+              "S55",
+              "S32",
+              "S07"
+            ],
+            "effort": "Medium build, High impact",
+            "review_status": "Review",
+            "notes": "The official routes that would resolve the open items are the portal and Housing Inventory pages, the Property Information Map, the Section 6.14 guidance, the counsel line and the Tenant Petition process. Consolidates the Decision Readiness page (DR-* rows), which answers the same question for this case; this adds the reusable register.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-F2",
+            "label": "Facts only the owner can obtain",
+            "value": "What changes: Add a checklist of the case facts that no amount of outside research can supply: the last original occupant in each unit, the date occupancy began, whether a 6.14 notice was served, each unit's anniversary date, the full lease and notice history, square footage and bedroom/bathroom counts, whether either unit is an in-law unit, whether the owner occupies one unit, and whether each tenant was in occupancy on November 1 for the fee-recovery test. Why it helps the decision: Several of the blanks on this site are the owner's own facts, not public records. Naming them explicitly prevents them from being mistaken for research gaps that more research would close.",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S53",
+              "S16",
+              "S56",
+              "S60",
+              "S59"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "The Housing Inventory asks the owner for square footage, bedrooms, bathrooms, the date occupancy began and the base rent; the fee page turns on November 1 occupancy; the Section 6.14 page turns on the last original occupant and the date occupancy began. None of these are public records. Overlaps SUG-A1 to SUG-A7; this is the explicit owner-only list.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-F3",
+            "label": "Counsel call script for the unanswered questions",
+            "value": "What changes: Add a printable call script containing only the specific open questions, with the Rent Board counselor's published phone number, office hours and the note that counseling is free, multilingual and cannot give legal advice. Why it helps the decision: Rent Board counseling is free and multilingual but explicitly will not give legal advice, and the published guidance tells callers to have their questions written down in advance. A prepared script converts a five-minute call into a usable answer.",
+            "status": "analysis",
+            "source_ids": [
+              "S24",
+              "S07",
+              "S55",
+              "S16"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "SF.gov: counseling is free, available in Spanish, Cantonese and Mandarin with interpretation for other languages, is provided by phone Monday to Friday 9-12 and 1-4, and cannot give legal advice; the published guidance tells callers to have their questions written down first. Calls are generally limited to 5 minutes. Builds out SUG-A5.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-F4",
+            "label": "Pre-decision gate sequence",
+            "value": "What changes: Add a single 'can I proceed?' checklist at the top of the process page that must be fully answered before any notice is dated: coverage confirmed, Housing Inventory filed, license current on the effective date, no retaliation window open, rate selected for the effective date, banked total confirmed, notice period and method chosen, petition routed, uniform criterion recorded. Why it helps the decision: The rules are sequential and several of them are date-triggered. A single ordered gate list is what turns the site from a reference into something that can be worked through in order without missing a step.",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S73",
+              "S35",
+              "S05",
+              "S57",
+              "S42",
+              "S16",
+              "S09"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "The sequence is fixed by the official rules: coverage, Housing Inventory report, current license on the effective date, no open retaliation window, the rate for the effective date, the banked total, the notice period and delivery method, petition routing, and one consistent criterion applied to both units. Site-side ordering of the Decision Readiness gates (DR-G1 to DR-G5).",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "G. Internal site quality - proposals about this site",
+        "intro": "These rows are about the research site itself rather than about the law. They carry no official legal basis and are labelled as internal site-design proposals; they are listed so the owner can accept, reject or defer them on their merits. Contributed by the 2026-11-13 final review.",
+        "columns": [
+          "ID",
+          "Suggestion",
+          "Why it helps the decision",
+          "Evidence / official source",
+          "Effort",
+          "Review status"
+        ],
+        "rows": [
+          {
+            "id": "SUG-G1",
+            "label": "Per-row verification date",
+            "value": "What changes: Add a visible 'last verified' date to every published row and every official source, so a reader can tell which findings were re-checked most recently and which are inherited from an earlier pass. Why it helps the decision: Official pages change without notice - a proposed-cap notice appeared on three Rent Board pages in the same week. Showing the verification date makes the age of each figure visible instead of implied.",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "effort": "Low build, High impact",
+            "review_status": "Review",
+            "notes": "Internal site-design proposal - no official rule applies; proposal about this site. The official pages themselves change, so the age of each figure has to be visible rather than implied. Extends SUG-B4 and SUG-B2.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-G2",
+            "label": "Link and content monitor for the source ledger",
+            "value": "What changes: Add a scheduled job that re-fetches every official URL in the ledger and reports any redirect, error or content change, and posts the result as a dated entry rather than editing a value silently. Why it helps the decision: The ledger already records several official URLs that changed or returned errors, and official pages disagree with each other on examples. An automated check would surface the next change before a reader relies on it, and it preserves the rule that a value is never changed without a note.",
+            "status": "analysis",
+            "source_ids": [
+              "S68",
+              "S69"
+            ],
+            "effort": "Medium build, High impact",
+            "review_status": "Review",
+            "notes": "Internal site-design proposal - no official rule applies; proposal about this site. The repository and its GitHub Pages build API are the project records for how this site is maintained. Same goal as SUG-B2; this one adds content-change detection, not just a link check.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-G3",
+            "label": "Unchanged-column consistency",
+            "value": "What changes: Keep the current table shape on every finding page and publish the Suggestions page and the missing-information register in the same shape, so a reviewer can read any page without relearning the layout. Why it helps the decision: A single consistent shape is what makes the site scannable. Suggestions and the missing-information register are new pages, and matching the existing shape keeps the dashboard coherent instead of becoming a second, differently-organised document.",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "Internal site-design proposal - no official rule applies; proposal about this site. The five-column shape already used on every finding page is the reference.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-G4",
+            "label": "Blank-means-unknown convention, stated once and repeated",
+            "value": "What changes: Keep the existing convention that an empty cell means 'not officially confirmed' and never means zero or 'not applicable', and repeat the legend at the top of every page rather than only on the landing page. Why it helps the decision: A blank on this site is a deliberate statement that no official source confirms the value. If that is only explained on one page, a reader who lands on another page may read a blank as an answer.",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "Internal site-design proposal - no official rule applies; proposal about this site. A blank means no official source confirms the value, which is different from a zero or from 'not applicable'.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-G5",
+            "label": "Print and mobile review mode",
+            "value": "What changes: Add a print stylesheet and a narrow-screen layout so the notice checklist, the worksheet and the case summary can be used on a phone at the property and printed for a file or for an attorney. Why it helps the decision: The deciding moments - checking a license status, serving a notice, assembling a file - happen away from a desk. A desktop-only dashboard is usable for research but not for the moment of action.",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "Internal site-design proposal - no official rule applies; proposal about this site. This is a proposal about how this research site is presented on small screens and on paper.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-G6",
+            "label": "Review-cycle date on the landing page",
+            "value": "What changes: Show one 'next review due' date on the landing page, set after each re-verification pass, together with the list of items that are most likely to have changed (the published rate period, the pending cap, the fee amount and the license rule). Why it helps the decision: The published rate is period-limited and the pending legislation can be enacted at any time. A single visible review date makes it obvious when the dashboard needs re-checking rather than assuming it is current.",
+            "status": "analysis",
+            "source_ids": [
+              "S02",
+              "S71",
+              "S56",
+              "S07",
+              "S68"
+            ],
+            "effort": "Low build, Medium impact",
+            "review_status": "Review",
+            "notes": "The items most likely to change are the published rate period, the proposed cap in File 261020, the Rent Board Fee amount and the licensing rule - each of which has a published official source.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "H. Review checklist for the D-G proposals (reviewer to complete)",
+        "intro": "One row per proposal above. The Decision, Reviewer, Date and Review note cells are intentionally blank - they are the reviewer's to complete. A blank cell here means 'not yet decided', which is different from a blank cell on a finding page, where a blank means 'no official source confirms the value'.",
+        "columns": [
+          "ID",
+          "Suggestion",
+          "Decision",
+          "Reviewer",
+          "Date",
+          "Review note"
+        ],
+        "rows": [
+          {
+            "id": "CL-D1",
+            "label": "License-status gate per unit",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S73",
+              "S53",
+              "S08"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D2",
+            "label": "Housing Inventory filing tracker",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S53",
+              "S55"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D3",
+            "label": "Rent Board Fee calendar with the tenant-recovery switch",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S56",
+              "S62",
+              "S65"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D4",
+            "label": "Effective-date rate engine",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S04",
+              "S21"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D5",
+            "label": "Banked-increase ledger per unit",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S05",
+              "S54",
+              "S77"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D6",
+            "label": "Pending-legislation watch row",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S71",
+              "S72",
+              "S87"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D7",
+            "label": "Retaliation-window screen",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S57",
+              "S22"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D8",
+            "label": "Uniform-criteria record for the one-unit-or-both decision",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S42",
+              "S41",
+              "S38",
+              "S39"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D9",
+            "label": "Roommate and 6.14 fact screen",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S16",
+              "S01",
+              "S37"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D10",
+            "label": "Coverage determination sheet per unit",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S06",
+              "S32",
+              "S59",
+              "S60",
+              "S08"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D11",
+            "label": "Notice assembly with required contents",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S35",
+              "S78",
+              "S01",
+              "S26"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-D12",
+            "label": "Petition routing table",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S09",
+              "S10",
+              "S11",
+              "S12",
+              "S13",
+              "S14",
+              "S77"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-E1",
+            "label": "Case-file completeness checklist",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S35",
+              "S78",
+              "S07",
+              "S55",
+              "S56",
+              "S32",
+              "S02"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-E2",
+            "label": "Tenant-side challenge walkthrough",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S25",
+              "S08",
+              "S26",
+              "S24"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-E3",
+            "label": "Printable attorney-review handoff packet",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S23",
+              "S24",
+              "S25",
+              "S42",
+              "S41"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-E4",
+            "label": "Neutral-language bank for the increase letter",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S22",
+              "S01"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-E5",
+            "label": "Public-records disclosure note before filing",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S53"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-F1",
+            "label": "Missing-information register",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S25",
+              "S24",
+              "S16",
+              "S55",
+              "S32",
+              "S07"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-F2",
+            "label": "Facts only the owner can obtain",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S53",
+              "S16",
+              "S56",
+              "S60",
+              "S59"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-F3",
+            "label": "Counsel call script for the unanswered questions",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S24",
+              "S07",
+              "S55",
+              "S16"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-F4",
+            "label": "Pre-decision gate sequence",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S73",
+              "S35",
+              "S05",
+              "S57",
+              "S42",
+              "S16",
+              "S09"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-G1",
+            "label": "Per-row verification date",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-G2",
+            "label": "Link and content monitor for the source ledger",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S68",
+              "S69"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-G3",
+            "label": "Unchanged-column consistency",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-G4",
+            "label": "Blank-means-unknown convention, stated once and repeated",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-G5",
+            "label": "Print and mobile review mode",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "CL-G6",
+            "label": "Review-cycle date on the landing page",
+            "value": "",
+            "status": "analysis",
+            "source_ids": [
+              "S02",
+              "S71",
+              "S56",
+              "S07",
+              "S68"
+            ],
+            "notes": "",
             "flag_id": "",
             "source_note": ""
           }

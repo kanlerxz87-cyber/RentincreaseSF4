@@ -75,6 +75,63 @@ After PRs #15, #16, #17, #20, #21, and #22 merged onto `main` (`8d51455`), this 
 | `research/flags.md` | The `T09 additions` table from `arena-abb34cd1` listed pre-reconciliation local flag IDs `F31`–`F38`. | Compared `research/flags.md` against `scripts/site_flags.py`. | Kept `arena-abb34cd1`'s table intact and appended a canonical `F19`/`F20`/`F31`–`F45` reconciliation table. |
 
 
+## Final integration review 2026-11-13 (session `arena-87a91aec`, T54)
+
+Reviewed the merged repository line by line on the branch `arena/87a91aec-rentincreasesf4`, based at `f810ee5` (PR #50). This section records what was checked, what was found, and what was changed. The tree was re-reviewed **after** the concurrent session `arena-415e54ea` merged PRs #51 and #53, so the findings below describe the merged state.
+
+| Line / file | Finding | Verification | Action |
+| --- | --- | --- | --- |
+| Whole tree | The owner's request for "a section dedicated for suggestions so someone can review suggestions and choose the best path before implementing any changes" had **no corresponding page**. The word "suggest" appeared only inside `data/questions.json`, `pages/questions.html` and `TENANT_ASSISTANCE_RESEARCH.md`. | `grep -ril "suggest"` across `*.md`, `*.html`, `*.json`, `*.py`; full read of `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/build_site.py`. | Added the Suggestions content and the Decisions/Review workflow. A concurrent session independently published a Suggestions queue and a Decision Readiness page in PR #51; both are kept and merged into one canonical page (see the merge note below). |
+| `scripts/site_suggestions.py` (new) | A proposal row could have been written with no official basis, or with a legal-sounding claim and no link. | Row-by-row read of all 27 rows against the sources fetched on 2026-11-13. | Every row carries a basis statement in `notes` and at least one official source ID. The five site-design rows carry the exact marker `Internal site-design proposal`; the validator fails the build if a marked row lacks the marker, if an unmarked row carries it, or if any row has no source. |
+| `scripts/validate_site.py` | The approval-language check used a bare substring test. It produced a false positive on its own negated sentence ("It does not state that any rent increase is lawful, approved or safe from challenge."). | Ran the check against the rendered page and read the match context. | Rewritten to test each phrase against a negation window, so a negated statement is not read as a claim. Six new checks added for this session's suggestion groups. |
+| `scripts/site_suggestions.py` — SUG-D7 | The wording "can be challenged as retaliation even when the amount is lawful" asserted a legal conclusion more strongly than the verified sources support and read ambiguously against the site's own disclaimer. | Compared with the Civil Code 1942.5 wording recorded under S57. | Reworded to describe the exposure as "independent of whether the increase amount itself is permitted". |
+| `scripts/site_pages.py` — review checklist | The checklist rows initially reused their proposal IDs, so row IDs were not unique across the site. | `validate_site.py` reported `row IDs are unique across all pages` as failing on SUG-D1…SUG-D5. | Checklist rows now carry their own `CL-` identifiers; the uniqueness check passes. |
+| `scripts/build_site.py` — section renderer | The renderer had no way to show the per-section introduction paragraphs that both sessions' suggestion groups use, and no renderer for the checklist's blank reviewer cells. | Read the merged renderer against the merged page data. | Added intro support and a dedicated checklist renderer; the blank cells are labelled "(blank - to be completed by the reviewer)". |
+| `research/c72_2026-11-11_audit/validate_c72.py` | The check hard-coded `len(html_files) == 21`. Adding a page failed the check even though the link crawl itself found 0 broken links and 0 broken anchors. | Ran the audit; the failure detail showed the pages scanned with no `broken=` list. | Count changed to a lower bound so a new page cannot break it. |
+| `scripts/site_sources.py` — `DATE` | The ledger date read `2026-11-11` while the ledger itself was being updated. | Read the rendered page header. | Moved to `2026-11-13`; the concurrent session independently used the same date. |
+| `SOURCES.md` and `VERIFICATION.md` | Hand-maintained ledgers that mirror the generator; a drift between them would put an unverified claim on the site. | Compared both ledgers against `scripts/site_sources.py` line by line. | Twelve sources gained an explicit "Re-verified 2026-11-13" statement in both files; both ledgers and the research record carry the pass. |
+| Flags F01, F02, F03, F45 | Each describes a conflict inside a published SF.gov page. A flag that no longer matches the live page would be a false statement on the site. | Direct `fetch_page` on 2026-11-13 of S01 (chunks 0–1), S02 and S05. | All four re-confirmed live: F01 (S01 example says 1.6% for June 1, 2025 while Current Rates show 1.4%), F02 (S05 example says 1.4% for August 1, 2024 while Form 571 shows 1.7%), F03 (S01 example banks after 12 full months while S05 requires 24), F45 (the "575" link still points to the Form 574 PDF). None closed or reworded. |
+| Privacy | No raw tenant identifier may appear in any tracked file. | `research/n08_qa/privacy_check.py`; the validator's own initials scan and no-exact-address check. | 0 matches in the current tree. The historical exposure of short identifiers in this public repository's git history and PR diffs (F44, F51) is unchanged and remains owner-actionable; no purge is claimed. |
+| Stale pull requests | PRs #18, #19, #25, #47, #48 were open with owners stale by more than 60 minutes with no commits. #47 was a competing integration of the C72 defects already merged by PR #49; #48 explicitly yielded the shared scope to #47 and kept only an independent QA record. | `gh pr list --state open`; `git log` on each fetched PR head; diff of each against `origin/main`. | #47's substance is on `main` via PR #49. #48's unique artifact (`research/f4i_2026-11-11_qa/README.md`) and #25's unique artifact (`research/current_audit/2026-11-08_source_repo_audit.md`) were **not** on `main`; both are now preserved verbatim with provenance headers so no work is discarded. The five stale PRs are closed as superseded rather than merged, each with a comment pointing at where its work now lives. |
+
+### The merge with the concurrent session `arena-415e54ea`
+
+| Element | Decision |
+| --- | --- |
+| `pages/suggestions.html` | One canonical page. The concurrent session's `SUG-P*`, `SUG-A*`, `SUG-B*` and `SUG-C*` groups stay first; this session's 27 proposals are appended as groups **D** (compliance gates), **E** (evidence and defensibility), **F** (discovering the missing information) and **G** (internal site quality), each with its own introduction. |
+| Review checklist | Appended as group **H**, with `CL-` identifiers so no row ID collides. |
+| Overlap between the two sessions' proposals | The row's notes name the related row instead of restating it; nothing is presented twice as if it were two proposals. |
+| `pages/decision.html` and the state-vs-local answer | Kept as published by the concurrent session, unchanged. The state-vs-local answer is now the first thing on the landing page. |
+| `COORDINATION.md` | Both session records are kept verbatim; this session's record documents the collision and how it was resolved. |
+| Generated files | Taken from the merged side and regenerated from the merged generator. No hand-edited output. |
+
+### Not claimed by this review
+
+Structural and link checks are not legal verification. This session does not claim attorney review, challenge immunity, a guarantee that no complaint or lawsuit will follow, a complete privacy history purge, or exhaustive reachability of every external link. Twelve of the sources were re-opened directly on 2026-11-13; the rest keep their own earlier verification dates. Flagged items F01–F53, T03-F01–T03-F10 and B87-F01–B87-F08 remain published on the **Flagged for Review** page and do not block the merge.
+
+### Manual review links
+
+- Repository: https://github.com/kanlerxz87-cyber/RentincreaseSF4
+- Session branch: https://github.com/kanlerxz87-cyber/RentincreaseSF4/tree/arena/87a91aec-rentincreasesf4
+- Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
+- Suggestions page (after deploy): https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/suggestions.html
+- Decision Readiness page: https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/decision.html
+- GitHub Pages settings (API): https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages
+- This session's verification record: `research/t54_suggestions/README.md`
+
+### The merge with the concurrent session `arena-23a50992` (PR #52 / #55)
+
+A third concurrent session merged a tenant-lawyer review table while this session was integrating. Its work is kept, not overwritten.
+
+| Element | Decision |
+| --- | --- |
+| `pages/decision.html` | The `LR-01`-`LR-11` lawyer-review criteria table is kept. It is a distinct table from the five decision gates and the `DR-*` register, and it answers a question this session's work does not: what a San Francisco tenant lawyer would actually test. Nothing was overwritten. |
+| `S92` (Legistar copy of Ordinance 265-20) | Kept, with its own caveat recorded as flag **F54**: the fetched copy is a marked-up Master Report with strike-throughs and redlines, not clean codified text, so it must not be quoted as the codified rule. |
+| Flags **F54**-**F58** | Kept. **F58** is updated by this session to record that the five stale pull requests it names are now closed as superseded and that no unique artifact was lost. |
+| `scripts/site_pages.py` | The merged file keeps the `SUG-P/A/B/C` groups, the `DR-*` register, the `LR-01`-`LR-11` table, questions **Q-22**-**Q-24**, and this session's appended groups **D**-**G** with the group **H** review checklist. |
+| Question row cross-references | `Q-22` and `Q-23` referred to the old row identifiers `SUG-18`, `SUG-19`, `SUG-20` and `SUG-21`. After the renumbering to groups D-G those pointers were updated to `SUG-F1`, `SUG-F2`, `SUG-F3` and `SUG-F4`, so no published question points at a row that no longer exists. |
+| Generated files | Taken from the merged side and regenerated from the merged generator. No hand-edited output. |
+
 ## Re-review 2026-11-13 (session `arena-23a50992`, S23)
 
 Base: `main` at `f810ee5` (PR #50). Scope: line-by-line review of the current tree, git history, open PRs and the published site build. Official-source checks are in `research/s23_2026-11-13/README.md`.

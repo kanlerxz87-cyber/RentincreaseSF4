@@ -71,10 +71,30 @@ def render_suggestion_table(section, in_pages=True):
     out.append("</tbody></table></div>")
     return "".join(out)
 
+def render_decision_checklist(section, in_pages=True):
+    """Render the review checklist: ID, Suggestion, then blank reviewer cells."""
+    out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} &mdash; scrollable table"><table><thead><tr>'.format(e(section["title"]))]
+    for c in section["columns"]:
+        out.append('<th scope="col">{}</th>'.format(e(c)))
+    out.append("</tr></thead><tbody>")
+    for r in section["rows"]:
+        out.append("<tr>")
+        out.append('<td><span class="small">{}</span></td>'.format(e(r["id"])))
+        out.append("<td><strong>{}</strong></td>".format(e(r["label"])))
+        out.append('<td>{}</td>'.format(source_links(r.get("source_ids", []))))
+        for _ in range(3):
+            out.append('<td class="decision-blank">(blank - to be completed by the reviewer)</td>')
+        out.append("</tr>")
+    out.append("</tbody></table></div>")
+    return "".join(out)
+
+
 def render_table(section, in_pages=True):
     cols = section["columns"]
     if "Effort" in cols and "Review status" in cols:
         return render_suggestion_table(section, in_pages)
+    if "Decision" in cols and "Reviewer" in cols:
+        return render_decision_checklist(section, in_pages)
     out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} — scrollable table"><table><thead><tr>'.format(e(section["title"]))]
     for c in cols:
         out.append("<th scope=\"col\">{}</th>".format(e(c)))
@@ -213,8 +233,14 @@ def page_html(slug, page):
     out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
         e(page["title"]), e(page["description"]), e(D.DISCLAIMER)
     ))
+    if page.get("intro"):
+        out.append('<section class="narrative"><p>{}</p></section>'.format(e(page["intro"])))
     for sec in page["sections"]:
-        out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
+        intro = sec.get("intro")
+        head = "<section><h2>{}</h2>".format(e(sec["title"]))
+        if intro:
+            head += "<p>{}</p>".format(e(intro))
+        out.append("{}</section>".format(head) + render_table(sec, True) + "</section>")
     out.append(footer_html(True))
     return "".join(out)
 
@@ -259,6 +285,7 @@ def page_sources(page):
                     ids.append(sid)
     return ids
 
+
 def index_html():
     out = [header_html("Rental increase SF", "Executive-summary dashboard for an anonymized San Francisco rent-increase case.", "", False)]
     out.append('<section class="hero"><h2>Start here: is the \'inform the Rent Board\' rule a state law or a local law?</h2>'
@@ -286,6 +313,8 @@ def index_html():
             value = str(len(D.SOURCES))
         elif value == "auto:flags":
             value = str(len(D.FLAGS))
+        elif value == "auto:suggestions":
+            value = str(len(D.all_suggestions()))
         out.append('<div class="card"><div class="k">{}</div><div class="v">{}</div><div class="d">{}</div><a href="pages/{}.html">Open {} &rarr;</a></div>'.format(
             e(label), e(value), e(desc), e(slug), e(label)
         ))
@@ -298,6 +327,15 @@ def index_html():
         elif slug == "flagged":
             desc = "Clearly labeled irregularities and unverified items, each with official source links."
             sids = ["S01", "S07", "S08", "S02"]
+        elif slug == "suggestions":
+            desc = "Proposed improvements to this site, each with its official basis and a review decision to make before implementation."
+            sids = []
+            for sec in D.PAGES["suggestions"]["sections"]:
+                for r in sec["rows"]:
+                    for sid in r.get("source_ids", []):
+                        if sid not in sids:
+                            sids.append(sid)
+            sids = sids[:6]
         else:
             page = D.PAGES[slug]
             desc = page["description"]
@@ -325,6 +363,14 @@ def main():
     write(DATA / "pages.json", json.dumps(D.PAGES, indent=2, ensure_ascii=False) + "\n")
     for slug, page in D.PAGES.items():
         write(DATA / "{}.json".format(slug), json.dumps(page, indent=2, ensure_ascii=False) + "\n")
+    write(DATA / "suggestions.json", json.dumps({
+        "title": D.PAGES["suggestions"]["title"],
+        "description": D.PAGES["suggestions"]["description"],
+        "review_status_values": list(D.REVIEW_STATUS_VALUES),
+        "internal_marker": D.INTERNAL_MARKER,
+        "sections": [{"title": s["title"], "intro": s.get("intro", ""), "columns": s["columns"], "rows": s["rows"]}
+                     for s in D.PAGES["suggestions"]["sections"]],
+    }, indent=2, ensure_ascii=False) + "\n")
 
     for slug, page in D.PAGES.items():
         html = summary_page_with_narrative(page) if slug == "summary" else page_html(slug, page)

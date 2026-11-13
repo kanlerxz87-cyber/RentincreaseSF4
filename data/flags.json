@@ -691,8 +691,8 @@
   },
   {
     "id": "F58",
-    "title": "Repository clutter, duplicate validators and stale open pull requests",
-    "detail": "research/ holds 16 folders, several with their own validators (for example research/b87_notice_kit, research/c72_2026-11-11_audit, research/n08_qa). Open PRs #18, #19, #25, #47 and #48 are stale, conflicting generator states. This session did not merge or close any of them; the owner should decide whether to close them.",
+    "title": "Repository clutter, duplicate validators and stale pull requests",
+    "detail": "research/ holds 16 folders, several with their own validators (for example research/b87_notice_kit, research/c72_2026-11-11_audit, research/n08_qa). Pull requests #18, #19, #25, #47 and #48 were stale, conflicting generator states from earlier sessions. On 2026-11-13 session arena-87a91aec closed all five as superseded rather than merged, each with a comment pointing at where its work now lives; the two artifacts that existed only on those branches (research/f4i_2026-11-11_qa/README.md from #48 and research/current_audit/2026-11-08_source_repo_audit.md from #25) were preserved verbatim on main with provenance headers before closing. The repository-clutter and duplicate-validator half of this flag is unchanged and remains an owner decision.",
     "source_ids": [
       "S68"
     ],

@@ -44,6 +44,31 @@ def official_domain(url):
     host = urlparse(url).netloc.lower()
     return any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS)
 
+
+# Phrases that would assert that an increase has been approved, certified or guaranteed.
+# A match inside a negated sentence ("does not state that any rent increase is lawful")
+# is not a claim, so each match is checked against the text in front of it.
+_CLAIM_PATTERNS = [
+    "is approved", "is lawful", "is certified", "is guaranteed",
+    "we guarantee", "legally certified", "approved by counsel",
+    "guaranteed lawful", "guaranteed no lawsuit", "this increase is",
+]
+_NEGATION = re.compile(
+    r"\b(?:not|never|no|nothing|neither|nor|cannot|without|refuse|refuses|deny|denies|"
+    r"rather than|instead of|closest available substitute)\b", re.I)
+
+
+def _affirmative_claim_hits(text):
+    """Return approval/guarantee claims that are not inside a negated sentence."""
+    low = text.lower()
+    hits = []
+    for pat in _CLAIM_PATTERNS:
+        for m in re.finditer(re.escape(pat), low):
+            window = low[max(0, m.start() - 120):m.start()]
+            if not _NEGATION.search(window):
+                hits.append(text[max(0, m.start() - 60):m.end() + 30].replace("\n", " ").strip())
+    return hits
+
 def json_load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -468,6 +493,50 @@ def main():
           "{} suggestions".format(len(sug_items)))
     check("Suggestions page explains the review process before implementation",
           all(rid in {r["id"] for r in sug_rows} for rid in ("SUG-P1", "SUG-P3", "SUG-P5")))
+    # T54 groups D-G (session arena-87a91aec) appended to the concurrent session's queue.
+    t54_rows = [r for r in sug_rows if r["id"].startswith(("SUG-D", "SUG-E", "SUG-F", "SUG-G"))]
+    t54_errors = []
+    for r in t54_rows:
+        if not r.get("source_ids"):
+            t54_errors.append("{} has no official source".format(r["id"]))
+        for sid in r.get("source_ids", []):
+            if sid not in source_map:
+                t54_errors.append("{} references unknown source {}".format(r["id"], sid))
+            elif not official_domain(source_map[sid]["url"]):
+                t54_errors.append("{} references nonofficial URL for {}".format(r["id"], sid))
+        if not r.get("effort") or not r.get("review_status") or not r.get("notes"):
+            t54_errors.append("{} is missing effort, review status or basis".format(r["id"]))
+        if r.get("review_status") not in D.REVIEW_STATUS_VALUES:
+            t54_errors.append("{} has an invalid review status".format(r["id"]))
+    check("every T54 suggestion carries an official basis, effort and a review status",
+          len(t54_rows) == 27 and not t54_errors, "{} rows; {}".format(len(t54_rows), "; ".join(t54_errors[:5])))
+    internal_rows = [r for r in t54_rows if D.INTERNAL_MARKER in r["notes"]]
+    expected_internal = {"SUG-G1", "SUG-G2", "SUG-G3", "SUG-G4", "SUG-G5"}
+    check("internal site-design proposals are labelled and claim no legal rule",
+          {r["id"] for r in internal_rows} == expected_internal,
+          "{} internal proposals labelled".format(len(internal_rows)))
+    proposal_rows = [r for r in sug_rows if "review_status" in r]
+    check("no suggestion is pre-approved",
+          all(r.get("review_status") in ("Review", "open for review") for r in proposal_rows),
+          "{} proposal rows at a review status".format(len(proposal_rows)))
+    checklist = [r for r in sug_rows if r["id"].startswith("CL-")]
+    check("review checklist has one blank decision row per T54 proposal",
+          len(checklist) == len(t54_rows)
+          and all(r["value"] == "" and not r.get("notes") for r in checklist),
+          "{} checklist rows".format(len(checklist)))
+    sug_html = (PAGES / "suggestions.html").read_text(encoding="utf-8")
+    check("suggestions page renders the blank review checklist",
+          sug_html.count("to be completed by the reviewer") == len(checklist) * 3,
+          "{} blank reviewer cells".format(sug_html.count("to be completed by the reviewer")))
+    check("suggestions page claims no approval, guarantee or legal advice",
+          not _affirmative_claim_hits(sug_html),
+          "; ".join(_affirmative_claim_hits(sug_html)[:5]) or "no approval language")
+    check("every suggestion row carries at least one source link",
+          all(r.get("source_ids") for r in sug_rows),
+          "{} rows without a link".format(len([r for r in sug_rows if not r.get("source_ids")])))
+    check("the suggestions page explains the internal-marker convention",
+          "Internal site-design proposal" in sug_html and "project record" in sug_html,
+          "legend present" if "project record" in sug_html else "legend missing")
     check("Decision Readiness page is published and in the navigation",
           "decision" in pages and (PAGES / "decision.html").exists()
           and any(s == "decision" for s, _ in D.NAV))
