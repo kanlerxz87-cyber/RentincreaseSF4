@@ -847,6 +847,44 @@ All five stale pull requests are closed as **superseded rather than merged**, ea
 
 ---
 
+### T54 publication result — PR #54 merged and GitHub Pages built (session `arena-87a91aec`, 2026-11-13 UTC)
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| Scope collision handled | Two concurrent sessions published overlapping Suggestions work. One canonical page now holds all 46 substantive proposals: the concurrent session's `SUG-P/A/B/C` groups first, this session's groups D–G appended, and the group H blank review checklist. The concurrent session's Decision Readiness register (`DR-*`) and tenant-lawyer review table (`LR-01`–`LR-11`) are both kept unchanged. | `pages/suggestions.html`, `pages/decision.html`; `REPO_REVIEW.md` merge tables |
+| PR [#54](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/54) | **MERGED** `2026-11-13T07:07:20Z`; merge commit `69a57e21c2c6b5591b0950c79422a8836f92f7ad` | `gh pr view 54` |
+| PR was blocked twice | The first merge attempt failed because `main` had advanced (PR #53). The second failed because a third session merged PR #55 while the integration was in progress. Each time the branch was merged with `origin/main` rather than rebased or force-pushed, and no other session's commit was rewritten. | merge commits `3d003b1`, `69da48d` |
+| CI `validate` on the PR | **PASSED** (6s), run [43383404005](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43383404005) | `gh pr checks 54` |
+| CI `validate` on `main` | **PASSED** for `69a57e2`, run [43383465753](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43383465753) | `gh run list --branch main` |
+| GitHub Pages build and deployment | **SUCCESS** for `69a57e2`, 30s, run [43383465171](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43383465171); Pages API `status: built`, `commit: 69a57e2…`, `error: null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Live spot check over HTTP | `https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/suggestions.html` serves the merged page: the link legend, the `SUG-P`/`A`/`B`/`C` groups, groups D–G and the group H checklist with its blank reviewer cells. | direct `fetch_page` of the live URL, chunks 0 and 8 |
+| Deployed-tree spot check | The merge commit on `main` contains `SUG-D1`, `CL-D1` and `Internal site-design proposal` on `pages/suggestions.html`, `LR-01` on `pages/decision.html`, and the state-vs-local hero on `index.html`. | `git show origin/main:<path>` at `69a57e2` |
+| Local gates at merge | `validate_site.py` **153 checks, 0 errors** (92 official sources, 76 flags, 491 rows, 77 needs-review rows); `validate_kit.py` **19/0**; `validate_c72.py` **19/0**; `privacy_check.py` **0 current-tree matches**; rebuild byte-identical; independent HTMLParser crawl **0 broken internal links and 0 broken anchors**. | `data/validation_report.json`; local run |
+| Stale pull requests closed | **#18, #19, #25, #47 and #48 closed** as superseded rather than merged, each with a comment naming where its work now lives. The two artifacts that existed only on those branches — `research/f4i_2026-11-11_qa/README.md` (#48) and `research/current_audit/2026-11-08_source_repo_audit.md` (#25) — were recovered and are confirmed present on `main`. | `gh pr close`; `git ls-tree -r origin/main` |
+| Other open pull requests | PR #56 (session `arena/1e813501`) was still open and **live** when this session finished. It belongs to another session and was **not** touched. | `gh pr list --state open` |
+
+**Live site:** https://kanlerxz87-cyber.github.io/RentincreaseSF4/
+
+**What the owner asked for, and where it now lives.**
+
+| Requirement | Where it is published |
+| --- | --- |
+| The individual-owner answer about Rent Board reporting, the Rent Increase License, notice timing and the consequences of getting it wrong, at the forefront of the executive summary | `index.html` heroes 1 and 2 and `EXECUTIVE_SUMMARY.md` sections *FOREFRONT: is the "inform the Rent Board" law state or local? — LOCAL* and *FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply* |
+| The step-by-step process for a non-corporate individual owner | `pages/process.html` |
+| Local, state and federal law distinguished, including whether the 2023 requirement is local or state | `pages/local.html` (LAW-01–LAW-08), `pages/federal.html`, `pages/summary.html` (SL-01–SL-05) |
+| Reasonable/normal increases, corporate vs individual-owner practice, correct tenant notice, defensible reasons, tenant advocate and lawyer scrutiny, one unit or both | `pages/market.html`, `pages/individual.html`, `pages/corporate.html`, `pages/analysis.html`, `pages/decision.html` (DP-A…DP-D) |
+| A clear questions / information / answers framework, including unanswered questions and how to discover the missing information | `pages/questions.html` (Q-01–Q-24, including Q-22–Q-24), `pages/decision.html` (five gates, 20 open questions), group F of the Suggestions page |
+| A dedicated Suggestions section so a reviewer can choose a path before anything is implemented | `pages/suggestions.html` — 46 substantive proposals in groups P, A, B, C, D, E, F, G, plus the group H blank review checklist |
+| A line-by-line repository review with irregularities flagged, and unverified values published as blank and flagged rather than inferred | `REPO_REVIEW.md`; `pages/flagged.html` (76 flagged items); blank cells marked *needs review* |
+| Every table row traceable to an official source, with manual-review links | Every row on every finding page carries an official source link; `pages/sources.html` is the full 92-source ledger; the Suggestions page legend states the one deliberate exception (internal site-design rows cite the project record, because inventing an official source for them would be false) |
+| Personal information anonymised while dates and amounts are preserved | Placeholders Tenant A–F throughout; `research/n08_qa/privacy_check.py` reports 0 matches; flags F44, F51 and F56 record the historical git-history exposure that only the owner can remediate |
+| Coordination, pull request, merge and GitHub Pages deployment completed without waiting for review | PR #54 merged, CI passed, Pages built and served; five stale PRs closed with comments |
+
+**Limits stated honestly.** The structural, link and source-resolution checks are not legal verification of every inherited claim. No attorney has reviewed any proposed increase; no approval, immunity from challenge, guarantee of no lawsuit, complete privacy history purge, or exhaustive external-link reachability is claimed. Twelve official pages were re-opened directly on 2026-11-13 and their figures held; the rest keep their own earlier verification dates. Flags F01–F58 remain published and do not block the site. Flags F44, F51 and F56 (raw identifier tokens in this public repository's git history and pull-request diffs) remain **open and owner-actionable** — this session did not and cannot rewrite published history.
+
+
+---
+
 ### Reconciliation note — this session `arena-87a91aec`, after PR #55
 
 A third concurrent session (`arena-23a50992`) merged **PR #52 / #55** to `main` while this session was integrating, adding the tenant-lawyer review criteria table (`LR-01`–`LR-11`) to the Decision Readiness page, the Legistar copy of Ordinance 265-20 (**S92**), and flags **F54–F58**.
