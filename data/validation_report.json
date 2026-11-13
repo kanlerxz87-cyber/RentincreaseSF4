@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-13",
   "status": "passed",
   "checks": [
     {
@@ -70,12 +70,12 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "351 rows checked; "
+      "detail": "354 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "458 rows checked; "
+      "detail": "516 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
@@ -378,6 +378,11 @@
       "detail": ""
     },
     {
+      "name": "pages/suggestions.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "pages/flagged.html in navigation exists",
       "ok": true,
       "detail": ""
@@ -525,7 +530,7 @@
     {
       "name": "executive summary page renders the narrative, not just tables",
       "ok": true,
-      "detail": "13 headings"
+      "detail": "14 headings"
     },
     {
       "name": "2026-11-10 proposed-cap inconsistencies and next-year rate are published",
@@ -626,17 +631,62 @@
       "name": "Notice Worksheet links from the Notice Checklist page",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "Suggestions and Review page is published and in the navigation",
+      "ok": true,
+      "detail": "27 suggestions"
+    },
+    {
+      "name": "suggestion IDs are unique and contiguous",
+      "ok": true,
+      "detail": "27 suggestions"
+    },
+    {
+      "name": "every suggestion carries an official basis and a complete proposal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "internal site-design proposals are labelled and claim no legal rule",
+      "ok": true,
+      "detail": "5 internal proposals labelled"
+    },
+    {
+      "name": "every suggestion starts at the Review decision and is not pre-approved",
+      "ok": true,
+      "detail": "27 rows at 'Review'"
+    },
+    {
+      "name": "review checklist has one blank decision row per suggestion",
+      "ok": true,
+      "detail": "27 checklist rows"
+    },
+    {
+      "name": "suggestions page claims no approval, guarantee or legal advice",
+      "ok": true,
+      "detail": "no approval language"
+    },
+    {
+      "name": "suggestions page makes no claim about this case's units",
+      "ok": true,
+      "detail": "no case decision stated"
+    },
+    {
+      "name": "suggestions data file is published",
+      "ok": true,
+      "detail": ""
     }
   ],
   "errors": [],
   "summary": {
     "sources": 87,
-    "pages": 20,
-    "data_files": 22,
-    "rows_verified": 351,
+    "pages": 21,
+    "data_files": 23,
+    "rows_verified": 354,
     "needs_review_rows": 66,
     "flags": 70,
-    "checks": 125,
+    "checks": 135,
     "errors": 0
   }
 }

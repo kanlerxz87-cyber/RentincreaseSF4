@@ -44,6 +44,31 @@ def official_domain(url):
     host = urlparse(url).netloc.lower()
     return any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS)
 
+
+# Phrases that would assert that an increase has been approved, certified or guaranteed.
+# A match inside a negated sentence ("does not state that any rent increase is lawful")
+# is not a claim, so each match is checked against the text in front of it.
+_CLAIM_PATTERNS = [
+    r"is approved", r"is lawful", r"is certified", r"is guaranteed",
+    r"we guarantee", r"legally certified", r"approved by counsel",
+    r"guaranteed lawful", r"guaranteed no lawsuit", r"this increase is",
+]
+_NEGATION = re.compile(
+    r"\b(?:not|never|no|nothing|neither|nor|cannot|without|refuse|refuses|deny|denies|"
+    r"rather than|instead of|closest available substitute)\b", re.I)
+
+
+def _affirmative_claim_hits(text):
+    """Return approval/guarantee claims that are not inside a negated sentence."""
+    low = text.lower()
+    hits = []
+    for pat in _CLAIM_PATTERNS:
+        for m in re.finditer(re.escape(pat), low):
+            window = low[max(0, m.start() - 120):m.start()]
+            if not _NEGATION.search(window):
+                hits.append(text[max(0, m.start() - 60):m.end() + 30].replace("\n", " ").strip())
+    return hits
+
 def json_load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -344,7 +369,7 @@ def main():
     check("2026-11-10 proposed-cap inconsistencies and next-year rate are published",
           any(r["id"] == "RATE-14" and "Pending Committee Action" in r["value"] for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
           and any(r["id"] == "RATE-17" and r["value"] == "" and r["status"] == "needs review" for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
-          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11")
+          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11", "2026-11-13")
           and "2026-11-10" in D.SOURCES["S72"]["statement"]
           and official_domain(D.SOURCES["S71"]["url"]))
     check("pending cap is distinguished from current law and calculation is cautioned",
@@ -437,6 +462,62 @@ def main():
           and all(bid in flagged_html for bid in b87_flag_ids))
     check("Notice Worksheet links from the Notice Checklist page",
           "worksheet.html" in (PAGES / "compliance.html").read_text(encoding="utf-8"))
+
+    # ---------------------------------------------------------------- Suggestions
+    sug_html = (PAGES / "suggestions.html").read_text(encoding="utf-8") if (PAGES / "suggestions.html").exists() else ""
+    sug_rows = D.all_suggestions()
+    sug_ids = [s["id"] for s in sug_rows]
+    check("Suggestions and Review page is published and in the navigation",
+          bool(sug_html) and ("suggestions", "Suggestions & Review") in D.NAV
+          and 'href="suggestions.html"' in sug_html and 'href="pages/suggestions.html"' in index_html,
+          "{} suggestions".format(len(sug_rows)))
+    check("suggestion IDs are unique and contiguous",
+          sug_ids == ["SUG-{:02d}".format(i) for i in range(1, len(sug_ids) + 1)],
+          "{} suggestions".format(len(sug_ids)))
+    sug_source_errors = []
+    for s in sug_rows:
+        if not s.get("source_ids"):
+            sug_source_errors.append("{} has no source".format(s["id"]))
+        for sid in s.get("source_ids", []):
+            if sid not in source_map:
+                sug_source_errors.append("{} references unknown source {}".format(s["id"], sid))
+            elif not official_domain(source_map[sid]["url"]):
+                sug_source_errors.append("{} references nonofficial URL for {}".format(s["id"], sid))
+        if not s.get("proposal") or not s.get("why") or not s.get("basis") or not s.get("effort") or not s.get("impact"):
+            sug_source_errors.append("{} is missing proposal, why, basis, effort or impact".format(s["id"]))
+        if s.get("effort") not in ("Low", "Medium", "High") or s.get("impact") not in ("Low", "Medium", "High"):
+            sug_source_errors.append("{} has an invalid effort or impact value".format(s["id"]))
+        if s.get("internal") and D.INTERNAL_MARKER not in s.get("basis", ""):
+            sug_source_errors.append("{} is internal but carries no internal marker".format(s["id"]))
+        if not s.get("internal") and D.INTERNAL_MARKER in s.get("basis", ""):
+            sug_source_errors.append("{} is not internal but carries the internal marker".format(s["id"]))
+    check("every suggestion carries an official basis and a complete proposal",
+          not sug_source_errors, "; ".join(sug_source_errors[:5]))
+    internal_rows = [s for s in sug_rows if s.get("internal")]
+    check("internal site-design proposals are labelled and claim no legal rule",
+          bool(internal_rows) and all(D.INTERNAL_MARKER in sug_html for _ in [0])
+          and sug_html.count("Internal site-design proposal") >= len(internal_rows),
+          "{} internal proposals labelled".format(len(internal_rows)))
+    check("every suggestion starts at the Review decision and is not pre-approved",
+          all(s.get("decision", D.DECISION_DEFAULT) == D.DECISION_DEFAULT for s in sug_rows)
+          and 'class="badge proposed">{}<'.format(D.DECISION_DEFAULT) in sug_html
+          and sug_html.count('class="badge proposed">{}<'.format(D.DECISION_DEFAULT)) == len(sug_rows),
+          "{} rows at '{}'".format(len(sug_rows), D.DECISION_DEFAULT))
+    checklist = D.review_checklist()
+    check("review checklist has one blank decision row per suggestion",
+          len(checklist) == len(sug_rows)
+          and all(c["decision"] == "" and c["reviewer"] == "" and c["date"] == "" and c["note"] == "" for c in checklist)
+          and sug_html.count("to be completed by the reviewer") == len(checklist) * 4,
+          "{} checklist rows".format(len(checklist)))
+    check("suggestions page claims no approval, guarantee or legal advice",
+          not _affirmative_claim_hits(sug_html),
+          "; ".join(_affirmative_claim_hits(sug_html)[:5]) or "no approval language")
+    check("suggestions page makes no claim about this case's units",
+          not any(p in sug_html.lower() for p in ("unit 1 may", "unit 2 may", "we recommend raising",
+                                                 "the increase for unit")),
+          "no case decision stated")
+    check("suggestions data file is published",
+          (DATA / "suggestions.json").exists() and len(json_load(DATA / "suggestions.json")["sections"]) == len(D.SUGGESTION_SECTIONS))
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

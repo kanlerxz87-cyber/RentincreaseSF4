@@ -231,6 +231,67 @@ def page_sources(page):
                     ids.append(sid)
     return ids
 
+
+def suggestion_basis(s):
+    """Official basis cell: the rule that motivates the proposal, with its official links.
+
+    Internal site-design proposals keep the project-record link for the site they describe,
+    so every rendered row keeps an official-domain link. The marker is what distinguishes
+    them: no legal rule is claimed for them.
+    """
+    links = source_links(s.get("source_ids", []))
+    basis = s.get("basis", "")
+    if s.get("internal"):
+        # The basis text already opens with the marker; do not print it twice.
+        rest = basis[len(D.INTERNAL_MARKER):].lstrip(" -:")
+        return '<span class="internal-mark">{}</span><br>{}<br>{}'.format(e(D.INTERNAL_MARKER), e(rest), links)
+    return '{}<br>{}'.format(e(basis), links)
+
+
+def suggestions_page_html():
+    out = [header_html("Suggestions & Review",
+                       "Proposed improvements to this site, listed for review before any change is implemented.",
+                       "suggestions", True)]
+    out.append('<section class="hero"><h2>Suggestions &amp; Review</h2>'
+               '<p>Every row below is a <strong>proposal</strong>, not a change. Each row carries the official rule that motivates it, '
+               'a rough effort and impact estimate, and a Decision cell that starts at <strong>{decision}</strong>. '
+               'Fill in the review checklist at the bottom of this page with Accept, Reject or Defer; only accepted items become candidates for implementation.</p>'
+               '<div class="disclaimer">{disclaimer}</div></section>'.format(
+                   decision=e(D.DECISION_DEFAULT), disclaimer=e(D.DISCLAIMER)))
+    out.append('<section class="narrative">{}</section>'.format(md_to_html(D.REVIEW_TEXT)))
+    for sec in D.SUGGESTION_SECTIONS:
+        out.append("<section><h2>{}</h2><p>{}</p>".format(e(sec["title"]), e(sec["intro"])))
+        out.append('<div class="tablewrap" tabindex="0" role="region" aria-label="{} - scrollable table"><table><thead><tr>'.format(e(sec["title"])))
+        for c in D.SUGGESTION_COLUMNS:
+            out.append('<th scope="col">{}</th>'.format(e(c)))
+        out.append("</tr></thead><tbody>")
+        for s in sec["rows"]:
+            out.append("<tr>")
+            out.append('<td><strong>{}</strong><br><span class="small">{}</span></td>'.format(e(s["id"]), e(s["title"])))
+            out.append('<td>{}<p class="suggest-why"><strong>Why:</strong> {}</p></td>'.format(e(s["proposal"]), e(s["why"])))
+            out.append("<td>{}</td>".format(e(s["effort"])))
+            out.append("<td>{}</td>".format(e(s["impact"])))
+            out.append("<td>{}</td>".format(suggestion_basis(s)))
+            out.append('<td><span class="badge proposed">{}</span></td>'.format(e(D.DECISION_DEFAULT)))
+            out.append("</tr>")
+        out.append("</tbody></table></div></section>")
+    out.append("<section><h2>Review checklist</h2>")
+    out.append('<div class="narrative">{}</div>'.format(md_to_html(D.REVIEW_CHECKLIST_TEXT)))
+    out.append('<div class="tablewrap" tabindex="0" role="region" aria-label="Review checklist - scrollable table"><table><thead><tr>')
+    for c in D.REVIEW_COLUMNS:
+        out.append('<th scope="col">{}</th>'.format(e(c)))
+    out.append("</tr></thead><tbody>")
+    for r in D.review_checklist():
+        out.append("<tr>")
+        out.append('<td><strong>{}</strong><br><span class="small">{}</span><br>{}</td>'.format(
+            e(r["id"]), e(r["title"]), source_links(r.get("source_ids", []))))
+        for key in ("decision", "reviewer", "date", "note"):
+            out.append('<td class="decision-blank">(blank - to be completed by the reviewer)</td>')
+        out.append("</tr>")
+    out.append("</tbody></table></div></section>")
+    out.append(footer_html(True))
+    return "".join(out)
+
 def index_html():
     out = [header_html("Rental increase SF", "Executive-summary dashboard for an anonymized San Francisco rent-increase case.", "", False)]
     out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
@@ -252,6 +313,8 @@ def index_html():
             value = str(len(D.SOURCES))
         elif value == "auto:flags":
             value = str(len(D.FLAGS))
+        elif value == "auto:suggestions":
+            value = str(len(D.all_suggestions()))
         out.append('<div class="card"><div class="k">{}</div><div class="v">{}</div><div class="d">{}</div><a href="pages/{}.html">Open {} &rarr;</a></div>'.format(
             e(label), e(value), e(desc), e(slug), e(label)
         ))
@@ -264,6 +327,14 @@ def index_html():
         elif slug == "flagged":
             desc = "Clearly labeled irregularities and unverified items, each with official source links."
             sids = ["S01", "S07", "S08", "S02"]
+        elif slug == "suggestions":
+            desc = "Proposed improvements to this site, each with its official basis and a review decision to make before implementation."
+            sids = []
+            for s in D.all_suggestions():
+                for sid in s["source_ids"]:
+                    if sid not in sids:
+                        sids.append(sid)
+            sids = sids[:6]
         else:
             page = D.PAGES[slug]
             desc = page["description"]
@@ -291,12 +362,21 @@ def main():
     write(DATA / "pages.json", json.dumps(D.PAGES, indent=2, ensure_ascii=False) + "\n")
     for slug, page in D.PAGES.items():
         write(DATA / "{}.json".format(slug), json.dumps(page, indent=2, ensure_ascii=False) + "\n")
+    write(DATA / "suggestions.json", json.dumps({
+        "title": "Suggestions & Review",
+        "description": "Proposed improvements to this site, listed for review before any change is implemented.",
+        "decision_default": D.DECISION_DEFAULT,
+        "internal_marker": D.INTERNAL_MARKER,
+        "sections": [{"title": s["title"], "intro": s["intro"], "rows": s["rows"]} for s in D.SUGGESTION_SECTIONS],
+        "review_checklist": D.review_checklist(),
+    }, indent=2, ensure_ascii=False) + "\n")
 
     for slug, page in D.PAGES.items():
         html = summary_page_with_narrative(page) if slug == "summary" else page_html(slug, page)
         write(PAGES / "{}.html".format(slug), html)
     write(PAGES / "sources.html", sources_page_html())
     write(PAGES / "flagged.html", flagged_page_html())
+    write(PAGES / "suggestions.html", suggestions_page_html())
     write(ROOT / "index.html", index_html())
 
     write(ROOT / "EXECUTIVE_SUMMARY.md", counts(D.EXECUTIVE_SUMMARY_TEXT))

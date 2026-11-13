@@ -4,6 +4,8 @@ EXECUTIVE_SUMMARY_TEXT = """# Executive Summary - Rental increase SF
 
 Key rate, licensing, fee, coverage, banking, retaliation and pending-legislation sources rechecked on 2026-11-11 UTC; other sources retain their individual verification dates. See research/t52_audit/README.md and research/t50_reverify/README.md for the scope of these checks. Informational compliance research, not legal advice.
 
+**Update 2026-11-13 UTC:** the Housing Inventory, Rent Board Fee, counsel, Tenant Petition, Section 6.14, Forms Center, Rent Board Rules Part XIII (Rule 13.14) and 24 CFR 100.500 pages were reopened directly and are unchanged (see research/t54_suggestions/README.md). A dedicated **Suggestions & Review** page was added (27 proposals, each with its official basis and a review decision), and the ledger date now reads 2026-11-13.
+
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 
 **Question:** "I am just an individual property owner and not part of a corporation — do I still need to apply for the license and inform the Rent Board before notifying tenants of a rent increase?"
@@ -84,6 +86,12 @@ Extra rent for an additional occupant is unlawful, and adding an occupant is not
 
 All {{FLAGS}} irregularities and unverified items are published on the clearly labeled Flagged for Review page with official source links. They include SF.gov example inconsistencies, Form 571 title metadata, SF 37.10B footnote conflict, temporary CPI methodology, stale snippets, 404 URL variants, the earlier 94122 SAFMR gap (HUD ZIP figures published 2026-11-11 as voucher benchmarks, not caps), unverified case facts, the absence of any official federal cap / attorney approval / both-units rule, the differing SF.gov wording on the consequence of an unlicensed increase (F25), a privacy defect found 2026-11-07 in the earlier validation report and now fixed (F26), the next year's allowable rate not yet being published (F27), Unit 1's unknown Section 6.14 notice history (F28), a corrected capital-improvement petition count (F29), and the conditional (not asserted) banked-increase illustration (F30), conflict markers that `main` commit `1d80419` had committed into `COORDINATION.md` and which the validator did not catch (F31), out-of-sequence flag cross-references in `SOURCES.md` (F32), the fee-versus-license conflation (F33), the conditional and unverified two-unit owner-occupied exemption (F34), the in-law-unit / second-structure coverage question (F35), two QA corrections made on 2026-11-08 (F36: in-law exemption wording; F37: project-management rows that cited an unrelated official source), the new fee findings (F38: referral timing differs inside one SF.gov page; F39: an older fee page still shows 2023 dates; F40: Form 573 historical rows that do not show a 50% tenant share; F41: no official statement links fee payment to licence validity; F42: how a 50% recovery is split among co-tenants is not stated; F43: case-specific fee and registration facts are unverified), F44: the raw tenant identifiers still reachable in this public repository's git history and pull-request diffs, which only the owner can remediate, and F45: an official SF.gov hyperlink defect on the Current Rates page where the link labeled '575 Cap. Imp. Labor Rates' points to the Form 574 Imputed Interest PDF. Flagged items do not block the site or merge.
 
+## Suggestions for improving this site
+
+The **Suggestions & Review** page (`pages/suggestions.html`) holds 27 proposals for improving this research site so that the decision is better supported. **None of them has been implemented.** Every row carries the official rule that motivates it (or, for five rows that are purely proposals about how the site should work, an explicit *internal site-design proposal* marker with no legal claim), a rough effort and impact estimate, and a Decision cell that starts at **Review**. A blank review checklist at the bottom of the page is where Accept, Reject or Defer is recorded for each item; only items marked Accept become candidates for implementation.
+
+Four groups are published: **compliance gates** that make the required order of operations impossible to miss (license status on the effective date, Housing Inventory filing, fee calendar, effective-date rate engine, banked-increase ledger, retaliation screen, uniform-criteria record, Section 6.14 fact screen, coverage sheet, notice assembly, petition routing); **evidence and defensibility** (case-file completeness checklist, tenant-side challenge walkthrough, printable attorney-review handoff packet, neutral-language bank, public-records disclosure note); **discovering the missing information** (missing-information register, the facts only the owner can supply, a counsel call script, and a pre-decision gate sequence); and **internal site quality**. The missing-information group is the direct answer to what has to be known before a decision can reasonably be made: it separates the questions a public record can answer from the facts only you can supply, and names the official route for each.
+
 ## Sources
 
 {{SOURCES}} official sources are catalogued in SOURCES.md and on the Sources page (the count is computed at build time, never typed by hand). Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.
@@ -162,6 +170,10 @@ tr:last-child td{border-bottom:0}
 .badge.review{background:var(--warnbg);color:var(--warn)}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
 .badge.owner{background:var(--ownerbg);color:var(--owner)}
+.badge.proposed{background:#efe9fb;color:#5b3ea3}
+.internal-mark{font-size:.78rem;color:#5b3ea3;font-style:italic}
+.suggest-why{margin:.35rem 0 0;font-size:.86rem;color:var(--muted)}
+.decision-blank{color:var(--muted);font-style:italic}
 .owner-src{font-size:.78rem;color:var(--owner)}
 td.blank{color:var(--warn);font-style:italic}
 @media print{nav,.cta{display:none}section,.hero{box-shadow:none}}
