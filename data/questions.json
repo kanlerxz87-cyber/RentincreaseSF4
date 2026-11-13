@@ -369,6 +369,20 @@
           "notes": "Project-record source: the proposals are about this site, and no legal finding rests on them.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "Q-25",
+          "label": "Would Civil Code 1947.7 protect an owner whose San Francisco licence was not current on the effective date?",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S93",
+            "S53",
+            "S73"
+          ],
+          "notes": "Blank because the official record does not answer it: section 1947.7(b) reaches an ordinance that \"requires the registration of rents\", while Sec. 37.15(d) states the Rent Board shall not operate a rental registry within the meaning of sections 1947.7 - 1947.8, and no San Francisco official page applies the state shield to the licence rule. How to discover it: put the question to the Rent Board (311 or 415-252-4600, free counseling, no legal advice) and, because it is a question about remedies, to a landlord-tenant attorney in writing; do not self-answer it. Flag F59.",
+          "flag_id": "F59",
+          "source_note": ""
         }
       ]
     }

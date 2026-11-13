@@ -568,6 +568,60 @@ def main():
           and "SB 567" in D.SOURCES["S88"]["title"]
           and official_domain(D.SOURCES["S89"]["url"]) and "1946.2" in D.SOURCES["S89"]["title"])
 
+    # --- Checks added 2026-11-13 by session arena-6f65a2f5: the state-backstop layer,
+    #     the verbatim rule text, the dated currency re-check and the ledger total. ---
+    check("Civil Code 1947.7 is catalogued as an official source",
+          D.SOURCES.get("S93", {}).get("agency") == "California Legislature"
+          and "1947.7" in D.SOURCES["S93"]["title"]
+          and official_domain(D.SOURCES["S93"]["url"]),
+          "S93")
+    loc_rows = [r for sec in pages.get("local", {}).get("sections", []) for r in sec["rows"]]
+    st_rows = [r for sec in pages.get("state", {}).get("sections", []) for r in sec["rows"]]
+    law09 = [r for r in loc_rows if r["id"] == "LAW-09"]
+    check("the local page poses the 1947.7 question without answering it by inference",
+          bool(law09) and "registration of rents" in law09[0]["value"]
+          and "Sec. 37.15(d)" in law09[0]["value"] and "F59" in (law09[0]["notes"] + law09[0]["flag_id"]),
+          "LAW-09")
+    st18 = [r for r in st_rows if r["id"] == "ST-18"]
+    st19 = [r for r in st_rows if r["id"] == "ST-19"]
+    check("the state page carries section 1947.7 as read, and what it does not do",
+          bool(st18) and bool(st19) and "restored prospectively" in st18[0]["value"]
+          and "does not create or replace a Rent Increase License" in st19[0]["value"],
+          "ST-18 / ST-19")
+    q_rows = [r for sec in pages.get("questions", {}).get("sections", []) for r in sec["rows"]]
+    q25 = [r for r in q_rows if r["id"] == "Q-25"]
+    check("the unresolved 1947.7 applicability question is published blank, flagged, with a discovery route",
+          bool(q25) and q25[0]["value"] == "" and q25[0]["flag_id"] == "F59"
+          and "attorney" in q25[0]["notes"].lower(),
+          "Q-25")
+    sum_rows = [r for sec in pages.get("summary", {}).get("sections", []) for r in sec["rows"]]
+    lic13 = [r for r in sum_rows if r["id"] == "LIC-13"]
+    lic14 = [r for r in sum_rows if r["id"] == "LIC-14"]
+    check("the executive summary quotes Rule 13.14 verbatim and states the real exposure",
+          bool(lic13) and "purporting to be effective while the landlord is unlicensed" in lic13[0]["value"]
+          and "March 1, 2023" in lic13[0]["value"]
+          and bool(lic14) and "no monetary penalty" in lic14[0]["value"],
+          "LIC-13 / LIC-14")
+    f25 = [f for f in flags if f["id"] == "F25"][0]
+    check("F25 was narrowed with the verbatim rule wording rather than closed",
+          "null and void" in f25["detail"] and "S73" in f25["source_ids"] and f25["status"] == "needs review",
+          "F25 cites the rule text and stays open")
+    rate_rows = [r for sec in pages.get("rates", {}).get("sections", []) for r in sec["rows"]]
+    check("pending legislation and the next-year rate carry the 2026-11-13 re-check",
+          any(r["id"] == "RATE-14" and "2026-11-13" in r["label"] for r in rate_rows)
+          and any(r["id"] == "RATE-17" and "2026-11-13" in r["notes"] for r in rate_rows)
+          and ("2026-11-13" in [f for f in flags if f["id"] == "F46"][0]["detail"]
+               or "November 13, 2026" in [f for f in flags if f["id"] == "F46"][0]["detail"]),
+          "RATE-14 / RATE-17 / F46 re-dated")
+    check("the source ledger prose total matches the catalogued count exactly",
+          "{} catalogued sources".format(len(source_map)) in sources_md,
+          "expected \"{} catalogued sources\" in SOURCES.md".format(len(source_map)))
+    exec_md = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("the executive summary carries the rule text and the state-backstop question",
+          "purporting to be effective while the landlord is unlicensed" in exec_md
+          and "1947.7" in exec_md and "Q-25" in exec_md,
+          "both passages published")
+
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {
         "sources": len(source_map),

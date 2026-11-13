@@ -5,12 +5,12 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "92 official sources"
+      "detail": "93 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "76 flagged items"
+      "detail": "77 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -30,7 +30,7 @@
     {
       "name": "SOURCES.md has no stale hand-typed source total",
       "ok": true,
-      "detail": "92 sources"
+      "detail": "93 sources"
     },
     {
       "name": "94122 SAFMR rows publish the official HUD values with official sources",
@@ -70,17 +70,17 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "492 rows checked; "
+      "detail": "499 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "606 rows checked; "
+      "detail": "614 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "77 needs-review rows"
+      "detail": "78 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -525,7 +525,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "58 numeric flags"
+      "detail": "59 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -660,7 +660,7 @@
     {
       "name": "local law page carries the state-vs-local layer table",
       "ok": true,
-      "detail": "8 law-layer rows"
+      "detail": "9 law-layer rows"
     },
     {
       "name": "the layer answer is stated as LOCAL with the ordinance citation",
@@ -766,17 +766,62 @@
       "name": "SB 567 and Civil Code 1947.12 are catalogued as official sources",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "Civil Code 1947.7 is catalogued as an official source",
+      "ok": true,
+      "detail": "S93"
+    },
+    {
+      "name": "the local page poses the 1947.7 question without answering it by inference",
+      "ok": true,
+      "detail": "LAW-09"
+    },
+    {
+      "name": "the state page carries section 1947.7 as read, and what it does not do",
+      "ok": true,
+      "detail": "ST-18 / ST-19"
+    },
+    {
+      "name": "the unresolved 1947.7 applicability question is published blank, flagged, with a discovery route",
+      "ok": true,
+      "detail": "Q-25"
+    },
+    {
+      "name": "the executive summary quotes Rule 13.14 verbatim and states the real exposure",
+      "ok": true,
+      "detail": "LIC-13 / LIC-14"
+    },
+    {
+      "name": "F25 was narrowed with the verbatim rule wording rather than closed",
+      "ok": true,
+      "detail": "F25 cites the rule text and stays open"
+    },
+    {
+      "name": "pending legislation and the next-year rate carry the 2026-11-13 re-check",
+      "ok": true,
+      "detail": "RATE-14 / RATE-17 / F46 re-dated"
+    },
+    {
+      "name": "the source ledger prose total matches the catalogued count exactly",
+      "ok": true,
+      "detail": "expected \"93 catalogued sources\" in SOURCES.md"
+    },
+    {
+      "name": "the executive summary carries the rule text and the state-backstop question",
+      "ok": true,
+      "detail": "both passages published"
     }
   ],
   "errors": [],
   "summary": {
-    "sources": 92,
+    "sources": 93,
     "pages": 22,
     "data_files": 24,
-    "rows_verified": 492,
-    "needs_review_rows": 77,
-    "flags": 76,
-    "checks": 153,
+    "rows_verified": 499,
+    "needs_review_rows": 78,
+    "flags": 77,
+    "checks": 162,
     "errors": 0
   }
 }

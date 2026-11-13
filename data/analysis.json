@@ -329,6 +329,21 @@
           "source_note": ""
         },
         {
+          "id": "AN-30",
+          "label": "Do not substitute a state statute for the free local report",
+          "value": "The only step in this case that is free, takes minutes, is documented on the official page and removes the nullity risk outright is the Housing Inventory report itself. Civil Code 1947.7 is at best an argument about remedies after the fact; the report is a fact the owner can control before the notice is served.",
+          "status": "analysis",
+          "source_ids": [
+            "S07",
+            "S53",
+            "S93",
+            "S73"
+          ],
+          "notes": "A recommendation drawn from the sources, not a legal opinion; the licensing requirement itself is answered in LIC-01 to LIC-14.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
           "id": "AN-29",
           "label": "Conservative approach",
           "value": "Ordinary annual increase at or under 1.6%, license on file first, 30-day written notice, no additional-occupant charge, and an identical written standard applied to both units",

@@ -210,6 +210,33 @@
             "source_note": ""
           },
           {
+            "id": "LIC-13",
+            "label": "Rule 13.14 quoted verbatim (re-read 2026-11-13)",
+            "value": "\"Any rent increase under Ordinance Sections 37.3(a)(1)-(2) purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void; provided, however, that the effective date of the rent increase, not the date of service, shall be used to determine whether or not the increase conforms with the provisions of this section. Nothing in this Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise lawful rent increases that were found to be null and void. This section shall apply to all rent increases that are effective on or after July 1, 2022, except that with respect to condominium units and buildings with less than ten residential units, this section shall only apply to rent increases that are effective on or after March 1, 2023.\"",
+            "status": "verified",
+            "source_ids": [
+              "S73"
+            ],
+            "notes": "Read in full on 2026-11-13. This is the strongest wording in the official record and it narrows flag F25: the softer tenant-facing phrasing does not soften the rule, and an owner's banking rights survive an increase that is void.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LIC-14",
+            "label": "What the missing licence actually costs an individual owner",
+            "value": "Under Sec. 37.15(e) the licence is \"temporarily suspended during the period of the landlord's noncompliance\" and \"a tenant shall not be obligated to pay the increased rent for months during the period of suspension\"; separately, SF.gov states the Rent Board assesses no monetary penalty for filing the Housing Inventory report late. So the exposure is money that may have to go back to the tenant for the suspended months (a tenant petition has no time limit), not a City fine for the late report itself.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S07",
+              "S73",
+              "S25"
+            ],
+            "notes": "Nothing here exempts an individual or small-portfolio owner: the requirement is stated by unit and by effective date, and no official page states an owner-form exception (LIC-01).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
             "id": "LIC-10",
             "label": "Full step-by-step page",
             "value": "12 numbered steps from coverage check to notice delivery, each with its official source link, plus the ordinance text and the case-specific application",
@@ -1897,7 +1924,7 @@
           {
             "id": "RATE-12",
             "label": "Proposed banked and capital-improvement cap, File 261020",
-            "value": "Not enacted as of November 10, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
+            "value": "Not enacted as of November 10, 2026 and still pending on November 13, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
             "status": "verified",
             "source_ids": [
               "S05",
@@ -1922,8 +1949,8 @@
           },
           {
             "id": "RATE-14",
-            "label": "Exact Legistar record at fetch (2026-11-10)",
-            "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
+            "label": "Exact Legistar record at fetch (2026-11-10; re-read 2026-11-13)",
+            "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank. Re-read 2026-11-13: unchanged, and a sixth attachment 'Comment Ltrs' is now listed",
             "status": "verified",
             "source_ids": [
               "S71"
@@ -1967,7 +1994,7 @@
               "S02",
               "S01"
             ],
-            "notes": "Still not published on either official page when re-checked 2026-11-10; blank rather than estimated.",
+            "notes": "Still not published on either official page when re-checked 2026-11-13; blank rather than estimated.",
             "flag_id": "F27",
             "source_note": ""
           },
@@ -2102,6 +2129,20 @@
               "S53"
             ],
             "notes": "The Rent Board Fee is a different, separate payment (FEE page).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-09",
+            "label": "Does the state rent-registration statute (Civil Code 1947.7) soften the local licence rule?",
+            "value": "Not established on this record. Section 1947.7(b) shields an owner who is in substantial compliance with an ordinance that \"requires the registration of rents\", limiting remedies to restitution and filing fees, and section 1947.7(c) restores denied annual adjustments prospectively. San Francisco's ordinance states in Sec. 37.15(d) that the Rent Board shall not operate a rental registry \"within the meaning of California Civil Code Sections 1947.7 - 1947.8\", so the site does not assert that the shield applies here.",
+            "status": "verified",
+            "source_ids": [
+              "S93",
+              "S53",
+              "S73"
+            ],
+            "notes": "A \"what the statute says\" versus \"what it reaches\" distinction, not advice. Published as the open question Q-25 with flag F59. Do not plan an increase on the assumption that 1947.7 rescues an unlicensed notice.",
             "flag_id": "",
             "source_note": ""
           },
@@ -2647,6 +2688,32 @@
               "S27"
             ],
             "notes": "Owner occupancy of a unit here was not supplied; no exemption asserted (F34).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-18",
+            "label": "Civil Code 1947.7 as read on 2026-11-13 (rent-registration penalty shield)",
+            "value": "Intent of the section: to limit the imposition of penalties and sanctions against an owner of residential rental units who \"has attempted in good faith to fully comply with the regulatory processes of those programs\". Subdivision (b): an owner in substantial compliance with an ordinance or charter that controls or establishes a system of controls on the price at which residential rental units may be offered for rent or lease and that \"requires the registration of rents\" shall not be assessed a penalty or any other sanction, and restitution of rent charged in excess plus filing fees are the exclusive remedies. Subdivision (c): annual rent adjustments denied during noncompliance \"shall be restored prospectively once the owner is in compliance\".",
+            "status": "verified",
+            "source_ids": [
+              "S93"
+            ],
+            "notes": "Read directly from the current section text on leginfo. It is a shield against penalties under a registration ordinance - not a licence, and not a higher permitted amount.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "ST-19",
+            "label": "What Civil Code 1947.7 does NOT do",
+            "value": "It does not create or replace a Rent Increase License, it does not excuse the Housing Inventory report, it does not permit an increase above the published annual allowable amount, and it does not apply by its own terms unless the local ordinance \"requires the registration of rents\". San Francisco states its inventory is not such a registry (Sec. 37.15(d)), and Rule 13.14 voids an unlicensed increase regardless.",
+            "status": "verified",
+            "source_ids": [
+              "S93",
+              "S53",
+              "S73"
+            ],
+            "notes": "Whether a Rent Board or court would nonetheless apply the section is unresolved and deliberately not answered here (Q-25, F59).",
             "flag_id": "",
             "source_note": ""
           },
@@ -4598,6 +4665,20 @@
             "notes": "Project-record source: the proposals are about this site, and no legal finding rests on them.",
             "flag_id": "",
             "source_note": ""
+          },
+          {
+            "id": "Q-25",
+            "label": "Would Civil Code 1947.7 protect an owner whose San Francisco licence was not current on the effective date?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S93",
+              "S53",
+              "S73"
+            ],
+            "notes": "Blank because the official record does not answer it: section 1947.7(b) reaches an ordinance that \"requires the registration of rents\", while Sec. 37.15(d) states the Rent Board shall not operate a rental registry within the meaning of sections 1947.7 - 1947.8, and no San Francisco official page applies the state shield to the licence rule. How to discover it: put the question to the Rent Board (311 or 415-252-4600, free counseling, no legal advice) and, because it is a question about remedies, to a landlord-tenant attorney in writing; do not self-answer it. Flag F59.",
+            "flag_id": "F59",
+            "source_note": ""
           }
         ]
       }
@@ -4930,6 +5011,21 @@
               "S60"
             ],
             "notes": "Owner-supplied facts only; confirm in the Property Information Map.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "AN-30",
+            "label": "Do not substitute a state statute for the free local report",
+            "value": "The only step in this case that is free, takes minutes, is documented on the official page and removes the nullity risk outright is the Housing Inventory report itself. Civil Code 1947.7 is at best an argument about remedies after the fact; the report is a fact the owner can control before the notice is served.",
+            "status": "analysis",
+            "source_ids": [
+              "S07",
+              "S53",
+              "S93",
+              "S73"
+            ],
+            "notes": "A recommendation drawn from the sources, not a legal opinion; the licensing requirement itself is answered in LIC-01 to LIC-14.",
             "flag_id": "",
             "source_note": ""
           },

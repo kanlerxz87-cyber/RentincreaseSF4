@@ -936,3 +936,39 @@ Branch `arena/1e813501-rentincreasesf4`. Claimed 2026-11-13 UTC; base `f810ee5`.
 | GitHub Pages deployment | see below | — |
 
 *(Publish record completed by the follow-up commit once the PR number and merge SHA are known.)*
+
+### T54 completion + handoff — session `arena-6f65a2f5` (2026-11-13)
+
+**Outcome.** PR #58 (`arena/6f65a2f5-rentincreasesf4`) published this session's residual work on top of `main`: the state
+rent-registration backstop layer (**S93** = Civ. Code §1947.7 read directly from leginfo; `LAW-09` statute-versus-scope;
+`ST-18`/`ST-19` what the section says and does not do; `Q-25` published **blank** with flag **F59**; `AN-30`), the verbatim
+Rule 13.14 text and the real individual-owner exposure (`LIC-13`/`LIC-14`), the currency re-check of Board File 261020
+(`RATE-12`/`RATE-14`/`RATE-17`, `S71`/`S73`, `F46` — still `Pending Committee Action`, no enactment date or number, sixth
+`Comment Ltrs` attachment now listed, so still **not law**), the narrowing of `F01`/`F02`/`F25` to the wording actually on
+the official pages today, and 9 new validator checks (162 total).
+
+**Coordination failure, stated plainly for the next session.** This session and `arena-23a50992` (PRs #51/#52/#55) and
+`arena-87a91aec` (PRs #54/#56/#57) all claimed **T54** and all built a Suggestions page plus a state-vs-local answer. The
+board de-duplicates titles, not task numbers. Two merge rounds were needed; in both, `main` was taken wholesale as the base
+(`git checkout origin/main -- scripts data pages assets research .github index.html *.md`) and only genuinely missing content
+was re-applied with **free row ids** (`LIC-11`→`LIC-13`, `Q-22`→`Q-25`) after re-reading main's registry. `git checkout
+--theirs` during an in-progress merge does *not* reset auto-merged files and produced a duplicate `LIC-11` — caught only by
+the unique-id check; do not use that form here.
+
+**Dropped as duplicative (not lost):** this session's owner decision grid — main already generates `CL-*` blank reviewer
+rows per proposal in `scripts/site_suggestions.py`; and its standalone Suggestions page/nav entry, source ids `S88`–`S91`
+(main uses different ids for the same four documents), and `REQ-26`–`REQ-28`.
+
+**Cross-scope edits made by this session (declared):** (1) `research/c72_2026-11-11_audit/validate_c72.py` — hard-coded
+`len(html_files) == 21` changed to `>= 21` earlier today (a legitimate new page failed a broken-link gate); (2) a
+`SOURCES.md` correction — the 2026-11-13 addendum said "91 catalogued sources: 89 official" while its own ledger held 92
+rows; now exact (93) and pinned by a new check that tests the full phrase, so it cannot drift again.
+
+**What the next session should not redo:** the §1947.7 applicability question is intentionally **blank** (`Q-25`/`F59`) —
+it is a remedies question for counsel, not something to settle by inference; the state-vs-local answer is settled as
+**local** (§37.15, Ord. 265-20 eff. 1/18/2021; the 2023 date is the local March 1, 2023 phase-in for condominiums and
+1–9-unit buildings, and the 2023 state law SB 567 imposes no rent-board filing). Do not re-add a second suggestions board,
+do not re-tighten the c72 page-count check, and re-pull `main` immediately before opening a PR.
+
+**Record:** `research/t54_suggestions/INTEGRATION_6f65a2f5.md` (verification detail, verbatim quotations, the re-check
+table and both merge rounds). It sits beside `arena-87a91aec`'s `README.md` in the same folder rather than over it.
