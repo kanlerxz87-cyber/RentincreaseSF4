@@ -168,7 +168,7 @@
         {
           "id": "RATE-12",
           "label": "Proposed banked and capital-improvement cap, File 261020",
-          "value": "Not enacted as of November 10, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
+          "value": "Not enacted as of November 10, 2026 and still pending on November 13, 2026; proposal would temporarily limit combined banked and capital-improvement increases to 10% per year.",
           "status": "verified",
           "source_ids": [
             "S05",
@@ -193,8 +193,8 @@
         },
         {
           "id": "RATE-14",
-          "label": "Exact Legistar record at fetch (2026-11-10)",
-          "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank",
+          "label": "Exact Legistar record at fetch (2026-11-10; re-read 2026-11-13)",
+          "value": "Version 1; introduced 9/15/2026; in control: Land Use and Transportation Committee; STATUS 'Pending Committee Action'; final action, enactment date and enactment number all blank. Re-read 2026-11-13: unchanged - the newest history row is still the 10/7/2026 Youth Commission 'RESPONSE RECEIVED', and a sixth attachment 'Comment Ltrs' is now listed",
           "status": "verified",
           "source_ids": [
             "S71"
@@ -238,7 +238,7 @@
             "S02",
             "S01"
           ],
-          "notes": "Still not published on either official page when re-checked 2026-11-10; blank rather than estimated.",
+          "notes": "Still not published on either official page when re-checked 2026-11-13; blank rather than estimated.",
           "flag_id": "F27",
           "source_note": ""
         },

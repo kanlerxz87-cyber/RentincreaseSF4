@@ -324,7 +324,7 @@
         {
           "id": "REQ-25",
           "label": "Re-check the committee status of File 261020 before serving any banked or capital improvement notice",
-          "value": "Checked 2026-11-10 - 'Pending Committee Action' in the Land Use and Transportation Committee; not law, no enactment",
+          "value": "Checked 2026-11-10 and again 2026-11-13 - 'Pending Committee Action' in the Land Use and Transportation Committee; not law, no enactment date or number",
           "status": "verified",
           "source_ids": [
             "S71",
