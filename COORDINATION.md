@@ -726,3 +726,28 @@ Branch `arena/f7ac76e9-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 | Merge conflict | `COORDINATION.md` only (PR #46 record vs this T53 section). Resolved by keeping **both** records verbatim — nothing from `arena-3e6655be` discarded; its C72-D01/D02/D03/D08 fixes and its "D04–D08 not fully integrated" note are preserved immediately above this section | merge commit `65b6a6b`; `git grep` shows no line-start conflict markers |
 
 **Handoff notes.** (1) Edit `scripts/site_*.py` and rebuild; never hand-edit `pages/*.html` or `data/*.json`. (2) Every source/flag total is computed at build time. (3) `SOURCES.md` is hand-maintained but now guarded: any missing source ID or retyped total fails `validate_site.py`. (4) The privacy checks cover the anonymized case files only; F44/F51 (historical exposure of short identifiers) remain owner-actionable and are not fixed by this merge. (5) File 261020 is **not enacted** — re-check before any notice. (6) The SAFMRs are voucher benchmarks, not market rents or caps (F52).
+
+---
+
+## Session `arena-415e54ea` — T54/T55/T56 final integration (2026-11-13 UTC)
+
+Branch `arena/415e54ea-rentincreasesf4`, branched from `main` at `f810ee5` (PR #50). Exclusive, non-overlapping file scopes replace `session-<id>/<task>` branch names because Arena fixes this session to one branch.
+
+**Board read before claiming (2026-11-13 UTC).** `origin/main` tip `f810ee5`; GitHub Pages `status: built`, legacy source `main` / `/`. All `in progress` rows in the task board above are **stale** (latest remote session commits 2026-11-11, more than 48 hours old), so under the 60-minute rule this session may take over. Open PRs **#18, #19, #25, #47, #48** are all from 2026-11-08/11 and describe generator states that `main` has already superseded (PRs #35–#50 landed the same work); they are left untouched and are **not** merged. No other session holds a current claim.
+
+Local baseline before any edit: `python3 scripts/validate_site.py` → **125 checks, 0 errors** (87 sources, 70 flags, 351 rows); `python3 research/b87_notice_kit/validate_kit.py` → 19/0; `python3 research/c72_2026-11-11_audit/validate_c72.py` → 19/0.
+
+### Gap analysis (what the user asked for that the site did not yet answer)
+
+1. **"I read somewhere that I have to inform the Rent Board about rent increases since the law passed in 2023 — is that a state or local law?"** — No page classifies the requirement as state vs local, and no page gives the ordinance provenance or explains where the "2023" date comes from. The site asserts the dates but not the legal layer or the reason for the confusion.
+2. **"Create a section dedicated for suggestions so someone can review suggestions and choose the best path before implementing any changes."** — `grep` of `scripts/`, `data/`, `pages/`, `index.html` for `suggestion` returns nothing. No suggestions page exists.
+3. **"A clear list of questions, informations and answers that need to be addressed before any decision can be reasonably made … Suggestions need to be made to discover missing information."** — `pages/questions.html` answers the owner's questions, but there is no decision-readiness register that separates *known / not known / how the missing item would be obtained / who can obtain it / what decision it blocks*.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T54 | State-vs-local classification of the "inform the Rent Board" duty: ordinance provenance, the 2023 operative-date explanation, and a forefront answer. Verify every date against primary sources. | `in progress` | `arena-415e54ea` | `scripts/site_sources.py` (new S91–S94 only), `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`, `research/t54_law_layer/` (new) | Direct `fetch_page` on 2026-11-13 of S53, S07, S01 and the 2021 SF.gov ordinance news release; to fetch: SF Rent Board Rule 13.14 (S73), SB 567 (2023) bill text, Civil Code 1946.2 / 1947.12 current text. | F53 (the "2023 law" attribution is the **local** 1–9 unit operative date, not a state statute) to be published. |
+| T55 | New **Suggestions** page: reviewable proposals for improving the site and the decision process, each with effort / basis / official source / status, so a reviewer can pick a path before anything is implemented. | `unclaimed` | `arena-415e54ea` (planned) | `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_text.py` | Every suggestion carries the official source that motivates it; no suggestion asserts a legal conclusion. | — |
+| T56 | New **Decision Readiness** page: every open question, the information known, the information missing, how each gap would be discovered, who holds the record, and which decision it blocks. | `unclaimed` | `arena-415e54ea` (planned) | `scripts/site_pages.py`, `scripts/site_flags.py` | Reuses only already-verified source IDs; gaps stay blank. | — |
+| T57 | Final integration: rebuild, validate, privacy gate, broken-link crawl, PR to `main`, merge, confirm GitHub Pages, record result here. | `unclaimed` | `arena-415e54ea` (planned) | all build outputs + this file | — | Flagged items do not block. |
+
+**Rules this session follows.** Edits only inside the scope above; no raw tenant identifiers in any file, commit message or PR text; `git pull --rebase` before every push; no historical git rewrite attempted or claimed (F44/F51 remain open); every new table row carries an official source link; unconfirmed values stay blank and are flagged.
