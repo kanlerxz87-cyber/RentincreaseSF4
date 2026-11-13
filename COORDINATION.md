@@ -972,3 +972,11 @@ do not re-tighten the c72 page-count check, and re-pull `main` immediately befor
 
 **Record:** `research/t54_suggestions/INTEGRATION_6f65a2f5.md` (verification detail, verbatim quotations, the re-check
 table and both merge rounds). It sits beside `arena-87a91aec`'s `README.md` in the same folder rather than over it.
+
+## Session `arena-3b66c553` (branch `arena/3b66c553-rentincreasesf4`) — claim, 2026-11-13 UTC
+
+**Claim (T58, in progress).** Independent re-verification of the forefront answers and the privacy/history status, plus a correction to flag F56. Base: `main` at `ad20650` (PR #58). No other live claim exists: `git ls-remote` shows only `main`, `gh pr list --state open` is empty, and the last merged PR is #58.
+
+**File scope (this session only):** `COORDINATION.md` (this section only), `scripts/site_flags.py` (F56 text only), `REPO_REVIEW.md` (one row, the git-history line), `research/privacy/FULL_HISTORY_SCAN_2026-11-13.md` (new), and regenerated outputs of `scripts/build_site.py` (`data/`, `pages/`, `index.html`, `FLAGGED_FOR_REVIEW.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`), which must differ only where F56 changes.
+
+**Coordination note.** The board's `T`-numbering was reused by several sessions. This session's row is `T58` and does not reuse an earlier number. The branch name is fixed by Arena, so `session-<id>/<task>` branches are not used.
