@@ -5,7 +5,7 @@
     "title": "Learn about rent increases in San Francisco",
     "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
     "category": "Local",
-    "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants. Re-verified 2026-11-10: page now carries a 'Proposed Changes' notice posted November 9, 2026 (File No. 261020, proposed 10% cap on banked + capital-improvement increases; not enacted) - see S71 and flag F46. Re-verified 2026-11-11: all figures unchanged; File 261020 notice still present, not enacted."
+    "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants. Re-verified 2026-11-10: page now carries a 'Proposed Changes' notice posted November 9, 2026 (File No. 261020, proposed 10% cap on banked + capital-improvement increases; not enacted) - see S71 and flag F46. Re-verified 2026-11-11: all figures unchanged; File 261020 notice still present, not enacted. Re-verified 2026-11-13: unchanged - 1.6% effective 3/1/26-2/28/27; 'A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases on a tenant'; base rent only; no rounding up; 30/90-day notice and +5 days if mailed; anniversary-date rule; additional-occupant prohibition; the November 9, 2026 File 261020 notice is still present and still marked not enacted. The published examples still contain the conflicts recorded as F01 (example says the rate in effect on June 1, 2025 is 1.6% while Current Rates show 1.4%) and F03 (example says 12 full months elapsed while the banked-increases page requires 24 full months)."
   },
   {
     "id": "S02",
@@ -13,7 +13,7 @@
     "title": "Current Rates",
     "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
     "category": "Local",
-    "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Re-verified 2026-11-10: no 3/1/27-2/28/28 rate published yet; page now carries the same November 9, 2026 File 261020 proposed-cap notice as S01. Re-verified 2026-11-11: 1.6%/1.4%/1.7% and 4.2% deposit interest unchanged; F45 link defect still present."
+    "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Re-verified 2026-11-10: no 3/1/27-2/28/28 rate published yet; page now carries the same November 9, 2026 File 261020 proposed-cap notice as S01. Re-verified 2026-11-11: 1.6%/1.4%/1.7% and 4.2% deposit interest unchanged; F45 link defect still present. Re-verified 2026-11-13: unchanged - 1.6% (3/1/26-2/28/27), 1.4% (3/1/25-2/28/26), 1.7% (3/1/24-2/28/25); security deposit interest 4.2%; bankable Rent Board Fees $29.50; the File 261020 proposed-changes notice is still present and still marked not enacted; no 3/1/27-2/28/28 rate is published (F27). The F45 hyperlink defect is still present: the link labelled '575 Cap. Imp. Labor Rates' still points to the Form 574 Imputed Interest PDF."
   },
   {
     "id": "S03",
@@ -37,7 +37,7 @@
     "title": "Banked rent increases",
     "url": "https://www.sf.gov/information--banked-rent-increases",
     "category": "Local",
-    "statement": "24 full months; no compounding/prorating; add percentages; license; notice states banked portion; example inconsistency flagged. Rechecked 2026-11-10; re-verified 2026-11-11: November 9 notice describes a proposed, not enacted, cap (S71, F46); 24-month banking unchanged."
+    "statement": "24 full months; no compounding/prorating; add percentages; license; notice states banked portion; example inconsistency flagged. Rechecked 2026-11-10; re-verified 2026-11-11: November 9 notice describes a proposed, not enacted, cap (S71, F46); 24-month banking unchanged. Re-verified 2026-11-13: unchanged - 'A skipped increase is only banked if at least 24 full months pass without any rent increase'; no compounding or prorating; percentages are added; licence required; notice must state the dollar amount, percentage, effective date and which part is banked; use the percentage in effect on the date of the increase. The F02 example conflict is still live: the page says to add the banked 5.3% to 'the annual allowable rent increase in effect on August 1, 2024 (1.4%)' while Form 571 shows 1.7% for 3/1/24-2/28/25."
   },
   {
     "id": "S06",
@@ -213,7 +213,7 @@
     "title": "California Tenant Protection Act of 2019 (AB 1482)",
     "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482",
     "category": "State",
-    "statement": "SF state-only cap 8.8% 8/1/26-7/31/27; does NOT apply to SF Rent Ordinance units; 5%+CPI or 10%; just cause; Rent Board no legal advice/enforcement. Re-verified 2026-11-11: unchanged."
+    "statement": "SF state-only cap 8.8% 8/1/26-7/31/27; does NOT apply to SF Rent Ordinance units; 5%+CPI or 10%; just cause; Rent Board no legal advice/enforcement. Re-verified 2026-11-11: unchanged. Re-verified 2026-11-13: unchanged - 'The maximum rent increase for units under AB 1482 from August 1, 2026 to July 31, 2027 is 8.8% in San Francisco'; 'This does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance'; the CPI used is 3.8%, so 5% + 3.8% = 8.8%; the two-unit exemption requires the second unit to have been occupied by an owner for the entire tenancy; the single-family exemption does not apply where there is more than one dwelling unit on the same lot or a second residential unit that cannot be sold separately, such as an in-law unit."
   },
   {
     "id": "S28",
