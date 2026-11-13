@@ -112,21 +112,21 @@
             "S25",
             "S42"
           ],
-          "notes": "No official source can certify approval; only a conservative checklist capable of review.",
+          "notes": "No official source can certify approval; only a conservative checklist capable of review. See lawyer-review criteria LR-01 to LR-11 on the Suggestions & Decisions page.",
           "flag_id": "T03-F08",
           "source_note": ""
         },
         {
           "id": "Q-08",
           "label": "Should one unit or both be raised to avoid discrimination lawsuits/inquiries?",
-          "value": "",
-          "status": "needs review",
+          "value": "No official source found that requires raising both units. Each unit is governed separately by the same rules. An identical, neutral rule applied to each eligible unit is the conservative approach; if only one unit is increased, document the neutral eligibility reason. Options: DP-B and DP-C.",
+          "status": "analysis",
           "source_ids": [
             "S41",
             "S42",
             "S38"
           ],
-          "notes": "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised.",
+          "notes": "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised. Not legal advice; no attorney approval.",
           "flag_id": "F22",
           "source_note": ""
         },
@@ -298,6 +298,50 @@
           ],
           "notes": "No official source offers approval of an increase before it is served.",
           "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-22",
+          "label": "Is the Rent Increase License a state or local law? Where does the \"2023\" date come from?",
+          "value": "Local. San Francisco Ordinance No. 265-20 (SF Administrative Code Sec. 37.15), effective January 18, 2021. March 1, 2023 is when reporting began for condominiums and buildings with fewer than 10 residential units (July 1, 2022 for 10 or more units).",
+          "status": "verified",
+          "source_ids": [
+            "S88",
+            "S89",
+            "S07"
+          ],
+          "notes": "Flags F53 and F54.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-23",
+          "label": "Do state laws apply on top of the SF rules?",
+          "value": "Yes. AB 1482 (8.8% for 8/1/26-7/31/27) does not apply to units already under SF Rent Ordinance increase limits. Civil Code 827, 1942.5 and 1954.53 apply as described on the State Law page.",
+          "status": "verified",
+          "source_ids": [
+            "S27",
+            "S35",
+            "S57",
+            "S37"
+          ],
+          "notes": "See State Law page.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "Q-24",
+          "label": "What is the federal role?",
+          "value": "Fair Housing Act and HUD disparate-impact rule prohibit discrimination in rental housing. No federal cap on private-rent increases was found in official sources.",
+          "status": "analysis",
+          "source_ids": [
+            "S41",
+            "S42",
+            "S40",
+            "S43"
+          ],
+          "notes": "Flag F22. HUD FMRs and SAFMRs are voucher benchmarks, not rent caps (F52).",
+          "flag_id": "F22",
           "source_note": ""
         },
         {

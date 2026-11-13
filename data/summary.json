@@ -146,6 +146,89 @@
       ]
     },
     {
+      "title": "State or local law? Answer to the \"2023\" question",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "SL-01",
+          "label": "Is the rent-increase license a state or local law?",
+          "value": "Local. San Francisco Ordinance No. 265-20 amended the SF Administrative Code (Sec. 37.3 and new Sec. 37.15), effective January 18, 2021. The Rent Board administers the Housing Inventory and the license.",
+          "status": "verified",
+          "source_ids": [
+            "S88",
+            "S89",
+            "S07"
+          ],
+          "notes": "The Legistar copy is a marked-up master report; quote codified text (F54).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SL-02",
+          "label": "What is the \"2023\" date?",
+          "value": "Not the year the law passed. Reporting began July 1, 2022 for buildings of 10 or more units, and March 1, 2023 for condominiums and buildings with fewer than 10 units. A two-unit building is in the 2023 group if its units are covered by the Rent Ordinance (coverage not verified).",
+          "status": "verified",
+          "source_ids": [
+            "S89",
+            "S07",
+            "S01"
+          ],
+          "notes": "Flag F53.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SL-03",
+          "label": "Which state laws also apply?",
+          "value": "California law applies alongside the local rules. AB 1482 (8.8% for 8/1/26-7/31/27) does NOT apply to units already under SF Rent Ordinance increase limits. Civil Code 827 (notice), 1942.5 (retaliation) and 1954.53 (Costa-Hawkins) apply as described on the State Law page.",
+          "status": "verified",
+          "source_ids": [
+            "S27",
+            "S35",
+            "S57",
+            "S37"
+          ],
+          "notes": "State law does not remove the local license requirement.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SL-04",
+          "label": "Which federal fair-housing laws apply?",
+          "value": "Fair Housing Act (42 U.S.C. 3604) prohibits discrimination in rental housing on protected characteristics (race, color, religion, sex, familial status, national origin, disability). HUD disparate-impact rule: 24 CFR 100.500.",
+          "status": "verified",
+          "source_ids": [
+            "S41",
+            "S42",
+            "S40"
+          ],
+          "notes": "Neutral criteria still matter; see Suggestions section C.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SL-05",
+          "label": "Is there a federal cap on private-rent increases?",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S43",
+            "S40",
+            "S41"
+          ],
+          "notes": "No federal cap was found in official sources. HUD FMRs and SAFMRs are voucher benchmarks, not rent caps (F52).",
+          "flag_id": "F22",
+          "source_note": ""
+        }
+      ]
+    },
+    {
       "title": "Executive findings",
       "columns": [
         "Item",

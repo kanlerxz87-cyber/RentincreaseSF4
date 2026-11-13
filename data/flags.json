@@ -638,6 +638,65 @@
     "status": "needs review"
   },
   {
+    "id": "F53",
+    "title": "Premise check: the license requirement is local and dates from Ordinance 265-20, not 2023",
+    "detail": "The license requirement is San Francisco Ordinance No. 265-20 (local; SF Administrative Code Sec. 37.15), effective January 18, 2021. March 1, 2023 is the date reporting began for condominiums and buildings with fewer than 10 residential units; buildings of 10 or more units began July 1, 2022. Confirm with the Rent Board that this two-unit building is in the March 1, 2023 group and is covered by the Rent Ordinance. Coverage is not verified.",
+    "source_ids": [
+      "S88",
+      "S89",
+      "S07"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F54",
+    "title": "Ordinance 265-20 copy is a marked-up Legistar Master Report",
+    "detail": "The Legistar view fetched on 2026-11-13 shows Board amendment strike-throughs and redline additions, so it is not clean codified text. Quote the codified Administrative Code (Sec. 37.3 and Sec. 37.15 at the American Legal Publishing links) and the Rent Board Rules instead.",
+    "source_ids": [
+      "S88",
+      "S74",
+      "S75"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F55",
+    "title": "sf.gov Assessor link redirects to the Planning Property Information Map",
+    "detail": "The sf.gov Housing Inventory page links to sfassessor.org/property-information/homeowners/property-search-tool. A direct fetch on 2026-11-13 returned the SF Planning Property Information Map (PIM), so the link does not reach an assessor search. Use the PIM for coverage and year-built checks and verify the assessor record separately. Reported as an official hyperlink defect; no value depends on it.",
+    "source_ids": [
+      "S07",
+      "S32"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F56",
+    "title": "Privacy: raw identifier tokens remain in 12 public commits (re-confirmed 2026-11-13)",
+    "detail": "A git-history search on 2026-11-13 found the raw identifier tokens in 12 distinct commits dated 2026-11-06 to 2026-11-11. The current tree has none. Owner options (see F44 and F51): rewrite history and force-push (needs explicit owner approval), ask GitHub Support to purge cached views, delete stale branches, or make the repository private. No history rewrite was done in this session. Counts are published here; the tokens are not.",
+    "source_ids": [
+      "S68"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F57",
+    "title": "Governance: COORDINATION.md is long and reuses task IDs",
+    "detail": "COORDINATION.md is about 145 KB. Task IDs T49 and T51 were each used by more than one session, several in-progress rows are older than 60 minutes, and the file holds records from more than 20 sessions. Recommend archiving older records in a later integration session. This session appended only its own record.",
+    "source_ids": [
+      "S68"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F58",
+    "title": "Repository clutter, duplicate validators and stale open pull requests",
+    "detail": "research/ holds 16 folders, several with their own validators (for example research/b87_notice_kit, research/c72_2026-11-11_audit, research/n08_qa). Open PRs #18, #19, #25, #47 and #48 are stale, conflicting generator states. This session did not merge or close any of them; the owner should decide whether to close them.",
+    "source_ids": [
+      "S68"
+    ],
+    "status": "needs review"
+  },
+  {
     "id": "B87-F01",
     "title": "Notice worksheet: case-specific notice facts unverified",
     "detail": "Worksheet unit cells stay blank; do not infer eligibility, base rent, anniversary, license, lease permission, banking, petition, subsidy, repair/retaliation or service facts. Owner-supplied dates and amounts are preserved but are not official findings. From the B87 notice kit (research/b87_notice_kit), integrated 2026-11-10.",

@@ -2,7 +2,7 @@
 
 EXECUTIVE_SUMMARY_TEXT = """# Executive Summary - Rental increase SF
 
-Key rate, licensing, fee, coverage, banking, retaliation and pending-legislation sources rechecked on 2026-11-11 UTC; other sources retain their individual verification dates. See research/t52_audit/README.md and research/t50_reverify/README.md for the scope of these checks. Informational compliance research, not legal advice.
+Key rate, license, fee, banking, AB 1482, Form 571 history, Ordinance 265-20 and pending-legislation sources re-checked on 2026-11-13 UTC (see research/s23_2026-11-13/README.md); other sources retain their individual verification dates (see research/t52_audit/README.md and research/t50_reverify/README.md). Informational compliance research, not legal advice.
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 
@@ -47,6 +47,24 @@ Official links for manual review: SF.gov "Learn about rent increases in San Fran
 **Two things the official pages do not answer, and are therefore left blank (F47).** First, *retroactivity*: the notice says banked increases "noticed on or after September 15, 2026" would be covered, yet the ordinance was only introduced on 9/15/2026 and the notice was posted 11/9/2026 - so the proposal, on its own wording, reaches notices served before anyone could have known about it. Nothing official says how a notice served in that window would be treated. Second, *duration and measurement*: the notice says "temporarily", the Legistar title says "for the next three years", and no page says whether the 10% includes or excludes the separate annual allowable increase. These are recorded as published inconsistencies, not resolved by inference.
 
 **The practical step that costs nothing:** before serving any notice, open the two official pages, note the date, and save a copy. If the status has changed by then, the notice you serve should reflect the law in force on its effective date. A dated record of what the official page said is the cheapest way to answer a tenant-side reviewer who asks why you did what you did.
+
+## State or local? The license requirement is local; state and federal rules apply alongside
+
+**Answer: local.** The rent-increase license requirement comes from San Francisco Ordinance No. 265-20, which amended the SF Administrative Code (Sec. 37.3 and new Sec. 37.15) and became effective on January 18, 2021 (https://www.sf.gov/news/new-legislation-creates-housing-inventory-and-requires-owners-obtain-license-imposing ; https://sfgov.legistar.com/View.ashx?M=F&ID=9024120&GUID=79C40690-896E-43CD-9855-77B3AC909AEF). The "2023" date you read about is the date reporting began for condominiums and buildings with fewer than 10 residential units: March 1, 2023. Buildings of 10 or more units began July 1, 2022. A two-unit building is in the 2023 group if its units are covered by the Rent Ordinance; coverage is not yet verified (flags F53 and F54).
+
+**State law applies alongside, not instead.** California's AB 1482 maximum (8.8% for August 1, 2026 to July 31, 2027) does not apply to units already under the SF Rent Ordinance's increase limits (https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482). Civil Code 827 (notice and delivery), 1942.5 (retaliation) and 1954.53 (Costa-Hawkins) also apply; see the State Law page.
+
+**Federal law.** The Fair Housing Act prohibits discrimination in rental housing on protected characteristics (https://www.hud.gov/helping-americans/fair-housing-act-overview). No federal cap on private-rent increases was found in official sources (flag F22).
+
+## Tenant-lawyer review: what a San Francisco tenant lawyer will test
+
+A tenant lawyer will look for: coverage from an official record; a license on file on the effective date; a complete rent history; correct base-rent math; complete notice contents and timing; delivery with proof of service; no extra rent for an added occupant; no retaliation within the 180-day window; and neutral, non-discriminatory criteria. The full list (LR-01 to LR-11), each with an official link, is on the Suggestions & Decisions page.
+
+Free tenant-side counseling exists (Rent Board counselor, 415-252-4600; https://www.sf.gov/speak-rent-board-counselor/). A counselor is not an attorney for the owner, and no attorney has approved any increase in this project.
+
+## Suggestions and decisions: nothing is implemented yet
+
+The Suggestions & Decisions page lists the missing facts that block a decision (DR-01 to DR-14), five decision paths for the increase (DP-A to DP-E), lawyer-review criteria (LR-01 to LR-11), and nine site improvements (SI-01 to SI-09). Each item shows its status and its official source. Choose one path per topic and record it in the decision log (DL-01). Until you choose, no increase, notice or site change is made.
 
 ## Bottom line
 
@@ -112,6 +130,7 @@ Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
 - `index.html` - clean landing page / dashboard.
 - `pages/` - category subpages with easy-read tables, including the Rent Board Fee page (`pages/fee.html`) and the Notice Worksheet page (`pages/worksheet.html`).
+- `pages/suggestions.html` - Suggestions & Decisions: missing facts, decision paths, lawyer-review criteria and site improvements. Nothing is implemented until a choice is recorded.
 - `data/` - JSON source of truth; every row has official source IDs.
 - `SOURCES.md` / `VERIFICATION.md` / `research/` - official source ledger and line-by-line verification.
 - `EXECUTIVE_SUMMARY.md` - standalone executive summary.
