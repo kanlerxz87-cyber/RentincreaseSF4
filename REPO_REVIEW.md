@@ -118,3 +118,36 @@ Structural and link checks are not legal verification. This session does not cla
 - Decision Readiness page: https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/decision.html
 - GitHub Pages settings (API): https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages
 - This session's verification record: `research/t54_suggestions/README.md`
+
+### The merge with the concurrent session `arena-23a50992` (PR #52 / #55)
+
+A third concurrent session merged a tenant-lawyer review table while this session was integrating. Its work is kept, not overwritten.
+
+| Element | Decision |
+| --- | --- |
+| `pages/decision.html` | The `LR-01`-`LR-11` lawyer-review criteria table is kept. It is a distinct table from the five decision gates and the `DR-*` register, and it answers a question this session's work does not: what a San Francisco tenant lawyer would actually test. Nothing was overwritten. |
+| `S92` (Legistar copy of Ordinance 265-20) | Kept, with its own caveat recorded as flag **F54**: the fetched copy is a marked-up Master Report with strike-throughs and redlines, not clean codified text, so it must not be quoted as the codified rule. |
+| Flags **F54**-**F58** | Kept. **F58** is updated by this session to record that the five stale pull requests it names are now closed as superseded and that no unique artifact was lost. |
+| `scripts/site_pages.py` | The merged file keeps the `SUG-P/A/B/C` groups, the `DR-*` register, the `LR-01`-`LR-11` table, questions **Q-22**-**Q-24**, and this session's appended groups **D**-**G** with the group **H** review checklist. |
+| Question row cross-references | `Q-22` and `Q-23` referred to the old row identifiers `SUG-18`, `SUG-19`, `SUG-20` and `SUG-21`. After the renumbering to groups D-G those pointers were updated to `SUG-F1`, `SUG-F2`, `SUG-F3` and `SUG-F4`, so no published question points at a row that no longer exists. |
+| Generated files | Taken from the merged side and regenerated from the merged generator. No hand-edited output. |
+
+## Re-review 2026-11-13 (session `arena-23a50992`, S23)
+
+Base: `main` at `f810ee5` (PR #50). Scope: line-by-line review of the current tree, git history, open PRs and the published site build. Official-source checks are in `research/s23_2026-11-13/README.md`.
+
+| Line / file | Observed content | Verification | Flag |
+| --- | --- | --- | --- |
+| `.git` (history) | The local clone was shallow (one commit). `git fetch --unshallow` restored 170 commits across all refs. | `git rev-parse --is-shallow-repository`; `git rev-list --all \| wc -l` | None (environment note only). |
+| Git history | Raw identifier tokens appear in 12 distinct commits dated 2026-11-06 to 2026-11-11. The current tree has none. | `git log --all -G` per token, counts only | F44, F51, F56 (open; owner decision). |
+| Current tree (`data/`, `pages/`, `index.html`, `*.md`) | No raw identifier token and no SHA-256 digest of an identifier. Placeholders Tenant A–F are used throughout. | Scan of tracked files with an allowlist; `validate_site.py` privacy checks pass. | None new. |
+| `.gitignore` | `internal/` is ignored. This session stored the raw intake in `internal/intake_private.md` only. | `git check-ignore -v internal/intake_private.md` | None. |
+| Open pull requests | #18, #19, #25, #47 and #48 are open and marked stale, conflicting generator states from earlier sessions. | `gh pr list --state open` | F58 (owner decision; not merged or closed here). |
+| `COORDINATION.md` | About 147 KB. Task IDs T49 and T51 were each reused by more than one session; several `in progress` rows are older than 60 minutes. | `wc -c`; `grep` of task IDs | F57. |
+| `research/` | 16 folders, several with their own validators. | `ls research` | F58. |
+| `scripts/site_sources.py` `DATE` | Set to `2026-11-13` for this build. `validate_site.py` date check now accepts `2026-11-13` (the earlier check hard-coded the prior dates). | Build and validation | None. |
+| `SOURCES.md` | Added row S92 (Ordinance 265-20, Legistar copy). S88–S91 were assigned by `main` (PR #51) and kept. Count is computed at build time. | `validate_site.py` source-ledger check | F54. |
+| sf.gov Housing Inventory page (S07) | Links to an Assessor URL that redirects to the Planning Property Information Map. | Direct `fetch_page` 2026-11-13 | F55. |
+| Legistar Ordinance 265-20 copy (S92) | Marked-up master report (strike-throughs and redlines), not clean codified text. | Direct `fetch_page` 2026-11-13 | F54. |
+| Premise in the owner request | The license requirement is described as a "2023 law". Ordinance 265-20 is effective January 18, 2021; March 1, 2023 is the reporting start for buildings under 10 units. | SF.gov news (S90) | F53 (published on `main`). |
+| `research/c72_2026-11-11_audit/validate_c72.py` | The page-count assertion was hard-coded to 21 HTML pages; the new Suggestions & Decisions page makes 22. Updated the expected count only (no check removed). | `python3 research/c72_2026-11-11_audit/validate_c72.py` → 19/0 | None (maintenance). |

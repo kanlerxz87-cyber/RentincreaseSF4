@@ -5,12 +5,12 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "91 official sources"
+      "detail": "92 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "71 flagged items"
+      "detail": "76 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -30,7 +30,7 @@
     {
       "name": "SOURCES.md has no stale hand-typed source total",
       "ok": true,
-      "detail": "91 sources"
+      "detail": "92 sources"
     },
     {
       "name": "94122 SAFMR rows publish the official HUD values with official sources",
@@ -70,17 +70,17 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "480 rows checked; "
+      "detail": "491 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "593 rows checked; "
+      "detail": "605 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "74 needs-review rows"
+      "detail": "77 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -525,7 +525,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "53 numeric flags"
+      "detail": "58 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -728,6 +728,16 @@
       "detail": "no approval language"
     },
     {
+      "name": "every suggestion row carries at least one source link",
+      "ok": true,
+      "detail": "0 rows without a link"
+    },
+    {
+      "name": "the suggestions page explains the internal-marker convention",
+      "ok": true,
+      "detail": "legend present"
+    },
+    {
       "name": "Decision Readiness page is published and in the navigation",
       "ok": true,
       "detail": ""
@@ -760,13 +770,13 @@
   ],
   "errors": [],
   "summary": {
-    "sources": 91,
+    "sources": 92,
     "pages": 22,
     "data_files": 24,
-    "rows_verified": 480,
-    "needs_review_rows": 74,
-    "flags": 71,
-    "checks": 151,
+    "rows_verified": 491,
+    "needs_review_rows": 77,
+    "flags": 76,
+    "checks": 153,
     "errors": 0
   }
 }

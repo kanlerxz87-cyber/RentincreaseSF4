@@ -726,5 +726,13 @@
     "url": "https://www.huduser.gov/portal/datasets/fmr.html",
     "category": "Federal",
     "statement": "Direct fetch_page 2026-11-13: HUD USER states that 'Fair Market Rents (FMRs) are used to determine payment standard amounts for the Housing Choice Voucher program' and, citing 24 CFR 888.113, that they 'are estimates of 40th percentile gross rents for standard quality units within a metropolitan area or nonmetropolitan county'. The page also lists other programme uses (project-based Section 8 renewals, HOME and ESG rent ceilings, Continuum of Care limits, flat rents in Public Housing). The page describes programme payment standards; it does not state any limit on private-market rent and contains no rent-increase registration duty."
+  },
+  {
+    "id": "S92",
+    "agency": "San Francisco Board of Supervisors (Legistar)",
+    "title": "Ordinance No. 265-20 - Administrative Code: Housing Inventory (Sec. 37.15 reporting and rent-increase licensing), effective January 18, 2021",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=9024120&GUID=79C40690-896E-43CD-9855-77B3AC909AEF",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-13: the ordinance amends SF Administrative Code Sec. 37.3 and adds Sec. 37.15, requiring owners to report units to the Rent Board and to have a license before imposing annual or banked rent increases. The copy fetched is the Legistar Master Report with Board markup; confirm against the codified text (S74, S75) before quoting it (flag F54)."
   }
 ]

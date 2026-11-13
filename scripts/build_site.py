@@ -233,6 +233,8 @@ def page_html(slug, page):
     out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
         e(page["title"]), e(page["description"]), e(D.DISCLAIMER)
     ))
+    if page.get("intro"):
+        out.append('<section class="narrative"><p>{}</p></section>'.format(e(page["intro"])))
     for sec in page["sections"]:
         intro = sec.get("intro")
         head = "<section><h2>{}</h2>".format(e(sec["title"]))

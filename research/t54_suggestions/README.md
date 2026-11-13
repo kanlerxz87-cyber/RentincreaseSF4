@@ -108,7 +108,7 @@ Group F is the direct answer to the owner's request for a clear list of the ques
 | Gate | Result |
 | --- | --- |
 | `python3 scripts/build_site.py` | Clean. 24 data files, 22 page HTML files, `index.html`, `assets/site.css`, `.nojekyll` and 3 markdown deliverables. Re-running produces byte-identical `data/` and `pages/`. |
-| `python3 scripts/validate_site.py` | **151 checks, 0 errors** (91 official sources, 71 flags, 451 rows, 0 broken internal links). Six new checks cover this session's contribution: official basis, effort and review status on every D-G row; the internal-marker rule; no pre-approved row; one blank checklist row per proposal; the rendered blank reviewer cells; and no approval or guarantee language. |
+| `python3 scripts/validate_site.py` | **153 checks, 0 errors** (92 official sources, 76 flags, 491 rows, 0 broken internal links). Six new checks cover this session's contribution: official basis, effort and review status on every D-G row; the internal-marker rule; no pre-approved row; one blank checklist row per proposal; the rendered blank reviewer cells; and no approval or guarantee language. |
 | `python3 research/b87_notice_kit/validate_kit.py` | 19 checks, 0 errors. |
 | `python3 research/c72_2026-11-11_audit/validate_c72.py` | 19 checks, 0 errors; 23 HTML pages scanned with 0 broken links, 0 broken anchors and 0 stored digests. The audit's page-count check was updated as pages were added and is now a lower bound, so a new page cannot break it. |
 | `python3 research/n08_qa/privacy_check.py` | 0 fingerprint matches in the current tree. |

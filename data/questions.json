@@ -329,7 +329,7 @@
         {
           "id": "Q-22",
           "label": "Which open questions can an official record answer, and which only you can answer?",
-          "value": "The Suggestions & Review page publishes a missing-information register (SUG-18) that names, for every open item, what is missing, which official source would resolve it, how to obtain it, who must supply it and which decision it blocks, plus a separate list of the facts only the owner can supply (SUG-19): the last original occupant in each unit, the date occupancy began, whether a 6.14 notice was served, each unit's anniversary date, the full lease and notice history, square footage and bedroom and bathroom counts, whether either unit is an in-law unit, whether the owner occupies one unit, and whether each tenant was in occupancy on November 1 for the fee-recovery test.",
+          "value": "The Suggestions & Review page publishes a missing-information register (SUG-F1) that names, for every open item, what is missing, which official source would resolve it, how to obtain it, who must supply it and which decision it blocks, plus a separate list of the facts only the owner can supply (SUG-F2): the last original occupant in each unit, the date occupancy began, whether a 6.14 notice was served, each unit's anniversary date, the full lease and notice history, square footage and bedroom and bathroom counts, whether either unit is an in-law unit, whether the owner occupies one unit, and whether each tenant was in occupancy on November 1 for the fee-recovery test.",
           "status": "verified",
           "source_ids": [
             "S07",
@@ -346,7 +346,7 @@
         {
           "id": "Q-23",
           "label": "How do I put the open questions to the Rent Board efficiently?",
-          "value": "Counseling is free, available in Spanish, Cantonese and Mandarin with interpretation for other languages, and cannot give legal advice, so the questions have to be written down first; calls are generally limited to 5 minutes. The Suggestions & Review page publishes a printable call script (SUG-20) containing only the open questions, with the counselor's published phone number and office hours, and a pre-decision gate sequence (SUG-21) listing the questions to answer before any notice is dated.",
+          "value": "Counseling is free, available in Spanish, Cantonese and Mandarin with interpretation for other languages, and cannot give legal advice, so the questions have to be written down first; calls are generally limited to 5 minutes. The Suggestions & Review page publishes a printable call script (SUG-F3) containing only the open questions, with the counselor's published phone number and office hours, and a pre-decision gate sequence (SUG-F4) listing the questions to answer before any notice is dated.",
           "status": "verified",
           "source_ids": [
             "S24",

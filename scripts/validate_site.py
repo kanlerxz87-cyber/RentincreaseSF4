@@ -531,6 +531,12 @@ def main():
     check("suggestions page claims no approval, guarantee or legal advice",
           not _affirmative_claim_hits(sug_html),
           "; ".join(_affirmative_claim_hits(sug_html)[:5]) or "no approval language")
+    check("every suggestion row carries at least one source link",
+          all(r.get("source_ids") for r in sug_rows),
+          "{} rows without a link".format(len([r for r in sug_rows if not r.get("source_ids")])))
+    check("the suggestions page explains the internal-marker convention",
+          "Internal site-design proposal" in sug_html and "project record" in sug_html,
+          "legend present" if "project record" in sug_html else "legend missing")
     check("Decision Readiness page is published and in the navigation",
           "decision" in pages and (PAGES / "decision.html").exists()
           and any(s == "decision" for s, _ in D.NAV))

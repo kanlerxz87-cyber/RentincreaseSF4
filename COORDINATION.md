@@ -729,6 +729,16 @@ Branch `arena/f7ac76e9-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 
 ---
 
+## Session 2026-11-13 — `arena-23a50992` (claim: state-vs-local answer, tenant-lawyer review criteria, missing-information register, Suggestions & Decisions page, re-verification, publication)
+
+Branch `arena/23a50992-rentincreasesf4` (fixed by Arena; based on `main` `f810ee5`, PR #50 merged). Board read before claiming: all `in progress` rows above are older than 60 minutes with no current commits; `main` is the only active base. No other live claim exists.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| S23-A | Re-verify load-bearing official pages on 2026-11-13 (SF.gov rate, license, banking, fee, AB 1482, Form 571 history, File 261020 status, Ordinance 265-20) | `done` | `arena-23a50992` | `research/s23_2026-11-13/` (new) | Direct `fetch_page` 2026-11-13; see `research/s23_2026-11-13/README.md` | — |
+| S23-B | Tenant-lawyer review criteria (LR-01 to LR-11) added to the Decision Readiness page; Ordinance 265-20 Legistar copy added as **S92**; flags **F54–F58** added (marked-up Legistar copy, assessor link redirect, history exposure re-confirmed, COORDINATION size and reused IDs, duplicate validators). The state-vs-local answer, the 2023 premise correction, the Suggestions page and the Decision Readiness register were delivered by session `arena-415e54ea` (T54–T56, PR #51) and kept as merged on `main`; this branch did not duplicate them. The S23 draft IDs S88/S89 and F53 were **not** kept: on `main` S88–S91 and F50–F53 are already assigned to other content. | `done` | `arena-23a50992` | `scripts/site_pages.py` (LR section only), `scripts/site_flags.py` (F54–F58 only), `scripts/site_sources.py` (S92 only), `SOURCES.md` (S92 row), `REPO_REVIEW.md`, `research/s23_2026-11-13/`, `research/c72_2026-11-11_audit/validate_c72.py` (page count), regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md` | Direct `fetch_page` 2026-11-13 (see `research/s23_2026-11-13/README.md`); `validate_site.py` 145 checks, 0 errors; `validate_kit.py` 19/0; `validate_c72.py` 19/0 | Raw identifiers stay in gitignored `internal/`; the published site uses placeholders. F56 re-confirms the open history exposure (F44/F51); no rewrite done. |
+| S23-C | Repo review update, merge of `main` (PR #51, T54–T56) into this branch with conflicts resolved (COORDINATION.md: both records kept verbatim; generated outputs and build scripts taken from `main` and re-applied with S23 additions only), PR to `main`, merge, GitHub Pages deploy confirmation, record result | `done` (2026-11-13 UTC; PR #52 merged, Pages built) | `arena-23a50992` | `REPO_REVIEW.md`, `COORDINATION.md` | `gh pr`, `gh api .../pages/builds/latest` | Pre-existing: raw identifiers remain in git history (open flag F44/F51/F56). Not rewritten without owner approval. |
+
 ## Session `arena-415e54ea` — T54/T55/T56 final integration (2026-11-13 UTC)
 
 Branch `arena/415e54ea-rentincreasesf4`, branched from `main` at `f810ee5` (PR #50). Exclusive, non-overlapping file scopes replace `session-<id>/<task>` branch names because Arena fixes this session to one branch.
@@ -831,6 +841,40 @@ All five stale pull requests are closed as **superseded rather than merged**, ea
 
 ### Gates
 
-`scripts/build_site.py` clean and reproducible (a second build produced byte-identical `data/` and `pages/`); `scripts/validate_site.py` **151 checks, 0 errors** (91 official sources, 71 flags, 451 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py` **19/0**; `research/c72_2026-11-11_audit/validate_c72.py` **19/0**; `research/n08_qa/privacy_check.py` **0 current-tree matches**. An independent HTMLParser sweep confirmed 0 broken internal links and that every rendered Suggestions row carries an official-domain link.
+`scripts/build_site.py` clean and reproducible (a second build produced byte-identical `data/` and `pages/`); `scripts/validate_site.py` **153 checks, 0 errors** (92 official sources, 76 flags, 491 rows, 0 broken internal links); `research/b87_notice_kit/validate_kit.py` **19/0**; `research/c72_2026-11-11_audit/validate_c72.py` **19/0**; `research/n08_qa/privacy_check.py` **0 current-tree matches**. An independent HTMLParser sweep confirmed 0 broken internal links and that every rendered Suggestions row carries an official-domain link.
 
 **Not claimed.** Structural and link checks are not legal verification. No attorney review, challenge immunity, complete privacy, or history purge is claimed. Flags F44 and F51 (historical exposure of short identifiers in this public repository's git history and PR diffs) are unchanged and remain owner-actionable.
+
+---
+
+### Reconciliation note — this session `arena-87a91aec`, after PR #55
+
+A third concurrent session (`arena-23a50992`) merged **PR #52 / #55** to `main` while this session was integrating, adding the tenant-lawyer review criteria table (`LR-01`–`LR-11`) to the Decision Readiness page, the Legistar copy of Ordinance 265-20 (**S92**), and flags **F54–F58**.
+
+| Element | Decision |
+| --- | --- |
+| `pages/decision.html` | The `LR-01`–`LR-11` lawyer-review criteria table is **kept**. It is a distinct table from the five decision gates and the `DR-*` register, and it answers a question this session's work does not: what a San Francisco tenant lawyer would actually test. Nothing was overwritten. |
+| Sources | **S92** kept, with its own caveat (the fetched Legistar copy is a marked-up Master Report, not clean codified text) recorded as flag **F54**. This session's twelve 2026-11-13 re-verification statements are kept alongside it. |
+| Flags | **F54–F58** kept. **F58** is updated by this session to record that the five stale pull requests it names are now closed as superseded, and that no unique artifact was lost (see the stale-PR section above). |
+| `scripts/site_pages.py` | The merged file keeps the `SUG-P/A/B/C` groups, the `DR-*` register, the `LR-01`–`LR-11` table, questions **Q-22–Q-24**, and the appended groups **D–G** with the group **H** review checklist. |
+| Generated files | Taken from the merged side and regenerated from the merged generator. No hand-edited output. |
+| Stale PRs #18, #19, #25, #47, #48 | Closed by this session as **superseded, not merged**, each with a comment pointing at where its work now lives. Flag **F58** updated to match. |
+
+The two session records are kept above in full and in the order the work happened: this session's T54 record, then the `arena-23a50992` S23 record.
+
+### S23 publication result — PR #52 merged and GitHub Pages built (session `arena-23a50992`, 2026-11-13 UTC)
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| Conflict with `main` | PR #52 conflicted with `main` after PR #51 (T54–T56, session `arena-415e54ea`) landed. Resolved by merging `main` into the branch: `COORDINATION.md` keeps **both** records verbatim; generated outputs and build scripts take `main`'s version; S23 additions re-applied on top with non-colliding IDs (S92; F54–F58; LR-01–LR-11). Nothing from `arena-415e54ea` was discarded. | merge commit `187b762`; `gh pr view 52` `CLEAN`/`MERGEABLE` before merge |
+| Branch hygiene | A `git pull --rebase` run during resolution pushed an intermediate state; it was caught, the rebase aborted, and the pushed commit confirmed to be the intended merge commit `187b762` (a fast-forward of `a31dcdc`). No history rewrite or force-push. | `git rev-parse HEAD origin/arena/23a50992-rentincreasesf4` both `187b762` |
+| PR [#52](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/52) | **MERGED** `2026-11-13T06:59:32Z`; merge commit `137bfce9bcd33e2979eba43604ce9e25a700e679` | `gh pr view 52` |
+| CI `validate` | **PASSED** on head `187b762` (run [43382476862](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43382476862)) | `gh pr checks 52` |
+| GitHub Pages | `status: built` for `137bfce9bcd33e2979eba43604ce9e25a700e679`, `error: null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Live spot check | `pages/decision.html` serves the five gates and DR-01–DR-20; `pages/flagged.html` serves "All 76 flagged items" | direct `fetch_page` of <https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/decision.html> and `pages/flagged.html` |
+| Local gates at merge | `validate_site.py` **145 checks, 0 errors**; `validate_kit.py` **19/0**; `validate_c72.py` **19/0**; rebuild reproducible (empty diff) | local run |
+| Repo visibility | `gh repo view --json isPrivate` → `isPrivate: false` (**public**). Raw identifiers in git history are therefore publicly visible; F44/F51/F56 need an owner decision. | `gh repo view` |
+| Validator changes in this session | `validate_c72.py` expected pages raised to 22 on the branch; `main` (PR #51) superseded it with a floor of 21, which the check accepts. `validate_site.py` proposed-cap date gate: `main`'s floor (2026-11-10) kept; it accepts the 2026-11-13 date. No checks removed. | `research/c72_2026-11-11_audit/validate_c72.py`; `scripts/validate_site.py` |
+| Proposed-cap decision (logged) | The pending File 261020 cap is shown as **proposed, not enacted** (Pending Committee Action, checked 2026-11-13). It is never applied as current law; banked/capital calculations are cautioned and must be re-checked on the day of any notice (F46, DR-12, SI-06). | `pages/decision.html` DR-12; `FLAGGED_FOR_REVIEW.md` |
+
+**Handoff.** (1) Owner decisions still open: F44/F51/F56 history remediation (public repo); DL-01 in the Decision Readiness page records the path choice; Suggestions page SUG-A/B/C items await selection. (2) Stale open PRs #18, #19, #25, #47 and #48 remain open and unmerged, per F58.
