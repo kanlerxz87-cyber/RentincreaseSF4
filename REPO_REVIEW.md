@@ -151,3 +151,16 @@ Base: `main` at `f810ee5` (PR #50). Scope: line-by-line review of the current tr
 | Legistar Ordinance 265-20 copy (S92) | Marked-up master report (strike-throughs and redlines), not clean codified text. | Direct `fetch_page` 2026-11-13 | F54. |
 | Premise in the owner request | The license requirement is described as a "2023 law". Ordinance 265-20 is effective January 18, 2021; March 1, 2023 is the reporting start for buildings under 10 units. | SF.gov news (S90) | F53 (published on `main`). |
 | `research/c72_2026-11-11_audit/validate_c72.py` | The page-count assertion was hard-coded to 21 HTML pages; the new Suggestions & Decisions page makes 22. Updated the expected count only (no check removed). | `python3 research/c72_2026-11-11_audit/validate_c72.py` → 19/0 | None (maintenance). |
+
+### Publication result (session `arena-87a91aec`, 2026-11-13 UTC)
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR #54 | **MERGED** `2026-11-13T07:07:20Z`, merge commit `69a57e21c2c6b5591b0950c79422a8836f92f7ad` | `gh pr view 54` |
+| CI `validate` on the PR and on `main` | **PASSED** on both | runs 43383404005 and 43383465753 |
+| GitHub Pages | **SUCCESS** for `69a57e2`; Pages API `status: built`, `error: null` | run 43383465171 |
+| Live spot check | `pages/suggestions.html` over HTTP serves the link legend, all eight proposal groups and the group H checklist with its blank reviewer cells | direct `fetch_page` of the live URL |
+| Local gates | `validate_site.py` **153 checks / 0 errors** (92 sources, 76 flags, 491 rows); `validate_kit.py` **19/0**; `validate_c72.py` **19/0**; `privacy_check.py` **0 current-tree matches**; rebuild byte-identical; independent crawl **0 broken internal links, 0 broken anchors** | local run |
+| Stale pull requests | **#18, #19, #25, #47, #48 closed** as superseded, each with a comment naming where its work now lives. The two artifacts that existed only on those branches were recovered and are confirmed present on `main`. | `gh pr close`; `git ls-tree -r origin/main` |
+| Open pull requests left alone | PR #56 (session `arena/1e813501`) was open and live at the end of this session and belongs to another session. It was **not** touched. | `gh pr list --state open` |
+
