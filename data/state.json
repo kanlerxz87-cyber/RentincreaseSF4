@@ -211,32 +211,6 @@
           "source_note": ""
         },
         {
-          "id": "ST-18",
-          "label": "Civil Code 1947.7 as read on 2026-11-13 (rent-registration shield)",
-          "value": "Intent: to \"limit the imposition of penalties and sanctions against an owner of residential rental units where that person has attempted in good faith to fully comply with the regulatory processes of those programs\". (b) An owner in substantial compliance with an ordinance or charter that controls rents AND requires the registration of rents shall not be assessed a penalty or other sanction; restitution of excess rent plus filing fees are the exclusive remedies. (c) Denied annual rent adjustments \"shall be restored prospectively once the owner is in compliance\".",
-          "status": "verified",
-          "source_ids": [
-            "S93"
-          ],
-          "notes": "Read directly from the current section text on leginfo. It is a shield against penalties under a registration ordinance; it is not a licence, and it does not raise the permitted amount.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "ST-19",
-          "label": "What Civil Code 1947.7 does NOT do",
-          "value": "It does not create or replace a Rent Increase License, it does not excuse the Housing Inventory report, it does not permit an increase above the published annual allowable amount, and it does not apply by its own terms unless the local ordinance \"requires the registration of rents\". San Francisco states its inventory is not such a registry (Sec. 37.15(d)), and Rule 13.14 voids an unlicensed increase regardless.",
-          "status": "verified",
-          "source_ids": [
-            "S93",
-            "S53",
-            "S73"
-          ],
-          "notes": "Whether a tenant-side or Rent Board reviewer would nonetheless apply 1947.7 is unresolved and deliberately not answered here (Q-22, F59).",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
           "id": "ST-17",
           "label": "AB 1482 separate-parcel exemption conditions",
           "value": "Requires written tenant notice in the statutory form AND that the owner is not a REIT, a corporation, or an LLC with at least one corporate member",

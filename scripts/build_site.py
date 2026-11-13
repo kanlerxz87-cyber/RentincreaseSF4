@@ -35,8 +35,8 @@ def source_links(ids):
 def badge(status):
     if status == "owner supplied":
         return '<span class="badge owner">owner-supplied</span>'
-    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis"}.get(status, "analysis")
-    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis"}.get(status, status)
+    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis", "proposed": "proposed"}.get(status, "analysis")
+    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis", "proposed": "proposed"}.get(status, status)
     return '<span class="badge {}">{}</span>'.format(cls, e(label))
 
 def flag_link(flag_id, in_pages):
@@ -71,10 +71,30 @@ def render_suggestion_table(section, in_pages=True):
     out.append("</tbody></table></div>")
     return "".join(out)
 
+def render_decision_checklist(section, in_pages=True):
+    """Render the review checklist: ID, Suggestion, then blank reviewer cells."""
+    out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} &mdash; scrollable table"><table><thead><tr>'.format(e(section["title"]))]
+    for c in section["columns"]:
+        out.append('<th scope="col">{}</th>'.format(e(c)))
+    out.append("</tr></thead><tbody>")
+    for r in section["rows"]:
+        out.append("<tr>")
+        out.append('<td><span class="small">{}</span></td>'.format(e(r["id"])))
+        out.append("<td><strong>{}</strong></td>".format(e(r["label"])))
+        out.append('<td>{}</td>'.format(source_links(r.get("source_ids", []))))
+        for _ in range(3):
+            out.append('<td class="decision-blank">(blank - to be completed by the reviewer)</td>')
+        out.append("</tr>")
+    out.append("</tbody></table></div>")
+    return "".join(out)
+
+
 def render_table(section, in_pages=True):
     cols = section["columns"]
     if "Effort" in cols and "Review status" in cols:
         return render_suggestion_table(section, in_pages)
+    if "Decision" in cols and "Reviewer" in cols:
+        return render_decision_checklist(section, in_pages)
     out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} — scrollable table"><table><thead><tr>'.format(e(section["title"]))]
     for c in cols:
         out.append("<th scope=\"col\">{}</th>".format(e(c)))
@@ -213,8 +233,14 @@ def page_html(slug, page):
     out.append('<section class="hero"><h2>{}</h2><p>{}</p><div class="disclaimer">{}</div></section>'.format(
         e(page["title"]), e(page["description"]), e(D.DISCLAIMER)
     ))
+    if page.get("intro"):
+        out.append('<section class="narrative"><p>{}</p></section>'.format(e(page["intro"])))
     for sec in page["sections"]:
-        out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
+        intro = sec.get("intro")
+        head = "<section><h2>{}</h2>".format(e(sec["title"]))
+        if intro:
+            head += "<p>{}</p>".format(e(intro))
+        out.append("{}</section>".format(head) + render_table(sec, True) + "</section>")
     out.append(footer_html(True))
     return "".join(out)
 
@@ -259,12 +285,13 @@ def page_sources(page):
                     ids.append(sid)
     return ids
 
+
 def index_html():
     out = [header_html("Rental increase SF", "Executive-summary dashboard for an anonymized San Francisco rent-increase case.", "", False)]
     out.append('<section class="hero"><h2>Start here: is the \'inform the Rent Board\' rule a state law or a local law?</h2>'
                '<p><strong>Local.</strong> The duty to report a rent-controlled unit and hold a <strong>Rent Increase License</strong> is a <strong>San Francisco ordinance</strong> — Administrative Code Chapter 37, Section 37.15, added by Ordinance No. 265-20, effective <strong>January 18, 2021</strong>. It is not a California state statute and not a federal rule.</p>'
                '<p>The <strong>2023</strong> date is the <strong>local</strong> operative date for small buildings: condominiums and buildings with <strong>1-9 residential units</strong> have had to report since <strong>March 1, 2023</strong> (buildings with 10+ units began July 1, 2022). The actual 2023 state law was <strong>SB 567</strong>, which amended the statewide rent cap and just-cause rules and became operative <strong>April 1, 2024</strong> — it creates no rent-board reporting duty. {} &middot; {} &middot; {}</p>'
-               '<p><a class="cta" href="pages/local.html">See the layer-by-layer table (LAW-01 to LAW-09) &rarr;</a> <a class="cta" href="pages/suggestions.html">Review the options and record your choice before implementing anything &rarr;</a></p>'
+               '<p><a class="cta" href="pages/local.html">See the layer-by-layer table (LAW-01 to LAW-08) &rarr;</a></p>'
                '<div class="disclaimer">{}</div></section>'.format(
                    source_links(["S53"]), source_links(["S90"]), source_links(["S88", "S73"]), e(D.DISCLAIMER)))
     out.append('<section class="hero"><h2>Next: do I need a Rent Board license as an individual owner?</h2>'
@@ -278,7 +305,7 @@ def index_html():
                '<p>Every finding row carries a <span class="badge verified">verified</span> badge and one or more official source links (SF.gov, the Rent Ordinance, California statute, eCFR, HUD, SEC). '
                '<span class="badge analysis">analysis</span> means a reasoned conclusion drawn from those rules plus the owner-supplied facts. '
                '<span class="badge review">needs review</span> means the value could not be confirmed officially, so the cell is left blank and the item is published on the Flagged for Review page. '
-               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings.</p>'
+               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings. <span class=\"badge proposed\">proposed</span> marks an unimplemented suggestion on the Suggestions &amp; Decisions page: a reviewer chooses a path before it is acted on.</p>'
                '<p class="small">Start with the Executive Summary for the answer, the Step-by-Step License page for the order of operations, the Anonymized Case for the two units, and the Flagged for Review page for anything still open.</p></section>')
     out.append('<div class="cards">')
     for label, value, slug, desc in D.CARDS:
@@ -286,6 +313,8 @@ def index_html():
             value = str(len(D.SOURCES))
         elif value == "auto:flags":
             value = str(len(D.FLAGS))
+        elif value == "auto:suggestions":
+            value = str(len(D.all_suggestions()))
         out.append('<div class="card"><div class="k">{}</div><div class="v">{}</div><div class="d">{}</div><a href="pages/{}.html">Open {} &rarr;</a></div>'.format(
             e(label), e(value), e(desc), e(slug), e(label)
         ))
@@ -298,6 +327,15 @@ def index_html():
         elif slug == "flagged":
             desc = "Clearly labeled irregularities and unverified items, each with official source links."
             sids = ["S01", "S07", "S08", "S02"]
+        elif slug == "suggestions":
+            desc = "Proposed improvements to this site, each with its official basis and a review decision to make before implementation."
+            sids = []
+            for sec in D.PAGES["suggestions"]["sections"]:
+                for r in sec["rows"]:
+                    for sid in r.get("source_ids", []):
+                        if sid not in sids:
+                            sids.append(sid)
+            sids = sids[:6]
         else:
             page = D.PAGES[slug]
             desc = page["description"]
@@ -325,6 +363,14 @@ def main():
     write(DATA / "pages.json", json.dumps(D.PAGES, indent=2, ensure_ascii=False) + "\n")
     for slug, page in D.PAGES.items():
         write(DATA / "{}.json".format(slug), json.dumps(page, indent=2, ensure_ascii=False) + "\n")
+    write(DATA / "suggestions.json", json.dumps({
+        "title": D.PAGES["suggestions"]["title"],
+        "description": D.PAGES["suggestions"]["description"],
+        "review_status_values": list(D.REVIEW_STATUS_VALUES),
+        "internal_marker": D.INTERNAL_MARKER,
+        "sections": [{"title": s["title"], "intro": s.get("intro", ""), "columns": s["columns"], "rows": s["rows"]}
+                     for s in D.PAGES["suggestions"]["sections"]],
+    }, indent=2, ensure_ascii=False) + "\n")
 
     for slug, page in D.PAGES.items():
         html = summary_page_with_narrative(page) if slug == "summary" else page_html(slug, page)

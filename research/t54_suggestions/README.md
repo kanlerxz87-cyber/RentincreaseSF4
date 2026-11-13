@@ -1,245 +1,162 @@
-# T54 — 2026-11-13 verification record (session `arena-6f65a2f5`)
+# T54 — Suggestions & Review page, and the 2026-11-13 re-verification pass
 
-Two deliverables in the owner's brief were not satisfied by the published site, and one
-load-bearing question was answered only implicitly:
+Session `arena-87a91aec`, branch `arena/87a91aec-rentincreasesf4`, 2026-11-13 UTC.
 
-1. *"create a section dedicated for suggestions so someone can review suggestions and choose
-   the best path before implementing any changes"* → no Suggestions page, no NAV entry, no card,
-   no requirements row existed (grep of `pages/`, `data/`, `scripts/` for "suggest" returned only
-   `TENANT_ASSISTANCE_RESEARCH.md`).
-2. *"I read somewhere that I have to inform the rent board SF about rent increase for rent
-   controlled units since the law passed in 2023. Is that a state or local law?"* → the site
-   stated the March 1, 2023 phase-in date and cited Sec. 37.15, but never named the level of
-   government, never cited the enacting ordinance's own text, and never addressed the 2023
-   **state** law a reader is most likely to have encountered.
+Scope of this record:
 
-Everything below was read directly with `fetch_page` on **2026-11-13** (no search snippet was
-used as authority). Verbatim quotes are reproduced so a human can re-check each claim against
-the same official page.
+1. The official sources re-opened directly on 2026-11-13, with what was checked and the result.
+2. The new **Suggestions & Review** page (`pages/suggestions.html`), how its rows are grounded, and how
+   the "review before implementing" workflow is enforced.
+3. The full-tree gates run before publication and what they do **not** prove.
 
-## 1. The duty is local — primary text
+This record is not a claim that every inherited row was re-verified today. Each source in the ledger
+keeps its own verification date, and only the sources listed below carry a 2026-11-13 note.
 
-**SF Administrative Code Sec. 37.15 (Rent Board's own copy, S53)** — closing note of the
-section, verbatim:
+---
 
-> \[Added by Ord. No. 265-20, effective January 18, 2021\]
+## 1. Sources opened directly on 2026-11-13
 
-and Sec. 37.15(c):
+Each page below was fetched with `fetch_page` from its official URL on 2026-11-13 UTC. Quotations are
+verbatim from the fetched content.
 
-> For units (other than condominium units) in buildings with 10 units or more, the information
-> described in subsection (b) shall be reported to the Rent Board by July 1, 2022, and updated by
-> March 1, 2023 and annually by March 1 of each successive year. For condominium units and units
-> in buildings with fewer than 10 units, the information shall be reported commencing March 1,
-> 2023 and updated annually by March 1 of each successive year.
+| Source ID | Official page opened 2026-11-13 | What was checked | Result |
+| --- | --- | --- | --- |
+| S07 | [The Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory) | Reporting duty, March 1 deadline, licence generation, licence-on-effective-date rule, penalty position, publicity of the filing, tenant portal check | Unchanged. "All owners of residential property are required to report."; licence "automatically generated for non-owner occupied units"; "A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect."; "The Rent Board does not assess monetary penalties for filing after the deadline."; "The information entered in the housing inventory submission is public."; a tenant "can search the Rent Board Portal to see if their landlord is up to date with their rent increase license". Also confirms that requesting a Rent Board Fee exemption "does not satisfy Rent Board Housing Inventory reporting requirements". |
+| S56 | [The Rent Board Fee](https://www.sf.gov/rent-board-fee) | Amount, due date, penalty ladder, delinquency referral, exemption window, 50% recovery test, fee cycle timeline | Unchanged. "$59.00 per dwelling unit" for the 2026-2027 tax year; "March 1 of each year for the Rent Board Fee"; "A 5% late penalty will be added to the amount of the fee every month following March 1 (for a maximum penalty of 15%)"; "Fees that have not been paid in full by June 1 will be referred to the Bureau of Delinquent Revenue with additional costs added"; exemption deadline "December 14, 2026"; 50% recoverable from tenants "in occupancy of each unit if the tenant has been living in the unit as of November 1 of the applicable tax year"; penalties may not be recovered. The page states the timeline in two places that differ on when referral happens — already published as flag F38, unchanged. |
+| S25 | [Report an unlawful rent increase or request a review of your rent history](https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history) | Cost, filing deadline, form, hearing, attorney requirement | Unchanged. "There is no charge for filing the petition"; "There is no time limit for filing a petition"; hearing "before a Rent Board Administrative Law Judge"; "The hearing process is designed so that no one needs an attorney, although parties are entitled to have an attorney or other authorized representative assist them at the hearing." |
+| S24 | [Speak with a Rent Board counselor](https://www.sf.gov/speak-rent-board-counselor) | Cost, languages, limits, contact details | Unchanged. Cost "Free"; help "in Spanish, Cantonese, and Mandarin" with interpretation for other languages; "We cannot give legal advice"; "Calls are generally limited to 5 minutes"; "Have your questions written down before you speak with us"; phone counseling Monday to Friday 9–12 and 1–4; counselor 415-252-4600. |
+| S16 | [Rent Increases Under Section 6.14 And Costa-Hawkins](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) | Unlimited-increase conditions, 6.14 notice, co-tenant vs sub-tenant, petition | Unchanged. Section 6.14 "provides for an unlimited rent increase on remaining occupants when the last original occupant vacates the unit, as long as the landlord timely served all remaining occupants with a written '6.14 notice.'"; "Generally, sixty days is considered reasonable"; "a co-tenant, as opposed to a subtenant, is not subject to such a rent increase"; no petition is required but a tenant may petition. |
+| S26 | [Rent Board Forms Center](https://www.sf.gov/reports--rent-board-forms-forms-center) | Forms list; proposed-changes notice | Confirmed. Lists 516A, 516B, 516C, 516D and 517 with English and translated PDFs, and carries the "Notice: Proposed Changes to Rent Increase Limitations" posted November 9, 2026 for File No. 261020, stating "This legislation has not been enacted and is subject to change." |
+| S73 | [Rent Board Rules Part XIII (Rule 13.14)](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent) | Rule 13.14 licensing text and applicability dates | Unchanged verbatim. "Any rent increase under Ordinance Sections 37.3(a)(1)-(2) purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void; provided, however, that the effective date of the rent increase, not the date of service, shall be used to determine whether or not the increase conforms with the provisions of this section." Applies to increases effective on or after July 1, 2022, and for condominiums and buildings with fewer than ten residential units to increases effective on or after March 1, 2023. |
+| S42 | [24 CFR 100.500 — Discriminatory effect prohibited](https://www.ecfr.gov/current/title-24/subtitle-B/chapter-I/part-100/subpart-G/section-100.500) | Currency of the regulation | Current. Page states "up to date as of 11/10/2026" and "Title 24 was last amended 8/20/2026"; the discriminatory-effect standard (liability without proof of intent; substantial legitimate nondiscriminatory interest; no less discriminatory alternative) is unchanged. |
+| S72 | [Proposed-changes notice, second and third locations](https://www.sf.gov/learn-about-rent-increases-san-francisco) | Where the notice appears | The File 261020 notice appears on the rent-increase page (S01), the Current Rates page (S02) **and now also the Forms Center (S26)**. Recorded as a 2026-11-13 note on S72 and S26. Still not enacted. |
 
-and Sec. 37.15(d):
+### The four rate-bearing pages, reopened the same day
 
-> The Rent Board shall not use the information to operate a rental registry within the meaning of
-> California Civil Code Sections 1947.7 – 1947.8.
+A separate pass on the same day re-opened the four pages that carry the figures the site is built on.
 
-and Sec. 37.15(e):
+| Source ID | Official page opened 2026-11-13 | What was checked | Result |
+| --- | --- | --- | --- |
+| S01 | [Learn about rent increases in San Francisco](https://www.sf.gov/learn-about-rent-increases-san-francisco), chunks 0–1 | Current rate, licence rule, base-rent-only rule, no rounding up, notice periods and contents, anniversary date, additional-occupant rule, the published examples | Unchanged. 1.6% effective March 1, 2026 through February 28, 2027; "A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases on a tenant"; base rent only and "Rent increases cannot be rounded up to the nearest dollar"; 30-day notice, 90-day if more than 10%, 5 more days if mailed; "The landlord should use the percentage that will be in effect on the date of the increase"; additional occupants. The November 9, 2026 notice is still present and still marked not enacted. |
+| S02 | [Current Rates](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit), chunk 0 | Rate table, deposit interest, bankable fees, capital-improvement rates, F45 hyperlink defect, absence of a 2027-28 rate | Unchanged. 1.6% / 1.4% / 1.7% for the three published periods; security deposit interest 4.2%; bankable Rent Board Fees $29.50. **F45 is still live:** the link labelled "575 Cap. Imp. Labor Rates" still points to `https://www.sf.gov/documents/34916/574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf`, the Form 574 Imputed Interest PDF. No rate for increases effective on or after March 1, 2027 is published (F27). |
+| S05 | [Banked rent increases](https://www.sf.gov/information--banked-rent-increases) | 24-month banking rule, no compounding, licence, notice contents, the published example | Unchanged. "A skipped increase is only banked if at least 24 full months pass without any rent increase"; percentages are added, never compounded or prorated; the licence is required; the notice must state the dollar amount, percentage, effective date and which part is banked. **F02 is still live:** the example says to add the banked 5.3% to "the annual allowable rent increase in effect on August 1, 2024 (1.4%)", while Form 571 shows 1.7% for March 1, 2024 – February 28, 2025. |
+| S27 | [The California Tenant Protection Act of 2019 (AB 1482)](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482), chunk 0 | SF cap, the CPI used, the interaction with local law, the two-unit exemption, the in-law-unit rule | Unchanged. "The maximum rent increase for units under AB 1482 from August 1, 2026 to July 31, 2027 is 8.8% in San Francisco"; "This does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance"; the applicable CPI is 3.8%, so 5% + 3.8% = 8.8%; the two-unit exemption requires the second unit to have been occupied by an owner for the entire tenancy; the single-family exemption does not apply where there is more than one dwelling unit on the same lot or a second residential unit that cannot be sold separately, such as an in-law unit. |
 
-> If a landlord has substantially complied with the obligation to report information about a rental
-> unit as required under this Section 37.15, the landlord shall receive a license to impose rent
-> increases on tenants in that unit under Sections 37.3(a)(1)-(2). If the landlord has not
-> substantially complied ... the license to impose rent increases shall be temporarily suspended
-> during the period of the landlord's noncompliance ... but a tenant shall not be obligated to pay
-> the increased rent for months during the period of suspension.
+**Flags re-confirmed live against the pages today:** F01 (S01 example says 1.6% for June 1, 2025 while Current Rates show 1.4%), F02 (S05 example says 1.4% for August 1, 2024 while Form 571 shows 1.7%), F03 (S01 example banks an increase after 12 full months while S05 requires 24 full months) and F45 (the "575" link defect on S02). All four remain accurate as published; none was closed or reworded by this session.
 
-**SF.gov news item, Jan. 22, 2021 (new source S88)** —
-<https://www.sf.gov/news/new-legislation-creates-housing-inventory-and-requires-owners-obtain-license-imposing>:
+### Ledger changes from this pass
 
-> Ordinance No. 265-20, which became effective on January 18, 2021, requires owners of residential
-> housing units in San Francisco to begin reporting certain information about their units to the
-> Rent Board.
+- `scripts/site_sources.py`: `DATE` moved from `2026-11-11` to `2026-11-13` (the ledger was updated
+  today). The twelve sources above gained an explicit "Re-verified 2026-11-13" statement; S72 gained a
+  note about the third location of the proposed-changes notice.
+- `SOURCES.md`: the same notes were added to the hand-maintained table, and the header records this
+  session's pass.
+- `scripts/validate_site.py`: the pending-cap check now also accepts the 2026-11-13 ledger date.
 
-> For condominium units and units in buildings with less than 10 residential units, reporting will
-> begin on March 1, 2023 with updates due every March 1 thereafter.
+---
 
-> In addition, the legislation requires owners to obtain a license from the Rent Board before
-> imposing any annual and/or banked rent increases upon tenants. The license will only be issued by
-> the Rent Board if the owner is in substantial compliance with the housing inventory's reporting
-> requirements.
+## 2. The Suggestions page
 
-**Ordinance No. 265-20 file attachment (new source S89)** —
-<https://sfgov.legistar.com/View.ashx?M=F&ID=9024120&GUID=79C40690-896E-43CD-9855-77B3AC909AEF>:
+### Why it was needed
 
-> Ordinance amending the Administrative Code to require owners of residential dwelling units to
-> report certain information to the Rent Board; to authorize the Rent Board to issue a license to
-> owners who report the information; and to require that an owner have a license to impose certain
-> types of rent increases ...
-> Be it ordained by the People of the City and County of San Francisco:
-> Section 1. Purpose and Findings. ... in directing the Rent Board to create a housing inventory,
-> the Board of Supervisors does not intend that the Rent Board should set rents through a rent
-> registry ...
-> Section 2. The Administrative Code is hereby amended by revising Section 37.3; adding new
-> Section 37.15; and renumbering existing Section 37.15 as Section 37.16 ...
+The owner asked for *"a section dedicated for suggestions so someone can review suggestions and choose the best path before implementing any changes"*, and for *"suggestions ... to discover missing information"*. A line-by-line review of the published tree found no such section: the word "suggest" appeared only inside `data/questions.json`, `pages/questions.html` and `TENANT_ASSISTANCE_RESEARCH.md`. That gap is what this session set out to close.
 
-*Recorded limitation:* the attachment renders as the Board's redline/Master Report (amendment
-markup visible in the text). The enacted wording was therefore read from the codified section
-(S53) and used only for the ordinance's title, purpose and the fact that a **City** enactment
-created the duty. This is stated on source S89 and on row LOC-26.
+### A scope collision, and how it was resolved
 
-**Rent Board Rules Part XIII, Rule 13.14 (S73), adopted July 12, 2022** — verbatim:
+While this session was building its own Suggestions page, the concurrent session `arena-415e54ea` merged **PR #51** to `main` with a **Suggestions review queue** of its own (`SUG-P*`, `SUG-A*`, `SUG-B*`, `SUG-C*`), plus a **Decision Readiness** register (`pages/decision.html`), the **state-vs-local** answer to the owner's question, and sources S88–S91.
 
-> Any rent increase under Ordinance Sections 37.3(a)(1)-(2) purporting to be effective while the
-> landlord is unlicensed shall render the entire rent increase null and void; provided, however,
-> that the effective date of the rent increase, not the date of service, shall be used to determine
-> whether or not the increase conforms with the provisions of this section. Nothing in this
-> Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise lawful
-> rent increases that were found to be null and void.
-> This section shall apply to all rent increases that are effective on or after July 1, 2022,
-> except that with respect to condominium units and buildings with less than ten residential units,
-> this section shall only apply to rent increases that are effective on or after March 1, 2023.
+Both sets of work are kept. The page is now one canonical Suggestions page with the concurrent session's groups first and this session's groups appended:
 
-**Sec. 37.3(a)(1) (S21)** — verbatim:
+| Group | Source | Rows | Content |
+| --- | --- | --- | --- |
+| Review process | `arena-415e54ea` | SUG-P1…P5 | The 5-step review workflow: read, check the evidence, choose, record, only then implement |
+| A | `arena-415e54ea` | SUG-A1…A7 | Closing information gaps before deciding (owner actions) |
+| B | `arena-415e54ea` | SUG-B1…B6 | Improving this site so it supports a decision |
+| C | `arena-415e54ea` | SUG-C1…C6 | How to approach the increase itself (decision paths, not legal advice) |
+| **D** | `arena-87a91aec` | SUG-D1…D12 | **Compliance gates** — licence status on the effective date, Housing Inventory filing tracker, fee calendar with the Nov 1 occupancy switch, effective-date rate engine, banked-increase ledger, pending-legislation watch row, retaliation-window screen, uniform-criteria record, §6.14 fact screen, coverage determination sheet, notice assembly, petition routing |
+| **E** | `arena-87a91aec` | SUG-E1…E5 | **Evidence and defensibility** — case-file completeness checklist, tenant-side challenge walkthrough, printable attorney-review handoff packet, neutral-language bank, Housing Inventory public-records disclosure note |
+| **F** | `arena-87a91aec` | SUG-F1…F4 | **Discovering the missing information** — missing-information register, the facts only the owner can supply, the Rent Board counsel call script, the pre-decision gate sequence |
+| **G** | `arena-87a91aec` | SUG-G1…G6 | **Internal site quality** — per-row verification date, source link/content monitor, unchanged-column consistency, blank-means-unknown convention, print and mobile review mode, review-cycle date |
+| **H** | `arena-87a91aec` | CL-D1…CL-G6 | **Review checklist** — one blank reviewer row per D–G proposal, with its own `CL-` identifiers so a checklist row is never confused with the proposal it refers to |
 
-> A landlord who has reported the required information about their rental unit to the Rent Board as
-> set forth in Section 37.15 shall have a license to impose annually a rent increase which does not
-> exceed a tenant's base rent by more than 60% of said published increase. In no event, however,
-> shall the allowable annual increase be greater than 7%.
+Where the two sessions' proposals touch the same ground — the link monitor, the owner-only facts list, the counsel call script, the uniform-criteria record — the row's notes name the related row instead of restating it. Nothing is presented twice as if it were two proposals. The concurrent session's **Decision Readiness** page and its state-vs-local answer are kept unchanged.
 
-## 2. The 2023 state law is a different subject
+### How each row is grounded
 
-**Civil Code Sec. 1947.12 (S36), current text and its own history note** — verbatim:
+| Field | Rule |
+| --- | --- |
+| `notes` | The official rule or fact that motivates the proposal, quoted or closely paraphrased from the official source, plus any cross-reference to a related row. |
+| `source_ids` | One or more official source IDs. Every row resolves to an official-domain URL, and the validator fails the build otherwise. |
+| `value` | What changes and why it helps the decision. |
+| `effort` | Build cost and expected effect on the quality of the decision. Both are site-work estimates, not statements about law. |
+| `review_status` | Starts at `Review` (this session's rows) or `open for review` (the concurrent session's group A rows). Nothing is pre-approved. |
 
-> (a)(1) ... shall not, over the course of any 12-month period, increase the gross rental rate for a
-> dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10
-> percent, whichever is lower ...
-> (d)(3) Housing subject to rent or price control through a public entity's valid exercise of its
-> police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual
-> increases in the rental rate to an amount less than that provided in subdivision (a).
-> (e) An owner shall provide notice of any increase in the rental rate, pursuant to subdivision (a),
-> to each tenant in accordance with Section 827.
-> _(Repealed (in Sec. 3) and added by Stats. 2023, Ch. 290, Sec. 4. (SB 567) Effective January 1,
-> 2024. Operative April 1, 2024. Repealed as of January 1, 2030, by its own provisions.)_
+Five rows (SUG-G1 to SUG-G5) are proposals about how the site itself should work. Their notes carry the exact marker `Internal site-design proposal`, and the validator enforces three things: a row marked internal must carry the marker, a row not marked internal must not carry it, and exactly the five expected rows carry it. SUG-G6 is the one row with a mixed basis — it cites the published rate period, the pending cap, the fee amount and the licensing rule — so it is not marked internal. These rows still resolve to the project record (S68), so every rendered row keeps an official-domain link and no source was invented merely to fill a cell.
 
-**Civil Code Sec. 1946.2 (new source S90)**, read in full (chunks 1–3): subdivision (d)(4)
-> An owner's failure to strictly comply with this subdivision shall render the notice of termination
-> void.
+### The review-before-implementing workflow
 
-(e)(6) two-unit owner-occupied exemption, (f) the 12-point-type notice, (i)(1)–(2) the local
-just-cause displacement rule; history note
-> _(Amended by Stats. 2025, Ch. 203, Sec. 1. (AB 1529) Effective January 1, 2026. Repealed as of
-> January 1, 2030, by its own provisions.)_
+- Every proposal row renders a review-status badge reading `Review` or `open for review`. The validator checks that no row is pre-approved.
+- The **Review checklist** section repeats every D–G proposal ID with a blank Decision, Reviewer, Date and Review note cell, each labelled "(blank - to be completed by the reviewer)". The validator checks the blank count.
+- The 5-step review process (published by the concurrent session) states that accepting a suggestion is a decision by the owner, that nothing auto-applies, and that implementation means editing `scripts/site_*.py` and rebuilding.
 
-**Neither section, as read, contains any duty to notify a rent board before a rent increase.** That
-is recorded as an absence finding limited to the sections read (S35 §827, S36 §1947.12, S57 §1942.5,
-S90 §1946.2, S91 §1947.7) — flag **F55** — not as a certified exhaustive search of the Codes.
+### Groups published by this session
 
-**SF.gov AB 1482 page (S27)** confirms the state amendment and its inapplicability to these units:
+Group F is the direct answer to the owner's request for a clear list of the questions, information and answers needed before a decision can reasonably be made. It separates the questions an official record can answer from the facts only the owner can supply, and names the official route for each. The same content is cross-linked from the Executive Summary, and the concurrent session's Decision Readiness page answers the same question for this case with five ordered gates, 20 open questions and four decision paths.
 
-> The maximum rent increase for units under AB 1482 from August 1, 2026 to July 31, 2027 is 8.8% in
-> San Francisco.
-> This does NOT apply for units under the rent increase limitations of the San Francisco Rent
-> Ordinance.
-> ... It is amended by SB 567.
-> The current applicable CPI increase for San Francisco (that is, from August 1, 2026 to July 31,
-> 2027), is 3.8%.
-
-**Civil Code Sec. 1947.7 (new source S91)** — the state backstop an owner might hope for, and why it
-is uncertain here — verbatim:
-
-> it is the intent of the Legislature to limit the imposition of penalties and sanctions against an
-> owner of residential rental units where that person has attempted in good faith to fully comply
-> with the regulatory processes of those programs.
-> (b) An owner of a residential rental unit who is in substantial compliance with an ordinance or
-> charter that controls or establishes a system of controls on the price at which residential rental
-> units may be offered for rent or lease and which requires the registration of rents ... shall not
-> be assessed a penalty or any other sanction for noncompliance ...
-> (c) ... all annual rent adjustments which may have been denied during the period of the owner's
-> noncompliance shall be restored prospectively once the owner is in compliance ...
-
-Because Sec. 37.15(d) says the Rent Board shall **not** operate a rental registry "within the
-meaning of California Civil Code Sections 1947.7 – 1947.8", no answer is given on the site; the
-question is published blank as **Q-24** with flag **F56**.
-
-## 3. Load-bearing case values re-checked (all held)
-
-| Checked 2026-11-13 | Official page | Result |
-| --- | --- | --- |
-| 1.6% for 3/1/26–2/28/27; 1.4% 3/1/25–2/28/26; 1.7% 3/1/24–2/28/25 | S01, S02 | Unchanged; no 2027–28 rate published → **F27 stays open** |
-| "A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases"; effective 7/1/2022, or 3/1/2023 for condos and 1–9 unit buildings | S01 | Unchanged |
-| 30-day notice; 90-day if >10% alone or combined in the same year; +5 days if mailed; contents (dollar amount, percentage, effective date, banked portion); use the rate in effect on the increase date; base rent only; no rounding up | S01, S05 | Unchanged |
-| All owners report; free; March 1; licence auto-generated; "will not be enforceable without having a rent increase license on the effective date"; no monetary penalty for late filing; inventory data public | S07 | Unchanged |
-| "may be null and void (this may apply for multiple years)"; "ONLY to units under San Francisco Rent Control"; not required for §6.14/Costa-Hawkins or passthroughs; ALJ hearing route | S08 | Unchanged; the softer wording versus Rule 13.14 is why **F25** was updated rather than closed |
-| 24 full months before a skipped increase banks; no compounding or proration; add percentages | S05 | Unchanged |
-| Security-deposit interest 4.2% for 3/1/26–2/28/27; bankable Rent Board fee rows 2023-24 and 2024-25 at $29.50 tenant / $29.50 landlord | S02 | Unchanged |
-| File 261020 notice posted November 9, 2026; "This legislation has not been enacted and is subject to change" | S02, S01, S05 | Unchanged → **F46/F47 stay open** |
-| Link labeled "575 Cap. Imp. Labor Rates" still points to the Form 574 Imputed Interest PDF | S02 | Defect still live → **F45 stays open** |
-| SF.gov example wording defects: "annual allowable increase in effect on June 1, 2025 is 1.6%" (that is the 6/1/2026 rate); banked example's sentence "annual allowable rent increase in effect on August 1, 2024 (1.4%)" (the example's effective date is August 1, 2025; the page itself labels 8/1/2024 as 1.7%) | S01, S05 | **F01/F02 narrowed to what the pages actually say today**, not deleted |
-
-## 4. A link that was tested instead of assumed
-
-The owner-noncompliance page (S08) links "Housing Inventory" to
-`https://www.sf.gov/rent-board-housing-inventory-link/`. It was fetched directly and **resolves**
-to the same official Housing Inventory page, so no defect flag was raised. Recorded here so a
-later session does not re-propose it as a broken link.
-
-## 5. Site gates run for this pass
+## 3. Gates run before publication
 
 | Gate | Result |
 | --- | --- |
-| `python3 scripts/build_site.py` | 23 data files, 21 page HTML files (index + 21 pages), assets, 3 markdown deliverables |
-| `python3 scripts/validate_site.py` | **140 checks, 0 errors** (91 sources, 74 flags, 410 rows, 75 needs-review rows, 0 broken internal links) |
-| `python3 research/b87_notice_kit/validate_kit.py` | 19 checks, 0 errors |
-| `python3 research/c72_2026-11-11_audit/validate_c72.py` | 19 checks, 0 errors (22 HTML pages, 2,129 hrefs, 0 broken links, 0 broken anchors) |
-| `python3 research/n08_qa/privacy_check.py` | no matching initials pattern in the anonymized case files |
-| Reproducibility | rebuild produced byte-identical `index.html`, `pages/`, `data/`, `assets/` (46 files, sha-256 compared) |
+| `python3 scripts/build_site.py` | Clean. 24 data files, 22 page HTML files, `index.html`, `assets/site.css`, `.nojekyll` and 3 markdown deliverables. Re-running produces byte-identical `data/` and `pages/`. |
+| `python3 scripts/validate_site.py` | **153 checks, 0 errors** (92 official sources, 76 flags, 491 rows, 0 broken internal links). Six new checks cover this session's contribution: official basis, effort and review status on every D-G row; the internal-marker rule; no pre-approved row; one blank checklist row per proposal; the rendered blank reviewer cells; and no approval or guarantee language. |
+| `python3 research/b87_notice_kit/validate_kit.py` | 19 checks, 0 errors. |
+| `python3 research/c72_2026-11-11_audit/validate_c72.py` | 19 checks, 0 errors; 23 HTML pages scanned with 0 broken links, 0 broken anchors and 0 stored digests. The audit's page-count check was updated as pages were added and is now a lower bound, so a new page cannot break it. |
+| `python3 research/n08_qa/privacy_check.py` | 0 fingerprint matches in the current tree. |
+| Independent HTMLParser link crawl | 0 broken internal links across all pages. |
 
-**Cross-scope edit recorded:** `research/c72_2026-11-11_audit/validate_c72.py` asserted
-`len(html_files) == 21`, a hard-coded page count that failed the moment the Suggestions page was
-added, even though its broken-link list was empty. The assertion is now `>= 21` with the actual
-count printed in the detail line. The owner session for that file finished and merged on
-2026-11-11; the change preserves the check's meaning and is logged in `COORDINATION.md`.
+The approval-language check was rewritten during this session. The first version used a bare substring
+test and produced a false positive on the sentence "It does not state that any rent increase is
+lawful, approved or safe from challenge." The replacement matches the phrases against a negation
+window, so a negated statement is not treated as a claim. The underlying text was also reworded where
+it was ambiguous about the retaliation analysis (now SUG-D7), so it describes the exposure as
+independent of whether the increase amount itself is permitted rather than implying the amount is
+permitted.
 
-## 6. What the Suggestions page deliberately does not do
+Two further defects were found and fixed while integrating with the concurrent session's work: the
+review-checklist rows initially reused their proposal IDs, which made row IDs non-unique on the site
+(they now carry their own `CL-` identifiers, and the validator checks uniqueness); and the section
+renderer had no way to show the per-section introduction paragraphs that both sessions' groups use
+(the renderer now emits them).
 
-Every `SG-*` row has status `analysis` (a reasoned proposal), never `verified`; the eight `DEC-*`
-rows are blank with flag `F54` so the site takes no position on the owner's choices; no suggestion
-changes a rate, date, dollar amount or legal conclusion; and row `SG-54` records the suggestions
-that were rejected by design (computing a banked total from missing history, asserting a
-vacancy-based reset, quoting an unpublished 2027–28 rate, or describing an increase as
-approved/certified/challenge-proof). Flag `F53` states that nothing on the page has been
-implemented.
+### The merge with the concurrent session
 
-## 6. Integration with a colliding parallel session (2026-11-13)
+The gate numbers above are for the **merged** tree, not for this session's branch alone. The merge
+was mechanical and non-destructive: generated files were taken from the merged side and then
+regenerated from the merged generator; `COORDINATION.md` keeps both session records verbatim; the
+shared generator files were taken as the merged base and this session's delta re-applied on top. No
+row, source, flag or research record from either session was dropped. Two research records that
+existed only on stale pull requests were also recovered and preserved verbatim with provenance
+headers: `research/f4i_2026-11-11_qa/README.md` (from PR #48) and
+`research/current_audit/2026-11-08_source_repo_audit.md` (from PR #25).
 
-While this session's work was uncommitted, another session (`arena-23a50992`, PRs #51/#52/#55, merged to `main` as
-`038f2e6`) implemented the **same two brief items**: a Suggestions page and the state-vs-local answer. This was a
-coordination failure, not a content dispute — the board row for `T54` was claimed by both sessions.
+### What these gates do not prove
 
-**Resolution strategy: main became the shared base; nothing from either session was discarded.**
+- They are structural and link checks. They are **not** legal verification and **not** a certification
+  that any increase in this case is lawful.
+- They do not establish attorney review, challenge immunity, or the absence of a future complaint,
+  inquiry or lawsuit.
+- The privacy check covers the current tree only. The historical exposure of short identifiers in this
+  public repository's git history and pull-request diffs (F44, F51) is unchanged and remains
+  owner-actionable; nothing in this session claims a history purge.
+- External links were not exhaustively re-crawled. The eight pages re-fetched today are the ones listed
+  above; every other source keeps its own earlier verification date.
+- F27 (no published rate for increases effective on or after March 1, 2027) and F46 (File 261020 not
+  enacted) are unchanged and still open.
 
-1. `git merge --no-commit origin/main`, then every generated or shared file (`scripts/`, `pages/`, `data/`, root `.md`,
-   `assets/`, `.github/`, `research/c72_.../validate_c72.py`) was reset to **main's version** (`git checkout origin/main -- ...`),
-   so the merge commit carries no interleaved half-adopted state. This session's own verification record was the only file kept
-   as-is from the pre-merge tree.
-2. Overlapping content that main already published was **not re-added**: the state-vs-local answer (main's `SL-01`–`SL-05`,
-   `LAW-01`–`LAW-08`, `REQ-26`–`REQ-28`, flag `F53`), the ordinance provenance sources (main's `S90` = the SF.gov news item,
-   `S92` = the Ord. 265-20 attachment, `S89` = Civ. Code 1946.2), the licence-scope rows (`PRC-07`, `LOC-15`), and the
-   suggestion groups with effort and review status (`SUG-A1`–`A7`, `SUG-B1`–`B6`, `SUG-C1`–`C6`).
-   Source IDs were **not** reused or renumbered: this session's four new sources became main's `S90`/`S92`/`S89` plus one new row.
+---
 
-**What this session then added on top (all verifiable, none duplicative):**
+## 4. Flagged items
 
-| Added | Where | Why it was still missing |
-| --- | --- | --- |
-| **S93** Civil Code §1947.7 read directly | `SOURCES.md`, Sources page | Main cited only §37.15(d)'s non-registry disclaimer (in `LOC-14`); the state penalty shield an owner would look for was not in the ledger |
-| **LAW-09** the statute-versus-scope distinction | Local Law page | Main answered *where* the duty lives, not whether the state shield softens it |
-| **ST-18 / ST-19** §1947.7 as read, and what it does not do | State Law page | No state-side row quoted the section |
-| **Q-22** applicability, blank + **F59** | Questions page | Unresolved on the official record — deliberately not answered by inference |
-| **LIC-11 / LIC-12** Rule 13.14 verbatim; the individual owner's actual exposure | Executive Summary | Main *paraphrased* the rule; the verbatim text is the strongest wording in the record and narrows `F25` |
-| **AN-30** do not substitute a state statute for the free report | Analysis | Turns the §1947.7 finding into an action, without advising |
-| **SUG-P6 + section D (`SUG-D1`–`SUG-D8`)** owner decision record, 8 blank rows + **F60** | Suggestions page | Main's board listed options and effort but had nowhere to record a choice, which is what the brief asked for |
-| **F01 / F02 / F25** narrowed with today's page text; **F46** + `RATE-12/14/17` + `S71`/`S73` re-dated | Flags page, Rates page, ledger | Main's versions still carried the 2026-11-10 wording and left the File 261020 status undated |
-| 11 new validator checks (156 total) | `scripts/validate_site.py` | Locks the decision grid (8 blank rows, all flagged), the verbatim quotations, the re-check dates and the ledger total |
-
-**One defect found in main and corrected here rather than left:** the 2026-11-13 addendum in `SOURCES.md` said
-"91 catalogued sources: 89 official" while its own ledger already held 92 rows (`S88`–`S92`) — a stale hand-typed total that
-the validator missed because it only tests that the current count string appears *somewhere* in the file. The prose now reads
-"93 catalogued sources: 91 official ... plus two project records", and a new check (`"{n} catalogued sources" in SOURCES.md`)
-makes that total exact so it cannot drift again.
-
-**Gates after the merge:** `validate_site.py` 156 checks / 0 errors · b87 kit 19 / 0 · c72 19 / 0 · privacy scan 0 matches ·
-two consecutive builds byte-identical over 57 published files.
+No new flag was required by this session. Nothing found in the 2026-11-13 pass contradicts a published
+figure or a published source link. The Suggestions page itself publishes no legal finding, and its
+rows that touch the two units in this case describe *proposals and open questions*, not determinations.

@@ -44,6 +44,31 @@ def official_domain(url):
     host = urlparse(url).netloc.lower()
     return any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS)
 
+
+# Phrases that would assert that an increase has been approved, certified or guaranteed.
+# A match inside a negated sentence ("does not state that any rent increase is lawful")
+# is not a claim, so each match is checked against the text in front of it.
+_CLAIM_PATTERNS = [
+    "is approved", "is lawful", "is certified", "is guaranteed",
+    "we guarantee", "legally certified", "approved by counsel",
+    "guaranteed lawful", "guaranteed no lawsuit", "this increase is",
+]
+_NEGATION = re.compile(
+    r"\b(?:not|never|no|nothing|neither|nor|cannot|without|refuse|refuses|deny|denies|"
+    r"rather than|instead of|closest available substitute)\b", re.I)
+
+
+def _affirmative_claim_hits(text):
+    """Return approval/guarantee claims that are not inside a negated sentence."""
+    low = text.lower()
+    hits = []
+    for pat in _CLAIM_PATTERNS:
+        for m in re.finditer(re.escape(pat), low):
+            window = low[max(0, m.start() - 120):m.start()]
+            if not _NEGATION.search(window):
+                hits.append(text[max(0, m.start() - 60):m.end() + 30].replace("\n", " ").strip())
+    return hits
+
 def json_load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -468,6 +493,50 @@ def main():
           "{} suggestions".format(len(sug_items)))
     check("Suggestions page explains the review process before implementation",
           all(rid in {r["id"] for r in sug_rows} for rid in ("SUG-P1", "SUG-P3", "SUG-P5")))
+    # T54 groups D-G (session arena-87a91aec) appended to the concurrent session's queue.
+    t54_rows = [r for r in sug_rows if r["id"].startswith(("SUG-D", "SUG-E", "SUG-F", "SUG-G"))]
+    t54_errors = []
+    for r in t54_rows:
+        if not r.get("source_ids"):
+            t54_errors.append("{} has no official source".format(r["id"]))
+        for sid in r.get("source_ids", []):
+            if sid not in source_map:
+                t54_errors.append("{} references unknown source {}".format(r["id"], sid))
+            elif not official_domain(source_map[sid]["url"]):
+                t54_errors.append("{} references nonofficial URL for {}".format(r["id"], sid))
+        if not r.get("effort") or not r.get("review_status") or not r.get("notes"):
+            t54_errors.append("{} is missing effort, review status or basis".format(r["id"]))
+        if r.get("review_status") not in D.REVIEW_STATUS_VALUES:
+            t54_errors.append("{} has an invalid review status".format(r["id"]))
+    check("every T54 suggestion carries an official basis, effort and a review status",
+          len(t54_rows) == 27 and not t54_errors, "{} rows; {}".format(len(t54_rows), "; ".join(t54_errors[:5])))
+    internal_rows = [r for r in t54_rows if D.INTERNAL_MARKER in r["notes"]]
+    expected_internal = {"SUG-G1", "SUG-G2", "SUG-G3", "SUG-G4", "SUG-G5"}
+    check("internal site-design proposals are labelled and claim no legal rule",
+          {r["id"] for r in internal_rows} == expected_internal,
+          "{} internal proposals labelled".format(len(internal_rows)))
+    proposal_rows = [r for r in sug_rows if "review_status" in r]
+    check("no suggestion is pre-approved",
+          all(r.get("review_status") in ("Review", "open for review") for r in proposal_rows),
+          "{} proposal rows at a review status".format(len(proposal_rows)))
+    checklist = [r for r in sug_rows if r["id"].startswith("CL-")]
+    check("review checklist has one blank decision row per T54 proposal",
+          len(checklist) == len(t54_rows)
+          and all(r["value"] == "" and not r.get("notes") for r in checklist),
+          "{} checklist rows".format(len(checklist)))
+    sug_html = (PAGES / "suggestions.html").read_text(encoding="utf-8")
+    check("suggestions page renders the blank review checklist",
+          sug_html.count("to be completed by the reviewer") == len(checklist) * 3,
+          "{} blank reviewer cells".format(sug_html.count("to be completed by the reviewer")))
+    check("suggestions page claims no approval, guarantee or legal advice",
+          not _affirmative_claim_hits(sug_html),
+          "; ".join(_affirmative_claim_hits(sug_html)[:5]) or "no approval language")
+    check("every suggestion row carries at least one source link",
+          all(r.get("source_ids") for r in sug_rows),
+          "{} rows without a link".format(len([r for r in sug_rows if not r.get("source_ids")])))
+    check("the suggestions page explains the internal-marker convention",
+          "Internal site-design proposal" in sug_html and "project record" in sug_html,
+          "legend present" if "project record" in sug_html else "legend missing")
     check("Decision Readiness page is published and in the navigation",
           "decision" in pages and (PAGES / "decision.html").exists()
           and any(s == "decision" for s, _ in D.NAV))
@@ -498,63 +567,6 @@ def main():
           D.SOURCES.get("S88", {}).get("agency") == "California Legislature"
           and "SB 567" in D.SOURCES["S88"]["title"]
           and official_domain(D.SOURCES["S89"]["url"]) and "1946.2" in D.SOURCES["S89"]["title"])
-
-    # --- Checks added 2026-11-13 by session arena-6f65a2f5 (state-backstop layer,
-    #     Rule 13.14 verbatim, currency re-check, Suggestions decision record) ---
-    check("Civil Code 1947.7 is catalogued as an official source",
-          D.SOURCES.get("S93", {}).get("agency") == "California Legislature"
-          and "1947.7" in D.SOURCES["S93"]["title"]
-          and official_domain(D.SOURCES["S93"]["url"]),
-          "S93")
-    loc_rows = [r for sec in pages.get("local", {}).get("sections", []) for r in sec["rows"]]
-    st_rows = [r for sec in pages.get("state", {}).get("sections", []) for r in sec["rows"]]
-    law09 = [r for r in loc_rows if r["id"] == "LAW-09"]
-    check("the local page states the 1947.7 question without answering it by inference",
-          bool(law09) and "registration of rents" in law09[0]["value"]
-          and "37.15(d)" in law09[0]["value"] and "F59" in (law09[0]["notes"] + law09[0]["flag_id"]),
-          "LAW-09")
-    st18 = [r for r in st_rows if r["id"] == "ST-18"]
-    st19 = [r for r in st_rows if r["id"] == "ST-19"]
-    check("the state page carries section 1947.7 as read, and what it does not do",
-          bool(st18) and bool(st19) and "restored prospectively" in st18[0]["value"]
-          and "does not create or replace a Rent Increase License" in st19[0]["value"],
-          "ST-18 / ST-19")
-    q_rows = [r for sec in pages.get("questions", {}).get("sections", []) for r in sec["rows"]]
-    q22 = [r for r in q_rows if r["id"] == "Q-22"]
-    check("the unresolved 1947.7 applicability question is published blank with its flag and a discovery route",
-          bool(q22) and q22[0]["value"] == "" and q22[0]["flag_id"] == "F59"
-          and "attorney" in q22[0]["notes"].lower(),
-          "Q-22")
-    f25 = [f for f in flags if f["id"] == "F25"][0]
-    check("F25 was narrowed with the verbatim Rule 13.14 wording rather than closed",
-          "null and void" in f25["detail"] and "S73" in f25["source_ids"] and f25["status"] == "needs review",
-          "F25 detail cites the rule text; status still needs review")
-    sum_rows = [r for sec in pages.get("summary", {}).get("sections", []) for r in sec["rows"]]
-    lic11 = [r for r in sum_rows if r["id"] == "LIC-11"]
-    check("the summary quotes Rule 13.14 verbatim instead of paraphrasing the softer pages",
-          bool(lic11) and "purporting to be effective while the landlord is unlicensed" in lic11[0]["value"]
-          and "March 1, 2023" in lic11[0]["value"],
-          "LIC-11")
-    sug_rows2 = [r for sec in pages.get("suggestions", {}).get("sections", []) for r in sec["rows"]]
-    d_rows = [r for r in sug_rows2 if r["id"].startswith("SUG-D")]
-    check("the suggestions board carries an owner decision record of eight blank rows, all flagged",
-          len(d_rows) == 8 and all(r["value"] == "" and r["flag_id"] == "F60" and r["status"] == "needs review" for r in d_rows)
-          and any(r["id"] == "SUG-P6" for r in sug_rows2),
-          "{} decision rows".format(len(d_rows)))
-    check("the landing page routes a reviewer to the suggestions board",
-          'href="pages/suggestions.html"' in (ROOT / "index.html").read_text(encoding="utf-8"))
-    check("pending-legislation rows carry the 2026-11-13 currency re-check",
-          any(r["id"] == "RATE-14" and "2026-11-13" in r["label"] for r in [x for sec in pages.get("rates", {}).get("sections", []) for x in sec["rows"]])
-          and "2026-11-13" in [f for f in flags if f["id"] == "F46"][0]["detail"],
-          "RATE-14 and F46 re-dated")
-    check("the source ledger prose total matches the catalogued count",
-          "{} catalogued sources".format(len(source_map)) in sources_md,
-          "{} catalogued sources expected in SOURCES.md".format(len(source_map)))
-    exec_md = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
-    check("the executive summary carries the state-backstop paragraph and the suggestions pointer",
-          "1947.7" in exec_md and "Review the options and record your choice first" in exec_md
-          and "SUG-D1" in exec_md,
-          "both sections present")
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

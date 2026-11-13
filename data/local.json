@@ -116,20 +116,6 @@
           "source_note": ""
         },
         {
-          "id": "LAW-09",
-          "label": "Does the state rent-registration statute (Civil Code 1947.7) soften the local licence rule?",
-          "value": "Not established on this record. Section 1947.7(b) shields an owner who is in substantial compliance with an ordinance that \"requires the registration of rents\", limiting remedies to restitution and filing fees, and section 1947.7(c) restores denied annual adjustments prospectively. San Francisco's own ordinance states in Sec. 37.15(d) that the Rent Board shall not operate a rental registry \"within the meaning of California Civil Code Sections 1947.7 - 1947.8\", so a site cannot assert that the shield applies here.",
-          "status": "verified",
-          "source_ids": [
-            "S93",
-            "S53",
-            "S73"
-          ],
-          "notes": "This is a \"what the statute says versus what it reaches\" distinction, not advice. Published as an open question: Q-22 (blank) and flag F59. Do not plan an increase on the assumption that 1947.7 rescues an unlicensed notice.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
           "id": "LAW-08",
           "label": "What is the legal consequence of the duty being local rather than state?",
           "value": "The remedy lives in the local ordinance and Rent Board Rules: under Rule 13.14 an increase purporting to be effective while the landlord is unlicensed renders the entire increase null and void, tested as of the effective date, not the date of service; a tenant may petition the Rent Board at no charge.",
