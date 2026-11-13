@@ -70,12 +70,12 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "417 rows checked; "
+      "detail": "423 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "530 rows checked; "
+      "detail": "536 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
@@ -733,7 +733,7 @@
     "sources": 91,
     "pages": 22,
     "data_files": 24,
-    "rows_verified": 417,
+    "rows_verified": 423,
     "needs_review_rows": 74,
     "flags": 71,
     "checks": 145,

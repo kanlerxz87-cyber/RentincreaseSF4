@@ -725,6 +725,6 @@
     "title": "Fair Market Rents - Section 8 voucher payment standards (program overview)",
     "url": "https://www.huduser.gov/portal/datasets/fmr.html",
     "category": "Federal",
-    "statement": "HUD USER FMR programme page: FMRs are the payment standard HUD uses to administer the Housing Choice Voucher programme. Direct fetch on 2026-11-13 confirmed the programme description is unchanged: FMRs are not a federal limit on private-market rents and nothing in the federal programme requires an owner to register a rent increase with a local rent board."
+    "statement": "Direct fetch_page 2026-11-13: HUD USER states that 'Fair Market Rents (FMRs) are used to determine payment standard amounts for the Housing Choice Voucher program' and, citing 24 CFR 888.113, that they 'are estimates of 40th percentile gross rents for standard quality units within a metropolitan area or nonmetropolitan county'. The page also lists other programme uses (project-based Section 8 renewals, HOME and ESG rent ceilings, Continuum of Care limits, flat rents in Public Housing). The page describes programme payment standards; it does not state any limit on private-market rent and contains no rent-increase registration duty."
   }
 ]

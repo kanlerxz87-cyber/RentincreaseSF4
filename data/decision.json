@@ -193,12 +193,12 @@
         {
           "id": "DR-07",
           "label": "Does the owner need a City business registration for this rental?",
-          "value": "An individual whose only rental income is from one residential structure of fewer than four units is not required to register by reason of that fact alone, per the Treasurer's guidance.",
+          "value": "A person receiving rental income from 'one residential structure consisting of fewer than four units' is not, 'by reason of that fact alone', required to obtain a business registration certificate. Other business activity or payroll expense can still require one.",
           "status": "verified",
           "source_ids": [
             "S66"
           ],
-          "notes": "Two units is fewer than four, so on the supplied facts registration is not required on that ground alone. Confirm against the Treasurer page before filing anything. Flag F39 covers the narrow wording of this rule.",
+          "notes": "The owner-supplied fact is a two-unit building, which is fewer than four units; whether the owner has other business activity or payroll expense was not supplied. Confirm against the Treasurer page before filing anything. Flag F39 covers the narrow wording of this rule.",
           "flag_id": "",
           "source_note": ""
         }
@@ -317,7 +317,7 @@
             "S61",
             "S82"
           ],
-          "notes": "Civil Code 1942.5 restricts increases made in retaliation within 180 days of an enumerated tenantability event, and a tenant may separately petition the Rent Board to defer an increase for unrepaired conditions. This history was never supplied. Discover it from the correspondence file and any Rent Board or DBI records before serving. Flag T03-F02.",
+          "notes": "Civil Code 1942.5(a) applies where the lessor retaliates: if the tenant is not in default in rent, the lessor may not increase the rent within 180 days of the latest applicable enumerated tenantability event (a good-faith repair notice or oral complaint to the landlord, a bed-bug notice, a recorded agency complaint, a resulting inspection or citation, a proceeding, or an adverse decision), and subdivision (b) limits invocation to once in 12 months. Separately, a tenant may petition the Rent Board to defer an increase for unrepaired conditions. This history was never supplied. Discover it from the correspondence file and any Rent Board or DBI records before serving. Flag T03-F02.",
           "flag_id": "T03-F02",
           "source_note": ""
         },

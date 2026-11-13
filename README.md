@@ -5,7 +5,7 @@ Public GitHub Pages research site for "Rental increase SF": executive summary, o
 Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
 - `index.html` - clean landing page / dashboard.
-- `pages/` - category subpages with easy-read tables, including the Rent Board Fee page (`pages/fee.html`) and the Notice Worksheet page (`pages/worksheet.html`).
+- `pages/` - category subpages with easy-read tables, including the Rent Board Fee page (`pages/fee.html`), the Notice Worksheet page (`pages/worksheet.html`), the **Decision Readiness** register (`pages/decision.html`) and the **Suggestions** review queue (`pages/suggestions.html`).
 - `data/` - JSON source of truth; every row has official source IDs.
 - `SOURCES.md` / `VERIFICATION.md` / `research/` - official source ledger and line-by-line verification.
 - `EXECUTIVE_SUMMARY.md` - standalone executive summary.
