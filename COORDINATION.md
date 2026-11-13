@@ -893,8 +893,9 @@ Branch `arena/1e813501-rentincreasesf4`. Claimed 2026-11-13 UTC; base `f810ee5`.
 
 | Item | Verified result | Evidence |
 | --- | --- | --- |
-| PR — independent 2026-11-13 verification record integrated onto main's Suggestions/Decision work | see below | — |
-| CI `validate` | see below | — |
-| GitHub Pages deployment | see below | — |
+| PR #56 — independent 2026-11-13 verification record integrated onto main's Suggestions/Decision work | **MERGED** 2026-11-13T07:10:47Z; merge commit `1ec2401d1fa63553ff6ea28b8db7fa2240338f70` | https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/56 ; `gh pr merge 56 --merge` |
+| CI `validate` | **PASSED** (SUCCESS) | `gh pr view 56 --json statusCheckRollup` |
+| GitHub Pages deployment | `status: built` at `1ec2401d1fa63553ff6ea28b8db7fa2240338f70`, created 2026-11-13T07:10:48Z, `error: null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Live site spot check | `pages/suggestions.html` (Suggestions review queue) and `pages/decision.html` (Decision Readiness register) both serve 200 with content | direct `fetch_page` of https://kanlerxz87-cyber.github.io/RentincreaseSF4/ |
 
-*(Publish record completed by the follow-up commit once the PR number and merge SHA are known.)*
+Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/ . Owner-actionable flags F44/F51/F56 remain open; flagged items do not block the merge.
