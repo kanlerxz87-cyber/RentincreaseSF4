@@ -916,3 +916,23 @@ The two session records are kept above in full and in the order the work happene
 | Proposed-cap decision (logged) | The pending File 261020 cap is shown as **proposed, not enacted** (Pending Committee Action, checked 2026-11-13). It is never applied as current law; banked/capital calculations are cautioned and must be re-checked on the day of any notice (F46, DR-12, SI-06). | `pages/decision.html` DR-12; `FLAGGED_FOR_REVIEW.md` |
 
 **Handoff.** (1) Owner decisions still open: F44/F51/F56 history remediation (public repo); DL-01 in the Decision Readiness page records the path choice; Suggestions page SUG-A/B/C items await selection. (2) Stale open PRs #18, #19, #25, #47 and #48 remain open and unmerged, per F58.
+
+## Session 2026-11-13 — `arena/1e813501` (independent 2026-11-13 verification and integration record)
+
+Branch `arena/1e813501-rentincreasesf4`. Claimed 2026-11-13 UTC; base `f810ee5`.
+
+**Independent verification performed (before integration).** Direct `fetch_page` of S01, S02, S07, S27, S53, S56, S57, S71, S72 and S83 on 2026-11-13 UTC. Every figure held: 1.6%/1.4%/1.7%; 4.2% deposit interest; license required on the effective date; the March 1, 2023 operative date for condominiums and buildings with 1-9 units; AB 1482 8.8% state-only cap; Sec. 37.15 text (Ord. 265-20); $59.00/$29.50 fee and the December 14, 2026 exemption window; Civil Code 1942.5; File 261020 Version 1, Pending Committee Action, not enacted; FY2027 94122 SAFMRs $2,370/$2,770/$3,410/$4,460/$5,020.
+
+**Integration decision (merge conflict resolved).** During integration, `origin/main` advanced to `038f2e6` (PR #55, session `arena/23a50992`), which had already delivered a more complete version of the same two gaps: an explicit state-vs-local law section (including the SB 567 (2023) analysis), the Suggestions review queue (`pages/suggestions.html`), the Decision Readiness register (`pages/decision.html`), lawyer-review criteria LR-01–LR-11, flags F53–F58 and sources S88–S92, and the 2026-11-13 ledger date. Rather than duplicate or discard that work, this session merged `origin/main` and resolved every conflict by taking `main`'s side for the conflicted generators and generated outputs, preserving only this independent verification record (`research/t54_final_verification/README.md`). No other session's work was discarded.
+
+**Gates on the integrated tree.** `scripts/build_site.py` clean (24 data files, 22 page HTML files); `scripts/validate_site.py` **145 checks, 0 errors** (92 sources, 76 flags); `research/b87_notice_kit/validate_kit.py` **19/0**. Owner-actionable flags F44/F51/F56 remain open and are unchanged by this merge.
+
+### T57 publication record — 2026-11-13 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR — independent 2026-11-13 verification record integrated onto main's Suggestions/Decision work | see below | — |
+| CI `validate` | see below | — |
+| GitHub Pages deployment | see below | — |
+
+*(Publish record completed by the follow-up commit once the PR number and merge SHA are known.)*

@@ -35,8 +35,8 @@ def source_links(ids):
 def badge(status):
     if status == "owner supplied":
         return '<span class="badge owner">owner-supplied</span>'
-    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis"}.get(status, "analysis")
-    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis"}.get(status, status)
+    cls = {"verified": "verified", "needs review": "review", "analysis": "analysis", "proposed": "proposed"}.get(status, "analysis")
+    label = {"verified": "verified", "needs review": "needs review", "analysis": "analysis", "proposed": "proposed"}.get(status, status)
     return '<span class="badge {}">{}</span>'.format(cls, e(label))
 
 def flag_link(flag_id, in_pages):
@@ -305,7 +305,7 @@ def index_html():
                '<p>Every finding row carries a <span class="badge verified">verified</span> badge and one or more official source links (SF.gov, the Rent Ordinance, California statute, eCFR, HUD, SEC). '
                '<span class="badge analysis">analysis</span> means a reasoned conclusion drawn from those rules plus the owner-supplied facts. '
                '<span class="badge review">needs review</span> means the value could not be confirmed officially, so the cell is left blank and the item is published on the Flagged for Review page. '
-               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings.</p>'
+               '<span class="badge owner">owner-supplied</span> marks the owner\'s own case facts, which are anonymized and are not official findings. <span class=\"badge proposed\">proposed</span> marks an unimplemented suggestion on the Suggestions &amp; Decisions page: a reviewer chooses a path before it is acted on.</p>'
                '<p class="small">Start with the Executive Summary for the answer, the Step-by-Step License page for the order of operations, the Anonymized Case for the two units, and the Flagged for Review page for anything still open.</p></section>')
     out.append('<div class="cards">')
     for label, value, slug, desc in D.CARDS:
