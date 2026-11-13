@@ -45,8 +45,36 @@ def flag_link(flag_id, in_pages):
     href = "flagged.html#{}".format(e(flag_id)) if in_pages else "pages/flagged.html#{}".format(e(flag_id))
     return '<a class="flaglink" href="{}">{}</a>'.format(href, e(flag_id))
 
+
+def render_suggestion_table(section, in_pages=True):
+    """Render the Suggestions page: ID, Suggestion, Why, Sources, Effort, Review status."""
+    out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} &mdash; scrollable table"><table><thead><tr>'.format(e(section["title"]))]
+    for c in ("ID", "Suggestion", "Why it helps the decision", "Official source(s)", "Effort", "Review status"):
+        out.append('<th scope="col">{}</th>'.format(c))
+    out.append("</tr></thead><tbody>")
+    for r in section["rows"]:
+        notes = e(r.get("notes", ""))
+        fl = flag_link(r.get("flag_id", ""), in_pages)
+        if fl:
+            notes = "{} &nbsp; {}".format(notes, fl) if notes else fl
+        out.append("<tr>")
+        out.append('<td><span class="small">{}</span></td>'.format(e(r["id"])))
+        out.append("<td><strong>{}</strong></td>".format(e(r["label"])))
+        why = "<td>{}</td>".format(e(r.get("value", "")))
+        if notes:
+            why = why[:-5] + '<br><span class="small">{}</span></td>'.format(notes)
+        out.append(why)
+        out.append("<td>{}</td>".format(source_links(r.get("source_ids", []))))
+        out.append('<td><span class="badge analysis">{}</span></td>'.format(e(r.get("effort", ""))))
+        out.append('<td><span class="badge review">{}</span></td>'.format(e(r.get("review_status", ""))))
+        out.append("</tr>")
+    out.append("</tbody></table></div>")
+    return "".join(out)
+
 def render_table(section, in_pages=True):
     cols = section["columns"]
+    if "Effort" in cols and "Review status" in cols:
+        return render_suggestion_table(section, in_pages)
     out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} — scrollable table"><table><thead><tr>'.format(e(section["title"]))]
     for c in cols:
         out.append("<th scope=\"col\">{}</th>".format(e(c)))
@@ -233,7 +261,13 @@ def page_sources(page):
 
 def index_html():
     out = [header_html("Rental increase SF", "Executive-summary dashboard for an anonymized San Francisco rent-increase case.", "", False)]
-    out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
+    out.append('<section class="hero"><h2>Start here: is the \'inform the Rent Board\' rule a state law or a local law?</h2>'
+               '<p><strong>Local.</strong> The duty to report a rent-controlled unit and hold a <strong>Rent Increase License</strong> is a <strong>San Francisco ordinance</strong> — Administrative Code Chapter 37, Section 37.15, added by Ordinance No. 265-20, effective <strong>January 18, 2021</strong>. It is not a California state statute and not a federal rule.</p>'
+               '<p>The <strong>2023</strong> date is the <strong>local</strong> operative date for small buildings: condominiums and buildings with <strong>1-9 residential units</strong> have had to report since <strong>March 1, 2023</strong> (buildings with 10+ units began July 1, 2022). The actual 2023 state law was <strong>SB 567</strong>, which amended the statewide rent cap and just-cause rules and became operative <strong>April 1, 2024</strong> — it creates no rent-board reporting duty. {} &middot; {} &middot; {}</p>'
+               '<p><a class="cta" href="pages/local.html">See the layer-by-layer table (LAW-01 to LAW-08) &rarr;</a></p>'
+               '<div class="disclaimer">{}</div></section>'.format(
+                   source_links(["S53"]), source_links(["S90"]), source_links(["S88", "S73"]), e(D.DISCLAIMER)))
+    out.append('<section class="hero"><h2>Next: do I need a Rent Board license as an individual owner?</h2>'
                '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
                '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
                '<p>A second, separate Rent Board obligation also applies: the annual <strong>Rent Board Fee</strong> - <strong>$59.00 per dwelling unit for 2026-2027</strong>, due March 1, with an exemption window closing December 14, 2026. Paying it does not create a license, and a license does not pay it.</p>'

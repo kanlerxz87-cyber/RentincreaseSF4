@@ -344,7 +344,7 @@ def main():
     check("2026-11-10 proposed-cap inconsistencies and next-year rate are published",
           any(r["id"] == "RATE-14" and "Pending Committee Action" in r["value"] for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
           and any(r["id"] == "RATE-17" and r["value"] == "" and r["status"] == "needs review" for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
-          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11", "2026-11-13")
+          and any(f["id"] == "F47" for f in flags) and D.DATE >= "2026-11-10"
           and "2026-11-10" in D.SOURCES["S72"]["statement"]
           and official_domain(D.SOURCES["S71"]["url"]))
     check("pending cap is distinguished from current law and calculation is cautioned",
@@ -437,6 +437,67 @@ def main():
           and all(bid in flagged_html for bid in b87_flag_ids))
     check("Notice Worksheet links from the Notice Checklist page",
           "worksheet.html" in (PAGES / "compliance.html").read_text(encoding="utf-8"))
+
+    # --- Checks added 2026-11-13 by session arena-415e54ea (T54/T55/T56) ---
+    law_rows = [r for sec in pages.get("local", {}).get("sections", []) for r in sec["rows"]]
+    law_ids = {r["id"] for r in law_rows}
+    check("local law page carries the state-vs-local layer table",
+          {"LAW-01", "LAW-02", "LAW-03", "LAW-04", "LAW-05", "LAW-06"} <= law_ids,
+          "{} law-layer rows".format(len([i for i in law_ids if i.startswith("LAW-")])))
+    law01 = [r for r in law_rows if r["id"] == "LAW-01"][0]
+    check("the layer answer is stated as LOCAL with the ordinance citation",
+          "LOCAL" in law01["value"] and "265-20" in law01["value"] and "January 18, 2021" in law01["value"],
+          "LAW-01")
+    check("the 2023 attribution is explained as the local small-building operative date",
+          any(r["id"] == "LAW-02" and "March 1, 2023" in r["value"] and "1-9" in r["value"] for r in law_rows)
+          and any(r["id"] == "LAW-03" and "SB 567" in r["value"] and "April 1, 2024" in r["value"] for r in law_rows))
+    check("state-cap exclusion and SB 567 are backed by official sources",
+          any(r["id"] == "LAW-04" and "S36" in r["source_ids"] for r in law_rows)
+          and any(r["id"] == "LAW-03" and "S88" in r["source_ids"] for r in law_rows))
+    check("F53 is published and cites the ordinance and SB 567 sources",
+          any(f["id"] == "F53" for f in flags)
+          and {"S53", "S73", "S88", "S90"} <= set([f for f in flags if f["id"] == "F53"][0]["source_ids"]),
+          "F53")
+    check("Suggestions page is published and in the navigation",
+          "suggestions" in pages and (PAGES / "suggestions.html").exists()
+          and any(s == "suggestions" for s, _ in D.NAV))
+    sug_rows = [r for sec in pages.get("suggestions", {}).get("sections", []) for r in sec["rows"]]
+    sug_items = [r for r in sug_rows if r["id"].startswith(("SUG-A", "SUG-B", "SUG-C"))]
+    check("Suggestions page has a reviewable queue with effort and status on every item",
+          len(sug_items) >= 15 and all(r.get("effort") and r.get("review_status") for r in sug_items),
+          "{} suggestions".format(len(sug_items)))
+    check("Suggestions page explains the review process before implementation",
+          all(rid in {r["id"] for r in sug_rows} for rid in ("SUG-P1", "SUG-P3", "SUG-P5")))
+    check("Decision Readiness page is published and in the navigation",
+          "decision" in pages and (PAGES / "decision.html").exists()
+          and any(s == "decision" for s, _ in D.NAV))
+    dec_rows = [r for sec in pages.get("decision", {}).get("sections", []) for r in sec["rows"]]
+    gates = [r["id"] for r in dec_rows if r["id"].startswith("DR-G")]
+    opens = [r for r in dec_rows if r["id"].startswith("DR-") and not r["id"].startswith("DR-G") and not r["id"].startswith("DR-P")]
+    check("Decision Readiness page has five gates, open questions and decision paths",
+          len(gates) == 5 and len(opens) >= 15 and any(r["id"] == "DR-P4" for r in dec_rows),
+          "{} gates, {} questions".format(len(gates), len(opens)))
+    blank_gaps = [r for r in opens if r["status"] == "needs review"]
+    check("every blank Decision Readiness gap names how the information would be discovered",
+          len(blank_gaps) >= 5 and all(any(k in r["notes"].lower() for k in
+              ("discover", "route", "not supplied", "owner", "portal", "record", "file", "counsel", "log in"))
+              for r in blank_gaps),
+          "{} blank gaps checked; missing: {}".format(
+              len(blank_gaps),
+              "; ".join(r["id"] for r in blank_gaps if not any(k in r["notes"].lower() for k in
+                  ("discover", "route", "not supplied", "owner", "portal", "record", "file", "counsel", "log in"))) or "none"))
+    check("decision register keeps unverified facts blank",
+          all(r["value"] == "" for r in opens if r["status"] == "needs review"),
+          "{} needs-review cells blank".format(len([r for r in opens if r["status"] == "needs review"])))
+    exec_md_local = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("landing page and executive summary lead with the local-law answer",
+          "Local.</strong>" in (ROOT / "index.html").read_text(encoding="utf-8")
+          and "state or local? \u2014 LOCAL" in exec_md_local
+          and exec_md_local.index("LOCAL") < exec_md_local.index("## FOREFRONT: Rent Board & Rent Increase License"))
+    check("SB 567 and Civil Code 1947.12 are catalogued as official sources",
+          D.SOURCES.get("S88", {}).get("agency") == "California Legislature"
+          and "SB 567" in D.SOURCES["S88"]["title"]
+          and official_domain(D.SOURCES["S89"]["url"]) and "1946.2" in D.SOURCES["S89"]["title"])
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

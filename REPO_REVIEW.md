@@ -89,8 +89,8 @@ Base: `main` at `f810ee5` (PR #50). Scope: line-by-line review of the current tr
 | `COORDINATION.md` | About 147 KB. Task IDs T49 and T51 were each reused by more than one session; several `in progress` rows are older than 60 minutes. | `wc -c`; `grep` of task IDs | F57. |
 | `research/` | 16 folders, several with their own validators. | `ls research` | F58. |
 | `scripts/site_sources.py` `DATE` | Set to `2026-11-13` for this build. `validate_site.py` date check now accepts `2026-11-13` (the earlier check hard-coded the prior dates). | Build and validation | None. |
-| `SOURCES.md` | Added rows S88 and S89 (Ordinance 265-20; SF.gov news, January 22, 2021). Count is computed at build time. | `validate_site.py` source-ledger check | F53, F54. |
+| `SOURCES.md` | Added row S92 (Ordinance 265-20, Legistar copy). S88–S91 were assigned by `main` (PR #51) and kept. Count is computed at build time. | `validate_site.py` source-ledger check | F54. |
 | sf.gov Housing Inventory page (S07) | Links to an Assessor URL that redirects to the Planning Property Information Map. | Direct `fetch_page` 2026-11-13 | F55. |
-| Legistar Ordinance 265-20 copy (S88) | Marked-up master report (strike-throughs and redlines), not clean codified text. | Direct `fetch_page` 2026-11-13 | F54. |
-| Premise in the owner request | The license requirement is described as a "2023 law". Ordinance 265-20 is effective January 18, 2021; March 1, 2023 is the reporting start for buildings under 10 units. | SF.gov news (S89) | F53. |
+| Legistar Ordinance 265-20 copy (S92) | Marked-up master report (strike-throughs and redlines), not clean codified text. | Direct `fetch_page` 2026-11-13 | F54. |
+| Premise in the owner request | The license requirement is described as a "2023 law". Ordinance 265-20 is effective January 18, 2021; March 1, 2023 is the reporting start for buildings under 10 units. | SF.gov news (S90) | F53 (published on `main`). |
 | `research/c72_2026-11-11_audit/validate_c72.py` | The page-count assertion was hard-coded to 21 HTML pages; the new Suggestions & Decisions page makes 22. Updated the expected count only (no check removed). | `python3 research/c72_2026-11-11_audit/validate_c72.py` → 19/0 | None (maintenance). |

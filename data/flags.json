@@ -639,12 +639,14 @@
   },
   {
     "id": "F53",
-    "title": "Premise check: the license requirement is local and dates from Ordinance 265-20, not 2023",
-    "detail": "The license requirement is San Francisco Ordinance No. 265-20 (local; SF Administrative Code Sec. 37.15), effective January 18, 2021. March 1, 2023 is the date reporting began for condominiums and buildings with fewer than 10 residential units; buildings of 10 or more units began July 1, 2022. Confirm with the Rent Board that this two-unit building is in the March 1, 2023 group and is covered by the Rent Ordinance. Coverage is not verified.",
+    "title": "\"Law passed in 2023\" - the local small-building operative date, not a state statute",
+    "detail": "The reporting and Rent Increase License duty is a San Francisco ordinance (Administrative Code Ch. 37, Sec. 37.15, added by Ord. No. 265-20, effective January 18, 2021), not a California state law. The date 2023 comes from the LOCAL operative date for condominiums and buildings with 1-9 residential units (March 1, 2023, per Sec. 37.15(c) and Rent Board Rule 13.14); buildings with 10 or more units began reporting July 1, 2022. The actual 2023 state law, SB 567 (Chapter 290, Statutes of 2023), amended the statewide Tenant Protection Act (just cause and the state rent cap) and became operative April 1, 2024; no provision of that bill requires an owner to report a rent increase to a local rent board. This flag records the distinction so the licence duty is not attributed to state law, and so the 2023 date is not mistaken for the year the ordinance was enacted. Verified against the primary texts on 2026-11-13.",
     "source_ids": [
+      "S53",
+      "S73",
+      "S90",
       "S88",
-      "S89",
-      "S07"
+      "S36"
     ],
     "status": "needs review"
   },
@@ -653,7 +655,7 @@
     "title": "Ordinance 265-20 copy is a marked-up Legistar Master Report",
     "detail": "The Legistar view fetched on 2026-11-13 shows Board amendment strike-throughs and redline additions, so it is not clean codified text. Quote the codified Administrative Code (Sec. 37.3 and Sec. 37.15 at the American Legal Publishing links) and the Rent Board Rules instead.",
     "source_ids": [
-      "S88",
+      "S92",
       "S74",
       "S75"
     ],

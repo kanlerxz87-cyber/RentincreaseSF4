@@ -1,6 +1,22 @@
 # Executive Summary - Rental increase SF
 
-Key rate, license, fee, banking, AB 1482, Form 571 history, Ordinance 265-20 and pending-legislation sources re-checked on 2026-11-13 UTC (see research/s23_2026-11-13/README.md); other sources retain their individual verification dates (see research/t52_audit/README.md and research/t50_reverify/README.md). Informational compliance research, not legal advice.
+Key rate, licensing, fee, coverage, banking, retaliation and pending-legislation sources rechecked on 2026-11-11 UTC; other sources retain their individual verification dates. See research/t52_audit/README.md and research/t50_reverify/README.md for the scope of these checks. Informational compliance research, not legal advice.
+
+## FOREFRONT: is the "inform the Rent Board" law state or local? — LOCAL
+
+**Question:** "I read somewhere that I have to inform the Rent Board SF about a rent increase for rent-controlled units since the law passed in 2023. Is that a state or local law?"
+
+**Answer: local.** The duty to report a rent-controlled unit to the San Francisco Rent Board and to hold a **Rent Increase License** comes from the **San Francisco Administrative Code, Chapter 37, Section 37.15**, added by **Ordinance No. 265-20, effective January 18, 2021**. It is not a California state statute and not a federal rule. There is no state-law requirement that an owner report a rent increase to the SF Rent Board. Official text: "Added by Ord. No. 265-20, effective January 18, 2021" (https://www.sf.gov/information--sec-3715-reporting-obligations-licensing); SF.gov's own 2021 release states the same effective date (https://sf.gov/news/new-legislation-creates-housing-inventory-and-requires-owners-obtain-license-imposing).
+
+**So where does "2023" come from?** From the **local** operative date for small buildings, not from a state law. Reporting began **July 1, 2022** for buildings with 10 or more units and **March 1, 2023 for condominiums and buildings with 1-9 residential units** (Sec. 37.15(c); https://www.sf.gov/information--sec-3715-reporting-obligations-licensing). Rent Board Rule 13.14 restates the same two dates and applies to increases effective on or after July 1, 2022 — and, "with respect to condominium units and buildings with less than ten residential units", only to increases effective on or after **March 1, 2023** (https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent). A two-unit 1940 building is in the 1-9 unit group, so **March 1, 2023 is the date that applies here** — almost certainly the "law passed in 2023" you read about.
+
+**What the actual 2023 state law did.** The California law enacted in 2023 was **SB 567** (Durazo), Chapter 290, Statutes of 2023, approved and filed with the Secretary of State on September 30, 2023. It amended the statewide Tenant Protection Act — the no-fault just-cause eviction rules and enforcement of the state rent cap (5% plus the change in the cost of living, or 10%, whichever is lower) — and it **became operative on April 1, 2024**, not in 2023 (Civil Code section 1947.12(n), https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240SB567). **No provision of SB 567 requires an owner to report a rent increase to a local rent board.** That is a negative finding from the chaptered bill text, not a prohibition; see flag F53.
+
+**Why the state cap is not your ceiling.** Civil Code section 1947.12(d)(3) excludes "housing subject to rent or price control through a public entity's valid exercise of its police power ... that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a)" (https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV). SF.gov states the same result from the local side: AB 1482 does not apply to units already under the SF Rent Ordinance's rent-increase limits. For a covered San Francisco unit the operative number is the **local 1.6% for 3/1/26-2/28/27**, not the state 8.8%.
+
+**What that means in practice.** Three layers apply at once and are cumulative. **Local:** Housing Inventory report, Rent Increase License, the 1.6% annual limit, the anniversary date, banked increases, the 30/90-day notice and the separate Rent Board Fee. **State:** Civil Code 827 notice and service rules, Civil Code 1942.5 retaliation limits, and the AB 1482 cap only where local rent control does not already apply. **Federal:** fair housing (FHA and the 24 CFR 100.500 disparate-impact rule) governs how tenants are treated, not the rent amount. Full layer-by-layer table with a source on every row: the Local Law page, rows **LAW-01 to LAW-08**.
+
+**There is no separate licence application.** Reporting into the Housing Inventory through the Rent Board Portal **is** the act that generates the licence for a tenant-occupied unit; it is free, it is due March 1 each year, and it must be on file on the increase's effective date. See the Step-by-Step License page (PRC-01 to PRC-12).
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 
@@ -46,24 +62,6 @@ Official links for manual review: SF.gov "Learn about rent increases in San Fran
 
 **The practical step that costs nothing:** before serving any notice, open the two official pages, note the date, and save a copy. If the status has changed by then, the notice you serve should reflect the law in force on its effective date. A dated record of what the official page said is the cheapest way to answer a tenant-side reviewer who asks why you did what you did.
 
-## State or local? The license requirement is local; state and federal rules apply alongside
-
-**Answer: local.** The rent-increase license requirement comes from San Francisco Ordinance No. 265-20, which amended the SF Administrative Code (Sec. 37.3 and new Sec. 37.15) and became effective on January 18, 2021 (https://www.sf.gov/news/new-legislation-creates-housing-inventory-and-requires-owners-obtain-license-imposing ; https://sfgov.legistar.com/View.ashx?M=F&ID=9024120&GUID=79C40690-896E-43CD-9855-77B3AC909AEF). The "2023" date you read about is the date reporting began for condominiums and buildings with fewer than 10 residential units: March 1, 2023. Buildings of 10 or more units began July 1, 2022. A two-unit building is in the 2023 group if its units are covered by the Rent Ordinance; coverage is not yet verified (flags F53 and F54).
-
-**State law applies alongside, not instead.** California's AB 1482 maximum (8.8% for August 1, 2026 to July 31, 2027) does not apply to units already under the SF Rent Ordinance's increase limits (https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482). Civil Code 827 (notice and delivery), 1942.5 (retaliation) and 1954.53 (Costa-Hawkins) also apply; see the State Law page.
-
-**Federal law.** The Fair Housing Act prohibits discrimination in rental housing on protected characteristics (https://www.hud.gov/helping-americans/fair-housing-act-overview). No federal cap on private-rent increases was found in official sources (flag F22).
-
-## Tenant-lawyer review: what a San Francisco tenant lawyer will test
-
-A tenant lawyer will look for: coverage from an official record; a license on file on the effective date; a complete rent history; correct base-rent math; complete notice contents and timing; delivery with proof of service; no extra rent for an added occupant; no retaliation within the 180-day window; and neutral, non-discriminatory criteria. The full list (LR-01 to LR-11), each with an official link, is on the Suggestions & Decisions page.
-
-Free tenant-side counseling exists (Rent Board counselor, 415-252-4600; https://www.sf.gov/speak-rent-board-counselor/). A counselor is not an attorney for the owner, and no attorney has approved any increase in this project.
-
-## Suggestions and decisions: nothing is implemented yet
-
-The Suggestions & Decisions page lists the missing facts that block a decision (DR-01 to DR-14), five decision paths for the increase (DP-A to DP-E), lawyer-review criteria (LR-01 to LR-11), and nine site improvements (SI-01 to SI-09). Each item shows its status and its official source. Choose one path per topic and record it in the decision log (DL-01). Until you choose, no increase, notice or site change is made.
-
 ## Bottom line
 
 For a unit covered by the San Francisco Rent Ordinance, the current ordinary annual allowable increase is **1.6% effective 3/1/26-2/28/27**, once every 12 months on the tenant's anniversary date. A current Rent Increase License must be on file before the increase takes effect; the increase is calculated on base rent only, is not rounded up, and requires written notice. California's state-only AB 1482 cap is **8.8% for San Francisco 8/1/26-7/31/27**, but SF.gov says it does **not** apply to units already under the SF Rent Ordinance's rent-increase limits. No official general federal private-rent cap was found; HUD FMR/SAFMR figures are voucher payment standards, not rent caps.
@@ -102,4 +100,4 @@ All 76 irregularities and unverified items are published on the clearly labeled 
 
 ## Sources
 
-89 official sources are catalogued in SOURCES.md and on the Sources page (the count is computed at build time, never typed by hand). Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.
+92 official sources are catalogued in SOURCES.md and on the Sources page (the count is computed at build time, never typed by hand). Every published table row links to at least one official source. Unverified values are blank and flagged. No value is inferred or filled from a nonofficial snippet.

@@ -4,6 +4,87 @@
     "description": "Bottom line for Rental increase SF, with every finding linked to an official source.",
     "sections": [
       {
+        "title": "FOREFRONT - Is the \"inform the Rent Board\" law state or local? (local)",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "SL-01",
+            "label": "The direct answer",
+            "value": "LOCAL. The duty to report a rent-controlled unit to the SF Rent Board and hold a Rent Increase License comes from the San Francisco Administrative Code (Chapter 37, Sec. 37.15), added by Ordinance No. 265-20 effective January 18, 2021. It is not a California state statute and not a federal rule.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S90",
+              "S21"
+            ],
+            "notes": "This is the answer to the state-vs-local question, placed first. Full layer-by-layer table on the Local Law page (LAW-01 to LAW-08).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SL-02",
+            "label": "Where the '2023' date comes from",
+            "value": "2023 is the year the LOCAL duty became operative for condominiums and buildings with 1-9 residential units (March 1, 2023). It is not the year a state law passed. Buildings with 10 or more units began reporting July 1, 2022; the ordinance itself dates from January 18, 2021. A two-unit building is in the 1-9 unit group.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S73",
+              "S01"
+            ],
+            "notes": "Rent Board Rule 13.14 states the same two dates and tests the increase's effective date, not the date of service.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SL-03",
+            "label": "What the real 2023 state law was",
+            "value": "SB 567 (Chapter 290, Statutes of 2023) amended the statewide Tenant Protection Act - just-cause eviction rules and enforcement of the state 5%-plus-CPI / 10% rent cap - and became operative April 1, 2024. It creates no rent-board reporting duty.",
+            "status": "verified",
+            "source_ids": [
+              "S88",
+              "S89"
+            ],
+            "notes": "Negative finding from the chaptered bill text.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SL-04",
+            "label": "Why the state cap is not this owner's ceiling",
+            "value": "Civil Code 1947.12(d)(3) excludes housing under a stricter local rent control ordinance, and SF.gov states AB 1482 does not apply to units under the SF Rent Ordinance limits. The local 1.6% for 3/1/26-2/28/27 governs covered SF units.",
+            "status": "verified",
+            "source_ids": [
+              "S36",
+              "S27",
+              "S01"
+            ],
+            "notes": "State 8.8% is not an alternative the owner may elect.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SL-05",
+            "label": "So what must the owner actually do?",
+            "value": "Report into the Rent Board Housing Inventory through the Rent Board Portal (free, due March 1 each year), which generates the Rent Increase License; confirm the license is on file on the increase's effective date; then serve the compliant written notice. There is no separate licence application form.",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S01",
+              "S53"
+            ],
+            "notes": "Step-by-step page: PRC-01 to PRC-12. The Rent Board Fee is a separate obligation (FEE page).",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
         "title": "FOREFRONT - Rent Board & Rent Increase License: individual owner",
         "columns": [
           "Item",
@@ -142,89 +223,6 @@
             ],
             "notes": "Published on the Step-by-Step License page (pages/process.html).",
             "flag_id": "",
-            "source_note": ""
-          }
-        ]
-      },
-      {
-        "title": "State or local law? Answer to the \"2023\" question",
-        "columns": [
-          "Item",
-          "Value / finding",
-          "Status",
-          "Official source(s)",
-          "Notes / flag"
-        ],
-        "rows": [
-          {
-            "id": "SL-01",
-            "label": "Is the rent-increase license a state or local law?",
-            "value": "Local. San Francisco Ordinance No. 265-20 amended the SF Administrative Code (Sec. 37.3 and new Sec. 37.15), effective January 18, 2021. The Rent Board administers the Housing Inventory and the license.",
-            "status": "verified",
-            "source_ids": [
-              "S88",
-              "S89",
-              "S07"
-            ],
-            "notes": "The Legistar copy is a marked-up master report; quote codified text (F54).",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SL-02",
-            "label": "What is the \"2023\" date?",
-            "value": "Not the year the law passed. Reporting began July 1, 2022 for buildings of 10 or more units, and March 1, 2023 for condominiums and buildings with fewer than 10 units. A two-unit building is in the 2023 group if its units are covered by the Rent Ordinance (coverage not verified).",
-            "status": "verified",
-            "source_ids": [
-              "S89",
-              "S07",
-              "S01"
-            ],
-            "notes": "Flag F53.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SL-03",
-            "label": "Which state laws also apply?",
-            "value": "California law applies alongside the local rules. AB 1482 (8.8% for 8/1/26-7/31/27) does NOT apply to units already under SF Rent Ordinance increase limits. Civil Code 827 (notice), 1942.5 (retaliation) and 1954.53 (Costa-Hawkins) apply as described on the State Law page.",
-            "status": "verified",
-            "source_ids": [
-              "S27",
-              "S35",
-              "S57",
-              "S37"
-            ],
-            "notes": "State law does not remove the local license requirement.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SL-04",
-            "label": "Which federal fair-housing laws apply?",
-            "value": "Fair Housing Act (42 U.S.C. 3604) prohibits discrimination in rental housing on protected characteristics (race, color, religion, sex, familial status, national origin, disability). HUD disparate-impact rule: 24 CFR 100.500.",
-            "status": "verified",
-            "source_ids": [
-              "S41",
-              "S42",
-              "S40"
-            ],
-            "notes": "Neutral criteria still matter; see Suggestions section C.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SL-05",
-            "label": "Is there a federal cap on private-rent increases?",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S43",
-              "S40",
-              "S41"
-            ],
-            "notes": "No federal cap was found in official sources. HUD FMRs and SAFMRs are voucher benchmarks, not rent caps (F52).",
-            "flag_id": "F22",
             "source_note": ""
           }
         ]
@@ -477,6 +475,48 @@
               "S53"
             ],
             "notes": "The license condition is written into the ordinance, not only the SF.gov summaries.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "PRC-20",
+            "label": "Is there a separate licence application form I have to file?",
+            "value": "No. The Rent Board describes the licence as generated by the Housing Inventory report: 'once you have reported into the Housing Inventory, a rent increase license will be automatically generated for non-owner occupied units.' SF.gov's increase page states the same route: 'To get a rent increase license, a landlord must first report into the Rent Board Housing Inventory.' There is no separate licence application and no separate licence fee - SF.gov states that reporting into the Housing Inventory 'is free and can be done online 24/7' (the annual Rent Board Fee is a different obligation).",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S01"
+            ],
+            "notes": "The Rent Board Fee (S56) IS a separate annual payment and has its own exemption request window - do not confuse the two (flag F33).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "PRC-21",
+            "label": "So \"informing the Rent Board\" and \"applying for the licence\" are the same step?",
+            "value": "Yes - both refer to the Housing Inventory report. Reporting is done through the Rent Board Portal, is free, is available 24/7 online, is due March 1 every year, and is submitted under penalty of perjury.",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S55",
+              "S53"
+            ],
+            "notes": "The report is the licence-generating act; the licence itself does not need to be attached to the tenant notice.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "PRC-22",
+            "label": "Is this a state requirement, a local requirement, or both?",
+            "value": "Local only. It is San Francisco Administrative Code Sec. 37.15 (added by Ord. 265-20, effective January 18, 2021). No California statute requires reporting a rent increase to a rent board; the 2023 state law (SB 567) addressed just cause and the state rent cap and became operative April 1, 2024.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S90",
+              "S88",
+              "S73"
+            ],
+            "notes": "Full layer table on the Local Law page: LAW-01 to LAW-08, summarized on the Executive Summary at SL-01 to SL-05. Flag F53.",
             "flag_id": "",
             "source_note": ""
           },
@@ -1612,6 +1652,50 @@
             "source_note": ""
           },
           {
+            "id": "REQ-26",
+            "label": "State-vs-local classification of the \"inform the Rent Board\" duty, with ordinance provenance and the source of the 2023 date",
+            "value": "Answered - LOCAL San Francisco ordinance (Administrative Code Sec. 37.15, Ord. 265-20 effective January 18, 2021); 2023 is the local operative date for 1-9 unit buildings (March 1, 2023); SB 567 (2023) is the state law, operative April 1, 2024, with no rent-board reporting duty",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S73",
+              "S90",
+              "S88"
+            ],
+            "notes": "Published on the Executive Summary (SL-01 to SL-05) and Local Law (LAW-01 to LAW-08); flagged F53.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "REQ-27",
+            "label": "A dedicated Suggestions section so a reviewer can choose the best path before anything is implemented",
+            "value": "Published - 24 reviewable proposals in three groups, each with effort and review status, plus a 5-step review process",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35"
+            ],
+            "notes": "pages/suggestions.html, first-class item in the navigation and dashboard.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "REQ-28",
+            "label": "A clear list of questions, information and answers that must be settled before a reasonable decision, with suggestions for discovering missing information",
+            "value": "Published - 5 ordered gates, 20 open questions, and 4 decision paths; every unverified cell stays blank and names its discovery route",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S32",
+              "S55"
+            ],
+            "notes": "pages/decision.html; gaps reuse the existing CASE-V and T03-F flags.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
             "id": "REQ-25",
             "label": "Re-check the committee status of File 261020 before serving any banked or capital improvement notice",
             "value": "Checked 2026-11-10 - 'Pending Committee Action' in the Land Use and Transportation Committee; not law, no enactment",
@@ -1891,8 +1975,137 @@
   },
   "local": {
     "title": "Local Law - San Francisco",
-    "description": "SF Rent Ordinance, Rent Board rules, licensing, banking and petitions.",
+    "description": "Which layer of government requires the Rent Board report and license (local, not state), then the SF Rent Ordinance, Rent Board rules, licensing, banking and petitions.",
     "sections": [
+      {
+        "title": "State, local or federal? Which layer imposes the duty to inform the Rent Board",
+        "columns": [
+          "Item",
+          "Value / finding",
+          "Status",
+          "Official source(s)",
+          "Notes / flag"
+        ],
+        "rows": [
+          {
+            "id": "LAW-01",
+            "label": "Is the \"inform the Rent Board before raising rent\" duty a state law or a local law?",
+            "value": "LOCAL - it is a San Francisco ordinance (Administrative Code Chapter 37, added by Ordinance No. 265-20, effective January 18, 2021). No state statute requires an owner to report a rent increase to the SF Rent Board.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S90",
+              "S21",
+              "S74"
+            ],
+            "notes": "This is the direct answer to the state-vs-local question. Section 37.15 sits in the local Administrative Code, enforced by the SF Rent Board.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-02",
+            "label": "Then where does the \"2023 law\" come from?",
+            "value": "THE LOCAL OPERATIVE DATE, not a state statute. Ordinance 265-20 took effect January 18, 2021. Reporting began July 1, 2022 for buildings with 10 or more units, and March 1, 2023 for condominiums and buildings with 1-9 residential units. Rent Board Rule 13.14 applies to increases effective on or after July 1, 2022, and for condominiums and buildings with fewer than 10 units only to increases effective on or after March 1, 2023.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S73",
+              "S90",
+              "S01"
+            ],
+            "notes": "A two-unit 1940 building is in the 1-9 unit group, so its date is March 1, 2023. The site does not assert that any specific date was 'passed' in 2023 - only that the small-building duty became operative then.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-03",
+            "label": "What did the actual 2023 California state law do?",
+            "value": "SB 567 (Chapter 290, Statutes of 2023) amended the statewide Tenant Protection Act: it changed the no-fault just-cause eviction rules and enforcement for the state rent cap (5% plus CPI, or 10%, whichever is lower), and it became operative April 1, 2024. It did not create a duty to report a rent increase to a local rent board.",
+            "status": "verified",
+            "source_ids": [
+              "S88",
+              "S89",
+              "S36"
+            ],
+            "notes": "Stated as a negative finding from the bill text, not as a prohibition.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-04",
+            "label": "Does the state rent cap set the number for a covered SF unit?",
+            "value": "NO - by statute and by SF.gov. Civil Code 1947.12(d)(3) excludes housing subject to a local rent control ordinance that restricts annual increases to less than the state formula. SF.gov states AB 1482 does not apply to units already under the SF Rent Ordinance rent-increase limits. The local 1.6% (3/1/26-2/28/27) therefore governs, not the state figure.",
+            "status": "verified",
+            "source_ids": [
+              "S36",
+              "S27",
+              "S01",
+              "S02"
+            ],
+            "notes": "The state cap only governs units that are NOT under a stricter local ordinance.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-05",
+            "label": "Does any federal law require informing the Rent Board or cap this rent?",
+            "value": "NO federal requirement found. HUD FMRs and SAFMRs are voucher payment standards for the Housing Choice Voucher programme, not limits on private-market rent, and no federal rent-registration duty was located.",
+            "status": "verified",
+            "source_ids": [
+              "S91",
+              "S43",
+              "S44"
+            ],
+            "notes": "Federal cap cell remains blank and flagged (F22) because no official general federal private-rent cap exists to cite.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-06",
+            "label": "Which obligations still apply on top of the local duty?",
+            "value": "Three independent layers apply at once: LOCAL - Housing Inventory report, Rent Increase License, 1.6% annual limit, anniversary date, banked increases, 30/90-day notice, Rent Board Fee. STATE - Civil Code 827 notice rules and Civil Code 1942.5 retaliation limits; the AB 1482 cap applies only to units outside local rent control. FEDERAL - fair housing (FHA, 24 CFR 100.500 disparate impact) applies to how tenants are treated, not to the rent amount.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35",
+              "S57",
+              "S42"
+            ],
+            "notes": "Local, state and federal duties are cumulative. Complying with one does not satisfy another.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-07",
+            "label": "Is the license application a separate form from the Housing Inventory report?",
+            "value": "NO - they are the same act. Reporting into the Housing Inventory through the Rent Board Portal generates the license automatically for tenant-occupied units; there is no separate licence application and no charge for it.",
+            "status": "verified",
+            "source_ids": [
+              "S07",
+              "S01",
+              "S53"
+            ],
+            "notes": "The Rent Board Fee is a different, separate payment (FEE page).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "LAW-08",
+            "label": "What is the legal consequence of the duty being local rather than state?",
+            "value": "The remedy lives in the local ordinance and Rent Board Rules: under Rule 13.14 an increase purporting to be effective while the landlord is unlicensed renders the entire increase null and void, tested as of the effective date, not the date of service; a tenant may petition the Rent Board at no charge.",
+            "status": "verified",
+            "source_ids": [
+              "S73",
+              "S53",
+              "S25"
+            ],
+            "notes": "State courts enforce state law; the Rent Board enforces the local ordinance. Different forum, different remedy.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
       {
         "title": "Local rules",
         "columns": [
@@ -4113,21 +4326,21 @@
               "S25",
               "S42"
             ],
-            "notes": "No official source can certify approval; only a conservative checklist capable of review. See lawyer-review criteria LR-01 to LR-11 on the Suggestions & Decisions page.",
+            "notes": "No official source can certify approval; only a conservative checklist capable of review.",
             "flag_id": "T03-F08",
             "source_note": ""
           },
           {
             "id": "Q-08",
             "label": "Should one unit or both be raised to avoid discrimination lawsuits/inquiries?",
-            "value": "No official source found that requires raising both units. Each unit is governed separately by the same rules. An identical, neutral rule applied to each eligible unit is the conservative approach; if only one unit is increased, document the neutral eligibility reason. Options: DP-B and DP-C.",
-            "status": "analysis",
+            "value": "",
+            "status": "needs review",
             "source_ids": [
               "S41",
               "S42",
               "S38"
             ],
-            "notes": "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised. Not legal advice; no attorney approval.",
+            "notes": "No official rule requires both; use identical neutral criteria and document eligibility reasons if only one is raised.",
             "flag_id": "F22",
             "source_note": ""
           },
@@ -4299,50 +4512,6 @@
             ],
             "notes": "No official source offers approval of an increase before it is served.",
             "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "Q-22",
-            "label": "Is the Rent Increase License a state or local law? Where does the \"2023\" date come from?",
-            "value": "Local. San Francisco Ordinance No. 265-20 (SF Administrative Code Sec. 37.15), effective January 18, 2021. March 1, 2023 is when reporting began for condominiums and buildings with fewer than 10 residential units (July 1, 2022 for 10 or more units).",
-            "status": "verified",
-            "source_ids": [
-              "S88",
-              "S89",
-              "S07"
-            ],
-            "notes": "Flags F53 and F54.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "Q-23",
-            "label": "Do state laws apply on top of the SF rules?",
-            "value": "Yes. AB 1482 (8.8% for 8/1/26-7/31/27) does not apply to units already under SF Rent Ordinance increase limits. Civil Code 827, 1942.5 and 1954.53 apply as described on the State Law page.",
-            "status": "verified",
-            "source_ids": [
-              "S27",
-              "S35",
-              "S57",
-              "S37"
-            ],
-            "notes": "See State Law page.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "Q-24",
-            "label": "What is the federal role?",
-            "value": "Fair Housing Act and HUD disparate-impact rule prohibit discrimination in rental housing. No federal cap on private-rent increases was found in official sources.",
-            "status": "analysis",
-            "source_ids": [
-              "S41",
-              "S42",
-              "S40",
-              "S43"
-            ],
-            "notes": "Flag F22. HUD FMRs and SAFMRs are voucher benchmarks, not rent caps (F52).",
-            "flag_id": "F22",
             "source_note": ""
           },
           {
@@ -5295,315 +5464,909 @@
     ]
   },
   "suggestions": {
-    "title": "Suggestions & Decisions",
-    "description": "Missing facts, decision paths for the increase, lawyer-review criteria and site suggestions. Review, then choose one path per topic before anything is implemented.",
+    "title": "Suggestions - review before implementing",
+    "description": "A dedicated review queue of proposed improvements to this site and to the rent-increase decision process. Each suggestion states what it changes, why it helps, the official basis, the effort, and its review status so a reviewer can choose the best path before anything is implemented.",
     "sections": [
       {
-        "title": "How to use this page",
+        "title": "How to use this page (the review process)",
         "columns": [
-          "Item",
-          "Finding or suggestion",
-          "Status",
-          "Official source(s)",
-          "Decision status / notes"
+          "Step",
+          "What happens",
+          "Owner of the decision",
+          "Record kept"
         ],
         "rows": [
           {
-            "id": "SG-00",
-            "label": "Nothing here is implemented",
-            "value": "This page lists missing facts, options and site improvements. Choosing or not choosing an option here changes no increase, notice or site content. Record your choice in the decision log (DL-01).",
+            "id": "SUG-P1",
+            "label": "1. Read the proposal",
+            "value": "Each suggestion below states the exact change, the decision it improves, and the official source that motivates it. Nothing is implemented by being listed here.",
+            "status": "analysis",
+            "source_ids": [
+              "S01"
+            ],
+            "notes": "Honest label: this is a proposal queue, not a change log.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUG-P2",
+            "label": "2. Check the evidence",
+            "value": "Open the linked official page and confirm the quoted rule, dollar figure or date still says what the row says. If it does not, the suggestion is stale - say so before accepting it.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07"
+            ],
+            "notes": "Every row on this site is linked for exactly this reason.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUG-P3",
+            "label": "3. Choose a path",
+            "value": "Accept, defer or decline. Accepting a suggestion is a decision by the owner (or by the next build session for site-only changes). No suggestion here changes a legal obligation on its own.",
+            "status": "analysis",
+            "source_ids": [
+              "S53"
+            ],
+            "notes": "Nothing auto-applies.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUG-P4",
+            "label": "4. Record the outcome",
+            "value": "Write the decision, the date and the reviewer in the review-status column (or in COORDINATION.md), so the next session does not re-litigate a closed item.",
             "status": "analysis",
             "source_ids": [
               "S68"
             ],
-            "notes": "Read sections A to D, then decide one path per topic.",
+            "notes": "COORDINATION.md is the shared task board for this repository.",
+            "flag_id": ""
+          },
+          {
+            "id": "SUG-P5",
+            "label": "5. Only then implement",
+            "value": "Implementation means editing scripts/site_*.py and rebuilding, not hand-editing pages. The validator re-runs every check after a build.",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "Generated files are reproducible; CI re-runs the build and fails on drift.",
+            "flag_id": ""
+          }
+        ]
+      },
+      {
+        "title": "A. Suggestions to close information gaps before deciding",
+        "columns": [
+          "ID",
+          "Suggestion",
+          "Why it helps the decision",
+          "Evidence / official source",
+          "Effort",
+          "Review status"
+        ],
+        "rows": [
+          {
+            "id": "SUG-A1",
+            "label": "Pull the Property Information Map record for both units and record the official build year, unit count and any in-law designation",
+            "value": "The owner-stated 1940 year and two-unit count are the entire basis for assuming coverage. If the official record shows a post-1979 certificate of occupancy or a single-family designation, the whole licensing analysis changes. This is the single highest-value open item.",
+            "status": "analysis",
+            "source_ids": [
+              "S32",
+              "S06",
+              "S59"
+            ],
+            "effort": "15 minutes, free, no account",
+            "review_status": "open for review",
+            "notes": "Maps to CASE-V1 / CASE-V2. Owner action; the agent cannot log in.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-A2",
+            "label": "Log in to the Rent Board Portal and screenshot the Housing Inventory status and licence status for each unit",
+            "value": "Licence status is the one unverified fact that can void an entire increase under Rule 13.14. Everything downstream depends on it.",
+            "status": "analysis",
+            "source_ids": [
+              "S55",
+              "S07",
+              "S73"
+            ],
+            "effort": "10 minutes, free",
+            "review_status": "open for review",
+            "notes": "Maps to CASE-V3 / T03-F05.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-A3",
+            "label": "Reconstruct the actual rent history for each unit from leases, bank statements and any prior notices",
+            "value": "Banked increases are the only lawful route above 1.6%, and they can only be computed from a real payment history. Without it, every banked figure on this site stays blank - correctly.",
+            "status": "analysis",
+            "source_ids": [
+              "S05",
+              "S54",
+              "S01"
+            ],
+            "effort": "1-2 hours, owner records only",
+            "review_status": "open for review",
+            "notes": "Maps to CASE-V4 / CASE-V9, flag F30.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-A4",
+            "label": "Identify, in writing, the legal status of the occupant added to Unit 1 on April 1, 2026 (co-tenant, subtenant or assignee) and whether a written Section 6.14 notice was served",
+            "value": "Co-tenant status means no market reset at all; subtenant/assignee status could allow one only with specific facts and a timely written notice. The difference is large and it is a fact question, not a research question.",
+            "status": "analysis",
+            "source_ids": [
+              "S16",
+              "S37",
+              "S15"
+            ],
+            "effort": "30 minutes + possibly legal advice",
+            "review_status": "open for review",
+            "notes": "Maps to CASE-V5 to CASE-V8, flag F28.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-A5",
+            "label": "Ask the Rent Board directly (311 or 415-252-4600) whether the April 1, 2026 continuation restarted the Annex A / anniversary clock",
+            "value": "The anniversary date determines the earliest lawful effective date. A wrong assumption here makes an otherwise compliant notice premature.",
+            "status": "analysis",
+            "source_ids": [
+              "S24",
+              "S01",
+              "S73"
+            ],
+            "effort": "One phone call",
+            "review_status": "open for review",
+            "notes": "Maps to CASE-V6. Free counselling; not legal advice.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-A6",
+            "label": "Get one paid hour with a tenant-side or landlord-tenant attorney to review the completed Notice Worksheet",
+            "value": "Every page here says the same thing: this is a compliance checklist capable of review, not an approval. A single review converts an open question into a documented position.",
+            "status": "analysis",
+            "source_ids": [
+              "S23",
+              "S24",
+              "S30"
+            ],
+            "effort": "1 hour, paid",
+            "review_status": "open for review",
+            "notes": "Maps to F47 / REQ-21. The site never claims attorney approval.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-A7",
+            "label": "Confirm the Rent Board Fee exemption status and billing record for both units",
+            "value": "The fee is a separate obligation with penalties up to 15%; whether it has been paid or exempted is unverified and is independently enforceable.",
+            "status": "analysis",
+            "source_ids": [
+              "S56",
+              "S63",
+              "S65"
+            ],
+            "effort": "10 minutes, Portal",
+            "review_status": "open for review",
+            "notes": "Maps to FEE-12 / F43.",
             "flag_id": "",
             "source_note": ""
           }
         ]
       },
       {
-        "title": "A. Missing information: what must be found before any decision",
+        "title": "B. Suggestions to improve this site so it supports a decision",
         "columns": [
-          "Item",
-          "Finding or suggestion",
+          "ID",
+          "Suggestion",
+          "Why it helps the decision",
+          "Evidence / official source",
+          "Effort",
+          "Review status"
+        ],
+        "rows": [
+          {
+            "id": "SUG-B1",
+            "label": "Add a printable one-page decision sheet that lists only the eight gate questions and the owner-stated answers",
+            "value": "The full site is comprehensive but too long to use at the moment of deciding. A one-pager is what a reviewer actually holds while checking a draft notice.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35"
+            ],
+            "effort": "Build change, low risk",
+            "review_status": "open for review",
+            "notes": "New file; does not alter any verified value.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-B2",
+            "label": "Add an automated 'stale source' check that re-fetches every official URL on a schedule and flags any page whose quoted figure changed",
+            "value": "The 1.6% rate, the $59.00 fee and File 261020 all move. A dated diff is the cheapest defence against relying on an out-of-date page.",
+            "status": "analysis",
+            "source_ids": [
+              "S02",
+              "S56",
+              "S71"
+            ],
+            "effort": "Build change, medium",
+            "review_status": "open for review",
+            "notes": "Would require a scheduled workflow; currently sources are re-checked manually per session.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-B3",
+            "label": "Link each flag directly from the table cell that raised it, in both directions",
+            "value": "Reviewers currently read a row, then hunt the flag. Bidirectional links cut review time and reduce the chance a flagged row is acted on as if it were verified.",
+            "status": "analysis",
+            "source_ids": [
+              "S01"
+            ],
+            "effort": "Build change, low risk",
+            "review_status": "open for review",
+            "notes": "Improves navigation only; no content change.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-B4",
+            "label": "Publish a diff-style change log of every figure that changed between builds",
+            "value": "Re-verification is only meaningful if a reader can see what moved. A visible changelog makes an auditor's job possible without reading git history.",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "effort": "Build change, medium",
+            "review_status": "open for review",
+            "notes": "Git history already contains the data; this only surfaces it.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-B5",
+            "label": "Add a plain-language glossary (base rent, anniversary date, banked increase, passthrough, license, Housing Inventory)",
+            "value": "Several terms look interchangeable to a first-time owner but carry different legal consequences - notably license vs fee, and banked increase vs passthrough.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S05",
+              "S56"
+            ],
+            "effort": "Content change, low risk",
+            "review_status": "open for review",
+            "notes": "Definitions must be quoted from the official pages, not paraphrased freely.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-B6",
+            "label": "Keep the site free of any owner name, address or tenant identifier, and re-run the privacy check on every build",
+            "value": "Privacy is the owner's stated top priority, and the F44/F51 history flags show how easily identifiers leak into a public repository.",
+            "status": "analysis",
+            "source_ids": [
+              "S68"
+            ],
+            "effort": "Already implemented; keep enforced",
+            "review_status": "open for review",
+            "notes": "F44 and F51 remain owner-actionable for historical commits; this site cannot rewrite published history.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "C. Suggestions on how to approach the increase itself (decision paths, not legal advice)",
+        "columns": [
+          "ID",
+          "Suggestion",
+          "Why it helps the decision",
+          "Evidence / official source",
+          "Effort",
+          "Review status"
+        ],
+        "rows": [
+          {
+            "id": "SUG-C1",
+            "label": "Adopt one written, neutral rule - 'on each unit's anniversary date, impose the published annual allowable increase if the licence is current' - and apply it identically to both units",
+            "value": "An identical rule applied by anniversary date is the cleanest answer to the one-vs-both discrimination question, because the selection criterion is the calendar, not the tenant.",
+            "status": "analysis",
+            "source_ids": [
+              "S42",
+              "S38",
+              "S01"
+            ],
+            "effort": "One page of policy text",
+            "review_status": "open for review",
+            "notes": "Analysis recommendation. It is not a guarantee against a complaint or a petition.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-C2",
+            "label": "Document the neutral reason for any unit that is NOT increased at the same time (for example: anniversary not reached, or licence not current)",
+            "value": "If the two units are treated differently, the file should show a reason that does not depend on who the tenant is. This is the practical defence in a disparate-treatment inquiry.",
+            "status": "analysis",
+            "source_ids": [
+              "S42",
+              "S38",
+              "S22"
+            ],
+            "effort": "10 minutes per decision",
+            "review_status": "open for review",
+            "notes": "Contingent recommendation; depends on SUG-A2 and SUG-A5.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-C3",
+            "label": "Do not raise rent merely because a roommate was added to Unit 1",
+            "value": "SF.gov states additional-occupant charges are an unlawful rent increase even where the lease provides for one. This is the sharpest available trap in this case.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S18",
+              "S17"
+            ],
+            "effort": "No action needed - avoidance",
+            "review_status": "open for review",
+            "notes": "Directly answers Q-14 and AN-07.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-C4",
+            "label": "Set the effective date no earlier than the later of (a) the anniversary date and (b) the date the licence is confirmed on file",
+            "value": "Rule 13.14 tests the effective date, not the service date. Sequencing the dates this way removes the nullity risk without needing to guess.",
+            "status": "analysis",
+            "source_ids": [
+              "S73",
+              "S07",
+              "S01"
+            ],
+            "effort": "Scheduling discipline",
+            "review_status": "open for review",
+            "notes": "Conservative sequencing; the rule states the legal test, the sequence is the recommendation.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-C5",
+            "label": "Serve the notice with proof of service and keep a dated copy of the official pages relied on",
+            "value": "A dated record is the cheapest way to answer a later question about which rate and which rules were in force when the notice was served.",
+            "status": "analysis",
+            "source_ids": [
+              "S35",
+              "S78",
+              "S01"
+            ],
+            "effort": "10 minutes per notice",
+            "review_status": "open for review",
+            "notes": "Matches the existing Notice Worksheet (pages/worksheet.html).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SUG-C6",
+            "label": "Re-check File 261020's committee status immediately before serving any banked or capital-improvement notice",
+            "value": "The pending ordinance targets exactly the stacked multi-year increase that Unit 2's long tenure could theoretically support. It is not law today, but that can change.",
+            "status": "analysis",
+            "source_ids": [
+              "S71",
+              "S72",
+              "S05"
+            ],
+            "effort": "5 minutes",
+            "review_status": "open for review",
+            "notes": "Maps to F46 / REQ-25.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "title": "Decision Readiness - what must be known first",
+    "description": "Every question, piece of information and answer that has to be settled before a rent-increase decision on these two units is reasonable. Unknown items stay blank and flagged, with the discovery route named for each.",
+    "sections": [
+      {
+        "title": "The decision, broken into five gates that must close in order",
+        "columns": [
+          "Gate",
+          "What must be true before moving on",
           "Status",
           "Official source(s)",
-          "Decision status / notes"
+          "Why the order matters"
+        ],
+        "rows": [
+          {
+            "id": "DR-G1",
+            "label": "Gate 1 - Coverage: the unit is actually subject to the SF Rent Ordinance",
+            "value": "Both units are two rented units in a 1940 building, which SF.gov describes as the paradigm covered case (many units built on or before June 13, 1979 have rent control). Owner-supplied facts; the official record is unchecked.",
+            "status": "analysis",
+            "source_ids": [
+              "S06",
+              "S32",
+              "S59"
+            ],
+            "notes": "If the unit is exempt, the 1.6% limit, the license and the Rent Board notice rules do not apply at all - a different decision entirely.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-G2",
+            "label": "Gate 2 - Standing: the owner is entitled to impose an increase at all",
+            "value": "A landlord must have a current Rent Increase License on file before an annual or banked increase takes effect; the license follows the unit's rent-controlled status, not the owner's corporate form.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S53",
+              "S73"
+            ],
+            "notes": "Rule 13.14 makes an unlicensed increase null and void as of its effective date - so this gate can void a fully correct notice.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-G3",
+            "label": "Gate 3 - Amount: the correct base rent, rate and elapsed time",
+            "value": "The rate is 1.6% for 3/1/26-2/28/27 and an increase may be imposed once every 12 months on the anniversary date, on base rent only, not rounded up.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S05"
+            ],
+            "notes": "A rate that is right but applied to the wrong base rent or too early is still an unlawful increase.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-G4",
+            "label": "Gate 4 - Process: the notice and delivery meet both local and state rules",
+            "value": "30-day written notice (90-day if more than 10% alone or combined in the same year), plus 5 days if mailed within California; the notice must state the dollar amount, the percentage and the effective date, using the rate in effect on the increase date.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S35",
+              "S78"
+            ],
+            "notes": "A correct amount in a defective notice can still be unenforceable. Civil Code 827 content and service rules are cumulative with the local rules.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-G5",
+            "label": "Gate 5 - Fair treatment: the choice between the two units is defensible",
+            "value": "Federal and state fair-housing law reach discriminatory effect without intent; a substantial legitimate non-discriminatory interest and the absence of a less discriminatory alternative are the test. No official source requires raising both units.",
+            "status": "verified",
+            "source_ids": [
+              "S42",
+              "S38",
+              "S41"
+            ],
+            "notes": "This is the gate that answers the one-unit-or-both question, and it is decided by the reason for the choice, not the size of the increase.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Gate 1 - Coverage: open questions and the discovery route",
+        "columns": [
+          "Question that must be answered",
+          "Information known now",
+          "Status",
+          "Official source(s)",
+          "What is missing, why it matters, and how to discover it"
         ],
         "rows": [
           {
             "id": "DR-01",
-            "label": "Are both units covered by the SF Rent Ordinance (built on or before June 13, 1979, and not otherwise exempt)?",
-            "value": "",
-            "status": "needs review",
+            "label": "What is the official build year and unit count on record for this property?",
+            "value": "SF.gov states that many units built on or before June 13, 1979 have rent control and eviction protection, and that the first step is to look up the address in the SF Planning Property Information Map.",
+            "status": "verified",
             "source_ids": [
               "S06",
               "S32"
             ],
-            "notes": "Owner-supplied, unverified: built 1940, two units, both rent controlled. How to find it: look up the parcel on the Planning Property Information Map (year built, units); confirm with a Rent Board counselor (415-252-4600).",
-            "flag_id": "T03-F03",
+            "notes": "The 1940 year is owner-supplied only. Open the Property Information Map and record the official year, the unit count and any in-law designation. Free, no account, about 15 minutes. Flagged as T03-F04.",
+            "flag_id": "",
             "source_note": ""
           },
           {
             "id": "DR-02",
-            "label": "Is each unit reported in the Rent Board Housing Inventory for the current cycle?",
-            "value": "",
-            "status": "needs review",
+            "label": "Does the property fall into a partial exemption (single-family or condominium, new construction, substantial rehabilitation, subsidized)?",
+            "value": "SF.gov lists partial exemptions for units built after June 13, 1979, most single-family homes and condominiums, substantial rehabilitation, and government-regulated rents; a legal or illegal in-law unit does not by itself create an exemption and can keep a two-unit building covered.",
+            "status": "verified",
             "source_ids": [
-              "S07",
-              "S55"
+              "S06",
+              "S59",
+              "S60"
             ],
-            "notes": "Not supplied. How to find it: the owner signs in to the Rent Board Portal and checks each unit's submission.",
-            "flag_id": "T03-F05",
+            "notes": "Exemption status is unverified for this address. The Property Information Map record and the certificate of occupancy answer it; if it is ambiguous the official route is a Rent Board counselor or a Section 6.14/Costa-Hawkins petition for a formal determination (S15).",
+            "flag_id": "",
             "source_note": ""
           },
           {
             "id": "DR-03",
-            "label": "Is a current rent increase license on file for each unit on the effective date of any increase?",
-            "value": "",
-            "status": "needs review",
+            "label": "Is either unit an ADU or JADU, and were both units ever rented under one tenancy?",
+            "value": "Civil Code 1947.12(d)(6) exempts a two-unit structure only where the owner occupied one unit as a principal residence at the beginning of the tenancy and continues in occupancy, and neither unit is an ADU or JADU. The in-law rule also turns on whether both units are rented together as a single tenancy.",
+            "status": "verified",
             "source_ids": [
-              "S07",
-              "S08",
-              "S53"
+              "S36",
+              "S60",
+              "S58"
             ],
-            "notes": "Not supplied. How to find it: Portal license status, saved with the date checked. SF.gov wording on the consequence differs (F25).",
-            "flag_id": "F25",
+            "notes": "Owner-supplied facts do not state whether the owner ever occupied a unit, nor the ADU status. That fact decides whether the state exemption could even be argued (it does not remove the local ordinance). Flags F34, F35.",
+            "flag_id": "",
             "source_note": ""
-          },
+          }
+        ]
+      },
+      {
+        "title": "Gate 2 - Standing: license, fee and registration questions",
+        "columns": [
+          "Question that must be answered",
+          "Information known now",
+          "Status",
+          "Official source(s)",
+          "What is missing, why it matters, and how to discover it"
+        ],
+        "rows": [
           {
             "id": "DR-04",
-            "label": "Anniversary date and every increase imposed since each tenancy began (amount, date, notice, proof of service)",
+            "label": "Has each unit been reported into the Rent Board Housing Inventory, and is a Rent Increase License on file?",
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S01",
-              "S05"
+              "S55",
+              "S07",
+              "S73"
             ],
-            "notes": "Not supplied for either unit. How to find it: the owner's rent ledger and copies of every past notice and proof of service.",
+            "notes": "Owner-supplied intake does not confirm reporting or licence status. Discover it by logging into the Rent Board Portal and viewing the unit record; tenants can see the same status, so a tenant-side reviewer will check it. Everything in Gate 3 and Gate 4 is wasted work until this closes. Flag T03-F05.",
             "flag_id": "T03-F05",
             "source_note": ""
           },
           {
             "id": "DR-05",
-            "label": "Unit 2: current base rent",
+            "label": "Will the licence be current on the intended effective date (not just on the day the notice is served)?",
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S07"
+              "S73",
+              "S07",
+              "S08"
             ],
-            "notes": "Owner-supplied, unverified: $3,150 per month at the June 1, 2019 lease start. Current rent not supplied. How to find it: owner's ledger; the Housing Inventory asks for base rent in $250 increments.",
-            "flag_id": "T03-F05",
+            "notes": "Rule 13.14 tests the effective date. Once DR-04 is known, schedule the effective date after the licence is confirmed. If a notice has already been served with an earlier effective date, that is a legal question for counsel, not something to assume away. Flag F25.",
+            "flag_id": "F25",
             "source_note": ""
           },
           {
             "id": "DR-06",
-            "label": "Unit 1: is the April 1, 2026 occupancy a continuation of the February 1, 2025 tenancy, a new tenancy, or an added occupant? Did the last original occupant leave?",
+            "label": "Is the annual Rent Board Fee paid or exempt for each unit for the current cycle?",
             "value": "",
             "status": "needs review",
             "source_ids": [
-              "S16",
-              "S18",
-              "S37"
+              "S56",
+              "S63",
+              "S65"
             ],
-            "notes": "Owner-supplied, unverified: continuing tenancy from April 1, 2026 at $3,995 per month. How to find it: signed leases, move-in and move-out records, and a Rent Board counselor. Costa-Hawkins and Section 6.14 facts decide this.",
-            "flag_id": "T03-F04",
+            "notes": "The fee is a separate obligation with 5%-per-stage penalties to a 15% maximum and delinquency referral. Discover it from the Portal and the Treasurer's records. Paying it does not create a licence, and a licence does not pay it. Flag F43.",
+            "flag_id": "F43",
             "source_note": ""
           },
           {
             "id": "DR-07",
-            "label": "Unit 1: was a Section 6.14 / Costa-Hawkins notice served on the April 2026 occupant?",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S16"
-            ],
-            "notes": "Not supplied. How to find it: owner's file. Without it, no unlimited increase is supported.",
-            "flag_id": "F28",
-            "source_note": ""
-          },
-          {
-            "id": "DR-08",
-            "label": "Lease terms: does any lease allow a mid-term increase, and when does its fixed term end?",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S79"
-            ],
-            "notes": "Not supplied for either unit. How to find it: the signed lease text. A fixed term does not allow a mid-term increase unless the agreement says so.",
-            "flag_id": "B87-F07",
-            "source_note": ""
-          },
-          {
-            "id": "DR-09",
-            "label": "Owner occupancy, in-law unit, accessory dwelling unit, or a second structure on the same lot",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S60",
-              "S27",
-              "S32"
-            ],
-            "notes": "Not supplied. How to find it: Planning Property Information Map and permit records. These facts can change coverage and exemptions (Q-19, Q-20).",
-            "flag_id": "F34",
-            "source_note": ""
-          },
-          {
-            "id": "DR-10",
-            "label": "Who holds title: individual, trust, LLC, or corporation?",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S27"
-            ],
-            "notes": "Owner-supplied, unverified: an individual owner (not a corporation). Recorded title not reviewed. AB 1482's single-family exemption depends on owner type and on written notice to the tenant.",
-            "flag_id": "F49",
-            "source_note": ""
-          },
-          {
-            "id": "DR-11",
-            "label": "Repairs, complaints, inspections or citations in the last 180 days; any tenant petition pending",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S57",
-              "S25"
-            ],
-            "notes": "Not supplied for either unit. How to find it: the owner's repair and complaint records; retaliation review depends on these dates (Civil Code 1942.5).",
-            "flag_id": "B87-F08",
-            "source_note": ""
-          },
-          {
-            "id": "DR-12",
-            "label": "2026-27 Rent Board Fee: paid, or exempt?",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S56"
-            ],
-            "notes": "Not supplied. Fee is $59.00 per unit for 2026-27, due March 1, 2027; exemption requests close December 14, 2026. How to find it: Rent Board Portal. Paying the fee does not replace Housing Inventory reporting.",
-            "flag_id": "F33",
-            "source_note": ""
-          },
-          {
-            "id": "DR-13",
-            "label": "Status of proposed File 261020 (10% combined cap on banked and capital-improvement increases)",
-            "value": "Pending Committee Action; not enacted (Legistar, checked 2026-11-13).",
+            "label": "Does the owner need a City business registration for this rental?",
+            "value": "A person receiving rental income from 'one residential structure consisting of fewer than four units' is not, 'by reason of that fact alone', required to obtain a business registration certificate. Other business activity or payroll expense can still require one.",
             "status": "verified",
             "source_ids": [
-              "S71",
-              "S05"
+              "S66"
             ],
-            "notes": "Recheck the Legistar status before any banked calculation or notice. Proposal wording may change.",
-            "flag_id": "F46",
-            "source_note": ""
-          },
-          {
-            "id": "DR-14",
-            "label": "Have any increases been noticed to either unit since the last known rent, and on what dates?",
-            "value": "",
-            "status": "needs review",
-            "source_ids": [
-              "S01"
-            ],
-            "notes": "Not supplied. How to find it: owner's notices and proofs of service. Ties to DR-04.",
-            "flag_id": "T03-F05",
+            "notes": "The owner-supplied fact is a two-unit building, which is fewer than four units; whether the owner has other business activity or payroll expense was not supplied. Confirm against the Treasurer page before filing anything. Flag F39 covers the narrow wording of this rule.",
+            "flag_id": "",
             "source_note": ""
           }
         ]
       },
       {
-        "title": "B. Decision paths for the increase (choose one path, or a combination, before implementing)",
+        "title": "Gate 3 - Amount: base rent, anniversary date and banking",
         "columns": [
-          "Item",
-          "Finding or suggestion",
+          "Question that must be answered",
+          "Information known now",
           "Status",
           "Official source(s)",
-          "Decision status / notes"
+          "What is missing, why it matters, and how to discover it"
         ],
         "rows": [
           {
-            "id": "DP-A",
-            "label": "Verify first; send no notice yet",
-            "value": "Complete DR-01 to DR-14 and record each unit's anniversary date and rent history before any notice. Consider owner-side legal advice; a tenant lawyer represents the tenant, not the owner.",
+            "id": "DR-08",
+            "label": "What is the current base rent for Unit 1, and what is the current rent for Unit 2?",
+            "value": "Owner-supplied: Unit 1 was $3,995 at the February 1, 2025 lease start and $3,995 on the April 1, 2026 continuing tenancy. Unit 2 was $3,150 at the June 1, 2019 lease start.",
             "status": "analysis",
             "source_ids": [
               "S01",
-              "S07",
-              "S24"
+              "S56"
             ],
-            "notes": "Lowest exposure; costs time. Check the banking rule first (DP-D). Awaiting your choice - not implemented.",
+            "notes": "Unit 2's CURRENT rent was never supplied - only the 2019 figure. The 1.6% must be calculated on the base rent actually in effect, so the Unit 2 calculation on this site is illustrative only. Discover it from the current lease and recent payment records. Flag T03-F06.",
             "flag_id": "",
             "source_note": ""
           },
           {
-            "id": "DP-B",
-            "label": "Increase each unit on its own record, at most 1.6%, on its own anniversary date",
-            "value": "Only for a unit whose DR items are verified and whose license is on file for the effective date. Notice: 30 days (90 days if the increase is more than 10%), with dollar amount, percentage and effective date; +5 days if mailed. Illustration only, if the rent history confirms eligibility: $3,995 x 1.6% = $63.92; $3,150 x 1.6% = $50.40.",
-            "status": "analysis",
-            "source_ids": [
-              "S01",
-              "S04",
-              "S35"
-            ],
-            "notes": "Matches the per-unit rules. Raising both units is not required (see DP-C). Keep neutral, dated reasons. Awaiting your choice - not implemented.",
-            "flag_id": "F22",
-            "source_note": ""
-          },
-          {
-            "id": "DP-C",
-            "label": "Same neutral written policy for both units",
-            "value": "Apply the same written policy to each unit on its own anniversary date (for example 1.6%, the same notice template, and the same license check). No official source requires raising both units.",
-            "status": "analysis",
-            "source_ids": [
-              "S41",
-              "S42",
-              "S38"
-            ],
-            "notes": "Helpful when both units are eligible on the same facts. If anniversaries or eligibility differ, forcing identical timing could create errors. Awaiting your choice - not implemented.",
-            "flag_id": "F22",
-            "source_note": ""
-          },
-          {
-            "id": "DP-D",
-            "label": "Defer (bank) the annual increase",
-            "value": "A skipped increase is banked only if at least 24 full months pass without any increase. Banked amounts are added, not compounded, and do not carry to a new tenant. A banked increase still needs a license when imposed.",
+            "id": "DR-09",
+            "label": "What is each unit's anniversary date?",
+            "value": "A landlord can impose the first annual increase 12 months after the lease began, and each increase sets a new anniversary date at least 12 months out.",
             "status": "verified",
             "source_ids": [
-              "S05",
-              "S01"
+              "S01",
+              "S76"
             ],
-            "notes": "No notice is needed to defer. Timing risk: a skipped increase is lost if the 24-month rule is not met. File 261020 could cap later banked increases if enacted (F46). Awaiting your choice - not implemented.",
-            "flag_id": "F46",
+            "notes": "Unit 1's April 1, 2026 continuation may or may not have restarted the clock; that is a fact question about whether it was a new tenancy or a continuing one. Unit 2's 2019 date is old enough that any 12-month bar has long passed. Flag T03-F04 / CASE-V6.",
+            "flag_id": "",
             "source_note": ""
           },
           {
-            "id": "DP-E",
-            "label": "Larger increase: banked total, Section 6.14, or a petition",
-            "value": "Not recommended now. Unit 2 conditional arithmetic only: 13.1% (including 1.6%) if nothing was ever imposed since June 1, 2019. This is not a finding.",
-            "status": "analysis",
+            "id": "DR-10",
+            "label": "Has every increase been correctly banked, and is any banked amount actually available?",
+            "value": "",
+            "status": "needs review",
             "source_ids": [
               "S05",
-              "S04",
-              "S09",
-              "S15",
-              "S16"
+              "S54",
+              "S03"
             ],
-            "notes": "Highest legal and challenge risk. Decide only after DR items are verified and a lawyer-style review (section C) is complete. Awaiting your choice - not implemented.",
+            "notes": "Banking requires at least 24 full months without any increase, percentages are added (never compounded or prorated), and the notice must state the banked portion. The full increase history was never supplied, so no banked figure is asserted anywhere on this site. Discover it from leases, notices and cancelled cheques. Flags F30, CASE-V9.",
             "flag_id": "F30",
+            "source_note": ""
+          },
+          {
+            "id": "DR-11",
+            "label": "If a banked increase were claimed, would the notice cross the 10% threshold and need 90 days?",
+            "value": "If a correctly banked total plus the current annual rate exceeds 10%, the notice must be 90 days rather than 30 days.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S05"
+            ],
+            "notes": "Conditional only - it becomes live only after DR-10 is answered. The site's 13.1% illustration is arithmetic, not a finding, and is flagged as F30.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-12",
+            "label": "Does pending File 261020 change the permissible amount?",
+            "value": "Proposed, not enacted: it would temporarily limit combined banked plus capital-improvement increases to 10% per year if enacted as drafted. A plain 1.6% annual increase is not described as being affected.",
+            "status": "verified",
+            "source_ids": [
+              "S71",
+              "S72",
+              "S87"
+            ],
+            "notes": "Status must be re-checked immediately before serving any banked or capital-improvement notice. As of the last check the Legistar record was Pending Committee Action. Flags F46, F47.",
+            "flag_id": "",
             "source_note": ""
           }
         ]
       },
       {
-        "title": "C. Lawyer-review criteria: what a San Francisco tenant lawyer will test",
+        "title": "Gate 4 - Process and risk: notice, timing and retaliation",
         "columns": [
-          "Item",
-          "Finding or suggestion",
+          "Question that must be answered",
+          "Information known now",
           "Status",
           "Official source(s)",
-          "Decision status / notes"
+          "What is missing, why it matters, and how to discover it"
+        ],
+        "rows": [
+          {
+            "id": "DR-13",
+            "label": "Is each notice complete and correctly served?",
+            "value": "The notice must be written; state the dollar amount, the percentage and the effective date; give 30 days (90 if more than 10%), plus 5 days if mailed within California; and follow Civil Code 827 delivery rules.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S35",
+              "S78"
+            ],
+            "notes": "The Notice Worksheet page tracks each required element and the per-tenant service record. Proof of service is the evidence if the date is later disputed.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-14",
+            "label": "Is there an outstanding repair complaint or other tenantability event within 180 days?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S57",
+              "S61",
+              "S82"
+            ],
+            "notes": "Civil Code 1942.5(a) applies where the lessor retaliates: if the tenant is not in default in rent, the lessor may not increase the rent within 180 days of the latest applicable enumerated tenantability event (a good-faith repair notice or oral complaint to the landlord, a bed-bug notice, a recorded agency complaint, a resulting inspection or citation, a proceeding, or an adverse decision), and subdivision (b) limits invocation to once in 12 months. Separately, a tenant may petition the Rent Board to defer an increase for unrepaired conditions. This history was never supplied. Discover it from the correspondence file and any Rent Board or DBI records before serving. Flag T03-F02.",
+            "flag_id": "T03-F02",
+            "source_note": ""
+          },
+          {
+            "id": "DR-15",
+            "label": "Has a Notice of Violation, citation or permit issue been recorded for either unit?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S61",
+              "S32"
+            ],
+            "notes": "An open violation is both a retaliation risk and, for an O&M or capital-improvement petition, a bar to recovery. Discover it from DBI records and the Property Information Map before relying on any petition-based increase. Owner records not supplied.",
+            "flag_id": "T03-F02",
+            "source_note": ""
+          },
+          {
+            "id": "DR-16",
+            "label": "Is the household's rent subsidized (for example a Section 8 voucher)?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S60",
+              "S10"
+            ],
+            "notes": "Subsidized units can be partially exempt from the local rent limitations, and the voucher payment standard interacts with the rent. Never supplied. Discover it from the lease and any HAP contract. No exemption is assumed on this site.",
+            "flag_id": "T03-F04",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Gate 5 - Fair treatment across the two units (the one-unit-or-both question)",
+        "columns": [
+          "Question that must be answered",
+          "Information known now",
+          "Status",
+          "Official source(s)",
+          "What is missing, why it matters, and how to discover it"
+        ],
+        "rows": [
+          {
+            "id": "DR-17",
+            "label": "Does any official source require raising both units together?",
+            "value": "No. No official source located requires an owner to raise rent on every unit, and no official source prohibits raising one.",
+            "status": "verified",
+            "source_ids": [
+              "S42",
+              "S41",
+              "S38"
+            ],
+            "notes": "This is a negative finding. The absence of a requirement is not a green light - Gate 5 is about how the choice is made and documented, not whether it is permitted.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-18",
+            "label": "What legal standard would a fair-housing inquiry actually apply?",
+            "value": "Disparate-impact liability can exist without intent; a policy is defensible where it serves a substantial legitimate non-discriminatory interest and there is no less discriminatory alternative. California FEHA separately reaches source of income, retaliation, perception and association.",
+            "status": "verified",
+            "source_ids": [
+              "S42",
+              "S38",
+              "S39"
+            ],
+            "notes": "Practical consequence: select units by a rule that does not reference the tenant (anniversary date, licence status, coverage), and write the rule down before applying it.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-19",
+            "label": "Is there a neutral, documented reason for any difference in treatment between the two units?",
+            "value": "",
+            "status": "needs review",
+            "source_ids": [
+              "S42",
+              "S22",
+              "S01"
+            ],
+            "notes": "Not supplied. This is the single document a tenant-side reviewer would ask for. Discover it by writing the policy before the first notice: 'each unit is increased on its own anniversary date if the licence is current'. Recommendation only - it is not a guarantee against a complaint. Flags F22, T03-F09.",
+            "flag_id": "F22",
+            "source_note": ""
+          },
+          {
+            "id": "DR-20",
+            "label": "Does the increase size itself create disparate impact?",
+            "value": "The compliant amount is at most the published annual allowable increase on base rent, applied once every 12 months, so the local ceiling is small and uniform.",
+            "status": "verified",
+            "source_ids": [
+              "S01",
+              "S02"
+            ],
+            "notes": "A uniform, small, rule-based increase reduces (but does not eliminate) exposure. Nothing here claims that no complaint can occur.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "What would change the answer - the four decision paths",
+        "columns": [
+          "Path",
+          "When it is the right path",
+          "Status",
+          "Official source(s)",
+          "What it requires first"
+        ],
+        "rows": [
+          {
+            "id": "DR-P1",
+            "label": "Path A - ordinary annual increase at or under 1.6% on each unit's anniversary date, licence current",
+            "value": "The default conservative path: both units covered, licence confirmed, anniversary reached, no retaliation event, no banked claim.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35"
+            ],
+            "notes": "Gates 1, 2 and 4 closed; Gate 3 answered for base rent and anniversary. No petition needed.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-P2",
+            "label": "Path B - postpone one unit to preserve a uniform anniversary policy",
+            "value": "When one unit's anniversary has not been reached or its licence is not current. Deferring is lawful; increasing early is not.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S73",
+              "S05"
+            ],
+            "notes": "A written note of the neutral reason. Deferring does not waive the increase - banking preserves it (DR-10).",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-P3",
+            "label": "Path C - add a banked or petition-based amount above 1.6%",
+            "value": "Only where a real rent history supports banking, or a Rent Board petition is granted, or a certified passthrough applies.",
+            "status": "analysis",
+            "source_ids": [
+              "S05",
+              "S09",
+              "S12"
+            ],
+            "notes": "DR-10 must be answered from records; a petition must be FILED BEFORE the notice is served, or the notice is void. Higher scrutiny and 90-day notice likely.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "DR-P4",
+            "label": "Path D - no increase this cycle",
+            "value": "Where coverage, licence or the Unit 1 occupant question cannot be closed, or where a repair dispute is open.",
+            "status": "analysis",
+            "source_ids": [
+              "S01",
+              "S57",
+              "S73"
+            ],
+            "notes": "Nothing to file. Banking rights continue to accrue if 24 months elapse without an increase (DR-10).",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Tenant-lawyer review criteria: what a San Francisco tenant lawyer would test (LR-01 to LR-11)",
+        "columns": [
+          "Question that must be answered",
+          "Information known now",
+          "Status",
+          "Official source(s)",
+          "What is missing, why it matters, and how to discover it"
         ],
         "rows": [
           {
@@ -5751,155 +6514,6 @@
               "S24"
             ],
             "notes": "Owner-side legal advice is a separate decision (DP-A).",
-            "flag_id": "",
-            "source_note": ""
-          }
-        ]
-      },
-      {
-        "title": "D. Site improvement suggestions (to improve decision-making)",
-        "columns": [
-          "Item",
-          "Finding or suggestion",
-          "Status",
-          "Official source(s)",
-          "Decision status / notes"
-        ],
-        "rows": [
-          {
-            "id": "SI-01",
-            "label": "Per-unit readiness dashboard: coverage, license, anniversary date, history and retaliation dates, blank until verified",
-            "value": "Turns DR-01 to DR-14 into one view for each unit. Small generator change.",
-            "status": "analysis",
-            "source_ids": [
-              "S68"
-            ],
-            "notes": "Awaiting your choice - not implemented.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SI-02",
-            "label": "Add a last-verified date and a live link check to the build",
-            "value": "Current checks confirm structure and privacy, not that every external link still resolves.",
-            "status": "analysis",
-            "source_ids": [
-              "S68"
-            ],
-            "notes": "Awaiting your choice - not implemented.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SI-03",
-            "label": "Archive older coordination history and research folders",
-            "value": "COORDINATION.md is about 145 KB; research/ holds 16 folders with duplicate validators (F57, F58).",
-            "status": "analysis",
-            "source_ids": [
-              "S68"
-            ],
-            "notes": "Awaiting your choice - not implemented.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SI-04",
-            "label": "Remediate public git history of raw identifier tokens (highest priority)",
-            "value": "Options: history rewrite with force-push, GitHub Support purge request, delete stale branches, or make the repository private (F44, F51, F56). Needs your explicit approval.",
-            "status": "analysis",
-            "source_ids": [
-              "S68"
-            ],
-            "notes": "Awaiting your choice - not implemented. Owner decision required.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SI-05",
-            "label": "Printable checklist of missing facts to bring to a Rent Board counselor",
-            "value": "Makes DR-01 to DR-14 easy to collect in one visit.",
-            "status": "analysis",
-            "source_ids": [
-              "S24",
-              "S06"
-            ],
-            "notes": "Awaiting your choice - not implemented.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SI-06",
-            "label": "Monitoring note for File 261020 and each March 1 rate change",
-            "value": "Both change the answer; a dated check list keeps the site current.",
-            "status": "analysis",
-            "source_ids": [
-              "S71",
-              "S01"
-            ],
-            "notes": "Awaiting your choice - not implemented.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SI-07",
-            "label": "Plain-English glossary: anniversary date, base rent, banked increase, license, Housing Inventory, effective date vs service date",
-            "value": "Helps a first-time owner read the official pages.",
-            "status": "analysis",
-            "source_ids": [
-              "S01",
-              "S07",
-              "S05"
-            ],
-            "notes": "Awaiting your choice - not implemented.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SI-08",
-            "label": "Keep one authoritative validator and remove duplicates",
-            "value": "Several validators exist under research/ (F58).",
-            "status": "analysis",
-            "source_ids": [
-              "S68"
-            ],
-            "notes": "Awaiting your choice - not implemented.",
-            "flag_id": "",
-            "source_note": ""
-          },
-          {
-            "id": "SI-09",
-            "label": "Replace the sf.gov Assessor link with a verified assessor search or a note",
-            "value": "The current link redirects to the Planning map (F55).",
-            "status": "analysis",
-            "source_ids": [
-              "S07",
-              "S32"
-            ],
-            "notes": "Awaiting your choice - not implemented.",
-            "flag_id": "",
-            "source_note": ""
-          }
-        ]
-      },
-      {
-        "title": "E. Decision log (to be completed by the owner)",
-        "columns": [
-          "Item",
-          "Finding or suggestion",
-          "Status",
-          "Official source(s)",
-          "Decision status / notes"
-        ],
-        "rows": [
-          {
-            "id": "DL-01",
-            "label": "Your choice for each topic (DR items; one path from DP-A to DP-E; SI items)",
-            "value": "No choice recorded. Nothing is implemented until a choice is recorded.",
-            "status": "analysis",
-            "source_ids": [
-              "S68"
-            ],
-            "notes": "Record the choice in COORDINATION.md or tell the agent in a new session.",
             "flag_id": "",
             "source_note": ""
           }
