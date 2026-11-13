@@ -139,7 +139,7 @@ Base: `main` at `f810ee5` (PR #50). Scope: line-by-line review of the current tr
 | Line / file | Observed content | Verification | Flag |
 | --- | --- | --- | --- |
 | `.git` (history) | The local clone was shallow (one commit). `git fetch --unshallow` restored 170 commits across all refs. | `git rev-parse --is-shallow-repository`; `git rev-list --all \| wc -l` | None (environment note only). |
-| Git history | Raw identifier tokens appear in 12 distinct commits dated 2026-11-06 to 2026-11-11. The current tree has none. | `git log --all -G` per token, counts only | F44, F51, F56 (open; owner decision). |
+| Git history | Raw identifier tokens appear in 14 distinct commits dated 2026-11-06 to 2026-11-08 (corrects an earlier count of 12 through 2026-11-11 that could not be reproduced). The current tree has none. | Complete bare mirror of all 43 refs and 258 commits; per-commit `git grep`, counts only; see `research/privacy/FULL_HISTORY_SCAN_2026-11-13.md` (T58) | F44, F51, F56 (open; owner decision). |
 | Current tree (`data/`, `pages/`, `index.html`, `*.md`) | No raw identifier token and no SHA-256 digest of an identifier. Placeholders Tenant A–F are used throughout. | Scan of tracked files with an allowlist; `validate_site.py` privacy checks pass. | None new. |
 | `.gitignore` | `internal/` is ignored. This session stored the raw intake in `internal/intake_private.md` only. | `git check-ignore -v internal/intake_private.md` | None. |
 | Open pull requests | #18, #19, #25, #47 and #48 are open and marked stale, conflicting generator states from earlier sessions. | `gh pr list --state open` | F58 (owner decision; not merged or closed here). |
