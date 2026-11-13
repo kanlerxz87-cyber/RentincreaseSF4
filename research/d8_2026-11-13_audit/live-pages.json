@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-13",
+  "repository": "https://github.com/kanlerxz87-cyber/RentincreaseSF4",
+  "pagesApi": {
+    "endpoint": "https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages",
+    "status": "built",
+    "buildType": "legacy",
+    "sourceBranch": "main",
+    "sourcePath": "/",
+    "httpsEnforced": true
+  },
+  "latestBuild": {
+    "endpoint": "https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest",
+    "buildId": 1366183224,
+    "status": "built",
+    "error": null,
+    "commit": "1a5b82435cea8f171a97c246eee15592174dc2a2",
+    "createdAt": "2026-11-13T12:39:34Z",
+    "updatedAt": "2026-11-13T12:39:54Z"
+  },
+  "livePagesReadWithFetchPage": [
+    "https://kanlerxz87-cyber.github.io/RentincreaseSF4/",
+    "https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/decision.html",
+    "https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/suggestions.html",
+    "https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/sources.html"
+  ],
+  "networkNote": "Sandbox curl to the github.io host was blocked by network policy; the fetch_page tool successfully returned live page content. Browser viewport/accessibility results are from the local public archive, not a hosted-browser session."
+}
