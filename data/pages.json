@@ -143,6 +143,21 @@
             "notes": "Published on the Step-by-Step License page (pages/process.html).",
             "flag_id": "",
             "source_note": ""
+          },
+          {
+            "id": "LIC-11",
+            "label": "Is the license requirement a state or a local law?",
+            "value": "Local law. The license and Housing Inventory reporting duty come from the San Francisco Rent Ordinance - SF Admin. Code Sec. 37.15, added by Ord. 265-20 - and the license applies only to rent-controlled units. The statewide California Tenant Protection Act (AB 1482) is a separate state law that caps increases for units it covers, requires no Rent Board license, and does not apply where the SF Rent Ordinance already limits rent increases.",
+            "status": "verified",
+            "source_ids": [
+              "S53",
+              "S27",
+              "S01",
+              "S07"
+            ],
+            "notes": "Direct answer to the owner's question. The March 1, 2023 date read about is the local date the reporting duty became operative for condominiums and buildings with 1-9 units, not a state law.",
+            "flag_id": "",
+            "source_note": ""
           }
         ]
       },
@@ -4578,6 +4593,201 @@
               "S42"
             ],
             "notes": "Still not a guarantee against a petition.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      }
+    ]
+  },
+  "suggestions": {
+    "title": "Suggestions & Decisions",
+    "description": "Proposals for improving decision-making and for discovering missing information. Each row is a proposal, not a finding or a legal conclusion: a reviewer chooses a path before anything is implemented.",
+    "sections": [
+      {
+        "title": "Site and decision-making improvements",
+        "columns": [
+          "Suggestion",
+          "What it proposes",
+          "Status",
+          "Official source(s)",
+          "Review decision / notes"
+        ],
+        "rows": [
+          {
+            "id": "SGN-01",
+            "label": "Adopt one written, neutral annual-increase policy for each eligible unit",
+            "value": "Use an identical written standard (eligibility, anniversary date, rate, calculation) applied to each eligible unit rather than ad hoc decisions.",
+            "status": "proposed",
+            "source_ids": [
+              "S01",
+              "S42",
+              "S38"
+            ],
+            "notes": "No official source requires raising both units, but identical neutral criteria reduce disparate-treatment risk. Proposed review decision: approve a single neutral policy, or document why one unit differs, before serving any notice.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-02",
+            "label": "Make the Notice Worksheet a standing pre-notice gate",
+            "value": "Require every notice to clear the worksheet gates (coverage, license on the effective date, anniversary, rate, banking, petitions, retaliation) and record service.",
+            "status": "proposed",
+            "source_ids": [
+              "S01",
+              "S07",
+              "S35",
+              "S06"
+            ],
+            "notes": "Each gate is checkable against the linked official page. Proposed review decision: adopt the worksheet as the standard pre-notice checklist for both units.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-03",
+            "label": "Add an annual rate-in-force check every March 1",
+            "value": "Before serving a notice, confirm the allowable percentage in effect on the increase date and record the rate page date used.",
+            "status": "proposed",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S04"
+            ],
+            "notes": "The notice must use the rate in effect on the increase date, not the notice date, and the schedule changes each March 1. Proposed review decision: calendar a March 1 rate check and file the dated page copy.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-04",
+            "label": "Add a decision log recording the chosen path, sources and dates",
+            "value": "For each decision, record the path chosen, the official sources relied on, the date and the decision-maker.",
+            "status": "proposed",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "The site already publishes this for flags and the ledger; the two units deserve the same record. Project-record source: it is not a government legal source. Proposed review decision: adopt a one-page decision log for both units.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-05",
+            "label": "Keep unimplemented suggestions visually distinct with a proposed badge",
+            "value": "Treat every suggestion row as proposed, not verified, so a reviewer can see what is a decision to make rather than a finding.",
+            "status": "proposed",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "This page is a review-only section; nothing here is implemented or asserted as law. Proposed review decision: keep the Suggestions page as a review gate, not as findings.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-06",
+            "label": "Show any fee recovery as a separate fee line, never inside a rent increase",
+            "value": "If recovering the 50% Rent Board Fee ($29.50 per dwelling unit for 2026-2027), bill it as a fee recovery with its own line item and wording.",
+            "status": "proposed",
+            "source_ids": [
+              "S56",
+              "S62",
+              "S63"
+            ],
+            "notes": "The recovery is a fee, not rent, and penalties may not be recovered. Proposed review decision: if recovering, present it separately and keep the deposit-interest or billing method compliant.",
+            "flag_id": "",
+            "source_note": ""
+          }
+        ]
+      },
+      {
+        "title": "Information discovery - close the gaps before deciding",
+        "columns": [
+          "Suggestion",
+          "What it proposes",
+          "Status",
+          "Official source(s)",
+          "Review decision / notes"
+        ],
+        "rows": [
+          {
+            "id": "SGN-07",
+            "label": "Confirm a current Rent Increase License for both units in the Rent Board Portal",
+            "value": "Log in to the Rent Board Portal, check license status by address or APN, and record the result and date for each unit.",
+            "status": "proposed",
+            "source_ids": [
+              "S55",
+              "S07",
+              "S08"
+            ],
+            "notes": "Information discovery. Closes the license gap (T03-F05): no increase should be treated as effective until this is confirmed. Proposed review decision: check both units and record the date.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-08",
+            "label": "Reconstruct the rent-increase and notice history for both units",
+            "value": "Assemble the date and amount of every increase and notice for each unit so banked eligibility can be tested.",
+            "status": "proposed",
+            "source_ids": [
+              "S05",
+              "S54",
+              "S01"
+            ],
+            "notes": "No banked amount may be inferred without history; banking requires at least 24 full months without any increase. Proposed review decision: gather the history and recompute banked percentages only if the 24-month fact is documented.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-09",
+            "label": "Confirm whether the April 1, 2026 Unit 1 continuation started a new tenancy and whether a 6.14 notice was served",
+            "value": "Obtain the lease or tenancy facts and any Section 6.14 notice for the occupant added April 1, 2026.",
+            "status": "proposed",
+            "source_ids": [
+              "S15",
+              "S16",
+              "S37",
+              "S28"
+            ],
+            "notes": "Information discovery. Closes the vacancy-decontrol gap (T03-F04, F28); no market-rate reset is recommended until these facts exist. Proposed review decision: obtain the documents before any reset is considered.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-10",
+            "label": "Ask the Rent Board whether an unlicensed notice can be cured and confirm the fee/licence timing for this property",
+            "value": "If any notice has already been served without a license, ask the Rent Board how it is treated; also confirm the fee referral timing (F38) for this property.",
+            "status": "proposed",
+            "source_ids": [
+              "S56",
+              "S63",
+              "S07",
+              "S24"
+            ],
+            "notes": "Resolves the referral-timing discrepancy inside one SF.gov page and any already-served notice. The Rent Board gives information and referral, not legal advice. Proposed review decision: ask and record the answer.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-11",
+            "label": "Re-check File 261020 committee status before any banked or capital-improvement increase",
+            "value": "Immediately before relying on any banked or capital-improvement increase, re-check the Legistar status and the Rent Board notice.",
+            "status": "proposed",
+            "source_ids": [
+              "S71",
+              "S87",
+              "S05"
+            ],
+            "notes": "The proposal is not enacted and its wording is internally inconsistent (F46, F47). Proposed review decision: re-check status and record the date before serving any stacked increase.",
+            "flag_id": "",
+            "source_note": ""
+          },
+          {
+            "id": "SGN-12",
+            "label": "Decide how to handle the historical identifier exposure outside git history",
+            "value": "Review F44: raw tenant identifiers remain reachable in this public repository's git history and pull-request diffs; only the owner can remediate it.",
+            "status": "proposed",
+            "source_ids": [
+              "S68"
+            ],
+            "notes": "Owner-actionable privacy item; it is not fixed by any site change. Proposed review decision: choose to purge/rotate or to accept and document the residual risk.",
             "flag_id": "",
             "source_note": ""
           }

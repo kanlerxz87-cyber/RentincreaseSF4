@@ -2,13 +2,13 @@
 
 EXECUTIVE_SUMMARY_TEXT = """# Executive Summary - Rental increase SF
 
-Key rate, licensing, fee, coverage, banking, retaliation and pending-legislation sources rechecked on 2026-11-11 UTC; other sources retain their individual verification dates. See research/t52_audit/README.md and research/t50_reverify/README.md for the scope of these checks. Informational compliance research, not legal advice.
+Key rate, licensing, fee, coverage, banking, retaliation and pending-legislation sources rechecked on 2026-11-13 UTC; other sources retain their individual verification dates. See research/t54_final_verification/README.md, research/t52_audit/README.md and research/t50_reverify/README.md for the scope of these checks. Informational compliance research, not legal advice.
 
 ## FOREFRONT: Rent Board & Rent Increase License — yes, an individual owner must comply
 
 **Question:** "I am just an individual property owner and not part of a corporation — do I still need to apply for the license and inform the Rent Board before notifying tenants of a rent increase?"
 
-**Answer: Yes, an individual owner must report and have a license for a covered annual or banked increase. But it need not be in place before the notice is served: the legal test is the increase’s effective date.** Obtaining it before service is the safer recommended practice. Rent Board Rule 13.14 explicitly uses the effective date, not the date of service (https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent). SF.gov states: "A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases on a tenant." No individual-owner exception is stated. The requirement has applied since July 1, 2022 — and since **March 1, 2023 for condominiums and buildings with 1-9 residential units** — so a small individual-owned building in San Francisco is covered now. "Informing the Rent Board" and "getting the license" are the same process: you report into the **Rent Board Housing Inventory**, and the license is generated from that report.
+**Answer: Yes, an individual owner must report and have a license for a covered annual or banked increase. But it need not be in place before the notice is served: the legal test is the increase’s effective date.** Obtaining it before service is the safer recommended practice. Rent Board Rule 13.14 explicitly uses the effective date, not the date of service (https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent). SF.gov states: "A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases on a tenant." No individual-owner exception is stated. **Is that a state or local law? It is local.** The license and the Housing Inventory reporting duty come from the San Francisco Rent Ordinance (SF Admin. Code Sec. 37.15, added by Ord. 265-20; https://www.sf.gov/information--sec-3715-reporting-obligations-licensing) and apply only to rent-controlled units. The statewide California Tenant Protection Act (AB 1482) is a separate state law: it caps increases for the units it covers, requires no Rent Board license, and SF.gov states it does not apply to units already under the SF Rent Ordinance's rent-increase limits (https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482). The March 1, 2023 date you read about is the local date the reporting duty became operative for condominiums and buildings with 1-9 residential units, not a state law. The requirement has applied since July 1, 2022 — and since **March 1, 2023 for condominiums and buildings with 1-9 residential units** — so a small individual-owned building in San Francisco is covered now. "Informing the Rent Board" and "getting the license" are the same process: you report into the **Rent Board Housing Inventory**, and the license is generated from that report.
 
 **Step by step (do these in order, before any tenant notice takes effect):**
 
@@ -111,7 +111,7 @@ Public GitHub Pages research site for "Rental increase SF": executive summary, o
 Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
 - `index.html` - clean landing page / dashboard.
-- `pages/` - category subpages with easy-read tables, including the Rent Board Fee page (`pages/fee.html`) and the Notice Worksheet page (`pages/worksheet.html`).
+- `pages/` - category subpages with easy-read tables, including the Rent Board Fee page (`pages/fee.html`), the Notice Worksheet page (`pages/worksheet.html`) and the Suggestions & Decisions page (`pages/suggestions.html`).
 - `data/` - JSON source of truth; every row has official source IDs.
 - `SOURCES.md` / `VERIFICATION.md` / `research/` - official source ledger and line-by-line verification.
 - `EXECUTIVE_SUMMARY.md` - standalone executive summary.
@@ -162,6 +162,7 @@ tr:last-child td{border-bottom:0}
 .badge.review{background:var(--warnbg);color:var(--warn)}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
 .badge.owner{background:var(--ownerbg);color:var(--owner)}
+.badge.proposed{background:#eef1f7;color:#33415c}
 .owner-src{font-size:.78rem;color:var(--owner)}
 td.blank{color:var(--warn);font-style:italic}
 @media print{nav,.cta{display:none}section,.hero{box-shadow:none}}

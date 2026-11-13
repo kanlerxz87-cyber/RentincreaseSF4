@@ -18,6 +18,7 @@ NAV = [
     ("individual", "Individual Practice"),
     ("market", "Market Context"),
     ("questions", "Questions & Answers"),
+    ("suggestions", "Suggestions & Decisions"),
     ("analysis", "Analysis & Findings"),
     ("sources", "Sources"),
     ("flagged", "Flagged for Review"),
@@ -35,6 +36,7 @@ CARDS = [
     ("94122 SAFMR", "Published", "market", "FY2027 $2,370/$2,770/$3,410/$4,460/$5,020; voucher benchmark, not a cap."),
     ("Attorney approval", "Blank", "questions", "No official approval or guarantee claimed."),
     ("Notice worksheet", "Pre-service kit", "worksheet", "Gates, notice contents and per-tenant service log, each row linked to an official source."),
+    ("Suggestions", "For review", "suggestions", "Proposals for site improvements and missing-information checks; a reviewer chooses a path before implementing."),
 ]
 
 FLAGS = [

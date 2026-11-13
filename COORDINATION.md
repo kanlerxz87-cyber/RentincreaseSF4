@@ -726,3 +726,26 @@ Branch `arena/f7ac76e9-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 | Merge conflict | `COORDINATION.md` only (PR #46 record vs this T53 section). Resolved by keeping **both** records verbatim — nothing from `arena-3e6655be` discarded; its C72-D01/D02/D03/D08 fixes and its "D04–D08 not fully integrated" note are preserved immediately above this section | merge commit `65b6a6b`; `git grep` shows no line-start conflict markers |
 
 **Handoff notes.** (1) Edit `scripts/site_*.py` and rebuild; never hand-edit `pages/*.html` or `data/*.json`. (2) Every source/flag total is computed at build time. (3) `SOURCES.md` is hand-maintained but now guarded: any missing source ID or retyped total fails `validate_site.py`. (4) The privacy checks cover the anonymized case files only; F44/F51 (historical exposure of short identifiers) remain owner-actionable and are not fixed by this merge. (5) File 261020 is **not enacted** — re-check before any notice. (6) The SAFMRs are voucher benchmarks, not market rents or caps (F52).
+
+## Session 2026-11-13 — `arena/1e813501` (T54: fresh 2026-11-13 verification + explicit state-vs-local answer + Suggestions section)
+
+Branch `arena/1e813501-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
+
+**Board read before claiming (2026-11-13 UTC).** `origin/main` tip `f810ee5` (PR #50 merged; session `arena-f7ac76e9`, T53). Local `scripts/validate_site.py` reproduced clean at **125 checks / 0 errors** before any edit. No other session held a live (<60 min) claim; all `in progress` rows above are stale (2026-11-07/08/10/11) and their work is already on `main`. The repository was already complete, live and merged; this session's task is the final fresh verification pass plus two explicit user-requested gaps.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| T54 | Fresh 2026-11-13 direct re-verification of the load-bearing official sources; add the explicit state-vs-local-law answer; add a Suggestions & Decisions review section; rebuild, validate, PR to `main`, merge, confirm Pages | `done` (2026-11-13 UTC; PR/merge/Pages result recorded below) | `arena/1e813501` (claimed 2026-11-13 UTC) | `scripts/site_sources.py`, `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/build_site.py`, `scripts/validate_site.py`, `scripts/site_text.py`, regenerated `data/`, `pages/`, `index.html`, `assets/`, `EXECUTIVE_SUMMARY.md`, `README.md`, `SOURCES.md`, `VERIFICATION.md`, `research/t54_final_verification/` (new), `COORDINATION.md` | Direct `fetch_page` 2026-11-13 of S01, S02, S07, S27, S53, S56, S57, S71, S72 and S83; every figure held (1.6%/1.4%/1.7%, 4.2% deposit interest, license on the effective date, 3/1/2023 operative date for condos and 1-9 unit buildings, AB 1482 8.8% state-only cap, Sec. 37.15 text, $59.00/$29.50 fee and 12/14/2026 exemption window, Civ. Code 1942.5, File 261020 Pending Committee Action, FY2027 94122 SAFMRs). Gates: `build_site.py` clean; `validate_site.py` **133 checks, 0 errors** (87 sources, 70 flags, 363 rows, 12 suggestion rows); `validate_kit.py` **19/0**. | No new flag. F38 (fee referral timing wording) and F44/F51 (historical identifier exposure) remain open and owner-actionable. Suggestions are proposals, not findings; no value inferred. |
+
+**What T54 changed and why.** (1) The owner asked "is that a state or local law?" - added summary row `LIC-11` and an executive-summary sentence stating it is a **local** San Francisco obligation (SF Admin. Code Sec. 37.15, Ord. 265-20) and contrasting the separate statewide AB 1482 cap. (2) The owner asked for a dedicated suggestions section "so someone can review suggestions and choose the best path before implementing any changes" - added `pages/suggestions.html` (nav + dashboard card) with twelve review-only proposals: six site/decision-making improvements and six information-discovery steps that close flagged gaps (T03-F03/F04/F05, F28, F38, F44, F46/F47). (3) Added a `proposed` status (badge, CSS, validator allowance) and four new validator checks. (4) Bumped the ledger date to 2026-11-13 and appended re-verification notes to the source statements.
+
+### T54 publication record — 2026-11-13 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR — T54 fresh verification, local-law answer and Suggestions section | see below | — |
+| CI `validate` | see below | — |
+| GitHub Pages deployment | see below | — |
+| Local gate at merge | `validate_site.py` **133 checks, 0 errors**; `validate_kit.py` **19/0** | `data/validation_report.json` |
+
+*(Publish record completed by the follow-up docs commit once the PR number and merge SHA are known.)*

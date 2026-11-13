@@ -161,7 +161,7 @@ def main():
                         row_errors.append("{} references unknown source {}".format(rid, sid))
                     elif not official_domain(source_map[sid]["url"]):
                         row_errors.append("{} references nonofficial URL for {}".format(rid, sid))
-                if r.get("status") not in ("verified", "needs review", "analysis"):
+                if r.get("status") not in ("verified", "needs review", "analysis", "proposed"):
                     row_errors.append("{} has invalid status".format(rid))
                 if r.get("status") == "needs review":
                     needs_review_count += 1
@@ -233,6 +233,9 @@ def main():
     summary_html = (PAGES / "summary.html").read_text(encoding="utf-8")
     check("executive summary forefront covers Rent Board license for individual owners",
           "FOREFRONT" in summary_html and "individual" in summary_html.lower() and "Rent Increase License" in summary_html)
+    check("executive summary states the license rule is a local law, not a state law",
+          "state or a local law" in summary_html and "Local law" in summary_html and "AB 1482" in summary_html,
+          "summary page carries the explicit local-law row and the AB 1482 contrast")
 
     public_md = sorted(ROOT.glob("*.md")) + sorted((ROOT / "research").rglob("*.md"))
     public_json = sorted(DATA.glob("*.json"))
@@ -294,6 +297,10 @@ def main():
           and "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing" in exec_md)
     check("executive summary states no individual-owner exception",
           "no individual-owner exception is stated" in exec_md.lower())
+    check("executive summary answers state-vs-local and links the ordinance and AB 1482",
+          "state or local law" in exec_md and "it is local" in exec_md.lower()
+          and "37.15" in exec_md and "AB 1482" in exec_md,
+          "direct local-law answer with official links")
 
     broken = []
     for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
@@ -344,7 +351,7 @@ def main():
     check("2026-11-10 proposed-cap inconsistencies and next-year rate are published",
           any(r["id"] == "RATE-14" and "Pending Committee Action" in r["value"] for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
           and any(r["id"] == "RATE-17" and r["value"] == "" and r["status"] == "needs review" for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
-          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11")
+          and any(f["id"] == "F47" for f in flags) and D.DATE >= "2026-11-10"
           and "2026-11-10" in D.SOURCES["S72"]["statement"]
           and official_domain(D.SOURCES["S71"]["url"]))
     check("pending cap is distinguished from current law and calculation is cautioned",
@@ -437,6 +444,28 @@ def main():
           and all(bid in flagged_html for bid in b87_flag_ids))
     check("Notice Worksheet links from the Notice Checklist page",
           "worksheet.html" in (PAGES / "compliance.html").read_text(encoding="utf-8"))
+
+    # --- Checks added 2026-11-13 by session arena/1e813501 (T54: Suggestions section) ---
+    check("Suggestions & Decisions page is published and in the navigation",
+          "suggestions" in pages and (PAGES / "suggestions.html").exists()
+          and any(s == "suggestions" for s, _ in D.NAV))
+    suggestions_rows = [r for sec in pages.get("suggestions", {}).get("sections", []) for r in sec["rows"]]
+    suggestions_errors = []
+    for r in suggestions_rows:
+        rid = r.get("id", "?")
+        if r.get("status") != "proposed":
+            suggestions_errors.append("{} is not proposed".format(rid))
+        if not r.get("source_ids") or any(sid not in source_map for sid in r.get("source_ids", [])):
+            suggestions_errors.append("{} lacks official sources".format(rid))
+        if "review decision" not in r.get("notes", "").lower():
+            suggestions_errors.append("{} lacks a proposed review decision".format(rid))
+    check("every Suggestions row is a proposed, source-linked review decision",
+          len(suggestions_rows) >= 10 and not suggestions_errors,
+          "{} suggestion rows; {}".format(len(suggestions_rows), "; ".join(suggestions_errors[:5])))
+    suggestions_html = (PAGES / "suggestions.html").read_text(encoding="utf-8")
+    check("Suggestions page is clearly a review-only section",
+          "reviewer chooses a path before anything is implemented" in suggestions_html
+          and "not a finding" in suggestions_html)
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

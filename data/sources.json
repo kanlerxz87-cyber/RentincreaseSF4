@@ -5,7 +5,7 @@
     "title": "Learn about rent increases in San Francisco",
     "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
     "category": "Local",
-    "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants. Re-verified 2026-11-10: page now carries a 'Proposed Changes' notice posted November 9, 2026 (File No. 261020, proposed 10% cap on banked + capital-improvement increases; not enacted) - see S71 and flag F46. Re-verified 2026-11-11: all figures unchanged; File 261020 notice still present, not enacted."
+    "statement": "1.6% effective 3/1/26-2/28/27; license; once every 12 months; base rent only; no rounding up; 30/90-day notice; +5 days if mailed; notice contents; anniversary date; additional occupants. Re-verified 2026-11-10: page now carries a 'Proposed Changes' notice posted November 9, 2026 (File No. 261020, proposed 10% cap on banked + capital-improvement increases; not enacted) - see S71 and flag F46. Re-verified 2026-11-11: all figures unchanged; File 261020 notice still present, not enacted. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S02",
@@ -13,7 +13,7 @@
     "title": "Current Rates",
     "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
     "category": "Local",
-    "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Re-verified 2026-11-10: no 3/1/27-2/28/28 rate published yet; page now carries the same November 9, 2026 File 261020 proposed-cap notice as S01. Re-verified 2026-11-11: 1.6%/1.4%/1.7% and 4.2% deposit interest unchanged; F45 link defect still present."
+    "statement": "1.6% 3/1/26-2/28/27; 1.4% 3/1/25-2/28/26; 1.7% 3/1/24-2/28/25. Re-verified 2026-11-10: no 3/1/27-2/28/28 rate published yet; page now carries the same November 9, 2026 File 261020 proposed-cap notice as S01. Re-verified 2026-11-11: 1.6%/1.4%/1.7% and 4.2% deposit interest unchanged; F45 link defect still present. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S03",
@@ -53,7 +53,7 @@
     "title": "The Rent Board Housing Inventory",
     "url": "https://www.sf.gov/rent-board-housing-inventory",
     "category": "Local",
-    "statement": "Annual March 1 reporting; license; current license before annual/banked increase; no monetary penalty but notice unenforceable. Re-verified 2026-11-11: unchanged; fee exemption does not satisfy inventory reporting."
+    "statement": "Annual March 1 reporting; license; current license before annual/banked increase; no monetary penalty but notice unenforceable. Re-verified 2026-11-11: unchanged; fee exemption does not satisfy inventory reporting. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S08",
@@ -213,7 +213,7 @@
     "title": "California Tenant Protection Act of 2019 (AB 1482)",
     "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482",
     "category": "State",
-    "statement": "SF state-only cap 8.8% 8/1/26-7/31/27; does NOT apply to SF Rent Ordinance units; 5%+CPI or 10%; just cause; Rent Board no legal advice/enforcement. Re-verified 2026-11-11: unchanged."
+    "statement": "SF state-only cap 8.8% 8/1/26-7/31/27; does NOT apply to SF Rent Ordinance units; 5%+CPI or 10%; just cause; Rent Board no legal advice/enforcement. Re-verified 2026-11-11: unchanged. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S28",
@@ -421,7 +421,7 @@
     "title": "Sec. 37.15 Reporting Obligations; Licensing",
     "url": "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing",
     "category": "Local",
-    "statement": "Owners must report unit data under penalty of perjury; condominiums and units in buildings with fewer than 10 units report from March 1, 2023 and annually by March 1; substantially compliant owners receive a license to impose rent increases; otherwise the license is suspended and the tenant is not obligated to pay the increased rent for months during the suspension. Added by Ord. 265-20. Re-verified 2026-11-11: unchanged."
+    "statement": "Owners must report unit data under penalty of perjury; condominiums and units in buildings with fewer than 10 units report from March 1, 2023 and annually by March 1; substantially compliant owners receive a license to impose rent increases; otherwise the license is suspended and the tenant is not obligated to pay the increased rent for months during the suspension. Added by Ord. 265-20. Re-verified 2026-11-11: unchanged. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S54",
@@ -445,7 +445,7 @@
     "title": "The Rent Board Fee",
     "url": "https://www.sf.gov/rent-board-fee",
     "category": "Local",
-    "statement": "Separate from the Rent Increase License: every residential dwelling unit owner must pay a per-unit Rent Board Fee unless exempt. 2026-2027: $59.00 per dwelling unit, $29.50 per guest unit. Due March 1 each year; 5% monthly late penalty to a 15% maximum; unpaid balances referred to the Bureau of Delinquent Revenue after June 1. If the fee is paid in full, 50% ($29.50 per dwelling unit) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered. 'Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements.' Re-verified 2026-11-07; re-verified 2026-11-11: $59.00/$29.50, March 1 deadline, Dec 14 2026 exemption window unchanged."
+    "statement": "Separate from the Rent Increase License: every residential dwelling unit owner must pay a per-unit Rent Board Fee unless exempt. 2026-2027: $59.00 per dwelling unit, $29.50 per guest unit. Due March 1 each year; 5% monthly late penalty to a 15% maximum; unpaid balances referred to the Bureau of Delinquent Revenue after June 1. If the fee is paid in full, 50% ($29.50 per dwelling unit) may be recovered from tenants in occupancy as of November 1 of the tax year; penalties may not be recovered. 'Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements.' Re-verified 2026-11-07; re-verified 2026-11-11: $59.00/$29.50, March 1 deadline, Dec 14 2026 exemption window unchanged. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S57",
@@ -453,7 +453,7 @@
     "title": "CIV 1942.5 (retaliation)",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV",
     "category": "State",
-    "statement": "Subdivision (a): if the lessee is not in default as to rent and has exercised rights under this chapter or complained to an appropriate agency about tenantability, the lessor may not recover possession, cause the lessee to quit involuntarily, increase the rent, or decrease services within 180 days of the listed triggering events (good-faith repair notice or oral complaint, written or recorded agency complaint, inspection or citation, filing of a tenantability proceeding, or an adverse judgment or award); a lessee may invoke subdivision (a) only once in any 12-month period (subd. (b)). Subdivision (d) separately bars rent increases, service decreases, eviction or threats for lawful organizing or peaceable exercise of rights. Subdivision (g) permits the acts if the notice or pleading states the ground in good faith. Subdivision (h) gives actual damages plus $100-$2,000 punitive damages per retaliatory act for fraud, oppression or malice; subdivision (i) requires the court to award reasonable attorney fees to the prevailing party if either party requests fees when the action is initiated. Operative October 1, 2021. Re-verified 2026-11-11 from the statute text."
+    "statement": "Subdivision (a): if the lessee is not in default as to rent and has exercised rights under this chapter or complained to an appropriate agency about tenantability, the lessor may not recover possession, cause the lessee to quit involuntarily, increase the rent, or decrease services within 180 days of the listed triggering events (good-faith repair notice or oral complaint, written or recorded agency complaint, inspection or citation, filing of a tenantability proceeding, or an adverse judgment or award); a lessee may invoke subdivision (a) only once in any 12-month period (subd. (b)). Subdivision (d) separately bars rent increases, service decreases, eviction or threats for lawful organizing or peaceable exercise of rights. Subdivision (g) permits the acts if the notice or pleading states the ground in good faith. Subdivision (h) gives actual damages plus $100-$2,000 punitive damages per retaliatory act for fraud, oppression or malice; subdivision (i) requires the court to award reasonable attorney fees to the prevailing party if either party requests fees when the action is initiated. Operative October 1, 2021. Re-verified 2026-11-11 from the statute text. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S58",
@@ -565,7 +565,7 @@
     "title": "File 261020 - proposed cap on rent increases for rent-controlled units",
     "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
     "category": "Local - proposed legislation",
-    "statement": "Checked 2026-11-10; re-verified 2026-11-11: Version 1, introduced September 15, 2026, status Pending Committee Action, no final action or enactment shown. Proposal: combined banked and capital-improvement increases limited to 10% per year for three years. See also the Rent Board notice S05 for proposed applicability; not enacted and subject to change (F46). Field-by-field record at fetch: In control = Land Use and Transportation Committee; Enactment date blank; Enactment # blank; sponsors Danny Sauter, Connie Chan, Bilal Mahmood; version 1; four history rows only (9/15/2026 assigned under 30-day rule; 9/18/2026 and 9/30/2026 referred to department; 10/7/2026 Youth Commission RESPONSE RECEIVED); six attachments now listed (Comment Ltrs added since 2026-11-10). NOT ENACTED - creates no current limit."
+    "statement": "Checked 2026-11-10; re-verified 2026-11-11: Version 1, introduced September 15, 2026, status Pending Committee Action, no final action or enactment shown. Proposal: combined banked and capital-improvement increases limited to 10% per year for three years. See also the Rent Board notice S05 for proposed applicability; not enacted and subject to change (F46). Field-by-field record at fetch: In control = Land Use and Transportation Committee; Enactment date blank; Enactment # blank; sponsors Danny Sauter, Connie Chan, Bilal Mahmood; version 1; four history rows only (9/15/2026 assigned under 30-day rule; 9/18/2026 and 9/30/2026 referred to department; 10/7/2026 Youth Commission RESPONSE RECEIVED); six attachments now listed (Comment Ltrs added since 2026-11-10). NOT ENACTED - creates no current limit. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S72",
@@ -573,7 +573,7 @@
     "title": "Notice: Proposed Changes to Rent Increase Limitations (posted November 9, 2026 on S01 and S02)",
     "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
     "category": "Local - proposed legislation",
-    "statement": "Notice present on BOTH the rent-increase page (S01) and the Current Rates page (S02), posted November 9, 2026. Quotes: 'The San Francisco Board of Supervisors is considering legislation (File No. 261020) that would temporarily limit the combined amount of banked rent increases and capital improvement rent increases that may be imposed on rent-controlled units to 10% per year.' 'If enacted as currently proposed, the legislation would apply to banked rent increases noticed on or after September 15, 2026, and capital improvement rent increases based on petitions filed with the Rent Board on or after September 15, 2026.' 'This legislation has not been enacted and is subject to change.' Direct fetch_page of both pages 2026-11-10."
+    "statement": "Notice present on BOTH the rent-increase page (S01) and the Current Rates page (S02), posted November 9, 2026. Quotes: 'The San Francisco Board of Supervisors is considering legislation (File No. 261020) that would temporarily limit the combined amount of banked rent increases and capital improvement rent increases that may be imposed on rent-controlled units to 10% per year.' 'If enacted as currently proposed, the legislation would apply to banked rent increases noticed on or after September 15, 2026, and capital improvement rent increases based on petitions filed with the Rent Board on or after September 15, 2026.' 'This legislation has not been enacted and is subject to change.' Direct fetch_page of both pages 2026-11-10. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S73",
@@ -661,7 +661,7 @@
     "title": "FY 2027 Small Area FMR calculation summary for ZIP 94122",
     "url": "https://www.huduser.gov/datasets/fmr/fmr2027/zip-calc?year=2027&zip=94122&cbsasub=METRO41860MM7360",
     "category": "Federal",
-    "statement": "Direct fetch_page 2026-11-11: official FY 2027 SAFMRs for ZIP 94122 are $2,370 (efficiency), $2,770 (one-bedroom), $3,410 (two-bedroom), $4,460 (three-bedroom) and $5,020 (four-bedroom), calculated from a $2,622 ZIP base rent. SAFMRs are 40th-percentile gross-rent benchmarks used for voucher payment standards, not caps on private rents. Re-verified 2026-11-11."
+    "statement": "Direct fetch_page 2026-11-11: official FY 2027 SAFMRs for ZIP 94122 are $2,370 (efficiency), $2,770 (one-bedroom), $3,410 (two-bedroom), $4,460 (three-bedroom) and $5,020 (four-bedroom), calculated from a $2,622 ZIP base rent. SAFMRs are 40th-percentile gross-rent benchmarks used for voucher payment standards, not caps on private rents. Re-verified 2026-11-11. Re-verified 2026-11-13 by direct fetch: unchanged."
   },
   {
     "id": "S84",

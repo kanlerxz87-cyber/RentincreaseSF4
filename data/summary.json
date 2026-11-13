@@ -142,6 +142,21 @@
           "notes": "Published on the Step-by-Step License page (pages/process.html).",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "LIC-11",
+          "label": "Is the license requirement a state or a local law?",
+          "value": "Local law. The license and Housing Inventory reporting duty come from the San Francisco Rent Ordinance - SF Admin. Code Sec. 37.15, added by Ord. 265-20 - and the license applies only to rent-controlled units. The statewide California Tenant Protection Act (AB 1482) is a separate state law that caps increases for units it covers, requires no Rent Board license, and does not apply where the SF Rent Ordinance already limits rent increases.",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S27",
+            "S01",
+            "S07"
+          ],
+          "notes": "Direct answer to the owner's question. The March 1, 2023 date read about is the local date the reporting duty became operative for condominiums and buildings with 1-9 units, not a state law.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     },
