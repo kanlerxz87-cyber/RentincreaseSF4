@@ -687,6 +687,19 @@ DECISION = {
             row("DR-P3", "Path C - add a banked or petition-based amount above 1.6%", "Only where a real rent history supports banking, or a Rent Board petition is granted, or a certified passthrough applies.", "analysis", ["S05", "S09", "S12"], "DR-10 must be answered from records; a petition must be FILED BEFORE the notice is served, or the notice is void. Higher scrutiny and 90-day notice likely."),
             row("DR-P4", "Path D - no increase this cycle", "Where coverage, licence or the Unit 1 occupant question cannot be closed, or where a repair dispute is open.", "analysis", ["S01", "S57", "S73"], "Nothing to file. Banking rights continue to accrue if 24 months elapse without an increase (DR-10)."),
         ]},
+        {"title": "Tenant-lawyer review criteria: what a San Francisco tenant lawyer would test (LR-01 to LR-11)", "columns": GATE_COLUMNS, "rows": [
+                row("LR-01", "Coverage is documented from an official record", "", "needs review", ["S32", "S07"], "Not yet done for these units. Record the PIM report and date.", "T03-F03"),
+                row("LR-02", "Rent Increase License is on file on the effective date", "", "needs review", ["S53", "S07", "S08"], "Not yet confirmed. Save the Portal status with the date checked.", "F25"),
+                row("LR-03", "Base rent, anniversary date and increase history are documented", "", "needs review", ["S01", "S05"], "Not yet documented for either unit. Keep the full ledger.", "T03-F05"),
+                row("LR-04", "The math is correct: base rent x rate in effect on the increase date; base rent only; no rounding up", "Rate 1.6% for 3/1/26-2/28/27 (verified); the rate on the increase date governs.", "verified", ["S01", "S04"], "Use the Form 571 table for the rate on the effective date."),
+                row("LR-05", "Notice content and timing: dollar amount, percentage, effective date, banked portion; 30 or 90 days; +5 days if mailed", "Rules verified on SF.gov; no notice has been drafted or served.", "verified", ["S01", "S05", "S35"], "Template and checklist: Notice Checklist and Notice Worksheet pages."),
+                row("LR-06", "Delivery and proof of service follow Civil Code 827 and CCP 1013", "Rules verified; not yet applied to any notice.", "analysis", ["S35", "S78"], "Keep proof of service with the notice."),
+                row("LR-07", "No extra rent for an added occupant; no market-rate reset without verified facts", "Verified rule: extra rent for a new or added roommate is unlawful. No reset facts are verified for Unit 1.", "verified", ["S18", "S16"], "See Q-14 and Q-09."),
+                row("LR-08", "No retaliation or harassment: review repairs, complaints and the 180-day window", "Verified rule; the facts for each unit are missing (DR-11).", "verified", ["S57", "S22"], "Check the dates before choosing any path."),
+                row("LR-09", "Non-discrimination: same neutral criteria; no protected characteristic; no unjustified disparate effect", "Verified legal framework; no discriminatory fact is known, and no lawyer has reviewed any choice.", "verified", ["S41", "S42", "S38", "S39"], "Document neutral reasons for each unit."),
+                row("LR-10", "The official source check is dated on the day of review, including the status of File 261020", "Checked 2026-11-13.", "verified", ["S71", "S07", "S05"], "Recheck the day of any notice."),
+                row("LR-11", "Limits of this review", "Not legal advice. No attorney has approved any increase. Free tenant counseling is for the tenant; the Rent Board counselor does not give legal advice to owners.", "verified", ["S23", "S24"], "Owner-side legal advice is a separate decision (DP-A)."),
+        ]},
     ],
 }
 

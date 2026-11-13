@@ -729,6 +729,16 @@ Branch `arena/f7ac76e9-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 
 ---
 
+## Session 2026-11-13 — `arena-23a50992` (claim: state-vs-local answer, tenant-lawyer review criteria, missing-information register, Suggestions & Decisions page, re-verification, publication)
+
+Branch `arena/23a50992-rentincreasesf4` (fixed by Arena; based on `main` `f810ee5`, PR #50 merged). Board read before claiming: all `in progress` rows above are older than 60 minutes with no current commits; `main` is the only active base. No other live claim exists.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| S23-A | Re-verify load-bearing official pages on 2026-11-13 (SF.gov rate, license, banking, fee, AB 1482, Form 571 history, File 261020 status, Ordinance 265-20) | `done` | `arena-23a50992` | `research/s23_2026-11-13/` (new) | Direct `fetch_page` 2026-11-13; see `research/s23_2026-11-13/README.md` | — |
+| S23-B | Tenant-lawyer review criteria (LR-01 to LR-11) added to the Decision Readiness page; Ordinance 265-20 Legistar copy added as **S92**; flags **F54–F58** added (marked-up Legistar copy, assessor link redirect, history exposure re-confirmed, COORDINATION size and reused IDs, duplicate validators). The state-vs-local answer, the 2023 premise correction, the Suggestions page and the Decision Readiness register were delivered by session `arena-415e54ea` (T54–T56, PR #51) and kept as merged on `main`; this branch did not duplicate them. The S23 draft IDs S88/S89 and F53 were **not** kept: on `main` S88–S91 and F50–F53 are already assigned to other content. | `done` | `arena-23a50992` | `scripts/site_pages.py` (LR section only), `scripts/site_flags.py` (F54–F58 only), `scripts/site_sources.py` (S92 only), `SOURCES.md` (S92 row), `REPO_REVIEW.md`, `research/s23_2026-11-13/`, `research/c72_2026-11-11_audit/validate_c72.py` (page count), regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md` | Direct `fetch_page` 2026-11-13 (see `research/s23_2026-11-13/README.md`); `validate_site.py` 145 checks, 0 errors; `validate_kit.py` 19/0; `validate_c72.py` 19/0 | Raw identifiers stay in gitignored `internal/`; the published site uses placeholders. F56 re-confirms the open history exposure (F44/F51); no rewrite done. |
+| S23-C | Repo review update, merge of `main` (PR #51, T54–T56) into this branch with conflicts resolved (COORDINATION.md: both records kept verbatim; generated outputs and build scripts taken from `main` and re-applied with S23 additions only), PR to `main`, merge, GitHub Pages deploy confirmation, record result | `in progress` | `arena-23a50992` | `REPO_REVIEW.md`, `COORDINATION.md` | `gh pr`, `gh api .../pages/builds/latest` | Pre-existing: raw identifiers remain in git history (open flag F44/F51/F56). Not rewritten without owner approval. |
+
 ## Session `arena-415e54ea` — T54/T55/T56 final integration (2026-11-13 UTC)
 
 Branch `arena/415e54ea-rentincreasesf4`, branched from `main` at `f810ee5` (PR #50). Exclusive, non-overlapping file scopes replace `session-<id>/<task>` branch names because Arena fixes this session to one branch.
