@@ -726,3 +726,15 @@ Branch `arena/f7ac76e9-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 | Merge conflict | `COORDINATION.md` only (PR #46 record vs this T53 section). Resolved by keeping **both** records verbatim — nothing from `arena-3e6655be` discarded; its C72-D01/D02/D03/D08 fixes and its "D04–D08 not fully integrated" note are preserved immediately above this section | merge commit `65b6a6b`; `git grep` shows no line-start conflict markers |
 
 **Handoff notes.** (1) Edit `scripts/site_*.py` and rebuild; never hand-edit `pages/*.html` or `data/*.json`. (2) Every source/flag total is computed at build time. (3) `SOURCES.md` is hand-maintained but now guarded: any missing source ID or retyped total fails `validate_site.py`. (4) The privacy checks cover the anonymized case files only; F44/F51 (historical exposure of short identifiers) remain owner-actionable and are not fixed by this merge. (5) File 261020 is **not enacted** — re-check before any notice. (6) The SAFMRs are voucher benchmarks, not market rents or caps (F52).
+
+---
+
+## Session 2026-11-13 — `arena-23a50992` (claim: state-vs-local answer, tenant-lawyer review criteria, missing-information register, Suggestions & Decisions page, re-verification, publication)
+
+Branch `arena/23a50992-rentincreasesf4` (fixed by Arena; based on `main` `f810ee5`, PR #50 merged). Board read before claiming: all `in progress` rows above are older than 60 minutes with no current commits; `main` is the only active base. No other live claim exists.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| S23-A | Re-verify load-bearing official pages on 2026-11-13 (SF.gov rate, license, banking, fee, AB 1482, Form 571 history, File 261020 status, Ordinance 265-20) | `in progress` | `arena-23a50992` | `research/s23_2026-11-13/` (new) | Direct `fetch_page` 2026-11-13; see the research folder README once written | — |
+| S23-B | Add state-vs-local answer, correction of the "2023 law" premise, tenant-lawyer review criteria, Suggestions & Decisions page (missing-information register, decision paths, site suggestions), new sources S88–S90, new flags | `in progress` | `arena-23a50992` | `scripts/site_text.py`, `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_sources.py`, `scripts/validate_site.py` (new checks only), regenerated `data/`, `pages/`, `index.html`, `assets/`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `README.md` | Re-verified sources listed in S23-A | Privacy: raw identifiers are kept only in gitignored `internal/`; published site uses Tenant A–F. |
+| S23-C | Repo review update, PR to `main`, merge, GitHub Pages deploy confirmation, record result | `in progress` | `arena-23a50992` | `REPO_REVIEW.md`, `COORDINATION.md` | `gh pr`, `gh api .../pages/builds/latest` | Pre-existing: raw identifiers remain in git history (open flag F44/F51). Not rewritten without owner approval. |
