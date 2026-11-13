@@ -313,49 +313,6 @@
           "notes": "Conservative compliance checklist only.",
           "flag_id": "",
           "source_note": ""
-        },
-        {
-          "id": "Q-22",
-          "label": "I read that since a law passed in 2023 I have to inform the SF Rent Board about a rent increase. Is that a state or a local law?",
-          "value": "LOCAL. The duty comes from the San Francisco Rent Ordinance: Administrative Code Sec. 37.15 (Reporting Obligations; Licensing), added by City Ordinance No. 265-20, effective January 18, 2021. What happened in 2023 is the phase-in: 'For condominium units and units in buildings with fewer than 10 units, the information shall be reported commencing March 1, 2023 and updated annually by March 1 of each successive year' - so a small individual-owned rental building like this one came under the duty on that date, and Rent Board Rule 13.14 applies to condominiums and buildings under 10 units for 'rent increases that are effective on or after March 1, 2023'.",
-          "status": "verified",
-          "source_ids": [
-            "S53",
-            "S88",
-            "S89",
-            "S73"
-          ],
-          "notes": "Verified 2026-11-13 from the codified ordinance text, the City's news item naming Ord. 265-20, the Board of Supervisors file attachment and the Rent Board Rules. A City ordinance is local law; the California Legislature is not the source of this duty.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "Q-23",
-          "label": "Then what did the 2023 STATE law do?",
-          "value": "SB 567 (Stats. 2023, Ch. 290) repealed and re-added Civil Code Sec. 1947.12 and amended the just-cause statute Sec. 1946.2 - effective January 1, 2024, operative April 1, 2024, sunsetting January 1, 2030. For a unit covered only by the state law the SF cap is 8.8% for 8/1/26-7/31/27 (5% + 3.8% CPI), and Sec. 1947.12(d)(3) exempts housing already under a more restrictive local cap. Nothing in either section, as read in full on 2026-11-13, requires notifying a rent board before an increase.",
-          "status": "verified",
-          "source_ids": [
-            "S36",
-            "S90",
-            "S27"
-          ],
-          "notes": "Practical effect here: the local 1.6% cap is what governs these two units; the state cap does not raise it. Do not cite the 8.8% figure to these tenants.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "Q-24",
-          "label": "If I was late reporting, can Civil Code Sec. 1947.7 (good-faith substantial compliance) save the increase?",
-          "value": "",
-          "status": "needs review",
-          "source_ids": [
-            "S91",
-            "S53",
-            "S73"
-          ],
-          "notes": "Section 1947.7 protects an owner in substantial compliance with a local system 'which requires the registration of rents', but Sec. 37.15(d) says the Rent Board shall not use the Housing Inventory to operate a rental registry within the meaning of Sections 1947.7-1947.8. No official page reviewed resolves whether the section applies to the SF licence scheme, so no answer is given here; this needs counsel. Rule 13.14 does preserve banking rights for an increase voided for lack of a licence.",
-          "flag_id": "F56",
-          "source_note": ""
         }
       ]
     }

@@ -3,6 +3,87 @@
   "description": "Bottom line for Rental increase SF, with every finding linked to an official source.",
   "sections": [
     {
+      "title": "FOREFRONT - Is the \"inform the Rent Board\" law state or local? (local)",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "SL-01",
+          "label": "The direct answer",
+          "value": "LOCAL. The duty to report a rent-controlled unit to the SF Rent Board and hold a Rent Increase License comes from the San Francisco Administrative Code (Chapter 37, Sec. 37.15), added by Ordinance No. 265-20 effective January 18, 2021. It is not a California state statute and not a federal rule.",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S90",
+            "S21"
+          ],
+          "notes": "This is the answer to the state-vs-local question, placed first. Full layer-by-layer table on the Local Law page (LAW-01 to LAW-08).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SL-02",
+          "label": "Where the '2023' date comes from",
+          "value": "2023 is the year the LOCAL duty became operative for condominiums and buildings with 1-9 residential units (March 1, 2023). It is not the year a state law passed. Buildings with 10 or more units began reporting July 1, 2022; the ordinance itself dates from January 18, 2021. A two-unit building is in the 1-9 unit group.",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S73",
+            "S01"
+          ],
+          "notes": "Rent Board Rule 13.14 states the same two dates and tests the increase's effective date, not the date of service.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SL-03",
+          "label": "What the real 2023 state law was",
+          "value": "SB 567 (Chapter 290, Statutes of 2023) amended the statewide Tenant Protection Act - just-cause eviction rules and enforcement of the state 5%-plus-CPI / 10% rent cap - and became operative April 1, 2024. It creates no rent-board reporting duty.",
+          "status": "verified",
+          "source_ids": [
+            "S88",
+            "S89"
+          ],
+          "notes": "Negative finding from the chaptered bill text.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SL-04",
+          "label": "Why the state cap is not this owner's ceiling",
+          "value": "Civil Code 1947.12(d)(3) excludes housing under a stricter local rent control ordinance, and SF.gov states AB 1482 does not apply to units under the SF Rent Ordinance limits. The local 1.6% for 3/1/26-2/28/27 governs covered SF units.",
+          "status": "verified",
+          "source_ids": [
+            "S36",
+            "S27",
+            "S01"
+          ],
+          "notes": "State 8.8% is not an alternative the owner may elect.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SL-05",
+          "label": "So what must the owner actually do?",
+          "value": "Report into the Rent Board Housing Inventory through the Rent Board Portal (free, due March 1 each year), which generates the Rent Increase License; confirm the license is on file on the increase's effective date; then serve the compliant written notice. There is no separate licence application form.",
+          "status": "verified",
+          "source_ids": [
+            "S07",
+            "S01",
+            "S53"
+          ],
+          "notes": "Step-by-step page: PRC-01 to PRC-12. The Rent Board Fee is a separate obligation (FEE page).",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
       "title": "FOREFRONT - Rent Board & Rent Increase License: individual owner",
       "columns": [
         "Item",
@@ -35,49 +116,6 @@
             "S07"
           ],
           "notes": "A small individual-owned building is therefore covered now (2026).",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "LIC-11",
-          "label": "Which level of government imposed this duty - state or local?",
-          "value": "LOCAL, not state. The duty to inform the Rent Board and hold a licence comes from San Francisco Administrative Code Sec. 37.15, added by City of San Francisco Ordinance No. 265-20, effective January 18, 2021 ('Ordinance amending the Administrative Code to require owners of residential dwelling units to report certain information to the Rent Board; to authorize the Rent Board to issue a license ... and to require that an owner have a license to impose certain types of rent increases')",
-          "status": "verified",
-          "source_ids": [
-            "S53",
-            "S88",
-            "S89"
-          ],
-          "notes": "Verified 2026-11-13 from the ordinance's own code note ('Added by Ord. No. 265-20, effective January 18, 2021'), the City's news item naming the ordinance, and the Board of Supervisors file attachment. The March 1, 2023 date the owner remembers is the local phase-in for condominiums and buildings with fewer than 10 units, not a 2023 statute.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "LIC-12",
-          "label": "Was there a 2023 state law about rent increases? Yes - but it is a different subject",
-          "value": "SB 567 (Stats. 2023, Ch. 290) repealed and re-added Civil Code Sec. 1947.12 (effective January 1, 2024, operative April 1, 2024, repealed January 1, 2030) and amended the just-cause statute; the Rent Board's AB 1482 page says AB 1482 'is amended by SB 567'. The state cap for SF-only-covered units is 8.8% (5% + 3.8% CPI) for 8/1/26-7/31/27. Neither section, as read in full on 2026-11-13, contains any duty to notify the San Francisco Rent Board before a rent increase",
-          "status": "verified",
-          "source_ids": [
-            "S36",
-            "S90",
-            "S27"
-          ],
-          "notes": "So: the 2023 state law changed caps and just-cause rules; the duty to inform the Rent Board and be licensed is the local ordinance. Civil Code Sec. 1947.12(d)(3) in fact exempts units already under a more restrictive local cap - these two units are in that category. See flag F55 for the limits of this search.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "LIC-13",
-          "label": "What the state does require alongside the local licence",
-          "value": "State law still governs the notice and the just-cause rules: Civil Code Sec. 1947.12(e) requires notice of any increase 'in accordance with Section 827' (30 days at 10% or less, 90 days above 10%), and SF.gov adds 'You will still need to comply with all other local and state rent increase laws' plus '+5 days if the notice is mailed'",
-          "status": "verified",
-          "source_ids": [
-            "S36",
-            "S35",
-            "S07",
-            "S01"
-          ],
-          "notes": "The licence and the state notice duty are cumulative, not alternatives. Delivering the notice properly (personal delivery or mail, with proof) is a state-law requirement.",
           "flag_id": "",
           "source_note": ""
         },

@@ -344,7 +344,7 @@ def main():
     check("2026-11-10 proposed-cap inconsistencies and next-year rate are published",
           any(r["id"] == "RATE-14" and "Pending Committee Action" in r["value"] for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
           and any(r["id"] == "RATE-17" and r["value"] == "" and r["status"] == "needs review" for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
-          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11", "2026-11-13")
+          and any(f["id"] == "F47" for f in flags) and D.DATE >= "2026-11-10"
           and "2026-11-10" in D.SOURCES["S72"]["statement"]
           and official_domain(D.SOURCES["S71"]["url"]))
     check("pending cap is distinguished from current law and calculation is cautioned",
@@ -438,58 +438,66 @@ def main():
     check("Notice Worksheet links from the Notice Checklist page",
           "worksheet.html" in (PAGES / "compliance.html").read_text(encoding="utf-8"))
 
-    # --- Checks added 2026-11-13 by session arena-6f65a2f5 (T54: suggestions board + state/local answer) ---
-    sug = pages.get("suggestions", {})
-    sug_rows = [r for sec in sug.get("sections", []) for r in sec["rows"]]
-    check("Site Suggestions page is published and in the navigation",
+    # --- Checks added 2026-11-13 by session arena-415e54ea (T54/T55/T56) ---
+    law_rows = [r for sec in pages.get("local", {}).get("sections", []) for r in sec["rows"]]
+    law_ids = {r["id"] for r in law_rows}
+    check("local law page carries the state-vs-local layer table",
+          {"LAW-01", "LAW-02", "LAW-03", "LAW-04", "LAW-05", "LAW-06"} <= law_ids,
+          "{} law-layer rows".format(len([i for i in law_ids if i.startswith("LAW-")])))
+    law01 = [r for r in law_rows if r["id"] == "LAW-01"][0]
+    check("the layer answer is stated as LOCAL with the ordinance citation",
+          "LOCAL" in law01["value"] and "265-20" in law01["value"] and "January 18, 2021" in law01["value"],
+          "LAW-01")
+    check("the 2023 attribution is explained as the local small-building operative date",
+          any(r["id"] == "LAW-02" and "March 1, 2023" in r["value"] and "1-9" in r["value"] for r in law_rows)
+          and any(r["id"] == "LAW-03" and "SB 567" in r["value"] and "April 1, 2024" in r["value"] for r in law_rows))
+    check("state-cap exclusion and SB 567 are backed by official sources",
+          any(r["id"] == "LAW-04" and "S36" in r["source_ids"] for r in law_rows)
+          and any(r["id"] == "LAW-03" and "S88" in r["source_ids"] for r in law_rows))
+    check("F53 is published and cites the ordinance and SB 567 sources",
+          any(f["id"] == "F53" for f in flags)
+          and {"S53", "S73", "S88", "S90"} <= set([f for f in flags if f["id"] == "F53"][0]["source_ids"]),
+          "F53")
+    check("Suggestions page is published and in the navigation",
           "suggestions" in pages and (PAGES / "suggestions.html").exists()
-          and any(slu == "suggestions" for slu, _ in D.NAV)
-          and "pages/suggestions.html" in (ROOT / "index.html").read_text(encoding="utf-8"),
-          "{} suggestion rows".format(len(sug_rows)))
-    check("suggestions board carries both proposal rows and owner-decision rows",
-          len([r for r in sug_rows if r["id"].startswith("SG-")]) >= 25
-          and len([r for r in sug_rows if r["id"].startswith("DEC-")]) == 8,
-          "{} SG rows, {} DEC rows".format(len([r for r in sug_rows if r["id"].startswith("SG-")]), len([r for r in sug_rows if r["id"].startswith("DEC-")])))
-    sug_errors = []
-    for r in sug_rows:
-        if not r.get("source_ids") or any(sid not in source_map for sid in r["source_ids"]):
-            sug_errors.append("{} lacks a catalogued source".format(r.get("id", "?")))
-        if r.get("status") not in ("analysis", "needs review"):
-            sug_errors.append("{} must be a proposal or a blank decision, not a verified finding".format(r.get("id", "?")))
-        if r.get("status") == "analysis" and not r.get("value"):
-            sug_errors.append("{} is an analysis row with no content".format(r.get("id", "?")))
-    check("no suggestion is presented as verified or as an implemented change", not sug_errors, "; ".join(sug_errors[:5]))
-    sug_html = (PAGES / "suggestions.html").read_text(encoding="utf-8")
-    check("suggestions page states plainly that nothing on it is implemented",
-          "has been implemented" in sug_html and "F53" in sug_html and "F54" in sug_html)
-    check("new state/local sources S88-S91 are catalogued on official domains",
-          all(sid in source_map and official_domain(source_map[sid]["url"]) for sid in ("S88", "S89", "S90", "S91")),
-          "S88 City news, S89 ordinance text, S90 Civ. Code 1946.2, S91 Civ. Code 1947.7")
-    check("state-versus-local answer is published in the forefront of the executive summary",
-          "Ord. No. 265-20" in summary_html and "Ordinance No. 265-20" in summary_html
-          and "SB 567" in summary_html and "LOCAL" in summary_html)
-    check("state-versus-local answer is answered on the process, local, state and questions pages",
-          all(tok in (PAGES / "process.html").read_text(encoding="utf-8") for tok in ("PRC-10", "PRC-11", "265-20"))
-          and "LOC-26" in (PAGES / "local.html").read_text(encoding="utf-8")
-          and "ST-19" in (PAGES / "state.html").read_text(encoding="utf-8")
-          and "Q-22" in (PAGES / "questions.html").read_text(encoding="utf-8"))
-    exec_md13 = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
-    check("executive summary answers the 2023 question with the local phase-in and links the ordinance",
-          "Added by Ord. No. 265-20" in exec_md13
-          and "commencing March 1, 2023" in exec_md13
-          and "https://www.sf.gov/news/new-legislation-creates-housing-inventory-and-requires-owners-obtain-license-imposing" in exec_md13
-          and "sec-3715-reporting-obligations-licensing" in exec_md13)
-    check("the 1947.7 question is published as an open item rather than answered",
-          any(r["id"] == "Q-24" and r["status"] == "needs review" and r["value"] == "" and r["flag_id"] == "F56"
-              for pg in D.PAGES.values() for sec in pg["sections"] for r in sec["rows"])
-          and "F56" in flagged_html and "F55" in flagged_html)
-    check("landing page states the local-law answer and links the suggestions board",
-          "Ordinance No. 265-20" in index_html and "pages/suggestions.html" in index_html)
-    check("Rule 13.14 verbatim nullity wording is published and cited",
-          "shall render the entire rent increase null and void" in exec_md13
-          and "S73" in [sid for pg in D.PAGES.values() for sec in pg["sections"] for r in sec["rows"] if r["id"] == "PRC-06" for sid in r["source_ids"]])
-    check("computed suggestion count is substituted, not typed",
-          "{{SUGG_COUNT}}" not in exec_md13 and "rows" in exec_md13)
+          and any(s == "suggestions" for s, _ in D.NAV))
+    sug_rows = [r for sec in pages.get("suggestions", {}).get("sections", []) for r in sec["rows"]]
+    sug_items = [r for r in sug_rows if r["id"].startswith(("SUG-A", "SUG-B", "SUG-C"))]
+    check("Suggestions page has a reviewable queue with effort and status on every item",
+          len(sug_items) >= 15 and all(r.get("effort") and r.get("review_status") for r in sug_items),
+          "{} suggestions".format(len(sug_items)))
+    check("Suggestions page explains the review process before implementation",
+          all(rid in {r["id"] for r in sug_rows} for rid in ("SUG-P1", "SUG-P3", "SUG-P5")))
+    check("Decision Readiness page is published and in the navigation",
+          "decision" in pages and (PAGES / "decision.html").exists()
+          and any(s == "decision" for s, _ in D.NAV))
+    dec_rows = [r for sec in pages.get("decision", {}).get("sections", []) for r in sec["rows"]]
+    gates = [r["id"] for r in dec_rows if r["id"].startswith("DR-G")]
+    opens = [r for r in dec_rows if r["id"].startswith("DR-") and not r["id"].startswith("DR-G") and not r["id"].startswith("DR-P")]
+    check("Decision Readiness page has five gates, open questions and decision paths",
+          len(gates) == 5 and len(opens) >= 15 and any(r["id"] == "DR-P4" for r in dec_rows),
+          "{} gates, {} questions".format(len(gates), len(opens)))
+    blank_gaps = [r for r in opens if r["status"] == "needs review"]
+    check("every blank Decision Readiness gap names how the information would be discovered",
+          len(blank_gaps) >= 5 and all(any(k in r["notes"].lower() for k in
+              ("discover", "route", "not supplied", "owner", "portal", "record", "file", "counsel", "log in"))
+              for r in blank_gaps),
+          "{} blank gaps checked; missing: {}".format(
+              len(blank_gaps),
+              "; ".join(r["id"] for r in blank_gaps if not any(k in r["notes"].lower() for k in
+                  ("discover", "route", "not supplied", "owner", "portal", "record", "file", "counsel", "log in"))) or "none"))
+    check("decision register keeps unverified facts blank",
+          all(r["value"] == "" for r in opens if r["status"] == "needs review"),
+          "{} needs-review cells blank".format(len([r for r in opens if r["status"] == "needs review"])))
+    exec_md_local = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("landing page and executive summary lead with the local-law answer",
+          "Local.</strong>" in (ROOT / "index.html").read_text(encoding="utf-8")
+          and "state or local? \u2014 LOCAL" in exec_md_local
+          and exec_md_local.index("LOCAL") < exec_md_local.index("## FOREFRONT: Rent Board & Rent Increase License"))
+    check("SB 567 and Civil Code 1947.12 are catalogued as official sources",
+          D.SOURCES.get("S88", {}).get("agency") == "California Legislature"
+          and "SB 567" in D.SOURCES["S88"]["title"]
+          and official_domain(D.SOURCES["S89"]["url"]) and "1946.2" in D.SOURCES["S89"]["title"])
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

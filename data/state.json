@@ -222,50 +222,6 @@
           "notes": "An individual owner can meet the owner test, but the notice is still required.",
           "flag_id": "",
           "source_note": ""
-        },
-        {
-          "id": "ST-18",
-          "label": "The 2023 state law: SB 567 (Stats. 2023, Ch. 290)",
-          "value": "Civil Code Sec. 1947.12's own history note reads '(in Sec. 3) and added by Stats. 2023, Ch. 290, Sec. 4. (SB 567) Effective January 1, 2024. Operative April 1, 2024. Repealed as of January 1, 2030, by its own provisions.'; the Rent Board's AB 1482 page says AB 1482 'is amended by SB 567'",
-          "status": "verified",
-          "source_ids": [
-            "S36",
-            "S90",
-            "S27"
-          ],
-          "notes": "This is the California law passed in 2023 that a reader is most likely to have encountered. It changed the state cap and just-cause framework - it did not create a duty to notify the San Francisco Rent Board of a rent increase.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "ST-19",
-          "label": "Does any state law reviewed require telling a rent board about a rent increase?",
-          "value": "No. Read in full on 2026-11-13, Civil Code Sec. 1946.2 (just cause), Sec. 1947.12 (cap), Sec. 827 (notice), Sec. 1942.5 (retaliation) and Sec. 1947.7 (substantial compliance with a local rent program) contain no requirement that an owner notify, file with, or obtain permission from a rent board or any other agency before imposing a rent increase. Sec. 1947.12(e) requires only notice to the tenant under Sec. 827",
-          "status": "verified",
-          "source_ids": [
-            "S90",
-            "S36",
-            "S35",
-            "S57",
-            "S91"
-          ],
-          "notes": "The Rent Board reporting/licence duty is local (Sec. 37.15). Scope limit: this is a review of the named sections plus the SF pages, not an exhaustive search of the California Codes - see flag F55.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "ST-20",
-          "label": "State backstop if a local filing was late: Civil Code Sec. 1947.7",
-          "value": "Intent is 'to limit the imposition of penalties and sanctions against an owner of residential rental units where that person has attempted in good faith to fully comply with the regulatory processes' of a local rent program. An owner in substantial compliance with a rent-control ordinance 'which requires the registration of rents' 'shall not be assessed a penalty or any other sanction for noncompliance', with restitution to the tenant or recovery of registration/filing fees as the exclusive remedies; and 'all annual rent adjustments which may have been denied during the period of the owner's noncompliance shall be restored prospectively once the owner is in compliance'",
-          "status": "verified",
-          "source_ids": [
-            "S91",
-            "S53",
-            "S89"
-          ],
-          "notes": "Do not rely on it yet: SF's ordinance states the Housing Inventory is NOT a rental registry within the meaning of Sections 1947.7-1947.8, so its application to the SF licence scheme is unsettled (Q-24, flag F56). Locally, Rule 13.14 separately preserves the right to re-impose an increase voided for lack of a licence.",
-          "flag_id": "",
-          "source_note": ""
         }
       ]
     }

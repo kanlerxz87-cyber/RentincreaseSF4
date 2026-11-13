@@ -74,3 +74,23 @@ After PRs #15, #16, #17, #20, #21, and #22 merged onto `main` (`8d51455`), this 
 | `scripts/site_flags.py` — `F45` | On `S02` (`https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit`), the hyperlink labeled `575 Cap. Imp. Labor Rates` points to `574_Cap._Imp._Imputed_Interest_26-27_7.26.pdf` (Form 574 Imputed Interest instead of Form 575). | Direct `fetch_page` of `S02` on 2026-11-08 (`T44-V02` in `research/t44_audit/README.md`). | Added Flag `F45` to `scripts/site_flags.py`, `FLAGGED_FOR_REVIEW.md`, `EXECUTIVE_SUMMARY.md`, `research/flags.md`, and `pages/flagged.html`. |
 | `research/flags.md` | The `T09 additions` table from `arena-abb34cd1` listed pre-reconciliation local flag IDs `F31`–`F38`. | Compared `research/flags.md` against `scripts/site_flags.py`. | Kept `arena-abb34cd1`'s table intact and appended a canonical `F19`/`F20`/`F31`–`F45` reconciliation table. |
 
+
+## Re-review 2026-11-13 (session `arena-23a50992`, S23)
+
+Base: `main` at `f810ee5` (PR #50). Scope: line-by-line review of the current tree, git history, open PRs and the published site build. Official-source checks are in `research/s23_2026-11-13/README.md`.
+
+| Line / file | Observed content | Verification | Flag |
+| --- | --- | --- | --- |
+| `.git` (history) | The local clone was shallow (one commit). `git fetch --unshallow` restored 170 commits across all refs. | `git rev-parse --is-shallow-repository`; `git rev-list --all \| wc -l` | None (environment note only). |
+| Git history | Raw identifier tokens appear in 12 distinct commits dated 2026-11-06 to 2026-11-11. The current tree has none. | `git log --all -G` per token, counts only | F44, F51, F56 (open; owner decision). |
+| Current tree (`data/`, `pages/`, `index.html`, `*.md`) | No raw identifier token and no SHA-256 digest of an identifier. Placeholders Tenant A–F are used throughout. | Scan of tracked files with an allowlist; `validate_site.py` privacy checks pass. | None new. |
+| `.gitignore` | `internal/` is ignored. This session stored the raw intake in `internal/intake_private.md` only. | `git check-ignore -v internal/intake_private.md` | None. |
+| Open pull requests | #18, #19, #25, #47 and #48 are open and marked stale, conflicting generator states from earlier sessions. | `gh pr list --state open` | F58 (owner decision; not merged or closed here). |
+| `COORDINATION.md` | About 147 KB. Task IDs T49 and T51 were each reused by more than one session; several `in progress` rows are older than 60 minutes. | `wc -c`; `grep` of task IDs | F57. |
+| `research/` | 16 folders, several with their own validators. | `ls research` | F58. |
+| `scripts/site_sources.py` `DATE` | Set to `2026-11-13` for this build. `validate_site.py` date check now accepts `2026-11-13` (the earlier check hard-coded the prior dates). | Build and validation | None. |
+| `SOURCES.md` | Added row S92 (Ordinance 265-20, Legistar copy). S88–S91 were assigned by `main` (PR #51) and kept. Count is computed at build time. | `validate_site.py` source-ledger check | F54. |
+| sf.gov Housing Inventory page (S07) | Links to an Assessor URL that redirects to the Planning Property Information Map. | Direct `fetch_page` 2026-11-13 | F55. |
+| Legistar Ordinance 265-20 copy (S92) | Marked-up master report (strike-throughs and redlines), not clean codified text. | Direct `fetch_page` 2026-11-13 | F54. |
+| Premise in the owner request | The license requirement is described as a "2023 law". Ordinance 265-20 is effective January 18, 2021; March 1, 2023 is the reporting start for buildings under 10 units. | SF.gov news (S90) | F53 (published on `main`). |
+| `research/c72_2026-11-11_audit/validate_c72.py` | The page-count assertion was hard-coded to 21 HTML pages; the new Suggestions & Decisions page makes 22. Updated the expected count only (no check removed). | `python3 research/c72_2026-11-11_audit/validate_c72.py` → 19/0 | None (maintenance). |

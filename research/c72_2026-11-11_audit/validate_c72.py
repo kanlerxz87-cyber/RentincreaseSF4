@@ -296,11 +296,8 @@ def main() -> int:
             elif frag and target in id_cache and frag not in id_cache[target]:
                 broken_anchors.append(f"{hf.name}->{href}")
 
-    # 2026-11-13 (session arena-6f65a2f5): the page count was hard-coded at 21, which
-    # failed the moment the dedicated Site Suggestions page was added. The check's meaning
-    # is "every internal href on the published site resolves"; the count is now a floor plus
-    # the actual number in the detail line, so a legitimate new page cannot break the gate and
-    # a page going missing still can.
+    # Page count grows as new category pages are added (T54/T55/T56 added two on
+    # 2026-11-13), so assert a floor rather than a fixed count.
     check(
         len(html_files) >= 21 and not broken_links,
         "published site internal href targets resolve cleanly",
