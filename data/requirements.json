@@ -322,6 +322,50 @@
           "source_note": ""
         },
         {
+          "id": "REQ-26",
+          "label": "State-vs-local classification of the \"inform the Rent Board\" duty, with ordinance provenance and the source of the 2023 date",
+          "value": "Answered - LOCAL San Francisco ordinance (Administrative Code Sec. 37.15, Ord. 265-20 effective January 18, 2021); 2023 is the local operative date for 1-9 unit buildings (March 1, 2023); SB 567 (2023) is the state law, operative April 1, 2024, with no rent-board reporting duty",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S73",
+            "S90",
+            "S88"
+          ],
+          "notes": "Published on the Executive Summary (SL-01 to SL-05) and Local Law (LAW-01 to LAW-08); flagged F53.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-27",
+          "label": "A dedicated Suggestions section so a reviewer can choose the best path before anything is implemented",
+          "value": "Published - 24 reviewable proposals in three groups, each with effort and review status, plus a 5-step review process",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S35"
+          ],
+          "notes": "pages/suggestions.html, first-class item in the navigation and dashboard.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "REQ-28",
+          "label": "A clear list of questions, information and answers that must be settled before a reasonable decision, with suggestions for discovering missing information",
+          "value": "Published - 5 ordered gates, 20 open questions, and 4 decision paths; every unverified cell stays blank and names its discovery route",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S32",
+            "S55"
+          ],
+          "notes": "pages/decision.html; gaps reuse the existing CASE-V and T03-F flags.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
           "id": "REQ-25",
           "label": "Re-check the committee status of File 261020 before serving any banked or capital improvement notice",
           "value": "Checked 2026-11-10 - 'Pending Committee Action' in the Land Use and Transportation Committee; not law, no enactment",
