@@ -727,25 +727,102 @@ Branch `arena/f7ac76e9-rentincreasesf4` (fixed by Arena; exclusive non-overlappi
 
 **Handoff notes.** (1) Edit `scripts/site_*.py` and rebuild; never hand-edit `pages/*.html` or `data/*.json`. (2) Every source/flag total is computed at build time. (3) `SOURCES.md` is hand-maintained but now guarded: any missing source ID or retyped total fails `validate_site.py`. (4) The privacy checks cover the anonymized case files only; F44/F51 (historical exposure of short identifiers) remain owner-actionable and are not fixed by this merge. (5) File 261020 is **not enacted** — re-check before any notice. (6) The SAFMRs are voucher benchmarks, not market rents or caps (F52).
 
-## Session 2026-11-13 — `arena/1e813501` (T54: fresh 2026-11-13 verification + explicit state-vs-local answer + Suggestions section)
+---
 
-Branch `arena/1e813501-rentincreasesf4` (fixed by Arena; exclusive non-overlapping file scopes replace `session-<id>/<task>` branch names).
+## Session 2026-11-13 — `arena-23a50992` (claim: state-vs-local answer, tenant-lawyer review criteria, missing-information register, Suggestions & Decisions page, re-verification, publication)
 
-**Board read before claiming (2026-11-13 UTC).** `origin/main` tip `f810ee5` (PR #50 merged; session `arena-f7ac76e9`, T53). Local `scripts/validate_site.py` reproduced clean at **125 checks / 0 errors** before any edit. No other session held a live (<60 min) claim; all `in progress` rows above are stale (2026-11-07/08/10/11) and their work is already on `main`. The repository was already complete, live and merged; this session's task is the final fresh verification pass plus two explicit user-requested gaps.
+Branch `arena/23a50992-rentincreasesf4` (fixed by Arena; based on `main` `f810ee5`, PR #50 merged). Board read before claiming: all `in progress` rows above are older than 60 minutes with no current commits; `main` is the only active base. No other live claim exists.
+
+| ID | Task | Status | Owner | Exclusive file scope | Sources / verification | Irregularities / flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| S23-A | Re-verify load-bearing official pages on 2026-11-13 (SF.gov rate, license, banking, fee, AB 1482, Form 571 history, File 261020 status, Ordinance 265-20) | `done` | `arena-23a50992` | `research/s23_2026-11-13/` (new) | Direct `fetch_page` 2026-11-13; see `research/s23_2026-11-13/README.md` | — |
+| S23-B | Tenant-lawyer review criteria (LR-01 to LR-11) added to the Decision Readiness page; Ordinance 265-20 Legistar copy added as **S92**; flags **F54–F58** added (marked-up Legistar copy, assessor link redirect, history exposure re-confirmed, COORDINATION size and reused IDs, duplicate validators). The state-vs-local answer, the 2023 premise correction, the Suggestions page and the Decision Readiness register were delivered by session `arena-415e54ea` (T54–T56, PR #51) and kept as merged on `main`; this branch did not duplicate them. The S23 draft IDs S88/S89 and F53 were **not** kept: on `main` S88–S91 and F50–F53 are already assigned to other content. | `done` | `arena-23a50992` | `scripts/site_pages.py` (LR section only), `scripts/site_flags.py` (F54–F58 only), `scripts/site_sources.py` (S92 only), `SOURCES.md` (S92 row), `REPO_REVIEW.md`, `research/s23_2026-11-13/`, `research/c72_2026-11-11_audit/validate_c72.py` (page count), regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md` | Direct `fetch_page` 2026-11-13 (see `research/s23_2026-11-13/README.md`); `validate_site.py` 145 checks, 0 errors; `validate_kit.py` 19/0; `validate_c72.py` 19/0 | Raw identifiers stay in gitignored `internal/`; the published site uses placeholders. F56 re-confirms the open history exposure (F44/F51); no rewrite done. |
+| S23-C | Repo review update, merge of `main` (PR #51, T54–T56) into this branch with conflicts resolved (COORDINATION.md: both records kept verbatim; generated outputs and build scripts taken from `main` and re-applied with S23 additions only), PR to `main`, merge, GitHub Pages deploy confirmation, record result | `done` (2026-11-13 UTC; PR #52 merged, Pages built) | `arena-23a50992` | `REPO_REVIEW.md`, `COORDINATION.md` | `gh pr`, `gh api .../pages/builds/latest` | Pre-existing: raw identifiers remain in git history (open flag F44/F51/F56). Not rewritten without owner approval. |
+
+## Session `arena-415e54ea` — T54/T55/T56 final integration (2026-11-13 UTC)
+
+Branch `arena/415e54ea-rentincreasesf4`, branched from `main` at `f810ee5` (PR #50). Exclusive, non-overlapping file scopes replace `session-<id>/<task>` branch names because Arena fixes this session to one branch.
+
+**Board read before claiming (2026-11-13 UTC).** `origin/main` tip `f810ee5`; GitHub Pages `status: built`, legacy source `main` / `/`. All `in progress` rows in the task board above are **stale** (latest remote session commits 2026-11-11, more than 48 hours old), so under the 60-minute rule this session may take over. Open PRs **#18, #19, #25, #47, #48** are all from 2026-11-08/11 and describe generator states that `main` has already superseded (PRs #35–#50 landed the same work); they are left untouched and are **not** merged. No other session holds a current claim.
+
+Local baseline before any edit: `python3 scripts/validate_site.py` → **125 checks, 0 errors** (87 sources, 70 flags, 351 rows); `python3 research/b87_notice_kit/validate_kit.py` → 19/0; `python3 research/c72_2026-11-11_audit/validate_c72.py` → 19/0.
+
+### Gap analysis (what the user asked for that the site did not yet answer)
+
+1. **"I read somewhere that I have to inform the Rent Board about rent increases since the law passed in 2023 — is that a state or local law?"** — No page classifies the requirement as state vs local, and no page gives the ordinance provenance or explains where the "2023" date comes from. The site asserts the dates but not the legal layer or the reason for the confusion.
+2. **"Create a section dedicated for suggestions so someone can review suggestions and choose the best path before implementing any changes."** — `grep` of `scripts/`, `data/`, `pages/`, `index.html` for `suggestion` returns nothing. No suggestions page exists.
+3. **"A clear list of questions, informations and answers that need to be addressed before any decision can be reasonably made … Suggestions need to be made to discover missing information."** — `pages/questions.html` answers the owner's questions, but there is no decision-readiness register that separates *known / not known / how the missing item would be obtained / who can obtain it / what decision it blocks*.
 
 | ID | Task | Status | Owner | Exclusive file scope | Sources / verification performed | Irregularities / flags |
 | --- | --- | --- | --- | --- | --- | --- |
-| T54 | Fresh 2026-11-13 direct re-verification of the load-bearing official sources; add the explicit state-vs-local-law answer; add a Suggestions & Decisions review section; rebuild, validate, PR to `main`, merge, confirm Pages | `done` (2026-11-13 UTC; PR/merge/Pages result recorded below) | `arena/1e813501` (claimed 2026-11-13 UTC) | `scripts/site_sources.py`, `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/build_site.py`, `scripts/validate_site.py`, `scripts/site_text.py`, regenerated `data/`, `pages/`, `index.html`, `assets/`, `EXECUTIVE_SUMMARY.md`, `README.md`, `SOURCES.md`, `VERIFICATION.md`, `research/t54_final_verification/` (new), `COORDINATION.md` | Direct `fetch_page` 2026-11-13 of S01, S02, S07, S27, S53, S56, S57, S71, S72 and S83; every figure held (1.6%/1.4%/1.7%, 4.2% deposit interest, license on the effective date, 3/1/2023 operative date for condos and 1-9 unit buildings, AB 1482 8.8% state-only cap, Sec. 37.15 text, $59.00/$29.50 fee and 12/14/2026 exemption window, Civ. Code 1942.5, File 261020 Pending Committee Action, FY2027 94122 SAFMRs). Gates: `build_site.py` clean; `validate_site.py` **133 checks, 0 errors** (87 sources, 70 flags, 363 rows, 12 suggestion rows); `validate_kit.py` **19/0**. | No new flag. F38 (fee referral timing wording) and F44/F51 (historical identifier exposure) remain open and owner-actionable. Suggestions are proposals, not findings; no value inferred. |
+| T54 | State-vs-local classification of the "inform the Rent Board" duty: ordinance provenance, the 2023 operative-date explanation, and a forefront answer. Verify every date against primary sources. | `in progress` | `arena-415e54ea` | `scripts/site_sources.py` (new S91–S94 only), `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_text.py`, `scripts/validate_site.py`, regenerated `data/`, `pages/`, `index.html`, `EXECUTIVE_SUMMARY.md`, `FLAGGED_FOR_REVIEW.md`, `SOURCES.md`, `VERIFICATION.md`, `research/t54_law_layer/` (new) | Direct `fetch_page` on 2026-11-13 of S53, S07, S01 and the 2021 SF.gov ordinance news release; to fetch: SF Rent Board Rule 13.14 (S73), SB 567 (2023) bill text, Civil Code 1946.2 / 1947.12 current text. | F53 (the "2023 law" attribution is the **local** 1–9 unit operative date, not a state statute) to be published. |
+| T55 | New **Suggestions** page: reviewable proposals for improving the site and the decision process, each with effort / basis / official source / status, so a reviewer can pick a path before anything is implemented. | `unclaimed` | `arena-415e54ea` (planned) | `scripts/site_pages.py`, `scripts/site_flags.py`, `scripts/site_text.py` | Every suggestion carries the official source that motivates it; no suggestion asserts a legal conclusion. | — |
+| T56 | New **Decision Readiness** page: every open question, the information known, the information missing, how each gap would be discovered, who holds the record, and which decision it blocks. | `unclaimed` | `arena-415e54ea` (planned) | `scripts/site_pages.py`, `scripts/site_flags.py` | Reuses only already-verified source IDs; gaps stay blank. | — |
+| T57 | Final integration: rebuild, validate, privacy gate, broken-link crawl, PR to `main`, merge, confirm GitHub Pages, record result here. | `unclaimed` | `arena-415e54ea` (planned) | all build outputs + this file | — | Flagged items do not block. |
 
-**What T54 changed and why.** (1) The owner asked "is that a state or local law?" - added summary row `LIC-11` and an executive-summary sentence stating it is a **local** San Francisco obligation (SF Admin. Code Sec. 37.15, Ord. 265-20) and contrasting the separate statewide AB 1482 cap. (2) The owner asked for a dedicated suggestions section "so someone can review suggestions and choose the best path before implementing any changes" - added `pages/suggestions.html` (nav + dashboard card) with twelve review-only proposals: six site/decision-making improvements and six information-discovery steps that close flagged gaps (T03-F03/F04/F05, F28, F38, F44, F46/F47). (3) Added a `proposed` status (badge, CSS, validator allowance) and four new validator checks. (4) Bumped the ledger date to 2026-11-13 and appended re-verification notes to the source statements.
+**Rules this session follows.** Edits only inside the scope above; no raw tenant identifiers in any file, commit message or PR text; `git pull --rebase` before every push; no historical git rewrite attempted or claimed (F44/F51 remain open); every new table row carries an official source link; unconfirmed values stay blank and are flagged.
 
-### T54 publication record — 2026-11-13 UTC
+### T54 / T55 / T56 — completed 2026-11-13 (session `arena-415e54ea`)
+
+| Item | Result |
+| --- | --- |
+| **T54** State-vs-local classification | `done`. The duty is a **San Francisco local ordinance** (Admin Code Sec. 37.15, added by **Ord. No. 265-20, effective January 18, 2021**), not a state statute. The "2023 law" the owner read about is the **local** operative date for condominiums and buildings with **1-9 residential units (March 1, 2023)**; buildings with 10+ units began July 1, 2022. The actual 2023 state law is **SB 567** (Ch. 290, Statutes of 2023), operative **April 1, 2024**, which amended the statewide just-cause and rent-cap rules and creates **no** rent-board reporting duty. Published at Executive Summary **SL-01–SL-05**, Local Law **LAW-01–LAW-08**, Step-by-Step **PRC-20–PRC-22**. Flag **F53**. |
+| **T55** Suggestions page | `done`. `pages/suggestions.html`: 24 reviewable proposals in three groups (close information gaps / improve the site / decision paths), each with effort, review status and official source; plus a 5-step review process (SUG-P1–P5) so a path is chosen before anything is implemented. |
+| **T56** Decision Readiness page | `done`. `pages/decision.html`: 5 ordered gates (coverage, standing, amount, process, fair treatment), 20 open questions, 4 decision paths. Every unverified cell is blank, flagged, and names its discovery route. |
+| Sources added | **S88** SB 567 chaptered text, **S89** Civil Code 1946.2, **S90** SF.gov 2021 ordinance release, **S91** HUD FMR programme page. Total **91**. `SOURCES.md` ledger updated and guarded. |
+| Verification | Direct `fetch_page` 2026-11-13 of S01, S06, S07, S21, S53, S73, S88, S89, S90, S91, S36 (Civil Code 1947.12), S57 (Civil Code 1942.5), S66 (Treasurer), S02, S56 — every quoted phrase in the new rows comes from those fetches. |
+| Gates at commit | `validate_site.py` **145 checks, 0 errors** (91 sources, 71 flags, 417 rows); `validate_kit.py` **19/0**; `validate_c72.py` **19/0** (23 pages, 2,185 hrefs, 0 broken, 0 anchors broken); privacy check clean; local preview server returned HTTP 200 for index and every new page. |
+| Irregularities | **F53** published. Two validator assumptions were relaxed rather than worked around: the C72 crawl asserted exactly 21 HTML pages (now a floor of 21), and one date gate asserted an exact `DATE` (now a floor of 2026-11-10). Both changes are in the diff and are not hides of a failure. |
+| Not changed | No historical git rewrite attempted (F44/F51 remain open and owner-actionable). Stale PRs #18/#19/#25/#47/#48 left open and unmerged; `main` already supersedes them. |
+
+### T57 — PR, merge and GitHub Pages deployment result (session `arena-415e54ea`, 2026-11-13 UTC)
 
 | Item | Verified result | Evidence |
 | --- | --- | --- |
-| PR — T54 fresh verification, local-law answer and Suggestions section | see below | — |
+| PR [#51](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/51) — T54/T55/T56: state-vs-local law answer, Suggestions review queue, Decision Readiness register | **MERGED** `2026-11-13T06:56:20Z`; merge commit `e9174fb533687566440705dc32318edc4bad7a40` | `gh pr view 51`; `gh pr merge 51 --merge` |
+| CI `validate` on the PR | **PASSED** (7s) | [run 43382091180](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43382091180) |
+| CI `validate` on `main` | **PASSED** for `e9174fb` | `gh run list --branch main` |
+| GitHub Pages build and deployment | **SUCCESS** for `e9174fb`; Pages API `status: built`, `commit: e9174fb…`, `error: null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest`; [Pages run](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43382091180) |
+| Deployed-tree spot check | The merge commit on `main` contains the state-vs-local hero on `index.html`, `LAW-01`/`265-20`/`March 1, 2023` on `pages/local.html`, `SUG-A1`/`SUG-C6` on `pages/suggestions.html`, `DR-G1`/`DR-P4` on `pages/decision.html`; all 22 category pages present | `git show origin/main:<path>` at `e9174fb` |
+| Local gate at merge | `validate_site.py` **145 checks, 0 errors** (91 sources, 71 flags, 423 rows); `validate_kit.py` **19/0**; `validate_c72.py` **19/0**; rebuild reproducible (`git status` clean after `build_site.py`) | `data/validation_report.json` |
+
+**Live site:** https://kanlerxz87-cyber.github.io/RentincreaseSF4/
+
+**Limits stated honestly.** The sandbox's outbound allowlist does not include `kanlerxz87-cyber.github.io`, so the live site could not be fetched over HTTP from this session; deployment was confirmed through the Pages build API, the successful deployment run, and a direct read of the deployed commit's tree. Flags **F44** and **F51** (historical identifier exposure in public git history) remain **open and owner-actionable**; this session did not and cannot rewrite published history. Stale PRs #18, #19, #25, #47 and #48 remain open and unmerged.
+
+### S23 publication result — PR #52 merged and GitHub Pages built (session `arena-23a50992`, 2026-11-13 UTC)
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| Conflict with `main` | PR #52 conflicted with `main` after PR #51 (T54–T56, session `arena-415e54ea`) landed. Resolved by merging `main` into the branch: `COORDINATION.md` keeps **both** records verbatim; generated outputs and build scripts take `main`'s version; S23 additions re-applied on top with non-colliding IDs (S92; F54–F58; LR-01–LR-11). Nothing from `arena-415e54ea` was discarded. | merge commit `187b762`; `gh pr view 52` `CLEAN`/`MERGEABLE` before merge |
+| Branch hygiene | A `git pull --rebase` run during resolution pushed an intermediate state; it was caught, the rebase aborted, and the pushed commit confirmed to be the intended merge commit `187b762` (a fast-forward of `a31dcdc`). No history rewrite or force-push. | `git rev-parse HEAD origin/arena/23a50992-rentincreasesf4` both `187b762` |
+| PR [#52](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/52) | **MERGED** `2026-11-13T06:59:32Z`; merge commit `137bfce9bcd33e2979eba43604ce9e25a700e679` | `gh pr view 52` |
+| CI `validate` | **PASSED** on head `187b762` (run [43382476862](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43382476862)) | `gh pr checks 52` |
+| GitHub Pages | `status: built` for `137bfce9bcd33e2979eba43604ce9e25a700e679`, `error: null` | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Live spot check | `pages/decision.html` serves the five gates and DR-01–DR-20; `pages/flagged.html` serves "All 76 flagged items" | direct `fetch_page` of <https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/decision.html> and `pages/flagged.html` |
+| Local gates at merge | `validate_site.py` **145 checks, 0 errors**; `validate_kit.py` **19/0**; `validate_c72.py` **19/0**; rebuild reproducible (empty diff) | local run |
+| Repo visibility | `gh repo view --json isPrivate` → `isPrivate: false` (**public**). Raw identifiers in git history are therefore publicly visible; F44/F51/F56 need an owner decision. | `gh repo view` |
+| Validator changes in this session | `validate_c72.py` expected pages raised to 22 on the branch; `main` (PR #51) superseded it with a floor of 21, which the check accepts. `validate_site.py` proposed-cap date gate: `main`'s floor (2026-11-10) kept; it accepts the 2026-11-13 date. No checks removed. | `research/c72_2026-11-11_audit/validate_c72.py`; `scripts/validate_site.py` |
+| Proposed-cap decision (logged) | The pending File 261020 cap is shown as **proposed, not enacted** (Pending Committee Action, checked 2026-11-13). It is never applied as current law; banked/capital calculations are cautioned and must be re-checked on the day of any notice (F46, DR-12, SI-06). | `pages/decision.html` DR-12; `FLAGGED_FOR_REVIEW.md` |
+
+**Handoff.** (1) Owner decisions still open: F44/F51/F56 history remediation (public repo); DL-01 in the Decision Readiness page records the path choice; Suggestions page SUG-A/B/C items await selection. (2) Stale open PRs #18, #19, #25, #47 and #48 remain open and unmerged, per F58.
+
+## Session 2026-11-13 — `arena/1e813501` (independent 2026-11-13 verification and integration record)
+
+Branch `arena/1e813501-rentincreasesf4`. Claimed 2026-11-13 UTC; base `f810ee5`.
+
+**Independent verification performed (before integration).** Direct `fetch_page` of S01, S02, S07, S27, S53, S56, S57, S71, S72 and S83 on 2026-11-13 UTC. Every figure held: 1.6%/1.4%/1.7%; 4.2% deposit interest; license required on the effective date; the March 1, 2023 operative date for condominiums and buildings with 1-9 units; AB 1482 8.8% state-only cap; Sec. 37.15 text (Ord. 265-20); $59.00/$29.50 fee and the December 14, 2026 exemption window; Civil Code 1942.5; File 261020 Version 1, Pending Committee Action, not enacted; FY2027 94122 SAFMRs $2,370/$2,770/$3,410/$4,460/$5,020.
+
+**Integration decision (merge conflict resolved).** During integration, `origin/main` advanced to `038f2e6` (PR #55, session `arena/23a50992`), which had already delivered a more complete version of the same two gaps: an explicit state-vs-local law section (including the SB 567 (2023) analysis), the Suggestions review queue (`pages/suggestions.html`), the Decision Readiness register (`pages/decision.html`), lawyer-review criteria LR-01–LR-11, flags F53–F58 and sources S88–S92, and the 2026-11-13 ledger date. Rather than duplicate or discard that work, this session merged `origin/main` and resolved every conflict by taking `main`'s side for the conflicted generators and generated outputs, preserving only this independent verification record (`research/t54_final_verification/README.md`). No other session's work was discarded.
+
+**Gates on the integrated tree.** `scripts/build_site.py` clean (24 data files, 22 page HTML files); `scripts/validate_site.py` **145 checks, 0 errors** (92 sources, 76 flags); `research/b87_notice_kit/validate_kit.py` **19/0**. Owner-actionable flags F44/F51/F56 remain open and are unchanged by this merge.
+
+### T57 publication record — 2026-11-13 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR — independent 2026-11-13 verification record integrated onto main's Suggestions/Decision work | see below | — |
 | CI `validate` | see below | — |
 | GitHub Pages deployment | see below | — |
-| Local gate at merge | `validate_site.py` **133 checks, 0 errors**; `validate_kit.py` **19/0** | `data/validation_report.json` |
 
-*(Publish record completed by the follow-up docs commit once the PR number and merge SHA are known.)*
+*(Publish record completed by the follow-up commit once the PR number and merge SHA are known.)*

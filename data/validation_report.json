@@ -5,12 +5,12 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "87 official sources"
+      "detail": "92 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "70 flagged items"
+      "detail": "76 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -30,7 +30,7 @@
     {
       "name": "SOURCES.md has no stale hand-typed source total",
       "ok": true,
-      "detail": "87 sources"
+      "detail": "92 sources"
     },
     {
       "name": "94122 SAFMR rows publish the official HUD values with official sources",
@@ -70,17 +70,17 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "364 rows checked; "
+      "detail": "435 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "472 rows checked; "
+      "detail": "549 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "66 needs-review rows"
+      "detail": "77 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -293,6 +293,16 @@
       "detail": ""
     },
     {
+      "name": "data/decision.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/decision.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "pages/summary.html in navigation exists",
       "ok": true,
       "detail": ""
@@ -378,7 +388,7 @@
       "detail": ""
     },
     {
-      "name": "pages/suggestions.html in navigation exists",
+      "name": "pages/decision.html in navigation exists",
       "ok": true,
       "detail": ""
     },
@@ -389,6 +399,11 @@
     },
     {
       "name": "pages/sources.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/suggestions.html in navigation exists",
       "ok": true,
       "detail": ""
     },
@@ -421,11 +436,6 @@
       "name": "executive summary forefront covers Rent Board license for individual owners",
       "ok": true,
       "detail": ""
-    },
-    {
-      "name": "executive summary states the license rule is a local law, not a state law",
-      "ok": true,
-      "detail": "summary page carries the explicit local-law row and the AB 1482 contrast"
     },
     {
       "name": "private intake file is excluded from git",
@@ -503,11 +513,6 @@
       "detail": ""
     },
     {
-      "name": "executive summary answers state-vs-local and links the ordinance and AB 1482",
-      "ok": true,
-      "detail": "direct local-law answer with official links"
-    },
-    {
       "name": "no broken internal links",
       "ok": true,
       "detail": ""
@@ -520,7 +525,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "52 numeric flags"
+      "detail": "58 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -550,7 +555,7 @@
     {
       "name": "executive summary page renders the narrative, not just tables",
       "ok": true,
-      "detail": "13 headings"
+      "detail": "15 headings"
     },
     {
       "name": "2026-11-10 proposed-cap inconsistencies and next-year rate are published",
@@ -653,30 +658,85 @@
       "detail": ""
     },
     {
-      "name": "Suggestions & Decisions page is published and in the navigation",
+      "name": "local law page carries the state-vs-local layer table",
+      "ok": true,
+      "detail": "8 law-layer rows"
+    },
+    {
+      "name": "the layer answer is stated as LOCAL with the ordinance citation",
+      "ok": true,
+      "detail": "LAW-01"
+    },
+    {
+      "name": "the 2023 attribution is explained as the local small-building operative date",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "every Suggestions row is a proposed, source-linked review decision",
+      "name": "state-cap exclusion and SB 567 are backed by official sources",
       "ok": true,
-      "detail": "12 suggestion rows; "
+      "detail": ""
     },
     {
-      "name": "Suggestions page is clearly a review-only section",
+      "name": "F53 is published and cites the ordinance and SB 567 sources",
+      "ok": true,
+      "detail": "F53"
+    },
+    {
+      "name": "Suggestions page is published and in the navigation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Suggestions page has a reviewable queue with effort and status on every item",
+      "ok": true,
+      "detail": "19 suggestions"
+    },
+    {
+      "name": "Suggestions page explains the review process before implementation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Decision Readiness page is published and in the navigation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Decision Readiness page has five gates, open questions and decision paths",
+      "ok": true,
+      "detail": "5 gates, 20 questions"
+    },
+    {
+      "name": "every blank Decision Readiness gap names how the information would be discovered",
+      "ok": true,
+      "detail": "8 blank gaps checked; missing: none"
+    },
+    {
+      "name": "decision register keeps unverified facts blank",
+      "ok": true,
+      "detail": "8 needs-review cells blank"
+    },
+    {
+      "name": "landing page and executive summary lead with the local-law answer",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SB 567 and Civil Code 1947.12 are catalogued as official sources",
       "ok": true,
       "detail": ""
     }
   ],
   "errors": [],
   "summary": {
-    "sources": 87,
-    "pages": 21,
-    "data_files": 23,
-    "rows_verified": 364,
-    "needs_review_rows": 66,
-    "flags": 70,
-    "checks": 133,
+    "sources": 92,
+    "pages": 22,
+    "data_files": 24,
+    "rows_verified": 435,
+    "needs_review_rows": 77,
+    "flags": 76,
+    "checks": 145,
     "errors": 0
   }
 }

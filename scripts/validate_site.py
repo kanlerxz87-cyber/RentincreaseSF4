@@ -161,7 +161,7 @@ def main():
                         row_errors.append("{} references unknown source {}".format(rid, sid))
                     elif not official_domain(source_map[sid]["url"]):
                         row_errors.append("{} references nonofficial URL for {}".format(rid, sid))
-                if r.get("status") not in ("verified", "needs review", "analysis", "proposed"):
+                if r.get("status") not in ("verified", "needs review", "analysis"):
                     row_errors.append("{} has invalid status".format(rid))
                 if r.get("status") == "needs review":
                     needs_review_count += 1
@@ -233,9 +233,6 @@ def main():
     summary_html = (PAGES / "summary.html").read_text(encoding="utf-8")
     check("executive summary forefront covers Rent Board license for individual owners",
           "FOREFRONT" in summary_html and "individual" in summary_html.lower() and "Rent Increase License" in summary_html)
-    check("executive summary states the license rule is a local law, not a state law",
-          "state or a local law" in summary_html and "Local law" in summary_html and "AB 1482" in summary_html,
-          "summary page carries the explicit local-law row and the AB 1482 contrast")
 
     public_md = sorted(ROOT.glob("*.md")) + sorted((ROOT / "research").rglob("*.md"))
     public_json = sorted(DATA.glob("*.json"))
@@ -297,10 +294,6 @@ def main():
           and "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing" in exec_md)
     check("executive summary states no individual-owner exception",
           "no individual-owner exception is stated" in exec_md.lower())
-    check("executive summary answers state-vs-local and links the ordinance and AB 1482",
-          "state or local law" in exec_md and "it is local" in exec_md.lower()
-          and "37.15" in exec_md and "AB 1482" in exec_md,
-          "direct local-law answer with official links")
 
     broken = []
     for html_file in [ROOT / "index.html"] + sorted(PAGES.glob("*.html")):
@@ -445,27 +438,66 @@ def main():
     check("Notice Worksheet links from the Notice Checklist page",
           "worksheet.html" in (PAGES / "compliance.html").read_text(encoding="utf-8"))
 
-    # --- Checks added 2026-11-13 by session arena/1e813501 (T54: Suggestions section) ---
-    check("Suggestions & Decisions page is published and in the navigation",
+    # --- Checks added 2026-11-13 by session arena-415e54ea (T54/T55/T56) ---
+    law_rows = [r for sec in pages.get("local", {}).get("sections", []) for r in sec["rows"]]
+    law_ids = {r["id"] for r in law_rows}
+    check("local law page carries the state-vs-local layer table",
+          {"LAW-01", "LAW-02", "LAW-03", "LAW-04", "LAW-05", "LAW-06"} <= law_ids,
+          "{} law-layer rows".format(len([i for i in law_ids if i.startswith("LAW-")])))
+    law01 = [r for r in law_rows if r["id"] == "LAW-01"][0]
+    check("the layer answer is stated as LOCAL with the ordinance citation",
+          "LOCAL" in law01["value"] and "265-20" in law01["value"] and "January 18, 2021" in law01["value"],
+          "LAW-01")
+    check("the 2023 attribution is explained as the local small-building operative date",
+          any(r["id"] == "LAW-02" and "March 1, 2023" in r["value"] and "1-9" in r["value"] for r in law_rows)
+          and any(r["id"] == "LAW-03" and "SB 567" in r["value"] and "April 1, 2024" in r["value"] for r in law_rows))
+    check("state-cap exclusion and SB 567 are backed by official sources",
+          any(r["id"] == "LAW-04" and "S36" in r["source_ids"] for r in law_rows)
+          and any(r["id"] == "LAW-03" and "S88" in r["source_ids"] for r in law_rows))
+    check("F53 is published and cites the ordinance and SB 567 sources",
+          any(f["id"] == "F53" for f in flags)
+          and {"S53", "S73", "S88", "S90"} <= set([f for f in flags if f["id"] == "F53"][0]["source_ids"]),
+          "F53")
+    check("Suggestions page is published and in the navigation",
           "suggestions" in pages and (PAGES / "suggestions.html").exists()
           and any(s == "suggestions" for s, _ in D.NAV))
-    suggestions_rows = [r for sec in pages.get("suggestions", {}).get("sections", []) for r in sec["rows"]]
-    suggestions_errors = []
-    for r in suggestions_rows:
-        rid = r.get("id", "?")
-        if r.get("status") != "proposed":
-            suggestions_errors.append("{} is not proposed".format(rid))
-        if not r.get("source_ids") or any(sid not in source_map for sid in r.get("source_ids", [])):
-            suggestions_errors.append("{} lacks official sources".format(rid))
-        if "review decision" not in r.get("notes", "").lower():
-            suggestions_errors.append("{} lacks a proposed review decision".format(rid))
-    check("every Suggestions row is a proposed, source-linked review decision",
-          len(suggestions_rows) >= 10 and not suggestions_errors,
-          "{} suggestion rows; {}".format(len(suggestions_rows), "; ".join(suggestions_errors[:5])))
-    suggestions_html = (PAGES / "suggestions.html").read_text(encoding="utf-8")
-    check("Suggestions page is clearly a review-only section",
-          "reviewer chooses a path before anything is implemented" in suggestions_html
-          and "not a finding" in suggestions_html)
+    sug_rows = [r for sec in pages.get("suggestions", {}).get("sections", []) for r in sec["rows"]]
+    sug_items = [r for r in sug_rows if r["id"].startswith(("SUG-A", "SUG-B", "SUG-C"))]
+    check("Suggestions page has a reviewable queue with effort and status on every item",
+          len(sug_items) >= 15 and all(r.get("effort") and r.get("review_status") for r in sug_items),
+          "{} suggestions".format(len(sug_items)))
+    check("Suggestions page explains the review process before implementation",
+          all(rid in {r["id"] for r in sug_rows} for rid in ("SUG-P1", "SUG-P3", "SUG-P5")))
+    check("Decision Readiness page is published and in the navigation",
+          "decision" in pages and (PAGES / "decision.html").exists()
+          and any(s == "decision" for s, _ in D.NAV))
+    dec_rows = [r for sec in pages.get("decision", {}).get("sections", []) for r in sec["rows"]]
+    gates = [r["id"] for r in dec_rows if r["id"].startswith("DR-G")]
+    opens = [r for r in dec_rows if r["id"].startswith("DR-") and not r["id"].startswith("DR-G") and not r["id"].startswith("DR-P")]
+    check("Decision Readiness page has five gates, open questions and decision paths",
+          len(gates) == 5 and len(opens) >= 15 and any(r["id"] == "DR-P4" for r in dec_rows),
+          "{} gates, {} questions".format(len(gates), len(opens)))
+    blank_gaps = [r for r in opens if r["status"] == "needs review"]
+    check("every blank Decision Readiness gap names how the information would be discovered",
+          len(blank_gaps) >= 5 and all(any(k in r["notes"].lower() for k in
+              ("discover", "route", "not supplied", "owner", "portal", "record", "file", "counsel", "log in"))
+              for r in blank_gaps),
+          "{} blank gaps checked; missing: {}".format(
+              len(blank_gaps),
+              "; ".join(r["id"] for r in blank_gaps if not any(k in r["notes"].lower() for k in
+                  ("discover", "route", "not supplied", "owner", "portal", "record", "file", "counsel", "log in"))) or "none"))
+    check("decision register keeps unverified facts blank",
+          all(r["value"] == "" for r in opens if r["status"] == "needs review"),
+          "{} needs-review cells blank".format(len([r for r in opens if r["status"] == "needs review"])))
+    exec_md_local = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("landing page and executive summary lead with the local-law answer",
+          "Local.</strong>" in (ROOT / "index.html").read_text(encoding="utf-8")
+          and "state or local? \u2014 LOCAL" in exec_md_local
+          and exec_md_local.index("LOCAL") < exec_md_local.index("## FOREFRONT: Rent Board & Rent Increase License"))
+    check("SB 567 and Civil Code 1947.12 are catalogued as official sources",
+          D.SOURCES.get("S88", {}).get("agency") == "California Legislature"
+          and "SB 567" in D.SOURCES["S88"]["title"]
+          and official_domain(D.SOURCES["S89"]["url"]) and "1946.2" in D.SOURCES["S89"]["title"])
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

@@ -1,191 +1,406 @@
 {
-  "title": "Suggestions & Decisions",
-  "description": "Proposals for improving decision-making and for discovering missing information. Each row is a proposal, not a finding or a legal conclusion: a reviewer chooses a path before anything is implemented.",
+  "title": "Suggestions - review before implementing",
+  "description": "A dedicated review queue of proposed improvements to this site and to the rent-increase decision process. Each suggestion states what it changes, why it helps, the official basis, the effort, and its review status so a reviewer can choose the best path before anything is implemented.",
   "sections": [
     {
-      "title": "Site and decision-making improvements",
+      "title": "How to use this page (the review process)",
       "columns": [
-        "Suggestion",
-        "What it proposes",
-        "Status",
-        "Official source(s)",
-        "Review decision / notes"
+        "Step",
+        "What happens",
+        "Owner of the decision",
+        "Record kept"
       ],
       "rows": [
         {
-          "id": "SGN-01",
-          "label": "Adopt one written, neutral annual-increase policy for each eligible unit",
-          "value": "Use an identical written standard (eligibility, anniversary date, rate, calculation) applied to each eligible unit rather than ad hoc decisions.",
-          "status": "proposed",
+          "id": "SUG-P1",
+          "label": "1. Read the proposal",
+          "value": "Each suggestion below states the exact change, the decision it improves, and the official source that motivates it. Nothing is implemented by being listed here.",
+          "status": "analysis",
+          "source_ids": [
+            "S01"
+          ],
+          "notes": "Honest label: this is a proposal queue, not a change log.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUG-P2",
+          "label": "2. Check the evidence",
+          "value": "Open the linked official page and confirm the quoted rule, dollar figure or date still says what the row says. If it does not, the suggestion is stale - say so before accepting it.",
+          "status": "analysis",
           "source_ids": [
             "S01",
-            "S42",
-            "S38"
+            "S07"
           ],
-          "notes": "No official source requires raising both units, but identical neutral criteria reduce disparate-treatment risk. Proposed review decision: approve a single neutral policy, or document why one unit differs, before serving any notice.",
+          "notes": "Every row on this site is linked for exactly this reason.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUG-P3",
+          "label": "3. Choose a path",
+          "value": "Accept, defer or decline. Accepting a suggestion is a decision by the owner (or by the next build session for site-only changes). No suggestion here changes a legal obligation on its own.",
+          "status": "analysis",
+          "source_ids": [
+            "S53"
+          ],
+          "notes": "Nothing auto-applies.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUG-P4",
+          "label": "4. Record the outcome",
+          "value": "Write the decision, the date and the reviewer in the review-status column (or in COORDINATION.md), so the next session does not re-litigate a closed item.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "COORDINATION.md is the shared task board for this repository.",
+          "flag_id": ""
+        },
+        {
+          "id": "SUG-P5",
+          "label": "5. Only then implement",
+          "value": "Implementation means editing scripts/site_*.py and rebuilding, not hand-editing pages. The validator re-runs every check after a build.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Generated files are reproducible; CI re-runs the build and fails on drift.",
+          "flag_id": ""
+        }
+      ]
+    },
+    {
+      "title": "A. Suggestions to close information gaps before deciding",
+      "columns": [
+        "ID",
+        "Suggestion",
+        "Why it helps the decision",
+        "Evidence / official source",
+        "Effort",
+        "Review status"
+      ],
+      "rows": [
+        {
+          "id": "SUG-A1",
+          "label": "Pull the Property Information Map record for both units and record the official build year, unit count and any in-law designation",
+          "value": "The owner-stated 1940 year and two-unit count are the entire basis for assuming coverage. If the official record shows a post-1979 certificate of occupancy or a single-family designation, the whole licensing analysis changes. This is the single highest-value open item.",
+          "status": "analysis",
+          "source_ids": [
+            "S32",
+            "S06",
+            "S59"
+          ],
+          "effort": "15 minutes, free, no account",
+          "review_status": "open for review",
+          "notes": "Maps to CASE-V1 / CASE-V2. Owner action; the agent cannot log in.",
           "flag_id": "",
           "source_note": ""
         },
         {
-          "id": "SGN-02",
-          "label": "Make the Notice Worksheet a standing pre-notice gate",
-          "value": "Require every notice to clear the worksheet gates (coverage, license on the effective date, anniversary, rate, banking, petitions, retaliation) and record service.",
-          "status": "proposed",
+          "id": "SUG-A2",
+          "label": "Log in to the Rent Board Portal and screenshot the Housing Inventory status and licence status for each unit",
+          "value": "Licence status is the one unverified fact that can void an entire increase under Rule 13.14. Everything downstream depends on it.",
+          "status": "analysis",
           "source_ids": [
-            "S01",
+            "S55",
             "S07",
-            "S35",
-            "S06"
+            "S73"
           ],
-          "notes": "Each gate is checkable against the linked official page. Proposed review decision: adopt the worksheet as the standard pre-notice checklist for both units.",
+          "effort": "10 minutes, free",
+          "review_status": "open for review",
+          "notes": "Maps to CASE-V3 / T03-F05.",
           "flag_id": "",
           "source_note": ""
         },
         {
-          "id": "SGN-03",
-          "label": "Add an annual rate-in-force check every March 1",
-          "value": "Before serving a notice, confirm the allowable percentage in effect on the increase date and record the rate page date used.",
-          "status": "proposed",
+          "id": "SUG-A3",
+          "label": "Reconstruct the actual rent history for each unit from leases, bank statements and any prior notices",
+          "value": "Banked increases are the only lawful route above 1.6%, and they can only be computed from a real payment history. Without it, every banked figure on this site stays blank - correctly.",
+          "status": "analysis",
           "source_ids": [
+            "S05",
+            "S54",
+            "S01"
+          ],
+          "effort": "1-2 hours, owner records only",
+          "review_status": "open for review",
+          "notes": "Maps to CASE-V4 / CASE-V9, flag F30.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-A4",
+          "label": "Identify, in writing, the legal status of the occupant added to Unit 1 on April 1, 2026 (co-tenant, subtenant or assignee) and whether a written Section 6.14 notice was served",
+          "value": "Co-tenant status means no market reset at all; subtenant/assignee status could allow one only with specific facts and a timely written notice. The difference is large and it is a fact question, not a research question.",
+          "status": "analysis",
+          "source_ids": [
+            "S16",
+            "S37",
+            "S15"
+          ],
+          "effort": "30 minutes + possibly legal advice",
+          "review_status": "open for review",
+          "notes": "Maps to CASE-V5 to CASE-V8, flag F28.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-A5",
+          "label": "Ask the Rent Board directly (311 or 415-252-4600) whether the April 1, 2026 continuation restarted the Annex A / anniversary clock",
+          "value": "The anniversary date determines the earliest lawful effective date. A wrong assumption here makes an otherwise compliant notice premature.",
+          "status": "analysis",
+          "source_ids": [
+            "S24",
             "S01",
-            "S02",
-            "S04"
+            "S73"
           ],
-          "notes": "The notice must use the rate in effect on the increase date, not the notice date, and the schedule changes each March 1. Proposed review decision: calendar a March 1 rate check and file the dated page copy.",
+          "effort": "One phone call",
+          "review_status": "open for review",
+          "notes": "Maps to CASE-V6. Free counselling; not legal advice.",
           "flag_id": "",
           "source_note": ""
         },
         {
-          "id": "SGN-04",
-          "label": "Add a decision log recording the chosen path, sources and dates",
-          "value": "For each decision, record the path chosen, the official sources relied on, the date and the decision-maker.",
-          "status": "proposed",
+          "id": "SUG-A6",
+          "label": "Get one paid hour with a tenant-side or landlord-tenant attorney to review the completed Notice Worksheet",
+          "value": "Every page here says the same thing: this is a compliance checklist capable of review, not an approval. A single review converts an open question into a documented position.",
+          "status": "analysis",
           "source_ids": [
-            "S68"
+            "S23",
+            "S24",
+            "S30"
           ],
-          "notes": "The site already publishes this for flags and the ledger; the two units deserve the same record. Project-record source: it is not a government legal source. Proposed review decision: adopt a one-page decision log for both units.",
+          "effort": "1 hour, paid",
+          "review_status": "open for review",
+          "notes": "Maps to F47 / REQ-21. The site never claims attorney approval.",
           "flag_id": "",
           "source_note": ""
         },
         {
-          "id": "SGN-05",
-          "label": "Keep unimplemented suggestions visually distinct with a proposed badge",
-          "value": "Treat every suggestion row as proposed, not verified, so a reviewer can see what is a decision to make rather than a finding.",
-          "status": "proposed",
-          "source_ids": [
-            "S68"
-          ],
-          "notes": "This page is a review-only section; nothing here is implemented or asserted as law. Proposed review decision: keep the Suggestions page as a review gate, not as findings.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "SGN-06",
-          "label": "Show any fee recovery as a separate fee line, never inside a rent increase",
-          "value": "If recovering the 50% Rent Board Fee ($29.50 per dwelling unit for 2026-2027), bill it as a fee recovery with its own line item and wording.",
-          "status": "proposed",
+          "id": "SUG-A7",
+          "label": "Confirm the Rent Board Fee exemption status and billing record for both units",
+          "value": "The fee is a separate obligation with penalties up to 15%; whether it has been paid or exempted is unverified and is independently enforceable.",
+          "status": "analysis",
           "source_ids": [
             "S56",
-            "S62",
-            "S63"
+            "S63",
+            "S65"
           ],
-          "notes": "The recovery is a fee, not rent, and penalties may not be recovered. Proposed review decision: if recovering, present it separately and keep the deposit-interest or billing method compliant.",
+          "effort": "10 minutes, Portal",
+          "review_status": "open for review",
+          "notes": "Maps to FEE-12 / F43.",
           "flag_id": "",
           "source_note": ""
         }
       ]
     },
     {
-      "title": "Information discovery - close the gaps before deciding",
+      "title": "B. Suggestions to improve this site so it supports a decision",
       "columns": [
+        "ID",
         "Suggestion",
-        "What it proposes",
-        "Status",
-        "Official source(s)",
-        "Review decision / notes"
+        "Why it helps the decision",
+        "Evidence / official source",
+        "Effort",
+        "Review status"
       ],
       "rows": [
         {
-          "id": "SGN-07",
-          "label": "Confirm a current Rent Increase License for both units in the Rent Board Portal",
-          "value": "Log in to the Rent Board Portal, check license status by address or APN, and record the result and date for each unit.",
-          "status": "proposed",
+          "id": "SUG-B1",
+          "label": "Add a printable one-page decision sheet that lists only the eight gate questions and the owner-stated answers",
+          "value": "The full site is comprehensive but too long to use at the moment of deciding. A one-pager is what a reviewer actually holds while checking a draft notice.",
+          "status": "analysis",
           "source_ids": [
-            "S55",
+            "S01",
             "S07",
-            "S08"
+            "S35"
           ],
-          "notes": "Information discovery. Closes the license gap (T03-F05): no increase should be treated as effective until this is confirmed. Proposed review decision: check both units and record the date.",
+          "effort": "Build change, low risk",
+          "review_status": "open for review",
+          "notes": "New file; does not alter any verified value.",
           "flag_id": "",
           "source_note": ""
         },
         {
-          "id": "SGN-08",
-          "label": "Reconstruct the rent-increase and notice history for both units",
-          "value": "Assemble the date and amount of every increase and notice for each unit so banked eligibility can be tested.",
-          "status": "proposed",
+          "id": "SUG-B2",
+          "label": "Add an automated 'stale source' check that re-fetches every official URL on a schedule and flags any page whose quoted figure changed",
+          "value": "The 1.6% rate, the $59.00 fee and File 261020 all move. A dated diff is the cheapest defence against relying on an out-of-date page.",
+          "status": "analysis",
           "source_ids": [
-            "S05",
-            "S54",
+            "S02",
+            "S56",
+            "S71"
+          ],
+          "effort": "Build change, medium",
+          "review_status": "open for review",
+          "notes": "Would require a scheduled workflow; currently sources are re-checked manually per session.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-B3",
+          "label": "Link each flag directly from the table cell that raised it, in both directions",
+          "value": "Reviewers currently read a row, then hunt the flag. Bidirectional links cut review time and reduce the chance a flagged row is acted on as if it were verified.",
+          "status": "analysis",
+          "source_ids": [
             "S01"
           ],
-          "notes": "No banked amount may be inferred without history; banking requires at least 24 full months without any increase. Proposed review decision: gather the history and recompute banked percentages only if the 24-month fact is documented.",
+          "effort": "Build change, low risk",
+          "review_status": "open for review",
+          "notes": "Improves navigation only; no content change.",
           "flag_id": "",
           "source_note": ""
         },
         {
-          "id": "SGN-09",
-          "label": "Confirm whether the April 1, 2026 Unit 1 continuation started a new tenancy and whether a 6.14 notice was served",
-          "value": "Obtain the lease or tenancy facts and any Section 6.14 notice for the occupant added April 1, 2026.",
-          "status": "proposed",
-          "source_ids": [
-            "S15",
-            "S16",
-            "S37",
-            "S28"
-          ],
-          "notes": "Information discovery. Closes the vacancy-decontrol gap (T03-F04, F28); no market-rate reset is recommended until these facts exist. Proposed review decision: obtain the documents before any reset is considered.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "SGN-10",
-          "label": "Ask the Rent Board whether an unlicensed notice can be cured and confirm the fee/licence timing for this property",
-          "value": "If any notice has already been served without a license, ask the Rent Board how it is treated; also confirm the fee referral timing (F38) for this property.",
-          "status": "proposed",
-          "source_ids": [
-            "S56",
-            "S63",
-            "S07",
-            "S24"
-          ],
-          "notes": "Resolves the referral-timing discrepancy inside one SF.gov page and any already-served notice. The Rent Board gives information and referral, not legal advice. Proposed review decision: ask and record the answer.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "SGN-11",
-          "label": "Re-check File 261020 committee status before any banked or capital-improvement increase",
-          "value": "Immediately before relying on any banked or capital-improvement increase, re-check the Legistar status and the Rent Board notice.",
-          "status": "proposed",
-          "source_ids": [
-            "S71",
-            "S87",
-            "S05"
-          ],
-          "notes": "The proposal is not enacted and its wording is internally inconsistent (F46, F47). Proposed review decision: re-check status and record the date before serving any stacked increase.",
-          "flag_id": "",
-          "source_note": ""
-        },
-        {
-          "id": "SGN-12",
-          "label": "Decide how to handle the historical identifier exposure outside git history",
-          "value": "Review F44: raw tenant identifiers remain reachable in this public repository's git history and pull-request diffs; only the owner can remediate it.",
-          "status": "proposed",
+          "id": "SUG-B4",
+          "label": "Publish a diff-style change log of every figure that changed between builds",
+          "value": "Re-verification is only meaningful if a reader can see what moved. A visible changelog makes an auditor's job possible without reading git history.",
+          "status": "analysis",
           "source_ids": [
             "S68"
           ],
-          "notes": "Owner-actionable privacy item; it is not fixed by any site change. Proposed review decision: choose to purge/rotate or to accept and document the residual risk.",
+          "effort": "Build change, medium",
+          "review_status": "open for review",
+          "notes": "Git history already contains the data; this only surfaces it.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-B5",
+          "label": "Add a plain-language glossary (base rent, anniversary date, banked increase, passthrough, license, Housing Inventory)",
+          "value": "Several terms look interchangeable to a first-time owner but carry different legal consequences - notably license vs fee, and banked increase vs passthrough.",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S56"
+          ],
+          "effort": "Content change, low risk",
+          "review_status": "open for review",
+          "notes": "Definitions must be quoted from the official pages, not paraphrased freely.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-B6",
+          "label": "Keep the site free of any owner name, address or tenant identifier, and re-run the privacy check on every build",
+          "value": "Privacy is the owner's stated top priority, and the F44/F51 history flags show how easily identifiers leak into a public repository.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "effort": "Already implemented; keep enforced",
+          "review_status": "open for review",
+          "notes": "F44 and F51 remain owner-actionable for historical commits; this site cannot rewrite published history.",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "C. Suggestions on how to approach the increase itself (decision paths, not legal advice)",
+      "columns": [
+        "ID",
+        "Suggestion",
+        "Why it helps the decision",
+        "Evidence / official source",
+        "Effort",
+        "Review status"
+      ],
+      "rows": [
+        {
+          "id": "SUG-C1",
+          "label": "Adopt one written, neutral rule - 'on each unit's anniversary date, impose the published annual allowable increase if the licence is current' - and apply it identically to both units",
+          "value": "An identical rule applied by anniversary date is the cleanest answer to the one-vs-both discrimination question, because the selection criterion is the calendar, not the tenant.",
+          "status": "analysis",
+          "source_ids": [
+            "S42",
+            "S38",
+            "S01"
+          ],
+          "effort": "One page of policy text",
+          "review_status": "open for review",
+          "notes": "Analysis recommendation. It is not a guarantee against a complaint or a petition.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-C2",
+          "label": "Document the neutral reason for any unit that is NOT increased at the same time (for example: anniversary not reached, or licence not current)",
+          "value": "If the two units are treated differently, the file should show a reason that does not depend on who the tenant is. This is the practical defence in a disparate-treatment inquiry.",
+          "status": "analysis",
+          "source_ids": [
+            "S42",
+            "S38",
+            "S22"
+          ],
+          "effort": "10 minutes per decision",
+          "review_status": "open for review",
+          "notes": "Contingent recommendation; depends on SUG-A2 and SUG-A5.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-C3",
+          "label": "Do not raise rent merely because a roommate was added to Unit 1",
+          "value": "SF.gov states additional-occupant charges are an unlawful rent increase even where the lease provides for one. This is the sharpest available trap in this case.",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S18",
+            "S17"
+          ],
+          "effort": "No action needed - avoidance",
+          "review_status": "open for review",
+          "notes": "Directly answers Q-14 and AN-07.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-C4",
+          "label": "Set the effective date no earlier than the later of (a) the anniversary date and (b) the date the licence is confirmed on file",
+          "value": "Rule 13.14 tests the effective date, not the service date. Sequencing the dates this way removes the nullity risk without needing to guess.",
+          "status": "analysis",
+          "source_ids": [
+            "S73",
+            "S07",
+            "S01"
+          ],
+          "effort": "Scheduling discipline",
+          "review_status": "open for review",
+          "notes": "Conservative sequencing; the rule states the legal test, the sequence is the recommendation.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-C5",
+          "label": "Serve the notice with proof of service and keep a dated copy of the official pages relied on",
+          "value": "A dated record is the cheapest way to answer a later question about which rate and which rules were in force when the notice was served.",
+          "status": "analysis",
+          "source_ids": [
+            "S35",
+            "S78",
+            "S01"
+          ],
+          "effort": "10 minutes per notice",
+          "review_status": "open for review",
+          "notes": "Matches the existing Notice Worksheet (pages/worksheet.html).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SUG-C6",
+          "label": "Re-check File 261020's committee status immediately before serving any banked or capital-improvement notice",
+          "value": "The pending ordinance targets exactly the stacked multi-year increase that Unit 2's long tenure could theoretically support. It is not law today, but that can change.",
+          "status": "analysis",
+          "source_ids": [
+            "S71",
+            "S72",
+            "S05"
+          ],
+          "effort": "5 minutes",
+          "review_status": "open for review",
+          "notes": "Maps to F46 / REQ-25.",
           "flag_id": "",
           "source_note": ""
         }
