@@ -1,8 +1,8 @@
 # D8-01 — independent audit of the public dashboard
 
-**Checked:** 2026-11-13 UTC
-**Published source:** `main` at `1a5b82435cea8f171a97c246eee15592174dc2a2`
-**Browser-test archive:** this branch at `1f01a84`; the public site files in that tree match `origin/main` (the only tree difference was the D8 coordination row).
+**Checked:** 2026-11-13 UTC<br>
+**Audited baseline:** `main` at `1a5b82435cea8f171a97c246eee15592174dc2a2`<br>
+**Browser-test archive:** this branch at `1f01a84`; its public site files match audited-baseline `main` `1a5b824`.<br>
 **Scope:** user-facing decision workflow, rendered-table/source traceability, navigation/accessibility, build and live Pages. No legal-source or full-history privacy audit was repeated.
 
 ## Outcome
@@ -49,7 +49,7 @@ This was local browser automation, not a hosted-browser run. External URLs were 
 
 ## Live Pages and build
 
-GitHub Pages API reports `built`, legacy source `main` `/`, HTTPS enforced; latest build is commit `1a5b82435cea8f171a97c246eee15592174dc2a2`, with no build error. The `fetch_page` tool returned live content for the dashboard, Decision Readiness, Suggestions and Sources pages. The API snapshot is in [`live-pages.json`](live-pages.json). Sandbox `curl` to the `github.io` host was blocked by network policy, so live visual/browser metrics are not claimed; those metrics above are from the local public archive.
+At the audited baseline, the Pages API reported `built`, legacy source `main` `/`, HTTPS enforced; baseline build commit was `1a5b82435cea8f171a97c246eee15592174dc2a2`, with no build error. After PR [#61](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/61) merged at 2026-11-13T12:54:16Z as `a010361b829dfb1ea0a2d99ba7ad0051287afa4b`, CI `validate` passed and Pages reached `built` with no error for that merge commit (updated 12:54:40Z). The `fetch_page` tool re-read the live dashboard and Decision Readiness after that build; the live `data/validation_report.json` also reported `passed`. API and publication evidence is in [`live-pages.json`](live-pages.json). Sandbox `curl` to the `github.io` host was blocked by network policy, so live visual/browser metrics are not claimed; those metrics above are from the local public archive.
 
 ## Non-blocking follow-ups / scope boundary
 

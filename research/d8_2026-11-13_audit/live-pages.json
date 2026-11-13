@@ -3,14 +3,14 @@
   "repository": "https://github.com/kanlerxz87-cyber/RentincreaseSF4",
   "pagesApi": {
     "endpoint": "https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages",
-    "status": "built",
+    "statusAfterAuditMerge": "built",
     "buildType": "legacy",
     "sourceBranch": "main",
     "sourcePath": "/",
     "httpsEnforced": true
   },
-  "latestBuild": {
-    "endpoint": "https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest",
+  "auditedBaseline": {
+    "buildEndpoint": "https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest",
     "buildId": 1366183224,
     "status": "built",
     "error": null,
@@ -18,7 +18,34 @@
     "createdAt": "2026-11-13T12:39:34Z",
     "updatedAt": "2026-11-13T12:39:54Z"
   },
-  "livePagesReadWithFetchPage": [
+  "auditRecordPublication": {
+    "pullRequest": 61,
+    "pullRequestUrl": "https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/61",
+    "state": "MERGED",
+    "mergedAt": "2026-11-13T12:54:16Z",
+    "mergeCommit": "a010361b829dfb1ea0a2d99ba7ad0051287afa4b",
+    "ci": {
+      "workflow": "Validate static research site",
+      "check": "validate",
+      "status": "pass",
+      "runUrl": "https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43428992174/job/131897435462"
+    },
+    "pagesBuild": {
+      "buildId": 1366215597,
+      "status": "built",
+      "error": null,
+      "commit": "a010361b829dfb1ea0a2d99ba7ad0051287afa4b",
+      "createdAt": "2026-11-13T12:54:18Z",
+      "updatedAt": "2026-11-13T12:54:40Z",
+      "url": "https://api.github.com/repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/1366215597"
+    },
+    "livePagesReadAfterBuild": [
+      "https://kanlerxz87-cyber.github.io/RentincreaseSF4/",
+      "https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/decision.html",
+      "https://kanlerxz87-cyber.github.io/RentincreaseSF4/data/validation_report.json"
+    ]
+  },
+  "livePagesReadAtAuditedBaseline": [
     "https://kanlerxz87-cyber.github.io/RentincreaseSF4/",
     "https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/decision.html",
     "https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/suggestions.html",
