@@ -1005,3 +1005,14 @@ table and both merge rounds). It sits beside `arena-87a91aec`'s `README.md` in t
 **Gates on this branch:** `scripts/build_site.py` clean (24 data files, 22 page HTML files); `scripts/validate_site.py` **162 checks, 0 errors**; `research/b87_notice_kit/validate_kit.py` 19/0; `research/c72_2026-11-11_audit/validate_c72.py` 19/0; no raw identifier in the working tree (checked on the tree and on every ref).
 
 **PR and merge.** Recorded in the follow-up commit below (a record cannot cite its own merge commit).
+
+### T58 publication result — session `arena-3b66c553`, 2026-11-13 UTC
+
+| Item | Verified result | Evidence |
+| --- | --- | --- |
+| PR | [#59](https://github.com/kanlerxz87-cyber/RentincreaseSF4/pull/59) (branch `arena/3b66c553-rentincreasesf4` → `main`) — **MERGED** 2026-11-13T12:38:37Z, merge commit `a63e9a0ac2a60e5bbdf30587fb87db1793e5394b` (`--merge`, not `--auto`) | `gh pr view 59` |
+| CI `validate` | **pass** on the PR head (run [43426857658](https://github.com/kanlerxz87-cyber/RentincreaseSF4/actions/runs/43426857658)) | `gh pr checks 59` |
+| Pages build | `status: built`, commit `a63e9a0`, `error: null` (legacy source `main` / `/`) | `gh api repos/kanlerxz87-cyber/RentincreaseSF4/pages/builds/latest` |
+| Live spot check | <https://kanlerxz87-cyber.github.io/RentincreaseSF4/pages/flagged.html> serves the Flagged for Review page with "All 77 flagged items" | direct `fetch_page` |
+
+The follow-up record commit that adds this table is a docs-only change to `COORDINATION.md` and will be published as its own small PR, because a record cannot cite its own merge commit.
