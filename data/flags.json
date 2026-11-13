@@ -2,7 +2,7 @@
   {
     "id": "F01",
     "title": "SF.gov rent-increase example rate conflict",
-    "detail": "Example says June 1, 2025 is 1.6% while Current Rates/Form 571 show 1.4%.",
+    "detail": "Example says June 1, 2025 is 1.6% while Current Rates/Form 571 show 1.4%. Re-read 2026-11-13: the first example still reads 'A tenant moved in on June 1, 2025 ... wants to increase the tenant's rent for June 1, 2026. The annual allowable increase in effect on June 1, 2025 is 1.6%' - 1.6% is the right figure for a June 1, 2026 effective date but the sentence labels it as the rate in effect on June 1, 2025, when the published rate was 1.4%. The wording conflict is therefore a labelling defect on the official page, not a site error; do not quote that sentence as authority for a June 2025 increase.",
     "source_ids": [
       "S01",
       "S02",
@@ -13,7 +13,7 @@
   {
     "id": "F02",
     "title": "Banked example year conflict",
-    "detail": "Example says August 1, 2024 is 1.4% while Form 571 shows 1.7%.",
+    "detail": "Example says August 1, 2024 is 1.4% while Form 571 shows 1.7%. Re-read 2026-11-13: the SF.gov banked-increase example now labels August 1, 2023 as 3.6% and August 1, 2024 as 1.7% (matching Form 571), but its calculation sentence still says 'add the total percentage of banked rent increases (5.3%) to the annual allowable rent increase in effect on August 1, 2024 (1.4%)' where the effective date in the example is August 1, 2025. The arithmetic result (6.7%, $87.10 on $1,300) is consistent with the published rates; the date label in that sentence is wrong on the official page.",
     "source_ids": [
       "S05",
       "S04"
@@ -244,11 +244,12 @@
   {
     "id": "F25",
     "title": "License-consequence wording differs between SF.gov pages",
-    "detail": "Site rows state an unlicensed increase 'may be null/void', while the Housing Inventory page (re-fetched 2026-11-07) states a rent increase notice 'will not be enforceable' without a rent increase license on the effective date. Exact legal consequence wording needs manual review against the Rent Ordinance; no wording is chosen over the other here.",
+    "detail": "Site rows state an unlicensed increase 'may be null/void', while the Housing Inventory page (re-fetched 2026-11-07) states a rent increase notice 'will not be enforceable' without a rent increase license on the effective date. Exact legal consequence wording needs manual review against the Rent Ordinance; no wording is chosen over the other here. Re-read 2026-11-13: Rent Board Rule 13.14 (https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent) uses the strongest wording - 'shall render the entire rent increase null and void' - and adds that the effective date, not the service date, is the test, and that banking rights are unaffected; the SF.gov owner pages keep the softer 'may be null and void' / 'not enforceable' phrasing, so the wording difference is between the City's plain-language pages and its own Rules, not a site error.",
     "source_ids": [
       "S01",
       "S07",
-      "S08"
+      "S08",
+      "S73"
     ],
     "status": "needs review"
   },
@@ -634,6 +635,51 @@
       "S83",
       "S84",
       "S43"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F53",
+    "title": "Site Suggestions page is a proposal board - nothing on it has been implemented",
+    "detail": "The dedicated Suggestions page (pages/suggestions.html) records improvement options and the owner decisions they depend on. Its rows are proposals (status 'analysis') and project records (S68), not official requirements: no government source recommends any of them, and no rate, date, dollar amount or legal conclusion on the site was changed to create it. The site's build and validation totals are computed from the data, so the presence of the page is the only claim its rows make about this repository. Do not treat an accepted suggestion as an implemented one.",
+    "source_ids": [
+      "S68",
+      "S01"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F54",
+    "title": "Owner-decision rows are deliberately blank; the site takes no position",
+    "detail": "DEC-01 to DEC-08 on the Suggestions page (path to adopt, first item, one unit or both, whether to serve before the licence is confirmed, target effective date, whether to engage counsel, whether case facts stay published, whether to remediate the history exposure) are left blank on purpose. Choosing among them is the owner's decision and, for the legal items, a question for counsel; the Rent Board gives free counseling but states it cannot give legal advice. No default is implied by the blank cells.",
+    "source_ids": [
+      "S24",
+      "S68"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F55",
+    "title": "The 'no state filing duty' answer is an absence finding from the sections reviewed, not an exhaustive code search",
+    "detail": "The site answers that informing the Rent Board and holding a licence is local (Sec. 37.15, added by Ord. No. 265-20), and that the 2023 state law SB 567 (Stats. 2023, Ch. 290) changed the Civil Code cap and just-cause sections rather than adding a rent-board filing. The second half is an absence finding: Civ. Code Secs. 1946.2, 1947.12, 827, 1942.5 and 1947.7 were read on 2026-11-13 and contain no such duty, but the California Codes were not searched exhaustively and no official page states that no such duty exists. The local-law half is positively documented; the absence half is labelled accordingly.",
+    "source_ids": [
+      "S36",
+      "S90",
+      "S91",
+      "S53",
+      "S88"
+    ],
+    "status": "needs review"
+  },
+  {
+    "id": "F56",
+    "title": "Whether Civil Code 1947.7 reaches the SF licence scheme is unresolved",
+    "detail": "Section 1947.7 limits penalties and restores denied annual adjustments for an owner in substantial compliance with a local rent-control ordinance 'which requires the registration of rents'. Sec. 37.15(d) states the Rent Board 'shall not use the information to operate a rental registry within the meaning of California Civil Code Sections 1947.7 - 1947.8', and Ord. 265-20's purpose section says the Board of Supervisors 'does not intend that the Rent Board should set rents through a rent registry'. Whether the Housing Inventory nevertheless 'requires the registration of rents' for Sec. 1947.7 purposes is not answered on any official page reviewed, so Q-24 is left blank rather than argued. Rule 13.14's own banking preservation is separate and does apply.",
+    "source_ids": [
+      "S91",
+      "S53",
+      "S89",
+      "S73"
     ],
     "status": "needs review"
   },

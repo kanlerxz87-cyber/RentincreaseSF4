@@ -342,6 +342,36 @@
           "notes": "Still not a guarantee against a petition.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "AN-30",
+          "label": "Why the state/local split changes the to-do list, not the arithmetic",
+          "value": "Because the duty is local, the pre-notice gate is a Rent Board Portal submission and the licence it generates - there is no state agency to apply to, no state filing fee, and no state approval to wait for. The 1.6% arithmetic and the notice rules are unaffected by which level of government imposed the licence duty",
+          "status": "analysis",
+          "source_ids": [
+            "S53",
+            "S88",
+            "S01",
+            "S02"
+          ],
+          "notes": "The 2023 state law (SB 567) matters to just cause and to units covered only by the state cap; it is not the source of the Rent Board duty (LIC-11, LIC-12, Q-22, Q-23).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "AN-31",
+          "label": "The one missing fact that most changes the decision",
+          "value": "Unit 2's increase history since June 1, 2019. Whether annual increases were imposed and on which dates decides (a) whether anything is banked at all, (b) whether the 24-full-months banking rule is met, (c) the anniversary date that fixes the earliest lawful effective date, and (d) how the pending File 261020 proposal, if enacted, would bite. Every other open item is smaller",
+          "status": "analysis",
+          "source_ids": [
+            "S05",
+            "S54",
+            "S71",
+            "S02"
+          ],
+          "notes": "No figure is computed from the missing history; the Banked increases rows stay blank and flagged (T03-F06, F30). Suggested fix on the Site Suggestions page: SG-11 and SG-05.",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

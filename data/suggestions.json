@@ -1,0 +1,638 @@
+{
+  "title": "Site Suggestions - Review Before Implementing",
+  "description": "Dedicated decision board: ways to improve this site so a decision can be made from it, grouped by purpose, each with impact, effort and risk. Nothing on this page has been implemented; pick a path first.",
+  "sections": [
+    {
+      "title": "How to use this board",
+      "columns": [
+        "Suggestion",
+        "What to change and why it improves decision-making",
+        "Status",
+        "Official source(s) / basis",
+        "Effort - risk - dependencies"
+      ],
+      "rows": [
+        {
+          "id": "SG-USE-01",
+          "label": "What this page is (and is not)",
+          "value": "A proposal board, not a change log. Each row is an option for improving the site's decision value. The underlying research rows, rates, dates and dollar amounts are fixed by official sources and are not offered for change here.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Status 'analysis' = a reasoned proposal, not an official requirement. Read with REQ-26, which records that this page exists and that no suggestion on it is implemented (flag F53).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-USE-02",
+          "label": "How to choose a path",
+          "value": "Work the sections in order: A (decide-first) then B (missing information) then C/D/E (verification, privacy, presentation). Mark each row accept, defer or reject in the decisions table at the bottom, then pick one of the three pre-built sequences (SG-51 to SG-53). Blank decision cells mean 'not chosen', and nothing should be implemented before the cells are filled.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Effort labels: low = copy or one table; medium = new page section plus validator checks; high = new source research or an owner-only action. Risk if skipped is what a reviewer would find missing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-USE-03",
+          "label": "What is deliberately not suggested",
+          "value": "No suggestion may infer a value, compute a banked total from missing records, assert eligibility, or imply attorney approval or immunity from challenge. Those would breach the project's own no-inference rule and the disclaimer on every page.",
+          "status": "analysis",
+          "source_ids": [
+            "S68",
+            "S01"
+          ],
+          "notes": "If a suggestion needs a fact the owner has not supplied, it is written as 'go and find that fact' (section B) rather than as a number.",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "A. Decide-first suggestions - turn the research into an answer",
+      "columns": [
+        "Suggestion",
+        "What to change and why it improves decision-making",
+        "Status",
+        "Official source(s) / basis",
+        "Effort - risk - dependencies"
+      ],
+      "rows": [
+        {
+          "id": "SG-01",
+          "label": "Per-unit one-page decision sheet",
+          "value": "Change: add a page section per unit that stacks, in order, the eight facts a notice depends on - coverage, Housing Inventory confirmation, licence on the intended effective date, base rent, anniversary date, rate in effect on that date, computed amount, notice served on / by whom - each with a blank owner-input cell and its official link. Why: today those facts sit on six different pages, so the pre-notice gate has to be assembled by hand, which is how a licence or an anniversary date gets missed. Effect: the owner and any reviewer can see in one screen whether a specific notice is ready.",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S02",
+            "S35"
+          ],
+          "notes": "Effort: medium. Risk if skipped: a notice is served while a gate is still blank. Depends on: SG-11 (the records). Reuses the B87 worksheet gates rather than duplicating them (pages/worksheet.html).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-02",
+          "label": "Hard-stop banner while a gate is blank",
+          "value": "Change: promote a single red 'Do not serve a notice yet' banner to the landing page and the case pages, listing which specific cells are still blank (licence status, increase history, occupant status). Why: the site already reports blanks honestly, but they are visible only row by row; a decision-maker skimming the dashboard sees conclusions, not gaps. Effect: the site refuses to look more ready than it is.",
+          "status": "analysis",
+          "source_ids": [
+            "S07",
+            "S08",
+            "S68"
+          ],
+          "notes": "Effort: low. Risk if skipped: false confidence from the dashboard cards. Depends on: nothing - the blank counts are already computed at build time.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-03",
+          "label": "Reverse-planned date calendar per unit",
+          "value": "Change: from a target effective date, work backwards and show the three binding dates: the last date the 1.6% year applies (February 28, 2027), the notice service date (30 days, plus 5 if mailed), and the Housing Inventory/licence check date. Why: the rate year turns on March 1 and both units' tenancies run from the 1st of a month, so the effective date is the single highest-leverage choice in this case. Effect: converts '1.6%' into 'serve by this date or use the next published rate'.",
+          "status": "analysis",
+          "source_ids": [
+            "S02",
+            "S01",
+            "S78",
+            "S35"
+          ],
+          "notes": "Effort: medium. Risk if skipped: a notice priced on 1.6% lands on or after March 1, 2027, when the 2027-28 rate is not yet published (F27). Depends on: the owner's target date.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-04",
+          "label": "Rate-boundary warning on every calculation row",
+          "value": "Change: add a standing caution to the Calculations page: any increase effective on or after March 1, 2027 must use the rate published for that year, which does not exist yet; the published 1.6% ends February 28, 2027. Why: four of the current calculation rows are illustrative at today's rate, and a reader may carry that number into a notice that takes effect after the boundary. Effect: prevents the most likely arithmetic error in this case.",
+          "status": "analysis",
+          "source_ids": [
+            "S02",
+            "S01"
+          ],
+          "notes": "Effort: low. Risk if skipped: a notice quotes a rate that will not apply. Depends on: nothing new; F27 already records the unpublished rate.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-05",
+          "label": "Side-by-side scenario grid (no new numbers)",
+          "value": "Change: a 3x3 grid - Unit 1 / Unit 2 / both, crossed with annual-only / annual-plus-banked / defer to next rate year - where each cell states what is known, what is blank, and which official rule governs; banked cells stay explicitly blank because the increase history was never supplied. Why: the real choice is not the percentage but which unit and which mechanism, and the grid makes the blanks the headline. Effect: the owner can see that 'raise both, annual only' is the only scenario currently supported by the record.",
+          "status": "analysis",
+          "source_ids": [
+            "S05",
+            "S54",
+            "S01"
+          ],
+          "notes": "Effort: medium. Risk if skipped: a banked or reset theory is adopted without the records that would support it. Depends on: SG-11, SG-12.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-06",
+          "label": "Cost-to-reason map for the 'reasonable reasons' question",
+          "value": "Change: turn the Reasonable Reasons page into a two-column map - each cost the owner expects to face (property taxes, insurance, repairs, the Rent Board fee, maintenance) against the only mechanism the law allows for recovering it (annual allowable, none, O&M petition, capital improvement petition, passthrough, fee recovery) with the cap and the petition-before-notice rule on each row. Why: 'reasonable' in the brief is a legal question about mechanism, not about fairness; this table is what a tenant-side reviewer will check first. Effect: stops a cost list from being used as if it raised the 1.6% cap.",
+          "status": "analysis",
+          "source_ids": [
+            "S09",
+            "S11",
+            "S12",
+            "S56",
+            "S62"
+          ],
+          "notes": "Effort: medium. Risk if skipped: a 'costs' justification invites an unlawful-increase petition. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "B. Missing-information suggestions - what to go and find",
+      "columns": [
+        "Suggestion",
+        "What to change and why it improves decision-making",
+        "Status",
+        "Official source(s) / basis",
+        "Effort - risk - dependencies"
+      ],
+      "rows": [
+        {
+          "id": "SG-11",
+          "label": "Collect the four primary records and stop researching until they are in hand",
+          "value": "Change: obtain and file (1) the Rent Board Portal confirmation and licence record for each unit for each year, (2) each current lease and any addendum or renewal, (3) every rent-increase notice ever served with its proof of service, and (4) the deposit-interest/fee statements. Why: three of the site's most consequential blanks - licence status, anniversary dates, banked amounts - are answered by documents the owner already holds or can download in minutes. Effect: converts the largest analysis page on this site from inference to record.",
+          "status": "analysis",
+          "source_ids": [
+            "S07",
+            "S55",
+            "S26",
+            "S67"
+          ],
+          "notes": "Effort: low for the owner, high for the site (it fills ~20 blank cells). Risk if skipped: every downstream number stays illustrative. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-12",
+          "label": "Pull the official rent history from the Rent Board",
+          "value": "Change: request the Rent Board's record of reported rents for both units (the same record a tenant can use to challenge an increase) and compare it with the owner's own file. Why: where the owner's memory and the Board's file disagree, the Board's file is what a petition hearing starts from. Effect: fixes the base rent and the increase dates from an official source instead of owner-supplied intake.",
+          "status": "analysis",
+          "source_ids": [
+            "S25",
+            "S26",
+            "S07"
+          ],
+          "notes": "Effort: medium. Risk if skipped: the base rent used for the 1.6% is unverified (T03-F06). Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-13",
+          "label": "Resolve the April 1, 2026 occupant question before touching Unit 1",
+          "value": "Change: establish from the lease and the rent roll whether the person added on April 1, 2026 became a co-tenant on the original tenancy or an occupant/subtenant, and whether any written Section 6.14 notice was ever served. Why: that single fact decides whether any vacancy-based or market-reset theory exists at all, and the site currently refuses to guess. Effect: either closes the reset question permanently or identifies the petition route and its proof burden.",
+          "status": "analysis",
+          "source_ids": [
+            "S15",
+            "S16",
+            "S17",
+            "S18"
+          ],
+          "notes": "Effort: low for the owner. Risk if skipped: an unlawful increase is served on a mistaken decontrol theory. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-14",
+          "label": "Confirm coverage and lot configuration officially",
+          "value": "Change: capture the Property Information Map / Assessor record for the address: year built, unit count, whether the two units are in one structure or a main house plus an in-law or second structure. Why: coverage drives everything else, and the 1940 year is owner-supplied. Effect: replaces the 'likely covered' caveat with a dated official record, and settles the exemption analysis (ST-16, LOC-23).",
+          "status": "analysis",
+          "source_ids": [
+            "S06",
+            "S32",
+            "S60"
+          ],
+          "notes": "Effort: low. Risk if skipped: the whole analysis rests on an unconfirmed building year. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-15",
+          "label": "Answer the owner-occupancy question for the state two-unit exemption",
+          "value": "Change: record whether the owner occupied one unit of the building as a principal residence at the beginning of each tenancy and continues to do so, and whether either unit is an ADU/JADU. Why: it is the only state exemption that could plausibly apply to a two-unit building, and both the exemption test and its conditions are already on the site but unanswered. Effect: settles whether Civil Code sections even enter the analysis for these units.",
+          "status": "analysis",
+          "source_ids": [
+            "S58",
+            "S90",
+            "S27"
+          ],
+          "notes": "Effort: low for the owner. Risk if skipped: an exemption is assumed or ignored by default. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-16",
+          "label": "Build the 180-day retaliation and repair log now, not later",
+          "value": "Change: a dated list of every tenant repair request, habitability notice, agency complaint, inspection or proceeding in the 180 days before any intended notice, plus the owner's response dates. Why: Civil Code 1942.5 turns on timing and knowledge, and the record is easy to assemble today and hard to reconstruct after a dispute. Effect: turns the retaliation section from a warning into an evidence file.",
+          "status": "analysis",
+          "source_ids": [
+            "S57",
+            "S82",
+            "S22"
+          ],
+          "notes": "Effort: low. Risk if skipped: an increase landing inside the window looks reactive. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "C. Verification and currency suggestions",
+      "columns": [
+        "Suggestion",
+        "What to change and why it improves decision-making",
+        "Status",
+        "Official source(s) / basis",
+        "Effort - risk - dependencies"
+      ],
+      "rows": [
+        {
+          "id": "SG-21",
+          "label": "Per-page 're-verified on' stamps instead of one global date",
+          "value": "Change: show, on each page, which of its load-bearing sources were re-read on which date, and which are inherited. Why: the site is honest that some rows were re-checked recently and others inherit an earlier pass, but a reader has to open the coordination and audit files to find that out. Effect: a reviewer can price the staleness of each row without leaving the page.",
+          "status": "analysis",
+          "source_ids": [
+            "S68",
+            "S02"
+          ],
+          "notes": "Effort: low (the build already knows the dates). Risk if skipped: inherited checks read as fresh ones. Depends on: nothing. Precedent: the limits note in FOLLOWUP_AUDIT.md.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-22",
+          "label": "Scheduled re-check list keyed to official publication dates",
+          "value": "Change: a dated list of what moves and when - the March 1 rate switch, the annual rate announcement, Form 571/572/573/579 refreshes, the Rent Board fee calendar, and the status of Board File 261020 - with a 'check before you rely' date for each. Why: three of the site's flags (F27, F46, F47) will resolve or worsen on their own schedule. Effect: the owner knows when the site stops being current, instead of finding out mid-notice.",
+          "status": "analysis",
+          "source_ids": [
+            "S02",
+            "S03",
+            "S64",
+            "S71"
+          ],
+          "notes": "Effort: low. Risk if skipped: reliance on a superseded figure or a superseded 'not enacted' status. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-23",
+          "label": "Crawl the deployed site, not just the local tree",
+          "value": "Change: run the existing link crawl against the live GitHub Pages URLs, including external official links, and publish the status codes. Why: two of the defects the site records (F45, and an earlier broken-link family) are defects on the City's own pages, which a local-tree check cannot see. Effect: catches a moved or mislabeled official source before it silently underpins a row.",
+          "status": "analysis",
+          "source_ids": [
+            "S02",
+            "S68"
+          ],
+          "notes": "Effort: medium (needs a workflow step; sandbox network limits mean it must run in CI). Risk if skipped: a cited official page moves and a row loses its support. Depends on: the Actions workflow.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-24",
+          "label": "Separate 'rule verified' from 'value verified' in the badges",
+          "value": "Change: two badge slots per row instead of one: the governing rule is confirmed from an official source, and the case-specific value is or is not confirmed. Why: many rows today are 'verified' in the rule sense while their case cell is blank, which reads stronger than intended (flag F49 came from exactly this). Effect: a reader never mistakes a correct rule for a confirmed fact about these units.",
+          "status": "analysis",
+          "source_ids": [
+            "S68",
+            "S01"
+          ],
+          "notes": "Effort: medium (touches the renderer and the validator). Risk if skipped: over-reading of owner-supplied rows. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-25",
+          "label": "Publish a 'what changed since the last build' line",
+          "value": "Change: a short dated diff note per page (values that moved, sources re-read, flags closed) above the table. Why: the coordination file records this for auditors but not for decision-makers, who need to know whether a number they saw last week still says the same thing. Effect: makes the site auditable in one place at a glance.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Effort: medium. Risk if skipped: silent drift between visits. Depends on: the build already writing data/validation_report.json.",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "D. Privacy and safety suggestions",
+      "columns": [
+        "Suggestion",
+        "What to change and why it improves decision-making",
+        "Status",
+        "Official source(s) / basis",
+        "Effort - risk - dependencies"
+      ],
+      "rows": [
+        {
+          "id": "SG-31",
+          "label": "Close the historical-identifier exposure the site has been flagging",
+          "value": "Change: an owner-side decision (delete the merged session branches, rewrite history, ask GitHub Support, or make the repository private) plus a 'remediated on' row once done. Why: F44 and F51 have been published for days and only the owner can act; leaving them open means the site's own privacy claim stays qualified. Effect: removes the one defect that contradicts the privacy requirement in the brief.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Effort: owner-only. Risk if skipped: short identifiers stay reachable in a public repository's history. Depends on: owner authorization; agents cannot rewrite history or force-push.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-32",
+          "label": "Say plainly what the anonymization does and does not hide",
+          "value": "Change: a short note on the Anonymized Case page that placeholder names hide identity but the published ZIP, dates and exact dollar amounts are unique enough to be matched against public records by anyone who looks, and that the Rent Board's own Housing Inventory data is public by law. Why: the brief made privacy the top priority, so the residual exposure should be stated where the facts are, not only in a flag. Effect: the owner can decide with open eyes what to publish.",
+          "status": "analysis",
+          "source_ids": [
+            "S07",
+            "S68"
+          ],
+          "notes": "Effort: low. Risk if skipped: a false sense of anonymity. Depends on: nothing. Note: the owner directed that dates and amounts stay unchanged, so this is a disclosure, not a change to the data.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-33",
+          "label": "Add an explicit owner publication-approval row",
+          "value": "Change: one row on the case page reading 'owner approved publication of these anonymized facts on [blank]', blank until the owner states it. Why: owner-supplied facts are labelled as unverified, but nothing records that the owner agreed to publish them on a public site at all. Effect: closes the gap between 'anonymized' and 'authorized'.",
+          "status": "analysis",
+          "source_ids": [
+            "S68",
+            "S01"
+          ],
+          "notes": "Effort: low. Risk if skipped: personal facts published without a recorded approval. Depends on: the owner's answer.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-34",
+          "label": "Split the owner-only worksheet from the public site",
+          "value": "Change: keep the fill-in gates and the records list in a private file the owner completes (already the internal/ pattern in this repository) and leave the public pages pointing at the blanks rather than the intake. Why: the brief asked for the entries to be readable on the site while also making privacy the top priority; the clean fix is to publish the structure, not the substance. Effect: the site stays useful to a third party without carrying the case's personal details.",
+          "status": "analysis",
+          "source_ids": [
+            "S68",
+            "S07"
+          ],
+          "notes": "Effort: medium. Risk if skipped: intake stays public (and, for now, also in history - SG-31). Depends on: owner decision DEC-07.",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "E. Presentation and usability suggestions",
+      "columns": [
+        "Suggestion",
+        "What to change and why it improves decision-making",
+        "Status",
+        "Official source(s) / basis",
+        "Effort - risk - dependencies"
+      ],
+      "rows": [
+        {
+          "id": "SG-41",
+          "label": "Print-friendly one-pager per unit",
+          "value": "Change: a print stylesheet section that outputs one page per unit with the decision sheet, notice contents and source list. Why: the practical review of this case will happen on paper or in a PDF at a counsel's desk; the independent browser QA pass also flagged mobile/table scroll affordances. Effect: the site survives being handed to someone who will not click 19 pages.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Effort: low. Risk if skipped: the material parts get skipped in review. Depends on: SG-01.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-42",
+          "label": "Filter and jump box on the wide pages",
+          "value": "Change: a per-page filter on row ID, prefix (LIC/SUM/LOC/ST/FEED) and status badge. Why: the largest pages now carry 25 to 30 rows each and the whole set is over 350 rows, so finding one rule means scrolling. Effect: a reviewer can pull 'all needs review rows on this page' in one keystroke, which is what a challenge review actually needs.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Effort: medium (static client-side filter). Risk if skipped: slow review, skipped rows. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-43",
+          "label": "Badge legend and colour-independence on every page",
+          "value": "Change: repeat the four-badge legend from the landing page on each subpage and encode status with a shape or text mark as well as colour. Why: the accessibility sweep recorded colour-only findings in the footer and links, and the badges are the site's core meaning carrier. Effect: the verified / analysis / needs review / owner-supplied distinction survives greyscale printing and colour-blind reading.",
+          "status": "analysis",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Effort: low. Risk if skipped: the most important visual distinction is the least robust one. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-44",
+          "label": "Copy-reference control on every row",
+          "value": "Change: a small 'copy row' control producing the row ID, the statement and the official URL, for pasting into an email to counsel or a Rent Board counselor. Why: the site's value is that every row is checkable, but today checking means manual re-typing. Effect: shorter path from a row to an outside reviewer, which is the review the brief asked for.",
+          "status": "analysis",
+          "source_ids": [
+            "S68",
+            "S24"
+          ],
+          "notes": "Effort: low. Risk if skipped: friction in the exact step the brief prioritises. Depends on: nothing.",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Suggested paths (pre-packaged sequences - pick one, or mark rows individually)",
+      "columns": [
+        "Suggestion",
+        "What to change and why it improves decision-making",
+        "Status",
+        "Official source(s) / basis",
+        "Effort - risk - dependencies"
+      ],
+      "rows": [
+        {
+          "id": "SG-51",
+          "label": "Path 1 - Minimum viable: stop a void notice",
+          "value": "Accept SG-01, SG-02, SG-04, SG-11, SG-13. Why this set: it fills or proves the three gates that actually void or validate a notice - licence on the effective date, anniversary and rate year, and the Unit 1 occupant status - and adds nothing else. Effect in one line: the site can say whether a specific notice is safe to serve.",
+          "status": "analysis",
+          "source_ids": [
+            "S07",
+            "S01",
+            "S15"
+          ],
+          "notes": "Effort: medium overall. Risk if this path is skipped: the notice goes out on inference. Cost: no change to any rate, date or amount.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-52",
+          "label": "Path 2 - Evidence-grade: what a tenant lawyer would want",
+          "value": "Path 1 plus SG-03, SG-05, SG-12, SG-14, SG-16, SG-21, SG-22, SG-31. Why: this is the version where every load-bearing figure comes from a record rather than from owner-supplied intake, and where the currency of each page is visible. Effect: the site becomes the file a reviewer works from instead of a brief about it.",
+          "status": "analysis",
+          "source_ids": [
+            "S25",
+            "S02",
+            "S68",
+            "S57"
+          ],
+          "notes": "Effort: high (includes an owner-only privacy action). Risk if skipped: conclusions stay illustrative. Depends on: the owner supplying records.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-53",
+          "label": "Path 3 - Decision-room: presentation and reuse",
+          "value": "Path 2 plus SG-06, SG-15, SG-23 to SG-25, SG-32 to SG-34, SG-41 to SG-44. Why: improves how other people consume and trust the site, not what is true in it. Effect: easier hand-off to counsel, an accountant or a co-owner.",
+          "status": "analysis",
+          "source_ids": [
+            "S68",
+            "S23"
+          ],
+          "notes": "Effort: highest. Risk if skipped: none to legality, only to uptake. Implement only after Path 1 or 2.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "SG-54",
+          "label": "Not recommended at any path",
+          "value": "Rejected by design: any change that would auto-compute a banked total from the missing increase history, assert a vacancy-based reset, publish a rate for the unpublished 2027-28 year, or describe an increase as approved, certified or challenge-proof. Why: each would replace an honest blank with an inference, which is the failure mode this site exists to avoid. Effect: keeps the flag count meaningful.",
+          "status": "analysis",
+          "source_ids": [
+            "S01",
+            "S05",
+            "S02"
+          ],
+          "notes": "Effort: n/a. This row exists so a later session does not re-propose these as improvements (see REQ-09 and the disclaimer).",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
+    {
+      "title": "Owner decisions - blank until you choose; the site takes no position",
+      "columns": [
+        "Decision needed",
+        "Your choice (blank until you decide)",
+        "Status",
+        "Why it is needed / source",
+        "Notes"
+      ],
+      "rows": [
+        {
+          "id": "DEC-01",
+          "label": "Which improvement path to adopt",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Path 1 (minimum viable), Path 2 (evidence-grade), Path 3 (decision-room) or a custom list of SG rows. Until it is recorded here, no suggestion on this page is implemented.",
+          "flag_id": "F54",
+          "source_note": ""
+        },
+        {
+          "id": "DEC-02",
+          "label": "Which single item to implement first",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "The recommended default is SG-11 (collect the four primary records) because it unblocks SG-01, SG-05, DEC-04 and DEC-05. Blank means not chosen.",
+          "flag_id": "F54",
+          "source_note": ""
+        },
+        {
+          "id": "DEC-03",
+          "label": "Raise one unit or both",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S41",
+            "S42",
+            "S01"
+          ],
+          "notes": "No rule requires both and none permits singling one out; the analysis rows (AN-08, SUM-12) set out what a neutral, documented policy looks like. This is a business decision, so it stays blank here.",
+          "flag_id": "F54",
+          "source_note": ""
+        },
+        {
+          "id": "DEC-04",
+          "label": "Whether to serve any notice before the licence and inventory status is confirmed",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S07",
+            "S08",
+            "S73"
+          ],
+          "notes": "The legal test is the licence on the effective date; the recommended order is confirm, then serve. A blank here means the site is not authorising a notice.",
+          "flag_id": "F54",
+          "source_note": ""
+        },
+        {
+          "id": "DEC-05",
+          "label": "Target effective date for any increase",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S02",
+            "S01"
+          ],
+          "notes": "It decides the applicable percentage (1.6% ends February 28, 2027; the next year's rate is not published - F27) and the notice service date. Left blank rather than assumed.",
+          "flag_id": "F54",
+          "source_note": ""
+        },
+        {
+          "id": "DEC-06",
+          "label": "Whether to engage counsel on the two unsettled legal questions",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S91",
+            "S15",
+            "S71"
+          ],
+          "notes": "The two are: whether Civil Code 1947.7 reaches SF's licensing scheme (Q-24, F56), and how any banked figure interacts with the pending File 261020 proposal (F46, F47). Free Rent Board counseling is available and cannot give legal advice.",
+          "flag_id": "F54",
+          "source_note": ""
+        },
+        {
+          "id": "DEC-07",
+          "label": "Whether owner-supplied case facts stay published on a public site",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S68",
+            "S07"
+          ],
+          "notes": "The brief required the entries to be readable and privacy to be the top priority; SG-32 and SG-34 present the two sides. A choice here changes what the case page contains.",
+          "flag_id": "F54",
+          "source_note": ""
+        },
+        {
+          "id": "DEC-08",
+          "label": "Whether to remediate the historical identifier exposure now",
+          "value": "",
+          "status": "needs review",
+          "source_ids": [
+            "S68"
+          ],
+          "notes": "Owner-only action (SG-31); flags F44 and F51 stay published until it is done, and no agent can rewrite history or force-push on this repository's branch rules.",
+          "flag_id": "F54",
+          "source_note": ""
+        }
+      ]
+    }
+  ]
+}

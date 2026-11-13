@@ -174,10 +174,16 @@ def summary_page_with_narrative(page):
     out.append(footer_html(True))
     return "".join(out)
 
+def sugg_row_count():
+    """Count the Site Suggestions rows from the data, never by hand."""
+    page = D.PAGES.get("suggestions", {})
+    return sum(len(sec["rows"]) for sec in page.get("sections", []))
+
 def counts(text):
     """Substitute the computed source/flag counts so no total is ever typed by hand."""
     return (text.replace("{{SOURCES}}", str(len(D.SOURCES)))
                 .replace("{{FLAGS}}", str(len(D.FLAGS)))
+                .replace("{{SUGG_COUNT}}", str(sugg_row_count()))
                 .replace("{{SOURCE_FLAGS}}", str(len([f for f in D.FLAGS if not f["id"].startswith(("T03-", "B87-"))]))))
 
 def page_html(slug, page):
@@ -235,10 +241,12 @@ def index_html():
     out = [header_html("Rental increase SF", "Executive-summary dashboard for an anonymized San Francisco rent-increase case.", "", False)]
     out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
                '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
+               '<p><strong>Is that a state or a local law? Local.</strong> The duty is San Francisco Administrative Code <strong>Sec. 37.15</strong>, added by City <strong>Ordinance No. 265-20</strong>, effective January 18, 2021 - the March 1, 2023 date is that ordinance\'s phase-in for condominiums and buildings with fewer than 10 units, not a 2023 state statute. There is no state application and no state licence; "applying for the license" is the free Housing Inventory report, which generates the licence automatically. The 2023 <em>state</em> law people also cite, SB 567, changed the Civil Code caps and just-cause rules and imposes no rent-board filing for a rent increase. {} &middot; {} &middot; {}</p>'
                '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
                '<p>A second, separate Rent Board obligation also applies: the annual <strong>Rent Board Fee</strong> - <strong>$59.00 per dwelling unit for 2026-2027</strong>, due March 1, with an exemption window closing December 14, 2026. Paying it does not create a license, and a license does not pay it.</p>'
-               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; <a class="cta" href="pages/fee.html">Rent Board Fee, penalties and tenant recovery &rarr;</a></p>'
+               '<p><a class="cta" href="pages/process.html">Read the step-by-step license and notice process &rarr;</a> &nbsp; <a class="cta" href="pages/fee.html">Rent Board Fee, penalties and tenant recovery &rarr;</a> &nbsp; <a class="cta" href="pages/suggestions.html">Review the site-improvement suggestions before choosing a path &rarr;</a></p>'
                '<div class="disclaimer">{}</div></section>'.format(
+                   source_links(["S53"]), source_links(["S88", "S89"]), source_links(["S36", "S90"]),
                    source_links(["S01"]), source_links(["S07"]), source_links(["S08", "S53"]), e(D.DISCLAIMER)))
     out.append('<section class="hero"><h2>How to read this dashboard</h2>'
                '<p>Every finding row carries a <span class="badge verified">verified</span> badge and one or more official source links (SF.gov, the Rent Ordinance, California statute, eCFR, HUD, SEC). '

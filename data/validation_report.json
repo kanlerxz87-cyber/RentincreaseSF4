@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-13",
   "status": "passed",
   "checks": [
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "87 official sources"
+      "detail": "91 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "70 flagged items"
+      "detail": "74 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -30,7 +30,7 @@
     {
       "name": "SOURCES.md has no stale hand-typed source total",
       "ok": true,
-      "detail": "87 sources"
+      "detail": "91 sources"
     },
     {
       "name": "94122 SAFMR rows publish the official HUD values with official sources",
@@ -70,17 +70,17 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "351 rows checked; "
+      "detail": "410 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "458 rows checked; "
+      "detail": "522 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "66 needs-review rows"
+      "detail": "75 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -283,6 +283,16 @@
       "detail": ""
     },
     {
+      "name": "data/suggestions.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/suggestions.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "pages/summary.html in navigation exists",
       "ok": true,
       "detail": ""
@@ -369,6 +379,11 @@
     },
     {
       "name": "pages/analysis.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/suggestions.html in navigation exists",
       "ok": true,
       "detail": ""
     },
@@ -495,7 +510,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "52 numeric flags"
+      "detail": "56 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -525,7 +540,7 @@
     {
       "name": "executive summary page renders the narrative, not just tables",
       "ok": true,
-      "detail": "13 headings"
+      "detail": "14 headings"
     },
     {
       "name": "2026-11-10 proposed-cap inconsistencies and next-year rate are published",
@@ -626,17 +641,77 @@
       "name": "Notice Worksheet links from the Notice Checklist page",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "Site Suggestions page is published and in the navigation",
+      "ok": true,
+      "detail": "40 suggestion rows"
+    },
+    {
+      "name": "suggestions board carries both proposal rows and owner-decision rows",
+      "ok": true,
+      "detail": "32 SG rows, 8 DEC rows"
+    },
+    {
+      "name": "no suggestion is presented as verified or as an implemented change",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "suggestions page states plainly that nothing on it is implemented",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "new state/local sources S88-S91 are catalogued on official domains",
+      "ok": true,
+      "detail": "S88 City news, S89 ordinance text, S90 Civ. Code 1946.2, S91 Civ. Code 1947.7"
+    },
+    {
+      "name": "state-versus-local answer is published in the forefront of the executive summary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "state-versus-local answer is answered on the process, local, state and questions pages",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "executive summary answers the 2023 question with the local phase-in and links the ordinance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "the 1947.7 question is published as an open item rather than answered",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "landing page states the local-law answer and links the suggestions board",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Rule 13.14 verbatim nullity wording is published and cited",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "computed suggestion count is substituted, not typed",
+      "ok": true,
+      "detail": ""
     }
   ],
   "errors": [],
   "summary": {
-    "sources": 87,
-    "pages": 20,
-    "data_files": 22,
-    "rows_verified": 351,
-    "needs_review_rows": 66,
-    "flags": 70,
-    "checks": 125,
+    "sources": 91,
+    "pages": 21,
+    "data_files": 23,
+    "rows_verified": 410,
+    "needs_review_rows": 75,
+    "flags": 74,
+    "checks": 140,
     "errors": 0
   }
 }

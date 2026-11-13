@@ -285,7 +285,7 @@
     "title": "CIV 1947.12",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV",
     "category": "State",
-    "statement": "5%+CPI or 10% lower; two increases/12 months; local more-restrictive exemption; CPI method; 827 notice; damages; 2030 repeal."
+    "statement": "5%+CPI or 10% lower; two increases/12 months; local more-restrictive exemption; CPI method; 827 notice; damages; 2030 repeal. Re-read in full on 2026-11-13: the section's own history note reads '(in Sec. 3) and added by Stats. 2023, Ch. 290, Sec. 4. (SB 567) Effective January 1, 2024. Operative April 1, 2024. Repealed as of January 1, 2030, by its own provisions.' The text reviewed contains no requirement that an owner notify a rent board or any other agency before a rent increase; subdivision (e) requires only notice to the tenant in accordance with Section 827, and subdivision (d)(3) exempts housing already under a local rent-control cap that is more restrictive."
   },
   {
     "id": "S37",
@@ -694,5 +694,37 @@
     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E",
     "category": "Local - proposed legislation",
     "statement": "Direct fetch_page 2026-11-11: the draft attachment shows proposed new Sec. 37.3(h) limiting combined banked increases under Sec. 37.3(a)(2) and capital-improvement increases under Sec. 37.3(a)(3) to a total of 10% of the lowest base rent in effect at any time in the 12 months before the increase takes effect; it applies to banked increases noticed, and capital-improvement pass-throughs based on petitions filed, on or after September 15, 2026, remains in effect until December 31, 2029 unless extended, and lets landlords accumulate the excess for increases effective on or after January 1, 2030. The draft is NOT enacted; the Legistar record status is Pending Committee Action. It does not state how the 10% interacts with the separate annual allowable increase."
+  },
+  {
+    "id": "S88",
+    "agency": "SF Rent Board",
+    "title": "New Legislation Creates a Housing Inventory and Requires Owners to Obtain a License Before Imposing Annual/Banked Rent Increases (news, Jan. 22, 2021)",
+    "url": "https://www.sf.gov/news/new-legislation-creates-housing-inventory-and-requires-owners-obtain-license-imposing",
+    "category": "Local",
+    "statement": "Direct fetch_page 2026-11-13. This official City news item names the law that created both duties: 'Ordinance No. 265-20, which became effective on January 18, 2021, requires owners of residential housing units in San Francisco to begin reporting certain information about their units to the Rent Board.' It states the phase-in ('For units (other than condominium units) in buildings of 10 residential units or more, owners are required to begin reporting this information to the Rent Board by July 1, 2022, with updates due on March 1, 2023 and every March 1 thereafter. For condominium units and units in buildings with less than 10 residential units, reporting will begin on March 1, 2023 with updates due every March 1 thereafter'), the licence condition ('the legislation requires owners to obtain a license from the Rent Board before imposing any annual and/or banked rent increases upon tenants ... The license will only be issued by the Rent Board if the owner is in substantial compliance with the housing inventory's reporting requirements'), the 30-day contact-update duty, and that 'The Rent Board may not use the information to operate a \"rental registry\" within the meaning of California Civil Code Sections 1947.7 - 1947.8.' An ordinance is a City of San Francisco enactment - i.e. local law, not state law; the page itself links the ordinance number to the Board of Supervisors record (S89)."
+  },
+  {
+    "id": "S89",
+    "agency": "San Francisco Board of Supervisors (Legistar)",
+    "title": "Ordinance No. 265-20 - file attachment (Master Report rendering)",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=9024120&GUID=79C40690-896E-43CD-9855-77B3AC909AEF",
+    "category": "Local - ordinance text",
+    "statement": "Direct fetch_page 2026-11-13 of the ordinance attachment linked from the official SF.gov news item (S88). Title: 'Ordinance amending the Administrative Code to require owners of residential dwelling units to report certain information to the Rent Board; to authorize the Rent Board to issue a license to owners who report the information; and to require that an owner have a license to impose certain types of rent increases'. 'Be it ordained by the People of the City and County of San Francisco'; Section 1 (Purpose and Findings) records that 'in directing the Rent Board to create a housing inventory, the Board of Supervisors does not intend that the Rent Board should set rents through a rent registry'; Section 2 amends Section 37.3, adds new Section 37.15 and renumbers the existing Section 37.15 as Section 37.16. The document is retrieved in the Board's redline/Master Report rendering, so the quoted wording carries amendment markup; the enacted wording is as published in the Administrative Code (S53). This is a municipal ordinance enacted by the San Francisco Board of Supervisors, not an act of the California Legislature."
+  },
+  {
+    "id": "S90",
+    "agency": "California Civil Code",
+    "title": "CIV 1946.2 (just cause for termination)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1946.2.&lawCode=CIV",
+    "category": "State",
+    "statement": "Read in full on 2026-11-13 (chunks 1-3). Subdivision (e) lists the properties to which the section does not apply, including '(6) A property containing two separate dwelling units within a single structure in which the owner occupied one of the units as the owner's principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit'; subdivision (d)(1)-(3) requires relocation assistance or a final-month rent waiver for a no-fault just cause, with the notice to state the tenant's right to it; (d)(4) 'An owner's failure to strictly comply with this subdivision shall render the notice of termination void'; (f) prescribes the 12-point-type state-law notice to tenants; (i)(1)(A)-(B) makes the state section inapplicable where a local just-cause ordinance applies (a local ordinance adopted after September 1, 2019 must be more protective to displace it) and (i)(2) 'A residential real property shall not be subject to both a local ordinance requiring just cause for termination of a residential tenancy and this section.' Nothing in the text reviewed requires an owner to notify a rent board or any other agency before imposing a rent increase. History note: 'Amended by Stats. 2025, Ch. 203, Sec. 1. (AB 1529) Effective January 1, 2026. Repealed as of January 1, 2030, by its own provisions.'; the section became operative April 1, 2024."
+  },
+  {
+    "id": "S91",
+    "agency": "California Civil Code",
+    "title": "CIV 1947.7 (substantial compliance with a local rent-registration system)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.7.&lawCode=CIV",
+    "category": "State",
+    "statement": "Direct fetch_page 2026-11-13. The Legislature's stated intent is 'to limit the imposition of penalties and sanctions against an owner of residential rental units where that person has attempted in good faith to fully comply with the regulatory processes' of a local rent program. Subdivision (b): an owner 'in substantial compliance with an ordinance or charter that controls or establishes a system of controls on the price at which residential rental units may be offered for rent or lease and which requires the registration of rents, or any regulation adopted pursuant thereto, shall not be assessed a penalty or any other sanction for noncompliance', with restitution to the tenant or recovery of registration/filing fees due to the local agency as the exclusive remedies; 'substantial compliance' means a good-faith attempt plus timely cure after notice of a deficiency. Subdivision (c): 'all annual rent adjustments which may have been denied during the period of the owner's noncompliance shall be restored prospectively once the owner is in compliance'. Whether this section applies to the San Francisco Rent Board Housing Inventory/licensing scheme is not answered on any official page reviewed - SF's ordinance states the Rent Board shall not use the information to operate a rental registry within the meaning of Civil Code Sections 1947.7-1947.8 (S53, S88)."
   }
 ]

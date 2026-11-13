@@ -344,7 +344,7 @@ def main():
     check("2026-11-10 proposed-cap inconsistencies and next-year rate are published",
           any(r["id"] == "RATE-14" and "Pending Committee Action" in r["value"] for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
           and any(r["id"] == "RATE-17" and r["value"] == "" and r["status"] == "needs review" for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
-          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11")
+          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11", "2026-11-13")
           and "2026-11-10" in D.SOURCES["S72"]["statement"]
           and official_domain(D.SOURCES["S71"]["url"]))
     check("pending cap is distinguished from current law and calculation is cautioned",
@@ -437,6 +437,59 @@ def main():
           and all(bid in flagged_html for bid in b87_flag_ids))
     check("Notice Worksheet links from the Notice Checklist page",
           "worksheet.html" in (PAGES / "compliance.html").read_text(encoding="utf-8"))
+
+    # --- Checks added 2026-11-13 by session arena-6f65a2f5 (T54: suggestions board + state/local answer) ---
+    sug = pages.get("suggestions", {})
+    sug_rows = [r for sec in sug.get("sections", []) for r in sec["rows"]]
+    check("Site Suggestions page is published and in the navigation",
+          "suggestions" in pages and (PAGES / "suggestions.html").exists()
+          and any(slu == "suggestions" for slu, _ in D.NAV)
+          and "pages/suggestions.html" in (ROOT / "index.html").read_text(encoding="utf-8"),
+          "{} suggestion rows".format(len(sug_rows)))
+    check("suggestions board carries both proposal rows and owner-decision rows",
+          len([r for r in sug_rows if r["id"].startswith("SG-")]) >= 25
+          and len([r for r in sug_rows if r["id"].startswith("DEC-")]) == 8,
+          "{} SG rows, {} DEC rows".format(len([r for r in sug_rows if r["id"].startswith("SG-")]), len([r for r in sug_rows if r["id"].startswith("DEC-")])))
+    sug_errors = []
+    for r in sug_rows:
+        if not r.get("source_ids") or any(sid not in source_map for sid in r["source_ids"]):
+            sug_errors.append("{} lacks a catalogued source".format(r.get("id", "?")))
+        if r.get("status") not in ("analysis", "needs review"):
+            sug_errors.append("{} must be a proposal or a blank decision, not a verified finding".format(r.get("id", "?")))
+        if r.get("status") == "analysis" and not r.get("value"):
+            sug_errors.append("{} is an analysis row with no content".format(r.get("id", "?")))
+    check("no suggestion is presented as verified or as an implemented change", not sug_errors, "; ".join(sug_errors[:5]))
+    sug_html = (PAGES / "suggestions.html").read_text(encoding="utf-8")
+    check("suggestions page states plainly that nothing on it is implemented",
+          "has been implemented" in sug_html and "F53" in sug_html and "F54" in sug_html)
+    check("new state/local sources S88-S91 are catalogued on official domains",
+          all(sid in source_map and official_domain(source_map[sid]["url"]) for sid in ("S88", "S89", "S90", "S91")),
+          "S88 City news, S89 ordinance text, S90 Civ. Code 1946.2, S91 Civ. Code 1947.7")
+    check("state-versus-local answer is published in the forefront of the executive summary",
+          "Ord. No. 265-20" in summary_html and "Ordinance No. 265-20" in summary_html
+          and "SB 567" in summary_html and "LOCAL" in summary_html)
+    check("state-versus-local answer is answered on the process, local, state and questions pages",
+          all(tok in (PAGES / "process.html").read_text(encoding="utf-8") for tok in ("PRC-10", "PRC-11", "265-20"))
+          and "LOC-26" in (PAGES / "local.html").read_text(encoding="utf-8")
+          and "ST-19" in (PAGES / "state.html").read_text(encoding="utf-8")
+          and "Q-22" in (PAGES / "questions.html").read_text(encoding="utf-8"))
+    exec_md13 = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("executive summary answers the 2023 question with the local phase-in and links the ordinance",
+          "Added by Ord. No. 265-20" in exec_md13
+          and "commencing March 1, 2023" in exec_md13
+          and "https://www.sf.gov/news/new-legislation-creates-housing-inventory-and-requires-owners-obtain-license-imposing" in exec_md13
+          and "sec-3715-reporting-obligations-licensing" in exec_md13)
+    check("the 1947.7 question is published as an open item rather than answered",
+          any(r["id"] == "Q-24" and r["status"] == "needs review" and r["value"] == "" and r["flag_id"] == "F56"
+              for pg in D.PAGES.values() for sec in pg["sections"] for r in sec["rows"])
+          and "F56" in flagged_html and "F55" in flagged_html)
+    check("landing page states the local-law answer and links the suggestions board",
+          "Ordinance No. 265-20" in index_html and "pages/suggestions.html" in index_html)
+    check("Rule 13.14 verbatim nullity wording is published and cited",
+          "shall render the entire rent increase null and void" in exec_md13
+          and "S73" in [sid for pg in D.PAGES.values() for sec in pg["sections"] for r in sec["rows"] if r["id"] == "PRC-06" for sid in r["source_ids"]])
+    check("computed suggestion count is substituted, not typed",
+          "{{SUGG_COUNT}}" not in exec_md13 and "rows" in exec_md13)
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

@@ -314,6 +314,47 @@
           "notes": "Office open 9-4 weekdays; counseling 415-252-4600.",
           "flag_id": "",
           "source_note": ""
+        },
+        {
+          "id": "LOC-26",
+          "label": "The enacting local law: Ordinance No. 265-20 (San Francisco, not Sacramento)",
+          "value": "The San Francisco Board of Supervisors enacted Ord. No. 265-20, 'Ordinance amending the Administrative Code to require owners of residential dwelling units to report certain information to the Rent Board; to authorize the Rent Board to issue a license to owners who report the information; and to require that an owner have a license to impose certain types of rent increases'. It became effective January 18, 2021; Sec. 37.15 carries the code note 'Added by Ord. No. 265-20, effective January 18, 2021'",
+          "status": "verified",
+          "source_ids": [
+            "S89",
+            "S88",
+            "S53"
+          ],
+          "notes": "This is the direct answer to 'is it a state or local law?' - local. Read on 2026-11-13 from the Board of Supervisors file attachment and the City news item; the attachment is the redline/Master Report rendering, so compare it with the codified text (S53).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LOC-27",
+          "label": "Phase-in dates written into the ordinance",
+          "value": "Sec. 37.15(c): for units (other than condominiums) in buildings with 10 units or more, report by July 1, 2022 and update by March 1, 2023 and annually by March 1; 'For condominium units and units in buildings with fewer than 10 units, the information shall be reported commencing March 1, 2023 and updated annually by March 1 of each successive year'; updates within 30 days of a change in owner or manager name or business contact information",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S88"
+          ],
+          "notes": "So a two-unit non-owner-occupied building in SF has been covered since March 1, 2023 - the 'law passed in 2023' in the owner's recollection is this local phase-in, not a 2023 statute.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LOC-28",
+          "label": "The City says this is NOT a rent registry",
+          "value": "Sec. 37.15(d): 'The Rent Board shall use the information it receives under this Section 37.15 to create a housing inventory ... The Rent Board shall not use the information to operate a rental registry within the meaning of California Civil Code Sections 1947.7 - 1947.8.' Ord. 265-20 Sec. 1 records that 'in directing the Rent Board to create a housing inventory, the Board of Supervisors does not intend that the Rent Board should set rents through a rent registry'",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S89",
+            "S88"
+          ],
+          "notes": "Why it matters to this case: Civil Code Sec. 1947.7 limits penalties for owners in substantial compliance with a local system 'which requires the registration of rents' and restores denied annual adjustments prospectively on compliance - but SF expressly disclaims a rent registry, so whether Sec. 1947.7 helps here is unsettled (see Questions Q-24 and flag F56).",
+          "flag_id": "",
+          "source_note": ""
         }
       ]
     }

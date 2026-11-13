@@ -6,6 +6,7 @@ Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF4/
 
 - `index.html` - clean landing page / dashboard.
 - `pages/` - category subpages with easy-read tables, including the Rent Board Fee page (`pages/fee.html`) and the Notice Worksheet page (`pages/worksheet.html`).
+- `pages/suggestions.html` - the dedicated review-before-implement suggestions board (improvement options with impact, effort and risk, three pre-built paths, and blank owner-decision rows).
 - `data/` - JSON source of truth; every row has official source IDs.
 - `SOURCES.md` / `VERIFICATION.md` / `research/` - official source ledger and line-by-line verification.
 - `EXECUTIVE_SUMMARY.md` - standalone executive summary.

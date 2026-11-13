@@ -84,15 +84,16 @@
         {
           "id": "PRC-06",
           "label": "What happens if a notice goes into effect without a current license?",
-          "value": "The notice may be null and void (possibly for multiple years) or unenforceable, depending on the SF.gov page; the tenant may be entitled to a refund and may file a Tenant Petition for Unlawful Rent Increase for an Administrative Law Judge hearing.",
+          "value": "Rent Board Rule 13.14 (adopted July 12, 2022): 'Any rent increase under Ordinance Sections 37.3(a)(1)-(2) purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void; provided, however, that the effective date of the rent increase, not the date of service, shall be used to determine whether or not the increase conforms with the provisions of this section.' SF.gov's owner page phrases it more softly ('may be null and void (this may apply for multiple years)'; 'not enforceable'), and Sec. 37.15(e) says the licence is suspended and 'a tenant shall not be obligated to pay the increased rent for months during the period of suspension'. The tenant may be entitled to a refund and may file a Tenant Petition for Unlawful Rent Increase for an ALJ hearing.",
           "status": "verified",
           "source_ids": [
+            "S73",
             "S08",
             "S53",
             "S25",
             "S26"
           ],
-          "notes": "Wording differs between SF.gov pages - see flag F25.",
+          "notes": "Re-read in full on 2026-11-13; wording differs between SF.gov pages - see flag F25. Rule 13.14 also preserves banking: 'Nothing in this Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise lawful rent increases that were found to be null and void.'",
           "flag_id": "",
           "source_note": ""
         },
@@ -133,6 +134,39 @@
             "S06"
           ],
           "notes": "Coverage of the specific address is unverified in this case.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "PRC-10",
+          "label": "Is the duty to inform the Rent Board a STATE law or a LOCAL law?",
+          "value": "LOCAL. Sec. 37.15 was added by San Francisco Ordinance No. 265-20, effective January 18, 2021 - a City of San Francisco enactment, not an act of the California Legislature. The 2023 date people remember for small buildings is this ordinance's phase-in for condominiums and buildings with fewer than 10 units. The 2023 statewide rent law, SB 567 (Stats. 2023, Ch. 290), amended Civil Code Secs. 1946.2 and 1947.12 and imposes no rent-board filing for a rent increase.",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S88",
+            "S89",
+            "S36",
+            "S90"
+          ],
+          "notes": "Verified 2026-11-13 from the code's own ordinance note, the City news item, the Board of Supervisors file attachment and the current Civil Code text. Limits: flag F55.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "PRC-11",
+          "label": "Which law controls each step? (use this as the order of operations)",
+          "value": "Steps 1-6 (coverage, Housing Inventory report, licence, licence current on the effective date) are LOCAL: SF Administrative Code Ch. 37 and Rent Board Rules. Step 7 (notice length, contents and delivery) is BOTH: SF.gov states the 30/90-day and +5-day mailed rules and Civil Code Secs. 1947.12(e) and 827 impose them as state law. Just cause and retaliation limits are largely STATE (Secs. 1946.2, 1942.5) plus LOCAL eviction rules (Sec. 37.9).",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S35",
+            "S36",
+            "S90",
+            "S57"
+          ],
+          "notes": "A tenant-side reviewer checks both levels; satisfying one does not excuse the other. SF.gov: 'You will still need to comply with all other local and state rent increase laws.'",
           "flag_id": "",
           "source_note": ""
         }
