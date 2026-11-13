@@ -1,7 +1,136 @@
 {
   "title": "Local Law - San Francisco",
-  "description": "SF Rent Ordinance, Rent Board rules, licensing, banking and petitions.",
+  "description": "Which layer of government requires the Rent Board report and license (local, not state), then the SF Rent Ordinance, Rent Board rules, licensing, banking and petitions.",
   "sections": [
+    {
+      "title": "State, local or federal? Which layer imposes the duty to inform the Rent Board",
+      "columns": [
+        "Item",
+        "Value / finding",
+        "Status",
+        "Official source(s)",
+        "Notes / flag"
+      ],
+      "rows": [
+        {
+          "id": "LAW-01",
+          "label": "Is the \"inform the Rent Board before raising rent\" duty a state law or a local law?",
+          "value": "LOCAL - it is a San Francisco ordinance (Administrative Code Chapter 37, added by Ordinance No. 265-20, effective January 18, 2021). No state statute requires an owner to report a rent increase to the SF Rent Board.",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S90",
+            "S21",
+            "S74"
+          ],
+          "notes": "This is the direct answer to the state-vs-local question. Section 37.15 sits in the local Administrative Code, enforced by the SF Rent Board.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LAW-02",
+          "label": "Then where does the \"2023 law\" come from?",
+          "value": "THE LOCAL OPERATIVE DATE, not a state statute. Ordinance 265-20 took effect January 18, 2021. Reporting began July 1, 2022 for buildings with 10 or more units, and March 1, 2023 for condominiums and buildings with 1-9 residential units. Rent Board Rule 13.14 applies to increases effective on or after July 1, 2022, and for condominiums and buildings with fewer than 10 units only to increases effective on or after March 1, 2023.",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S73",
+            "S90",
+            "S01"
+          ],
+          "notes": "A two-unit 1940 building is in the 1-9 unit group, so its date is March 1, 2023. The site does not assert that any specific date was 'passed' in 2023 - only that the small-building duty became operative then.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LAW-03",
+          "label": "What did the actual 2023 California state law do?",
+          "value": "SB 567 (Chapter 290, Statutes of 2023) amended the statewide Tenant Protection Act: it changed the no-fault just-cause eviction rules and enforcement for the state rent cap (5% plus CPI, or 10%, whichever is lower), and it became operative April 1, 2024. It did not create a duty to report a rent increase to a local rent board.",
+          "status": "verified",
+          "source_ids": [
+            "S88",
+            "S89",
+            "S36"
+          ],
+          "notes": "Stated as a negative finding from the bill text, not as a prohibition.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LAW-04",
+          "label": "Does the state rent cap set the number for a covered SF unit?",
+          "value": "NO - by statute and by SF.gov. Civil Code 1947.12(d)(3) excludes housing subject to a local rent control ordinance that restricts annual increases to less than the state formula. SF.gov states AB 1482 does not apply to units already under the SF Rent Ordinance rent-increase limits. The local 1.6% (3/1/26-2/28/27) therefore governs, not the state figure.",
+          "status": "verified",
+          "source_ids": [
+            "S36",
+            "S27",
+            "S01",
+            "S02"
+          ],
+          "notes": "The state cap only governs units that are NOT under a stricter local ordinance.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LAW-05",
+          "label": "Does any federal law require informing the Rent Board or cap this rent?",
+          "value": "NO federal requirement found. HUD FMRs and SAFMRs are voucher payment standards for the Housing Choice Voucher programme, not limits on private-market rent, and no federal rent-registration duty was located.",
+          "status": "verified",
+          "source_ids": [
+            "S91",
+            "S43",
+            "S44"
+          ],
+          "notes": "Federal cap cell remains blank and flagged (F22) because no official general federal private-rent cap exists to cite.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LAW-06",
+          "label": "Which obligations still apply on top of the local duty?",
+          "value": "Three independent layers apply at once: LOCAL - Housing Inventory report, Rent Increase License, 1.6% annual limit, anniversary date, banked increases, 30/90-day notice, Rent Board Fee. STATE - Civil Code 827 notice rules and Civil Code 1942.5 retaliation limits; the AB 1482 cap applies only to units outside local rent control. FEDERAL - fair housing (FHA, 24 CFR 100.500 disparate impact) applies to how tenants are treated, not to the rent amount.",
+          "status": "verified",
+          "source_ids": [
+            "S01",
+            "S07",
+            "S35",
+            "S57",
+            "S42"
+          ],
+          "notes": "Local, state and federal duties are cumulative. Complying with one does not satisfy another.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LAW-07",
+          "label": "Is the license application a separate form from the Housing Inventory report?",
+          "value": "NO - they are the same act. Reporting into the Housing Inventory through the Rent Board Portal generates the license automatically for tenant-occupied units; there is no separate licence application and no charge for it.",
+          "status": "verified",
+          "source_ids": [
+            "S07",
+            "S01",
+            "S53"
+          ],
+          "notes": "The Rent Board Fee is a different, separate payment (FEE page).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LAW-08",
+          "label": "What is the legal consequence of the duty being local rather than state?",
+          "value": "The remedy lives in the local ordinance and Rent Board Rules: under Rule 13.14 an increase purporting to be effective while the landlord is unlicensed renders the entire increase null and void, tested as of the effective date, not the date of service; a tenant may petition the Rent Board at no charge.",
+          "status": "verified",
+          "source_ids": [
+            "S73",
+            "S53",
+            "S25"
+          ],
+          "notes": "State courts enforce state law; the Rent Board enforces the local ordinance. Different forum, different remedy.",
+          "flag_id": "",
+          "source_note": ""
+        }
+      ]
+    },
     {
       "title": "Local rules",
       "columns": [

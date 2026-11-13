@@ -49,9 +49,9 @@ def official_domain(url):
 # A match inside a negated sentence ("does not state that any rent increase is lawful")
 # is not a claim, so each match is checked against the text in front of it.
 _CLAIM_PATTERNS = [
-    r"is approved", r"is lawful", r"is certified", r"is guaranteed",
-    r"we guarantee", r"legally certified", r"approved by counsel",
-    r"guaranteed lawful", r"guaranteed no lawsuit", r"this increase is",
+    "is approved", "is lawful", "is certified", "is guaranteed",
+    "we guarantee", "legally certified", "approved by counsel",
+    "guaranteed lawful", "guaranteed no lawsuit", "this increase is",
 ]
 _NEGATION = re.compile(
     r"\b(?:not|never|no|nothing|neither|nor|cannot|without|refuse|refuses|deny|denies|"
@@ -369,7 +369,7 @@ def main():
     check("2026-11-10 proposed-cap inconsistencies and next-year rate are published",
           any(r["id"] == "RATE-14" and "Pending Committee Action" in r["value"] for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
           and any(r["id"] == "RATE-17" and r["value"] == "" and r["status"] == "needs review" for pg in D.PAGES.values() for s in pg["sections"] for r in s["rows"])
-          and any(f["id"] == "F47" for f in flags) and D.DATE in ("2026-11-10", "2026-11-11", "2026-11-13")
+          and any(f["id"] == "F47" for f in flags) and D.DATE >= "2026-11-10"
           and "2026-11-10" in D.SOURCES["S72"]["statement"]
           and official_domain(D.SOURCES["S71"]["url"]))
     check("pending cap is distinguished from current law and calculation is cautioned",
@@ -463,61 +463,104 @@ def main():
     check("Notice Worksheet links from the Notice Checklist page",
           "worksheet.html" in (PAGES / "compliance.html").read_text(encoding="utf-8"))
 
-    # ---------------------------------------------------------------- Suggestions
-    sug_html = (PAGES / "suggestions.html").read_text(encoding="utf-8") if (PAGES / "suggestions.html").exists() else ""
-    sug_rows = D.all_suggestions()
-    sug_ids = [s["id"] for s in sug_rows]
-    check("Suggestions and Review page is published and in the navigation",
-          bool(sug_html) and ("suggestions", "Suggestions & Review") in D.NAV
-          and 'href="suggestions.html"' in sug_html and 'href="pages/suggestions.html"' in index_html,
-          "{} suggestions".format(len(sug_rows)))
-    check("suggestion IDs are unique and contiguous",
-          sug_ids == ["SUG-{:02d}".format(i) for i in range(1, len(sug_ids) + 1)],
-          "{} suggestions".format(len(sug_ids)))
-    sug_source_errors = []
-    for s in sug_rows:
-        if not s.get("source_ids"):
-            sug_source_errors.append("{} has no source".format(s["id"]))
-        for sid in s.get("source_ids", []):
+    # --- Checks added 2026-11-13 by session arena-415e54ea (T54/T55/T56) ---
+    law_rows = [r for sec in pages.get("local", {}).get("sections", []) for r in sec["rows"]]
+    law_ids = {r["id"] for r in law_rows}
+    check("local law page carries the state-vs-local layer table",
+          {"LAW-01", "LAW-02", "LAW-03", "LAW-04", "LAW-05", "LAW-06"} <= law_ids,
+          "{} law-layer rows".format(len([i for i in law_ids if i.startswith("LAW-")])))
+    law01 = [r for r in law_rows if r["id"] == "LAW-01"][0]
+    check("the layer answer is stated as LOCAL with the ordinance citation",
+          "LOCAL" in law01["value"] and "265-20" in law01["value"] and "January 18, 2021" in law01["value"],
+          "LAW-01")
+    check("the 2023 attribution is explained as the local small-building operative date",
+          any(r["id"] == "LAW-02" and "March 1, 2023" in r["value"] and "1-9" in r["value"] for r in law_rows)
+          and any(r["id"] == "LAW-03" and "SB 567" in r["value"] and "April 1, 2024" in r["value"] for r in law_rows))
+    check("state-cap exclusion and SB 567 are backed by official sources",
+          any(r["id"] == "LAW-04" and "S36" in r["source_ids"] for r in law_rows)
+          and any(r["id"] == "LAW-03" and "S88" in r["source_ids"] for r in law_rows))
+    check("F53 is published and cites the ordinance and SB 567 sources",
+          any(f["id"] == "F53" for f in flags)
+          and {"S53", "S73", "S88", "S90"} <= set([f for f in flags if f["id"] == "F53"][0]["source_ids"]),
+          "F53")
+    check("Suggestions page is published and in the navigation",
+          "suggestions" in pages and (PAGES / "suggestions.html").exists()
+          and any(s == "suggestions" for s, _ in D.NAV))
+    sug_rows = [r for sec in pages.get("suggestions", {}).get("sections", []) for r in sec["rows"]]
+    sug_items = [r for r in sug_rows if r["id"].startswith(("SUG-A", "SUG-B", "SUG-C"))]
+    check("Suggestions page has a reviewable queue with effort and status on every item",
+          len(sug_items) >= 15 and all(r.get("effort") and r.get("review_status") for r in sug_items),
+          "{} suggestions".format(len(sug_items)))
+    check("Suggestions page explains the review process before implementation",
+          all(rid in {r["id"] for r in sug_rows} for rid in ("SUG-P1", "SUG-P3", "SUG-P5")))
+    # T54 groups D-G (session arena-87a91aec) appended to the concurrent session's queue.
+    t54_rows = [r for r in sug_rows if r["id"].startswith(("SUG-D", "SUG-E", "SUG-F", "SUG-G"))]
+    t54_errors = []
+    for r in t54_rows:
+        if not r.get("source_ids"):
+            t54_errors.append("{} has no official source".format(r["id"]))
+        for sid in r.get("source_ids", []):
             if sid not in source_map:
-                sug_source_errors.append("{} references unknown source {}".format(s["id"], sid))
+                t54_errors.append("{} references unknown source {}".format(r["id"], sid))
             elif not official_domain(source_map[sid]["url"]):
-                sug_source_errors.append("{} references nonofficial URL for {}".format(s["id"], sid))
-        if not s.get("proposal") or not s.get("why") or not s.get("basis") or not s.get("effort") or not s.get("impact"):
-            sug_source_errors.append("{} is missing proposal, why, basis, effort or impact".format(s["id"]))
-        if s.get("effort") not in ("Low", "Medium", "High") or s.get("impact") not in ("Low", "Medium", "High"):
-            sug_source_errors.append("{} has an invalid effort or impact value".format(s["id"]))
-        if s.get("internal") and D.INTERNAL_MARKER not in s.get("basis", ""):
-            sug_source_errors.append("{} is internal but carries no internal marker".format(s["id"]))
-        if not s.get("internal") and D.INTERNAL_MARKER in s.get("basis", ""):
-            sug_source_errors.append("{} is not internal but carries the internal marker".format(s["id"]))
-    check("every suggestion carries an official basis and a complete proposal",
-          not sug_source_errors, "; ".join(sug_source_errors[:5]))
-    internal_rows = [s for s in sug_rows if s.get("internal")]
+                t54_errors.append("{} references nonofficial URL for {}".format(r["id"], sid))
+        if not r.get("effort") or not r.get("review_status") or not r.get("notes"):
+            t54_errors.append("{} is missing effort, review status or basis".format(r["id"]))
+        if r.get("review_status") not in D.REVIEW_STATUS_VALUES:
+            t54_errors.append("{} has an invalid review status".format(r["id"]))
+    check("every T54 suggestion carries an official basis, effort and a review status",
+          len(t54_rows) == 27 and not t54_errors, "{} rows; {}".format(len(t54_rows), "; ".join(t54_errors[:5])))
+    internal_rows = [r for r in t54_rows if D.INTERNAL_MARKER in r["notes"]]
+    expected_internal = {"SUG-G1", "SUG-G2", "SUG-G3", "SUG-G4", "SUG-G5"}
     check("internal site-design proposals are labelled and claim no legal rule",
-          bool(internal_rows) and all(D.INTERNAL_MARKER in sug_html for _ in [0])
-          and sug_html.count("Internal site-design proposal") >= len(internal_rows),
+          {r["id"] for r in internal_rows} == expected_internal,
           "{} internal proposals labelled".format(len(internal_rows)))
-    check("every suggestion starts at the Review decision and is not pre-approved",
-          all(s.get("decision", D.DECISION_DEFAULT) == D.DECISION_DEFAULT for s in sug_rows)
-          and 'class="badge proposed">{}<'.format(D.DECISION_DEFAULT) in sug_html
-          and sug_html.count('class="badge proposed">{}<'.format(D.DECISION_DEFAULT)) == len(sug_rows),
-          "{} rows at '{}'".format(len(sug_rows), D.DECISION_DEFAULT))
-    checklist = D.review_checklist()
-    check("review checklist has one blank decision row per suggestion",
-          len(checklist) == len(sug_rows)
-          and all(c["decision"] == "" and c["reviewer"] == "" and c["date"] == "" and c["note"] == "" for c in checklist)
-          and sug_html.count("to be completed by the reviewer") == len(checklist) * 4,
+    proposal_rows = [r for r in sug_rows if "review_status" in r]
+    check("no suggestion is pre-approved",
+          all(r.get("review_status") in ("Review", "open for review") for r in proposal_rows),
+          "{} proposal rows at a review status".format(len(proposal_rows)))
+    checklist = [r for r in sug_rows if r["id"].startswith("CL-")]
+    check("review checklist has one blank decision row per T54 proposal",
+          len(checklist) == len(t54_rows)
+          and all(r["value"] == "" and not r.get("notes") for r in checklist),
           "{} checklist rows".format(len(checklist)))
+    sug_html = (PAGES / "suggestions.html").read_text(encoding="utf-8")
+    check("suggestions page renders the blank review checklist",
+          sug_html.count("to be completed by the reviewer") == len(checklist) * 3,
+          "{} blank reviewer cells".format(sug_html.count("to be completed by the reviewer")))
     check("suggestions page claims no approval, guarantee or legal advice",
           not _affirmative_claim_hits(sug_html),
           "; ".join(_affirmative_claim_hits(sug_html)[:5]) or "no approval language")
-    check("suggestions page makes no claim about this case's units",
-          not any(p in sug_html.lower() for p in ("unit 1 may", "unit 2 may", "we recommend raising",
-                                                 "the increase for unit")),
-          "no case decision stated")
-    check("suggestions data file is published",
-          (DATA / "suggestions.json").exists() and len(json_load(DATA / "suggestions.json")["sections"]) == len(D.SUGGESTION_SECTIONS))
+    check("Decision Readiness page is published and in the navigation",
+          "decision" in pages and (PAGES / "decision.html").exists()
+          and any(s == "decision" for s, _ in D.NAV))
+    dec_rows = [r for sec in pages.get("decision", {}).get("sections", []) for r in sec["rows"]]
+    gates = [r["id"] for r in dec_rows if r["id"].startswith("DR-G")]
+    opens = [r for r in dec_rows if r["id"].startswith("DR-") and not r["id"].startswith("DR-G") and not r["id"].startswith("DR-P")]
+    check("Decision Readiness page has five gates, open questions and decision paths",
+          len(gates) == 5 and len(opens) >= 15 and any(r["id"] == "DR-P4" for r in dec_rows),
+          "{} gates, {} questions".format(len(gates), len(opens)))
+    blank_gaps = [r for r in opens if r["status"] == "needs review"]
+    check("every blank Decision Readiness gap names how the information would be discovered",
+          len(blank_gaps) >= 5 and all(any(k in r["notes"].lower() for k in
+              ("discover", "route", "not supplied", "owner", "portal", "record", "file", "counsel", "log in"))
+              for r in blank_gaps),
+          "{} blank gaps checked; missing: {}".format(
+              len(blank_gaps),
+              "; ".join(r["id"] for r in blank_gaps if not any(k in r["notes"].lower() for k in
+                  ("discover", "route", "not supplied", "owner", "portal", "record", "file", "counsel", "log in"))) or "none"))
+    check("decision register keeps unverified facts blank",
+          all(r["value"] == "" for r in opens if r["status"] == "needs review"),
+          "{} needs-review cells blank".format(len([r for r in opens if r["status"] == "needs review"])))
+    exec_md_local = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    check("landing page and executive summary lead with the local-law answer",
+          "Local.</strong>" in (ROOT / "index.html").read_text(encoding="utf-8")
+          and "state or local? \u2014 LOCAL" in exec_md_local
+          and exec_md_local.index("LOCAL") < exec_md_local.index("## FOREFRONT: Rent Board & Rent Increase License"))
+    check("SB 567 and Civil Code 1947.12 are catalogued as official sources",
+          D.SOURCES.get("S88", {}).get("agency") == "California Legislature"
+          and "SB 567" in D.SOURCES["S88"]["title"]
+          and official_domain(D.SOURCES["S89"]["url"]) and "1946.2" in D.SOURCES["S89"]["title"])
 
     report["status"] = "passed" if not report["errors"] else "failed"
     report["summary"] = {

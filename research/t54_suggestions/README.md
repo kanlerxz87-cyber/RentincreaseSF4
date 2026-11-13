@@ -55,85 +55,62 @@ A separate pass on the same day re-opened the four pages that carry the figures 
 
 ---
 
-## 2. The Suggestions & Review page
+## 2. The Suggestions page
 
-### Why it was missing
+### Why it was needed
 
-The owner asked for "a section dedicated for suggestions so someone can review suggestions and choose
-the best path before implementing any changes", and for "suggestions ... to discover missing
-information". A line-by-line review of the published tree found no such section: the word "suggest"
-appeared only inside `data/questions.json`, `pages/questions.html` and
-`TENANT_ASSISTANCE_RESEARCH.md`. The site had findings, requirements, a process page, a worksheet and a
-Flagged for Review page, but no catalogue of proposed improvements and no place to record a decision
-about them. That gap is what T54 closes.
+The owner asked for *"a section dedicated for suggestions so someone can review suggestions and choose the best path before implementing any changes"*, and for *"suggestions ... to discover missing information"*. A line-by-line review of the published tree found no such section: the word "suggest" appeared only inside `data/questions.json`, `pages/questions.html` and `TENANT_ASSISTANCE_RESEARCH.md`. That gap is what this session set out to close.
+
+### A scope collision, and how it was resolved
+
+While this session was building its own Suggestions page, the concurrent session `arena-415e54ea` merged **PR #51** to `main` with a **Suggestions review queue** of its own (`SUG-P*`, `SUG-A*`, `SUG-B*`, `SUG-C*`), plus a **Decision Readiness** register (`pages/decision.html`), the **state-vs-local** answer to the owner's question, and sources S88–S91.
+
+Both sets of work are kept. The page is now one canonical Suggestions page with the concurrent session's groups first and this session's groups appended:
+
+| Group | Source | Rows | Content |
+| --- | --- | --- | --- |
+| Review process | `arena-415e54ea` | SUG-P1…P5 | The 5-step review workflow: read, check the evidence, choose, record, only then implement |
+| A | `arena-415e54ea` | SUG-A1…A7 | Closing information gaps before deciding (owner actions) |
+| B | `arena-415e54ea` | SUG-B1…B6 | Improving this site so it supports a decision |
+| C | `arena-415e54ea` | SUG-C1…C6 | How to approach the increase itself (decision paths, not legal advice) |
+| **D** | `arena-87a91aec` | SUG-D1…D12 | **Compliance gates** — licence status on the effective date, Housing Inventory filing tracker, fee calendar with the Nov 1 occupancy switch, effective-date rate engine, banked-increase ledger, pending-legislation watch row, retaliation-window screen, uniform-criteria record, §6.14 fact screen, coverage determination sheet, notice assembly, petition routing |
+| **E** | `arena-87a91aec` | SUG-E1…E5 | **Evidence and defensibility** — case-file completeness checklist, tenant-side challenge walkthrough, printable attorney-review handoff packet, neutral-language bank, Housing Inventory public-records disclosure note |
+| **F** | `arena-87a91aec` | SUG-F1…F4 | **Discovering the missing information** — missing-information register, the facts only the owner can supply, the Rent Board counsel call script, the pre-decision gate sequence |
+| **G** | `arena-87a91aec` | SUG-G1…G6 | **Internal site quality** — per-row verification date, source link/content monitor, unchanged-column consistency, blank-means-unknown convention, print and mobile review mode, review-cycle date |
+| **H** | `arena-87a91aec` | CL-D1…CL-G6 | **Review checklist** — one blank reviewer row per D–G proposal, with its own `CL-` identifiers so a checklist row is never confused with the proposal it refers to |
+
+Where the two sessions' proposals touch the same ground — the link monitor, the owner-only facts list, the counsel call script, the uniform-criteria record — the row's notes name the related row instead of restating it. Nothing is presented twice as if it were two proposals. The concurrent session's **Decision Readiness** page and its state-vs-local answer are kept unchanged.
 
 ### How each row is grounded
 
-Each of the 27 rows carries:
-
 | Field | Rule |
 | --- | --- |
-| `basis` | The official rule or fact that motivates the proposal, quoted or closely paraphrased from the official source. |
+| `notes` | The official rule or fact that motivates the proposal, quoted or closely paraphrased from the official source, plus any cross-reference to a related row. |
 | `source_ids` | One or more official source IDs. Every row resolves to an official-domain URL, and the validator fails the build otherwise. |
-| `proposal` / `why` | What would change on the site and why it improves the decision. |
-| `effort` / `impact` | Build cost and expected effect on the quality of the decision. Both are site-work estimates, not statements about law. |
-| `decision` | Starts at `Review` for every row. Nothing is pre-approved. |
+| `value` | What changes and why it helps the decision. |
+| `effort` | Build cost and expected effect on the quality of the decision. Both are site-work estimates, not statements about law. |
+| `review_status` | Starts at `Review` (this session's rows) or `open for review` (the concurrent session's group A rows). Nothing is pre-approved. |
 
-Five rows (SUG-22 to SUG-26) are proposals about how the site itself should work. Their `basis` field
-begins with the exact marker `Internal site-design proposal`, and the validator enforces three things:
-a row marked internal must carry the marker, a row not marked internal must not carry it, and the
-rendered page must show the marker for every internal row. These rows still resolve to the project
-record (S68), so every rendered row keeps an official-domain link and no source was invented merely to
-fill a cell.
+Five rows (SUG-G1 to SUG-G5) are proposals about how the site itself should work. Their notes carry the exact marker `Internal site-design proposal`, and the validator enforces three things: a row marked internal must carry the marker, a row not marked internal must not carry it, and exactly the five expected rows carry it. SUG-G6 is the one row with a mixed basis — it cites the published rate period, the pending cap, the fee amount and the licensing rule — so it is not marked internal. These rows still resolve to the project record (S68), so every rendered row keeps an official-domain link and no source was invented merely to fill a cell.
 
 ### The review-before-implementing workflow
 
-- Every row renders a Decision badge reading **Review**. The validator checks that the count of
-  `Review` badges equals the number of rows, so a row cannot silently be pre-set to accepted.
-- A **Review checklist** table repeats every suggestion ID with four blank cells — Decision, Reviewer,
-  Date, Review note. Those cells are deliberately blank and labelled "(blank - to be completed by the
-  reviewer)"; the validator checks that the blank count is exactly four per suggestion.
-- The narrative states that only items marked Accept become candidates for implementation, and that
-  Reject and Defer decisions stay on the record.
+- Every proposal row renders a review-status badge reading `Review` or `open for review`. The validator checks that no row is pre-approved.
+- The **Review checklist** section repeats every D–G proposal ID with a blank Decision, Reviewer, Date and Review note cell, each labelled "(blank - to be completed by the reviewer)". The validator checks the blank count.
+- The 5-step review process (published by the concurrent session) states that accepting a suggestion is a decision by the owner, that nothing auto-applies, and that implementation means editing `scripts/site_*.py` and rebuilding.
 
-### Groups published
+### Groups published by this session
 
-1. **Compliance gates (SUG-01 to SUG-12)** — license-status gate on the effective date; Housing
-   Inventory filing tracker; Rent Board Fee calendar with the November 1 occupancy switch;
-   effective-date rate engine; banked-increase ledger; pending-legislation watch row; retaliation
-   window screen; uniform-criteria record; Section 6.14 fact screen; coverage determination sheet;
-   notice assembly with required contents; petition routing table.
-2. **Evidence and defensibility (SUG-13 to SUG-17)** — case-file completeness checklist; tenant-side
-   challenge walkthrough; printable attorney-review handoff packet; neutral-language bank; the
-   public-records disclosure note for the Housing Inventory filing.
-3. **Discovering the missing information (SUG-18 to SUG-21)** — missing-information register; the facts
-   only the owner can supply; the Rent Board counsel call script; the pre-decision gate sequence.
-4. **Internal site quality (SUG-22 to SUG-27)** — per-row verification date; source link and content
-   monitor; unchanged-column consistency; the blank-means-unknown convention; print and mobile review
-   mode; a review-cycle date on the landing page.
-
-Group 3 is the direct answer to the owner's request for a clear list of the questions, information
-and answers needed before a decision can reasonably be made. It separates the questions an official
-record can answer from the facts only the owner can supply, and names the official route for each. The
-same content is cross-linked from the Questions page (new rows Q-22 to Q-24) and the Executive Summary.
-
-### SUG-27 carries a mixed basis
-
-SUG-27 ("review-cycle date on the landing page") is the one row whose `basis` is not purely internal:
-its motivating items are the published rate period, the pending cap, the fee amount and the licensing
-rule, so it cites S02, S71, S56, S07 and S68. It is therefore not marked internal. This is recorded
-here so the marker rule is auditable.
-
----
+Group F is the direct answer to the owner's request for a clear list of the questions, information and answers needed before a decision can reasonably be made. It separates the questions an official record can answer from the facts only the owner can supply, and names the official route for each. The same content is cross-linked from the Executive Summary, and the concurrent session's Decision Readiness page answers the same question for this case with five ordered gates, 20 open questions and four decision paths.
 
 ## 3. Gates run before publication
 
 | Gate | Result |
 | --- | --- |
-| `python3 scripts/build_site.py` | Clean. 23 data files, 21 page HTML files, `index.html`, `assets/site.css`, `.nojekyll` and 3 markdown deliverables. Re-running leaves `git diff` empty. |
-| `python3 scripts/validate_site.py` | **135 checks, 0 errors** (87 official sources, 70 flags, 354 rows, 0 broken internal links). Ten new checks cover the Suggestions page: publication and navigation, contiguous unique IDs, official basis on every row, the internal marker rule, the `Review` default, the blank review checklist, no approval or guarantee language, no statement about either unit, and the published data file. |
+| `python3 scripts/build_site.py` | Clean. 24 data files, 22 page HTML files, `index.html`, `assets/site.css`, `.nojekyll` and 3 markdown deliverables. Re-running produces byte-identical `data/` and `pages/`. |
+| `python3 scripts/validate_site.py` | **151 checks, 0 errors** (91 official sources, 71 flags, 451 rows, 0 broken internal links). Six new checks cover this session's contribution: official basis, effort and review status on every D-G row; the internal-marker rule; no pre-approved row; one blank checklist row per proposal; the rendered blank reviewer cells; and no approval or guarantee language. |
 | `python3 research/b87_notice_kit/validate_kit.py` | 19 checks, 0 errors. |
-| `python3 research/c72_2026-11-11_audit/validate_c72.py` | 19 checks, 0 errors; 22 HTML pages and 2,129 internal hrefs scanned, 0 broken links, 0 broken anchors, 0 stored digests. The audit's hard-coded page count was updated from 21 to 22 when the Suggestions page was added; the crawl itself was already clean. |
+| `python3 research/c72_2026-11-11_audit/validate_c72.py` | 19 checks, 0 errors; 23 HTML pages scanned with 0 broken links, 0 broken anchors and 0 stored digests. The audit's page-count check was updated as pages were added and is now a lower bound, so a new page cannot break it. |
 | `python3 research/n08_qa/privacy_check.py` | 0 fingerprint matches in the current tree. |
 | Independent HTMLParser link crawl | 0 broken internal links across all pages. |
 
@@ -141,8 +118,26 @@ The approval-language check was rewritten during this session. The first version
 test and produced a false positive on the sentence "It does not state that any rent increase is
 lawful, approved or safe from challenge." The replacement matches the phrases against a negation
 window, so a negated statement is not treated as a claim. The underlying text was also reworded where
-it was ambiguous about the retaliation analysis (SUG-07), so it now describes the exposure as
-independent of the amount rather than implying the amount is permitted.
+it was ambiguous about the retaliation analysis (now SUG-D7), so it describes the exposure as
+independent of whether the increase amount itself is permitted rather than implying the amount is
+permitted.
+
+Two further defects were found and fixed while integrating with the concurrent session's work: the
+review-checklist rows initially reused their proposal IDs, which made row IDs non-unique on the site
+(they now carry their own `CL-` identifiers, and the validator checks uniqueness); and the section
+renderer had no way to show the per-section introduction paragraphs that both sessions' groups use
+(the renderer now emits them).
+
+### The merge with the concurrent session
+
+The gate numbers above are for the **merged** tree, not for this session's branch alone. The merge
+was mechanical and non-destructive: generated files were taken from the merged side and then
+regenerated from the merged generator; `COORDINATION.md` keeps both session records verbatim; the
+shared generator files were taken as the merged base and this session's delta re-applied on top. No
+row, source, flag or research record from either session was dropped. Two research records that
+existed only on stale pull requests were also recovered and preserved verbatim with provenance
+headers: `research/f4i_2026-11-11_qa/README.md` (from PR #48) and
+`research/current_audit/2026-11-08_source_repo_audit.md` (from PR #25).
 
 ### What these gates do not prove
 

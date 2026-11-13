@@ -18,9 +18,10 @@ NAV = [
     ("individual", "Individual Practice"),
     ("market", "Market Context"),
     ("questions", "Questions & Answers"),
+    ("decision", "Decision Readiness"),
     ("analysis", "Analysis & Findings"),
     ("sources", "Sources"),
-    ("suggestions", "Suggestions & Review"),
+    ("suggestions", "Suggestions"),
     ("flagged", "Flagged for Review"),
 ]
 
@@ -35,8 +36,9 @@ CARDS = [
     ("Federal cap", "Blank", "federal", "No official general private-rent cap found; flagged."),
     ("94122 SAFMR", "Published", "market", "FY2027 $2,370/$2,770/$3,410/$4,460/$5,020; voucher benchmark, not a cap."),
     ("Attorney approval", "Blank", "questions", "No official approval or guarantee claimed."),
+    ("Decision readiness", "5 gates", "decision", "Coverage, standing, amount, process and fair treatment - what must close before a reasonable decision."),
+    ("Suggestions", "Review queue", "suggestions", "Proposed improvements with effort and review status, so a path can be chosen before anything is implemented."),
     ("Notice worksheet", "Pre-service kit", "worksheet", "Gates, notice contents and per-tenant service log, each row linked to an official source."),
-    ("Improvement proposals", "auto:suggestions", "suggestions", "Proposals for improving this site, each with its official basis and a review decision."),
 ]
 
 FLAGS = [
@@ -102,6 +104,7 @@ FLAGS = [
     {"id": "F50", "title": "Independent audit addendum: integration status", "detail": "The C72 audit listed several items for the shared tables. On 2026-11-11 the HUD ZIP-level market data (S83, S84), the Essex and Equity Residential SEC filings (S85, S86), the Legistar draft attachments (S87) and the SOURCES.md ledger drift were integrated and re-verified line by line. What remains open: the draft ordinance is still NOT enacted and must be re-checked before any notice; historical privacy exposure (F44, F51) is unchanged; and the C72 audit is a second review, not an attorney opinion. Older gaps should not be treated as exhaustive.", "source_ids": ["S71", "S83", "S85", "S87"], "status": "needs review"},
     {"id": "F51", "title": "Privacy: short-identifier hashes remain in history", "detail": "A prior validator stored unsalted hashes of short personal identifiers, which can be reversed by enumerating possible values. They have been removed from the current validator but remain in public git history and possibly prior branches or diffs. See F44 for the earlier direct disclosure and owner remediation; current checks are limited and do not prove complete privacy or remove historical exposure.", "source_ids": ["S68"], "status": "needs review"},
     {"id": "F52", "title": "94122 SAFMR is not a market rent, a cap, or a comparison for these units", "detail": "The published FY2026 and FY2027 SAFMRs are HUD 40th-percentile gross-rent benchmarks used for voucher payment standards. They are not a market-rent appraisal, not a lawful rent ceiling, and not a basis for any increase. Comparing them with the case contract rents would require each unit's bedroom count and utility treatment, which are not published, so no comparison, percentage or market-rent conclusion is stated. Bedroom counts stay blank.", "source_ids": ["S83", "S84", "S43"], "status": "needs review"},
+    {"id": "F53", "title": "\"Law passed in 2023\" - the local small-building operative date, not a state statute", "detail": "The reporting and Rent Increase License duty is a San Francisco ordinance (Administrative Code Ch. 37, Sec. 37.15, added by Ord. No. 265-20, effective January 18, 2021), not a California state law. The date 2023 comes from the LOCAL operative date for condominiums and buildings with 1-9 residential units (March 1, 2023, per Sec. 37.15(c) and Rent Board Rule 13.14); buildings with 10 or more units began reporting July 1, 2022. The actual 2023 state law, SB 567 (Chapter 290, Statutes of 2023), amended the statewide Tenant Protection Act (just cause and the state rent cap) and became operative April 1, 2024; no provision of that bill requires an owner to report a rent increase to a local rent board. This flag records the distinction so the licence duty is not attributed to state law, and so the 2023 date is not mistaken for the year the ordinance was enacted. Verified against the primary texts on 2026-11-13.", "source_ids": ["S53", "S73", "S90", "S88", "S36"], "status": "needs review"},
     {"id": "B87-F01", "title": "Notice worksheet: case-specific notice facts unverified", "detail": "Worksheet unit cells stay blank; do not infer eligibility, base rent, anniversary, license, lease permission, banking, petition, subsidy, repair/retaliation or service facts. Owner-supplied dates and amounts are preserved but are not official findings. From the B87 notice kit (research/b87_notice_kit), integrated 2026-11-10.", "source_ids": ["S01", "S07", "S76"], "status": "needs review"},
     {"id": "B87-F02", "title": "Notice worksheet: licence timing is effective-date based", "detail": "Rent Board Rule 13.14 uses the effective date of the increase, not the date of service, to test whether the landlord was licensed; confirming the licence before service is conservative practice only, not the stated legal test. Sources re-fetched 2026-11-10.", "source_ids": ["S73"], "status": "needs review"},
     {"id": "B87-F03", "title": "Notice worksheet: banking summary wording differs between SF guidance and Rule 4.12", "detail": "SF.gov banked-increase guidance says a skipped increase banks only after 24 full months without an increase, while Rule 4.12 of the Rules PDF describes a full 12 months from when an increase could have been imposed. Require the full rent history; no banking is inferred for either unit.", "source_ids": ["S05", "S76"], "status": "needs review"},

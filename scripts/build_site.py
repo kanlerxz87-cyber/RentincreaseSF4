@@ -45,8 +45,56 @@ def flag_link(flag_id, in_pages):
     href = "flagged.html#{}".format(e(flag_id)) if in_pages else "pages/flagged.html#{}".format(e(flag_id))
     return '<a class="flaglink" href="{}">{}</a>'.format(href, e(flag_id))
 
+
+def render_suggestion_table(section, in_pages=True):
+    """Render the Suggestions page: ID, Suggestion, Why, Sources, Effort, Review status."""
+    out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} &mdash; scrollable table"><table><thead><tr>'.format(e(section["title"]))]
+    for c in ("ID", "Suggestion", "Why it helps the decision", "Official source(s)", "Effort", "Review status"):
+        out.append('<th scope="col">{}</th>'.format(c))
+    out.append("</tr></thead><tbody>")
+    for r in section["rows"]:
+        notes = e(r.get("notes", ""))
+        fl = flag_link(r.get("flag_id", ""), in_pages)
+        if fl:
+            notes = "{} &nbsp; {}".format(notes, fl) if notes else fl
+        out.append("<tr>")
+        out.append('<td><span class="small">{}</span></td>'.format(e(r["id"])))
+        out.append("<td><strong>{}</strong></td>".format(e(r["label"])))
+        why = "<td>{}</td>".format(e(r.get("value", "")))
+        if notes:
+            why = why[:-5] + '<br><span class="small">{}</span></td>'.format(notes)
+        out.append(why)
+        out.append("<td>{}</td>".format(source_links(r.get("source_ids", []))))
+        out.append('<td><span class="badge analysis">{}</span></td>'.format(e(r.get("effort", ""))))
+        out.append('<td><span class="badge review">{}</span></td>'.format(e(r.get("review_status", ""))))
+        out.append("</tr>")
+    out.append("</tbody></table></div>")
+    return "".join(out)
+
+def render_decision_checklist(section, in_pages=True):
+    """Render the review checklist: ID, Suggestion, then blank reviewer cells."""
+    out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} &mdash; scrollable table"><table><thead><tr>'.format(e(section["title"]))]
+    for c in section["columns"]:
+        out.append('<th scope="col">{}</th>'.format(e(c)))
+    out.append("</tr></thead><tbody>")
+    for r in section["rows"]:
+        out.append("<tr>")
+        out.append('<td><span class="small">{}</span></td>'.format(e(r["id"])))
+        out.append("<td><strong>{}</strong></td>".format(e(r["label"])))
+        out.append('<td>{}</td>'.format(source_links(r.get("source_ids", []))))
+        for _ in range(3):
+            out.append('<td class="decision-blank">(blank - to be completed by the reviewer)</td>')
+        out.append("</tr>")
+    out.append("</tbody></table></div>")
+    return "".join(out)
+
+
 def render_table(section, in_pages=True):
     cols = section["columns"]
+    if "Effort" in cols and "Review status" in cols:
+        return render_suggestion_table(section, in_pages)
+    if "Decision" in cols and "Reviewer" in cols:
+        return render_decision_checklist(section, in_pages)
     out = ['<div class="tablewrap" tabindex="0" role="region" aria-label="{} — scrollable table"><table><thead><tr>'.format(e(section["title"]))]
     for c in cols:
         out.append("<th scope=\"col\">{}</th>".format(e(c)))
@@ -186,7 +234,11 @@ def page_html(slug, page):
         e(page["title"]), e(page["description"]), e(D.DISCLAIMER)
     ))
     for sec in page["sections"]:
-        out.append("<section><h2>{}</h2>{}</section>".format(e(sec["title"]), render_table(sec, True)))
+        intro = sec.get("intro")
+        head = "<section><h2>{}</h2>".format(e(sec["title"]))
+        if intro:
+            head += "<p>{}</p>".format(e(intro))
+        out.append("{}</section>".format(head) + render_table(sec, True) + "</section>")
     out.append(footer_html(True))
     return "".join(out)
 
@@ -232,69 +284,15 @@ def page_sources(page):
     return ids
 
 
-def suggestion_basis(s):
-    """Official basis cell: the rule that motivates the proposal, with its official links.
-
-    Internal site-design proposals keep the project-record link for the site they describe,
-    so every rendered row keeps an official-domain link. The marker is what distinguishes
-    them: no legal rule is claimed for them.
-    """
-    links = source_links(s.get("source_ids", []))
-    basis = s.get("basis", "")
-    if s.get("internal"):
-        # The basis text already opens with the marker; do not print it twice.
-        rest = basis[len(D.INTERNAL_MARKER):].lstrip(" -:")
-        return '<span class="internal-mark">{}</span><br>{}<br>{}'.format(e(D.INTERNAL_MARKER), e(rest), links)
-    return '{}<br>{}'.format(e(basis), links)
-
-
-def suggestions_page_html():
-    out = [header_html("Suggestions & Review",
-                       "Proposed improvements to this site, listed for review before any change is implemented.",
-                       "suggestions", True)]
-    out.append('<section class="hero"><h2>Suggestions &amp; Review</h2>'
-               '<p>Every row below is a <strong>proposal</strong>, not a change. Each row carries the official rule that motivates it, '
-               'a rough effort and impact estimate, and a Decision cell that starts at <strong>{decision}</strong>. '
-               'Fill in the review checklist at the bottom of this page with Accept, Reject or Defer; only accepted items become candidates for implementation.</p>'
-               '<div class="disclaimer">{disclaimer}</div></section>'.format(
-                   decision=e(D.DECISION_DEFAULT), disclaimer=e(D.DISCLAIMER)))
-    out.append('<section class="narrative">{}</section>'.format(md_to_html(D.REVIEW_TEXT)))
-    for sec in D.SUGGESTION_SECTIONS:
-        out.append("<section><h2>{}</h2><p>{}</p>".format(e(sec["title"]), e(sec["intro"])))
-        out.append('<div class="tablewrap" tabindex="0" role="region" aria-label="{} - scrollable table"><table><thead><tr>'.format(e(sec["title"])))
-        for c in D.SUGGESTION_COLUMNS:
-            out.append('<th scope="col">{}</th>'.format(e(c)))
-        out.append("</tr></thead><tbody>")
-        for s in sec["rows"]:
-            out.append("<tr>")
-            out.append('<td><strong>{}</strong><br><span class="small">{}</span></td>'.format(e(s["id"]), e(s["title"])))
-            out.append('<td>{}<p class="suggest-why"><strong>Why:</strong> {}</p></td>'.format(e(s["proposal"]), e(s["why"])))
-            out.append("<td>{}</td>".format(e(s["effort"])))
-            out.append("<td>{}</td>".format(e(s["impact"])))
-            out.append("<td>{}</td>".format(suggestion_basis(s)))
-            out.append('<td><span class="badge proposed">{}</span></td>'.format(e(D.DECISION_DEFAULT)))
-            out.append("</tr>")
-        out.append("</tbody></table></div></section>")
-    out.append("<section><h2>Review checklist</h2>")
-    out.append('<div class="narrative">{}</div>'.format(md_to_html(D.REVIEW_CHECKLIST_TEXT)))
-    out.append('<div class="tablewrap" tabindex="0" role="region" aria-label="Review checklist - scrollable table"><table><thead><tr>')
-    for c in D.REVIEW_COLUMNS:
-        out.append('<th scope="col">{}</th>'.format(e(c)))
-    out.append("</tr></thead><tbody>")
-    for r in D.review_checklist():
-        out.append("<tr>")
-        out.append('<td><strong>{}</strong><br><span class="small">{}</span><br>{}</td>'.format(
-            e(r["id"]), e(r["title"]), source_links(r.get("source_ids", []))))
-        for key in ("decision", "reviewer", "date", "note"):
-            out.append('<td class="decision-blank">(blank - to be completed by the reviewer)</td>')
-        out.append("</tr>")
-    out.append("</tbody></table></div></section>")
-    out.append(footer_html(True))
-    return "".join(out)
-
 def index_html():
     out = [header_html("Rental increase SF", "Executive-summary dashboard for an anonymized San Francisco rent-increase case.", "", False)]
-    out.append('<section class="hero"><h2>Start here: do I need a Rent Board license as an individual owner?</h2>'
+    out.append('<section class="hero"><h2>Start here: is the \'inform the Rent Board\' rule a state law or a local law?</h2>'
+               '<p><strong>Local.</strong> The duty to report a rent-controlled unit and hold a <strong>Rent Increase License</strong> is a <strong>San Francisco ordinance</strong> — Administrative Code Chapter 37, Section 37.15, added by Ordinance No. 265-20, effective <strong>January 18, 2021</strong>. It is not a California state statute and not a federal rule.</p>'
+               '<p>The <strong>2023</strong> date is the <strong>local</strong> operative date for small buildings: condominiums and buildings with <strong>1-9 residential units</strong> have had to report since <strong>March 1, 2023</strong> (buildings with 10+ units began July 1, 2022). The actual 2023 state law was <strong>SB 567</strong>, which amended the statewide rent cap and just-cause rules and became operative <strong>April 1, 2024</strong> — it creates no rent-board reporting duty. {} &middot; {} &middot; {}</p>'
+               '<p><a class="cta" href="pages/local.html">See the layer-by-layer table (LAW-01 to LAW-08) &rarr;</a></p>'
+               '<div class="disclaimer">{}</div></section>'.format(
+                   source_links(["S53"]), source_links(["S90"]), source_links(["S88", "S73"]), e(D.DISCLAIMER)))
+    out.append('<section class="hero"><h2>Next: do I need a Rent Board license as an individual owner?</h2>'
                '<p><strong>Yes.</strong> A landlord must have a current Rent Increase License on file with the SF Rent Board before an annual or banked rent increase can take effect, and every owner of residential property must report into the Rent Board Housing Inventory first. Owners of buildings with fewer than 10 residential units have had to report since <strong>March 1, 2023</strong>. No individual-owner, small-portfolio or fewer-than-10-unit exemption was found in the official sources.</p>'
                '<p>Reporting is free and is done in the Rent Board Portal. A notice that goes into effect while the unit is unlicensed may be null and void, and the tenant may be owed a refund. {} &middot; {} &middot; {}</p>'
                '<p>A second, separate Rent Board obligation also applies: the annual <strong>Rent Board Fee</strong> - <strong>$59.00 per dwelling unit for 2026-2027</strong>, due March 1, with an exemption window closing December 14, 2026. Paying it does not create a license, and a license does not pay it.</p>'
@@ -330,10 +328,11 @@ def index_html():
         elif slug == "suggestions":
             desc = "Proposed improvements to this site, each with its official basis and a review decision to make before implementation."
             sids = []
-            for s in D.all_suggestions():
-                for sid in s["source_ids"]:
-                    if sid not in sids:
-                        sids.append(sid)
+            for sec in D.PAGES["suggestions"]["sections"]:
+                for r in sec["rows"]:
+                    for sid in r.get("source_ids", []):
+                        if sid not in sids:
+                            sids.append(sid)
             sids = sids[:6]
         else:
             page = D.PAGES[slug]
@@ -363,12 +362,12 @@ def main():
     for slug, page in D.PAGES.items():
         write(DATA / "{}.json".format(slug), json.dumps(page, indent=2, ensure_ascii=False) + "\n")
     write(DATA / "suggestions.json", json.dumps({
-        "title": "Suggestions & Review",
-        "description": "Proposed improvements to this site, listed for review before any change is implemented.",
-        "decision_default": D.DECISION_DEFAULT,
+        "title": D.PAGES["suggestions"]["title"],
+        "description": D.PAGES["suggestions"]["description"],
+        "review_status_values": list(D.REVIEW_STATUS_VALUES),
         "internal_marker": D.INTERNAL_MARKER,
-        "sections": [{"title": s["title"], "intro": s["intro"], "rows": s["rows"]} for s in D.SUGGESTION_SECTIONS],
-        "review_checklist": D.review_checklist(),
+        "sections": [{"title": s["title"], "intro": s.get("intro", ""), "columns": s["columns"], "rows": s["rows"]}
+                     for s in D.PAGES["suggestions"]["sections"]],
     }, indent=2, ensure_ascii=False) + "\n")
 
     for slug, page in D.PAGES.items():
@@ -376,7 +375,6 @@ def main():
         write(PAGES / "{}.html".format(slug), html)
     write(PAGES / "sources.html", sources_page_html())
     write(PAGES / "flagged.html", flagged_page_html())
-    write(PAGES / "suggestions.html", suggestions_page_html())
     write(ROOT / "index.html", index_html())
 
     write(ROOT / "EXECUTIVE_SUMMARY.md", counts(D.EXECUTIVE_SUMMARY_TEXT))

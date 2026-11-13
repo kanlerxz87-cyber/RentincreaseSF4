@@ -35,10 +35,6 @@ tr:last-child td{border-bottom:0}
 .badge.review{background:var(--warnbg);color:var(--warn)}
 .badge.analysis{background:#e8eefc;color:var(--accent2)}
 .badge.owner{background:var(--ownerbg);color:var(--owner)}
-.badge.proposed{background:#efe9fb;color:#5b3ea3}
-.internal-mark{font-size:.78rem;color:#5b3ea3;font-style:italic}
-.suggest-why{margin:.35rem 0 0;font-size:.86rem;color:var(--muted)}
-.decision-blank{color:var(--muted);font-style:italic}
 .owner-src{font-size:.78rem;color:var(--owner)}
 td.blank{color:var(--warn);font-style:italic}
 @media print{nav,.cta{display:none}section,.hero{box-shadow:none}}

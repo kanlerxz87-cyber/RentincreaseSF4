@@ -5,12 +5,12 @@
     {
       "name": "canonical source map matches site data",
       "ok": true,
-      "detail": "87 official sources"
+      "detail": "91 official sources"
     },
     {
       "name": "flags count matches dashboard",
       "ok": true,
-      "detail": "70 flagged items"
+      "detail": "71 flagged items"
     },
     {
       "name": "source URLs use official domains",
@@ -30,7 +30,7 @@
     {
       "name": "SOURCES.md has no stale hand-typed source total",
       "ok": true,
-      "detail": "87 sources"
+      "detail": "91 sources"
     },
     {
       "name": "94122 SAFMR rows publish the official HUD values with official sources",
@@ -70,17 +70,17 @@
     {
       "name": "every table row has valid official source links",
       "ok": true,
-      "detail": "354 rows checked; "
+      "detail": "480 rows checked; "
     },
     {
       "name": "rendered table rows contain official-domain links",
       "ok": true,
-      "detail": "516 rows checked; "
+      "detail": "593 rows checked; "
     },
     {
       "name": "unverified rows are blank and flagged",
       "ok": true,
-      "detail": "66 needs-review rows"
+      "detail": "74 needs-review rows"
     },
     {
       "name": "every flag is published with official source links",
@@ -283,6 +283,26 @@
       "detail": ""
     },
     {
+      "name": "data/suggestions.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/suggestions.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data/decision.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/decision.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "pages/summary.html in navigation exists",
       "ok": true,
       "detail": ""
@@ -364,6 +384,11 @@
     },
     {
       "name": "pages/questions.html in navigation exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pages/decision.html in navigation exists",
       "ok": true,
       "detail": ""
     },
@@ -500,7 +525,7 @@
     {
       "name": "numeric flag IDs are unique and contiguous",
       "ok": true,
-      "detail": "52 numeric flags"
+      "detail": "53 numeric flags"
     },
     {
       "name": "no references to unpublished flag IDs",
@@ -530,7 +555,7 @@
     {
       "name": "executive summary page renders the narrative, not just tables",
       "ok": true,
-      "detail": "14 headings"
+      "detail": "16 headings"
     },
     {
       "name": "2026-11-10 proposed-cap inconsistencies and next-year rate are published",
@@ -633,19 +658,49 @@
       "detail": ""
     },
     {
-      "name": "Suggestions and Review page is published and in the navigation",
+      "name": "local law page carries the state-vs-local layer table",
       "ok": true,
-      "detail": "27 suggestions"
+      "detail": "8 law-layer rows"
     },
     {
-      "name": "suggestion IDs are unique and contiguous",
+      "name": "the layer answer is stated as LOCAL with the ordinance citation",
       "ok": true,
-      "detail": "27 suggestions"
+      "detail": "LAW-01"
     },
     {
-      "name": "every suggestion carries an official basis and a complete proposal",
+      "name": "the 2023 attribution is explained as the local small-building operative date",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "state-cap exclusion and SB 567 are backed by official sources",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F53 is published and cites the ordinance and SB 567 sources",
+      "ok": true,
+      "detail": "F53"
+    },
+    {
+      "name": "Suggestions page is published and in the navigation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Suggestions page has a reviewable queue with effort and status on every item",
+      "ok": true,
+      "detail": "19 suggestions"
+    },
+    {
+      "name": "Suggestions page explains the review process before implementation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "every T54 suggestion carries an official basis, effort and a review status",
+      "ok": true,
+      "detail": "27 rows; "
     },
     {
       "name": "internal site-design proposals are labelled and claim no legal rule",
@@ -653,14 +708,19 @@
       "detail": "5 internal proposals labelled"
     },
     {
-      "name": "every suggestion starts at the Review decision and is not pre-approved",
+      "name": "no suggestion is pre-approved",
       "ok": true,
-      "detail": "27 rows at 'Review'"
+      "detail": "46 proposal rows at a review status"
     },
     {
-      "name": "review checklist has one blank decision row per suggestion",
+      "name": "review checklist has one blank decision row per T54 proposal",
       "ok": true,
       "detail": "27 checklist rows"
+    },
+    {
+      "name": "suggestions page renders the blank review checklist",
+      "ok": true,
+      "detail": "81 blank reviewer cells"
     },
     {
       "name": "suggestions page claims no approval, guarantee or legal advice",
@@ -668,25 +728,45 @@
       "detail": "no approval language"
     },
     {
-      "name": "suggestions page makes no claim about this case's units",
+      "name": "Decision Readiness page is published and in the navigation",
       "ok": true,
-      "detail": "no case decision stated"
+      "detail": ""
     },
     {
-      "name": "suggestions data file is published",
+      "name": "Decision Readiness page has five gates, open questions and decision paths",
+      "ok": true,
+      "detail": "5 gates, 20 questions"
+    },
+    {
+      "name": "every blank Decision Readiness gap names how the information would be discovered",
+      "ok": true,
+      "detail": "8 blank gaps checked; missing: none"
+    },
+    {
+      "name": "decision register keeps unverified facts blank",
+      "ok": true,
+      "detail": "8 needs-review cells blank"
+    },
+    {
+      "name": "landing page and executive summary lead with the local-law answer",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SB 567 and Civil Code 1947.12 are catalogued as official sources",
       "ok": true,
       "detail": ""
     }
   ],
   "errors": [],
   "summary": {
-    "sources": 87,
-    "pages": 21,
-    "data_files": 23,
-    "rows_verified": 354,
-    "needs_review_rows": 66,
-    "flags": 70,
-    "checks": 135,
+    "sources": 91,
+    "pages": 22,
+    "data_files": 24,
+    "rows_verified": 480,
+    "needs_review_rows": 74,
+    "flags": 71,
+    "checks": 151,
     "errors": 0
   }
 }
