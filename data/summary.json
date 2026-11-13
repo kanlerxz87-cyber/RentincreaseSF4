@@ -209,6 +209,33 @@
           "source_note": ""
         },
         {
+          "id": "LIC-13",
+          "label": "Rule 13.14 quoted verbatim (re-read 2026-11-13)",
+          "value": "\"Any rent increase under Ordinance Sections 37.3(a)(1)-(2) purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void; provided, however, that the effective date of the rent increase, not the date of service, shall be used to determine whether or not the increase conforms with the provisions of this section. Nothing in this Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise lawful rent increases that were found to be null and void. This section shall apply to all rent increases that are effective on or after July 1, 2022, except that with respect to condominium units and buildings with less than ten residential units, this section shall only apply to rent increases that are effective on or after March 1, 2023.\"",
+          "status": "verified",
+          "source_ids": [
+            "S73"
+          ],
+          "notes": "Read in full on 2026-11-13. This is the strongest wording in the official record and it narrows flag F25: the softer tenant-facing phrasing does not soften the rule, and an owner's banking rights survive an increase that is void.",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
+          "id": "LIC-14",
+          "label": "What the missing licence actually costs an individual owner",
+          "value": "Under Sec. 37.15(e) the licence is \"temporarily suspended during the period of the landlord's noncompliance\" and \"a tenant shall not be obligated to pay the increased rent for months during the period of suspension\"; separately, SF.gov states the Rent Board assesses no monetary penalty for filing the Housing Inventory report late. So the exposure is money that may have to go back to the tenant for the suspended months (a tenant petition has no time limit), not a City fine for the late report itself.",
+          "status": "verified",
+          "source_ids": [
+            "S53",
+            "S07",
+            "S73",
+            "S25"
+          ],
+          "notes": "Nothing here exempts an individual or small-portfolio owner: the requirement is stated by unit and by effective date, and no official page states an owner-form exception (LIC-01).",
+          "flag_id": "",
+          "source_note": ""
+        },
+        {
           "id": "LIC-10",
           "label": "Full step-by-step page",
           "value": "12 numbered steps from coverage check to notice delivery, each with its official source link, plus the ordinance text and the case-specific application",
