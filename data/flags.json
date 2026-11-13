@@ -677,8 +677,8 @@
   },
   {
     "id": "F56",
-    "title": "Privacy: raw identifier tokens remain in 12 public commits (re-confirmed 2026-11-13)",
-    "detail": "A git-history search on 2026-11-13 found the raw identifier tokens in 12 distinct commits dated 2026-11-06 to 2026-11-11. The current tree has none. Owner options (see F44 and F51): rewrite history and force-push (needs explicit owner approval), ask GitHub Support to purge cached views, delete stale branches, or make the repository private. No history rewrite was done in this session. Counts are published here; the tokens are not.",
+    "title": "Privacy: raw identifier tokens remain in 14 public commits (full-history re-scan 2026-11-13; corrects the earlier count of 12)",
+    "detail": "A full-history re-scan on 2026-11-13 (a complete bare mirror: 258 commits across 43 refs) found the raw identifier tokens in the tree of 14 distinct commits, all dated 2026-11-06 to 2026-11-08 and all in data/validation_report.json. The earlier figure of 12 commits dated to 2026-11-11 could not be reproduced by this re-scan and is superseded here; the method is recorded in research/privacy/FULL_HISTORY_SCAN_2026-11-13.md. Two remote branch tips still carry the tokens (arena/73f5f1a2-rentincreasesf4 and arena/fce57ebb-rentincreasesf4); current main and this branch do not. Owner options (see F44 and F51): rewrite history and force-push (needs explicit owner approval), ask GitHub Support to purge cached views, delete the two stale branches, or make the repository private. No history rewrite was done in this session. Counts and method are published here; the tokens are not.",
     "source_ids": [
       "S68"
     ],
