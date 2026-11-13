@@ -638,6 +638,19 @@
     "status": "needs review"
   },
   {
+    "id": "F53",
+    "title": "\"Law passed in 2023\" - the local small-building operative date, not a state statute",
+    "detail": "The reporting and Rent Increase License duty is a San Francisco ordinance (Administrative Code Ch. 37, Sec. 37.15, added by Ord. No. 265-20, effective January 18, 2021), not a California state law. The date 2023 comes from the LOCAL operative date for condominiums and buildings with 1-9 residential units (March 1, 2023, per Sec. 37.15(c) and Rent Board Rule 13.14); buildings with 10 or more units began reporting July 1, 2022. The actual 2023 state law, SB 567 (Chapter 290, Statutes of 2023), amended the statewide Tenant Protection Act (just cause and the state rent cap) and became operative April 1, 2024; no provision of that bill requires an owner to report a rent increase to a local rent board. This flag records the distinction so the licence duty is not attributed to state law, and so the 2023 date is not mistaken for the year the ordinance was enacted. Verified against the primary texts on 2026-11-13.",
+    "source_ids": [
+      "S53",
+      "S73",
+      "S90",
+      "S88",
+      "S36"
+    ],
+    "status": "needs review"
+  },
+  {
     "id": "B87-F01",
     "title": "Notice worksheet: case-specific notice facts unverified",
     "detail": "Worksheet unit cells stay blank; do not infer eligibility, base rent, anniversary, license, lease permission, banking, petition, subsidy, repair/retaliation or service facts. Owner-supplied dates and amounts are preserved but are not official findings. From the B87 notice kit (research/b87_notice_kit), integrated 2026-11-10.",
